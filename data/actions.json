@@ -495,8 +495,8 @@
     {
       "id": "cms-doj-2026-01-19-california-billion-return",
       "date": "2026-01-19",
-      "agency": "DOJ",
-      "type": "Civil Action",
+      "agency": "CMS",
+      "type": "Audit",
       "title": "California Must Return $1B+ After CMS Audit on Unlawful Immigrant Health Spending",
       "description": "First Assistant U.S. Attorney Bill Essayli reported California must return more than $1 billion to the federal government after a CMS audit uncovered its massive unlawful health care spending on illegal immigrants.",
       "amount": "$1B+ to be returned",
@@ -505,7 +505,7 @@
         "Bill Essayli"
       ],
       "link": "https://www.foxnews.com/politics/key-trump-agency-vows-claw-back-over-1b-benefitting-illegals-blue-states",
-      "link_label": "Fox News Report",
+      "link_label": "CMS Press Release",
       "social_posts": [],
       "tags": [
         "Medicaid",
