@@ -64,7 +64,7 @@
     },
     {
       "id": "doj-2025-06-national-takedown",
-      "date": "2025-06-01",
+      "date": "2025-06-30",
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Largest-Ever National Health Care Fraud Takedown",
@@ -72,7 +72,7 @@
       "amount": "$14.6B intended losses; $4B+ prevented",
       "amount_numeric": 14600000000,
       "officials": [],
-      "link": "https://www.justice.gov/opa/pr/justice-department-announces-record-health-care-fraud-enforcement-actions",
+      "link": "https://www.justice.gov/opa/pr/national-health-care-fraud-takedown-results-324-defendants-charged-connection-over-146",
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
@@ -87,7 +87,7 @@
     },
     {
       "id": "doj-2025-06-operation-gold-rush",
-      "date": "2025-06-01",
+      "date": "2025-06-30",
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Operation Gold Rush — $10.6 Billion Medicare Fraud Scheme",
@@ -95,7 +95,7 @@
       "amount": "$10.6 Billion",
       "amount_numeric": 10600000000.0,
       "officials": [],
-      "link": "https://www.justice.gov/opa/pr/justice-department-announces-record-health-care-fraud-enforcement-actions",
+      "link": "https://www.justice.gov/opa/pr/national-health-care-fraud-takedown-results-324-defendants-charged-connection-over-146",
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
@@ -104,8 +104,7 @@
         "Identity Theft",
         "Organized Crime",
         "National Takedown",
-        "Foreign Nationals",
-        "False Claims Act"
+        "Foreign Nationals"
       ],
       "state": null,
       "source_type": "official",
@@ -114,7 +113,7 @@
     },
     {
       "id": "doj-2025-06-opioid-fraud",
-      "date": "2025-06-01",
+      "date": "2025-06-30",
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "74 Defendants Charged in Opioid Diversion Schemes",
@@ -122,7 +121,7 @@
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
-      "link": "https://www.justice.gov/opa/pr/justice-department-announces-record-health-care-fraud-enforcement-actions",
+      "link": "https://www.justice.gov/opa/pr/national-health-care-fraud-takedown-results-324-defendants-charged-connection-over-146",
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
@@ -137,7 +136,7 @@
     },
     {
       "id": "doj-2025-06-arizona-skin-grafts",
-      "date": "2025-06-01",
+      "date": "2025-06-30",
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Arizona: $1.1 Billion Medically Unnecessary Skin Graft Fraud",
@@ -145,7 +144,7 @@
       "amount": "$1.1 Billion",
       "amount_numeric": 1100000000.0,
       "officials": [],
-      "link": "https://www.justice.gov/opa/pr/justice-department-announces-record-health-care-fraud-enforcement-actions",
+      "link": "https://www.justice.gov/opa/pr/national-health-care-fraud-takedown-results-324-defendants-charged-connection-over-146",
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
@@ -153,8 +152,7 @@
         "Medicaid",
         "Wound Care",
         "National Takedown",
-        "Unnecessary Procedures",
-        "False Claims Act"
+        "Unnecessary Procedures"
       ],
       "state": "AZ",
       "source_type": "official",
@@ -163,7 +161,7 @@
     },
     {
       "id": "doj-2025-03-kentucky-addiction",
-      "date": "2025-03-01",
+      "date": "2025-03-20",
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Kentucky Addiction Treatment Center Fraud — $8M+ in False Claims",
@@ -178,8 +176,7 @@
         "Medicare",
         "Medicaid",
         "Addiction Treatment",
-        "Opioids",
-        "False Claims Act"
+        "Opioids"
       ],
       "state": "KY",
       "source_type": "official",
@@ -200,8 +197,7 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "ACA",
-        "False Claims Act"
+        "ACA"
       ],
       "state": "FL",
       "source_type": "official",
@@ -612,8 +608,7 @@
         "Medicare",
         "Medicaid",
         "AI",
-        "Program Integrity",
-        "Tax Evasion"
+        "Program Integrity"
       ],
       "state": null,
       "source_type": "official",
@@ -690,8 +685,7 @@
         "Identity Theft",
         "ACA",
         "Kickbacks",
-        "Medicare",
-        "Tax Evasion"
+        "Medicare"
       ],
       "state": "NC",
       "source_type": "official",
@@ -720,8 +714,7 @@
         "Pharmacy Fraud",
         "Medicare",
         "Medicaid",
-        "Medical Devices",
-        "Tax Evasion"
+        "Medical Devices"
       ],
       "state": "MA",
       "source_type": "official",
@@ -898,8 +891,7 @@
       "tags": [
         "Hospice Fraud",
         "Medicare",
-        "Money Laundering",
-        "False Claims Act"
+        "Money Laundering"
       ],
       "state": "CA",
       "source_type": "news",
@@ -1110,7 +1102,6 @@
         "Home Health Fraud",
         "COVID-19",
         "Pharmacy Fraud",
-        "Tax Evasion",
         "Program Integrity"
       ],
       "state": null,
@@ -1652,8 +1643,7 @@
         "Hospice Fraud",
         "Medicare",
         "TRICARE",
-        "Unnecessary Procedures",
-        "False Claims Act"
+        "Unnecessary Procedures"
       ],
       "state": "AZ",
       "source_type": "official",
@@ -1682,8 +1672,7 @@
         "Organized Crime",
         "Identity Theft",
         "Money Laundering",
-        "Foreign Nationals",
-        "False Claims Act"
+        "Foreign Nationals"
       ],
       "state": "CA",
       "source_type": "official",
@@ -1787,8 +1776,7 @@
         "Medicare",
         "Medicaid",
         "Opioids",
-        "Addiction Treatment",
-        "False Claims Act"
+        "Addiction Treatment"
       ],
       "state": "KY",
       "source_type": "official",
@@ -2012,7 +2000,6 @@
       "link_label": "DOJ White-Collar Enforcement Plan (PDF)",
       "social_posts": [],
       "tags": [
-        "Tax Evasion",
         "Whistleblower"
       ],
       "state": null,
@@ -2164,8 +2151,7 @@
       "tags": [
         "Medicaid",
         "Kickbacks",
-        "Organized Crime",
-        "False Claims Act"
+        "Organized Crime"
       ],
       "state": "PA",
       "source_type": "official",
@@ -2268,8 +2254,7 @@
         "Medicare",
         "Medicaid",
         "Organized Crime",
-        "Foreign Nationals",
-        "Tax Evasion"
+        "Foreign Nationals"
       ],
       "state": null,
       "source_type": "news",
@@ -2337,7 +2322,6 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Tax Evasion",
         "Assisted Living"
       ],
       "state": "MN",
@@ -2902,8 +2886,7 @@
         "DME Fraud",
         "Kickbacks",
         "COVID-19",
-        "Telehealth",
-        "False Claims Act"
+        "Telehealth"
       ],
       "date": "2026-01-08",
       "amount_numeric": 30000000,
@@ -2930,8 +2913,7 @@
         "Medicaid",
         "AI",
         "Housing Fraud",
-        "Unnecessary Procedures",
-        "Tax Evasion"
+        "Unnecessary Procedures"
       ],
       "date": "2026-02-10",
       "amount_numeric": 3500000,
@@ -2956,8 +2938,7 @@
         "Medicare",
         "DME Fraud",
         "Identity Theft",
-        "Foreign Nationals",
-        "False Claims Act"
+        "Foreign Nationals"
       ],
       "date": "2026-02-12",
       "amount_numeric": 10000000,
@@ -3130,8 +3111,7 @@
       "tags": [
         "Overbilling",
         "Tax Evasion",
-        "Unnecessary Procedures",
-        "False Claims Act"
+        "Unnecessary Procedures"
       ],
       "entities": [],
       "state": "AK",
@@ -3153,8 +3133,7 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Prenatal Care",
-        "False Claims Act"
+        "Prenatal Care"
       ],
       "entities": [],
       "state": "WI",
@@ -3177,8 +3156,7 @@
       "tags": [
         "Opioids",
         "Medicare",
-        "Medicaid",
-        "False Claims Act"
+        "Medicaid"
       ],
       "entities": [],
       "state": "LA",
@@ -3203,8 +3181,7 @@
         "Medicare",
         "Medicaid",
         "Pharmacy Fraud",
-        "Opioids",
-        "False Claims Act"
+        "Opioids"
       ],
       "entities": [],
       "state": "MI",
@@ -3228,7 +3205,6 @@
         "Opioids",
         "Pharmacy Fraud",
         "Kickbacks",
-        "Tax Evasion",
         "False Claims Act"
       ],
       "entities": [
@@ -3253,8 +3229,7 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medical Devices",
-        "False Claims Act"
+        "Medical Devices"
       ],
       "entities": [
         "Kimberly-Clark"
@@ -3346,40 +3321,13 @@
       "link_label": "Ropes & Gray Analysis",
       "social_posts": [],
       "tags": [
-        "Medical Devices",
-        "False Claims Act"
+        "Medical Devices"
       ],
       "entities": [],
       "state": "WA",
       "source_type": "official",
       "auto_fetched": false,
       "related_agency": "FDA"
-    },
-    {
-      "id": "doj-2025-06-teva-450m-copaxone-kickback",
-      "date": "2025-06-01",
-      "agency": "DOJ",
-      "type": "Civil Action",
-      "title": "Teva Pharmaceuticals Pays $450M to Resolve Copaxone Kickback Allegations",
-      "description": "Teva Pharmaceuticals agreed to pay $450 million to resolve FCA and Anti-Kickback allegations. For nearly a decade, Teva funneled hundreds of millions to co-pay assistance foundations structured to benefit only Copaxone while steadily raising the drug's price to increase Medicare reimbursements.",
-      "amount": "$450M",
-      "amount_numeric": 450000000,
-      "officials": [],
-      "link": "https://www.beneschlaw.com/resources/third-party-co-pay-assistance-program-kickback-scheme-results-in-dollar450-million-doj-settlement.html",
-      "link_label": "Legal Analysis",
-      "social_posts": [],
-      "tags": [
-        "Pharmacy Fraud",
-        "Kickbacks",
-        "Medicare",
-        "False Claims Act"
-      ],
-      "entities": [
-        "Teva Pharmaceuticals"
-      ],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": false
     },
     {
       "id": "doj-2025-07-08-cvs-omnicare-949m-judgment",
@@ -3525,8 +3473,7 @@
         "Medicaid",
         "Lab Fraud",
         "Money Laundering",
-        "Unnecessary Procedures",
-        "False Claims Act"
+        "Unnecessary Procedures"
       ],
       "entities": [],
       "state": "NC",
@@ -4177,8 +4124,7 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "National Takedown",
-        "False Claims Act"
+        "National Takedown"
       ],
       "entities": [],
       "state": "ND",
@@ -4201,8 +4147,7 @@
       "tags": [
         "Home Health Fraud",
         "Medicaid",
-        "Unnecessary Procedures",
-        "False Claims Act"
+        "Unnecessary Procedures"
       ],
       "entities": [
         "Inspiring Angels LLC"
@@ -4258,8 +4203,7 @@
         "DME Fraud",
         "Foreign Nationals",
         "Money Laundering",
-        "Medicare",
-        "False Claims Act"
+        "Medicare"
       ],
       "entities": [
         "Dublin Helping Hand"
@@ -4283,8 +4227,7 @@
       "social_posts": [],
       "tags": [
         "Identity Theft",
-        "Foreign Nationals",
-        "False Claims Act"
+        "Foreign Nationals"
       ],
       "entities": [],
       "state": "RI",
@@ -4333,8 +4276,7 @@
         "Medicare",
         "Foreign Nationals",
         "Medicare Advantage",
-        "Lab Fraud",
-        "False Claims Act"
+        "Lab Fraud"
       ],
       "entities": [],
       "state": "CA",
@@ -4384,8 +4326,7 @@
         "Medicare",
         "Genetic Testing",
         "DME Fraud",
-        "Unnecessary Procedures",
-        "False Claims Act"
+        "Unnecessary Procedures"
       ],
       "entities": [],
       "state": "FL",
@@ -4461,8 +4402,7 @@
       "tags": [
         "Medicaid",
         "Prenatal Care",
-        "Kickbacks",
-        "False Claims Act"
+        "Kickbacks"
       ],
       "entities": [],
       "state": "WI",
@@ -4603,8 +4543,7 @@
       "tags": [
         "Medicare",
         "DME",
-        "Genetic Testing",
-        "False Claims Act"
+        "Genetic Testing"
       ],
       "entities": [],
       "state": "FL",
