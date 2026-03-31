@@ -4155,7 +4155,7 @@
     },
     {
       "id": "legislation-2025-ending-improper-payments-deceased",
-      "date": "2025-07-01",
+      "date": "2025-07-30",
       "agency": "Congress",
       "type": "Legislation",
       "title": "Ending Improper Payments to Deceased People Act Passes Senate HSGAC Unanimously",
@@ -4182,7 +4182,7 @@
     },
     {
       "id": "oig-2025-ms-mfcu-unreported-overpayments-4-5m",
-      "date": "2025-06-01",
+      "date": "2025-12-18",
       "agency": "HHS-OIG",
       "type": "Audit",
       "title": "HHS-OIG Audit: Mississippi Failed to Report $4.5M in MFCU Medicaid Overpayments",
@@ -4206,7 +4206,7 @@
     },
     {
       "id": "doj-2025-ms-mitias-orthopaedics-1-87m",
-      "date": "2025-06-01",
+      "date": "2025-12-09",
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Mississippi Orthopedic Clinic Pays $1.87M for Billing Compound Drugs as Brand-Name Products",
@@ -4231,34 +4231,8 @@
       "auto_fetched": false
     },
     {
-      "id": "doj-2025-id-amerihealth-clinics-2m",
-      "date": "2025-06-01",
-      "agency": "DOJ",
-      "type": "Civil Action",
-      "title": "Idaho AmeriHealth Clinics Consents to $2M Judgment for Using Vulnerable Staff to Submit False Claims",
-      "description": "AmeriHealth Clinics consented to a $2 million judgment for False Claims Act violations involving a scheme using vulnerable and inexperienced medical staff to submit false claims to Medicare, Medicaid, and TRICARE.",
-      "amount": "$2M",
-      "amount_numeric": 2000000,
-      "officials": [],
-      "link": "https://www.justice.gov/usao-id/pr/amerihealth-clinics-consent-2-million-judgment-resolve-healthcare-fraud-allegations",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicaid",
-        "TRICARE",
-        "False Claims Act"
-      ],
-      "entities": [
-        "AmeriHealth Clinics"
-      ],
-      "state": "ID",
-      "source_type": "official",
-      "auto_fetched": false
-    },
-    {
       "id": "doj-2025-07-nd-bismarck-1-8m-fraud",
-      "date": "2025-07-01",
+      "date": "2025-06-30",
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Bismarck Man Charged with $1.8M Government Fraud Including False Medicaid Claims",
@@ -4437,7 +4411,7 @@
     },
     {
       "id": "hhs-oig-2026-03-23-1194120255",
-      "date": "2026-03-23",
+      "date": "2026-03-20",
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Alabama Doctor Sentenced to Over One Year in Prison for $2.7 Million Telemedicine Health Care Fraud Scheme",
@@ -4541,7 +4515,7 @@
     },
     {
       "id": "doj-2026-03-23-1119984449",
-      "date": "2026-03-23",
+      "date": "2026-03-19",
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Owner of Now-Closed Milwaukee Prenatal Care Coordination Company Sentenced to 60 Months’ Imprisonment for Health Care Fraud Scheme",
@@ -4561,27 +4535,6 @@
       "entities": [],
       "state": "WI",
       "source_type": "official",
-      "auto_fetched": true
-    },
-    {
-      "id": "media-2026-03-24-2830579526",
-      "date": "2026-03-24",
-      "agency": "Congress",
-      "type": "Investigation",
-      "title": "Congress to Investigate Hospice Fraud",
-      "description": "The U.S. House of Representatives Committee on Oversight and Government Reform has launched an investigation into “rampant” hospice fraud in California. Committee members wrote to California Governor Gavin Newsom (D) requesting documents and communications regarding the state’s oversight and internal controls for detecting or preventing fraud. “In California, your administration’s Departments of Public Health, Social […] The post Congress to Investigate Hospice Fraud appeared first on Hospice News .",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://hospicenews.com/2026/03/24/congress-to-investigate-hospice-fraud/",
-      "link_label": "Hospice News Press Release",
-      "social_posts": [],
-      "tags": [
-        "Hospice Fraud"
-      ],
-      "entities": [],
-      "state": "CA",
-      "source_type": "news",
       "auto_fetched": true
     },
     {
