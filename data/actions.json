@@ -3684,9 +3684,9 @@
       "amount": null,
       "amount_numeric": 0,
       "officials": [
-        "Dr. Mehmet Oz"
+        "Kimberly Brandt"
       ],
-      "link": "https://energycommerce.house.gov/posts/chairman-joyce-delivers-opening-statement-at-subcommittee-on-oversight-and-investigations-hearing-on-ongoing-investigation-into-medicare-and-medicaid-programs-nationwide",
+      "link": "https://energycommerce.house.gov/events/o-and-i-subcommittee-protecting-patients-and-safeguarding-taxpayer-dollars-the-role-of-cms-in-combatting-medicare-and-medicaid-fraud",
       "link_label": "House E&C",
       "social_posts": [],
       "tags": [
@@ -3738,7 +3738,7 @@
         "Chairman James Comer",
         "Dr. Mehmet Oz"
       ],
-      "link": "https://oversight.house.gov/release/comer-takes-new-action-in-investigation-of-fraud-in-new-yorks-medicaid-programs/",
+      "link": "https://oversight.house.gov/release/oversight-committee-launches-investigation-into-new-yorks-abuse-of-federal-funds-in-medicaid-program/",
       "link_label": "House Oversight",
       "social_posts": [],
       "tags": [
@@ -3755,7 +3755,7 @@
     },
     {
       "id": "congress-2025-12-house-oversight-mn-investigation-widened",
-      "date": "2025-12-01",
+      "date": "2025-12-22",
       "agency": "Congress",
       "type": "Investigation",
       "title": "House Oversight Widens Investigation into Minnesota Social Services and Medicaid Fraud",
@@ -3781,7 +3781,7 @@
     },
     {
       "id": "legislation-2025-hr1784-medicare-fraud-detection-act",
-      "date": "2025-03-01",
+      "date": "2025-03-03",
       "agency": "Congress",
       "type": "Legislation",
       "title": "H.R. 1784: Medicare Fraud Detection and Deterrence Act of 2025 Introduced",
@@ -3803,7 +3803,7 @@
     },
     {
       "id": "legislation-2025-s3593-healthcare-fraud-penalties",
-      "date": "2025-06-01",
+      "date": "2026-01-07",
       "agency": "Congress",
       "type": "Legislation",
       "title": "S. 3593: Bill to Increase Health Care Fraud Penalties Introduced in Senate",
@@ -3824,7 +3824,7 @@
     },
     {
       "id": "cms-2025-mn-medicaid-payment-deferrals",
-      "date": "2025-10-01",
+      "date": "2026-02-25",
       "agency": "CMS",
       "type": "Administrative Action",
       "title": "CMS Defers $259M in Federal Medicaid Payments to Minnesota, Freezes Provider Enrollment",
@@ -3890,8 +3890,7 @@
       "link_label": "Senate HELP Committee",
       "social_posts": [],
       "tags": [
-        "Medicaid",
-        "Improper Payments"
+        "Child Care Fraud"
       ],
       "entities": [],
       "state": "MN",
@@ -4057,11 +4056,11 @@
     },
     {
       "id": "medpac-2025-ma-upcoding-analysis",
-      "date": "2025-06-01",
+      "date": "2025-03-15",
       "agency": "Congress",
       "type": "Audit",
-      "title": "MedPAC/CRFB Analysis: Medicare Advantage Upcoding to Cost $40B in 2025; $1.3 Trillion Over Decade",
-      "description": "MedPAC found upcoding will increase Medicare payments to private insurers by an estimated 10% ($40 billion) in 2025. CRFB estimated MA overpayments of $1.3 trillion over the next decade. CMS Administrator Oz pledged to go after upcoding during his Senate confirmation.",
+      "title": "MedPAC/CRFB Analysis: Medicare Advantage Upcoding to Cost $44B in 2025; $1.3 Trillion Over Decade",
+      "description": "MedPAC found upcoding will increase Medicare payments to private insurers by an estimated 11% ($44 billion) in 2025. CRFB estimated MA overpayments of $1.3 trillion over the next decade. CMS Administrator Oz pledged to go after upcoding during his Senate confirmation.",
       "amount": "$40B/year",
       "amount_numeric": 40000000000,
       "officials": [
