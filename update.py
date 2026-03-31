@@ -182,24 +182,29 @@ def generate_tags(text):
     return tags[:6]  # Cap at 6 tags
 
 def fetch_detail_page(session, url):
-    """Fetch a detail page and extract the main text content."""
+    """Fetch a detail page and return (text, doj_link)."""
     try:
         resp = session.get(url, timeout=20)
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, 'lxml')
+        # Extract DOJ press release link if present
+        doj_link = None
+        for a_tag in soup.find_all('a', href=True):
+            if 'justice.gov' in a_tag['href'] and '/pr/' in a_tag['href']:
+                doj_link = a_tag['href']
+                break
         # Try common content containers
         main = (soup.find('main') or soup.find('article') or
                 soup.find('div', class_='field-item') or
                 soup.find('div', class_='entry-content'))
         if main:
-            # Remove nav, footer, sidebar elements
             for tag in main.find_all(['nav', 'footer', 'aside', 'script', 'style']):
                 tag.decompose()
-            return re.sub(r'\s+', ' ', main.get_text(' ', strip=True))
-        return ""
+            return re.sub(r'\s+', ' ', main.get_text(' ', strip=True)), doj_link
+        return "", doj_link
     except Exception as e:
         log(f"    Detail fetch failed for {url}: {e}")
-        return ""
+        return "", None
 
 def make_id(prefix, date_str, link, agency=""):
     hash_input = link or (date_str + agency)
@@ -368,8 +373,14 @@ def scrape_oig(session):
                     date_match = DATE_RE.search(text)
                     if date_match:
                         date_str = date_match.group()
-                # Fetch detail page for description
-                detail_text = fetch_detail_page(session, href)
+                # Fetch OIG detail page — also extracts DOJ press release link if present
+                detail_text, doj_link = fetch_detail_page(session, href)
+                # If DOJ press release exists, use it as the canonical link and fetch its text
+                canonical_link = doj_link if doj_link else href
+                if doj_link:
+                    doj_text, _ = fetch_detail_page(session, doj_link)
+                    if doj_text:
+                        detail_text = doj_text  # use DOJ text for description/tags
                 # Fallback: extract date from detail page text (e.g. "Action Details Date: March 27, 2026")
                 if not date_str and detail_text:
                     date_match = DATE_RE.search(detail_text)
@@ -393,7 +404,7 @@ def scrape_oig(session):
                 items.append({
                     'title': title,
                     'description': desc,
-                    'link': href,
+                    'link': canonical_link,
                     'pub_date': date_str,
                     '_full_text': detail_text,  # carry for tag/amount extraction
                 })
@@ -424,7 +435,7 @@ def scrape_cms(session):
                 if date_match:
                     date_str = date_match.group()
             # Fetch detail page for description
-            detail_text = fetch_detail_page(session, href)
+            detail_text, _ = fetch_detail_page(session, href)
             desc = ""
             if detail_text:
                 cleaned = detail_text
@@ -471,7 +482,7 @@ def scrape_energy_commerce(session):
             # Fetch detail page for description
             detail_text = ""
             try:
-                detail_text = fetch_detail_page(session, href)
+                detail_text, _ = fetch_detail_page(session, href)
             except Exception:
                 pass
             desc = ""
@@ -525,7 +536,7 @@ def scrape_help_committee(session):
             # Fetch detail page for description
             detail_text = ""
             try:
-                detail_text = fetch_detail_page(session, href)
+                detail_text, _ = fetch_detail_page(session, href)
             except Exception:
                 pass
             desc = ""
@@ -590,7 +601,7 @@ def scrape_ways_means(session):
             # Fetch detail page for description
             detail_text = ""
             try:
-                detail_text = fetch_detail_page(session, href)
+                detail_text, _ = fetch_detail_page(session, href)
             except Exception:
                 pass
             desc = ""
@@ -643,7 +654,7 @@ def scrape_doj_usao(session):
             # Fetch detail page for description
             detail_text = ""
             try:
-                detail_text = fetch_detail_page(session, href)
+                detail_text, _ = fetch_detail_page(session, href)
             except Exception:
                 pass
             desc = ""
@@ -704,7 +715,7 @@ def fetch_rss(session, url, use_browser_fallback=False):
         detail_text = ""
         if link and len(desc_clean) < 100:
             try:
-                detail_text = fetch_detail_page(session, link)
+                detail_text, _ = fetch_detail_page(session, link)
                 if detail_text:
                     cleaned = detail_text
                     if title in cleaned:
