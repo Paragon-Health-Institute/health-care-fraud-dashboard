@@ -767,6 +767,9 @@ def scrape_oig_reports(session):
                 title = a_tag.get_text(strip=True)
                 if not title or len(title) < 10:
                     continue
+                # Skip clean audits — "in accordance with" means no violations found
+                if re.search(r'\bin accordance with\b', title, re.I):
+                    continue
                 href = a_tag['href']
                 if href.startswith('/'):
                     href = 'https://oig.hhs.gov' + href
