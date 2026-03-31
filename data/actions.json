@@ -393,7 +393,7 @@
         "CRUSH",
         "Hospice Fraud"
       ],
-      "state": "CA",
+      "state": "AZ, CA, GA, NV, OH, TX",
       "source_type": "social_media",
       "auto_fetched": false,
       "entities": []
@@ -537,7 +537,7 @@
         "Medicare",
         "Telehealth"
       ],
-      "state": "AZ",
+      "state": "AZ, FL",
       "source_type": "official",
       "auto_fetched": false,
       "entities": [
@@ -878,7 +878,7 @@
         "Nursing Home",
         "Tax Evasion"
       ],
-      "state": "NJ",
+      "state": "MI, NJ, WI",
       "source_type": "official",
       "auto_fetched": false,
       "entities": []
@@ -1110,7 +1110,7 @@
         "Settlement",
         "TRICARE"
       ],
-      "state": "VA",
+      "state": "AR, TX, VA",
       "source_type": "official",
       "auto_fetched": false,
       "entities": []
@@ -1269,7 +1269,7 @@
         "Settlement",
         "Upcoding"
       ],
-      "state": "CA",
+      "state": "CA, CO",
       "source_type": "official",
       "auto_fetched": false,
       "entities": [
@@ -1406,7 +1406,7 @@
         "Convicted",
         "Housing Fraud"
       ],
-      "state": "FL",
+      "state": "FL, TX",
       "source_type": "official",
       "auto_fetched": false,
       "entities": []
@@ -1528,7 +1528,7 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Atlanta Gastroenterology Associates Pays $4.75M to Settle Kickbacks and Unnecessary Testing Allegations",
-      "description": "Atlanta Gastroenterology Associates (Georgia) and Advanced Pathology Solutions (Arkansas) agreed to pay $4.75 million combined to resolve False Claims Act allegations that Atlanta Gastroenterology received kickbacks in exchange for patient referrals to Advanced Pathology Solutions, and that APS performed medically unnecessary gastrointestinal pathology testing on those patients through automatic 'reflex ordering' without medical justification.",
+      "description": "Atlanta Gastroenterology Associates (Atlanta, GA) agreed to pay $4.75 million to resolve False Claims Act allegations that it received kickbacks from Advanced Pathology Solutions (APS, AR) in exchange for referrals of gastrointestinal pathology services, and performed certain gastrointestinal pathology services that were not medically reasonable or necessary through automatic reflex ordering without medical justification.",
       "amount": "$4.75M",
       "amount_numeric": 4750000,
       "officials": [
@@ -1546,7 +1546,7 @@
         "Settlement",
         "Unnecessary Procedures"
       ],
-      "state": "GA",
+      "state": "GA, AR",
       "source_type": "official",
       "auto_fetched": false,
       "entities": []
@@ -2936,7 +2936,7 @@
       "id": "media-2026-02-10-doj-mn-fraud-tourists-ai",
       "auto_fetched": false,
       "officials": [],
-      "state": "MN",
+      "state": "MN, PA",
       "source_type": "official",
       "title": "DOJ: 'Fraud Tourists' Plead Guilty to $3.5M Minneapolis Medicaid Fraud Using AI-Fabricated Records",
       "link_label": "DOJ Press Release",
@@ -3131,7 +3131,7 @@
       "entities": [
         "Safe Chain Solutions"
       ],
-      "state": "FL",
+      "state": "FL, MD",
       "source_type": "official",
       "auto_fetched": false
     },
@@ -3227,7 +3227,7 @@
         "Pharmacy Fraud"
       ],
       "entities": [],
-      "state": "MI",
+      "state": "MI, OH",
       "source_type": "official",
       "auto_fetched": false
     },
@@ -3571,7 +3571,7 @@
         "Pharmacy Fraud"
       ],
       "entities": [],
-      "state": "FL",
+      "state": "FL, TX",
       "source_type": "official",
       "auto_fetched": false,
       "related_agency": "DEA"
@@ -4296,7 +4296,7 @@
         "Medicare Advantage"
       ],
       "entities": [],
-      "state": "OR",
+      "state": "CA, OR",
       "source_type": "official",
       "auto_fetched": true
     },
@@ -4372,7 +4372,7 @@
         "TRICARE"
       ],
       "entities": [],
-      "state": "AL",
+      "state": "AL, MS",
       "source_type": "official",
       "auto_fetched": true
     },
@@ -4518,7 +4518,7 @@
         "Pharmacy Fraud"
       ],
       "entities": [],
-      "state": "CA",
+      "state": "CA, FL",
       "source_type": "official",
       "auto_fetched": true
     },
