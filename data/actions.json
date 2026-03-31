@@ -3875,29 +3875,6 @@
       "auto_fetched": false
     },
     {
-      "id": "congress-2026-02-12-senate-help-child-care-fraud-hearing",
-      "date": "2026-02-12",
-      "agency": "Congress",
-      "type": "Congressional Hearing",
-      "title": "Senate HELP Hearing: Restoring Integrity — Preventing Fraud in Child Care Assistance Programs",
-      "description": "Chairman Cassidy convened a hearing examining rampant fraud in federal child care funding, triggered by Minnesota's scandal where 1 in 10 child care dollars was stolen or misused. Followed Cassidy's demand for documents from Governor Walz.",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [
-        "Chairman Bill Cassidy"
-      ],
-      "link": "https://www.help.senate.gov/rep/newsroom/press/next-week-senate-help-committee-to-hold-hearing-on-child-care-fraud-protecting-american-taxpayers",
-      "link_label": "Senate HELP Committee",
-      "social_posts": [],
-      "tags": [
-        "Child Care Fraud"
-      ],
-      "entities": [],
-      "state": "MN",
-      "source_type": "official",
-      "auto_fetched": false
-    },
-    {
       "id": "congress-2026-01-09-ec-wm-la-hospice-fraud-inquiry",
       "date": "2026-01-09",
       "agency": "Congress",
@@ -4119,28 +4096,6 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://www.congress.gov/bill/119th-congress/house-bill/7155/all-info",
-      "link_label": "Congress.gov",
-      "social_posts": [],
-      "tags": [
-        "Medicaid",
-        "Program Integrity"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": false
-    },
-    {
-      "id": "legislation-2026-hr7677-closing-provider-fraud-gap",
-      "date": "2026-02-25",
-      "agency": "Congress",
-      "type": "Legislation",
-      "title": "H.R. 7677: Closing the Provider Fraud Gap Act — Passed Committee 35-0",
-      "description": "Requires the Comptroller General to study fraud prevention in federal early childhood education, child care, and child nutrition programs. Passed House Education and Workforce Committee 35-0 on March 5, 2026.",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.congress.gov/bill/119th-congress/house-bill/7677/all-info",
       "link_label": "Congress.gov",
       "social_posts": [],
       "tags": [
