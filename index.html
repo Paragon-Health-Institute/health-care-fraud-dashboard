@@ -252,12 +252,12 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
           </div>
         </div>
         <div class="spotlight-slide" data-index="3">
-          <div class="spotlight-eyebrow">Largest Enforcement Action</div>
+          <div class="spotlight-eyebrow">Largest Enforcement Action Since January 2025</div>
           <div class="spotlight-body">
             <div class="spotlight-stat">$14.6B</div>
             <div class="spotlight-text-col">
               <div class="spotlight-desc">DOJ charged 324 defendants in the largest health care fraud takedown in U.S. history</div>
-              <div class="spotlight-link"><a href="#" onclick="event.preventDefault();document.querySelector('[data-agency=DOJ]')?.scrollIntoView({behavior:'smooth'})">View in dashboard &rarr;</a></div>
+              <div class="spotlight-link"><a href="#" onclick="event.preventDefault();setView('cards');setTimeout(function(){var el=document.getElementById('entry-doj-2025-06-national-takedown');if(el){el.scrollIntoView({behavior:'smooth'});el.style.outline='2px solid var(--blaze)';setTimeout(function(){el.style.outline='';},2000);}},300);">View in dashboard &rarr;</a></div>
             </div>
           </div>
         </div>
@@ -573,6 +573,7 @@ function appendCards(count, view) {
     }
     const col  = tmpl.content.cloneNode(true);
     const card = col.querySelector('.action-card');
+    if (action.id) card.setAttribute('id', 'entry-' + action.id);
     card.setAttribute('data-agency', action.agency || 'Other');
     const agBadge = col.querySelector('.agency-badge');
     agBadge.textContent = action.agency || 'Other';
