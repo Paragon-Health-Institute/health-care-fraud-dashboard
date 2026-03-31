@@ -385,7 +385,7 @@
       "agency": "White House",
       "type": "Structural/Organizational",
       "title": "Trump Plans New Anti-Fraud Task Force for California, Led by JD Vance",
-      "description": "Reuters reported that President Trump plans to create a new anti-fraud task force focused on California, which will be led by Vice President JD Vance.",
+      "description": "President Trump announced plans to create a new anti-fraud task force focused on California and other states, to be led by Vice President JD Vance.",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [
@@ -1204,7 +1204,7 @@
       "agency": "White House",
       "type": "Structural/Organizational",
       "title": "White House Announces New DOJ National Fraud Enforcement Division; Health Care Fraud a Core Focus",
-      "description": "The Trump White House announced the creation of a new Department of Justice Division for National Fraud Enforcement, to be led by an Assistant Attorney General appointed by the President. The division will enforce federal criminal and civil laws against fraud targeting federal government programs—including Medicare, Medicaid, and other HHS-funded programs—federally funded benefits, businesses, nonprofits, and private citizens. VP J.D. Vance stated the division 'will be run out of the White House.' On January 28, 2026, President Trump announced Colin McDonald as the nominee for AAG of the new division.",
+      "description": "President Trump established a new Department of Justice Division for National Fraud Enforcement to coordinate criminal and civil fraud enforcement against federal programs including Medicare, Medicaid, and other HHS-funded programs. The division is led by an Assistant Attorney General appointed by the President. In January 2026, President Trump nominated Colin McDonald as the first AAG of the new division.",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [
@@ -3048,7 +3048,7 @@
       "agency": "White House",
       "type": "Executive Order",
       "title": "President Trump Establishes Task Force to Eliminate Fraud via Executive Order",
-      "description": "President Trump signed an executive order establishing the Task Force to Eliminate Fraud, chaired by Vice President J.D. Vance, to coordinate federal efforts against fraud, waste, and abuse in federal benefit programs including Medicaid. The task force will develop minimum anti-fraud requirements including identity verification, documentation standards, pre-payment risk controls, and audit procedures. The EO specifically cites Medicaid vulnerabilities in Minnesota, California, Illinois, New York, Maine, and Colorado, and references the Feeding Our Future scheme ($250M stolen) and Minnesota Medicaid fraud (potentially billions). The FTC Chairman serves as Vice Chair, with cabinet secretaries and agency heads as members.",
+      "description": "President Trump signed an Executive Order creating the Task Force to Eliminate Fraud, chaired by Vice President J.D. Vance, to coordinate government-wide efforts to combat fraud, waste, and abuse in federal benefit programs including housing, food, medical care, and cash assistance. The FTC Chairman serves as Vice Chair. The Task Force will coordinate eligibility verification, pre-payment controls, fraud detection, and minimum anti-fraud requirements. The EO cites Medicaid vulnerabilities in Minnesota, California, Illinois, New York, Maine, and Colorado.",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [
@@ -3060,10 +3060,11 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
+        "Medicare",
         "Program Integrity"
       ],
       "entities": [],
-      "state": null,
+      "state": "MN, CA, IL, NY, ME, CO",
       "source_type": "official",
       "auto_fetched": false
     },
@@ -3845,8 +3846,8 @@
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
-      "link": "https://www.axios.com/2026/02/14/elon-musk-doge-medicaid-fraud-hhs-database",
-      "link_label": "Axios",
+      "link": "https://www.hhs.gov/press-room/cms-doge-identify-wasteful-duplicate-medicaid-enrollments.html",
+      "link_label": "HHS Press Release",
       "social_posts": [],
       "tags": [
         "AI",
@@ -3856,7 +3857,7 @@
       ],
       "entities": [],
       "state": null,
-      "source_type": "news",
+      "source_type": "official",
       "auto_fetched": false
     },
     {
