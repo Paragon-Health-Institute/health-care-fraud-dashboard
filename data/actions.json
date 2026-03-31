@@ -2686,27 +2686,6 @@
       "entities": []
     },
     {
-      "id": "legislation-2026-03-04-oregon-hospice-fraud-bill",
-      "date": "2026-03-04",
-      "agency": "Congress",
-      "type": "Legislation",
-      "title": "Oregon Passes SB 1575: Hospice Fraud Prevention with License Moratorium and Background Checks",
-      "description": "Oregon SB 1575 passed both chambers (Senate 19-8, House 52-1) in direct response to the California hospice fraud crisis. Imposes moratorium on new hospice licenses until Oregon Health Authority updates rules. Bars hospice operators with history of fraud or substandard care in other states from opening in Oregon. Requires background checks for hospice owners. Awaiting Governor Kotek's signature.",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://olis.oregonlegislature.gov/liz/2026R1/Measures/Overview/SB1575",
-      "link_label": "Oregon Legislature",
-      "social_posts": [],
-      "tags": [
-        "Hospice Fraud"
-      ],
-      "state": "OR",
-      "source_type": "official",
-      "auto_fetched": false,
-      "entities": []
-    },
-    {
       "id": "congress-2025-12-04-senate-finance-gao-aca-response",
       "date": "2025-12-04",
       "agency": "Congress",
