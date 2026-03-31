@@ -323,32 +323,6 @@
       "entities": []
     },
     {
-      "id": "cms-2026-01-california-hospice-investigation",
-      "date": "2026-01-08",
-      "agency": "CMS",
-      "type": "Investigation",
-      "title": "Dr. Oz and Essayli Building Team to Investigate CA Hospice and Home-Care Fraud",
-      "description": "Dr. Oz (CMS) and First Assistant U.S. Attorney Bill Essayli announced they are working together to build a team investigating alleged widespread hospice and home-care fraud in Los Angeles County. CMS indicated this is a top priority.",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [
-        "Dr. Mehmet Oz",
-        "Bill Essayli"
-      ],
-      "link": "https://hospicenews.com/2026/01/12/cms-doj-aggressively-cracking-down-on-hospice-fraud/",
-      "link_label": "Hospice News Report",
-      "social_posts": [],
-      "tags": [
-        "Hospice Fraud",
-        "Home Health Fraud",
-        "Tax Evasion"
-      ],
-      "state": "CA",
-      "source_type": "social_media",
-      "auto_fetched": false,
-      "entities": []
-    },
-    {
       "id": "cms-2026-01-27-newsom-demand",
       "date": "2026-01-27",
       "agency": "CMS",
