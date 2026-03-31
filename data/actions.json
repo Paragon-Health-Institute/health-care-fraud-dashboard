@@ -2914,7 +2914,7 @@
       "title": "DOJ: Oklahoma Medical Supply Company Owner Indicted for $30M Health Care Fraud Scheme",
       "link_label": "DOJ Press Release",
       "type": "Criminal Enforcement",
-      "amount": "$17M",
+      "amount": "$30M",
       "description": "Mark Loftis, 38, of Cushing, OK, owner of Back Pain Home Supplies LLC (EZ Medical Supply), indicted for paying illegal kickbacks to marketers and telemedicine companies for fraudulent DME orders. Submitted approximately $30 million in false claims; federal programs paid approximately $8 million. Also misused more than $133,000 in COVID-19 Provider Relief Funds for personal expenses.",
       "agency": "DOJ",
       "social_posts": [],
@@ -2927,7 +2927,7 @@
         "Telehealth"
       ],
       "date": "2026-01-08",
-      "amount_numeric": 17000000.0,
+      "amount_numeric": 30000000.0,
       "entities": [],
       "related_agency": "DOJ"
     },
@@ -2992,7 +2992,7 @@
       "title": "DOJ: Russian Citizen Charged with Laundering $1.2M Connected to $400M in Fraudulent Medicare Claims",
       "link_label": "DOJ Press Release",
       "type": "Criminal Enforcement",
-      "amount": "$1.2M",
+      "amount": "$400M+",
       "description": "Nikolai Buzolin, 38, of Russia, charged with conspiracy to commit money laundering in connection with Verisola Inc., which submitted $400M+ in false Medicare Advantage claims for DME (orthotic braces, glucose monitors) never provided to patients. MAOs reimbursed at least $1.7M, of which at least $1.2M was wired overseas. Buzolin was arrested in LA attempting to flee to Moscow. Scheme ran Aug 2025-Jan 2026.",
       "agency": "DOJ",
       "social_posts": [],
@@ -3006,7 +3006,7 @@
         "Unnecessary Procedures"
       ],
       "date": "2026-03-05",
-      "amount_numeric": 1200000.0,
+      "amount_numeric": 400000000.0,
       "entities": [],
       "related_agency": "DOJ"
     },
@@ -3043,7 +3043,7 @@
       "title": "DOJ: Two Charged in $227M Medicare Fraud Scheme Using Fake COVID-19 Test Kit Labs",
       "link_label": "DOJ Press Release",
       "type": "Criminal Enforcement",
-      "amount": "$136M",
+      "amount": "$227M",
       "description": "Syed Murtuza Kablazada, 34, and Syed Mehdi Hussain, 32, of Illinois, charged with operating purported medical laboratories that submitted $227M in fraudulent Medicare claims for over-the-counter COVID-19 test kits. Used foreign nationals as nominee owners. Paid marketers for names of hundreds of thousands of Medicare beneficiaries, including deceased individuals. Medicare paid approximately $136M.",
       "agency": "DOJ",
       "social_posts": [],
@@ -3055,7 +3055,7 @@
         "Medicare"
       ],
       "date": "2025-05-22",
-      "amount_numeric": 136000000.0,
+      "amount_numeric": 227000000.0,
       "entities": [],
       "related_agency": "DOJ"
     },
