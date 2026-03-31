@@ -445,6 +445,19 @@ let latestAutoDate = '';
 const ENFORCEMENT_TYPES = new Set(['Criminal Enforcement', 'Civil Action']);
 
 const AGENCY_CLASS = { 'DOJ':'agency-DOJ','HHS':'agency-HHS','CMS':'agency-CMS','HHS-OIG':'agency-HHS-OIG','FDA':'agency-FDA','DEA':'agency-DEA','White House':'agency-White-House','Media':'agency-Media','Congress':'agency-Congress','GAO':'agency-GAO','State Agency':'agency-State-Agencies','Treasury':'agency-Treasury' };
+const AGENCY_TOOLTIPS = {
+  'DOJ': 'Department of Justice \u2014 Prosecutes health care fraud through criminal and civil enforcement, including the Health Care Fraud Strike Force.',
+  'HHS-OIG': 'HHS Office of Inspector General \u2014 Investigates fraud and audits Medicare, Medicaid, and other HHS programs.',
+  'CMS': 'Centers for Medicare & Medicaid Services \u2014 Administers Medicare and Medicaid; takes administrative actions like provider revocations and payment deferrals.',
+  'HHS': 'Department of Health and Human Services \u2014 Parent agency of CMS and OIG; issues policy directives and coordinates anti-fraud initiatives.',
+  'FDA': 'Food and Drug Administration \u2014 Enforces against adulterated or misbranded medical products and pharmaceutical fraud.',
+  'DEA': 'Drug Enforcement Administration \u2014 Targets illegal distribution of controlled substances, including pill mills and opioid diversion.',
+  'GAO': 'Government Accountability Office \u2014 Congress\u2019s auditing arm; publishes reports identifying fraud vulnerabilities in federal health programs.',
+  'Congress': 'Congressional committees conducting oversight hearings, investigations, and legislation related to health care fraud.',
+  'White House': 'Executive actions, presidential memoranda, and administration-wide anti-fraud initiatives.',
+  'Treasury': 'Department of the Treasury / FinCEN \u2014 Issues advisories to financial institutions and administers the fraud whistleblower reward program.',
+  'Media': 'Investigative journalism and media coverage uncovering health care fraud.',
+};
 const STATE_NAMES  = { AL:'Alabama',AK:'Alaska',AZ:'Arizona',AR:'Arkansas',CA:'California',CO:'Colorado',CT:'Connecticut',DE:'Delaware',FL:'Florida',GA:'Georgia',HI:'Hawaii',ID:'Idaho',IL:'Illinois',IN:'Indiana',IA:'Iowa',KS:'Kansas',KY:'Kentucky',LA:'Louisiana',ME:'Maine',MD:'Maryland',MA:'Massachusetts',MI:'Michigan',MN:'Minnesota',MS:'Mississippi',MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',NH:'New Hampshire',NJ:'New Jersey',NM:'New Mexico',NY:'New York',NC:'North Carolina',ND:'North Dakota',OH:'Ohio',OK:'Oklahoma',OR:'Oregon',PA:'Pennsylvania',RI:'Rhode Island',SC:'South Carolina',SD:'South Dakota',TN:'Tennessee',TX:'Texas',UT:'Utah',VT:'Vermont',VA:'Virginia',WA:'Washington',WV:'West Virginia',WI:'Wisconsin',WY:'Wyoming',DC:'Washington D.C.' };
 
 function formatDate(d) {
@@ -562,6 +575,7 @@ function appendCards(count, view) {
     const agBadge = col.querySelector('.agency-badge');
     agBadge.textContent = action.agency || 'Other';
     agBadge.classList.add(AGENCY_CLASS[action.agency] || 'agency-Other');
+    if (AGENCY_TOOLTIPS[action.agency]) { agBadge.title = AGENCY_TOOLTIPS[action.agency]; agBadge.style.cursor = 'help'; }
     const typeBadge = col.querySelector('.type-badge');
     typeBadge.textContent = action.type || 'Other';
     typeBadge.classList.add(typeClass(action.type));
@@ -962,6 +976,7 @@ function renderStoryCards(stories) {
     const agBadge = col.querySelector('.agency-badge');
     agBadge.textContent = action.agency || 'Media';
     agBadge.classList.add(AGENCY_CLASS[action.agency] || 'agency-Other');
+    if (AGENCY_TOOLTIPS[action.agency]) { agBadge.title = AGENCY_TOOLTIPS[action.agency]; agBadge.style.cursor = 'help'; }
     const typeBadge = col.querySelector('.type-badge');
     typeBadge.textContent = action.type || 'Investigative Report';
     typeBadge.classList.add(typeClass(action.type));
