@@ -1469,7 +1469,7 @@
       "agency": "CMS",
       "type": "Administrative Action",
       "title": "CMS/HHS Announce Major Anti-Fraud Package: $259.5M MN Deferral, DMEPOS Moratorium, CRUSH Initiative",
-      "description": "Vice President J.D. Vance, HHS Secretary RFK Jr., and CMS Administrator Dr. Oz jointly announced a sweeping anti-fraud package at the White House. Actions included: (1) $259.5 million deferral of quarterly federal Medicaid matching funds to Minnesota ($243.8M for fraudulent claims; $15.4M for unauthorized immigrant claims); (2) a nationwide six-month moratorium on new Medicare DMEPOS supplier enrollment, building on $1.5 billion in prevented DMEPOS billing in 2025; (3) the CRUSH (Comprehensive Regulations to Uncover Suspicious Health Care) initiative RFI published in the Federal Register; (4) CMS-State Tax Fraud Partnership with 28 states. CMS metrics for 2025: $5.7 billion suspended, 122,658 claims denied, 5,586 providers revoked, 372 fraud referrals totaling $3.7 billion.",
+      "description": "Vice President J.D. Vance, HHS Secretary RFK Jr., and CMS Administrator Dr. Oz jointly announced a sweeping anti-fraud package at the White House. Actions included: (1) $259.5 million deferral of quarterly federal Medicaid matching funds to Minnesota ($243.8M for fraudulent claims; $15.4M for unauthorized immigrant claims); (2) a nationwide six-month moratorium on new Medicare DMEPOS supplier enrollment, building on $1.5 billion in prevented DMEPOS billing in 2025; (3) the CRUSH (Comprehensive Regulations to Uncover Suspicious Health Care) initiative RFI published in the Federal Register; (4) CMS-State Tax Fraud Partnership with 28 states. CMS metrics for 2025: $5.7 billion suspended, 122,658 claims denied, 5,586 providers revoked, 372 fraud referrals totaling $3.7 billion. The administration announced a shift from a 'pay and chase' model to a real-time 'detect and deploy' strategy using AI tools to identify fraud before payments are issued.",
       "amount": "$259.5M",
       "amount_numeric": 259500000,
       "officials": [
@@ -1486,7 +1486,8 @@
         "CRUSH",
         "Medicare",
         "Tax Evasion",
-        "False Claims Act"
+        "False Claims Act",
+        "AI"
       ],
       "state": "MN",
       "source_type": "official",
