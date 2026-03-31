@@ -1603,34 +1603,6 @@
       "entities": []
     },
     {
-      "id": "doj-2026-01-dr-merchia-independent-health-fca-prior",
-      "date": "2024-12-20",
-      "agency": "DOJ",
-      "type": "Civil Action",
-      "title": "Independent Health Agrees to Pay Up to $98M to Settle Medicare Advantage Upcoding Allegations",
-      "description": "Independent Health Association and Independent Health Corporation (Buffalo, NY) agreed to pay up to $98 million—$34.5 million guaranteed plus up to $63.5 million contingent—to resolve False Claims Act allegations that they submitted or caused the submission of invalid diagnosis codes to Medicare for Medicare Advantage enrollees to increase risk-adjusted payments. Co-defendant DxID LLC (a risk adjustment vendor) and its CEO Betsy Gaffney separately agreed to pay $2 million. Independent Health entered a five-year corporate integrity agreement with HHS-OIG requiring independent review of MA patients' medical records annually.",
-      "amount": "$98M",
-      "amount_numeric": 98000000,
-      "officials": [],
-      "link": "https://www.justice.gov/archives/opa/pr/medicare-advantage-provider-independent-health-pay-98m-settle-false-claims-act-suit",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare Advantage",
-        "Risk Adjustment",
-        "Medicare",
-        "Upcoding",
-        "Whistleblower",
-        "False Claims Act"
-      ],
-      "state": "NY",
-      "source_type": "official",
-      "auto_fetched": false,
-      "entities": [
-        "Independent Health"
-      ]
-    },
-    {
       "id": "doj-2025-01-cr-bard-catheter-kickbacks",
       "date": "2025-01-23",
       "agency": "DOJ",
@@ -1740,33 +1712,6 @@
       "source_type": "official",
       "auto_fetched": false,
       "entities": []
-    },
-    {
-      "id": "doj-2025-02-06-medisca-awp-settlement",
-      "date": "2024-11-01",
-      "agency": "DOJ",
-      "type": "Civil Action",
-      "title": "Medisca Inc. Pays $21.75M for Inflated AWPs on Compounded Prescription Ingredients",
-      "description": "Compound ingredient supplier Medisca Inc. agreed to pay $21.75 million to resolve False Claims Act allegations that it knowingly inflated Average Wholesale Prices (AWPs) for two compound prescription ingredients — resveratrol and mometasone furoate — to increase reimbursements its pharmacy customers received from federal health care programs including TRICARE and DOL Workers' Compensation. Medisca bought resveratrol for ~$0.37/gram and reported an AWP of $777/gram. A compounding pharmacist whistleblower will receive $3.4 million.",
-      "amount": "$21.75 million",
-      "amount_numeric": 21750000.0,
-      "officials": [],
-      "link": "https://www.justice.gov/archives/opa/pr/compound-ingredient-supplier-medisca-inc-pay-2175m-resolve-allegations-false-and-inflated",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [
-        "Pharmacy Fraud",
-        "TRICARE",
-        "Overbilling",
-        "Whistleblower",
-        "False Claims Act"
-      ],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": false,
-      "entities": [
-        "Medisca"
-      ]
     },
     {
       "id": "doj-2025-02-14-saint-vincents-military-overpayment",
@@ -2636,28 +2581,6 @@
         "Addiction Treatment"
       ],
       "state": "NJ",
-      "source_type": "official",
-      "auto_fetched": false,
-      "entities": []
-    },
-    {
-      "id": "legislation-2025-12-23-ndaa-admin-false-claims-act",
-      "date": "2024-12-23",
-      "agency": "Congress",
-      "type": "Legislation",
-      "title": "NDAA FY2025 Creates Administrative False Claims Act: Raises Agency Fraud Threshold to $1M",
-      "description": "Section 5203 of the National Defense Authorization Act (P.L. 118-159, signed Dec 23, 2024) renames and revitalizes the Program Fraud Civil Remedies Act as the Administrative False Claims Act. Raises the ceiling for claims agencies can handle administratively from $150,000 to $1,000,000. Expands to include reverse false claims. Extends statute of limitations to 6 years after violation or 3 years after discovery (10-year cap). Gives HHS, CMS, and other agencies significantly more power to pursue health care fraud cases without DOJ litigation.",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.seyfarth.com/news-insights/the-new-administrative-false-claims-act-key-amendments-and-implications.html",
-      "link_label": "Seyfarth Shaw Analysis",
-      "social_posts": [],
-      "tags": [
-        "Program Integrity",
-        "False Claims Act"
-      ],
-      "state": null,
       "source_type": "official",
       "auto_fetched": false,
       "entities": []
