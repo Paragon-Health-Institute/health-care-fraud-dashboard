@@ -332,6 +332,15 @@ def scrape_page_with_browser(url):
 def scrape_oig(session):
     """Scrape HHS-OIG enforcement actions page (pages 1-2)."""
     base_url = "https://oig.hhs.gov/fraud/enforcement/?type=criminal-and-civil-actions"
+    # Known OIG navigation/index paths that are not individual enforcement actions
+    OIG_NAV_PATHS = {
+        'https://oig.hhs.gov/fraud/enforcement/',
+        'https://oig.hhs.gov/fraud/enforcement/about/',
+        'https://oig.hhs.gov/fraud/enforcement/civil-monetary-penalty-authorities/',
+    }
+    DATE_RE = re.compile(
+        r'(January|February|March|April|May|June|July|August|September|October|November|December)'
+        r'\s+\d{1,2},?\s+\d{4}', re.I)
     items = []
     for page in range(1, 3):
         url = base_url if page == 1 else f"{base_url}&page={page}"
@@ -347,16 +356,25 @@ def scrape_oig(session):
                     continue
                 if href.startswith('/'):
                     href = 'https://oig.hhs.gov' + href
-                # Date is typically in a sibling or parent element
+                # Skip navigation/index pages — only process individual action slugs
+                href_norm = href.rstrip('/') + '/'
+                if href_norm in OIG_NAV_PATHS or '?' in href:
+                    continue
+                # Date: try listing page parent element first
                 parent = a_tag.find_parent(['li', 'div', 'article', 'tr'])
                 date_str = ""
                 if parent:
                     text = parent.get_text(' ', strip=True)
-                    date_match = re.search(r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}', text)
+                    date_match = DATE_RE.search(text)
                     if date_match:
                         date_str = date_match.group()
                 # Fetch detail page for description
                 detail_text = fetch_detail_page(session, href)
+                # Fallback: extract date from detail page text (e.g. "Action Details Date: March 27, 2026")
+                if not date_str and detail_text:
+                    date_match = DATE_RE.search(detail_text)
+                    if date_match:
+                        date_str = date_match.group()
                 # Extract first meaningful paragraph as description (skip title echo)
                 desc = ""
                 if detail_text:
