@@ -315,7 +315,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
         <input type="text" id="searchInput" class="form-control search-input" placeholder="Search actions..." oninput="currentView === 'landscape' ? filterLandscape() : currentView === 'oversight' ? applyOversightFilters() : applyFilters()" />
       </div>
       <div id="enforcementFilters" class="d-flex flex-wrap align-items-center gap-2">
-        <select class="form-select filter-select" id="agencyFilter" onchange="applyFilters()">
+        <select class="form-select filter-select" id="agencyFilter" onchange="refreshTypeFilter(enforcementActions, this.value, 'typeFilter'); applyFilters()">
           <option value="all">All Agencies</option>
         </select>
         <select class="form-select filter-select" id="typeFilter" onchange="applyFilters()">
@@ -331,7 +331,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
         </button>
       </div>
       <div id="oversightFilters" class="d-flex flex-wrap align-items-center gap-2 d-none">
-        <select class="form-select filter-select" id="oversightAgencyFilter" onchange="applyOversightFilters()">
+        <select class="form-select filter-select" id="oversightAgencyFilter" onchange="refreshTypeFilter(oversightActions, this.value, 'oversightTypeFilter'); applyOversightFilters()">
           <option value="all">All Agencies</option>
         </select>
         <select class="form-select filter-select" id="oversightTypeFilter" onchange="applyOversightFilters()">
@@ -807,6 +807,14 @@ function populateStateFilter(selectId, dataArray) {
     opt.textContent = STATE_NAMES[abbr] ? STATE_NAMES[abbr] + ' (' + abbr + ')' : abbr;
     sel.appendChild(opt);
   });
+}
+
+function refreshTypeFilter(actionsArray, agencyValue, typeSelectId) {
+  const subset = agencyValue === 'all'
+    ? actionsArray
+    : actionsArray.filter(a => a.agency === agencyValue || a.related_agency === agencyValue);
+  populateFilterOptions(typeSelectId, subset, 'type');
+  document.getElementById(typeSelectId).value = 'all';
 }
 
 function populateFilterOptions(selectId, dataArray, field) {
