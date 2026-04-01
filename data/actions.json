@@ -4458,30 +4458,6 @@
       "auto_fetched": true
     },
     {
-      "id": "doj-2026-03-30-840231812",
-      "date": "2026-03-30",
-      "agency": "DOJ",
-      "type": "Civil Action",
-      "title": "American Health Companies, dba American Health Partners, Agrees to Pay Over Two Million Dollars to Resolve False Claims Act Liability Involving a Tennessee Nursing Home",
-      "description": "NASHVILLE – United States Attorney Braden H. Boucek for the Middle District of Tennessee announced today that American Health Companies, LLC (“AHC”), doing business as American Health Partners (“AHP”), has agreed to pay $2,090,309 to the United States and Tennessee to resolve False Claims Act allegations related to billing Medicare and TennCare for grossly substandard nursing home services from Lewis County Nursing and Rehabilitation, LLC, between 2019 and 2024. During those years, Lewis County Nursing and Rehabilitation did business as AHC Lewis County and operated as a subsidiary of AHP.",
-      "amount": "$2.09M",
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.justice.gov/usao-mdtn/pr/american-health-companies-dba-american-health-partners-agrees-pay-over-two-million",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [
-        "False Claims Act",
-        "Medicare",
-        "Nursing Home",
-        "Settlement"
-      ],
-      "entities": [],
-      "state": "TN",
-      "source_type": "official",
-      "auto_fetched": true
-    },
-    {
       "id": "doj-2026-03-27-3440561615",
       "date": "2026-03-27",
       "agency": "DOJ",
