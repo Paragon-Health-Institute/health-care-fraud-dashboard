@@ -196,7 +196,7 @@
       "link_label": "Fox News Article",
       "type": "Investigative Report",
       "amount": "$600M",
-      "description": "Multiple Los Angeles home health and hospice agencies billed nearly $600 million to Medicare from 2021–2024 using Dr. Gilbert Faustina's provider number — including $260 million in 2024 alone. Fox News reporters found most listed addresses were vacant or unstaffed; one Van Nuys building housed over 100 supposed agencies yet reporters found no patients, staff, or signage across three floors. Federal records show 76,000 claims filed for 29,527 patients under his number, yet Faustina says he saw only 10–15 patients weekly and received $3,000/month. Faustina denies knowledge of the fraud.",
+      "description": "Multiple Los Angeles home health and hospice agencies billed nearly $600 million to Medicare from 2021–2024 using Dr. Gilbert Faustina's provider number — including nearly $210 million in 2024 alone. Fox News reporters found most listed addresses were vacant or unstaffed; one Van Nuys building housed over 100 supposed agencies yet reporters found no patients, staff, or signage across three floors. Federal records show 76,000 claims filed for 29,527 patients under his number, yet Faustina says he saw only 10–15 patients weekly and received $3,000/month. Faustina denies knowledge of the fraud.",
       "agency": "Media",
       "social_posts": [],
       "tags": [
@@ -303,8 +303,8 @@
         "Senator Ron Wyden",
         "Senator Elizabeth Warren"
       ],
-      "link": "https://www.unitedhealthgroup.com/newsroom/2025/2025-05-21-statement-regarding-may-21-article-the-guardian.html",
-      "link_label": "The Guardian / UnitedHealth Response",
+      "link": "https://www.theguardian.com/us-news/2025/may/21/unitedhealth-nursing-homes-payments-hospital-transfers",
+      "link_label": "The Guardian Investigation",
       "social_posts": [],
       "tags": [
         "Kickbacks",
@@ -345,31 +345,6 @@
       "source_type": "news",
       "auto_fetched": false,
       "related_agency": null
-    },
-    {
-      "id": "media-2025-12-18-mn-reformer-fraud-exceeds-9b",
-      "date": "2025-12-18",
-      "agency": "Media",
-      "type": "Investigative Report",
-      "title": "Minnesota Reformer: U.S. Attorney Says Medicaid Fraud Likely Exceeds $9 Billion; Reveals 'Fraud Tourism' Industry",
-      "description": "Minnesota Reformer reported that former Assistant U.S. Attorney Joe Thompson estimated half or more of the $18 billion billed to 14 high-risk Medicaid programs since 2018 was fraudulent. The report uncovered a 'fraud tourism' industry where out-of-state scammers traveled to Minnesota to exploit weak program controls.",
-      "amount": "$9B+",
-      "amount_numeric": 9000000000,
-      "officials": [],
-      "link": "https://minnesotareformer.com/2025/12/18/u-s-attorney-fraud-likely-exceeds-9-billion-in-minnesota-run-medicaid-services/",
-      "link_label": "Minnesota Reformer",
-      "social_posts": [],
-      "tags": [
-        "Improper Payments",
-        "Medicaid",
-        "Multi-State",
-        "Organized Crime"
-      ],
-      "entities": [],
-      "state": "MN",
-      "source_type": "news",
-      "auto_fetched": false,
-      "related_agency": "DOJ"
     },
     {
       "id": "media-2026-03-nick-shirley-ca-hospice-daycare-fraud",
@@ -446,33 +421,6 @@
       "source_type": "news",
       "auto_fetched": false,
       "entities": [],
-      "related_agency": "DOJ"
-    },
-    {
-      "id": "media-2026-01-15-kff-kaiser-556m-ma-fraud-settlement",
-      "date": "2026-01-15",
-      "agency": "Media",
-      "type": "Investigative Report",
-      "title": "KFF Health News: Kaiser Permanente Pays Record $556M in Largest-Ever Medicare Advantage Fraud Settlement",
-      "description": "KFF Health News reported on the largest Medicare Advantage fraud settlement in history. Kaiser Permanente affiliates paid $556 million to resolve DOJ allegations that from 2009 to 2018, Kaiser engaged in a widespread scheme pressuring physicians to add invalid diagnoses to patient medical records — sometimes months after visits — to inflate Medicare risk adjustment payments. The settlement dwarfs prior MA fraud settlements including Cigna ($172M, 2023) and Independent Health ($100M, 2024). Whistleblowers who initiated the case received approximately $95M. Kaiser did not admit wrongdoing.",
-      "amount": "$556M",
-      "amount_numeric": 556000000,
-      "officials": [],
-      "link": "https://kffhealthnews.org/news/article/medicare-advantage-record-fraud-settlement-kaiser-permanente-556-million/",
-      "link_label": "KFF Health News",
-      "social_posts": [],
-      "tags": [
-        "False Claims",
-        "Medicare Advantage",
-        "Risk Adjustment",
-        "Upcoding"
-      ],
-      "state": "CA",
-      "source_type": "news",
-      "auto_fetched": false,
-      "entities": [
-        "Kaiser Permanente"
-      ],
       "related_agency": "DOJ"
     },
     {

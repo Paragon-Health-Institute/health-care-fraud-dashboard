@@ -3642,49 +3642,6 @@
       "auto_fetched": false
     },
     {
-      "id": "legislation-2025-hr1784-medicare-fraud-detection-act",
-      "date": "2025-03-03",
-      "agency": "Congress",
-      "type": "Legislation",
-      "title": "H.R. 1784: Medicare Fraud Detection and Deterrence Act of 2025 Introduced",
-      "description": "Bill introduced requiring CMS to deactivate standard unique health identifiers of health care providers excluded from federal programs due to fraud, preventing excluded providers from continuing to bill Medicare.",
-      "amount": "",
-      "amount_numeric": 0.0,
-      "officials": [],
-      "link": "https://www.congress.gov/bill/119th-congress/house-bill/1784",
-      "link_label": "Congress.gov",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Program Integrity"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": false
-    },
-    {
-      "id": "legislation-2025-s3593-healthcare-fraud-penalties",
-      "date": "2026-01-07",
-      "agency": "Congress",
-      "type": "Legislation",
-      "title": "S. 3593: Bill to Increase Health Care Fraud Penalties Introduced in Senate",
-      "description": "Senate bill introduced to increase criminal and civil penalties for health care fraud convictions and to strengthen enforcement tools available to federal prosecutors.",
-      "amount": "",
-      "amount_numeric": 0.0,
-      "officials": [],
-      "link": "https://www.congress.gov/bill/119th-congress/senate-bill/3593",
-      "link_label": "Congress.gov",
-      "social_posts": [],
-      "tags": [
-        "Program Integrity"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": false
-    },
-    {
       "id": "cms-2025-mn-medicaid-payment-deferrals",
       "date": "2026-02-25",
       "agency": "CMS",
@@ -3860,81 +3817,6 @@
         "Program Integrity",
         "Risk Adjustment",
         "Upcoding"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": false
-    },
-    {
-      "id": "legislation-2025-s2066-medicare-transaction-fraud-act",
-      "date": "2025-06-12",
-      "agency": "Congress",
-      "type": "Legislation",
-      "title": "S. 2066: Medicare Transaction Fraud Prevention Act — Pilot Program for Predictive Risk Scoring",
-      "description": "Bill establishing a 2-year pilot program to test predictive risk-scoring algorithms for oversight of Medicare payments for durable medical equipment and clinical lab tests. Sponsored by Senator Tim Sheehy.",
-      "amount": "",
-      "amount_numeric": 0.0,
-      "officials": [
-        "Senator Tim Sheehy"
-      ],
-      "link": "https://www.congress.gov/bill/119th-congress/senate-bill/2066/text",
-      "link_label": "Congress.gov",
-      "social_posts": [],
-      "tags": [
-        "AI",
-        "DME Fraud",
-        "Lab Fraud",
-        "Medicare"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": false
-    },
-    {
-      "id": "legislation-2026-hr7155-stop-fraud-federal-programs",
-      "date": "2026-01-20",
-      "agency": "Congress",
-      "type": "Legislation",
-      "title": "H.R. 7155: Stop Fraud in Federal Programs Act of 2026",
-      "description": "Increases penalties for theft or bribery concerning programs receiving federal funds. Also requires audits under the summer food service program. Referred to Committees on Judiciary and Education and Workforce.",
-      "amount": "",
-      "amount_numeric": 0.0,
-      "officials": [],
-      "link": "https://www.congress.gov/bill/119th-congress/house-bill/7155/all-info",
-      "link_label": "Congress.gov",
-      "social_posts": [],
-      "tags": [
-        "Medicaid",
-        "Program Integrity"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": false
-    },
-    {
-      "id": "legislation-2025-ending-improper-payments-deceased",
-      "date": "2025-07-30",
-      "agency": "Congress",
-      "type": "Legislation",
-      "title": "Ending Improper Payments to Deceased People Act Passes Senate HSGAC Unanimously",
-      "description": "Permanently amends the Social Security Act to allow SSA to share the Death Master File with Treasury's Do Not Pay system, preventing improper payments to deceased individuals. The Treasury recovered $31 million in fraud during the prior version's implementation.",
-      "amount": "$31M",
-      "amount_numeric": 31000000,
-      "officials": [
-        "Senator John Kennedy",
-        "Senator Gary Peters"
-      ],
-      "link": "https://www.kennedy.senate.gov/public/2025/7/senate-homeland-security-committee-unanimously-passes-kennedy-peters-bill-to-end-government-payments-to-deceased-americans",
-      "link_label": "Senator Kennedy",
-      "social_posts": [],
-      "tags": [
-        "Improper Payments",
-        "Medicaid",
-        "Medicare",
-        "Program Integrity"
       ],
       "entities": [],
       "state": null,
