@@ -10,7 +10,7 @@
       "agency": "Media",
       "type": "Investigative Report",
       "title": "RealClearInvestigations: Suspicious Patterns Found in New Orleans Home Hospice Billing",
-      "description": "RealClearInvestigations reporter James Varney investigates home hospice providers in the New Orleans area receiving Medicare and Medicaid payments, finding listed addresses that were empty buildings, providers that had vacated locations years ago, and agencies collecting millions with no visible operational footprint. Individual examples include Faith and Hope of New Orleans ($11.6M paid 2018–2024, address was an empty building) and AAA Care ($13.4M paid, had vacated its address a decade prior). The investigation does not quantify total fraud but surfaces providers showing multiple red flags. The report is part of a broader pattern of independent citizens and data analysts uncovering suspicious government health spending that formal oversight has missed.",
+      "description": "RealClearInvestigations reporter James Varney investigates home hospice providers in the New Orleans area receiving Medicare and Medicaid payments, finding listed addresses that were empty buildings, providers that had vacated locations years ago, and agencies collecting millions with no visible operational footprint. Individual examples include Faith and Hope of New Orleans ($11.6M paid 2018–2024, address was an empty building) and AAA Care ($13.4M paid, had vacated its address a decade prior). The investigation does not quantify total fraud but surfaces providers showing multiple red flags. The report highlights a growing number of "citizen sleuths" uncovering suspicious government health spending that formal oversight has missed.",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -27,7 +27,7 @@
       "source_type": "news",
       "auto_fetched": false,
       "entities": [],
-      "related_agency": "CMS"
+      "related_agency": null
     },
     {
       "id": "media-2026-03-11-wsj-autism-aba-medicaid",
@@ -77,7 +77,7 @@
       "source_type": "news",
       "auto_fetched": false,
       "entities": [],
-      "related_agency": "CMS"
+      "related_agency": null
     },
     {
       "id": "media-2026-02-26-propublica-arizona-indigenous-fraud",
@@ -102,7 +102,7 @@
       "source_type": "news",
       "auto_fetched": false,
       "entities": [],
-      "related_agency": "HHS"
+      "related_agency": null
     },
     {
       "id": "media-2026-02-20-wsmv-russian-tennessee-medicare",
@@ -233,7 +233,7 @@
       "date": "2025-01-15",
       "amount_numeric": 0,
       "entities": [],
-      "related_agency": "CMS"
+      "related_agency": null
     },
     {
       "id": "media-2025-06-05-bloomberg-south-florida-aca-deepfakes",
@@ -261,7 +261,7 @@
       "state": "FL",
       "source_type": "news",
       "auto_fetched": false,
-      "related_agency": "CMS"
+      "related_agency": null
     },
     {
       "id": "media-2025-02-21-wsj-unitedhealth-criminal-probe",
@@ -319,7 +319,7 @@
       "state": null,
       "source_type": "news",
       "auto_fetched": false,
-      "related_agency": "CMS"
+      "related_agency": null
     },
     {
       "id": "media-2026-kare11-optum-audit-mn-medicaid-vulnerabilities",
@@ -345,7 +345,7 @@
       "state": "MN",
       "source_type": "news",
       "auto_fetched": false,
-      "related_agency": "CMS"
+      "related_agency": null
     },
     {
       "id": "media-2025-12-18-mn-reformer-fraud-exceeds-9b",
@@ -395,7 +395,7 @@
       "state": "CA",
       "source_type": "news",
       "auto_fetched": false,
-      "related_agency": "CMS"
+      "related_agency": null
     },
     {
       "id": "media-2025-nick-shirley-mn-daycare-fraud",
@@ -505,7 +505,7 @@
         "Elevance",
         "Kaiser Permanente"
       ],
-      "related_agency": "CMS"
+      "related_agency": null
     },
     {
       "id": "media-2026-01-08-nypost-ny-cdpap-fraud",
@@ -530,7 +530,7 @@
       "source_type": "news",
       "auto_fetched": false,
       "entities": [],
-      "related_agency": "CMS"
+      "related_agency": null
     }
   ]
 }
