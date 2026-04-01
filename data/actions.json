@@ -2,7 +2,7 @@
   "metadata": {
     "last_updated": "2026-03-31T15:56:14.205497",
     "version": "1.0",
-    "last_scraped": "2026-03-31T15:56:14.205490"
+    "last_scraped": "2026-04-01T08:38:33.639788"
   },
   "actions": [
     {
@@ -1307,6 +1307,32 @@
       "source_type": "official",
       "auto_fetched": false,
       "entities": []
+    },
+    {
+      "id": "congress-2026-02-10-house-oversight-ny-cdpap-investigation",
+      "date": "2026-02-10",
+      "agency": "Congress",
+      "type": "Investigation",
+      "title": "House Oversight Committee Investigates New York CDPAP Medicaid Fraud — $1.2B+ Lost to Scammers",
+      "description": "Chairman James Comer and the House Committee on Oversight and Government Reform took formal action in its investigation of fraud in New York's Consumer Directed Personal Assistance Program (CDPAP), a Medicaid-funded home care program. Spending ballooned from $2.5 billion in 2019 to $9.1 billion by 2023, with an estimated $1.2 billion or more lost to fraud and abuse. A former 27-year Medicaid fraud prosecutor described it as 'Minnesota multiplied by 10.' Notable cases include Brooklyn businesswoman Zakia Khan, who admitted to a $68 million fraud billing for services never provided, and a Brooklyn CEO sentenced for a $100 million home health care scheme.",
+      "amount": "$1.2B+",
+      "amount_numeric": 1200000000,
+      "officials": [
+        "Chairman James Comer"
+      ],
+      "link": "https://oversight.house.gov/release/comer-takes-new-action-in-investigation-of-fraud-in-new-yorks-medicaid-programs/",
+      "link_label": "House Oversight Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Home Health Fraud",
+        "Organized Crime",
+        "Program Integrity"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": false
     },
     {
       "id": "doj-2026-02-queens-men-120m-adult-day-care",

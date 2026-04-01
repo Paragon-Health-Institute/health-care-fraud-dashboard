@@ -536,19 +536,17 @@
       "related_agency": "CMS"
     },
     {
-      "id": "media-2026-02-ny-post-house-oversight-ny-cdpap-fraud",
-      "date": "2026-02-10",
+      "id": "media-2026-01-08-nypost-ny-cdpap-fraud",
+      "date": "2026-01-08",
       "agency": "Media",
       "type": "Investigative Report",
-      "title": "NY Post / House Oversight: New York's $1.2B CDPAP Medicaid Fraud Exposed — 'Minnesota Multiplied by 10'",
-      "description": "Investigative reporting and a House Oversight Committee investigation exposed massive fraud in New York's Consumer Directed Personal Assistance Program (CDPAP), a Medicaid-funded home care program. Spending ballooned from $2.5 billion in 2019 to $9.1 billion by 2023, with an estimated $1.2 billion or more lost to scammers and middlemen. A former prosecutor who spent 27 years prosecuting Medicaid fraud in New York called it 'Minnesota multiplied by 10.' Brooklyn businesswoman Zakia Khan admitted to a $68 million fraud billing for services never provided; another executive was sentenced for a $100 million home health care scam. Governor Hochul's 2023 overhaul replacing hundreds of intermediaries with a single administrator has already saved taxpayers $1 billion.",
+      "title": "NY Post: New York's CDPAP Medicaid Program Lost $1.2B to Scammers — 'Minnesota Multiplied by 10'",
+      "description": "NY Post investigation by Isabel Vincent found New York's Consumer Directed Personal Assistance Program (CDPAP) lost an estimated $1.2 billion or more to fraud and abuse. Program spending ballooned from $2.5 billion in 2019 to $9.1 billion by 2023. A former 27-year Medicaid fraud prosecutor called it 'Minnesota multiplied by 10.' Brooklyn businesswoman Zakia Khan admitted to a $68 million fraud billing for services never provided; a Brooklyn CEO was sentenced for a $100 million home health care scam. Governor Hochul's 2023 overhaul replacing hundreds of intermediaries with a single administrator has saved taxpayers $1 billion.",
       "amount": "$1.2B+",
       "amount_numeric": 1200000000,
-      "officials": [
-        "Chairman James Comer"
-      ],
-      "link": "https://oversight.house.gov/release/comer-takes-new-action-in-investigation-of-fraud-in-new-yorks-medicaid-programs/",
-      "link_label": "House Oversight Investigation",
+      "officials": [],
+      "link": "https://www.aol.com/articles/notoriously-fraudulent-ny-health-program-200012792.html",
+      "link_label": "NY Post Investigation",
       "social_posts": [],
       "tags": [
         "Medicaid",
