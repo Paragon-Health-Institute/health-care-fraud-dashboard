@@ -4310,28 +4310,5 @@
       "source_type": "official",
       "auto_fetched": true
     },
-    {
-      "id": "hhs-oig-2026-03-23-2077213473",
-      "date": "2026-03-23",
-      "agency": "HHS-OIG",
-      "type": "Report",
-      "title": "Congressional Mandate: Part B Payment Amounts for One Drug Included Noncovered Self-Administered Versions in 2024",
-      "description": "HHS-OIG evaluation found that Medicare Part B payment amounts for one drug included noncovered self-administered versions, potentially resulting in higher payment rates than appropriate. OIG recommended CMS take action to ensure accurate payment calculations.",
-      "amount": null,
-      "amount_numeric": 1300000000.0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2026/congressional-mandate-part-b-payment-amounts-for-one-drug-included-noncovered-self-administered-versions-in-2024/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Pharmacy Fraud",
-        "Program Integrity"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true
-    }
   ]
 }
