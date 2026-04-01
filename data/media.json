@@ -10,7 +10,7 @@
       "agency": "Media",
       "type": "Investigative Report",
       "title": "RealClearInvestigations: Suspicious Patterns Found in New Orleans Home Hospice Billing",
-      "description": "RealClearInvestigations reporter James Varney investigates home hospice providers in the New Orleans area receiving Medicare and Medicaid payments, finding listed addresses that were empty buildings, providers that had vacated locations years ago, and agencies collecting millions with no visible operational footprint. Individual examples include Faith and Hope of New Orleans ($11.6M paid 2018–2024, address was an empty building) and AAA Care ($13.4M paid, had vacated its address a decade prior). The investigation does not quantify total fraud but surfaces providers showing multiple red flags. The report highlights a growing number of "citizen sleuths" uncovering suspicious government health spending that formal oversight has missed.",
+      "description": "RealClearInvestigations reporter James Varney investigates home hospice providers in the New Orleans area receiving Medicare and Medicaid payments, finding listed addresses that were empty buildings, providers that had vacated locations years ago, and agencies collecting millions with no visible operational footprint. Individual examples include Faith and Hope of New Orleans ($11.6M paid 2018–2024, address was an empty building) and AAA Care ($13.4M paid, had vacated its address a decade prior). The investigation does not quantify total fraud but surfaces providers showing multiple red flags. The report highlights a growing number of citizen sleuths uncovering suspicious government health spending that formal oversight has missed.",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -18,10 +18,9 @@
       "link_label": "RealClearInvestigations",
       "social_posts": [],
       "tags": [
-        "Medicare",
-        "Hospice Fraud",
         "Home Health Fraud",
-        "Citizen Journalism"
+        "Hospice Fraud",
+        "Medicare"
       ],
       "state": "LA",
       "source_type": "news",
@@ -43,8 +42,8 @@
       "link_label": "WSJ Article",
       "social_posts": [],
       "tags": [
-        "Medicaid",
         "Behavioral Health",
+        "Medicaid",
         "Overbilling",
         "Program Integrity"
       ],
@@ -68,8 +67,8 @@
       "link_label": "CBS News Investigation",
       "social_posts": [],
       "tags": [
-        "Medicare",
         "Hospice Fraud",
+        "Medicare",
         "Overbilling",
         "Program Integrity"
       ],
@@ -93,10 +92,10 @@
       "link_label": "ProPublica Investigation",
       "social_posts": [],
       "tags": [
-        "Medicaid",
+        "Addiction Treatment",
         "Behavioral Health",
-        "Native American",
-        "Addiction Treatment"
+        "Medicaid",
+        "Native American"
       ],
       "state": "AZ",
       "source_type": "news",
@@ -118,12 +117,12 @@
       "link_label": "WSMV4 Investigation",
       "social_posts": [],
       "tags": [
-        "Medicare",
         "DME Fraud",
-        "Identity Theft",
-        "Foreign Nationals",
+        "Elder Fraud",
         "False Claims",
-        "Elder Fraud"
+        "Foreign Nationals",
+        "Identity Theft",
+        "Medicare"
       ],
       "state": "TN",
       "source_type": "news",
@@ -145,10 +144,10 @@
       "link_label": "ProPublica Investigation",
       "social_posts": [],
       "tags": [
+        "Legislation",
         "Medicare",
-        "NPI Fraud",
         "Medicare Advantage",
-        "Legislation"
+        "NPI Fraud"
       ],
       "state": "TX",
       "source_type": "news",
@@ -174,8 +173,8 @@
       "link_label": "KARE 11 Investigation",
       "social_posts": [],
       "tags": [
-        "Medicaid",
         "Housing Fraud",
+        "Medicaid",
         "Organized Crime"
       ],
       "state": "MN",
@@ -201,10 +200,10 @@
       "agency": "Media",
       "social_posts": [],
       "tags": [
-        "Medicare",
+        "False Claims",
         "Home Health Fraud",
-        "NPI Fraud",
-        "False Claims"
+        "Medicare",
+        "NPI Fraud"
       ],
       "date": "2026-03-12",
       "amount_numeric": 600000000,
@@ -226,8 +225,8 @@
       "agency": "Media",
       "social_posts": [],
       "tags": [
-        "Medicaid",
         "Addiction Treatment",
+        "Medicaid",
         "Native American"
       ],
       "date": "2025-01-15",
@@ -250,9 +249,9 @@
       "social_posts": [],
       "tags": [
         "ACA",
+        "False Claims",
         "Identity Theft",
-        "Organized Crime",
-        "False Claims"
+        "Organized Crime"
       ],
       "entities": [
         "Enhance Health",
@@ -277,11 +276,11 @@
       "link_label": "WSJ / Fierce Healthcare",
       "social_posts": [],
       "tags": [
-        "Medicare Advantage",
-        "Risk Adjustment",
         "False Claims",
         "Home Health Fraud",
-        "Medicare"
+        "Medicare",
+        "Medicare Advantage",
+        "Risk Adjustment"
       ],
       "entities": [
         "UnitedHealth"
@@ -308,10 +307,10 @@
       "link_label": "The Guardian / UnitedHealth Response",
       "social_posts": [],
       "tags": [
-        "Medicare Advantage",
         "Kickbacks",
-        "Nursing Home",
-        "Medicare"
+        "Medicare",
+        "Medicare Advantage",
+        "Nursing Home"
       ],
       "entities": [
         "UnitedHealth"
@@ -335,8 +334,8 @@
       "link_label": "KARE 11 Investigation",
       "social_posts": [],
       "tags": [
-        "Medicaid",
         "Improper Payments",
+        "Medicaid",
         "Program Integrity"
       ],
       "entities": [
@@ -361,10 +360,10 @@
       "link_label": "Minnesota Reformer",
       "social_posts": [],
       "tags": [
-        "Medicaid",
-        "Organized Crime",
         "Improper Payments",
-        "Multi-State"
+        "Medicaid",
+        "Multi-State",
+        "Organized Crime"
       ],
       "entities": [],
       "state": "MN",
@@ -386,9 +385,9 @@
       "link_label": "California Globe",
       "social_posts": [],
       "tags": [
-        "Medicaid",
-        "Hospice Fraud",
         "Childcare Fraud",
+        "Hospice Fraud",
+        "Medicaid",
         "Medicare"
       ],
       "entities": [],
@@ -411,10 +410,10 @@
       "link_label": "NPR Report",
       "social_posts": [],
       "tags": [
-        "Medicaid",
-        "Organized Crime",
+        "Childcare Fraud",
         "Improper Payments",
-        "Childcare Fraud"
+        "Medicaid",
+        "Organized Crime"
       ],
       "entities": [],
       "state": "MN",
@@ -436,12 +435,12 @@
       "link_label": "Washington Post Investigation",
       "social_posts": [],
       "tags": [
-        "Medicare",
         "DME Fraud",
-        "Identity Theft",
         "Foreign Nationals",
-        "Organized Crime",
-        "Money Laundering"
+        "Identity Theft",
+        "Medicare",
+        "Money Laundering",
+        "Organized Crime"
       ],
       "state": null,
       "source_type": "news",
@@ -463,9 +462,9 @@
       "link_label": "KFF Health News",
       "social_posts": [],
       "tags": [
+        "False Claims",
         "Medicare Advantage",
         "Risk Adjustment",
-        "False Claims",
         "Upcoding"
       ],
       "state": "CA",
@@ -491,9 +490,9 @@
       "social_posts": [],
       "tags": [
         "Medicare Advantage",
+        "Program Integrity",
         "Risk Adjustment",
-        "Upcoding",
-        "Program Integrity"
+        "Upcoding"
       ],
       "state": null,
       "source_type": "news",
@@ -520,8 +519,8 @@
       "link_label": "NY Post Investigation",
       "social_posts": [],
       "tags": [
-        "Medicaid",
         "Home Health Fraud",
+        "Medicaid",
         "Organized Crime",
         "Program Integrity"
       ],
