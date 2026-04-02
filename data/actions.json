@@ -1011,7 +1011,6 @@
       "amount_numeric": 400000000.0,
       "entities": [],
       "related_agencies": [
-        "DOJ",
         "HHS-OIG"
       ]
     },
@@ -1354,7 +1353,6 @@
       "amount_numeric": 10000000,
       "entities": [],
       "related_agencies": [
-        "DOJ",
         "HHS-OIG"
       ]
     },
@@ -1429,7 +1427,6 @@
       "amount_numeric": 3500000,
       "entities": [],
       "related_agencies": [
-        "DOJ",
         "HHS-OIG"
       ]
     },
@@ -2141,7 +2138,6 @@
       "amount_numeric": 30000000.0,
       "entities": [],
       "related_agencies": [
-        "DOJ",
         "HHS-OIG"
       ]
     },
@@ -2851,9 +2847,7 @@
       "source_type": "news",
       "auto_fetched": false,
       "entities": [],
-      "related_agencies": [
-        "DOJ"
-      ]
+      "related_agencies": []
     },
     {
       "id": "doj-2025-09-lab-ceo-marketers-settlement",
@@ -2959,9 +2953,7 @@
       "date": "2025-08-21",
       "amount_numeric": 0.0,
       "entities": [],
-      "related_agencies": [
-        "CMS"
-      ]
+      "related_agencies": []
     },
     {
       "id": "doj-2025-08-troy-health-npa-ai",
@@ -3571,7 +3563,6 @@
       "amount_numeric": 227000000.0,
       "entities": [],
       "related_agencies": [
-        "DOJ",
         "HHS-OIG",
         "DEA"
       ]
