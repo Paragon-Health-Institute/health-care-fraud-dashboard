@@ -2423,31 +2423,6 @@
       "entities": []
     },
     {
-      "id": "doj-2025-ms-mitias-orthopaedics-1-87m",
-      "date": "2025-12-09",
-      "agency": "DOJ",
-      "type": "Civil Action",
-      "title": "Mississippi Orthopedic Clinic Pays $1.87M for Billing Compound Drugs as Brand-Name Products",
-      "description": "Mitias Orthopaedics and its owner agreed to pay $1.87 million to settle allegations of injecting Medicare/Medicaid beneficiaries with drugs purchased from compound pharmacies while billing as FDA-approved, brand-name products.",
-      "amount": "$1.87M",
-      "amount_numeric": 1870000.0,
-      "officials": [],
-      "link": "https://www.fcacounsel.com/blog/false-claims-act-case-against-mississippi-orthopedic-clinic-results-in-1-87-million-settlement/",
-      "link_label": "FCA Counsel",
-      "social_posts": [],
-      "tags": [
-        "False Claims Act",
-        "Medicaid",
-        "Medicare",
-        "Pharmacy",
-        "Settlement"
-      ],
-      "entities": [],
-      "state": "MS",
-      "source_type": "official",
-      "auto_fetched": false
-    },
-    {
       "id": "doj-2025-12-virginia-lab-kickbacks-settlement",
       "date": "2025-12-04",
       "agency": "DOJ",
