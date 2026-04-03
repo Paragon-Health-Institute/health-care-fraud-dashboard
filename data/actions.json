@@ -3310,19 +3310,16 @@
       "date": "2025-07-02",
       "agency": "Congress",
       "type": "Investigation",
-      "title": "House Oversight Launches Investigation of Fraud in New York's Medicaid Programs",
-      "description": "Chairman Comer launched an investigation into allegations that New York State misrepresented federal Medicaid fund sources involving Nassau University Medical Center. The alleged scheme has reportedly cost taxpayers over $1 billion over 20+ years. Comer requested a staff briefing from CMS Administrator Dr. Oz.",
+      "title": "House Oversight Committee Launches Investigation into Alleged Abuse in New York's Medicaid Program",
+      "description": "House Oversight Committee Republicans launched an investigation into whether New York improperly used federal Medicaid funds to address state budget shortfalls. The release cites reports that the state withheld or clawed back funds from localities and low-income hospitals, including more than $1 billion in federal Medicaid funds withheld from localities beginning in 2023.",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "Dr. Mehmet Oz"
-      ],
+      "officials": [],
       "link": "https://oversight.house.gov/release/oversight-committee-launches-investigation-into-new-yorks-abuse-of-federal-funds-in-medicaid-program/",
-      "link_label": "House Oversight",
+      "link_label": "House Oversight Committee",
       "social_posts": [],
       "tags": [
         "House Oversight Committee",
-        "Improper Payments",
         "Medicaid",
         "Program Integrity"
       ],
