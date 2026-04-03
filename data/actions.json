@@ -3135,11 +3135,11 @@
     },
     {
       "id": "cms-2025-08-25-medicaid-citizenship-eligibility-push",
-      "date": "2025-08-25",
+      "date": "2025-08-19",
       "agency": "CMS",
       "type": "Administrative Action",
-      "title": "CMS Launches Nationwide Push to Remove Ineligible Medicaid Enrollees and Uphold Citizenship Requirements",
-      "description": "CMS launched a nationwide initiative directing all states to verify the citizenship and immigration status of Medicaid and CHIP enrollees through the Department of Homeland Security's SAVE program. CMS began sending states monthly enrollment reports identifying individuals whose status could not be confirmed through federal databases. HHS Secretary RFK Jr. stated: \"Medicaid is a lifeline for vulnerable Americans \u2014 and I will protect it from abuse.\"",
+      "title": "CMS Launches Nationwide Initiative to Remove Ineligible Medicaid Enrollees",
+      "description": "CMS launched a nationwide oversight initiative to ensure Medicaid and CHIP enrollees meet citizenship or immigration-status eligibility rules. CMS said it will send states monthly enrollment reports identifying individuals whose status could not be confirmed through federal databases, and states will be responsible for reviewing those cases and taking action where necessary.",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [
@@ -3150,7 +3150,8 @@
       "link_label": "CMS Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Program Integrity"
       ],
       "entities": [],
       "state": null,
