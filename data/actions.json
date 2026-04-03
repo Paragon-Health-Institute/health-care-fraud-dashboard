@@ -6,6 +6,32 @@
   },
   "actions": [
     {
+      "id": "cms-2026-04-02-hospice-transparency-scoring",
+      "date": "2026-04-02",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "CMS Proposes Hospice Transparency Scoring System to Combat Fraud and Protect Beneficiaries",
+      "description": "As part of its efforts to combat fraud and strengthen program integrity, CMS proposed a publicly available hospice scoring system based on indicators of potential inappropriate utilization, quality of care, and compliance concerns. The scoring system is part of CMS\u2019s broader efforts to strengthen oversight, increase transparency for families, and ensure Medicare hospice benefits are not abused. CMS Administrator Dr. Oz said the measures \u201cwill make it easier for CMS and others to identify hospice providers that misuse Medicare dollars, cut off their funding, and refer them to law enforcement for criminal prosecution.\u201d",
+      "amount": "",
+      "amount_numeric": 0.0,
+      "officials": [
+        "Dr. Mehmet Oz"
+      ],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-proposes-new-transparency-measures-strengthen-oversight-hospice-providers",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Hospice",
+        "Medicare",
+        "Program Integrity"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": []
+    },
+    {
       "id": "doj-2026-04-02-operation-never-say-die",
       "date": "2026-04-02",
       "agency": "DOJ",
