@@ -3850,10 +3850,10 @@
       "date": "2025-05-12",
       "agency": "CMS",
       "type": "Rule/Regulation",
-      "title": "CMS Proposes Rule Closing Medicaid Provider Tax Loophole; Estimated $78B in Federal Savings Over 10 Years",
-      "description": "CMS proposed a rule to close a Medicaid provider tax loophole that allows states to impose non-uniform taxes on managed care organizations to generate excessive federal matching funds. CMS estimated the loophole costs the federal government over $24 billion annually, with projected savings of $78 billion over 10 years. The rule was finalized in January 2026.",
-      "amount": "$78B",
-      "amount_numeric": 78000000000.0,
+      "title": "CMS Proposes Rule Closing Medicaid Financing Loophole; Projected to Save $30B Over Five Years",
+      "description": "CMS proposed a rule to close a Medicaid financing loophole that states have used to inflate federal payments and free up state funds for other purposes. CMS says the change would save taxpayers more than $30 billion over five years and help protect Medicaid's long-term availability for the most vulnerable.",
+      "amount": "$30B",
+      "amount_numeric": 30000000000.0,
       "officials": [
         "Dr. Mehmet Oz"
       ],
