@@ -3165,15 +3165,14 @@
       "officials": [],
       "state": null,
       "source_type": "official",
-      "title": "CMS Notifies 103,000 Medicare Beneficiaries of Account Fraud Scheme Using Stolen Identities",
+      "title": "CMS Notifies Medicare Beneficiaries of Data Incident Involving Fraudulent Medicare.gov Accounts",
       "link_label": "CMS Press Release",
       "type": "Administrative Action",
       "amount": "",
-      "description": "CMS identified suspicious unauthorized creation of Medicare.gov accounts using personal information obtained from unknown external sources. Approximately 103,000 beneficiaries were potentially impacted. Fraudsters used stolen identity data to create beneficiary online accounts, potentially accessing personal health information and Medicare benefits.",
+      "description": "CMS notified Medicare beneficiaries potentially affected by a data incident after malicious actors fraudulently created Medicare.gov accounts using valid beneficiary information obtained from unknown external sources. CMS said its investigation into the incident found the fake accounts were created between 2023 and 2025 and that about 103,000 beneficiaries may have been impacted. CMS deactivated the fraudulent accounts and began replacing Medicare Beneficiary Identifiers and mailing new Medicare cards to affected individuals.",
       "agency": "CMS",
       "social_posts": [],
       "tags": [
-        "Identity Theft",
         "Medicare"
       ],
       "date": "2025-08-21",
