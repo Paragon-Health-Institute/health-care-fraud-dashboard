@@ -3057,6 +3057,31 @@
       "related_agencies": []
     },
     {
+      "id": "cms-2025-08-25-medicaid-citizenship-eligibility-push",
+      "date": "2025-08-25",
+      "agency": "CMS",
+      "type": "Administrative Action",
+      "title": "CMS Launches Nationwide Push to Remove Ineligible Medicaid Enrollees and Uphold Citizenship Requirements",
+      "description": "CMS launched a nationwide initiative directing all states to verify the citizenship and immigration status of Medicaid and CHIP enrollees through the Department of Homeland Security's SAVE program. CMS began sending states monthly enrollment reports identifying individuals whose status could not be confirmed through federal databases. HHS Secretary RFK Jr. stated: \"Medicaid is a lifeline for vulnerable Americans \u2014 and I will protect it from abuse.\"",
+      "amount": "",
+      "amount_numeric": 0.0,
+      "officials": [
+        "Dr. Mehmet Oz",
+        "Robert F. Kennedy Jr."
+      ],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-launches-nationwide-push-remove-ineligible-medicaid-enrollees-uphold-citizenship-requirements",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": []
+    },
+    {
       "link": "https://www.cms.gov/newsroom/press-releases/cms-notifies-individuals-potentially-impacted-data-incident",
       "id": "media-2025-08-cms-103k-medicare-breach",
       "auto_fetched": false,
@@ -3511,6 +3536,30 @@
       ]
     },
     {
+      "id": "cms-2025-06-27-wiser-model-launch",
+      "date": "2025-06-27",
+      "agency": "CMS",
+      "type": "Administrative Action",
+      "title": "CMS Launches WISeR Model Using AI-Enhanced Prior Authorization to Reduce Wasteful Medicare Services",
+      "description": "CMS Innovation Center launched the Wasteful and Inappropriate Service Reduction (WISeR) Model, using prior authorization enhanced by private-sector technology to reduce clinically low-value services in Original Medicare. The model targets ten service categories including skin substitutes, electrical nerve stimulator implants, knee arthroscopy, steroid injections, and spinal decompression. Running January 2026 through December 2031 in six states: New Jersey, Ohio, Oklahoma, Texas, Arizona, and Washington.",
+      "amount": "",
+      "amount_numeric": 0.0,
+      "officials": [
+        "Dr. Mehmet Oz"
+      ],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-launches-new-model-target-wasteful-inappropriate-services-original-medicare",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": []
+    },
+    {
       "id": "gao-2025-06-26-medicaid-managed-care-improper-payments",
       "date": "2025-06-26",
       "agency": "GAO",
@@ -3796,6 +3845,30 @@
       "source_type": "official",
       "auto_fetched": false,
       "entities": []
+    },
+    {
+      "id": "cms-2025-05-12-medicaid-provider-tax-proposed-rule",
+      "date": "2025-05-12",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "CMS Proposes Rule Closing Medicaid Provider Tax Loophole; Estimated $78B in Federal Savings Over 10 Years",
+      "description": "CMS proposed a rule to close a Medicaid provider tax loophole that allows states to impose non-uniform taxes on managed care organizations to generate excessive federal matching funds. CMS estimated the loophole costs the federal government over $24 billion annually, with projected savings of $78 billion over 10 years. The rule was finalized in January 2026.",
+      "amount": "$78B",
+      "amount_numeric": 78000000000.0,
+      "officials": [
+        "Dr. Mehmet Oz"
+      ],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-moves-shut-down-medicaid-loophole-protects-vulnerable-americans-saves-billions",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": []
     },
     {
       "id": "doj-2025-05-06-fichidzhyan-sentenced-hospice",
