@@ -3746,7 +3746,7 @@
       "agency": "CMS",
       "type": "Administrative Action",
       "title": "CMS Rolls Out Aggressive Strategy to Enhance and Accelerate Medicare Advantage Audits",
-      "description": "CMS announced a major expansion of Risk Adjustment Data Validation (RADV) audits targeting Medicare Advantage plans, expanding from approximately 60 plans to all eligible MA contracts (approximately 550 plans). Federal estimates suggest MA plans may overbill by $17\u2014$43 billion annually. CMS plans to complete outstanding audits for payment years 2018\u20132024 by early 2026.",
+      "description": "CMS announced a major expansion of Risk Adjustment Data Validation (RADV) audits targeting Medicare Advantage plans, expanding from approximately 60 plans to all eligible MA contracts (approximately 550 plans). CMS plans to complete outstanding audits for payment years 2018\u20132024 by early 2026.",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -3757,8 +3757,7 @@
         "Medicare",
         "Medicare Advantage",
         "Program Integrity",
-        "Risk Adjustment",
-        "Upcoding"
+        "Risk Adjustment"
       ],
       "state": null,
       "source_type": "official",
