@@ -3533,30 +3533,6 @@
       ]
     },
     {
-      "id": "cms-2025-06-27-wiser-model-launch",
-      "date": "2025-06-27",
-      "agency": "CMS",
-      "type": "Administrative Action",
-      "title": "CMS Launches WISeR Model Using AI-Enhanced Prior Authorization to Reduce Wasteful Medicare Services",
-      "description": "CMS Innovation Center launched the Wasteful and Inappropriate Service Reduction (WISeR) Model, using prior authorization enhanced by private-sector technology to reduce clinically low-value services in Original Medicare. The model targets ten service categories including skin substitutes, electrical nerve stimulator implants, knee arthroscopy, steroid injections, and spinal decompression. Running January 2026 through December 2031 in six states: New Jersey, Ohio, Oklahoma, Texas, Arizona, and Washington.",
-      "amount": "",
-      "amount_numeric": 0.0,
-      "officials": [
-        "Dr. Mehmet Oz"
-      ],
-      "link": "https://www.cms.gov/newsroom/press-releases/cms-launches-new-model-target-wasteful-inappropriate-services-original-medicare",
-      "link_label": "CMS Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": false,
-      "related_agencies": []
-    },
-    {
       "id": "gao-2025-06-26-medicaid-managed-care-improper-payments",
       "date": "2025-06-26",
       "agency": "GAO",
