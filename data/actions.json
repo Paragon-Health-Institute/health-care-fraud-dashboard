@@ -3487,21 +3487,16 @@
       "date": "2025-06-30",
       "agency": "DOJ",
       "type": "Technology/Innovation",
-      "title": "DOJ Launches Health Care Fraud Data Fusion Center Using AI and Cloud Analytics",
-      "description": "Announced as part of the 2025 National Health Care Fraud Takedown, the DOJ launched the Health Care Fraud Data Fusion Center, bringing together experts from the DOJ Criminal Division Fraud Section Health Care Fraud Unit Data Analytics Team, HHS-OIG, FBI, and other agencies to leverage cloud computing, artificial intelligence, and advanced analytics to identify emerging health care fraud schemes.",
+      "title": "DOJ Announces Health Care Fraud Data Fusion Center",
+      "description": "DOJ announced that it is working with HHS-OIG, FBI, and other agencies to create a Health Care Fraud Data Fusion Center aimed at improving detection of emerging fraud schemes. The center will bring together experts and resources across agencies, including cloud computing, artificial intelligence, and advanced analytics, to increase efficiency and speed the detection and prosecution of health care fraud.",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "President Trump"
-      ],
+      "officials": [],
       "link": "https://www.justice.gov/opa/pr/national-health-care-fraud-takedown-results-324-defendants-charged-connection-over-146",
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "AI",
-        "Medicaid",
-        "Medicare",
-        "Program Integrity"
+        "AI"
       ],
       "state": null,
       "source_type": "official",
