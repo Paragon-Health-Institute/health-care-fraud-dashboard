@@ -122,8 +122,8 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
 .action-card[data-agency="Media"]      { --agency-color: #8B6914; }
 .action-card[data-agency="State Agency"] { --agency-color: #795548; }
 .action-card[data-agency="Treasury"]     { --agency-color: #1B5E20; }
-.card-top-row { display: flex; flex-direction: column; gap: 4px; }
-.card-top-badges { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.card-top-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.card-top-badges { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; flex: 1; }
 .agency-badge { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 10px; border-radius: var(--radius); color: white; font-family: 'Public Sans', sans-serif; }
 .agency-DOJ         { background: var(--doj); }
 .agency-HHS         { background: var(--hhs); }
@@ -421,11 +421,11 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
   <div class="col-12 col-lg-6 col-xl-4 action-card-col">
     <div class="action-card h-100">
       <div class="card-top-row">
-        <span class="card-date"></span>
         <div class="card-top-badges">
           <span class="agency-badge"></span>
           <span class="type-badge"></span>
         </div>
+        <span class="card-date"></span>
       </div>
       <h3 class="card-title"></h3>
       <p class="card-desc"></p>
