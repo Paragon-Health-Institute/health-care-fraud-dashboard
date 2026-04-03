@@ -3488,7 +3488,7 @@
       "agency": "DOJ",
       "type": "Technology/Innovation",
       "title": "DOJ Launches Health Care Fraud Data Fusion Center Using AI and Cloud Analytics",
-      "description": "Announced as part of the 2025 National Health Care Fraud Takedown, the DOJ launched the Health Care Fraud Data Fusion Center, bringing together experts from the DOJ Health Care Fraud Unit Data Analytics Team, FBI, HHS-OIG, CMS, DEA, and IRS-CI to detect emerging fraud schemes using cloud computing, artificial intelligence, and advanced analytics. The Center aims to break down inter-agency data silos and increase the efficiency of proactive fraud detection, implementing President Trump's executive order on eliminating federal data silos.",
+      "description": "Announced as part of the 2025 National Health Care Fraud Takedown, the DOJ launched the Health Care Fraud Data Fusion Center, bringing together experts from the DOJ Criminal Division Fraud Section Health Care Fraud Unit Data Analytics Team, HHS-OIG, FBI, and other agencies to leverage cloud computing, artificial intelligence, and advanced analytics to identify emerging health care fraud schemes.",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [
@@ -3508,8 +3508,7 @@
       "auto_fetched": false,
       "entities": [],
       "related_agencies": [
-        "HHS-OIG",
-        "CMS"
+        "HHS-OIG"
       ]
     },
     {
