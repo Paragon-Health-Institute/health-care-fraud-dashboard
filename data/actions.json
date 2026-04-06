@@ -2358,7 +2358,7 @@
       "amount_numeric": 207500000,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/medicaid-agencies-made-millions-in-unallowable-capitation-payments-to-managed-care-organizations-on-behalf-of-deceased-enrollees/",
-      "link_label": "HHS-OIG Audit Report",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Improper Payments",
@@ -2435,7 +2435,7 @@
       "amount_numeric": 9500000,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/illinois-made-unallowable-managed-care-capitation-payments-on-behalf-of-incarcerated-medicaid-enrollees/",
-      "link_label": "HHS-OIG Audit Report",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Improper Payments",
@@ -2515,7 +2515,7 @@
       "amount_numeric": 5470000.0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/medicare-advantage-compliance-audit-of-specific-diagnosis-codes-humana-health-benefit-of-louisiana-contract-h1951-submitted-to-cms/",
-      "link_label": "HHS-OIG Audit Report",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Improper Payments",
@@ -2537,8 +2537,8 @@
       "date": "2025-12-15",
       "agency": "Congress",
       "type": "Investigation",
-      "title": "House Judiciary Launches Probe of 8 Major Insurers Over ACA Enrollment Fraud",
-      "description": "House Judiciary Committee sent demand letters to Blue Shield of California, Centene, CVS Health/Aetna, Elevance Health, GuideWell, Health Care Service Corporation, Kaiser Permanente, and Oscar Health demanding documents about ACA subsidy fraud and unauthorized broker enrollment practices.",
+      "title": "House Judiciary Probes 8 Major Insurers in Obamacare Subsidy Fraud Investigation",
+      "description": "House Judiciary Republicans sent demand letters to Blue Shield of California, Centene, CVS Health, Elevance Health, GuideWell, Health Care Service Corporation, Kaiser Permanente, and Oscar Health demanding documents and information as part of an investigation into Obamacare subsidy fraud, including broker-driven fraud and enrollment practices.",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -2546,17 +2546,29 @@
       "link_label": "House Judiciary Committee",
       "social_posts": [],
       "tags": [
-        "ACA"
+        "ACA",
+        "House Judiciary Committee",
+        "Blue Shield of California",
+        "Centene",
+        "CVS Health",
+        "Elevance Health",
+        "GuideWell",
+        "Health Care Service Corporation",
+        "Kaiser Permanente",
+        "Oscar Health"
       ],
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
       "entities": [
         "Kaiser Permanente",
-        "Aetna",
-        "Elevance",
         "CVS Health",
-        "Centene"
+        "Centene",
+        "Elevance Health",
+        "GuideWell",
+        "Health Care Service Corporation",
+        "Oscar Health",
+        "Blue Shield of California"
       ]
     },
     {
@@ -2814,7 +2826,7 @@
       "amount_numeric": 11200000000,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/cms-put-112-billion-at-risk-of-fraud-waste-and-abuse-by-not-properly-closing-contracts/",
-      "link_label": "HHS-OIG Audit Report",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Program Integrity"
