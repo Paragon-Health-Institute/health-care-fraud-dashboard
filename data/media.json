@@ -5,28 +5,27 @@
   },
   "stories": [
     {
-      "id": "media-2026-04-03-3274836823",
-      "date": "2026-04-03",
+      "id": "cbs-2026-04-02-la-hospice-investigation",
+      "date": "2026-04-02",
       "agency": "Media",
       "type": "Investigative Report",
-      "title": "Hospice with 97% survival rate accused of defrauding Medicare for $7.45M",
-      "description": "U.S. Hospice where staggering 97% of terminal patients survive is accused of defrauding Medicare for $7.45 million By Adam Yamaguchi , Adam Yamaguchi Correspondent Adam Yamaguchi is a CBS News correspondent based in Los Angeles. Read Full Bio Adam Yamaguchi , Laura Geller , Laura Geller National Investigative Producer Laura Geller is a multi-award-winning investigative journalist. She joined the CBS News Innovation Lab as a national investigative producer in September 2023.",
-      "amount": "$7.45 million",
-      "amount_numeric": 7450000.0,
+      "title": "CBS News Investigation: 700+ LA County Hospices Show Fraud Red Flags; One Office Plaza Houses 89 Registered Hospices",
+      "description": "CBS News examined business and financial records of every hospice in Los Angeles County and found more than 700 of roughly 1,800 had multiple fraud red flags. Reporters identified a single office plaza housing 89 registered hospices, which they described as \"ground zero\" for hospice fraud. The reporting prompted a congressional investigation into California hospice fraud.",
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.cbsnews.com/news/hospice-fraud-arrests-justice-department-california/",
-      "link_label": "CBS News Report",
+      "link_label": "CBS News Investigation",
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Hospice Fraud",
-        "Lab Fraud"
+        "Hospice Fraud"
       ],
-      "state": "",
+      "state": "CA",
       "source_type": "news",
-      "auto_fetched": true,
+      "auto_fetched": false,
       "entities": [],
-      "related_agencies": ""
+      "related_agencies": []
     },
     {
       "id": "media-2026-03-24-rci-new-orleans-hospice-billing",
