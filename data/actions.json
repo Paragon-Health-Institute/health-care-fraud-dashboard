@@ -2564,8 +2564,8 @@
       "date": "2025-12-10",
       "agency": "Congress",
       "type": "Hearing",
-      "title": "House Judiciary Joint Hearing: Fighting Obamacare Subsidy Fraud \u2014 Is the APA Working as Intended?",
-      "description": "Joint hearing of House Judiciary Subcommittees on Oversight and Administrative State examined ACA subsidy fraud following the GAO report finding 96% of fictitious applications were approved. Witnesses included Dr. Ge Bai (Johns Hopkins) and Seto Bagdoyan (GAO). Examined how enhanced COVID-era subsidies created an environment for waste, fraud, and abuse.",
+      "title": "House Judiciary Joint Hearing: Fighting Obamacare Subsidy Fraud",
+      "description": "The House Judiciary Subcommittee on Oversight and the Subcommittee on the Administrative State, Regulatory Reform, and Antitrust held a joint hearing on Obamacare subsidy fraud to examine whether the Administrative Procedure Act is working as intended. The hearing examined Obamacare subsidies, including the Biden-Harris enhanced COVID-19 subsidies set to expire at the end of 2025, and how those subsidies inflate health care costs and create an environment for waste, fraud, and abuse.",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -2574,7 +2574,8 @@
       "social_posts": [],
       "tags": [
         "ACA",
-        "COVID-19"
+        "COVID-19",
+        "House Judiciary Committee"
       ],
       "state": null,
       "source_type": "official",
