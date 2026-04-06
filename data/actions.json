@@ -2379,10 +2379,10 @@
       "date": "2026-01-06",
       "agency": "CMS",
       "type": "Administrative Action",
-      "title": "CMS Rejects Minnesota\u2019s Medicaid Corrective Action Plan, Announces $515M Quarterly Withholding",
-      "description": "CMS Administrator Dr. Oz declared Minnesota\u2019s December 31 corrective action plan \u201cdeeply insufficient,\u201d finding it relied on temporary measures, lacked enforceable timelines and performance metrics, and provided limited accountability for past misconduct. CMS announced it would withhold approximately $515 million in federal Medicaid matching payments each quarter\u2014over $2 billion per year\u2014until Minnesota demonstrated full and sustained compliance with federal requirements. Minnesota was directed to submit a revised plan by January 30, 2026.",
-      "amount": "$515M/quarter",
-      "amount_numeric": 515000000.0,
+      "title": "CMS Escalates Oversight of Minnesota Medicaid Over Fraud, Waste, and Abuse Concerns",
+      "description": "CMS said Minnesota\u2019s December 31 corrective action plan was inadequate and announced new oversight steps in response to significant and ongoing fraud, waste, and abuse in the state\u2019s Medicaid program. In a letter to Governor Walz, CMS Administrator Oz said CMS will conduct a focused review of past CMS-64 quarterly receipts and defer funding based on findings of fraud, waste, and abuse, as well as initiate non-compliance withhold processes for future quarters. CMS said the 14 high-risk Medicaid service areas at issue consume $3.75 billion annually in federal and state taxpayer resources.",
+      "amount": "$3.75B",
+      "amount_numeric": 3750000000.0,
       "officials": [
         "Dr. Mehmet Oz"
       ],
