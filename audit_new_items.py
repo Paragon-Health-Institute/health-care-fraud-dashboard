@@ -42,6 +42,12 @@ DATA_FILE = os.path.join(SCRIPT_DIR, "data", "actions.json")
 REVIEW_FILE = os.path.join(SCRIPT_DIR, "data", "needs_review.json")
 SUMMARY_FILE = os.path.join(SCRIPT_DIR, "data", "_audit_summary.md")
 
+# Media tab uses parallel files. media.json is a list of "stories" not
+# "actions"; the audit/AI commands handle that key difference.
+MEDIA_FILE = os.path.join(SCRIPT_DIR, "data", "media.json")
+MEDIA_REVIEW_FILE = os.path.join(SCRIPT_DIR, "data", "needs_review_media.json")
+MEDIA_SUMMARY_FILE = os.path.join(SCRIPT_DIR, "data", "_media_audit_summary.md")
+
 # ---------------------------------------------------------------------------
 # Strict healthcare-context patterns. Anything matching these is auto-approved.
 # Anything that doesn't match is flagged for review (NOT auto-rejected).
@@ -655,6 +661,397 @@ def _append_ai_summary(promoted: list, rejected: list, escalated: list) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Media tab — parallel commands using needs_review_media.json + media.json
+# ---------------------------------------------------------------------------
+# The media tab works on a different cadence: items are scraped into
+# needs_review_media.json by update_media.py and only get promoted into
+# media.json after passing both regex (cmd_audit_media) and AI relevance
+# checks (cmd_ai_review_media). Same safety net architecture as enforcement,
+# adapted for the "stories" key and the looser editorial scope of journalism.
+#
+# Key differences from the enforcement audit:
+#   - Stories live under "stories" not "actions"
+#   - Items start in needs_review_media.json (already separated by the
+#     scraper); cmd_audit_media diffs the review file against itself + the
+#     committed media.json to find newly-scraped items, runs the regex
+#     gate, and auto-promotes obvious items into media.json
+#   - The AI prompt asks "is this an investigative-journalism piece about
+#     healthcare fraud?" — slightly different scope than enforcement
+#     (e.g. opinion pieces, broad industry coverage, and roundups all
+#     get rejected even if they mention healthcare fraud)
+
+
+_MEDIA_AI_PROMPT_TEMPLATE = """You are a relevance classifier for the Media Investigations tab of a healthcare fraud dashboard.
+
+The tab tracks third-party investigative journalism that exposes specific healthcare fraud schemes, providers, insurers, or programs in the United States. You will be given a news article title and URL. Decide whether this story belongs on the dashboard.
+
+## IN SCOPE (answer healthcare_fraud_journalism=true)
+
+- Investigative reporting on a specific Medicare, Medicaid, TRICARE, or ACA fraud scheme
+- Coverage of a False Claims Act case, qui tam suit, kickback case, or similar
+- Reporting on a healthcare provider (hospital, clinic, doctor, lab, DME supplier, pharmacy, hospice, home health, nursing home) accused of billing fraud
+- Coverage of pharmaceutical/device company fraud (off-label, kickbacks, FCA, drug pricing)
+- Coverage of healthcare insurer fraud (UnitedHealth, Aetna, Humana, Centene, Kaiser, etc.)
+- Reporting on telehealth or genetic testing fraud schemes
+- Coverage of opioid/controlled substance billing fraud or pill mills
+- Coverage of an HHS-OIG or DOJ investigation INTO healthcare fraud (the journalism is about the underlying fraud, not the agency action itself — for the latter, the item belongs on the Oversight tab not the Media tab)
+- Reporting on systemic fraud loopholes (NPI loophole, DMEPOS supplier abuse, etc.)
+
+## OUT OF SCOPE (answer healthcare_fraud_journalism=false)
+
+- General healthcare policy debates (Medicare for All, premium increases, hospital consolidation) without a specific fraud angle
+- Opinion pieces, editorials, or op-eds (even if they mention fraud)
+- Industry analyst coverage (Q1 earnings, M&A, drug approval news)
+- Hospital or insurer PR / press release rewrites
+- Sex crimes or violent crimes by doctors (these are criminal cases, not healthcare fraud)
+- Drug trafficking by physicians outside a billing-fraud context
+- Medical malpractice without a fraud allegation
+- Drug recall coverage / FDA approval coverage
+- Class action lawsuits without a specific fraud allegation
+- Public health stories (outbreaks, vaccine policy, epidemiology)
+- Generic "healthcare costs are rising" pieces
+- Roundups, "year in review" pieces, or summary articles unless they detail a specific scheme
+- AGENCY-LED stories: if the article is primarily about a federal agency (DOJ, CMS, HHS-OIG) announcing or taking an action, that item belongs on the Oversight tab, not the Media tab. Reject from media in that case.
+
+## OUTPUT
+
+Return ONLY valid JSON. No markdown fences, no prose.
+
+{{
+  "healthcare_fraud_journalism": true | false,
+  "confidence": integer 0-100,
+  "reason": "one sentence explaining the decision"
+}}
+
+Confidence calibration:
+- 95-100: title makes the call unambiguous
+- 70-94: title clearly implies one direction
+- 30-69: genuinely ambiguous
+- 0-29: unable to judge from title alone
+"""
+
+
+def _build_media_ai_prompt() -> str:
+    return _MEDIA_AI_PROMPT_TEMPLATE
+
+
+def load_media_review() -> dict:
+    review = load_json(MEDIA_REVIEW_FILE, {"items": [], "rejected_links": []})
+    review.setdefault("items", [])
+    review.setdefault("rejected_links", [])
+    return review
+
+
+def cmd_audit_media() -> int:
+    """Run the regex healthcare check on items in needs_review_media.json.
+
+    Items that pass the HC keyword check AND don't match the non-fraud
+    crime demote list get promoted into media.json. Anything else stays
+    in the review queue for AI review or human triage.
+    """
+    review = load_media_review()
+    pending = [a for a in review.get("items", []) if not a.get("ai_decision")
+               and not a.get("audit_decision")]
+
+    if not pending:
+        print("audit-media: no un-audited items in needs_review_media.json")
+        if os.path.exists(MEDIA_SUMMARY_FILE):
+            os.remove(MEDIA_SUMMARY_FILE)
+        return 0
+
+    print(f"audit-media: {len(pending)} pending items to check")
+
+    media = load_json(MEDIA_FILE, {"metadata": {"version": "1.0", "last_updated": ""},
+                                    "stories": []})
+
+    auto_promoted = []
+    still_pending = []
+    for item in pending:
+        if is_obviously_healthcare(item):
+            auto_promoted.append(item)
+            item["audit_decision"] = "auto_approved"
+        else:
+            still_pending.append(item)
+            if is_non_fraud_crime(item):
+                item["flag_reason"] = "title matches non-fraud crime pattern"
+            else:
+                item["flag_reason"] = "title lacks healthcare keyword"
+
+    if auto_promoted:
+        # Strip review-only metadata before adding to media.json
+        for item in auto_promoted:
+            for k in ("flagged_at", "flag_reason", "audit_decision"):
+                item.pop(k, None)
+        # New stories go at the top, sorted by date desc
+        new_stories = sorted(auto_promoted, key=lambda s: s.get("date", ""), reverse=True)
+        media["stories"] = new_stories + media.get("stories", [])
+        media["metadata"]["last_updated"] = datetime.now().isoformat()
+        save_json(MEDIA_FILE, media)
+
+    # Remove auto-promoted items from the review queue
+    promoted_ids = {a["id"] for a in auto_promoted}
+    review["items"] = [a for a in review["items"] if a.get("id") not in promoted_ids]
+    save_json(MEDIA_REVIEW_FILE, review)
+
+    print(f"audit-media: {len(auto_promoted)} auto-promoted, {len(still_pending)} flagged for AI/human review")
+
+    _write_media_audit_summary(auto_promoted, still_pending)
+    return 0
+
+
+def cmd_ai_review_media() -> int:
+    """Process items in needs_review_media.json with Claude Haiku.
+
+    Same three-tier logic as cmd_ai_review for enforcement: auto-promote
+    high-confidence yes, auto-reject high-confidence no, escalate the rest.
+    """
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+    if not api_key:
+        print("ai-review-media: ANTHROPIC_API_KEY not set, skipping")
+        return 0
+
+    try:
+        import anthropic
+    except ImportError:
+        print("ai-review-media: anthropic package not installed, skipping")
+        return 0
+
+    review = load_media_review()
+    pending = [a for a in review.get("items", []) if "ai_decision" not in a]
+    if not pending:
+        print("ai-review-media: no un-reviewed items in needs_review_media.json")
+        return 0
+
+    print(f"ai-review-media: processing {len(pending)} item(s) with {AI_MODEL}")
+    client = anthropic.Anthropic(api_key=api_key)
+
+    media = load_json(MEDIA_FILE, {"metadata": {"version": "1.0", "last_updated": ""}, "stories": []})
+
+    promoted = []
+    rejected = []
+    escalated = []
+
+    for item in pending:
+        title = item.get("title", "")
+        link = item.get("link", "")
+        print(f"  reviewing: {item['id']}")
+        print(f"             {title[:80]}")
+
+        decision = _call_claude_media(client, title, link)
+        if decision is None:
+            print("             SKIP (API error, left in queue)")
+            continue
+
+        is_journalism = bool(decision.get("healthcare_fraud_journalism"))
+        conf = int(decision.get("confidence", 0))
+        reason = str(decision.get("reason", ""))[:200]
+
+        item["ai_decision"] = "healthcare_fraud_journalism" if is_journalism else "not_journalism"
+        item["ai_confidence"] = conf
+        item["ai_reason"] = reason
+        item["ai_model"] = AI_MODEL
+
+        if is_journalism and conf >= AUTO_PROMOTE_THRESHOLD:
+            clean = {k: v for k, v in item.items()
+                     if not k.startswith("ai_")
+                     and k not in ("flagged_at", "flag_reason", "audit_decision")}
+            media.setdefault("stories", []).insert(0, clean)
+            promoted.append(item)
+            print(f"             PROMOTE (confidence={conf}) — {reason[:80]}")
+        elif (not is_journalism) and conf >= AUTO_REJECT_THRESHOLD:
+            if link and link not in review["rejected_links"]:
+                review["rejected_links"].append(link)
+            rejected.append(item)
+            print(f"             REJECT  (confidence={conf}) — {reason[:80]}")
+        else:
+            escalated.append(item)
+            label = "journalism" if is_journalism else "not journalism"
+            print(f"             ESCALATE ({label}, confidence={conf}) — {reason[:80]}")
+
+    handled_ids = {a["id"] for a in promoted + rejected}
+    review["items"] = [a for a in review["items"] if a.get("id") not in handled_ids]
+
+    if promoted:
+        # Re-sort stories by date desc since we inserted new ones
+        media["stories"] = sorted(media.get("stories", []),
+                                   key=lambda s: s.get("date", ""), reverse=True)
+        media["metadata"]["last_updated"] = datetime.now().isoformat()
+
+    save_json(MEDIA_FILE, media)
+    save_json(MEDIA_REVIEW_FILE, review)
+
+    print()
+    print(f"ai-review-media: {len(promoted)} promoted, {len(rejected)} rejected, "
+          f"{len(escalated)} escalated")
+
+    _append_media_ai_summary(promoted, rejected, escalated)
+    return 0
+
+
+def _call_claude_media(client, title: str, link: str) -> dict | None:
+    """Call Claude Haiku with the media-specific classifier prompt."""
+    user_msg = f"Title: {title}\nLink: {link}"
+    try:
+        resp = client.messages.create(
+            model=AI_MODEL,
+            max_tokens=300,
+            system=_build_media_ai_prompt(),
+            messages=[{"role": "user", "content": user_msg}],
+        )
+        text = resp.content[0].text.strip()
+        if text.startswith("```"):
+            text = text.split("\n", 1)[1]
+            if text.endswith("```"):
+                text = text[:-3]
+            text = text.strip()
+        result = json.loads(text)
+        if "healthcare_fraud_journalism" not in result or "confidence" not in result:
+            return None
+        return result
+    except Exception as e:
+        print(f"    AI call failed: {e}", file=sys.stderr)
+        return None
+
+
+def cmd_media_promote(item_id: str) -> int:
+    """Move a media story from needs_review_media.json into media.json."""
+    review = load_media_review()
+    item = next((a for a in review["items"] if a.get("id") == item_id), None)
+    if not item:
+        print(f"media-promote: no item {item_id!r} in {MEDIA_REVIEW_FILE}", file=sys.stderr)
+        return 1
+
+    for k in ("flagged_at", "flag_reason", "audit_decision",
+              "ai_decision", "ai_confidence", "ai_reason", "ai_model"):
+        item.pop(k, None)
+
+    media = load_json(MEDIA_FILE, {"metadata": {"version": "1.0", "last_updated": ""}, "stories": []})
+    media.setdefault("stories", []).insert(0, item)
+    media["stories"] = sorted(media["stories"], key=lambda s: s.get("date", ""), reverse=True)
+    media["metadata"]["last_updated"] = datetime.now().isoformat()
+    save_json(MEDIA_FILE, media)
+
+    review["items"] = [a for a in review["items"] if a.get("id") != item_id]
+    save_json(MEDIA_REVIEW_FILE, review)
+
+    print(f"media-promoted {item_id} -> {os.path.basename(MEDIA_FILE)}")
+    print(f"  title: {item.get('title', '')[:80]}")
+    return 0
+
+
+def cmd_media_reject(item_id: str) -> int:
+    """Permanently reject a media story; its link is added to rejected_links."""
+    review = load_media_review()
+    item = next((a for a in review["items"] if a.get("id") == item_id), None)
+    if not item:
+        print(f"media-reject: no item {item_id!r} in {MEDIA_REVIEW_FILE}", file=sys.stderr)
+        return 1
+
+    link = item.get("link", "")
+    if link and link not in review["rejected_links"]:
+        review["rejected_links"].append(link)
+
+    review["items"] = [a for a in review["items"] if a.get("id") != item_id]
+    save_json(MEDIA_REVIEW_FILE, review)
+
+    print(f"media-rejected {item_id}")
+    print(f"  title: {item.get('title', '')[:80]}")
+    if link:
+        print(f"  link added to media rejected_links — scraper will skip it")
+    return 0
+
+
+def cmd_media_list() -> int:
+    """Show pending items in needs_review_media.json."""
+    review = load_media_review()
+    items = review.get("items", [])
+    if not items:
+        print("no media items pending review")
+        return 0
+    print(f"{len(items)} media item(s) pending review:")
+    print()
+    for item in items:
+        print(f"  {item.get('id', '?')}")
+        print(f"    title:    {item.get('title', '')[:90]}")
+        print(f"    link:     {item.get('link', '')[:90]}")
+        print(f"    flagged:  {item.get('flagged_at', '?')}")
+        print(f"    reason:   {item.get('flag_reason', '?')}")
+        if item.get("ai_decision"):
+            print(f"    ai:       {item['ai_decision']} @ confidence {item.get('ai_confidence')}")
+            print(f"    ai_reason: {item.get('ai_reason', '')[:120]}")
+        print()
+    print("To promote: python audit_new_items.py media-promote <id>")
+    print("To reject:  python audit_new_items.py media-reject  <id>")
+    return 0
+
+
+def _write_media_audit_summary(approved: list, flagged: list) -> None:
+    """Write a markdown summary of the media audit pass."""
+    lines = []
+    if approved:
+        lines.append(f"### Auto-promoted media stories ({len(approved)})")
+        for item in approved:
+            lines.append(f"- {item.get('title', '')[:120]}")
+        lines.append("")
+    if flagged:
+        lines.append(f"### Flagged media stories ({len(flagged)} pending review)")
+        lines.append("")
+        for item in flagged:
+            lines.append(f"- **{item.get('title', '')}**")
+            link = item.get("link", "")
+            if link:
+                lines.append(f"  [{link}]({link})")
+            lines.append(f"  _reason: {item.get('flag_reason', '?')}_")
+            lines.append(f"  `python audit_new_items.py media-promote {item['id']}`  or  `media-reject {item['id']}`")
+            lines.append("")
+    save_json(MEDIA_SUMMARY_FILE.replace(".md", ".json"), {
+        "approved": [{"id": a["id"], "title": a.get("title", "")} for a in approved],
+        "flagged":  [{"id": a["id"], "title": a.get("title", ""), "link": a.get("link", "")} for a in flagged],
+    })
+    with open(MEDIA_SUMMARY_FILE, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
+
+
+def _append_media_ai_summary(promoted: list, rejected: list, escalated: list) -> None:
+    """Append media AI results to the markdown summary."""
+    lines = ["", "---", ""]
+    if promoted:
+        lines.append(f"### Media AI-promoted ({len(promoted)} story/stories)")
+        lines.append("")
+        lines.append("Claude classified these as healthcare fraud journalism with high confidence:")
+        lines.append("")
+        for a in promoted:
+            lines.append(f"- **{a.get('title', '')[:120]}**")
+            lines.append(f"  _confidence {a.get('ai_confidence')} — {a.get('ai_reason', '')[:150]}_")
+        lines.append("")
+    if rejected:
+        lines.append(f"### Media AI-rejected ({len(rejected)} story/stories, link blocked)")
+        lines.append("")
+        for a in rejected:
+            lines.append(f"- {a.get('title', '')[:120]}")
+            lines.append(f"  _confidence {a.get('ai_confidence')} — {a.get('ai_reason', '')[:150]}_")
+        lines.append("")
+    if escalated:
+        lines.append(f"### Media AI-escalated ({len(escalated)} story/stories, needs your call)")
+        lines.append("")
+        for a in escalated:
+            lines.append(f"- **{a.get('title', '')}**")
+            link = a.get("link", "")
+            if link:
+                lines.append(f"  [{link}]({link})")
+            lines.append(f"  _Claude: {a.get('ai_decision', '?')} @ confidence {a.get('ai_confidence')} — {a.get('ai_reason', '')[:200]}_")
+            lines.append(f"  `python audit_new_items.py media-promote {a['id']}`  or  `media-reject {a['id']}`")
+            lines.append("")
+
+    existing = ""
+    if os.path.exists(MEDIA_SUMMARY_FILE):
+        with open(MEDIA_SUMMARY_FILE, encoding="utf-8") as f:
+            existing = f.read()
+    with open(MEDIA_SUMMARY_FILE, "w", encoding="utf-8") as f:
+        f.write(existing + "\n".join(lines))
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 def main() -> int:
@@ -663,7 +1060,12 @@ def main() -> int:
         "cmd",
         nargs="?",
         default="audit",
-        choices=["audit", "list", "promote", "reject", "ai-review"],
+        choices=[
+            # Enforcement commands
+            "audit", "list", "promote", "reject", "ai-review",
+            # Media commands
+            "audit-media", "list-media", "media-promote", "media-reject", "ai-review-media",
+        ],
     )
     parser.add_argument("item_id", nargs="?")
     args = parser.parse_args()
@@ -679,6 +1081,19 @@ def main() -> int:
             print(f"{args.cmd} requires an item ID", file=sys.stderr)
             return 2
         return cmd_promote(args.item_id) if args.cmd == "promote" else cmd_reject(args.item_id)
+
+    # Media tab parallel commands
+    if args.cmd == "audit-media":
+        return cmd_audit_media()
+    if args.cmd == "list-media":
+        return cmd_media_list()
+    if args.cmd == "ai-review-media":
+        return cmd_ai_review_media()
+    if args.cmd in ("media-promote", "media-reject"):
+        if not args.item_id:
+            print(f"{args.cmd} requires an item ID", file=sys.stderr)
+            return 2
+        return cmd_media_promote(args.item_id) if args.cmd == "media-promote" else cmd_media_reject(args.item_id)
     return 1
 
 

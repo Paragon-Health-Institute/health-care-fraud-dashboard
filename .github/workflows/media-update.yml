@@ -3,7 +3,17 @@ name: Daily Media Investigations Update
 on:
   schedule:
     - cron: '42 8 * * *'   # 8:42 AM UTC daily (separate from enforcement at 7:17)
-  workflow_dispatch:         # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      backfill_from:
+        description: 'Optional: backfill floor date (YYYY-MM-DD). Leave blank for normal daily delta.'
+        required: false
+        type: string
+      dry_run:
+        description: 'If true, scrape + audit + ai-review but do NOT commit. For inspection via logs/artifacts.'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -15,6 +25,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -22,24 +34,49 @@ jobs:
         python-version: '3.11'
 
     - name: Install dependencies
-      run: pip install requests beautifulsoup4 feedparser lxml
+      run: |
+        pip install requests beautifulsoup4 feedparser lxml playwright anthropic
+        playwright install --with-deps chromium
 
     - name: Run media scraper
-      run: python update_media.py
+      run: |
+        ARGS=""
+        if [ -n "${{ github.event.inputs.backfill_from }}" ]; then
+          ARGS="$ARGS --backfill-from ${{ github.event.inputs.backfill_from }}"
+        fi
+        echo "Running: python update_media.py $ARGS"
+        python update_media.py $ARGS
+
+    - name: Audit new media items (regex flag check)
+      run: python audit_new_items.py audit-media
+
+    - name: AI review of flagged media items (Claude Haiku)
+      env:
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      run: python audit_new_items.py ai-review-media
+
+    - name: Upload media audit summary as artifact
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: media-audit-summary-${{ github.run_number }}
+        path: |
+          data/_media_audit_summary.md
+          data/_media_audit_summary.json
+        if-no-files-found: ignore
+        retention-days: 30
 
     - name: Check for changes
       id: changes
       run: |
-        if git diff --quiet data/media.json; then
-          echo "changed=false" >> $GITHUB_OUTPUT
+        if git diff --quiet data/media.json data/needs_review_media.json; then
+          echo "changed=false" >> "$GITHUB_OUTPUT"
         else
-          echo "changed=true" >> $GITHUB_OUTPUT
-          # Extract new story titles for PR body
-          git diff data/media.json | grep '^\+.*"title"' | sed 's/.*"title": "//;s/",$//' | head -20 > /tmp/new_titles.txt
+          echo "changed=true" >> "$GITHUB_OUTPUT"
         fi
 
-    - name: Create pull request
-      if: steps.changes.outputs.changed == 'true'
+    - name: Open pull request
+      if: steps.changes.outputs.changed == 'true' && github.event.inputs.dry_run != 'true'
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
@@ -50,35 +87,45 @@ jobs:
         git config user.email "github-actions[bot]@users.noreply.github.com"
 
         git checkout -b "$BRANCH"
-        git add data/media.json
-        git commit -m "Auto-update: new media investigations for ${DATE}"
+        git add data/media.json data/needs_review_media.json
+        git commit -m "Auto-update: media investigations review queue ${DATE}"
         git push origin "$BRANCH"
 
-        # Build PR body with story titles
-        STORIES=""
-        if [ -f /tmp/new_titles.txt ]; then
-          while IFS= read -r line; do
-            STORIES="${STORIES}- ${line}\n"
-          done < /tmp/new_titles.txt
-        fi
+        # Build PR body with audit summary
+        BODY_FILE=$(mktemp)
+        {
+          echo "## Media investigations review queue"
+          echo
+          echo "The media scraper found new investigative-journalism candidates for the Media Investigations tab. Items that pass both the regex healthcare check and Claude's relevance classifier are auto-promoted into media.json. Items that don't pass either are listed below for your review."
+          echo
+          if [ -f data/_media_audit_summary.md ]; then
+            cat data/_media_audit_summary.md
+            echo
+          fi
+          echo "**Review checklist:**"
+          echo "- [ ] Auto-promoted items are real investigative reports about healthcare fraud (not opinion pieces, not agency announcements)"
+          echo "- [ ] Titles read cleanly (no publisher decorations)"
+          echo "- [ ] Tags are from the allowlist (programs + vulnerable areas only — see tag_allowlist.py)"
+          echo "- [ ] Flagged items in needs_review_media.json have been triaged"
+          echo
+          echo "> Merge to publish to the live dashboard. Close to discard."
+          echo "> Items still in needs_review_media.json will NOT publish — promote or reject after merge with:"
+          echo "> \`python audit_new_items.py media-promote <id>\` / \`media-reject <id>\`"
+        } > "$BODY_FILE"
 
         gh pr create \
-          --title "Media update: new investigative reports (${DATE})" \
-          --body "$(cat <<EOF
-        ## Auto-fetched investigative reports
+          --title "Media update: review queue (${DATE})" \
+          --body-file "$BODY_FILE"
 
-        The media scraper found new stories from major news outlets. Please review before merging.
+    - name: Dry-run notice
+      if: steps.changes.outputs.changed == 'true' && github.event.inputs.dry_run == 'true'
+      run: |
+        echo "::notice::DRY RUN — changes were staged but NOT committed."
+        if [ -f data/_media_audit_summary.md ]; then
+          echo "----- _media_audit_summary.md -----"
+          cat data/_media_audit_summary.md
+        fi
 
-        **New stories found:**
-        $(cat /tmp/new_titles.txt 2>/dev/null | sed 's/^/- /' || echo "See files changed for details")
-
-        **Review checklist:**
-        - [ ] Stories are real investigative reports (not opinion pieces or briefs)
-        - [ ] Titles accurately reflect the source
-        - [ ] Tags are from the allowlist (programs + vulnerable areas only — see tag_allowlist.py)
-        - [ ] Related agencies are appropriate
-        - [ ] No duplicates of existing entries
-
-        > Merge to publish to the live dashboard. Close to discard.
-        EOF
-        )"
+    - name: No-op notice
+      if: steps.changes.outputs.changed == 'false'
+      run: echo "::notice::No new media items since last scrape. Nothing to commit."
