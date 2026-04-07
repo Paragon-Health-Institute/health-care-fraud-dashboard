@@ -320,6 +320,221 @@ def _write_summary(approved: list, flagged: list) -> None:
 
 
 # ---------------------------------------------------------------------------
+# AI review layer — Claude Haiku processes items in needs_review.json
+# ---------------------------------------------------------------------------
+AI_MODEL = "claude-haiku-4-5-20251001"
+
+AI_SYSTEM_PROMPT = """You are a relevance classifier for a healthcare fraud enforcement dashboard.
+
+The dashboard tracks federal enforcement actions against healthcare fraud in the United States: Medicare, Medicaid, TRICARE, ACA marketplace, and private health insurance fraud by providers, pharmacies, device makers, labs, and insurers.
+
+You will be given a DOJ press release title and URL. Determine whether this press release belongs on the dashboard.
+
+## IN SCOPE (answer healthcare_fraud=true)
+
+- Medicare, Medicaid, TRICARE, ACA, or private health insurance fraud
+- False Claims Act cases against healthcare providers, hospitals, clinics, labs, pharmacies, device makers, DME suppliers, hospice/home health, nursing facilities
+- Anti-Kickback Statute or Stark Law violations in a healthcare context
+- Drug diversion, pill mill, or opioid prescribing fraud by licensed medical professionals
+- Genetic testing, telehealth, or wound care fraud schemes
+- Healthcare-adjacent identity theft where stolen identities were used to submit false medical claims
+- Pharmaceutical kickback, off-label marketing, or drug pricing fraud cases
+- Healthcare cybersecurity violations leading to FCA liability (e.g. unsecured EHR systems)
+
+## OUT OF SCOPE (answer healthcare_fraud=false)
+
+- SNAP / food stamp fraud
+- Unemployment insurance fraud
+- Housing assistance fraud
+- Child care / daycare program fraud
+- PPP or COVID economic relief fraud (unless the fraud specifically involved medical services, medical test kits, or health insurance)
+- Passport fraud, immigration fraud, unaccompanied alien minor sponsorship
+- Social Security fraud (unless it's healthcare-related SSDI provider fraud)
+- Street-level drug trafficking, gang prosecutions, murder-for-hire, or violent crime
+- Bank fraud, mortgage fraud, real estate fraud (unless healthcare-specific)
+- Defense contractor bribery
+- Tax fraud (unless it's a side charge on a primary healthcare fraud case)
+- Roundups, "ICYMI" posts, or district-wide prosecution highlights
+- Press releases announcing new prosecutors, office changes, or organizational news
+
+## OUTPUT
+
+Return ONLY valid JSON. No markdown fences, no explanation outside the JSON.
+
+{
+  "healthcare_fraud": true | false,
+  "confidence": integer 0-100,
+  "reason": "one sentence explaining the decision"
+}
+
+Confidence calibration:
+- 95-100: title makes it unambiguous (mentions Medicare/Medicaid/pharmacy/doctor/hospital/etc. OR unambiguous non-HC term)
+- 70-94: title clearly implies one direction but lacks a definitive keyword
+- 30-69: title is genuinely ambiguous, could go either way
+- 0-29: unable to judge from title alone
+"""
+
+AUTO_PROMOTE_THRESHOLD = 90  # confidence >= this AND healthcare_fraud=true -> auto-promote
+AUTO_REJECT_THRESHOLD = 90   # confidence >= this AND healthcare_fraud=false -> auto-reject
+
+
+def _call_claude(client, title: str, link: str) -> dict | None:
+    """Call Claude Haiku with the classifier prompt. Returns decision dict or None."""
+    user_msg = f"Title: {title}\nLink: {link}"
+    try:
+        resp = client.messages.create(
+            model=AI_MODEL,
+            max_tokens=200,
+            system=AI_SYSTEM_PROMPT,
+            messages=[{"role": "user", "content": user_msg}],
+        )
+        text = resp.content[0].text.strip()
+        # Strip possible markdown fences
+        if text.startswith("```"):
+            text = text.split("\n", 1)[1]
+            if text.endswith("```"):
+                text = text[:-3]
+            text = text.strip()
+        result = json.loads(text)
+        if "healthcare_fraud" not in result or "confidence" not in result:
+            return None
+        return result
+    except Exception as e:
+        print(f"    AI call failed: {e}", file=sys.stderr)
+        return None
+
+
+def cmd_ai_review() -> int:
+    """Process items in needs_review.json with Claude Haiku.
+
+    High-confidence healthcare items get auto-promoted back to actions.json.
+    High-confidence non-healthcare items get auto-rejected. Borderline items
+    stay in the review queue with an ai_decision/ai_confidence/ai_reason
+    annotation so the human reviewer sees Claude's opinion in the PR.
+    """
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+    if not api_key:
+        print("ai-review: ANTHROPIC_API_KEY not set, skipping")
+        return 0
+
+    try:
+        import anthropic
+    except ImportError:
+        print("ai-review: anthropic package not installed, skipping")
+        return 0
+
+    review = load_review()
+    pending = [a for a in review.get("items", []) if "ai_decision" not in a]
+    if not pending:
+        print("ai-review: no un-reviewed items in needs_review.json")
+        return 0
+
+    print(f"ai-review: processing {len(pending)} item(s) with {AI_MODEL}")
+    client = anthropic.Anthropic(api_key=api_key)
+
+    data = load_json(DATA_FILE, {"actions": []})
+    promoted_items = []
+    rejected_items = []
+    escalated_items = []
+
+    for item in pending:
+        title = item.get("title", "")
+        link = item.get("link", "")
+        print(f"  reviewing: {item['id']}")
+        print(f"             {title[:80]}")
+
+        decision = _call_claude(client, title, link)
+        if decision is None:
+            print("             SKIP (API error, left in queue)")
+            continue
+
+        is_hc = bool(decision.get("healthcare_fraud"))
+        conf = int(decision.get("confidence", 0))
+        reason = str(decision.get("reason", ""))[:200]
+
+        item["ai_decision"] = "healthcare_fraud" if is_hc else "not_healthcare_fraud"
+        item["ai_confidence"] = conf
+        item["ai_reason"] = reason
+        item["ai_model"] = AI_MODEL
+
+        if is_hc and conf >= AUTO_PROMOTE_THRESHOLD:
+            # Auto-promote: strip review metadata and add to actions
+            clean = {k: v for k, v in item.items()
+                     if not k.startswith("ai_") and k not in ("flagged_at", "flag_reason")}
+            data.setdefault("actions", []).append(clean)
+            promoted_items.append(item)
+            print(f"             PROMOTE (confidence={conf}) — {reason[:80]}")
+        elif (not is_hc) and conf >= AUTO_REJECT_THRESHOLD:
+            if link and link not in review["rejected_links"]:
+                review["rejected_links"].append(link)
+            rejected_items.append(item)
+            print(f"             REJECT  (confidence={conf}) — {reason[:80]}")
+        else:
+            # Borderline: leave in queue for human review
+            escalated_items.append(item)
+            label = "HC" if is_hc else "non-HC"
+            print(f"             ESCALATE ({label}, confidence={conf}) — {reason[:80]}")
+
+    # Remove promoted + rejected items from the review queue. Keep escalated.
+    handled_ids = {a["id"] for a in promoted_items + rejected_items}
+    review["items"] = [a for a in review["items"] if a.get("id") not in handled_ids]
+
+    save_json(DATA_FILE, data)
+    save_json(REVIEW_FILE, review)
+
+    print()
+    print(f"ai-review: {len(promoted_items)} promoted, "
+          f"{len(rejected_items)} rejected, {len(escalated_items)} escalated")
+
+    _append_ai_summary(promoted_items, rejected_items, escalated_items)
+    return 0
+
+
+def _append_ai_summary(promoted: list, rejected: list, escalated: list) -> None:
+    """Append AI results to the markdown summary the workflow pastes into PRs."""
+    lines = ["", "---", ""]
+    if promoted:
+        lines.append(f"### AI-promoted ({len(promoted)} item(s), added to actions.json)")
+        lines.append("")
+        lines.append("Claude classified these as healthcare fraud with high confidence:")
+        lines.append("")
+        for a in promoted:
+            lines.append(f"- **{a.get('title', '')[:120]}**")
+            lines.append(f"  _confidence {a.get('ai_confidence')} — {a.get('ai_reason', '')[:150]}_")
+        lines.append("")
+    if rejected:
+        lines.append(f"### AI-rejected ({len(rejected)} item(s), link blocked)")
+        lines.append("")
+        lines.append("Claude classified these as NOT healthcare fraud with high confidence:")
+        lines.append("")
+        for a in rejected:
+            lines.append(f"- {a.get('title', '')[:120]}")
+            lines.append(f"  _confidence {a.get('ai_confidence')} — {a.get('ai_reason', '')[:150]}_")
+        lines.append("")
+    if escalated:
+        lines.append(f"### AI-escalated ({len(escalated)} item(s), needs your call)")
+        lines.append("")
+        lines.append("Claude was unsure. Review and either promote or reject:")
+        lines.append("")
+        for a in escalated:
+            lines.append(f"- **{a.get('title', '')}**")
+            link = a.get("link", "")
+            if link:
+                lines.append(f"  [{link}]({link})")
+            lines.append(f"  _Claude: {a.get('ai_decision', '?')} @ confidence {a.get('ai_confidence')} — {a.get('ai_reason', '')[:200]}_")
+            lines.append(f"  `python audit_new_items.py promote {a['id']}`  or  `reject {a['id']}`")
+            lines.append("")
+
+    # Append to existing summary, or create a new one
+    existing = ""
+    if os.path.exists(SUMMARY_FILE):
+        with open(SUMMARY_FILE, encoding="utf-8") as f:
+            existing = f.read()
+    with open(SUMMARY_FILE, "w", encoding="utf-8") as f:
+        f.write(existing + "\n".join(lines))
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 def main() -> int:
@@ -328,7 +543,7 @@ def main() -> int:
         "cmd",
         nargs="?",
         default="audit",
-        choices=["audit", "list", "promote", "reject"],
+        choices=["audit", "list", "promote", "reject", "ai-review"],
     )
     parser.add_argument("item_id", nargs="?")
     args = parser.parse_args()
@@ -337,6 +552,8 @@ def main() -> int:
         return cmd_audit()
     if args.cmd == "list":
         return cmd_list()
+    if args.cmd == "ai-review":
+        return cmd_ai_review()
     if args.cmd in ("promote", "reject"):
         if not args.item_id:
             print(f"{args.cmd} requires an item ID", file=sys.stderr)

@@ -24,7 +24,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4 feedparser lxml playwright
+          pip install requests beautifulsoup4 feedparser lxml playwright anthropic
           playwright install --with-deps chromium
 
       - name: Run update script
@@ -32,6 +32,11 @@ jobs:
 
       - name: Audit new items (regex flag check)
         run: python audit_new_items.py
+
+      - name: AI review of flagged items (Claude Haiku)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python audit_new_items.py ai-review
 
       - name: Check for changes
         id: changes
