@@ -142,6 +142,19 @@ foreach ($feed in ($Feeds | Where-Object { $_.Enabled })) {
             $atype    = Get-ActionType $title $descClean
 
             $isMedia    = $feed.SourceType -eq 'news'
+
+            # Federal Enforcement tab rule: non-media items MUST link to a
+            # .gov source. Drop anything else, even if real — see project memory.
+            if (-not $isMedia -and $link) {
+                try {
+                    $host = ([Uri]$link).Host.ToLower() -replace '^www\.',''
+                    if (-not ($host.EndsWith('.gov') -or $host.EndsWith('.mil'))) {
+                        Write-Log "  skipping non-.gov link for enforcement candidate: $link" Yellow
+                        continue
+                    }
+                } catch { continue }
+            }
+
             $idPrefix   = $isMedia ? 'media' : ($feed.Agency.ToLower() -replace '\W','-')
             $linkLabel  = $isMedia ? "$($feed.Name) Report" : "$($feed.Name) Press Release"
             $actionType = $isMedia ? 'Investigative Report' : $atype

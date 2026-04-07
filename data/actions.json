@@ -131,14 +131,14 @@
       "date": "2026-03-30",
       "agency": "Treasury",
       "type": "Administrative Action",
-      "title": "Treasury Secretary Bessent Launches Whistleblower Reward Program for Medicare and Medicaid Fraud",
+      "title": "Treasury Accepting Whistleblower Tips on Fraud, Money Laundering, Sanctions Violations",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [
         "Scott Bessent"
       ],
-      "link": "https://townhall.com/tipsheet/amy-curtis/2026/03/30/scott-bessent-fraud-whistleblower-reward-n2673627",
-      "link_label": "Townhall Report",
+      "link": "https://home.treasury.gov/news/press-releases/sb0394",
+      "link_label": "Treasury Press Release",
       "social_posts": [],
       "tags": [
         "Medicaid",
@@ -512,7 +512,7 @@
         "Medicaid"
       ],
       "state": "MN",
-      "source_type": "official",
+      "source_type": "news",
       "auto_fetched": false,
       "entities": []
     },
@@ -1347,7 +1347,7 @@
       ],
       "entities": [],
       "state": null,
-      "source_type": "official",
+      "source_type": "news",
       "auto_fetched": false
     },
     {
@@ -1502,20 +1502,20 @@
       "date": "2026-02-05",
       "agency": "CMS",
       "type": "Administrative Action",
-      "title": "CMS Expands Enhanced Hospice Oversight to Georgia and Ohio",
+      "title": "CMS is Taking Action to Address Benefit Integrity Issues Related to Hospice Care",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [
         "Dr. Mehmet Oz"
       ],
-      "link": "https://www.mcknightshomecare.com/news/cms-expands-enhanced-oversight-to-hospice-providers-in-two-new-states/",
-      "link_label": "McKnight's Home Care Report",
+      "link": "https://www.cms.gov/blog/cms-taking-action-address-benefit-integrity-issues-related-hospice-care",
+      "link_label": "CMS Blog Post",
       "social_posts": [],
       "tags": [
         "Hospice"
       ],
       "state": "AZ, CA, GA, NV, OH, TX",
-      "source_type": "social_media",
+      "source_type": "official",
       "auto_fetched": false,
       "entities": []
     },
@@ -1651,22 +1651,22 @@
       "date": "2026-01-27",
       "agency": "CMS",
       "type": "Administrative Action",
-      "title": "Dr. Oz Calls on Governor Newsom to Produce Comprehensive CA Anti-Fraud Action Plan",
+      "title": "CMS Letter to California Re: CAA Enforcement and Dispute Resolution",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [
         "Dr. Mehmet Oz",
         "Gov. Gavin Newsom"
       ],
-      "link": "https://homehealthcarenews.com/2026/01/dr-oz-demands-action-to-root-out-in-home-care-fraud-in-california/",
-      "link_label": "Home Health Care News",
+      "link": "https://www.cms.gov/files/document/cms-letter-ca-caa-enforcement-and-dispute-resolution.pdf",
+      "link_label": "CMS Letter (PDF)",
       "social_posts": [],
       "tags": [
         "Home Health",
         "Hospice"
       ],
       "state": "CA",
-      "source_type": "social_media",
+      "source_type": "official",
       "auto_fetched": false,
       "entities": []
     },
@@ -2019,7 +2019,7 @@
         "Medicaid"
       ],
       "state": "MN",
-      "source_type": "social_media",
+      "source_type": "news",
       "auto_fetched": false,
       "entities": []
     },
@@ -2113,7 +2113,7 @@
         "Medicaid"
       ],
       "state": "MN",
-      "source_type": "official",
+      "source_type": "news",
       "auto_fetched": false,
       "entities": []
     },
@@ -2135,7 +2135,7 @@
         "Medicaid"
       ],
       "state": "MN",
-      "source_type": "official",
+      "source_type": "news",
       "auto_fetched": false,
       "entities": []
     },
@@ -2573,27 +2573,6 @@
       "entities": []
     },
     {
-      "id": "doj-2025-11-alex-alexsanian-ca-radiology-plea",
-      "date": "2025-11-05",
-      "agency": "DOJ",
-      "type": "Criminal Enforcement",
-      "title": "Co-Conspirator Pleads Guilty in $54M California Radiology and Hospice Medicare Fraud",
-      "amount": "$54M",
-      "amount_numeric": 54000000,
-      "officials": [],
-      "link": "https://radiologybusiness.com/topics/healthcare-management/legal-news/california-man-pleads-guilty-54m-radiology-and-hospice-care-fraud-scheme",
-      "link_label": "News Report (DOJ CDCA)",
-      "social_posts": [],
-      "tags": [
-        "Hospice",
-        "Medicare"
-      ],
-      "state": "CA",
-      "source_type": "news",
-      "auto_fetched": false,
-      "entities": []
-    },
-    {
       "id": "doj-2025-11-florida-aca-enrollment",
       "date": "2025-11-01",
       "agency": "DOJ",
@@ -2718,12 +2697,12 @@
       "date": "2025-09-16",
       "agency": "DOJ",
       "type": "Civil Action",
-      "title": "KFF Health News: Exactech Pays $8M to Settle FCA Allegations Over Defective Knee Implants Sold to Medicare/VA",
+      "title": "Medical Device Company Exactech, Inc. Agrees to Pay $8 Million for Selling Allegedly Defective Knee Replacement Devices",
       "amount": "$8M",
       "amount_numeric": 8000000.0,
       "officials": [],
-      "link": "https://kffhealthnews.org/news/article/exactech-knee-replacement-lawsuits-8-million-dollars-settlement/",
-      "link_label": "KFF Health News",
+      "link": "https://www.justice.gov/usao-ndal/pr/medical-device-company-exactech-inc-agrees-pay-8-million-selling-allegedly-defective",
+      "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
         "Medicaid",
@@ -2731,7 +2710,7 @@
         "Medicare"
       ],
       "state": "FL",
-      "source_type": "news",
+      "source_type": "official",
       "auto_fetched": false,
       "entities": [],
       "related_agencies": []
@@ -2930,29 +2909,6 @@
       ]
     },
     {
-      "id": "doj-2025-08-19-cvs-caremark-290m-medicare-partd",
-      "date": "2025-08-19",
-      "agency": "DOJ",
-      "type": "Civil Action",
-      "title": "CVS Caremark Ordered to Pay $290M for Defrauding Medicare Part D Program",
-      "amount": "$290M",
-      "amount_numeric": 290000000.0,
-      "officials": [],
-      "link": "https://www.complianceweek.com/regulatory-enforcement/judge-orders-cvs-to-pay-nearly-290m-for-medicare-false-claims/36172.article",
-      "link_label": "Compliance Week",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Pharmacy"
-      ],
-      "entities": [
-        "CVS Caremark"
-      ],
-      "state": "PA",
-      "source_type": "official",
-      "auto_fetched": false
-    },
-    {
       "id": "doj-2025-07-baker-louisiana-np-12m-genetic-testing",
       "date": "2025-07-24",
       "agency": "DOJ",
@@ -3006,12 +2962,12 @@
       "date": "2025-07-08",
       "agency": "DOJ",
       "type": "Civil Action",
-      "title": "CVS Omnicare Ordered to Pay $949M for Dispensing Drugs Without Valid Prescriptions",
+      "title": "Statement of U.S. Attorney Jay Clayton on the Verdict in U.S. v. Omnicare and CVS Health Corporation",
       "amount": "$949M",
       "amount_numeric": 949000000.0,
       "officials": [],
-      "link": "https://www.healthcaredive.com/news/cvs-omnicare-949-million-government-fraud-penalty/752544/",
-      "link_label": "Healthcare Dive",
+      "link": "https://www.justice.gov/usao-sdny/pr/statement-us-attorney-jay-clayton-verdict-us-v-omnicare-and-cvs-health-corporation",
+      "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
         "Medicaid",
@@ -3805,12 +3761,12 @@
       "date": "2025-03-12",
       "agency": "DOJ",
       "type": "Criminal Enforcement",
-      "title": "Florida Research Facility Owners Plead Guilty in Asthma Clinical Trial Fraud",
+      "title": "Medical Clinic Owners and Clinical Investigator Plead Guilty in Connection with Fraudulent Clinical Drug Trials",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
-      "link": "https://cglawfirm.com/2025/03/12/florida-research-facility-owners-plead-in-clinical-trial-fraud-case/",
-      "link_label": "News Report",
+      "link": "https://www.justice.gov/opa/pr/medical-clinic-owners-and-clinical-investigator-plead-guilty-connection-fraudulent-clinical",
+      "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [],
       "entities": [],

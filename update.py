@@ -9,6 +9,7 @@ import re
 import sys
 import time
 from datetime import datetime
+from urllib.parse import urlparse
 
 import feedparser
 import requests
@@ -889,6 +890,18 @@ def main():
                     continue
                 if date_str < last_scraped_date:
                     continue
+
+                # Federal Enforcement tab rule: items classified as Criminal
+                # Enforcement or Civil Action MUST link to a .gov source.
+                # Anything else (news/blog/law-firm site) gets dropped — even
+                # if the underlying event is real, it doesn't belong on the
+                # enforcement tab without an official source.
+                if not is_media and link:
+                    host = urlparse(link).netloc.lower().replace('www.', '')
+                    is_gov_link = host.endswith('.gov') or host.endswith('.mil')
+                    if not is_gov_link:
+                        log(f"  skipping non-.gov link for enforcement candidate: {link}")
+                        continue
 
                 # Use full detail text if available (from scrapers that fetch detail pages)
                 full_text = item.get('_full_text', '')

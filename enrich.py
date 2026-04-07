@@ -49,6 +49,11 @@ def enrich_actions(data_path="data/actions.json"):
 
 2. If relevant, classify and extract metadata.
 
+## Hard rules
+
+- Do NOT output a `title` field. The dashboard preserves the original press-release headline verbatim and never lets the model rewrite it.
+- Do NOT output a `description` field. Descriptions are not stored on the dashboard.
+
 ## Output format
 
 Return ONLY valid JSON, no markdown fencing, no explanation:
@@ -123,9 +128,13 @@ Do NOT output a description field — descriptions are not stored on the dashboa
                     print(f"  REMOVED (irrelevant): {action['id']}")
                     break
 
-                # Apply enrichment. Description is intentionally never written.
-                # Strip any stale description that may exist on the action.
+                # Apply enrichment. The model is NOT allowed to rewrite the
+                # title — it must match the source press release verbatim. We
+                # also never write a description (see project memory).
                 action.pop("description", None)
+                # Defensive: if the model returned a title in violation of the
+                # prompt, ignore it.
+                result.pop("title", None)
                 action["type"] = result.get("type", action.get("type", "Administrative Action"))
                 action["tags"] = filter_tags(result.get("tags", []))
                 action["entities"] = result.get("entities", [])

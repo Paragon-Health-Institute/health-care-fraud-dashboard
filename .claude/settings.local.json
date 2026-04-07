@@ -12,7 +12,8 @@
       "Bash(gh api:*)",
       "Bash(gh repo:*)",
       "Bash(cp -r C:/Users/khall/HealthcareFraudDashboard C:/Users/khall/HealthcareFraudDashboard-v2)",
-      "Read(//c/Users/khall/**)"
+      "Read(//c/Users/khall/**)",
+      "Bash(python -c \":*)"
     ]
   }
 }
