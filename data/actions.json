@@ -59,9 +59,7 @@
       "title": "CMS Proposes Hospice Transparency Scoring System to Combat Fraud and Protect Beneficiaries",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "Dr. Mehmet Oz"
-      ],
+      "officials": [],
       "link": "https://www.cms.gov/newsroom/press-releases/cms-proposes-new-transparency-measures-strengthen-oversight-hospice-providers",
       "link_label": "CMS Press Release",
       "social_posts": [],
@@ -83,9 +81,7 @@
       "title": "8 Arrested in Health Care Fraud Takedown, Including Owners of Hospices that Billed Taxpayers Millions of Dollars to Serve the ‘Dying’",
       "amount": "$50M+",
       "amount_numeric": 50000000.0,
-      "officials": [
-        "Bill Essayli (U.S. Attorney, C.D. Cal.)"
-      ],
+      "officials": [],
       "link": "https://www.justice.gov/usao-cdca/pr/8-arrested-health-care-fraud-takedown-including-owners-hospices-billed-taxpayers",
       "link_label": "DOJ Press Release",
       "social_posts": [],
@@ -109,9 +105,7 @@
       "title": "FinCEN Issues Advisory Urging Financial Institutions to Flag Health Care Fraud Schemes",
       "amount": "",
       "amount_numeric": 0,
-      "officials": [
-        "Scott Bessent"
-      ],
+      "officials": [],
       "link": "https://home.treasury.gov/news/press-releases/sb0426",
       "link_label": "Treasury Press Release",
       "tags": [
@@ -121,10 +115,7 @@
       "state": "",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "FinCEN",
-        "U.S. Treasury"
-      ]
+      "entities": []
     },
     {
       "id": "treasury-2026-03-30-whistleblower-reward",
@@ -134,9 +125,7 @@
       "title": "Treasury Accepting Whistleblower Tips on Fraud, Money Laundering, Sanctions Violations",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "Scott Bessent"
-      ],
+      "officials": [],
       "link": "https://home.treasury.gov/news/press-releases/sb0394",
       "link_label": "Treasury Press Release",
       "social_posts": [],
@@ -147,10 +136,7 @@
       "state": "",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "U.S. Treasury",
-        "FinCEN"
-      ]
+      "entities": []
     },
     {
       "id": "hhs-oig-2026-03-27-2576072021",
@@ -233,8 +219,8 @@
       "agency": "HHS-OIG",
       "type": "Audit",
       "title": "Medicare Home Health Agency Provider Compliance Audit: VNS Health",
-      "amount": "$2.97M",
-      "amount_numeric": 16000000000.0,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/medicare-home-health-agency-provider-compliance-audit-vns-health/",
       "link_label": "HHS-OIG Press Release",
@@ -282,10 +268,7 @@
       "title": "Task Force to Eliminate Fraud and CMS Suspend 70 Los Angeles Hospice and Home Health Providers",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "JD Vance",
-        "Dr. Mehmet Oz"
-      ],
+      "officials": [],
       "link": "https://www.foxnews.com/politics/jd-vances-anti-fraud-task-force-ramps-up-identifying-fraud-across-us-after-suspending-70-providers-la",
       "link_label": "Fox News",
       "social_posts": [],
@@ -354,8 +337,8 @@
       "agency": "Congress",
       "type": "Investigation",
       "title": "House Oversight Committee Launches Investigation into California Hospice Fraud, Sends Letter to Gov. Newsom",
-      "amount": "~$3.5B",
-      "amount_numeric": 3500000000.0,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://oversight.house.gov/release/oversight-committee-launches-investigation-into-rampant-taxpayer-fraud-in-california-hospice-programs/",
       "link_label": "House Oversight Press Release",
@@ -502,9 +485,7 @@
       "title": "CMS Approves Minnesota’s Revised Medicaid Corrective Action Plan",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "Dr. Mehmet Oz"
-      ],
+      "officials": [],
       "link": "https://kstp.com/kstp-news/top-news/feds-accept-minnesotas-corrective-action-plan-for-medicaid-based-programs/",
       "link_label": "KSTP News Report",
       "social_posts": [],
@@ -618,8 +599,8 @@
       "agency": "HHS-OIG",
       "type": "Report",
       "title": "HHS-OIG: Medicaid Fraud Control Units Annual Report FY2025 — $2 Billion in Combined Recoveries",
-      "amount": "$2B",
-      "amount_numeric": 2000000000.0,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/medicaid-fraud-control-units-annual-report-fiscal-year-2025/",
       "link_label": "HHS-OIG Report",
@@ -640,9 +621,7 @@
       "title": "House E&C Hearing: Protecting Patients and Safeguarding Taxpayer Dollars — The Role of CMS in Combatting Medicare and Medicaid Fraud",
       "amount": null,
       "amount_numeric": 0,
-      "officials": [
-        "Kimberly Brandt"
-      ],
+      "officials": [],
       "link": "https://energycommerce.house.gov/events/o-and-i-subcommittee-protecting-patients-and-safeguarding-taxpayer-dollars-the-role-of-cms-in-combatting-medicare-and-medicaid-fraud",
       "link_label": "House E&C",
       "social_posts": [],
@@ -663,9 +642,7 @@
       "title": "Dr. Oz Sends Fraud Inquiry to Florida Governor DeSantis, Calling State a Hotspot for Health Care Fraud",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "Dr. Mehmet Oz"
-      ],
+      "officials": [],
       "link": "https://www.clickorlando.com/news/politics/2026/03/17/trump-administration-widens-medicaid-fraud-crackdown-to-florida-calling-it-a-hotspot/",
       "link_label": "AP/Click Orlando",
       "social_posts": [],
@@ -688,10 +665,7 @@
       "title": "President Trump Establishes Task Force to Eliminate Fraud via Executive Order",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "JD Vance",
-        "President Trump"
-      ],
+      "officials": [],
       "link": "https://www.whitehouse.gov/fact-sheets/2026/03/fact-sheet-president-donald-j-trump-establishes-the-task-force-to-eliminate-fraud/",
       "link_label": "White House Fact Sheet",
       "social_posts": [],
@@ -721,9 +695,7 @@
         "Medicare",
         "Pharmacy"
       ],
-      "entities": [
-        "Safe Chain Solutions"
-      ],
+      "entities": [],
       "state": "FL, MD",
       "source_type": "official",
       "auto_fetched": false,
@@ -773,9 +745,7 @@
       "state": "PA",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "Aetna"
-      ],
+      "entities": [],
       "related_agencies": [
         "HHS-OIG"
       ]
@@ -941,9 +911,7 @@
       ],
       "date": "2026-03-06",
       "amount_numeric": 1000000,
-      "entities": [
-        "AmerisourceBergen"
-      ],
+      "entities": [],
       "related_agencies": [
         "HHS-OIG"
       ]
@@ -1078,11 +1046,7 @@
       "title": "House Oversight Hearing: Minnesota Fraud Part II — Governor Walz and AG Ellison Testify",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "Gov. Tim Walz",
-        "AG Keith Ellison",
-        "JD Vance"
-      ],
+      "officials": [],
       "link": "https://oversight.house.gov/release/hearing-wrap-up-minnesota-governor-walz-and-attorney-general-ellison-lied-about-knowledge-of-fraud-and-silenced-whistleblowers/",
       "link_label": "House Oversight Press Release",
       "social_posts": [],
@@ -1102,10 +1066,7 @@
       "title": "Dr. Oz Launches Medicaid Fraud Investigation of New York; Sends 50-Question Letter to Gov. Hochul",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "Dr. Mehmet Oz",
-        "Gov. Kathy Hochul"
-      ],
+      "officials": [],
       "link": "https://www.washingtontimes.com/news/2026/mar/3/dr-mehmet-oz-launches-investigation-new-yorks-medicaid-program/",
       "link_label": "Washington Times Report",
       "social_posts": [],
@@ -1128,10 +1089,7 @@
       "title": "Gastroenterology Practice Agrees to Pay $4.75M to Settle Allegations of Kickbacks and Unnecessary Medical Testing Services",
       "amount": "$4.75M",
       "amount_numeric": 4750000,
-      "officials": [
-        "Brett A. Shumate (AAG, Civil Division)",
-        "Jonathan D. Ross (U.S. Attorney, E.D. Ark.)"
-      ],
+      "officials": [],
       "link": "https://www.justice.gov/opa/pr/gastroenterology-practice-agrees-pay-475m-settle-allegations-kickbacks-and-unnecessary",
       "link_label": "DOJ Press Release",
       "social_posts": [],
@@ -1154,9 +1112,7 @@
       "title": "CMS Publishes CRUSH RFI in Federal Register; Seeks Public Input on Sweeping Anti-Fraud Regulation",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "Dr. Mehmet Oz"
-      ],
+      "officials": [],
       "link": "https://www.federalregister.gov/documents/2026/02/27/2026-03968/request-for-information-rfi-related-to-comprehensive-regulations-to-uncover-suspicious-healthcare",
       "link_label": "Federal Register",
       "social_posts": [],
@@ -1175,13 +1131,9 @@
       "agency": "CMS",
       "type": "Administrative Action",
       "title": "CMS/HHS Announce Major Anti-Fraud Package: $259.5M MN Deferral, DMEPOS Moratorium, CRUSH Initiative",
-      "amount": "$259.5M",
-      "amount_numeric": 259500000,
-      "officials": [
-        "JD Vance",
-        "Robert F. Kennedy Jr.",
-        "Dr. Mehmet Oz"
-      ],
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
       "link": "https://www.cms.gov/newsroom/press-releases/trump-administration-prioritizes-affordability-announcing-major-crackdown-health-care-fraud",
       "link_label": "CMS Press Release",
       "social_posts": [],
@@ -1206,9 +1158,7 @@
       "title": "Texas Doctor Sentenced to 8.5 Years in Prison for $145 Million Health Care Fraud Scheme",
       "amount": "$145M+",
       "amount_numeric": 145000000,
-      "officials": [
-        "A. Tysen Duva (AAG, Criminal Division)"
-      ],
+      "officials": [],
       "link": "https://www.justice.gov/opa/pr/texas-doctor-sentenced-85-years-prison-145-million-health-care-fraud-scheme",
       "link_label": "DOJ Press Release",
       "social_posts": [],
@@ -1228,10 +1178,7 @@
       "title": "Arizona Surgical Hospital Agrees to Pay $5.6M to Resolve Alleged False Claims Act Violations",
       "amount": "$5.6M",
       "amount_numeric": 5600000,
-      "officials": [
-        "Brett A. Shumate (AAG, Civil Division)",
-        "Scott J. Lampert (HHS-OIG Acting Deputy IG)"
-      ],
+      "officials": [],
       "link": "https://www.justice.gov/opa/pr/arizona-surgical-hospital-agrees-pay-56m-resolve-alleged-false-claims-act-violations",
       "link_label": "DOJ Press Release",
       "social_posts": [],
@@ -1279,12 +1226,7 @@
       "title": "President of Insurance Brokerage Firm and CEO of Marketing Company Sentenced in $233M Affordable Care Act Enrollment Fraud Scheme that Preyed on Vulnerable Consumers",
       "amount": "$233M+",
       "amount_numeric": 233000000,
-      "officials": [
-        "Pam Bondi",
-        "Kash Patel (FBI Director)",
-        "A. Tysen Duva (AAG, Criminal Division)",
-        "T. March Bell (HHS-OIG Inspector General)"
-      ],
+      "officials": [],
       "link": "https://www.justice.gov/opa/pr/president-insurance-brokerage-firm-and-ceo-marketing-company-sentenced-233m-affordable-care",
       "link_label": "DOJ Press Release",
       "social_posts": [],
@@ -1307,12 +1249,7 @@
       "title": "Zynex, Inc. Agrees to Criminal Resolution Addressing Claims of Millions of Dollars of Health Care Fraud, Securities Fraud and Related Offenses",
       "amount": "$873M+",
       "amount_numeric": 873000000,
-      "officials": [
-        "Charles C. Calenda (U.S. Attorney, D.R.I.)",
-        "Sara Miron Bloom (First AUSA)",
-        "Peter I. Roklan (AUSA)",
-        "Milind Shah (AUSA)"
-      ],
+      "officials": [],
       "link": "https://www.justice.gov/usao-ri/pr/zynex-inc-agrees-criminal-resolution-addressing-claims-millions-dollars-health-care",
       "link_label": "DOJ Press Release",
       "social_posts": [],
@@ -1323,9 +1260,7 @@
       "state": "CO, RI",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "Zynex"
-      ],
+      "entities": [],
       "related_agencies": [
         "HHS-OIG"
       ]
@@ -1380,8 +1315,8 @@
       "agency": "Congress",
       "type": "Investigation",
       "title": "House Oversight Committee Investigates New York CDPAP Medicaid Fraud — $1.2B+ Lost to Scammers",
-      "amount": "$1.2B+",
-      "amount_numeric": 1200000000,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://oversight.house.gov/release/comer-takes-new-action-in-investigation-of-fraud-in-new-yorks-medicaid-programs/",
       "link_label": "House Oversight Release",
@@ -1453,16 +1388,7 @@
       "tags": [
         "ACA"
       ],
-      "entities": [
-        "Blue Shield of California",
-        "Centene",
-        "CVS Health",
-        "Elevance Health",
-        "GuideWell",
-        "HCSC",
-        "Kaiser Permanente",
-        "Oscar Health"
-      ],
+      "entities": [],
       "state": null,
       "source_type": "official",
       "auto_fetched": false
@@ -1475,11 +1401,7 @@
       "title": "Two Queens Men Charged with $120M Adult Day Care and Pharmacy Fraud on Medicare and Medicaid",
       "amount": "$120M",
       "amount_numeric": 120000000,
-      "officials": [
-        "A. Tysen Duva (AAG, Criminal Division)",
-        "Joseph Nocella Jr. (U.S. Attorney, EDNY)",
-        "Scott J. Lampert (HHS-OIG Acting Deputy IG)"
-      ],
+      "officials": [],
       "link": "https://www.justice.gov/opa/pr/two-queens-men-charged-120m-adult-day-care-and-pharmacy-fraud-medicare-and-medicaid",
       "link_label": "DOJ Press Release",
       "social_posts": [],
@@ -1505,9 +1427,7 @@
       "title": "CMS is Taking Action to Address Benefit Integrity Issues Related to Hospice Care",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "Dr. Mehmet Oz"
-      ],
+      "officials": [],
       "link": "https://www.cms.gov/blog/cms-taking-action-address-benefit-integrity-issues-related-hospice-care",
       "link_label": "CMS Blog Post",
       "social_posts": [],
@@ -1527,9 +1447,7 @@
       "title": "Senate Judiciary Subcommittee Hearing: Somali Scammers — Fighting Fraud in Minnesota and Beyond",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "Ted Cruz"
-      ],
+      "officials": [],
       "link": "https://www.judiciary.senate.gov/committee-activity/hearings/somali-scammers-fighting-fraud-in-minnesota-and-beyond-02-04-2026",
       "link_label": "Senate Judiciary Committee",
       "social_posts": [],
@@ -1630,11 +1548,9 @@
       "agency": "CMS",
       "type": "Rule/Regulation",
       "title": "CMS Issues Final Rule Closing Medicaid Provider Tax Loophole; $78.2B Decade Savings",
-      "amount": "$78.2B savings",
-      "amount_numeric": 78200000000.0,
-      "officials": [
-        "Dr. Mehmet Oz"
-      ],
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
       "link": "https://www.cms.gov/newsroom/press-releases/cms-shuts-down-massive-medicaid-tax-loophole-saving-billions-federal-taxpayers-restoring-federal",
       "link_label": "CMS Press Release",
       "social_posts": [],
@@ -1654,10 +1570,7 @@
       "title": "CMS Letter to California Re: CAA Enforcement and Dispute Resolution",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "Dr. Mehmet Oz",
-        "Gov. Gavin Newsom"
-      ],
+      "officials": [],
       "link": "https://www.cms.gov/files/document/cms-letter-ca-caa-enforcement-and-dispute-resolution.pdf",
       "link_label": "CMS Letter (PDF)",
       "social_posts": [],
@@ -1721,11 +1634,9 @@
       "agency": "HHS-OIG",
       "type": "Audit",
       "title": "HHS-OIG Maine Audit: $45.6M Improper Medicaid Payments for Autism Services",
-      "amount": "$45.6M+",
-      "amount_numeric": 45600000.0,
-      "officials": [
-        "Jim O'Neill (HHS Deputy Secretary)"
-      ],
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
       "link": "https://oig.hhs.gov/newsroom/news-releases-articles/hhs-oig-audit-finds-maine-made-at-least-456-million-in-improper-medicaid-payments-for-autism-services/",
       "link_label": "HHS-OIG News Release",
       "social_posts": [],
@@ -1758,12 +1669,7 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "UnitedHealth",
-        "CVS Health",
-        "Elevance",
-        "Cigna"
-      ]
+      "entities": []
     },
     {
       "id": "hhs-oig-2026-01-fall-semiannual-report",
@@ -1771,8 +1677,8 @@
       "agency": "HHS-OIG",
       "type": "Report",
       "title": "HHS-OIG Fall 2025 Semiannual Report: $19.04B in Monetary Impact (Apr—Sep 2025)",
-      "amount": "$19B",
-      "amount_numeric": 19000000000.0,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/fall-2025-semiannual-report-to-congress/",
       "link_label": "HHS-OIG Semiannual Report",
@@ -1812,8 +1718,8 @@
       "agency": "DOJ",
       "type": "Report",
       "title": "DOJ Announces Record $6.8B in False Claims Act Recoveries in FY2025; Health Care Accounts for $5.7B",
-      "amount": "$6.8B",
-      "amount_numeric": 6800000000.0,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.justice.gov/opa/pr/false-claims-act-settlements-and-judgments-exceed-68b-fiscal-year-2025",
       "link_label": "DOJ Press Release",
@@ -1836,9 +1742,7 @@
       "title": "Two Individuals Plead Guilty to $68 Million Fraud Scheme at Brooklyn-Based Adult Day Cares and Home Health Care Company",
       "amount": "$68M",
       "amount_numeric": 68000000,
-      "officials": [
-        "Dr. Mehmet Oz"
-      ],
+      "officials": [],
       "link": "https://www.justice.gov/usao-edny/pr/two-individuals-plead-guilty-68-million-fraud-scheme-brooklyn-based-adult-day-cares",
       "link_label": "DOJ Press Release",
       "social_posts": [],
@@ -1860,8 +1764,8 @@
       "agency": "CMS",
       "type": "Report",
       "title": "CMS FY2025 Improper Payments Fact Sheet: $28.8B Medicare FFS, $23.7B Medicare Advantage",
-      "amount": "$56.5B",
-      "amount_numeric": 56500000000,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.cms.gov/newsroom/fact-sheets/fiscal-year-2025-improper-payments-fact-sheet",
       "link_label": "CMS Fact Sheet",
@@ -1884,10 +1788,7 @@
       "title": "Five Ophthalmology Practices Agree to Pay Nearly $6M to Resolve Allegations of Fraudulent Claims to Medicare and Medicaid for Cranial Ultrasounds",
       "amount": "$6M",
       "amount_numeric": 6000000,
-      "officials": [
-        "Brett A. Shumate (AAG, Civil Division)",
-        "Gregory W. Kehoe (U.S. Attorney, M.D. Fla.)"
-      ],
+      "officials": [],
       "link": "https://www.justice.gov/opa/pr/five-ophthalmology-practices-agree-pay-nearly-6m-resolve-allegations-fraudulent-claims",
       "link_label": "DOJ Press Release",
       "social_posts": [],
@@ -1909,11 +1810,9 @@
       "agency": "CMS",
       "type": "Administrative Action",
       "title": "CMS Withholds $300M from California Over Unlawful Health Care Spending on Illegal Immigrants",
-      "amount": "$300M",
-      "amount_numeric": 300000000.0,
-      "officials": [
-        "Dr. Mehmet Oz"
-      ],
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
       "link": "https://www.cms.gov/newsroom/press-releases/cms-increasing-oversight-states-illegally-using-federal-medicaid-funding-health-care-illegal",
       "link_label": "CMS Press Release",
       "social_posts": [],
@@ -1933,11 +1832,7 @@
       "title": "Kaiser Permanente Affiliates Pay $556M to Resolve False Claims Act Allegations",
       "amount": "$556M",
       "amount_numeric": 556000000,
-      "officials": [
-        "Brett A. Shumate (AAG, Civil Division)",
-        "Craig H. Missakian (U.S. Attorney)",
-        "Scott J. Lampert (HHS-OIG Acting Deputy IG)"
-      ],
+      "officials": [],
       "link": "https://www.justice.gov/opa/pr/kaiser-permanente-affiliates-pay-556m-resolve-false-claims-act-allegations",
       "link_label": "DOJ Press Release",
       "social_posts": [],
@@ -1948,9 +1843,7 @@
       "state": "CA, CO",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "Kaiser Permanente"
-      ],
+      "entities": [],
       "related_agencies": [
         "HHS-OIG"
       ]
@@ -1982,8 +1875,8 @@
       "agency": "Congress",
       "type": "Report",
       "title": "Senate Report: UnitedHealth 'Aggressively' Gaming Medicare Advantage, Turning Risk Adjustment Into Profit Engine",
-      "amount": "~$84B/year",
-      "amount_numeric": 84000000000.0,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.grassley.senate.gov/news/news-releases/grassley-report-details-unitedhealths-record-of-appearing-to-game-the-medicare-advantage-system-turning-risk-adjustment-into-its-own-business",
       "link_label": "Senate Report",
@@ -1996,9 +1889,7 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "UnitedHealth"
-      ]
+      "entities": []
     },
     {
       "id": "cms-hhs-2026-01-minnesota-mission",
@@ -2008,10 +1899,7 @@
       "title": "Dr. Oz and Deputy Secretary O'Neill Fact-Finding Mission to Minnesota",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "Dr. Mehmet Oz",
-        "Jim O'Neill (HHS Deputy Secretary)"
-      ],
+      "officials": [],
       "link": "https://kstp.com/kstp-news/top-news/dr-oz-on-medicaid-fraud-fact-finding-mission-in-minnesota-2b-could-be-at-stake/",
       "link_label": "KSTP News Report",
       "social_posts": [],
@@ -2031,12 +1919,7 @@
       "title": "White House Establishes New DOJ National Fraud Enforcement Division",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "JD Vance",
-        "Pam Bondi",
-        "Colin McDonald",
-        "President Trump"
-      ],
+      "officials": [],
       "link": "https://www.whitehouse.gov/fact-sheets/2026/01/fact-sheet-president-donald-j-trump-establishes-new-department-of-justice-division-for-national-fraud-enforcement/",
       "link_label": "White House Fact Sheet",
       "social_posts": [],
@@ -2103,9 +1986,7 @@
       "title": "CMS Directs Minnesota to Submit Medicaid Corrective Action Plan by Year-End",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "Dr. Mehmet Oz"
-      ],
+      "officials": [],
       "link": "https://www.fox9.com/news/dr-oz-gov-walz-address-systemic-fraud-mn-medicaid-system",
       "link_label": "FOX 9 News Report",
       "social_posts": [],
@@ -2123,11 +2004,9 @@
       "agency": "CMS",
       "type": "Administrative Action",
       "title": "CMS Escalates Oversight of Minnesota Medicaid Over Fraud, Waste, and Abuse Concerns",
-      "amount": "$3.75B",
-      "amount_numeric": 3750000000.0,
-      "officials": [
-        "Dr. Mehmet Oz"
-      ],
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
       "link": "https://www.fox9.com/news/fraud-minnesota-trump-admin-audit-mn-medicaid-receipts-defer-payment-14-programs",
       "link_label": "FOX 9 News Report",
       "social_posts": [],
@@ -2145,8 +2024,8 @@
       "agency": "HHS-OIG",
       "type": "Audit",
       "title": "HHS-OIG Finds Medicaid Agencies Made Millions in Unallowable Payments for Deceased Enrollees",
-      "amount": "$207.5M",
-      "amount_numeric": 207500000,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/medicaid-agencies-made-millions-in-unallowable-capitation-payments-to-managed-care-organizations-on-behalf-of-deceased-enrollees/",
       "link_label": "HHS-OIG Report",
@@ -2185,8 +2064,8 @@
       "agency": "Congress",
       "type": "Investigation",
       "title": "House Oversight Committee Launches Investigation into Massive Fraud in Minnesota’s Social Services Programs",
-      "amount": "$14M",
-      "amount_numeric": 14000000.0,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://oversight.house.gov/release/chairman-comer-launches-investigation-into-massive-fraud-in-minnesotas-social-services-system-on-governor-walzs-watch/",
       "link_label": "House Oversight",
@@ -2221,9 +2100,7 @@
       "state": "AZ",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "DMERx"
-      ],
+      "entities": [],
       "related_agencies": [
         "HHS-OIG"
       ]
@@ -2234,8 +2111,8 @@
       "agency": "HHS-OIG",
       "type": "Audit",
       "title": "HHS-OIG Finds Illinois Made at Least $9.5M in Unallowable Medicaid Payments for Incarcerated Enrollees",
-      "amount": "$9.5M+",
-      "amount_numeric": 9500000,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/illinois-made-unallowable-managed-care-capitation-payments-on-behalf-of-incarcerated-medicaid-enrollees/",
       "link_label": "HHS-OIG Report",
@@ -2254,8 +2131,8 @@
       "agency": "HHS-OIG",
       "type": "Audit",
       "title": "HHS-OIG Audit Finds Mississippi Failed to Report Millions in Medicaid Overpayments",
-      "amount": "$4.5M",
-      "amount_numeric": 4500000,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/mississippi-did-not-report-and-return-all-medicaid-overpayments-for-the-states-medicaid-fraud-control-unit-cases/",
       "link_label": "HHS-OIG Report",
@@ -2276,11 +2153,7 @@
       "title": "Dana-Farber Cancer Institute Agrees to Pay $15M to Settle Fraud Allegations Related to Scientific Research Grants",
       "amount": "$15M",
       "amount_numeric": 15000000,
-      "officials": [
-        "Brett A. Shumate (AAG, Civil Division)",
-        "Leah B. Foley (U.S. Attorney, D. Mass.)",
-        "Christian J. Schrank (HHS-OIG Deputy IG)"
-      ],
+      "officials": [],
       "link": "https://www.justice.gov/opa/pr/dana-farber-cancer-institute-agrees-pay-15m-settle-fraud-allegations-related-scientific",
       "link_label": "DOJ Press Release",
       "social_posts": [],
@@ -2288,9 +2161,7 @@
       "state": "MA",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "Dana-Farber Cancer Institute"
-      ],
+      "entities": [],
       "related_agencies": [
         "HHS-OIG"
       ]
@@ -2301,8 +2172,8 @@
       "agency": "HHS-OIG",
       "type": "Audit",
       "title": "HHS-OIG Audit of Humana Louisiana Finds Medicare Advantage Overpayments",
-      "amount": "$10.5M+",
-      "amount_numeric": 10500000.0,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/medicare-advantage-compliance-audit-of-specific-diagnosis-codes-humana-health-benefit-of-louisiana-contract-h1951-submitted-to-cms/",
       "link_label": "HHS-OIG Report",
@@ -2314,9 +2185,7 @@
       "state": "LA",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "Humana"
-      ]
+      "entities": []
     },
     {
       "id": "congress-2025-12-15-house-judiciary-insurer-probe",
@@ -2366,11 +2235,7 @@
       "title": "Virginia Laboratory to Pay $758,000 to Settle Allegations of Kickbacks to Doctors and Marketers",
       "amount": "$758,000+",
       "amount_numeric": 758000,
-      "officials": [
-        "Brett A. Shumate (AAG, Civil Division)",
-        "Eric Grant (U.S. Attorney)",
-        "Christian J. Schrank (HHS-OIG Deputy IG)"
-      ],
+      "officials": [],
       "link": "https://www.justice.gov/opa/pr/virginia-laboratory-pay-758000-settle-allegations-kickbacks-doctors-and-marketers",
       "link_label": "DOJ Press Release",
       "social_posts": [],
@@ -2393,8 +2258,8 @@
       "agency": "GAO",
       "type": "Report",
       "title": "GAO Finds ACA Subsidy Fraud Risks Persist After Testing Fictitious Applicants",
-      "amount": "$21B+",
-      "amount_numeric": 21000000000.0,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.gao.gov/products/gao-26-108742",
       "link_label": "GAO Report",
@@ -2474,9 +2339,7 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "Vohra Wound Physicians"
-      ],
+      "entities": [],
       "related_agencies": [
         "HHS-OIG"
       ]
@@ -2560,8 +2423,8 @@
       "agency": "HHS-OIG",
       "type": "Audit",
       "title": "HHS-OIG: CMS Put $11.2 Billion at Risk of Fraud, Waste, and Abuse by Failing to Properly Close Contracts",
-      "amount": "$11.2B",
-      "amount_numeric": 11200000000,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/cms-put-112-billion-at-risk-of-fraud-waste-and-abuse-by-not-properly-closing-contracts/",
       "link_label": "HHS-OIG Report",
@@ -2601,11 +2464,9 @@
       "agency": "CMS",
       "type": "Rule/Regulation",
       "title": "CMS Restructures Skin Substitute Payments to Curb Abusive Pricing Practices",
-      "amount": "$19.6B",
-      "amount_numeric": 19600000000.0,
-      "officials": [
-        "Dr. Mehmet Oz"
-      ],
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
       "link": "https://www.cms.gov/newsroom/press-releases/cms-modernizes-payment-accuracy-significantly-cuts-spending-waste",
       "link_label": "CMS Press Release",
       "social_posts": [],
@@ -2625,8 +2486,8 @@
       "agency": "HHS-OIG",
       "type": "Audit",
       "title": "HHS-OIG Audit Finds Medicare Improperly Paid DMEPOS Suppliers $22.7M for Items Provided During Inpatient Stays",
-      "amount": "$22.7M",
-      "amount_numeric": 22700000,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/medicare-improperly-paid-suppliers-227-million-over-7-years-for-durable-medical-equipment-prosthetics-orthotics-and-supplies-provided-to-enrollees-during-inpatient-stays/",
       "link_label": "HHS-OIG Report",
@@ -2673,10 +2534,7 @@
       "title": "DOJ Expands Health Care Fraud Strike Force to Massachusetts",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "Matthew R. Galeotti (Acting AAG, Criminal Division)",
-        "Leah B. Foley (U.S. Attorney, D. Mass.)"
-      ],
+      "officials": [],
       "link": "https://www.justice.gov/opa/pr/justice-department-expands-health-care-fraud-unit-target-health-care-fraud-massachusetts",
       "link_label": "DOJ Press Release",
       "social_posts": [],
@@ -2748,9 +2606,7 @@
       "title": "Senate Finance Hearing: RFK Jr. Highlights Fraud Prevention in President’s 2026 Health Care Agenda",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "Robert F. Kennedy Jr."
-      ],
+      "officials": [],
       "link": "https://www.finance.senate.gov/hearings/the-presidents-2026-health-care-agenda",
       "link_label": "Senate Finance Committee",
       "social_posts": [],
@@ -2773,8 +2629,8 @@
       "agency": "HHS-OIG",
       "type": "Report",
       "title": "HHS-OIG Flags Medicare Skin Substitute Billing as Vulnerable to Fraud, Waste, and Abuse",
-      "amount": "$10B+",
-      "amount_numeric": 10000000000.0,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/medicare-part-b-payment-trends-for-skin-substitutes-raise-major-concerns-about-fraud-waste-and-abuse/",
       "link_label": "HHS-OIG Report",
@@ -2804,9 +2660,7 @@
       "tags": [
         "Medical Devices"
       ],
-      "entities": [
-        "Kimberly-Clark"
-      ],
+      "entities": [],
       "state": "TX",
       "source_type": "official",
       "auto_fetched": false,
@@ -2820,8 +2674,8 @@
       "agency": "HHS-OIG",
       "type": "Report",
       "title": "HHS-OIG Calls For Increased Oversight of Remote Patient Monitoring in Medicare",
-      "amount": "$500M+",
-      "amount_numeric": 500000000.0,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/billing-for-remote-patient-monitoring/",
       "link_label": "HHS-OIG Report",
@@ -2843,10 +2697,7 @@
       "title": "CMS Launches Nationwide Initiative to Remove Ineligible Medicaid Enrollees",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "Dr. Mehmet Oz",
-        "Robert F. Kennedy Jr."
-      ],
+      "officials": [],
       "link": "https://www.cms.gov/newsroom/press-releases/cms-launches-nationwide-push-remove-ineligible-medicaid-enrollees-uphold-citizenship-requirements",
       "link_label": "CMS Press Release",
       "social_posts": [],
@@ -2888,10 +2739,7 @@
       "title": "Troy Health, Inc. Enters Non-Prosecution Agreement and Admits to Fraudulently Enrolling Medicare Beneficiaries and Identity Theft",
       "amount": "$1.43M",
       "amount_numeric": 1430000,
-      "officials": [
-        "Matthew R. Galeotti (Acting AAG, Criminal Division)",
-        "Christian J. Schrank (HHS-OIG Deputy IG)"
-      ],
+      "officials": [],
       "link": "https://www.justice.gov/opa/pr/troy-health-inc-enters-non-prosecution-agreement-and-admits-fraudulently-enrolling-medicare",
       "link_label": "DOJ Press Release",
       "social_posts": [],
@@ -2939,12 +2787,9 @@
       "agency": "CMS",
       "type": "Administrative Action",
       "title": "CMS Finds 2.8 Million Americans Potentially Enrolled in Duplicate Medicaid/ACA Plans",
-      "amount": "$14B",
-      "amount_numeric": 14000000000,
-      "officials": [
-        "Robert F. Kennedy Jr.",
-        "Dr. Mehmet Oz"
-      ],
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
       "link": "https://www.cms.gov/newsroom/press-releases/cms-finds-2-8-million-americans-potentially-enrolled-two-or-more-medicaid-aca-exchange-plans",
       "link_label": "CMS Press Release",
       "social_posts": [],
@@ -2975,10 +2820,7 @@
         "Nursing Home",
         "Pharmacy"
       ],
-      "entities": [
-        "CVS",
-        "Omnicare"
-      ],
+      "entities": [],
       "state": "NY",
       "source_type": "official",
       "auto_fetched": false
@@ -3224,8 +3066,8 @@
       "agency": "GAO",
       "type": "Report",
       "title": "GAO Report: Medicaid Managed Care's Near-0% Improper Payment Estimate Fails to Capture Program Integrity Risks",
-      "amount": "$33M",
-      "amount_numeric": 33000000,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.gao.gov/products/gao-25-107770",
       "link_label": "GAO Report",
@@ -3266,9 +3108,7 @@
       "title": "Presidential Memorandum: Eliminating Waste, Fraud, and Abuse in Medicaid",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "President Trump"
-      ],
+      "officials": [],
       "link": "https://www.whitehouse.gov/presidential-actions/2025/06/eliminating-waste-fraud-and-abuse-in-medicaid/",
       "link_label": "White House",
       "social_posts": [],
@@ -3301,9 +3141,7 @@
       "state": "AZ, FL",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "DMERx"
-      ],
+      "entities": [],
       "related_agencies": [
         "HHS-OIG"
       ]
@@ -3314,8 +3152,8 @@
       "agency": "HHS-OIG",
       "type": "Report",
       "title": "HHS-OIG Spring 2025 Report Highlights Health Care Fraud Enforcement",
-      "amount": "$16.61B",
-      "amount_numeric": 16610000000.0,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/spring-2025-semiannual-report-to-congress/",
       "link_label": "HHS-OIG Semiannual Report",
@@ -3440,9 +3278,7 @@
       "state": "CA",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "Fresno Community Hospital"
-      ],
+      "entities": [],
       "related_agencies": [
         "HHS-OIG"
       ]
@@ -3455,9 +3291,7 @@
       "title": "DOJ Criminal Division Names Health Care Fraud an Enforcement Priority",
       "amount": "",
       "amount_numeric": 0.0,
-      "officials": [
-        "Matthew R. Galeotti (Acting AAG, Criminal Division)"
-      ],
+      "officials": [],
       "link": "https://www.justice.gov/criminal/media/1400046/dl",
       "link_label": "DOJ White-Collar Enforcement Plan (PDF)",
       "social_posts": [],
@@ -3476,11 +3310,9 @@
       "agency": "CMS",
       "type": "Rule/Regulation",
       "title": "CMS Proposes Rule Closing Medicaid Financing Loophole; Projected to Save $30B Over Five Years",
-      "amount": "$30B",
-      "amount_numeric": 30000000000.0,
-      "officials": [
-        "Dr. Mehmet Oz"
-      ],
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
       "link": "https://www.cms.gov/newsroom/press-releases/cms-moves-shut-down-medicaid-loophole-protects-vulnerable-americans-saves-billions",
       "link_label": "CMS Press Release",
       "social_posts": [],
@@ -3537,12 +3369,7 @@
       "state": "MA",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "CVS Health",
-        "Aetna",
-        "Elevance Health",
-        "Humana"
-      ],
+      "entities": [],
       "related_agencies": [
         "HHS-OIG"
       ]
@@ -3568,9 +3395,7 @@
       "state": "NY",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "Gilead Sciences"
-      ],
+      "entities": [],
       "related_agencies": [
         "HHS-OIG"
       ]
@@ -3596,9 +3421,7 @@
       "state": "IL",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "Walgreens"
-      ],
+      "entities": [],
       "related_agencies": [
         "DEA",
         "HHS-OIG"
@@ -3783,8 +3606,8 @@
       "agency": "GAO",
       "type": "Report",
       "title": "GAO: Federal Government Made $162 Billion in Improper Payments in FY2024; Medicare and Medicaid Account for More Than Half",
-      "amount": "$162B",
-      "amount_numeric": 162000000000.0,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.gao.gov/products/gao-25-108172",
       "link_label": "GAO Report",
@@ -3840,9 +3663,7 @@
       "state": "KS",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "DMERx"
-      ],
+      "entities": [],
       "related_agencies": [
         "HHS-OIG"
       ]
@@ -3865,10 +3686,7 @@
       "state": "CA",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "Health Net",
-        "Centene"
-      ]
+      "entities": []
     },
     {
       "id": "doj-2025-02-14-saint-vincents-military-overpayment",
@@ -4038,9 +3856,7 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "Pfizer"
-      ],
+      "entities": [],
       "related_agencies": [
         "HHS-OIG"
       ]
@@ -4064,9 +3880,7 @@
       "state": "GA",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "C.R. Bard"
-      ],
+      "entities": [],
       "related_agencies": [
         "HHS-OIG"
       ]
@@ -4092,9 +3906,7 @@
       "state": "VA",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": [
-        "Chesapeake Regional Medical Center"
-      ],
+      "entities": [],
       "related_agencies": [
         "HHS-OIG"
       ]

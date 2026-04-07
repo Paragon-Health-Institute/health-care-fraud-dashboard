@@ -501,41 +501,6 @@ function updateLastUpdated(ts) {
 }
 
 
-const CONVICTED_RE = /plead|guilty|convict|sentenc/i;
-
-function updateStats(actions) {
-  const crimTotal = actions
-    .filter(a => a.type === 'Criminal Enforcement')
-    .reduce((s, a) => s + (a.amount_numeric || 0), 0);
-
-  const convictedTotal = actions
-    .filter(a => a.type === 'Criminal Enforcement' && (a.amount_numeric || 0) > 0 && CONVICTED_RE.test(a.title))
-    .reduce((s, a) => s + (a.amount_numeric || 0), 0);
-
-  const civilTotal = actions
-    .filter(a => a.type === 'Civil Action')
-    .reduce((s, a) => s + (a.amount_numeric || 0), 0);
-
-  const largestCriminal = actions
-    .filter(a => a.type === 'Criminal Enforcement' && (a.amount_numeric || 0) > 0)
-    .reduce((max, a) => Math.max(max, a.amount_numeric), 0);
-
-  const cmsTotal = actions
-    .filter(a => a.agency === 'CMS' && a.type === 'Administrative Action' && (a.amount_numeric || 0) > 0)
-    .reduce((sum, a) => sum + (a.amount_numeric || 0), 0);
-
-  const auditTotal = actions
-    .filter(a => a.type === 'Audit' && (a.amount_numeric || 0) > 0)
-    .reduce((sum, a) => sum + (a.amount_numeric || 0), 0);
-
-  document.getElementById('statAudit').textContent     = auditTotal > 0 ? formatMoney(auditTotal) : '\u2014';
-  document.getElementById('statCriminal').textContent  = crimTotal > 0 ? formatMoney(crimTotal) : '\u2014';
-  document.getElementById('statConvicted').textContent = convictedTotal > 0 ? formatMoney(convictedTotal) : '\u2014';
-  document.getElementById('statCivil').textContent     = civilTotal > 0 ? formatMoney(civilTotal) : '\u2014';
-  document.getElementById('statLargest').textContent   = largestCriminal > 0 ? formatMoney(largestCriminal) : '\u2014';
-  document.getElementById('statCMS').textContent       = cmsTotal > 0 ? formatMoney(cmsTotal) : '\u2014';
-}
-
 const PAGE_SIZE = 24;
 const MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 
@@ -609,14 +574,12 @@ function appendCards(count, view) {
       el.querySelector('span').textContent = action.state.includes(',') ? action.state : (STATE_NAMES[action.state] || action.state);
     }
     const tagsEl = col.querySelector('.card-tags');
-    const entities = new Set(action.entities || []);
-    const PROGRAMS = new Set(['Medicare','Medicaid','Medicare Advantage','ACA','ACA Fraud','TRICARE','Medi-Cal']);
-    const allTags = (action.entities || []).concat(action.tags || []).concat(action.officials || []).sort((a,b) => a.localeCompare(b));
+    const PROGRAMS = new Set(['Medicare','Medicaid','Medicare Advantage','ACA','TRICARE']);
+    const allTags = (action.tags || []).slice().sort((a,b) => a.localeCompare(b));
     allTags.forEach(tag => {
       const pill = document.createElement('span');
       pill.className = 'tag-pill';
-      if (entities.has(tag)) pill.classList.add('entity-pill');
-      else if (PROGRAMS.has(tag)) pill.classList.add('program-pill');
+      if (PROGRAMS.has(tag)) pill.classList.add('program-pill');
       if (activeTag && tag === activeTag) pill.classList.add('active-tag');
       pill.textContent = tag;
       pill.addEventListener('click', () => toggleTagFilter(tag));
@@ -691,13 +654,11 @@ function applyFilters() {
     if (dateFrom && a.date < dateFrom) return false;
     if (dateTo   && a.date > dateTo)   return false;
     if (activeTag) {
-      const allTags = (a.entities||[]).concat(a.tags||[]);
-      if (!allTags.includes(activeTag)) return false;
+      if (!(a.tags||[]).includes(activeTag)) return false;
     }
     if (search) {
       const hay = [a.title, a.agency, a.type,
-                   (a.tags||[]).join(' '), (a.entities||[]).join(' '),
-                   (a.officials||[]).join(' '),
+                   (a.tags||[]).join(' '),
                    (a.social_posts||[]).map(p=>p.post_text).join(' ')].join(' ').toLowerCase();
       if (!hay.includes(search)) return false;
     }
@@ -733,13 +694,11 @@ function applyOversightFilters() {
     if (dateFrom && a.date < dateFrom) return false;
     if (dateTo   && a.date > dateTo)   return false;
     if (activeTag) {
-      const allTags = (a.entities||[]).concat(a.tags||[]);
-      if (!allTags.includes(activeTag)) return false;
+      if (!(a.tags||[]).includes(activeTag)) return false;
     }
     if (search) {
       const hay = [a.title, a.agency, a.type,
-                   (a.tags||[]).join(' '), (a.entities||[]).join(' '),
-                   (a.officials||[]).join(' '),
+                   (a.tags||[]).join(' '),
                    (a.social_posts||[]).map(p=>p.post_text).join(' ')].join(' ').toLowerCase();
       if (!hay.includes(search)) return false;
     }
@@ -806,8 +765,16 @@ function populateFilterOptions(selectId, dataArray, field) {
   const sel = document.getElementById(selectId);
   // Remove all but the first "All" option
   while (sel.options.length > 1) sel.remove(1);
-  const values = [...new Set(dataArray.map(a => a[field]).filter(Boolean))].sort();
-  values.forEach(v => {
+  const set = new Set();
+  dataArray.forEach(a => {
+    if (a[field]) set.add(a[field]);
+    // For the agency filter, also expose secondary/related agencies so
+    // items tagged with e.g. HHS-OIG as a related agency are filterable.
+    if (field === 'agency' && Array.isArray(a.related_agencies)) {
+      a.related_agencies.forEach(ra => { if (ra) set.add(ra); });
+    }
+  });
+  [...set].sort().forEach(v => {
     const opt = document.createElement('option');
     opt.value = v;
     opt.textContent = v;
@@ -875,73 +842,6 @@ function showToast(msg, type) {
   toast.textContent = msg;
   document.body.appendChild(toast);
   setTimeout(() => toast.remove(), 4000);
-}
-
-// â”€â”€ Stat detail popup â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-const STAT_FILTERS = {
-  audit: {
-    fn: a => a.type === 'Audit',
-    label: 'Total Improper Payments Identified — All Agency Audits',
-    desc: 'Sum of dollar amounts from all entries classified as "Audit" — includes HHS-OIG audits, CMS improper payment reports, and GAO findings. Amounts represent improper payments identified or funds at risk, not necessarily fraud. OIG semiannual report totals are zeroed to avoid double-counting with individual audits and the CMS FY2025 improper payments total.'
-  },
-  criminal: {
-    fn: a => a.type === 'Criminal Enforcement',
-    label: 'Fraud Alleged — Criminal Cases',
-    desc: 'Sum of dollar amounts from all criminal enforcement actions — includes indictments, charges, arrests, convictions, and sentencings. Amounts represent alleged fraud (what was charged or billed), not necessarily what was paid or recovered. Sub-cases of the June 2025 National Takedown ($14.6B) are zeroed to avoid double-counting with the aggregate takedown entry.'
-  },
-  convicted: {
-    fn: a => a.type === 'Criminal Enforcement' && (a.amount_numeric || 0) > 0 && CONVICTED_RE.test(a.title),
-    label: 'Total Fraud Confirmed — Pleas & Convictions',
-    desc: 'Subset of criminal cases where the title contains "plead," "guilty," "convicted," or "sentenced" — indicating the case reached a resolution rather than just an indictment or charge. Amounts represent confirmed fraud from cases with guilty pleas, jury convictions, or sentencings.'
-  },
-  civil: {
-    fn: a => a.type === 'Civil Action',
-    label: 'Civil Settlements & Recoveries',
-    desc: 'Sum of dollar amounts from False Claims Act settlements, civil penalties, and qui tam recoveries. The DOJ FY2025 FCA aggregate ($5.7B health care) is included; individual FY2025 civil cases are counted separately only if dated in FY2026 (Oct 2025+) to avoid double-counting with the annual total.'
-  },
-  largest: {
-    fn: (a, all) => { const max = all.filter(x => x.type === 'Criminal Enforcement' && (x.amount_numeric||0) > 0).reduce((m,x) => x.amount_numeric > m.amount_numeric ? x : m, {amount_numeric:0}); return a === max; },
-    label: 'Largest Single Enforcement Action',
-    desc: 'The single criminal enforcement entry with the highest dollar amount. Currently the June 2025 National Health Care Fraud Takedown ($14.6B in intended losses across 324 defendants).'
-  },
-  cms: {
-    fn: a => a.agency === 'CMS' && a.type === 'Administrative Action',
-    label: 'CMS Program Integrity — Improper Payments Identified or Prevented',
-    desc: 'Sum of dollar amounts from CMS administrative actions — includes payment deferrals, enrollment moratoria, withheld funds, and program integrity savings (e.g., duplicate enrollment identification). These are CMS-initiated actions distinct from DOJ prosecutions or OIG audits.'
-  },
-};
-
-function showStatDetail(filterId) {
-  const def = STAT_FILTERS[filterId];
-  if (!def) return;
-  const entries = allActions.filter(a => def.fn(a, allActions)).sort((a, b) => (b.date||'').localeCompare(a.date||''));
-  document.getElementById('statModalTitle').textContent = def.label;
-  const body = document.getElementById('statModalBody');
-  const methodology = def.desc
-    ? '<div style="background:#f8f9fa;border-left:3px solid #002E6D;padding:10px 14px;margin-bottom:14px;font-size:0.8rem;color:#555;line-height:1.55;border-radius:0 4px 4px 0;"><strong style="color:#002E6D;">Methodology:</strong> ' + escHtml(def.desc) + '</div>'
-    : '';
-  if (entries.length === 0) {
-    body.innerHTML = methodology + '<p class="text-muted py-3">No entries currently match this calculation.</p>';
-  } else {
-    const total = entries.reduce((s, a) => s + (a.amount_numeric || 0), 0);
-    body.innerHTML = methodology +
-      (total > 0
-        ? '<div style="font-size:0.8rem;color:#666;margin-bottom:12px;">' + entries.length + ' entr' + (entries.length===1?'y':'ies') + ' &bull; Total: <strong>' + formatMoney(total) + '</strong></div>'
-        : '<div style="font-size:0.8rem;color:#666;margin-bottom:12px;">' + entries.length + ' entr' + (entries.length===1?'y':'ies') + '</div>') +
-      entries.map(a =>
-        '<div style="border-bottom:1px solid #eee;padding:12px 0;">' +
-          '<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;">' +
-            '<div style="min-width:0;">' +
-              '<div style="font-weight:600;font-family:\'Bona Nova\',Georgia,serif;font-size:0.95rem;">' + escHtml(a.title||'Untitled') + '</div>' +
-              '<div style="font-size:0.78rem;color:#888;margin-top:3px;">' + formatDate(a.date) + '&ensp;&bull;&ensp;' + escHtml(a.agency||'') + '&ensp;&bull;&ensp;' + escHtml(a.type||'') + '</div>' +
-              (a.link && safeUrl(a.link) ? '<a href="' + safeUrl(a.link) + '" target="_blank" rel="noopener noreferrer" style="font-size:0.78rem;color:#00A6CF;margin-top:6px;display:inline-block;">View Source \u2197</a>' : '') +
-            '</div>' +
-            (a.amount ? '<div style="font-weight:700;color:#002E6D;white-space:nowrap;font-size:1rem;flex-shrink:0;">' + escHtml(a.amount) + '</div>' : '') +
-          '</div>' +
-        '</div>'
-      ).join('');
-  }
-  new bootstrap.Modal(document.getElementById('statModal')).show();
 }
 
 // ── View toggle ──────────────────────────────────────────────
@@ -1036,14 +936,12 @@ function renderStoryCards(stories) {
       el.querySelector('span').textContent = action.state.includes(',') ? action.state : (STATE_NAMES[action.state] || action.state);
     }
     const tagsEl = col.querySelector('.card-tags');
-    const entities = new Set(action.entities || []);
-    const PROGRAMS = new Set(['Medicare','Medicaid','Medicare Advantage','ACA','ACA Fraud','TRICARE','Medi-Cal']);
-    const allTags = (action.entities || []).concat(action.tags || []).concat(action.officials || []).sort((a,b) => a.localeCompare(b));
+    const PROGRAMS = new Set(['Medicare','Medicaid','Medicare Advantage','ACA','TRICARE']);
+    const allTags = (action.tags || []).slice().sort((a,b) => a.localeCompare(b));
     allTags.forEach(tag => {
       const pill = document.createElement('span');
       pill.className = 'tag-pill';
-      if (entities.has(tag)) pill.classList.add('entity-pill');
-      else if (PROGRAMS.has(tag)) pill.classList.add('program-pill');
+      if (PROGRAMS.has(tag)) pill.classList.add('program-pill');
       pill.textContent = tag;
       pill.addEventListener('click', () => toggleTagFilter(tag));
       tagsEl.appendChild(pill);
@@ -1138,22 +1036,6 @@ document.addEventListener('DOMContentLoaded', () => {
   startTimer();
 })();
 </script>
-
-<!-- STAT DETAIL MODAL -->
-<div class="modal fade" id="statModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-scrollable">
-    <div class="modal-content" style="border:none;border-radius:0.3rem;overflow:hidden;">
-      <div class="modal-header" style="background:#002E6D;color:white;border:none;">
-        <h5 class="modal-title" id="statModalTitle" style="font-family:'Bona Nova',Georgia,serif;font-size:1rem;"></h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body" id="statModalBody" style="padding:16px 20px;"></div>
-      <div class="modal-footer" style="border-top:1px solid #eee;">
-        <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- ABOUT MODAL -->
 <div class="modal fade" id="aboutModal" tabindex="-1" aria-hidden="true">

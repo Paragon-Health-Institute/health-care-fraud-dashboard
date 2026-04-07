@@ -907,10 +907,19 @@ def main():
                 full_text = item.get('_full_text', '')
                 search_all = f"{title} {desc_clean} {full_text}"
 
-                amt_info = extract_amount(search_all)
                 state = get_state(search_all)
                 action_type = 'Investigative Report' if is_media else get_action_type(title, search_all)
                 tags = generate_tags(search_all)
+
+                # Dollar amounts are only kept on Criminal Enforcement /
+                # Civil Action items. Oversight (Audit, Investigation,
+                # Administrative Action, Rule/Regulation, Hearing, Report,
+                # etc.) and Media items never get an amount. See project
+                # memory: project_amounts_enforcement_only.
+                if action_type in ('Criminal Enforcement', 'Civil Action'):
+                    amt_info = extract_amount(search_all)
+                else:
+                    amt_info = None
 
                 # HHS-OIG entries: recategorize by link domain and content
                 actual_agency = feed['agency']

@@ -53,6 +53,8 @@ def enrich_actions(data_path="data/actions.json"):
 
 - Do NOT output a `title` field. The dashboard preserves the original press-release headline verbatim and never lets the model rewrite it.
 - Do NOT output a `description` field. Descriptions are not stored on the dashboard.
+- Do NOT output `officials` or `entities`. People names and company names are not rendered on the dashboard and are not stored.
+- Do NOT output `amount` or `amount_numeric` for items that are not Criminal Enforcement / Civil Action. Oversight items (Audit, Investigation, Administrative Action, Rule/Regulation, Hearing, Report, etc.) never show a dollar amount on the dashboard.
 
 ## Output format
 
@@ -65,8 +67,6 @@ Return ONLY valid JSON, no markdown fencing, no explanation:
   "amount": "Dollar amount as string like '$52M' or '$14.6B' or null if none",
   "amount_numeric": numeric value in dollars (e.g. 52000000) or 0,
   "tags": [array of applicable tags from the APPROVED LIST below — pick ONLY tags that clearly apply],
-  "entities": [array of company/organization names involved, e.g. "CVS", "UnitedHealth", "DMERx"],
-  "officials": [array of named government officials mentioned, e.g. "Dr. Mehmet Oz", "President Trump"],
   "agency": "The government agency primarily responsible for this action. One of: DOJ, CMS, HHS, HHS-OIG, GAO, Congress, White House, State Agency, Media. Use 'Media' only when the media outlet itself conducted the investigation (e.g. ProPublica expose, CBS investigation). If the article is news coverage of a DOJ indictment, the agency is DOJ, not Media.",
   "related_agencies": ["If agency is Media or State Agency, which federal agency is most related (DOJ, CMS, HHS-OIG, etc.), or null"]
 }}
@@ -130,15 +130,16 @@ Do NOT output a description field — descriptions are not stored on the dashboa
 
                 # Apply enrichment. The model is NOT allowed to rewrite the
                 # title — it must match the source press release verbatim. We
-                # also never write a description (see project memory).
+                # also never write a description, and we never populate
+                # officials (people names) or entities (company names) since
+                # those render as pills and the dashboard restricts pills to
+                # program + vulnerable-area tags only. See project memory.
                 action.pop("description", None)
-                # Defensive: if the model returned a title in violation of the
-                # prompt, ignore it.
                 result.pop("title", None)
                 action["type"] = result.get("type", action.get("type", "Administrative Action"))
                 action["tags"] = filter_tags(result.get("tags", []))
-                action["entities"] = result.get("entities", [])
-                action["officials"] = result.get("officials", [])
+                action["entities"] = []
+                action["officials"] = []
                 if result.get("state"):
                     action["state"] = result["state"]
                 if result.get("amount"):

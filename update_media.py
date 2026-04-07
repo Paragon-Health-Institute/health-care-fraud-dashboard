@@ -315,7 +315,8 @@ def main():
                                 desc_clean = desc_clean[:last_period + 1]
 
                 search_text = f"{title} {desc_clean}"
-                amt_info = extract_amount(search_text)
+                # Media tab never shows dollar amounts — see project memory.
+                amt_info = None
                 state = get_state(search_text)
                 tags = generate_tags(search_text)
                 related = guess_related_agency(search_text)

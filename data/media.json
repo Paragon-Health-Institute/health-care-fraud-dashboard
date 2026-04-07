@@ -55,8 +55,8 @@
       "agency": "Media",
       "type": "Investigative Report",
       "title": "WSJ Investigation: Autism ABA Therapy Billing Is Medicaid's Fastest-Growing Abuse Area",
-      "amount": "$2.2B",
-      "amount_numeric": 2200000000,
+      "amount": "",
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.wsj.com/health/healthcare/autism-therapy-medicaid-payments-640aa435",
       "link_label": "WSJ Article",
@@ -80,8 +80,8 @@
       "agency": "Media",
       "type": "Investigative Report",
       "title": "CBS News Investigation: Hundreds of LA Hospices Show Multiple Fraud Indicators Despite 2023 Crackdown",
-      "amount": "$3.5B alleged",
-      "amount_numeric": 3500000000,
+      "amount": "",
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.cbsnews.com/projects/2026/hospice-fraud/",
       "link_label": "CBS News Investigation",
@@ -102,8 +102,8 @@
       "agency": "Media",
       "type": "Investigative Report",
       "title": "ProPublica/AZCIR: Medicaid Fraud Targeting Indigenous Communities Continues Despite Arizona Reforms",
-      "amount": "$2.5B",
-      "amount_numeric": 2500000000,
+      "amount": "",
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.propublica.org/article/arizona-medicaid-fraud-investigation-taxpayer-funds",
       "link_label": "ProPublica Investigation",
@@ -125,8 +125,8 @@
       "agency": "Media",
       "type": "Investigation",
       "title": "WSMV4 Investigation: Russian-Connected Medicare Billing Scheme Targeting Tennessee Seniors",
-      "amount": "$3B+",
-      "amount_numeric": 3000000000,
+      "amount": "",
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.wsmv.com/2026/02/20/wsmv4-investigation-reveals-russian-connection-tennessee-medicare-billing-scheme/",
       "link_label": "WSMV4 Investigation",
@@ -161,11 +161,7 @@
       "state": "TX",
       "source_type": "news",
       "auto_fetched": false,
-      "entities": [
-        "UnitedHealth",
-        "Aetna",
-        "Cigna"
-      ],
+      "entities": [],
       "related_agencies": [
         "DOJ"
       ]
@@ -176,7 +172,7 @@
       "agency": "Media",
       "type": "Investigative Report",
       "title": "KARE 11 Investigates: Housing Hustle — Massive Organized Fraud in Minnesota Medicaid Housing and Disability Programs",
-      "amount": "$9B+",
+      "amount": "",
       "amount_numeric": 0,
       "officials": [],
       "link": "https://www.kare11.com/article/news/investigations/kare-11-investigates-feds-to-announce-fraud-charges-within-state-housing-stabilization-services-program/89-f935fda7-d116-4cfe-b630-ccc834d8e120",
@@ -188,9 +184,7 @@
       "state": "MN",
       "source_type": "news",
       "auto_fetched": false,
-      "entities": [
-        "Optum"
-      ],
+      "entities": [],
       "related_agencies": [
         "DOJ"
       ]
@@ -205,7 +199,7 @@
       "title": "Fox News: LA Home Health Agencies Billed $600M Using Single Doctor's Provider Number",
       "link_label": "Fox News Article",
       "type": "Investigative Report",
-      "amount": "$600M",
+      "amount": "",
       "agency": "Media",
       "social_posts": [],
       "tags": [
@@ -213,7 +207,7 @@
         "Medicare"
       ],
       "date": "2026-03-12",
-      "amount_numeric": 600000000,
+      "amount_numeric": 0,
       "entities": [],
       "related_agencies": [
         "DOJ"
@@ -229,7 +223,7 @@
       "title": "ProPublica/AZCIR: At Least 40 Native Americans Died as Arizona Struggled to Address $2.5B Medicaid Fraud Scheme",
       "link_label": "AZCIR Investigation",
       "type": "Investigative Report",
-      "amount": "$2.5B",
+      "amount": "",
       "agency": "Media",
       "social_posts": [],
       "tags": [
@@ -256,10 +250,7 @@
       "tags": [
         "ACA"
       ],
-      "entities": [
-        "Enhance Health",
-        "Bain Capital"
-      ],
+      "entities": [],
       "state": "FL",
       "source_type": "news",
       "auto_fetched": false,
@@ -271,8 +262,8 @@
       "agency": "Media",
       "type": "Investigative Report",
       "title": "WSJ Investigation: DOJ Conducting Criminal Probe of UnitedHealth Medicare Advantage Billing",
-      "amount": "$8.7B",
-      "amount_numeric": 8700000000,
+      "amount": "",
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.fiercehealthcare.com/payers/wsj-feds-investigating-unitedhealth-criminal-medicare-fraud",
       "link_label": "WSJ / Fierce Healthcare",
@@ -282,9 +273,7 @@
         "Medicare",
         "Medicare Advantage"
       ],
-      "entities": [
-        "UnitedHealth"
-      ],
+      "entities": [],
       "state": null,
       "source_type": "news",
       "auto_fetched": false,
@@ -300,10 +289,7 @@
       "title": "The Guardian Investigation: UnitedHealth Secretly Paid Nursing Homes to Reduce Hospital Transfers",
       "amount": null,
       "amount_numeric": 0,
-      "officials": [
-        "Senator Ron Wyden",
-        "Senator Elizabeth Warren"
-      ],
+      "officials": [],
       "link": "https://www.theguardian.com/us-news/2025/may/21/unitedhealth-nursing-homes-payments-hospital-transfers",
       "link_label": "The Guardian Investigation",
       "social_posts": [],
@@ -312,9 +298,7 @@
         "Medicare Advantage",
         "Nursing Home"
       ],
-      "entities": [
-        "UnitedHealth"
-      ],
+      "entities": [],
       "state": null,
       "source_type": "news",
       "auto_fetched": false,
@@ -326,8 +310,8 @@
       "agency": "Media",
       "type": "Investigative Report",
       "title": "KARE 11 Investigation: Third-Party Audit Finds Minnesota Medicaid System 'Riddled with Vulnerabilities'",
-      "amount": "$1B",
-      "amount_numeric": 1000000000,
+      "amount": "",
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.kare11.com/article/news/investigations/kare-11-investigates-third-party-audit-finds-mn-medicaid-system-riddled-with-vulnerabilities-minnesota/89-cc1b0866-687f-4ba6-9b95-539c8286ebaf",
       "link_label": "KARE 11 Investigation",
@@ -335,9 +319,7 @@
       "tags": [
         "Medicaid"
       ],
-      "entities": [
-        "Optum"
-      ],
+      "entities": [],
       "state": "MN",
       "source_type": "news",
       "auto_fetched": false,
@@ -349,8 +331,8 @@
       "agency": "Media",
       "type": "Investigative Report",
       "title": "Independent Investigation: Over $170 Million in Alleged Fraud Across California Daycare and Hospice Ghost Operations",
-      "amount": "$170M+",
-      "amount_numeric": 170000000,
+      "amount": "",
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://californiaglobe.com/fl/nick-shirley-uncovers-over-170-million-in-alleged-fraud-across-california-daycare-and-hospice-operations/",
       "link_label": "California Globe",
@@ -395,8 +377,8 @@
       "agency": "Media",
       "type": "Investigative Report",
       "title": "Washington Post: Inside Operation Gold Rush — Russian-Led Network Submitted $10.6B in Bogus Medicare Claims",
-      "amount": "$10.6B",
-      "amount_numeric": 10600000000,
+      "amount": "",
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.washingtonpost.com/health/2025/06/30/health-care-fraud-bust-largest-in-us-history/",
       "link_label": "Washington Post Investigation",
@@ -418,8 +400,8 @@
       "agency": "Media",
       "type": "Investigative Report",
       "title": "NPR Investigation: Potential Fraud Could Have Earned Insurance Companies Billions off Medicare Advantage",
-      "amount": "$12–25B/year",
-      "amount_numeric": 25000000000,
+      "amount": "",
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.npr.org/2025/01/04/nx-s1-5246231/potential-fraud-could-have-earned-insurance-companies-billions-off-of-medicare-advantage",
       "link_label": "NPR Investigation",
@@ -430,12 +412,7 @@
       "state": null,
       "source_type": "news",
       "auto_fetched": false,
-      "entities": [
-        "UnitedHealth",
-        "Humana",
-        "Elevance",
-        "Kaiser Permanente"
-      ],
+      "entities": [],
       "related_agencies": []
     },
     {
@@ -444,8 +421,8 @@
       "agency": "Media",
       "type": "Investigative Report",
       "title": "NY Post: New York's CDPAP Medicaid Program Lost $1.2B to Scammers — 'Minnesota Multiplied by 10'",
-      "amount": "$1.2B+",
-      "amount_numeric": 1200000000,
+      "amount": "",
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.aol.com/articles/notoriously-fraudulent-ny-health-program-200012792.html",
       "link_label": "NY Post Investigation",

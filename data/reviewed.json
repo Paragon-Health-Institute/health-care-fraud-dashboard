@@ -55,9 +55,7 @@
       "tags": [
         "Medicaid"
       ],
-      "entities": [
-        "Northeast Kingdom Human Services"
-      ],
+      "entities": [],
       "state": "VT",
       "source_type": "news",
       "auto_fetched": true
@@ -97,9 +95,7 @@
       "tags": [
         "Medicare"
       ],
-      "entities": [
-        "Oregon laboratory"
-      ],
+      "entities": [],
       "state": "OR",
       "source_type": "news",
       "auto_fetched": true
@@ -152,18 +148,14 @@
       "title": "Oz Escalates Medicaid Fraud Claims Against States After Focus on Minnesota - KFF Health News",
       "amount": null,
       "amount_numeric": 0,
-      "officials": [
-        "Dr. Mehmet Oz"
-      ],
+      "officials": [],
       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNNHVfX2ZHNG5EWVNidDkzMXlHZTFSNHlyaVhGVVl3bDJoSjQ2S2dLX2R4UnNjU1k3RXNkSlB5bUp1OTlXY2dOTTFGbVpMQURoZkN1NW4wdllDZTMtM0lEYUY4NjhleWF4dEVkVEdjUEtHLVdyWThOcHd6N2FCcktMZVFCTnc2azh3dG5LS21uMXc4WW9ndjVtRk5xMHFSQUJaZ3hBTHNEdw?oc=5",
       "link_label": "Google News Report",
       "social_posts": [],
       "tags": [
         "Medicaid"
       ],
-      "entities": [
-        "States (Minnesota focus)"
-      ],
+      "entities": [],
       "state": "MN",
       "source_type": "news",
       "auto_fetched": true
@@ -183,9 +175,7 @@
       "tags": [
         "Medicaid"
       ],
-      "entities": [
-        "State of Minnesota"
-      ],
+      "entities": [],
       "state": "MN",
       "source_type": "news",
       "auto_fetched": true
@@ -205,9 +195,7 @@
       "tags": [
         "Medicaid"
       ],
-      "entities": [
-        "CMS"
-      ],
+      "entities": [],
       "state": null,
       "source_type": "news",
       "auto_fetched": true
@@ -227,9 +215,7 @@
       "tags": [
         "Medicaid"
       ],
-      "entities": [
-        "Prenatal services company"
-      ],
+      "entities": [],
       "state": "WI",
       "source_type": "news",
       "auto_fetched": true
@@ -250,9 +236,7 @@
         "Medicare",
         "Medicaid"
       ],
-      "entities": [
-        "Centers for Medicare & Medicaid Services (CMS)"
-      ],
+      "entities": [],
       "state": null,
       "source_type": "news",
       "auto_fetched": true
@@ -270,9 +254,7 @@
       "link_label": "Google News Report",
       "social_posts": [],
       "tags": [],
-      "entities": [
-        "St. Louis County woman"
-      ],
+      "entities": [],
       "state": "MO",
       "source_type": "news",
       "auto_fetched": true
@@ -285,9 +267,7 @@
       "title": "Attorney General Griffin reports Conway woman arrested for Medicaid fraud… - KVOM 101.7",
       "amount": null,
       "amount_numeric": 0,
-      "officials": [
-        "Attorney General Griffin"
-      ],
+      "officials": [],
       "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTVVxN1ZsM01QN1dkbHZ0UHpfT1QtY0pKSF9CTm1Sa0ItYXotR3RPcGZGeXZZYzU4VUpzd21uVHlSbnVKWVF3VXY4LWZmTUlQLXZVSF9OQlk0NkNHUktSamZaSjB0TWdZNF9TQlZTMUVmZURzVmZmc3BraTdxOG8wSDJBVFU2ZG81RWU5WkRfSnpXeE16aDhrRHZiOA?oc=5",
       "link_label": "Google News Report",
       "social_posts": [],
@@ -314,9 +294,7 @@
       "tags": [
         "Medicare"
       ],
-      "entities": [
-        "Florida doctor"
-      ],
+      "entities": [],
       "state": "FL",
       "source_type": "news",
       "auto_fetched": true

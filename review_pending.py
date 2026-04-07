@@ -96,11 +96,7 @@ Return ONLY valid JSON:
   "reason": "one sentence explaining why relevant or not",
   "type": "Criminal Enforcement" or "Civil Action" or "Audit" or "Investigation" or "Investigative Report" or "Congressional Hearing" or "Legislation" or "Administrative Action",
   "state": "Two-letter abbreviation or null",
-  "amount": "$52M format or null",
-  "amount_numeric": 52000000 or 0,
   "tags": ["from approved list — programs + vulnerable areas only"],
-  "entities": ["company names"],
-  "officials": ["government officials mentioned"],
   "agency": "DOJ/CMS/HHS/HHS-OIG/GAO/Congress/White House/State Agency/Media"
 }}
 
@@ -112,7 +108,7 @@ Do NOT include status/method/committee/company tags. Anything outside this list 
 Programs: {program_list}
 Vulnerable areas: {area_list}
 
-Do NOT output a description field — descriptions are not stored on the dashboard."""
+Hard rules: never output `description`, `title`, `amount`, `amount_numeric`, `officials`, or `entities`. The dashboard does not store people, companies, descriptions, or oversight dollar amounts."""
 
     relevant = []
 
@@ -137,18 +133,18 @@ Do NOT output a description field — descriptions are not stored on the dashboa
             result = json.loads(text)
 
             if result.get("relevant"):
-                # Apply enrichment. Description is intentionally never written.
+                # Apply enrichment. Description / title / officials /
+                # entities / amount are intentionally never written on
+                # media items (all oversight-side). See project memory.
                 item.pop("description", None)
                 item["type"] = result.get("type", item.get("type"))
                 item["tags"] = filter_tags(result.get("tags", []))
-                item["entities"] = result.get("entities", [])
-                item["officials"] = result.get("officials", [])
+                item["entities"] = []
+                item["officials"] = []
+                item["amount"] = ""
+                item["amount_numeric"] = 0
                 if result.get("state"):
                     item["state"] = result["state"]
-                if result.get("amount"):
-                    item["amount"] = result["amount"]
-                if result.get("amount_numeric"):
-                    item["amount_numeric"] = result["amount_numeric"]
                 if result.get("agency"):
                     item["agency"] = result["agency"]
 

@@ -158,8 +158,16 @@ foreach ($feed in ($Feeds | Where-Object { $_.Enabled })) {
             $idPrefix   = $isMedia ? 'media' : ($feed.Agency.ToLower() -replace '\W','-')
             $linkLabel  = $isMedia ? "$($feed.Name) Report" : "$($feed.Name) Press Release"
             $actionType = $isMedia ? 'Investigative Report' : $atype
-            $amtDisp    = $amtInfo ? $amtInfo.display : $null
-            $amtNum     = $amtInfo ? $amtInfo.numeric : 0
+
+            # Dollar amounts only kept on Criminal Enforcement / Civil Action
+            # items. All other types (incl. media) render no amount.
+            if ($actionType -eq 'Criminal Enforcement' -or $actionType -eq 'Civil Action') {
+                $amtDisp = $amtInfo ? $amtInfo.display : $null
+                $amtNum  = $amtInfo ? $amtInfo.numeric : 0
+            } else {
+                $amtDisp = $null
+                $amtNum  = 0
+            }
 
             # NOTE: description field is intentionally NOT written.
             # Tags are left empty here — Python ingest (update.py / enrich.py)
