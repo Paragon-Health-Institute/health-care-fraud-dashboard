@@ -844,6 +844,11 @@ def main():
                         help='Backfill mode: scrape pages back to this date, '
                              'ignoring last_scraped cutoff. Also deepens '
                              'OIG pagination to walk the archive.')
+    parser.add_argument('--opa-only', action='store_true',
+                        help='Only accept items whose canonical link is a DOJ '
+                             'Office of Public Affairs press release '
+                             '(justice.gov/opa/pr/...). Skips USAO district '
+                             'releases. Useful for high-signal backfills.')
     args = parser.parse_args()
     silent = args.silent
     if args.no_browser:
@@ -865,6 +870,9 @@ def main():
     # Thread backfill flag into scrapers via a module-level variable
     globals()['BACKFILL_MODE'] = bool(args.backfill_from)
     globals()['BACKFILL_FLOOR'] = last_scraped_date
+    globals()['OPA_ONLY'] = bool(args.opa_only)
+    if args.opa_only:
+        log("OPA-ONLY MODE: dropping items not linking to /opa/pr/")
 
     # Dedup sets
     existing_links = set()
@@ -899,13 +907,19 @@ def main():
                 link = item.get('link', '')
 
                 search_text = f"{title} {desc_clean}"
-                # HHS-OIG fraud/enforcement page is already healthcare-specific; skip keyword filters
+                # Every item must pass the healthcare-context filter,
+                # regardless of source. Previously we trusted the HHS-OIG
+                # fraud/enforcement listing to be pre-filtered to healthcare,
+                # but OIG surfaces SNAP, childcare, immigration, housing,
+                # passport, and other non-HC cases. So require healthcare
+                # context on every item.
                 trusted_source = feed.get('agency') in ('HHS-OIG',)
                 if not trusted_source:
+                    # Non-trusted feeds need both a fraud keyword AND healthcare context
                     if not test_any_keyword(search_text):
                         continue
-                    if not test_healthcare_context(search_text):
-                        continue
+                if not test_healthcare_context(search_text):
+                    continue
                 # Media feeds: keyword must be in title
                 is_media = feed['source_type'] == 'news'
                 if is_media and not test_any_keyword(title):
@@ -944,6 +958,12 @@ def main():
                         log(f"  skipping non-.gov link for enforcement candidate: {link}")
                         continue
 
+                # OPA-only mode: only accept DOJ Office of Public Affairs press
+                # releases. Drops all USAO district releases and OIG-hosted
+                # pages. Used for high-signal backfills.
+                if globals().get('OPA_ONLY') and '/opa/pr/' not in link:
+                    continue
+
                 # Use full detail text if available (from scrapers that fetch detail pages)
                 full_text = item.get('_full_text', '')
                 search_all = f"{title} {desc_clean} {full_text}"
@@ -951,6 +971,16 @@ def main():
                 state = get_state(search_all)
                 action_type = 'Investigative Report' if is_media else get_action_type(title, search_all)
                 tags = generate_tags(search_all)
+
+                # Backfill mode: only add items classified as Criminal
+                # Enforcement or Civil Action. Oversight items (Audit,
+                # Investigation, Administrative Action, Rule/Regulation,
+                # Hearing, Report, Structural/Organizational, etc.) are
+                # skipped during backfill because they include too many
+                # non-healthcare false positives from OIG's listing.
+                # Oversight items are curated manually.
+                if globals().get('BACKFILL_MODE') and action_type not in ('Criminal Enforcement', 'Civil Action'):
+                    continue
 
                 # Dollar amounts are only kept on Criminal Enforcement /
                 # Civil Action items. Oversight (Audit, Investigation,
