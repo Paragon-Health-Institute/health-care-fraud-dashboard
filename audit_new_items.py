@@ -104,12 +104,128 @@ HC_ENTITIES = re.compile(
 )
 
 
-def is_obviously_healthcare(item: dict) -> bool:
-    """True if the item title or link slug clearly references healthcare.
+# ---------------------------------------------------------------------------
+# Non-fraud crime demote list. Items matching these patterns get sent to AI
+# review even when the HC keyword check passes — because the title is about a
+# different category of crime that just happens to involve a doctor, hospital,
+# pharmacy, or other healthcare-adjacent entity.
+#
+# Examples this catches:
+#   - "Pediatrician Sentenced for Exchanging Prescriptions for Sex Acts"
+#     (HC keyword "pediatrician" but case is sexual misconduct, not billing fraud)
+#   - "Doctor Sentenced for Drug Trafficking Conspiracy"
+#     (HC keyword "doctor" but case is street drug distribution, not Medicare fraud)
+#   - "Hospital CEO Charged with Murder-for-Hire Plot"
+#     (HC keyword "hospital" but case is violent crime)
+#
+# These items still go to AI review (not auto-rejected) so a borderline case
+# with both a non-fraud crime and a real billing component can still get
+# promoted by the AI.
+# ---------------------------------------------------------------------------
+NON_FRAUD_CRIME_PATTERNS = re.compile(
+    # Note: each alternation must end at a word boundary on its own. Patterns
+    # that match a partial word (e.g. "kidnap" in "kidnapping") use \w* to
+    # consume the rest of the word so the regex engine reaches a true \b.
+    r"\b("
+    # Sex crimes / abuse
+    r"sex\s+acts?|sexual\s+(abuse|assault|misconduct|exploitation|contact)|"
+    r"lewd|indecent|child\s+(porn|exploit\w*|sex|abuse)|sextortion|"
+    # Violence
+    r"murder|homicide|manslaughter|kidnap\w*|abduction|"
+    r"murder.?for.?hire|attempted?\s+murder|"
+    r"shooting|shot\s+(to|and)|stabbed|stabbing|arson|"
+    r"violent\s+crime|aggravated\s+assault|armed\s+robbery|"
+    # Trafficking (people / drugs as commodity, not billing schemes)
+    r"human\s+traffick\w*|sex\s+traffick\w*|forced\s+labor|"
+    r"drug\s+traffick\w*|narcotic\s+traffick\w*|"
+    r"smuggl\w*\s+(?:drugs?|narcotics?|cocaine|heroin|fentanyl|persons|child|migrant|alien)|"
+    # Immigration & identity
+    r"illegal\s+(?:re)?entry|illegal\s+alien|unaccompanied\s+(?:alien|minor)\s+child|"
+    r"passport\s+fraud|visa\s+fraud|naturali[sz]ation\s+fraud|"
+    r"citizenship\s+fraud|alien\s+smuggl\w*|"
+    # Other federal benefit programs (not healthcare)
+    r"snap\s+(fraud|benefit)|food\s+stamp|"
+    r"social\s+security\s+(?:number|fraud|benefit)|ssn\s+fraud|"
+    r"unemployment\s+(?:insurance\s+)?(?:fraud|benefit)|"
+    r"housing\s+(?:stabilization|assistance|voucher)\s+fraud|hud\s+fraud|"
+    r"child\s+care\s+(?:fraud|program)|child\s+daycare\s+fraud|"
+    r"ppp\s+(?:loan\s+)?fraud|paycheck\s+protection|covid\s+relief\s+fraud|"
+    r"economic\s+injury\s+disaster|eidl\s+fraud|"
+    # Tax (unless explicitly tied to a healthcare crime)
+    r"tax\s+evasion(?!.*health)|tax\s+fraud(?!.*health|.*medic|.*pharm)|"
+    # Bank / mortgage (unless healthcare-tied)
+    r"bank\s+fraud(?!.*health|.*medic|.*pharm|.*pat[iy]ent)|"
+    r"mortgage\s+fraud(?!.*health|.*medic)|real\s+estate\s+fraud(?!.*health|.*medic)|"
+    # Defense / non-HC contracting
+    r"defense\s+contract(?:or|ing)|small\s+business\s+(?:government\s+)?contract|"
+    # Cybercrime that's not HIPAA / EHR
+    r"ransomware(?!.*hospital|.*medic|.*health)|"
+    # Roundup / non-actionable bulletin posts
+    r"icymi|highlights?\s+(?:a\s+)?(?:dozen|recent)|"
+    r"government\s+shutdown(?!.*medicaid)|"
+    r"new\s+(?:federal\s+)?prosecutor\s+(targets|named|appointed)|"
+    r"u\.s\.\s+attorney\s+(?:announces|highlights)\s+(?:new|appointment|hire)|"
+    # Generic / vague titles
+    r"woman\s+sentenced\s+to\s+\d+\s+months\s+in\s+prison\s*$|"
+    r"man\s+sentenced\s+to\s+\d+\s+months\s+in\s+prison\s*$"
+    r")\b",
+    re.IGNORECASE,
+)
 
-    Used as a regex pre-filter — items that match here skip the review queue.
-    Items that don't match are flagged for human / AI review (NOT rejected).
+
+# Strong healthcare fraud phrases. If a title contains any of these, the
+# demote list does NOT apply — the case is unambiguously a healthcare fraud
+# matter that may also include side charges (tax, bank, unemployment, etc.).
+STRONG_HC_FRAUD = re.compile(
+    r"\b("
+    # "Health Care Fraud" / "Healthcare Fraud" — direct phrase
+    r"health\s*care\s+fraud|healthcare\s+fraud|"
+    # "Health Care, ... Fraud" / "Health Care and Tax Fraud" — multi-charge headlines
+    r"health\s*care[,\s]+(?:and\s+)?[\w\s]{0,20}\s+(?:fraud|schemes?)|"
+    r"healthcare[,\s]+(?:and\s+)?[\w\s]{0,20}\s+(?:fraud|schemes?)|"
+    # Programs
+    r"medicare\s+(?:fraud|advantage)|medicaid\s+fraud|tricare\s+fraud|medi-?cal\s+fraud|"
+    r"medical\s+(?:fraud|billing|claims)|"
+    r"pharmacy\s+(?:fraud|kickback)|prescription\s+(?:fraud|drug\s+fraud)|"
+    # Statutes
+    r"false\s+claims\s+act|qui\s+tam|"
+    r"anti.?kickback\s+statute|stark\s+law|stark\s+violation|"
+    # Categories
+    r"drug\s+diversion|"
+    r"adult\s+day\s+care|"  # adult day care is on the allowlist; never demote
+    r"prenatal\s+care|home\s+health|hospice\s+fraud|"
+    r"nursing\s+home\s+fraud|skilled\s+nursing|long.term\s+care|"
+    r"dme\s+fraud|durable\s+medical|"
+    r"telehealth\s+fraud|telemedicine\s+fraud|"
+    r"genetic\s+test|wound\s+care\s+fraud|behavioral\s+health\s+fraud|"
+    r"opioid\s+(?:billing|prescribing)\s+(?:fraud|scheme)|pill\s+mill"
+    r")\b",
+    re.IGNORECASE,
+)
+
+
+def is_non_fraud_crime(item: dict) -> bool:
+    """True if the title looks like a non-fraud crime that just happens to
+    involve a healthcare-adjacent person/entity. These items get demoted to
+    AI review even if the HC keyword check passes.
+
+    Short-circuited by STRONG_HC_FRAUD: if the title explicitly mentions
+    healthcare fraud / Medicare fraud / FCA / Stark Law / etc., we trust
+    that the case is a real HC matter even if a side charge is mentioned.
     """
+    title = item.get("title", "") or ""
+    if STRONG_HC_FRAUD.search(title):
+        return False
+    return bool(NON_FRAUD_CRIME_PATTERNS.search(title))
+
+
+def is_obviously_healthcare(item: dict) -> bool:
+    """True if the item title or link slug clearly references healthcare AND
+    does not match a non-fraud crime pattern. Items matching the demote list
+    are sent to AI review regardless of HC keyword density.
+    """
+    if is_non_fraud_crime(item):
+        return False
     title = item.get("title", "") or ""
     link = item.get("link", "") or ""
     text = f"{title} {link}"
@@ -197,7 +313,11 @@ def cmd_audit() -> int:
     now = datetime.now().isoformat()
     for item in flagged:
         item["flagged_at"] = now
-        item["flag_reason"] = "title lacks healthcare keyword"
+        # Distinguish "no HC keyword" from "HC keyword but non-fraud crime"
+        if is_non_fraud_crime(item):
+            item["flag_reason"] = "title matches non-fraud crime pattern"
+        else:
+            item["flag_reason"] = "title lacks healthcare keyword"
         review["items"].append(item)
 
     save_json(DATA_FILE, data)
