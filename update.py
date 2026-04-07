@@ -14,6 +14,8 @@ import feedparser
 import requests
 from bs4 import BeautifulSoup
 
+from tag_allowlist import auto_tags as _auto_tags, filter_tags as _filter_tags
+
 try:
     from playwright.sync_api import sync_playwright
     HAS_PLAYWRIGHT = True
@@ -148,39 +150,13 @@ def extract_amount(text):
         return {"display": m.group(), "numeric": num * 1e6}
     return None
 
-TAG_PATTERNS = [
-    (r'\bmedicare\b', 'Medicare'),
-    (r'\bmedicaid\b', 'Medicaid'),
-    (r'\btricare\b', 'TRICARE'),
-    (r'\bkickback', 'Kickbacks'),
-    (r'\bfalse claims', 'False Claims'),
-    (r'\bindict', 'Indictment'),
-    (r'\bguilty|convict', 'Conviction'),
-    (r'\bsentenc', 'Sentencing'),
-    (r'\bsettle', 'Settlement'),
-    (r'\bplead|plea\b', 'Guilty Plea'),
-    (r'\btelemedic|telemedicine\b', 'Telemedicine'),
-    (r'\bhospice\b', 'Hospice'),
-    (r'\bhome health\b', 'Home Health'),
-    (r'\bnursing home|long.term care', 'Nursing Home'),
-    (r'\bpharmac', 'Pharmacy'),
-    (r'\bopioid|fentanyl', 'Opioids'),
-    (r'\bdurable medical|dme\b', 'DME'),
-    (r'\bgenetic test', 'Genetic Testing'),
-    (r'\blab\b|laboratory', 'Laboratory'),
-    (r'\bbilling scheme|fraudulent billing|false billing', 'Billing Fraud'),
-    (r'\bidentity theft', 'Identity Theft'),
-    (r'\bupcod', 'Upcoding'),
-]
-
 def generate_tags(text):
-    """Generate relevant tags from text content."""
-    tags = []
-    lower = text.lower()
-    for pattern, tag in TAG_PATTERNS:
-        if re.search(pattern, lower) and tag not in tags:
-            tags.append(tag)
-    return tags[:6]  # Cap at 6 tags
+    """Generate relevant tags from text content.
+
+    Tags are restricted to the canonical allowlist in tag_allowlist.py
+    (programs + vulnerable fraud areas only). Anything else is filtered out.
+    """
+    return _auto_tags(text)
 
 def fetch_detail_page(session, url):
     """Fetch a detail page and return (text, doj_link)."""
@@ -938,22 +914,23 @@ def main():
 
                 id_prefix = 'media' if is_media else re.sub(r'\W', '-', actual_agency.lower())
                 link_label = f"{feed['name']} Report" if is_media else f"{actual_agency} Press Release"
-                desc_out = desc_clean[:600] + '...' if len(desc_clean) > 600 else desc_clean
 
+                # NOTE: description field is intentionally NOT written.
+                # The dashboard displays only title/link/date/tags. See
+                # tag_allowlist.py and project memory for details.
                 entry = {
                     "id": make_id(id_prefix, date_str, link, actual_agency),
                     "date": date_str,
                     "agency": actual_agency,
                     "type": action_type,
                     "title": re.sub(r'\s+', ' ', title).strip(),
-                    "description": desc_out,
                     "amount": amt_info['display'] if amt_info else None,
                     "amount_numeric": amt_info['numeric'] if amt_info else 0,
                     "officials": [],
                     "link": link,
                     "link_label": link_label,
                     "social_posts": [],
-                    "tags": tags,
+                    "tags": _filter_tags(tags),
                     "entities": [],
                     "state": state,
                     "source_type": feed['source_type'],

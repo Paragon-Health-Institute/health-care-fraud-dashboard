@@ -7,6 +7,8 @@
 """
 import json, sys, os, subprocess
 
+from tag_allowlist import ALLOWED_TAGS, PROGRAM_TAGS, AREA_TAGS, filter_tags
+
 def main(pending_path="data/pending.json"):
     api_key = os.environ.get("ANTHROPIC_API_KEY", "")
     gh_token = os.environ.get("GITHUB_TOKEN", "")
@@ -79,35 +81,44 @@ def _filter_with_api(items, api_key):
 
     client = anthropic.Anthropic(api_key=api_key)
 
-    SYSTEM_PROMPT = """You are a healthcare fraud enforcement data analyst. You will be given the title and description of a news article. Determine if it belongs on a dashboard tracking federal/state healthcare fraud enforcement actions.
+    program_list = ", ".join(sorted(PROGRAM_TAGS))
+    area_list = ", ".join(sorted(AREA_TAGS))
+
+    SYSTEM_PROMPT = f"""You are a healthcare fraud enforcement data analyst. You will be given the title of a news article. Determine if it belongs on a dashboard tracking federal healthcare fraud enforcement actions.
 
 RELEVANT: enforcement actions, indictments, convictions, sentencings, civil settlements, audits finding improper payments, congressional investigations into fraud, investigative journalism exposing specific fraud schemes, new fraud task forces, regulatory actions against fraud.
 
 NOT RELEVANT: general healthcare policy, opinion/editorial, partisan commentary, consumer advice, items where fraud is only mentioned tangentially, general industry news, stock/business coverage unless about fraud charges.
 
 Return ONLY valid JSON:
-{
+{{
   "relevant": true/false,
   "reason": "one sentence explaining why relevant or not",
   "type": "Criminal Enforcement" or "Civil Action" or "Audit" or "Investigation" or "Investigative Report" or "Congressional Hearing" or "Legislation" or "Administrative Action",
-  "description": "Clear 1-3 sentence factual summary",
   "state": "Two-letter abbreviation or null",
   "amount": "$52M format or null",
   "amount_numeric": 52000000 or 0,
-  "tags": ["from approved list"],
+  "tags": ["from approved list — programs + vulnerable areas only"],
   "entities": ["company names"],
   "officials": ["government officials mentioned"],
   "agency": "DOJ/CMS/HHS/HHS-OIG/GAO/Congress/White House/State Agency/Media"
-}
+}}
 
-APPROVED TAGS: Medicare, Medicaid, Medicare Advantage, TRICARE, ACA, Medi-Cal, CHIP, DME Fraud, Hospice Fraud, Home Health Fraud, Lab Fraud, Genetic Testing, Telehealth, Nursing Home, Pharmacy Fraud, Hospital Fraud, Addiction Treatment, Behavioral Health, Wound Care, Opioids, Pharmaceutical, Medical Devices, Unnecessary Procedures, Adult Day Care, Housing Fraud, Research Fraud, NPI Fraud, Elder Fraud, Kickbacks, Anti-Kickback, False Claims, False Claims Act, Identity Theft, Overbilling, Upcoding, Money Laundering, Organized Crime, Risk Adjustment, National Takedown, Strike Force, Multi-State, CRUSH, Program Integrity, Improper Payments, Congressional, Whistleblower, Task Force, AI, COVID-19, Foreign Nationals"""
+APPROVED TAG LIST — use ONLY these. The dashboard's pill tags mean exactly two things:
+  (1) which PROGRAM got defrauded, and
+  (2) which vulnerable SERVICE AREA was abused.
+Do NOT include status/method/committee/company tags. Anything outside this list is discarded.
+
+Programs: {program_list}
+Vulnerable areas: {area_list}
+
+Do NOT output a description field — descriptions are not stored on the dashboard."""
 
     relevant = []
 
     for item in items:
         title = item.get("title", "")
-        desc = item.get("description", "")
-        msg = f"Title: {title}\nDescription: {desc}"
+        msg = f"Title: {title}"
 
         try:
             resp = client.messages.create(
@@ -126,11 +137,10 @@ APPROVED TAGS: Medicare, Medicaid, Medicare Advantage, TRICARE, ACA, Medi-Cal, C
             result = json.loads(text)
 
             if result.get("relevant"):
-                # Apply enrichment to the item
+                # Apply enrichment. Description is intentionally never written.
+                item.pop("description", None)
                 item["type"] = result.get("type", item.get("type"))
-                if result.get("description"):
-                    item["description"] = result["description"]
-                item["tags"] = result.get("tags", [])
+                item["tags"] = filter_tags(result.get("tags", []))
                 item["entities"] = result.get("entities", [])
                 item["officials"] = result.get("officials", [])
                 if result.get("state"):
@@ -174,9 +184,6 @@ def _create_issue(relevant, gh_token):
         enriched = r.get("enriched", {})
         body_lines.append(f"### {i}. {item.get('title', 'Untitled')}")
         body_lines.append("")
-        if enriched.get("description"):
-            body_lines.append(f"> {enriched['description']}")
-            body_lines.append("")
         body_lines.append(f"- **Source:** [{item.get('link_label', 'Link')}]({item.get('link', '')})")
         body_lines.append(f"- **Date:** {item.get('date', '?')}")
         body_lines.append(f"- **Type:** {enriched.get('type', item.get('type', '?'))}")

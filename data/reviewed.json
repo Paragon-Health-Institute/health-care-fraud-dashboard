@@ -1,374 +1,325 @@
 {
-    "items": [
-        {
-            "id": "media-2026-03-24-147184736",
-            "date": "2026-03-24",
-            "agency": "DOJ",
-            "type": "Criminal Enforcement",
-            "title": "Former Sunnyvale resident indicted in alleged $90M Medicare fraud scheme - Local News Matters",
-            "description": "A former Sunnyvale resident has been indicted in an alleged Medicare fraud scheme totaling approximately $90 million. The case represents a criminal enforcement action by federal authorities targeting fraudulent Medicare billing.",
-            "amount": "$90M",
-            "amount_numeric": 90000000,
-            "officials": [],
-            "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQYXczd2hqblBmMFVnb1NxMmplOEwwNWY4TFJRekdSTWwySDBZRXc5MnVrYWtuU2xVNXFXUzhIa0plbDJrT05CMG44d3lVRGNYalZ6NDNEelN0RlpPVE5MaFZIV1Q4VmxuSndzN19RbnlzVThDQWVpMzFiUEYxUWc0VlBTRm4?oc=5",
-            "link_label": "Google News Report",
-            "social_posts": [],
-            "tags": [
-                "Medicare",
-                "False Claims",
-                "Criminal Enforcement"
-            ],
-            "entities": [],
-            "state": "CA",
-            "source_type": "news",
-            "auto_fetched": true
-        },
-        {
-            "id": "media-2026-03-23-1582254489",
-            "date": "2026-03-23",
-            "agency": "State Agency",
-            "type": "Criminal Enforcement",
-            "title": "Conway woman arrested for Medicaid fraud - thv11.com",
-            "description": "A Conway woman was arrested on Medicaid fraud charges. The article reports on this criminal enforcement action against an individual suspected of defrauding the Medicaid program.",
-            "amount": null,
-            "amount_numeric": 0,
-            "officials": [],
-            "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPTUV1M1hoRzFna2hYR3hKZTV6SkhxTzBIc1pPQVY0TDB1T2dkM3dUTmxxUEp3RFhkVkJlVW1FazR5ejNJdnhCN3FWTDZtcmowUzQxcDBueUpGVmJLUm5JOWNFYlVMQmxkZmkzVklUZjFkRDcwekZmNE1HZEM5dUVuTnFJazJRNGlKV2xyb0pFZEh6b0tEdVpkMEozQ1dsbnM3UU05dFE2cTFVN18zbFRCVDcwd2xFZw?oc=5",
-            "link_label": "Google News Report",
-            "social_posts": [],
-            "tags": [
-                "Medicaid",
-                "False Claims"
-            ],
-            "entities": [],
-            "state": "AR",
-            "source_type": "news",
-            "auto_fetched": true
-        },
-        {
-            "id": "media-2026-03-23-1088733519",
-            "date": "2026-03-23",
-            "agency": "State Agency",
-            "type": "Civil Action",
-            "title": "Former Northeast Kingdom Human Services employee sues agency over alleged Medicaid fraud - VTDigger",
-            "description": "A former employee of Northeast Kingdom Human Services has filed a civil lawsuit against the agency alleging Medicaid fraud. The case involves potential improper billing or fraudulent claims to the Medicaid program.",
-            "amount": null,
-            "amount_numeric": 0,
-            "officials": [],
-            "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNQWgtbWxieWNCSzQ4a3VFdkhMb05STDR6SHdSWkNqRk1Ock5lU2h0LU94aDJQeXlyUDJ0SGxyWldOMV84RDJzLW9ISy1PeDBUeXVmM2QzZjB6NV9SLUZSZzJMa294TjN2RUlvOXFybFJtWi0xV0xsSUhkRi13RjJVZC1nQW5PWnNMN203d1VuUTRUS0ZlY2VwZzJyZmdOY3RjQzlQUExWZFF3N2hpYmJXU1M1TXM5cTBnTV9ZeThR?oc=5",
-            "link_label": "Google News Report",
-            "social_posts": [],
-            "tags": [
-                "Medicaid",
-                "False Claims",
-                "Whistleblower"
-            ],
-            "entities": [
-                "Northeast Kingdom Human Services"
-            ],
-            "state": "VT",
-            "source_type": "news",
-            "auto_fetched": true
-        },
-        {
-            "id": "media-2026-03-24-25035237",
-            "date": "2026-03-24",
-            "agency": "State Agency",
-            "type": "Criminal Enforcement",
-            "title": "Conway woman convicted of Medicaid fraud - KVOM 101.7",
-            "description": "A Conway woman was convicted of Medicaid fraud. The case represents a state-level criminal enforcement action against fraudulent Medicaid claims.",
-            "amount": null,
-            "amount_numeric": 0,
-            "officials": [],
-            "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5GYTA3WVpMMnRmWnpPem14UEpxLUpzcmNyZ2JBbHEzWEIwNGRWX0h4NUNoZFlRQVpHZF9ZSkdrTDJFVklQcENCNVhUNXZ5b3prQkRrazNBOTNjN1hrQlk3NGExNmliMWRDcnplTWFrNA?oc=5",
-            "link_label": "Google News Report",
-            "social_posts": [],
-            "tags": [
-                "Medicaid",
-                "False Claims"
-            ],
-            "entities": [],
-            "state": "AR",
-            "source_type": "news",
-            "auto_fetched": true
-        },
-        {
-            "id": "media-2026-03-23-1827813908",
-            "date": "2026-03-23",
-            "agency": "DOJ",
-            "type": "Criminal Enforcement",
-            "title": "Man faked Oregon lab ownership in $46M Medicare fraud scheme, feds say - OregonLive.com",
-            "description": "A man was charged in a federal scheme involving faked ownership of an Oregon laboratory that resulted in approximately $46 million in fraudulent Medicare claims. The scheme involved falsely representing ownership or control of the lab to submit improper claims to Medicare.",
-            "amount": "$46M",
-            "amount_numeric": 46000000,
-            "officials": [],
-            "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxONHI5ck82eE9FVnNQM05MRldOdlZhSDVlaDJyYWVYaGV4YWgtcUdVeDBzYndLUU5Mb05xbHVySUdvMW80VHRPRnJEM3FDOUVhbkpmM3NFMWlwRmN1UElFTVdjc2ZrQWxEZF9wZkFFdWVpQWpreEY0N1RvUmdyWWZEZk5sVDg3cGR6bWY0eFhoMHAzUDE1YnBmdHI3Nl9USFhUa3hqTTBNTDl2ZzRzZ2lzS1ptNDhWQdIBygFBVV95cUxNRGlZdkFQdHlMTldabWRaWHZzS3hndGc3SXY2dXJNN0xJQTlmTVV4bnl2cHNOUHhSZDhmdDNsUzJBTGNuT1pZT3RFUHVsVzJMejFnbmpxc0NTejFhTUdYWjVHTGtodGo2UjRlYktpVFY0Vmpza1lDYlQ2d3pJMmJMSmtnbVJSUy1neEZiay1xZkpJUVFmVDNkSTNaajlKSXJlU1VqSkllYk55X1BNUmRiSFVnZUtvTEczUUlGa1YzUHV2WWMxQWdwamZR?oc=5",
-            "link_label": "Google News Report",
-            "social_posts": [],
-            "tags": [
-                "Medicare",
-                "Lab Fraud",
-                "False Claims",
-                "False Claims Act"
-            ],
-            "entities": [
-                "Oregon laboratory"
-            ],
-            "state": "OR",
-            "source_type": "news",
-            "auto_fetched": true
-        },
-        {
-            "id": "media-2026-03-23-1855257846",
-            "date": "2026-03-23",
-            "agency": "DOJ",
-            "type": "Criminal Enforcement",
-            "title": "Wisconsin woman sentenced to 5 years for $2.5M Medicaid fraud scheme - WFRV Local 5",
-            "description": "A Wisconsin woman was sentenced to 5 years in federal prison for her role in a Medicaid fraud scheme totaling $2.5 million. The case represents a criminal enforcement action against healthcare fraud.",
-            "amount": "$2.5M",
-            "amount_numeric": 2500000,
-            "officials": [],
-            "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNeWdVS1F2UDUzcDNJZ0tnaVlQUGY1U3NGaXNJNFBLWFp3SVdTME94azBSaXgzV01UMkxtR3BodjVyR3RNVFJMNlUtYnhHa3JkRWctallWY1BBbjJRczktYzM1cmlTaDZ2d0hDLTFQRUYzYmFTR3VIQjlsaS1pVWkzVFRSdTRoUnI2amF1bTd3bndHMVFUc1gxSFUzckItMHVZUkxMR3dSZFR3aVdjZDM3UzkzSkvSAboBQVVfeXFMTXpZMV9OSlozSFFsNVdnRU0zYzg3eUNQWGJuQl9UNWhDS0trR3F1WVBqWlZodlgyMWlDdDZuLUFFbDVpMHVZaUN0VkhRS3MwUDhwY1Rya0w1WW1TZlJRUEwycjk1SHk3dklnWVkya1FLTkNLQS02ZHc0MUdGLU5nRzByTUxCTWNOX1NnMFkyWThueHducG5YU0Y4YndoMUhtVGc3ZGJpV3lRVFVvVEJCdUtJWm4yaXRmdDRB?oc=5",
-            "link_label": "Google News Report",
-            "social_posts": [],
-            "tags": [
-                "Medicaid",
-                "False Claims",
-                "Criminal Enforcement"
-            ],
-            "entities": [],
-            "state": "WI",
-            "source_type": "news",
-            "auto_fetched": true
-        },
-        {
-            "id": "media-2026-03-24-1665051527",
-            "date": "2026-03-24",
-            "agency": "DOJ",
-            "type": "Criminal Enforcement",
-            "title": "LA Woman to be Sentenced for Role in $23M Medicare Fraud - MyNewsLA.com",
-            "description": "A Louisiana woman is scheduled to be sentenced for her role in a $23 million Medicare fraud scheme. This represents a criminal enforcement action by federal authorities against healthcare fraud.",
-            "amount": "$23M",
-            "amount_numeric": 23000000,
-            "officials": [],
-            "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNSmdBeGk3NHkxWTBVUmlfNHRWM2kwVnVtY004YXdNX2lPSFE1X0NIdXJfUmlnT2RVZ1U5MWYtTXZCbnR5OVpWS3JvRFRReG5TeXhjMU9fblFjeXVUMjhuNVpQdHM5bGZhcVZSMlZESDFwUnNoVkVYM3pHRTJSOVduOHJaaFJ0S0ZUYzd0YVNZZndXbFRzZzBVM2pB?oc=5",
-            "link_label": "Google News Report",
-            "social_posts": [],
-            "tags": [
-                "Medicare",
-                "False Claims",
-                "Criminal Enforcement"
-            ],
-            "entities": [],
-            "state": "LA",
-            "source_type": "news",
-            "auto_fetched": true
-        },
-        {
-            "id": "media-2026-03-20-1451550970",
-            "date": "2026-03-20",
-            "agency": "HHS",
-            "type": "Investigation",
-            "title": "Oz Escalates Medicaid Fraud Claims Against States After Focus on Minnesota - KFF Health News",
-            "description": "Dr. Mehmet Oz, likely in an official capacity related to healthcare oversight, has escalated claims of Medicaid fraud against states, with particular focus on Minnesota. This represents ongoing scrutiny of state-level Medicaid program integrity.",
-            "amount": null,
-            "amount_numeric": 0,
-            "officials": [
-                "Dr. Mehmet Oz"
-            ],
-            "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNNHVfX2ZHNG5EWVNidDkzMXlHZTFSNHlyaVhGVVl3bDJoSjQ2S2dLX2R4UnNjU1k3RXNkSlB5bUp1OTlXY2dOTTFGbVpMQURoZkN1NW4wdllDZTMtM0lEYUY4NjhleWF4dEVkVEdjUEtHLVdyWThOcHd6N2FCcktMZVFCTnc2azh3dG5LS21uMXc4WW9ndjVtRk5xMHFSQUJaZ3hBTHNEdw?oc=5",
-            "link_label": "Google News Report",
-            "social_posts": [],
-            "tags": [
-                "Medicaid",
-                "Fraud",
-                "Program Integrity",
-                "Multi-State"
-            ],
-            "entities": [
-                "States (Minnesota focus)"
-            ],
-            "state": "MN",
-            "source_type": "news",
-            "auto_fetched": true
-        },
-        {
-            "id": "media-2026-03-23-1104422424",
-            "date": "2026-03-23",
-            "agency": "HHS",
-            "type": "Administrative Action",
-            "title": "Feds Approve Minnesota's Plan To Combat Medicaid Fraud - Law360",
-            "description": "Federal authorities approved Minnesota's plan to combat Medicaid fraud, representing a state-level enforcement initiative backed by federal oversight.",
-            "amount": null,
-            "amount_numeric": 0,
-            "officials": [],
-            "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE12QnM3S0ZlWkNZcm5BQmJveEU5aWJtaTc4RWpRa3h3SGJ1N0dFY0R4NmhrQUd1TUdRLUNwaG5XcUZUVmpua1ExcFdsVzJfdzUw0gFWQVVfeXFMUHY4NEJCb0lyNlRiQXF4RGNJblVqQ3JvUFBHUzN2eDlvZHBuQTVVa0FPeW1Pcmh0aFFKODdDRlNLSjQ2cTVleGNNeWNScXg4SXJCdDhTa1E?oc=5",
-            "link_label": "Google News Report",
-            "social_posts": [],
-            "tags": [
-                "Medicaid",
-                "Program Integrity",
-                "Administrative Action"
-            ],
-            "entities": [
-                "State of Minnesota"
-            ],
-            "state": "MN",
-            "source_type": "news",
-            "auto_fetched": true
-        },
-        {
-            "id": "media-2026-03-19-670358537",
-            "date": "2026-03-19",
-            "agency": "CMS",
-            "type": "Administrative Action",
-            "title": "CMS seeks to expand tech-driven fight against Medicaid fraud - Nextgov/FCW",
-            "description": "CMS is seeking to expand its use of technology-driven approaches to identify and combat Medicaid fraud, representing an enhancement to federal fraud detection and enforcement capabilities.",
-            "amount": null,
-            "amount_numeric": 0,
-            "officials": [],
-            "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPUk8wWUxlbWRBSVJvREhGZVJZRUkzaExpYkRKVENraUtEN1FON0pzWU5qY2dNV2dQaU8xclJaUFZXWlB1QWRJRGdJVkJVRDNIcTMySDlqaUNsQ2tTaXB3dkVxRXZzdGR0dkFja1F1VVNJREJKbnJ6OFQwdFJxUFZyU2Z3OHhSdGVMVkY3b3NfN0RXeU9mVUsxWHN6dURldG1RWlp0a0hJdUhOUkVjUV9fTVlBSHRQTzg?oc=5",
-            "link_label": "Google News Report",
-            "social_posts": [],
-            "tags": [
-                "Medicaid",
-                "Program Integrity",
-                "AI",
-                "Administrative Action"
-            ],
-            "entities": [
-                "CMS"
-            ],
-            "state": null,
-            "source_type": "news",
-            "auto_fetched": true
-        },
-        {
-            "id": "media-2026-03-23-117725343",
-            "date": "2026-03-23",
-            "agency": "DOJ",
-            "type": "Criminal Enforcement",
-            "title": "Prenatal services company operator sentenced to five years in prison for Medicaid fraud - BizTimes - Milwaukee Business News",
-            "description": "A prenatal services company operator was sentenced to five years in prison for Medicaid fraud. The case involves fraudulent billing to the Medicaid program for prenatal services.",
-            "amount": null,
-            "amount_numeric": 0,
-            "officials": [],
-            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQNFJkSkRvM3E3VTB3MENOdnUtMlBpN0FGTVdsVVhRSzBWaEFPc25nLVhxTTlEcUJYQUtRajU1TUdWTVFoMFBfeXFlOUk4UGN2MjlLdnpLWlJPLWNadmlQMVAxeTRneTd2YWlwVk45c3J2MXRzc3FZYnZwVU9WZEJMQUJQbmdOR1NBdThoMTlyMERoWjRNLTZpR3ZCS004Qm9n0gGoAUFVX3lxTE4walh5c1hQWEE4dmtRbTNYTTYzd1RRTnRqZUFNZDFDVi1CV2FyVTJjem52cnUtQUE4QmFOU1ViLTVfTER1alExLUZPa01QdzNDNVRtQVNMMy1scWU5OG9tU2ptLXM1Qmo5UklSdW5IM3l1VlBzSUM1MlU2SDBKSi1DSXBJYzNRTDduYmVad2dTYjN5SDVjY1ZHMGMzRUpPbUY3czVSY094eA?oc=5",
-            "link_label": "Google News Report",
-            "social_posts": [],
-            "tags": [
-                "Medicaid",
-                "False Claims",
-                "Prenatal Services"
-            ],
-            "entities": [
-                "Prenatal services company"
-            ],
-            "state": "WI",
-            "source_type": "news",
-            "auto_fetched": true
-        },
-        {
-            "id": "media-2026-03-17-1650456504",
-            "date": "2026-03-17",
-            "agency": "Congress",
-            "type": "Congressional Hearing",
-            "title": "O&I Subcommittee: Protecting Patients and Safeguarding Taxpayer Dollars: The Role of CMS in Combatting Medicare and Medicaid Fraud - House Committee on Energy and Commerce (.gov)",
-            "description": "House Committee on Energy and Commerce Oversight and Investigations Subcommittee hearing focused on CMS's efforts to protect patients and safeguard taxpayer dollars by combating Medicare and Medicaid fraud.",
-            "amount": null,
-            "amount_numeric": 0,
-            "officials": [],
-            "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPSTJFNm5na3F1QmRMY3pSV3ZRNVExWnJaVUY5bDJrdkhJbnVwTWZybWRaZWVkbDhFSTJFZERTWEpmTk9qakhUblVnRVZYYjRGeVdOTS0wSlN2MEpnaWRLcTJ3SDNnZ1ItdlBTRkRwX00xWVVpb2FaSTRaV1UxMVUydGdrRnZDdmFzejFhRW1hZkJKWHdlYTJ0dDVLRWR3Nnc0bzVNalRWLU55RWNaYTI3SzFIdzBsamd2Z2lhdC1ZcFlUQnktRU1PYzJOQUVCUnpzOExuYWRvd3NHNlk2ZG1IOVpud01ZblpRYVZ4ekRhaFpqeHViV1BxMkZQOEpJR3c0bWc?oc=5",
-            "link_label": "Google News Report",
-            "social_posts": [],
-            "tags": [
-                "Medicare",
-                "Medicaid",
-                "Congressional",
-                "Program Integrity",
-                "False Claims"
-            ],
-            "entities": [
-                "Centers for Medicare & Medicaid Services (CMS)"
-            ],
-            "state": null,
-            "source_type": "news",
-            "auto_fetched": true
-        },
-        {
-            "id": "media-2026-03-21-418660904",
-            "date": "2026-03-21",
-            "agency": "Media",
-            "type": "Criminal Enforcement",
-            "title": "St. Louis County woman admits to $174K home healthcare fraud scheme - FOX 2",
-            "description": "A St. Louis County woman admitted to a home healthcare fraud scheme involving $174,000 in fraudulent billing or improper payments to healthcare programs.",
-            "amount": "$174K",
-            "amount_numeric": 174000,
-            "officials": [],
-            "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPNUpMVkRrMFhIc25hZzZPOTVfN01VYUpsaUFZVzhiZTdPeWVIemZ0NTJ4R2wwR3NtSmxvWl9hM25iY3pjVjhrVUNFQ193T2JEX1IzVF9FMHJsTHNXQjNVT0FNVFZCMVpnWUluNFBhZzdSRHNRa2tMbGNtMzJUNFFyM2poMXliLWN5UjJqVjNoZjk2dEVPcHpwUmVNYXE3Zk9iVmfSAacBQVVfeXFMUGpjc3VjelJiSTJGUzQ2NGpLRGx3eG00dzZZYWtYdVlYaVhEMnZxRGlJYnd2U0lDSnJ1WkE0b2dxUUNqRnZyQzZWbHVmNG1tZ0pHQk9sVEo1M2dBWUNIT0dRRmN2aG5Bc21EMHAtQlA4U21BckpKUHl4bVg2ZU1GeUVtM1lKYTBjemRpSExFTHBzNTVBVXZidmJFTUtJM1BsVU10cm1FYXM?oc=5",
-            "link_label": "Google News Report",
-            "social_posts": [],
-            "tags": [
-                "Home Health Fraud",
-                "False Claims",
-                "Criminal Enforcement"
-            ],
-            "entities": [
-                "St. Louis County woman"
-            ],
-            "state": "MO",
-            "source_type": "news",
-            "auto_fetched": true
-        },
-        {
-            "id": "media-2026-03-23-1998531355",
-            "date": "2026-03-23",
-            "agency": "State Agency",
-            "type": "Criminal Enforcement",
-            "title": "Attorney General Griffin reports Conway woman arrested for Medicaid fraud… - KVOM 101.7",
-            "description": "A Conway woman was arrested for Medicaid fraud according to Attorney General Griffin. This represents a criminal enforcement action against an individual accused of defrauding the Medicaid program.",
-            "amount": null,
-            "amount_numeric": 0,
-            "officials": [
-                "Attorney General Griffin"
-            ],
-            "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTVVxN1ZsM01QN1dkbHZ0UHpfT1QtY0pKSF9CTm1Sa0ItYXotR3RPcGZGeXZZYzU4VUpzd21uVHlSbnVKWVF3VXY4LWZmTUlQLXZVSF9OQlk0NkNHUktSamZaSjB0TWdZNF9TQlZTMUVmZURzVmZmc3BraTdxOG8wSDJBVFU2ZG81RWU5WkRfSnpXeE16aDhrRHZiOA?oc=5",
-            "link_label": "Google News Report",
-            "social_posts": [],
-            "tags": [
-                "Medicaid",
-                "Criminal Enforcement"
-            ],
-            "entities": [],
-            "state": "AR",
-            "source_type": "news",
-            "auto_fetched": true
-        },
-        {
-            "id": "media-2026-03-23-302211130",
-            "date": "2026-03-23",
-            "agency": "DOJ",
-            "type": "Criminal Enforcement",
-            "title": "Florida doctor pleads guilty in $3.1M Medicare fraud scheme - WFTV",
-            "description": "A Florida doctor pleaded guilty in a Medicare fraud scheme involving $3.1 million in fraudulent billings. This criminal enforcement action represents a concluded prosecution in a healthcare fraud case.",
-            "amount": "$3.1M",
-            "amount_numeric": 3100000,
-            "officials": [],
-            "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPQXVoeEc5ZW1zU19OejBZd3Z5VVdLUUdqM2NncVFEUFlQZ0R5Z2d4ZVdPTU5DUVh5UGdaUzBJZE1UcmxlU2JnekY5Y2E1c0xYaTRTUExSSG01WjJ6eEVjTUswT201N092UUxJeVlWRGx0QzRBWDZFSzdFU1VyYWVxeFVSZkNJRncxMWhoVktzQlpLcjVnVVVFTmRYRWdPS2trME9RVDZDQ3VaSkJndTVsc0M3OURuczTSAcsBQVVfeXFMUDEzVVdnRUhMZWQzTjBERTN3MGJaSHJTVnZ6eUZKbFNuSXZSX2VLam5aT21zTGlsc0xtZm1HNjdrbjNTN1JJRnZFaDhOMVV0b3BWQkEyUnh5d2x2YlV2RHZ4WXQtUENwOXdNM2cxMnhJT3gwYUNaRDJLNURkSC1La0c5U2FxbFEwSkhvMmp5OHRpSm1nYklUSURwSkhLSV9DNWdTSjFCdHZPdEd3SDk1ZWxocTYwSDkwbG9oLThEdXk4d3lvSU5qSkx2RUE?oc=5",
-            "link_label": "Google News Report",
-            "social_posts": [],
-            "tags": [
-                "Medicare",
-                "False Claims",
-                "Overbilling",
-                "Criminal Enforcement"
-            ],
-            "entities": [
-                "Florida doctor"
-            ],
-            "state": "FL",
-            "source_type": "news",
-            "auto_fetched": true
-        }
-    ]
+  "items": [
+    {
+      "id": "media-2026-03-24-147184736",
+      "date": "2026-03-24",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Former Sunnyvale resident indicted in alleged $90M Medicare fraud scheme - Local News Matters",
+      "amount": "$90M",
+      "amount_numeric": 90000000,
+      "officials": [],
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQYXczd2hqblBmMFVnb1NxMmplOEwwNWY4TFJRekdSTWwySDBZRXc5MnVrYWtuU2xVNXFXUzhIa0plbDJrT05CMG44d3lVRGNYalZ6NDNEelN0RlpPVE5MaFZIV1Q4VmxuSndzN19RbnlzVThDQWVpMzFiUEYxUWc0VlBTRm4?oc=5",
+      "link_label": "Google News Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "news",
+      "auto_fetched": true
+    },
+    {
+      "id": "media-2026-03-23-1582254489",
+      "date": "2026-03-23",
+      "agency": "State Agency",
+      "type": "Criminal Enforcement",
+      "title": "Conway woman arrested for Medicaid fraud - thv11.com",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPTUV1M1hoRzFna2hYR3hKZTV6SkhxTzBIc1pPQVY0TDB1T2dkM3dUTmxxUEp3RFhkVkJlVW1FazR5ejNJdnhCN3FWTDZtcmowUzQxcDBueUpGVmJLUm5JOWNFYlVMQmxkZmkzVklUZjFkRDcwekZmNE1HZEM5dUVuTnFJazJRNGlKV2xyb0pFZEh6b0tEdVpkMEozQ1dsbnM3UU05dFE2cTFVN18zbFRCVDcwd2xFZw?oc=5",
+      "link_label": "Google News Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "AR",
+      "source_type": "news",
+      "auto_fetched": true
+    },
+    {
+      "id": "media-2026-03-23-1088733519",
+      "date": "2026-03-23",
+      "agency": "State Agency",
+      "type": "Civil Action",
+      "title": "Former Northeast Kingdom Human Services employee sues agency over alleged Medicaid fraud - VTDigger",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNQWgtbWxieWNCSzQ4a3VFdkhMb05STDR6SHdSWkNqRk1Ock5lU2h0LU94aDJQeXlyUDJ0SGxyWldOMV84RDJzLW9ISy1PeDBUeXVmM2QzZjB6NV9SLUZSZzJMa294TjN2RUlvOXFybFJtWi0xV0xsSUhkRi13RjJVZC1nQW5PWnNMN203d1VuUTRUS0ZlY2VwZzJyZmdOY3RjQzlQUExWZFF3N2hpYmJXU1M1TXM5cTBnTV9ZeThR?oc=5",
+      "link_label": "Google News Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [
+        "Northeast Kingdom Human Services"
+      ],
+      "state": "VT",
+      "source_type": "news",
+      "auto_fetched": true
+    },
+    {
+      "id": "media-2026-03-24-25035237",
+      "date": "2026-03-24",
+      "agency": "State Agency",
+      "type": "Criminal Enforcement",
+      "title": "Conway woman convicted of Medicaid fraud - KVOM 101.7",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5GYTA3WVpMMnRmWnpPem14UEpxLUpzcmNyZ2JBbHEzWEIwNGRWX0h4NUNoZFlRQVpHZF9ZSkdrTDJFVklQcENCNVhUNXZ5b3prQkRrazNBOTNjN1hrQlk3NGExNmliMWRDcnplTWFrNA?oc=5",
+      "link_label": "Google News Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "AR",
+      "source_type": "news",
+      "auto_fetched": true
+    },
+    {
+      "id": "media-2026-03-23-1827813908",
+      "date": "2026-03-23",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Man faked Oregon lab ownership in $46M Medicare fraud scheme, feds say - OregonLive.com",
+      "amount": "$46M",
+      "amount_numeric": 46000000,
+      "officials": [],
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxONHI5ck82eE9FVnNQM05MRldOdlZhSDVlaDJyYWVYaGV4YWgtcUdVeDBzYndLUU5Mb05xbHVySUdvMW80VHRPRnJEM3FDOUVhbkpmM3NFMWlwRmN1UElFTVdjc2ZrQWxEZF9wZkFFdWVpQWpreEY0N1RvUmdyWWZEZk5sVDg3cGR6bWY0eFhoMHAzUDE1YnBmdHI3Nl9USFhUa3hqTTBNTDl2ZzRzZ2lzS1ptNDhWQdIBygFBVV95cUxNRGlZdkFQdHlMTldabWRaWHZzS3hndGc3SXY2dXJNN0xJQTlmTVV4bnl2cHNOUHhSZDhmdDNsUzJBTGNuT1pZT3RFUHVsVzJMejFnbmpxc0NTejFhTUdYWjVHTGtodGo2UjRlYktpVFY0Vmpza1lDYlQ2d3pJMmJMSmtnbVJSUy1neEZiay1xZkpJUVFmVDNkSTNaajlKSXJlU1VqSkllYk55X1BNUmRiSFVnZUtvTEczUUlGa1YzUHV2WWMxQWdwamZR?oc=5",
+      "link_label": "Google News Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [
+        "Oregon laboratory"
+      ],
+      "state": "OR",
+      "source_type": "news",
+      "auto_fetched": true
+    },
+    {
+      "id": "media-2026-03-23-1855257846",
+      "date": "2026-03-23",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Wisconsin woman sentenced to 5 years for $2.5M Medicaid fraud scheme - WFRV Local 5",
+      "amount": "$2.5M",
+      "amount_numeric": 2500000,
+      "officials": [],
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNeWdVS1F2UDUzcDNJZ0tnaVlQUGY1U3NGaXNJNFBLWFp3SVdTME94azBSaXgzV01UMkxtR3BodjVyR3RNVFJMNlUtYnhHa3JkRWctallWY1BBbjJRczktYzM1cmlTaDZ2d0hDLTFQRUYzYmFTR3VIQjlsaS1pVWkzVFRSdTRoUnI2amF1bTd3bndHMVFUc1gxSFUzckItMHVZUkxMR3dSZFR3aVdjZDM3UzkzSkvSAboBQVVfeXFMTXpZMV9OSlozSFFsNVdnRU0zYzg3eUNQWGJuQl9UNWhDS0trR3F1WVBqWlZodlgyMWlDdDZuLUFFbDVpMHVZaUN0VkhRS3MwUDhwY1Rya0w1WW1TZlJRUEwycjk1SHk3dklnWVkya1FLTkNLQS02ZHc0MUdGLU5nRzByTUxCTWNOX1NnMFkyWThueHducG5YU0Y4YndoMUhtVGc3ZGJpV3lRVFVvVEJCdUtJWm4yaXRmdDRB?oc=5",
+      "link_label": "Google News Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "WI",
+      "source_type": "news",
+      "auto_fetched": true
+    },
+    {
+      "id": "media-2026-03-24-1665051527",
+      "date": "2026-03-24",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "LA Woman to be Sentenced for Role in $23M Medicare Fraud - MyNewsLA.com",
+      "amount": "$23M",
+      "amount_numeric": 23000000,
+      "officials": [],
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNSmdBeGk3NHkxWTBVUmlfNHRWM2kwVnVtY004YXdNX2lPSFE1X0NIdXJfUmlnT2RVZ1U5MWYtTXZCbnR5OVpWS3JvRFRReG5TeXhjMU9fblFjeXVUMjhuNVpQdHM5bGZhcVZSMlZESDFwUnNoVkVYM3pHRTJSOVduOHJaaFJ0S0ZUYzd0YVNZZndXbFRzZzBVM2pB?oc=5",
+      "link_label": "Google News Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "LA",
+      "source_type": "news",
+      "auto_fetched": true
+    },
+    {
+      "id": "media-2026-03-20-1451550970",
+      "date": "2026-03-20",
+      "agency": "HHS",
+      "type": "Investigation",
+      "title": "Oz Escalates Medicaid Fraud Claims Against States After Focus on Minnesota - KFF Health News",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [
+        "Dr. Mehmet Oz"
+      ],
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNNHVfX2ZHNG5EWVNidDkzMXlHZTFSNHlyaVhGVVl3bDJoSjQ2S2dLX2R4UnNjU1k3RXNkSlB5bUp1OTlXY2dOTTFGbVpMQURoZkN1NW4wdllDZTMtM0lEYUY4NjhleWF4dEVkVEdjUEtHLVdyWThOcHd6N2FCcktMZVFCTnc2azh3dG5LS21uMXc4WW9ndjVtRk5xMHFSQUJaZ3hBTHNEdw?oc=5",
+      "link_label": "Google News Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [
+        "States (Minnesota focus)"
+      ],
+      "state": "MN",
+      "source_type": "news",
+      "auto_fetched": true
+    },
+    {
+      "id": "media-2026-03-23-1104422424",
+      "date": "2026-03-23",
+      "agency": "HHS",
+      "type": "Administrative Action",
+      "title": "Feds Approve Minnesota's Plan To Combat Medicaid Fraud - Law360",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE12QnM3S0ZlWkNZcm5BQmJveEU5aWJtaTc4RWpRa3h3SGJ1N0dFY0R4NmhrQUd1TUdRLUNwaG5XcUZUVmpua1ExcFdsVzJfdzUw0gFWQVVfeXFMUHY4NEJCb0lyNlRiQXF4RGNJblVqQ3JvUFBHUzN2eDlvZHBuQTVVa0FPeW1Pcmh0aFFKODdDRlNLSjQ2cTVleGNNeWNScXg4SXJCdDhTa1E?oc=5",
+      "link_label": "Google News Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [
+        "State of Minnesota"
+      ],
+      "state": "MN",
+      "source_type": "news",
+      "auto_fetched": true
+    },
+    {
+      "id": "media-2026-03-19-670358537",
+      "date": "2026-03-19",
+      "agency": "CMS",
+      "type": "Administrative Action",
+      "title": "CMS seeks to expand tech-driven fight against Medicaid fraud - Nextgov/FCW",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPUk8wWUxlbWRBSVJvREhGZVJZRUkzaExpYkRKVENraUtEN1FON0pzWU5qY2dNV2dQaU8xclJaUFZXWlB1QWRJRGdJVkJVRDNIcTMySDlqaUNsQ2tTaXB3dkVxRXZzdGR0dkFja1F1VVNJREJKbnJ6OFQwdFJxUFZyU2Z3OHhSdGVMVkY3b3NfN0RXeU9mVUsxWHN6dURldG1RWlp0a0hJdUhOUkVjUV9fTVlBSHRQTzg?oc=5",
+      "link_label": "Google News Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [
+        "CMS"
+      ],
+      "state": null,
+      "source_type": "news",
+      "auto_fetched": true
+    },
+    {
+      "id": "media-2026-03-23-117725343",
+      "date": "2026-03-23",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Prenatal services company operator sentenced to five years in prison for Medicaid fraud - BizTimes - Milwaukee Business News",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQNFJkSkRvM3E3VTB3MENOdnUtMlBpN0FGTVdsVVhRSzBWaEFPc25nLVhxTTlEcUJYQUtRajU1TUdWTVFoMFBfeXFlOUk4UGN2MjlLdnpLWlJPLWNadmlQMVAxeTRneTd2YWlwVk45c3J2MXRzc3FZYnZwVU9WZEJMQUJQbmdOR1NBdThoMTlyMERoWjRNLTZpR3ZCS004Qm9n0gGoAUFVX3lxTE4walh5c1hQWEE4dmtRbTNYTTYzd1RRTnRqZUFNZDFDVi1CV2FyVTJjem52cnUtQUE4QmFOU1ViLTVfTER1alExLUZPa01QdzNDNVRtQVNMMy1scWU5OG9tU2ptLXM1Qmo5UklSdW5IM3l1VlBzSUM1MlU2SDBKSi1DSXBJYzNRTDduYmVad2dTYjN5SDVjY1ZHMGMzRUpPbUY3czVSY094eA?oc=5",
+      "link_label": "Google News Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [
+        "Prenatal services company"
+      ],
+      "state": "WI",
+      "source_type": "news",
+      "auto_fetched": true
+    },
+    {
+      "id": "media-2026-03-17-1650456504",
+      "date": "2026-03-17",
+      "agency": "Congress",
+      "type": "Congressional Hearing",
+      "title": "O&I Subcommittee: Protecting Patients and Safeguarding Taxpayer Dollars: The Role of CMS in Combatting Medicare and Medicaid Fraud - House Committee on Energy and Commerce (.gov)",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPSTJFNm5na3F1QmRMY3pSV3ZRNVExWnJaVUY5bDJrdkhJbnVwTWZybWRaZWVkbDhFSTJFZERTWEpmTk9qakhUblVnRVZYYjRGeVdOTS0wSlN2MEpnaWRLcTJ3SDNnZ1ItdlBTRkRwX00xWVVpb2FaSTRaV1UxMVUydGdrRnZDdmFzejFhRW1hZkJKWHdlYTJ0dDVLRWR3Nnc0bzVNalRWLU55RWNaYTI3SzFIdzBsamd2Z2lhdC1ZcFlUQnktRU1PYzJOQUVCUnpzOExuYWRvd3NHNlk2ZG1IOVpud01ZblpRYVZ4ekRhaFpqeHViV1BxMkZQOEpJR3c0bWc?oc=5",
+      "link_label": "Google News Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [
+        "Centers for Medicare & Medicaid Services (CMS)"
+      ],
+      "state": null,
+      "source_type": "news",
+      "auto_fetched": true
+    },
+    {
+      "id": "media-2026-03-21-418660904",
+      "date": "2026-03-21",
+      "agency": "Media",
+      "type": "Criminal Enforcement",
+      "title": "St. Louis County woman admits to $174K home healthcare fraud scheme - FOX 2",
+      "amount": "$174K",
+      "amount_numeric": 174000,
+      "officials": [],
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPNUpMVkRrMFhIc25hZzZPOTVfN01VYUpsaUFZVzhiZTdPeWVIemZ0NTJ4R2wwR3NtSmxvWl9hM25iY3pjVjhrVUNFQ193T2JEX1IzVF9FMHJsTHNXQjNVT0FNVFZCMVpnWUluNFBhZzdSRHNRa2tMbGNtMzJUNFFyM2poMXliLWN5UjJqVjNoZjk2dEVPcHpwUmVNYXE3Zk9iVmfSAacBQVVfeXFMUGpjc3VjelJiSTJGUzQ2NGpLRGx3eG00dzZZYWtYdVlYaVhEMnZxRGlJYnd2U0lDSnJ1WkE0b2dxUUNqRnZyQzZWbHVmNG1tZ0pHQk9sVEo1M2dBWUNIT0dRRmN2aG5Bc21EMHAtQlA4U21BckpKUHl4bVg2ZU1GeUVtM1lKYTBjemRpSExFTHBzNTVBVXZidmJFTUtJM1BsVU10cm1FYXM?oc=5",
+      "link_label": "Google News Report",
+      "social_posts": [],
+      "tags": [],
+      "entities": [
+        "St. Louis County woman"
+      ],
+      "state": "MO",
+      "source_type": "news",
+      "auto_fetched": true
+    },
+    {
+      "id": "media-2026-03-23-1998531355",
+      "date": "2026-03-23",
+      "agency": "State Agency",
+      "type": "Criminal Enforcement",
+      "title": "Attorney General Griffin reports Conway woman arrested for Medicaid fraud… - KVOM 101.7",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [
+        "Attorney General Griffin"
+      ],
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTVVxN1ZsM01QN1dkbHZ0UHpfT1QtY0pKSF9CTm1Sa0ItYXotR3RPcGZGeXZZYzU4VUpzd21uVHlSbnVKWVF3VXY4LWZmTUlQLXZVSF9OQlk0NkNHUktSamZaSjB0TWdZNF9TQlZTMUVmZURzVmZmc3BraTdxOG8wSDJBVFU2ZG81RWU5WkRfSnpXeE16aDhrRHZiOA?oc=5",
+      "link_label": "Google News Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "AR",
+      "source_type": "news",
+      "auto_fetched": true
+    },
+    {
+      "id": "media-2026-03-23-302211130",
+      "date": "2026-03-23",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Florida doctor pleads guilty in $3.1M Medicare fraud scheme - WFTV",
+      "amount": "$3.1M",
+      "amount_numeric": 3100000,
+      "officials": [],
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPQXVoeEc5ZW1zU19OejBZd3Z5VVdLUUdqM2NncVFEUFlQZ0R5Z2d4ZVdPTU5DUVh5UGdaUzBJZE1UcmxlU2JnekY5Y2E1c0xYaTRTUExSSG01WjJ6eEVjTUswT201N092UUxJeVlWRGx0QzRBWDZFSzdFU1VyYWVxeFVSZkNJRncxMWhoVktzQlpLcjVnVVVFTmRYRWdPS2trME9RVDZDQ3VaSkJndTVsc0M3OURuczTSAcsBQVVfeXFMUDEzVVdnRUhMZWQzTjBERTN3MGJaSHJTVnZ6eUZKbFNuSXZSX2VLam5aT21zTGlsc0xtZm1HNjdrbjNTN1JJRnZFaDhOMVV0b3BWQkEyUnh5d2x2YlV2RHZ4WXQtUENwOXdNM2cxMnhJT3gwYUNaRDJLNURkSC1La0c5U2FxbFEwSkhvMmp5OHRpSm1nYklUSURwSkhLSV9DNWdTSjFCdHZPdEd3SDk1ZWxocTYwSDkwbG9oLThEdXk4d3lvSU5qSkx2RUE?oc=5",
+      "link_label": "Google News Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [
+        "Florida doctor"
+      ],
+      "state": "FL",
+      "source_type": "news",
+      "auto_fetched": true
+    }
+  ]
 }

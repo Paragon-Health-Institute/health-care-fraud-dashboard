@@ -156,10 +156,6 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
 .month-divider { position: relative; }
 .action-card-col { position: relative; }
 .card-title { font-family: 'Bona Nova', Georgia, serif; font-size: 1rem; font-weight: 700; line-height: 1.35; margin: 0; color: var(--almost-black); }
-.card-desc { font-size: 0.845rem; color: var(--concrete); line-height: 1.55; margin: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-.card-desc.expanded { display: block; -webkit-line-clamp: unset; overflow: visible; }
-.btn-read-more { background: none; border: none; color: var(--concrete); font-size: 0.78rem; font-weight: 600; padding: 0; cursor: pointer; font-family: 'Public Sans', sans-serif; display: block; text-align: left; }
-.btn-read-more:hover { color: var(--almost-black); text-decoration: underline; }
 .card-meta { display: flex; flex-direction: column; gap: 5px; font-size: 0.82rem; }
 .card-amount { color: var(--paragon-blue); font-weight: 700; font-size: 0.9rem; }
 .card-officials { color: var(--atlantic); font-weight: 600; }
@@ -428,8 +424,6 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
         <span class="card-date"></span>
       </div>
       <h3 class="card-title"></h3>
-      <p class="card-desc"></p>
-      <button class="btn-read-more d-none" type="button"></button>
       <div class="card-meta">
         <div class="card-amount d-none"><span></span></div>
         <div class="card-state d-none"><i class="fa-solid fa-location-dot me-1"></i><span></span></div>
@@ -604,19 +598,6 @@ function appendCards(count, view) {
     typeBadge.classList.add(typeClass(action.type));
     col.querySelector('.card-date').textContent = formatDate(action.date);
     col.querySelector('.card-title').textContent = action.title || 'Untitled';
-    const descEl = col.querySelector('.card-desc');
-    descEl.textContent = action.description || '';
-    const readMoreBtn = col.querySelector('.btn-read-more');
-    requestAnimationFrame(() => {
-      if (descEl.scrollHeight > descEl.clientHeight + 1) {
-        readMoreBtn.classList.remove('d-none');
-        readMoreBtn.textContent = 'Read more';
-        readMoreBtn.addEventListener('click', () => {
-          const isExpanded = descEl.classList.toggle('expanded');
-          readMoreBtn.textContent = isExpanded ? 'Show less' : 'Read more';
-        });
-      }
-    });
     if (action.amount) {
       const el = col.querySelector('.card-amount');
       el.classList.remove('d-none');
@@ -714,7 +695,7 @@ function applyFilters() {
       if (!allTags.includes(activeTag)) return false;
     }
     if (search) {
-      const hay = [a.title, a.description, a.agency, a.type,
+      const hay = [a.title, a.agency, a.type,
                    (a.tags||[]).join(' '), (a.entities||[]).join(' '),
                    (a.officials||[]).join(' '),
                    (a.social_posts||[]).map(p=>p.post_text).join(' ')].join(' ').toLowerCase();
@@ -756,7 +737,7 @@ function applyOversightFilters() {
       if (!allTags.includes(activeTag)) return false;
     }
     if (search) {
-      const hay = [a.title, a.description, a.agency, a.type,
+      const hay = [a.title, a.agency, a.type,
                    (a.tags||[]).join(' '), (a.entities||[]).join(' '),
                    (a.officials||[]).join(' '),
                    (a.social_posts||[]).map(p=>p.post_text).join(' ')].join(' ').toLowerCase();
@@ -953,7 +934,6 @@ function showStatDetail(filterId) {
             '<div style="min-width:0;">' +
               '<div style="font-weight:600;font-family:\'Bona Nova\',Georgia,serif;font-size:0.95rem;">' + escHtml(a.title||'Untitled') + '</div>' +
               '<div style="font-size:0.78rem;color:#888;margin-top:3px;">' + formatDate(a.date) + '&ensp;&bull;&ensp;' + escHtml(a.agency||'') + '&ensp;&bull;&ensp;' + escHtml(a.type||'') + '</div>' +
-              (a.description ? '<div style="font-size:0.82rem;color:#555;margin-top:6px;line-height:1.5;">' + escHtml(a.description.length>250?a.description.substring(0,250)+'…':a.description) + '</div>' : '') +
               (a.link && safeUrl(a.link) ? '<a href="' + safeUrl(a.link) + '" target="_blank" rel="noopener noreferrer" style="font-size:0.78rem;color:#00A6CF;margin-top:6px;display:inline-block;">View Source \u2197</a>' : '') +
             '</div>' +
             (a.amount ? '<div style="font-weight:700;color:#002E6D;white-space:nowrap;font-size:1rem;flex-shrink:0;">' + escHtml(a.amount) + '</div>' : '') +
@@ -1045,19 +1025,6 @@ function renderStoryCards(stories) {
     typeBadge.classList.add(typeClass(action.type));
     col.querySelector('.card-date').textContent = formatDate(action.date);
     col.querySelector('.card-title').textContent = action.title || 'Untitled';
-    const descEl = col.querySelector('.card-desc');
-    descEl.textContent = action.description || '';
-    const readMoreBtn = col.querySelector('.btn-read-more');
-    requestAnimationFrame(() => {
-      if (descEl.scrollHeight > descEl.clientHeight + 1) {
-        readMoreBtn.classList.remove('d-none');
-        readMoreBtn.textContent = 'Read more';
-        readMoreBtn.addEventListener('click', () => {
-          const isExpanded = descEl.classList.toggle('expanded');
-          readMoreBtn.textContent = isExpanded ? 'Show less' : 'Read more';
-        });
-      }
-    });
     if (action.amount) {
       const el = col.querySelector('.card-amount');
       el.classList.remove('d-none');
@@ -1113,7 +1080,7 @@ function filterLandscape() {
   const to     = document.getElementById('landscapeDateTo').value;
   const filtered = allStories.filter(s => {
     if (search) {
-      const hay = [s.title, s.description, (s.tags || []).join(' ')].join(' ').toLowerCase();
+      const hay = [s.title, (s.tags || []).join(' ')].join(' ').toLowerCase();
       if (!hay.includes(search)) return false;
     }
     if (state !== 'all' && s.state !== state) return false;

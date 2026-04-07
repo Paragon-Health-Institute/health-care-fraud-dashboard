@@ -12,6 +12,8 @@ import feedparser
 import requests
 from bs4 import BeautifulSoup
 
+from tag_allowlist import auto_tags as _auto_tags, filter_tags as _filter_tags
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 MEDIA_FILE = os.path.join(SCRIPT_DIR, "data", "media.json")
 
@@ -76,31 +78,8 @@ STATE_MAP = {
     'Wisconsin': 'WI', 'Wyoming': 'WY',
 }
 
-# ---------------------------------------------------------------------------
-# Tag patterns
-# ---------------------------------------------------------------------------
-TAG_PATTERNS = [
-    (r'\bmedicare\b', 'Medicare'),
-    (r'\bmedicaid\b', 'Medicaid'),
-    (r'\btricare\b', 'TRICARE'),
-    (r'\bkickback', 'Kickbacks'),
-    (r'\bfalse claims', 'False Claims Act'),
-    (r'\bwhistleblower', 'Whistleblower'),
-    (r'\btelemedic|telemedicine\b', 'Telemedicine'),
-    (r'\bhospice\b', 'Hospice Fraud'),
-    (r'\bhome health\b', 'Home Health'),
-    (r'\bnursing home|long.term care', 'Nursing Home'),
-    (r'\bpharmac', 'Pharmacy Fraud'),
-    (r'\bopioid|fentanyl', 'Opioids'),
-    (r'\bdurable medical|dme\b', 'DME Fraud'),
-    (r'\bgenetic test', 'Genetic Testing'),
-    (r'\blab\b|laboratory', 'Lab Fraud'),
-    (r'\bupcod', 'Upcoding'),
-    (r'\bidentity theft', 'Identity Theft'),
-    (r'\bmedicare advantage', 'Medicare Advantage'),
-    (r'\bimproper payment', 'Improper Payments'),
-    (r'\borganized crime|transnational', 'Organized Crime'),
-]
+# Tag generation lives in tag_allowlist.py — this module imports auto_tags
+# directly so all scrapers stay consistent. Do not redefine tag patterns here.
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -198,12 +177,8 @@ def extract_amount(text):
 
 
 def generate_tags(text):
-    tags = []
-    lower = text.lower()
-    for pattern, tag in TAG_PATTERNS:
-        if re.search(pattern, lower) and tag not in tags:
-            tags.append(tag)
-    return tags[:8]
+    """Generate tags restricted to the canonical allowlist."""
+    return _auto_tags(text)
 
 
 def get_state(text):
@@ -345,20 +320,21 @@ def main():
                 tags = generate_tags(search_text)
                 related = guess_related_agency(search_text)
 
+                # NOTE: description field is intentionally NOT written.
+                # See tag_allowlist.py and project memory for details.
                 story = {
                     "id": make_id(date_str, link),
                     "date": date_str,
                     "agency": "Media",
                     "type": "Investigative Report",
                     "title": re.sub(r'\s+', ' ', title).strip(),
-                    "description": desc_clean[:600] + '...' if len(desc_clean) > 600 else desc_clean,
                     "amount": amt_info['display'] if amt_info else "",
                     "amount_numeric": amt_info['numeric'] if amt_info else 0,
                     "officials": [],
                     "link": link,
                     "link_label": f"{feed['label']} Report",
                     "social_posts": [],
-                    "tags": tags,
+                    "tags": _filter_tags(tags),
                     "state": state or "",
                     "source_type": "news",
                     "auto_fetched": True,

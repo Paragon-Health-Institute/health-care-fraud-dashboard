@@ -74,8 +74,9 @@ jobs:
 
         **Review checklist:**
         - [ ] Stories are real investigative reports (not opinion pieces or briefs)
-        - [ ] Descriptions are accurate
-        - [ ] Tags and related agencies are appropriate
+        - [ ] Titles accurately reflect the source
+        - [ ] Tags are from the allowlist (programs + vulnerable areas only — see tag_allowlist.py)
+        - [ ] Related agencies are appropriate
         - [ ] No duplicates of existing entries
 
         > Merge to publish to the live dashboard. Close to discard.

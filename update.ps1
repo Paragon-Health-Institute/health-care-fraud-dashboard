@@ -145,17 +145,19 @@ foreach ($feed in ($Feeds | Where-Object { $_.Enabled })) {
             $idPrefix   = $isMedia ? 'media' : ($feed.Agency.ToLower() -replace '\W','-')
             $linkLabel  = $isMedia ? "$($feed.Name) Report" : "$($feed.Name) Press Release"
             $actionType = $isMedia ? 'Investigative Report' : $atype
-            $descOut    = ($descClean.Length -gt 600) ? ($descClean.Substring(0,600) + '…') : $descClean
             $amtDisp    = $amtInfo ? $amtInfo.display : $null
             $amtNum     = $amtInfo ? $amtInfo.numeric : 0
 
+            # NOTE: description field is intentionally NOT written.
+            # Tags are left empty here — Python ingest (update.py / enrich.py)
+            # is the canonical tag generator and applies the allowlist in
+            # tag_allowlist.py. See project memory for details.
             $entry = [PSCustomObject]@{
                 id             = "$idPrefix-$dateStr-$([System.Math]::Abs(($link ?? $dateStr + $feed.Agency).GetHashCode()))"
                 date           = $dateStr
                 agency         = $feed.Agency
                 type           = $actionType
                 title          = ($title -replace '\s+', ' ').Trim()
-                description    = $descOut
                 amount         = $amtDisp
                 amount_numeric = $amtNum
                 officials      = @()

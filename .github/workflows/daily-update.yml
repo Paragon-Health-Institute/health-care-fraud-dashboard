@@ -67,8 +67,8 @@ jobs:
 
           **Review checklist:**
           - [ ] Entries are real enforcement actions (not duplicates or irrelevant)
-          - [ ] Descriptions look accurate
-          - [ ] Tags are appropriate
+          - [ ] Titles accurately reflect the source
+          - [ ] Tags are from the allowlist (programs + vulnerable areas only — see tag_allowlist.py)
 
           > Merge to publish to the live dashboard. Close to discard.
           EOF

@@ -3,8 +3,14 @@
 Reads actions.json, finds entries with auto_fetched=true that have empty tags,
 sends them to Claude Haiku for classification, and writes back enriched data.
 Also filters out irrelevant items.
+
+Schema rules (see project memory and tag_allowlist.py):
+  - The `description` field is NOT written. We never persist descriptions.
+  - Tags are restricted to the canonical allowlist via filter_tags().
 """
 import json, sys, os
+
+from tag_allowlist import ALLOWED_TAGS, PROGRAM_TAGS, AREA_TAGS, filter_tags
 
 def enrich_actions(data_path="data/actions.json"):
     api_key = os.environ.get("ANTHROPIC_API_KEY", "")
@@ -32,11 +38,14 @@ def enrich_actions(data_path="data/actions.json"):
 
     print(f"enrich: {len(to_enrich)} item(s) to process")
 
-    SYSTEM_PROMPT = """You are a healthcare fraud enforcement data analyst. You will be given the title, description, source agency, and link of a news item or government press release. Your job is to return structured JSON metadata.
+    program_list = ", ".join(sorted(PROGRAM_TAGS))
+    area_list = ", ".join(sorted(AREA_TAGS))
+
+    SYSTEM_PROMPT = f"""You are a healthcare fraud enforcement data analyst. You will be given the title, source agency, and link of a news item or government press release. Your job is to return structured JSON metadata.
 
 ## Your task
 
-1. Determine if this item is RELEVANT to a healthcare fraud enforcement dashboard that tracks federal and state enforcement actions against healthcare fraud (criminal cases, civil settlements, audits, investigations, legislation, regulatory actions). Items that are relevant: enforcement actions, indictments, convictions, sentencings, settlements, audits finding improper payments, congressional investigations, new fraud task forces, executive orders on fraud, investigative journalism exposing fraud schemes. Items that are NOT relevant: general healthcare policy, opinion pieces, partisan commentary, items where fraud is mentioned only tangentially, consumer advice articles, items about non-healthcare fraud.
+1. Determine if this item is RELEVANT to a healthcare fraud enforcement dashboard that tracks federal enforcement actions against healthcare fraud (criminal cases, civil settlements, audits, investigations, legislation, regulatory actions). Items that are relevant: enforcement actions, indictments, convictions, sentencings, settlements, audits finding improper payments, congressional investigations, new fraud task forces, executive orders on fraud, investigative journalism exposing fraud schemes. Items that are NOT relevant: general healthcare policy, opinion pieces, partisan commentary, items where fraud is mentioned only tangentially, consumer advice articles, items about non-healthcare fraud.
 
 2. If relevant, classify and extract metadata.
 
@@ -44,28 +53,33 @@ def enrich_actions(data_path="data/actions.json"):
 
 Return ONLY valid JSON, no markdown fencing, no explanation:
 
-{
+{{
   "relevant": true/false,
   "type": one of: "Criminal Enforcement", "Civil Action", "Audit", "Investigation", "Investigative Report", "Congressional Hearing", "Legislation", "Executive Order", "Rule/Regulation", "Administrative Action", "Structural/Organizational", "Technology/Innovation",
-  "description": "A detailed 3-5 sentence summary. Include: what happened, who was charged or involved (names and roles), the specific fraud scheme or conduct, dollar amounts, which program was defrauded (Medicare/Medicaid/etc.), and the outcome or current status (indicted, sentenced, settled, etc.). Write factually, no editorializing.",
   "state": "Two-letter state abbreviation if specific to one state, null if national/multi-state",
   "amount": "Dollar amount as string like '$52M' or '$14.6B' or null if none",
   "amount_numeric": numeric value in dollars (e.g. 52000000) or 0,
-  "tags": [array of applicable tags from the APPROVED LIST below],
+  "tags": [array of applicable tags from the APPROVED LIST below — pick ONLY tags that clearly apply],
   "entities": [array of company/organization names involved, e.g. "CVS", "UnitedHealth", "DMERx"],
   "officials": [array of named government officials mentioned, e.g. "Dr. Mehmet Oz", "President Trump"],
   "agency": "The government agency primarily responsible for this action. One of: DOJ, CMS, HHS, HHS-OIG, GAO, Congress, White House, State Agency, Media. Use 'Media' only when the media outlet itself conducted the investigation (e.g. ProPublica expose, CBS investigation). If the article is news coverage of a DOJ indictment, the agency is DOJ, not Media.",
   "related_agencies": ["If agency is Media or State Agency, which federal agency is most related (DOJ, CMS, HHS-OIG, etc.), or null"]
-}
+}}
 
-## APPROVED TAG LIST (use ONLY these, pick all that apply):
+## APPROVED TAG LIST — use ONLY these tags. Do not invent new tags.
 
-Programs: Medicare, Medicaid, Medicare Advantage, TRICARE, ACA, Medi-Cal, CHIP
-Fraud types: DME Fraud, Hospice Fraud, Home Health Fraud, Lab Fraud, Genetic Testing, Telehealth, Nursing Home, Pharmacy Fraud, Hospital Fraud, Addiction Treatment, Behavioral Health, Wound Care, Opioids, Pharmaceutical, Medical Devices, Unnecessary Procedures, Adult Day Care, Housing Fraud, Research Fraud, NPI Fraud, Elder Fraud, Workers Compensation
-Scheme types: Kickbacks, Anti-Kickback, False Claims, False Claims Act, Identity Theft, Overbilling, Upcoding, Phantom Billing, Money Laundering, Tax Evasion, Organized Crime, Risk Adjustment, Stark Law, Off-Label
-Scope: National Takedown, Strike Force, Multi-State, CRUSH, Program Integrity, Improper Payments
-Government: Congressional, Executive Order, Legislation, Whistleblower, Task Force, DOGE
-Other: AI, COVID-19, Foreign Nationals, Native American, Cybersecurity, Immigration, Digital Health, 340B Program"""
+The dashboard's pill tags mean exactly two things:
+  (1) which PROGRAM got defrauded, and
+  (2) which vulnerable SERVICE AREA was abused.
+
+Do NOT include status tags ("Convicted", "Indicted", "Settlement"),
+fraud-method tags ("Kickbacks", "Upcoding", "False Claims"),
+committee names, or company names. Any tag outside this list will be discarded.
+
+Programs: {program_list}
+Vulnerable fraud areas: {area_list}
+
+Do NOT output a description field — descriptions are not stored on the dashboard."""
 
     # Cap batch size to avoid GitHub Actions timeout
     MAX_BATCH = 30
@@ -79,12 +93,11 @@ Other: AI, COVID-19, Foreign Nationals, Native American, Cybersecurity, Immigrat
 
     for action in to_enrich:
         title = action.get("title", "")
-        desc = action.get("description", "")
         agency = action.get("agency", "")
         link = action.get("link", "")
         is_official = action.get("source_type") == "official"
 
-        user_msg = f"Title: {title}\nDescription: {desc}\nSource agency: {agency}\nLink: {link}"
+        user_msg = f"Title: {title}\nSource agency: {agency}\nLink: {link}"
 
         for attempt in range(3):
             try:
@@ -110,14 +123,11 @@ Other: AI, COVID-19, Foreign Nationals, Native American, Cybersecurity, Immigrat
                     print(f"  REMOVED (irrelevant): {action['id']}")
                     break
 
-                # Apply enrichment
+                # Apply enrichment. Description is intentionally never written.
+                # Strip any stale description that may exist on the action.
+                action.pop("description", None)
                 action["type"] = result.get("type", action.get("type", "Administrative Action"))
-                # Always prefer the enriched description if it's longer/more detailed
-                enriched_desc = result.get("description", "")
-                existing_desc = action.get("description", "")
-                if enriched_desc and len(enriched_desc) > len(existing_desc):
-                    action["description"] = enriched_desc
-                action["tags"] = result.get("tags", [])
+                action["tags"] = filter_tags(result.get("tags", []))
                 action["entities"] = result.get("entities", [])
                 action["officials"] = result.get("officials", [])
                 if result.get("state"):
