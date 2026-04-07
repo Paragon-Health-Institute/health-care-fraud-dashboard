@@ -849,6 +849,14 @@ def main():
                              'Office of Public Affairs press release '
                              '(justice.gov/opa/pr/...). Skips USAO district '
                              'releases. Useful for high-signal backfills.')
+    parser.add_argument('--enforcement-only', action='store_true',
+                        help='Only accept items classified as Criminal '
+                             'Enforcement or Civil Action. Drops oversight-'
+                             'type items (Audit, Investigation, '
+                             'Administrative Action, Rule/Regulation, '
+                             'Hearing, Report, etc.). Used by the daily auto-'
+                             'merge pipeline which only publishes to the '
+                             'Federal Enforcement tab.')
     args = parser.parse_args()
     silent = args.silent
     if args.no_browser:
@@ -871,8 +879,11 @@ def main():
     globals()['BACKFILL_MODE'] = bool(args.backfill_from)
     globals()['BACKFILL_FLOOR'] = last_scraped_date
     globals()['OPA_ONLY'] = bool(args.opa_only)
+    globals()['ENFORCEMENT_ONLY'] = bool(args.enforcement_only)
     if args.opa_only:
         log("OPA-ONLY MODE: dropping items not linking to /opa/pr/")
+    if args.enforcement_only:
+        log("ENFORCEMENT-ONLY MODE: dropping items not typed Criminal Enforcement / Civil Action")
 
     # Dedup sets
     existing_links = set()
@@ -988,14 +999,17 @@ def main():
                 action_type = 'Investigative Report' if is_media else get_action_type(title, search_all)
                 tags = generate_tags(search_all)
 
-                # Backfill mode: only add items classified as Criminal
-                # Enforcement or Civil Action. Oversight items (Audit,
-                # Investigation, Administrative Action, Rule/Regulation,
-                # Hearing, Report, Structural/Organizational, etc.) are
-                # skipped during backfill because they include too many
-                # non-healthcare false positives from OIG's listing.
-                # Oversight items are curated manually.
-                if globals().get('BACKFILL_MODE') and action_type not in ('Criminal Enforcement', 'Civil Action'):
+                # Enforcement-only filter: only add items classified as
+                # Criminal Enforcement or Civil Action. Oversight items
+                # (Audit, Investigation, Administrative Action,
+                # Rule/Regulation, Hearing, Report, Structural/Organizational,
+                # etc.) are dropped. Applied in backfill mode (historical
+                # ingest) and when --enforcement-only is passed (daily
+                # auto-merge pipeline for the Federal Enforcement tab).
+                is_enforcement = action_type in ('Criminal Enforcement', 'Civil Action')
+                if globals().get('BACKFILL_MODE') and not is_enforcement:
+                    continue
+                if globals().get('ENFORCEMENT_ONLY') and not is_enforcement:
                     continue
 
                 # Dollar amounts are only kept on Criminal Enforcement /
