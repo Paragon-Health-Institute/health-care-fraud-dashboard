@@ -2,7 +2,7 @@
   "metadata": {
     "last_updated": "2026-04-07T18:35:08.071320",
     "version": "1.0",
-    "last_scraped": "2026-04-07T18:35:08.071312"
+    "last_scraped": "2026-04-07T19:03:10.071374"
   },
   "actions": [
     {
@@ -211,7 +211,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:12.237409"
     },
     {
       "id": "hhs-oig-2026-03-26-2011277861",
@@ -232,7 +233,8 @@
       "entities": [],
       "state": null,
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "ai_enriched_at": "2026-04-07T19:03:12.976373"
     },
     {
       "id": "hhs-oig-2026-03-25-3742570485",
@@ -591,7 +593,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:13.798314"
     },
     {
       "id": "hhs-oig-2026-03-01-mfcu-annual-report",
@@ -3896,14 +3899,18 @@
       "link": "https://www.justice.gov/opa/pr/trinity-hospital-agrees-pay-17m-resolve-alleged-stark-law-violations",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Hospital"
+      ],
       "entities": [],
       "state": "OH",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:14.490390"
     },
     {
       "id": "doj-2026-02-26-3564031109",
@@ -4013,14 +4020,18 @@
       "link": "https://www.justice.gov/opa/pr/justice-department-files-false-claims-act-complaint-against-priority-hospital-group-and",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Hospital"
+      ],
       "entities": [],
       "state": "LA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:15.294205"
     },
     {
       "id": "doj-2026-01-20-4041096344",
@@ -4107,14 +4118,18 @@
       "link": "https://www.justice.gov/opa/pr/south-carolina-laboratory-pleads-guilty-and-agrees-pay-least-68m-settle-allegations",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Genetic Testing"
+      ],
       "entities": [],
       "state": "SC",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:16.282471"
     },
     {
       "id": "doj-2025-12-18-2540986264",
@@ -4151,14 +4166,19 @@
       "link": "https://www.justice.gov/opa/pr/digital-health-company-and-medical-practice-indicted-100m-adderall-distribution-scheme",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Telehealth",
+        "Pharmacy",
+        "Opioids"
+      ],
       "entities": [],
       "state": "CA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:17.230948"
     },
     {
       "id": "doj-2025-12-12-700946067",
@@ -4378,7 +4398,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:18.296674"
     },
     {
       "id": "doj-2025-09-26-3530216575",
@@ -4425,7 +4446,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:19.172173"
     },
     {
       "id": "doj-2025-09-23-3288111769",
@@ -4518,7 +4540,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:20.061820"
     },
     {
       "id": "doj-2025-09-12-2914979766",
@@ -4541,7 +4564,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:20.871408"
     },
     {
       "id": "doj-2025-09-02-3344854033",
@@ -4564,7 +4588,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:21.890735"
     },
     {
       "id": "doj-2025-08-29-1064069786",
@@ -4619,8 +4644,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Dermatology Providers Agree to Pay Nearly $850,000 to Resolve Allegations of False Wound Repair Claims",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$850,000",
+      "amount_numeric": 850000,
       "officials": [],
       "link": "https://www.justice.gov/opa/pr/dermatology-providers-agree-pay-nearly-850000-resolve-allegations-false-wound-repair-claims",
       "link_label": "DOJ Press Release",
@@ -4634,7 +4659,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:22.853714"
     },
     {
       "id": "doj-2025-07-14-1707400269",
@@ -4754,7 +4780,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:23.755299"
     },
     {
       "id": "doj-2025-06-05-3983275416",
@@ -4827,7 +4854,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:24.625819"
     },
     {
       "id": "doj-2025-05-28-2714389737",
@@ -4865,14 +4893,18 @@
       "link": "https://www.justice.gov/opa/pr/texas-doctor-who-falsely-diagnosed-patients-sentenced-10-years-imprisonment-118m-health-care",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
       "entities": [],
       "state": "TX",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:25.388054"
     },
     {
       "id": "doj-2025-05-20-1372914456",
@@ -4880,8 +4912,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Florida Ophthalmology Practice Agrees to Pay $615,000 to Resolve Allegations of Fraudulent Claims to Medicare and Medicaid for Cranial Ultrasounds",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$615,000",
+      "amount_numeric": 615000,
       "officials": [],
       "link": "https://www.justice.gov/opa/pr/florida-ophthalmology-practice-agrees-pay-615000-resolve-allegations-fraudulent-claims",
       "link_label": "DOJ Press Release",
@@ -4896,7 +4928,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:26.194726"
     },
     {
       "id": "doj-2025-05-02-1499443414",
@@ -4929,8 +4962,8 @@
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Executive Vice President Of Insurance Brokerage Pleads Guilty In $133M Affordable Care Act Fraud Scheme",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$133M",
+      "amount_numeric": 133000000,
       "officials": [],
       "link": "https://www.justice.gov/opa/pr/executive-vice-president-insurance-brokerage-pleads-guilty-133m-affordable-care-act-fraud",
       "link_label": "DOJ Press Release",
@@ -4944,7 +4977,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:26.900836"
     },
     {
       "id": "doj-2025-04-16-579832275",
@@ -4967,7 +5001,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:28.022189"
     },
     {
       "id": "doj-2025-04-02-1371089855",
@@ -5027,14 +5062,18 @@
       "link": "https://www.justice.gov/opa/pr/health-care-providers-and-laboratory-marketers-agree-pay-over-19-million-settle-kickback",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Genetic Testing"
+      ],
       "entities": [],
       "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:29.085521"
     },
     {
       "id": "doj-2025-02-25-2321841153",
@@ -5089,8 +5128,8 @@
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "President of Insurance Brokerage Firm and CEO of Marketing Company Charged in $161M Affordable Care Act Enrollment Fraud Scheme",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$161M",
+      "amount_numeric": 161000000,
       "officials": [],
       "link": "https://www.justice.gov/opa/pr/president-insurance-brokerage-firm-and-ceo-marketing-company-charged-161m-affordable-care",
       "link_label": "DOJ Press Release",
@@ -5104,7 +5143,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:29.903892"
     },
     {
       "id": "doj-2025-02-11-2612004164",
@@ -5143,14 +5183,18 @@
       "link": "https://www.justice.gov/opa/pr/woman-sentenced-fraud-scheme-involving-claims-unnecessary-respiratory-tests-submitted-covid",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Genetic Testing"
+      ],
       "entities": [],
       "state": "CA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:31.061267"
     },
     {
       "id": "doj-2025-01-24-1913806017",
@@ -5173,7 +5217,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:33.804421"
     },
     {
       "id": "doj-2025-01-17-1315362926",
@@ -5181,20 +5226,24 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "BioReference Health and OPKO Health Agree to Pay $704,349 to Settle Allegations that they Billed the Government for Medically Unnecessary Blood Tests",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$704,349",
+      "amount_numeric": 704349,
       "officials": [],
       "link": "https://www.justice.gov/opa/pr/bioreference-health-and-opko-health-agree-pay-704349-settle-allegations-they-billed",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
       "entities": [],
       "state": "DE",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:34.440554"
     },
     {
       "id": "doj-2025-01-15-4284919876",
@@ -5202,8 +5251,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Doctor Sentenced for $70M Medicare Fraud Scheme",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$70M",
+      "amount_numeric": 70000000,
       "officials": [],
       "link": "https://www.justice.gov/opa/pr/doctor-sentenced-70m-medicare-fraud-scheme",
       "link_label": "DOJ Press Release",
@@ -5219,7 +5268,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:35.181929"
     },
     {
       "id": "doj-2025-01-14-814987287",
@@ -5242,7 +5292,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:35.897324"
     },
     {
       "id": "doj-2025-01-07-1647947457",
@@ -5250,20 +5301,23 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Marketers and Healthcare Providers in Texas, Virginia and South Carolina Agree to Pay Over $1.1M to Settle Laboratory Kickback Allegations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$1.1 million",
+      "amount_numeric": 1100000,
       "officials": [],
       "link": "https://www.justice.gov/opa/pr/marketers-and-healthcare-providers-texas-virginia-and-south-carolina-agree-pay-over-11m",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Genetic Testing"
+      ],
       "entities": [],
       "state": "SC",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:36.497175"
     },
     {
       "id": "doj-2025-01-06-994022661",
@@ -5271,8 +5325,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Athira Pharma Inc. Agrees to Pay $4M to Settle False Claims Act Allegations Related to Scientific Research Misconduct",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$4M",
+      "amount_numeric": 4000000,
       "officials": [],
       "link": "https://www.justice.gov/opa/pr/athira-pharma-inc-agrees-pay-4m-settle-false-claims-act-allegations-related-scientific",
       "link_label": "DOJ Press Release",
@@ -5284,7 +5338,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:37.073613"
     },
     {
       "id": "doj-2026-04-03-3847526660",
@@ -5298,14 +5353,18 @@
       "link": "https://www.justice.gov/usao-mdpa/pr/florida-man-pleads-guilty-health-care-fraud-and-kickback-scheme-involving-foot-baths",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "DME"
+      ],
       "entities": [],
       "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:37.849325"
     },
     {
       "id": "doj-2026-04-02-1798136913",
@@ -5337,8 +5396,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "American Health Companies, dba American Health Partners, Agrees to Pay Over Two Million Dollars to Resolve False Claims Act Liability Involving a Tennessee Nursing Home",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "Over Two Million Dollars",
+      "amount_numeric": 2000000,
       "officials": [],
       "link": "https://www.justice.gov/usao-mdtn/pr/american-health-companies-dba-american-health-partners-agrees-pay-over-two-million",
       "link_label": "DOJ Press Release",
@@ -5353,7 +5412,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:38.580913"
     },
     {
       "id": "doj-2026-03-27-4141773486",
@@ -5361,8 +5421,8 @@
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Local Physician Sentenced to 1 Year Imprisonment, a $60,000 fine, and Restitution of $349,272.79 for Adulterating and Misbranding Medical Devices with the Intent to Defraud",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$349,272.79",
+      "amount_numeric": 349273,
       "officials": [],
       "link": "https://www.justice.gov/usao-edwa/pr/local-physician-sentenced-1-year-imprisonment-60000-fine-and-restitution-34927279",
       "link_label": "DOJ Press Release",
@@ -5376,7 +5436,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:39.678859"
     },
     {
       "id": "doj-2026-03-26-483858630",
@@ -5384,8 +5445,8 @@
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "OB/GYN Physician Agrees to Pay $507,500 to Resolve False Claims Act Allegations Connected to Fraudulent Prescription Scheme",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$507,500",
+      "amount_numeric": 507500,
       "officials": [],
       "link": "https://www.justice.gov/usao-md/pr/obgyn-physician-agrees-pay-507500-resolve-false-claims-act-allegations-connected",
       "link_label": "DOJ Press Release",
@@ -5401,7 +5462,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:40.617873"
     },
     {
       "id": "doj-2026-03-17-3994160690",
@@ -5422,7 +5484,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:41.451107"
     },
     {
       "id": "doj-2026-03-09-3461129787",
@@ -5430,8 +5493,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Psychiatrist Reaches Civil Settlement of $360,000 to Resolve Allegations of False Claims to Federal Health Care Programs",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$360,000",
+      "amount_numeric": 360000,
       "officials": [],
       "link": "https://www.justice.gov/usao-edmo/pr/psychiatrist-reaches-civil-settlement-360000-resolve-allegations-false-claims-federal",
       "link_label": "DOJ Press Release",
@@ -5447,7 +5510,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:42.306699"
     },
     {
       "id": "doj-2026-03-05-1430787986",
@@ -5480,8 +5544,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Sarasota Lab Agrees to Pay $980,000 to Resolve False Claims Act Violations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$980,000",
+      "amount_numeric": 980000,
       "officials": [],
       "link": "https://www.justice.gov/usao-mdfl/pr/sarasota-lab-agrees-pay-980000-resolve-false-claims-act-violations",
       "link_label": "DOJ Press Release",
@@ -5495,7 +5559,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:43.693324"
     },
     {
       "id": "doj-2026-03-05-2288402010",
@@ -5503,8 +5568,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Laboratory Agrees to Pay More than $200,000 for Improper Billing to West Virginia Medicaid Program",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$200,000",
+      "amount_numeric": 200000,
       "officials": [],
       "link": "https://www.justice.gov/usao-ndwv/pr/laboratory-agrees-pay-more-200000-improper-billing-west-virginia-medicaid-program",
       "link_label": "DOJ Press Release",
@@ -5518,7 +5583,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:44.931700"
     },
     {
       "id": "doj-2026-03-04-3615750670",
@@ -5549,8 +5615,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Stern Therapy Consultants Agrees to Pay $315,000 to Settle Allegations of Causing False Claims to Medicare",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$315,000",
+      "amount_numeric": 315000,
       "officials": [],
       "link": "https://www.justice.gov/usao-ma/pr/stern-therapy-consultants-agrees-pay-315000-settle-allegations-causing-false-claims",
       "link_label": "DOJ Press Release",
@@ -5565,7 +5631,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:45.713419"
     },
     {
       "id": "doj-2026-03-03-734419063",
@@ -5590,7 +5657,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:46.795088"
     },
     {
       "id": "doj-2026-02-27-3347929946",
@@ -5598,20 +5666,25 @@
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Founders/Owners of Hertel & Brown Physical and Aquatic Therapy Each Sentenced to Six Years in Prison and Fined $250,000 for Wire and Healthcare Fraud Conspiracy",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$250,000",
+      "amount_numeric": 250000,
       "officials": [],
       "link": "https://www.justice.gov/usao-wdpa/pr/foundersowners-hertel-brown-physical-and-aquatic-therapy-each-sentenced-six-years",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Physical Therapy"
+      ],
       "entities": [],
       "state": "PA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:47.582099"
     },
     {
       "id": "doj-2026-02-25-3665785592",
@@ -5634,7 +5707,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:48.351842"
     },
     {
       "id": "doj-2026-02-25-411291892",
@@ -5680,7 +5754,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:51.277715"
     },
     {
       "id": "doj-2026-02-17-3488009839",
@@ -5725,7 +5800,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:52.083845"
     },
     {
       "id": "doj-2026-02-10-1566331119",
@@ -5748,7 +5824,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:52.778675"
     },
     {
       "id": "doj-2026-02-10-2659142195",
@@ -5771,7 +5848,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:53.459120"
     },
     {
       "id": "doj-2026-02-06-3273492913",
@@ -5779,20 +5857,23 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Oakland County Sleep Specialists Agree To Pay $763,954.74 To Settle False Claims Act Allegations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$763,954.74",
+      "amount_numeric": 763954,
       "officials": [],
       "link": "https://www.justice.gov/usao-edmi/pr/oakland-county-sleep-specialists-agree-pay-76395474-settle-false-claims-act",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare"
+      ],
       "entities": [],
       "state": "MI",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:54.412906"
     },
     {
       "id": "doj-2026-02-05-2201510774",
@@ -5806,14 +5887,17 @@
       "link": "https://www.justice.gov/usao-sdtx/pr/houston-transplant-doctor-indicted-making-false-statements-patients-medical-records",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare"
+      ],
       "entities": [],
       "state": "TX",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:54.997918"
     },
     {
       "id": "doj-2026-02-04-1586099329",
@@ -5838,7 +5922,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:55.882529"
     },
     {
       "id": "doj-2026-02-03-1156407560",
@@ -5859,7 +5944,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:56.463270"
     },
     {
       "id": "doj-2026-01-30-3188964451",
@@ -5883,7 +5969,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:57.444784"
     },
     {
       "id": "doj-2026-01-29-3473428125",
@@ -5907,7 +5994,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:58.050436"
     },
     {
       "id": "doj-2026-01-28-4012091910",
@@ -5930,7 +6018,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:58.659386"
     },
     {
       "id": "doj-2026-01-28-1561144592",
@@ -5953,7 +6042,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:03:59.413167"
     },
     {
       "id": "doj-2026-01-28-3837528692",
@@ -5961,8 +6051,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Scranton Heart Institute Agrees To Pay $48,709.20 To Settle False Claims Act Allegations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$48,709.20",
+      "amount_numeric": 48709,
       "officials": [],
       "link": "https://www.justice.gov/usao-mdpa/pr/scranton-heart-institute-agrees-pay-4870920-settle-false-claims-act-allegations",
       "link_label": "DOJ Press Release",
@@ -5976,7 +6066,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:00.111833"
     },
     {
       "id": "doj-2026-01-28-3296272138",
@@ -5999,7 +6090,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:00.835208"
     },
     {
       "id": "doj-2026-01-27-1786949553",
@@ -6023,7 +6115,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:01.572028"
     },
     {
       "id": "doj-2026-01-26-4214741563",
@@ -6031,8 +6124,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Two Home Health Providers Agree to Pay $702,541 to Resolve Self-Referral Allegations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$702,541",
+      "amount_numeric": 702541,
       "officials": [],
       "link": "https://www.justice.gov/usao-sdfl/pr/two-home-health-providers-agree-pay-702541-resolve-self-referral-allegations",
       "link_label": "DOJ Press Release",
@@ -6046,7 +6139,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:02.483942"
     },
     {
       "id": "doj-2026-01-23-2304499942",
@@ -6077,8 +6171,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Chipley-Based Physical Therapy Practice Pays Over $750,000 To Resolve False Claims Act Litigation",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "Over $750,000",
+      "amount_numeric": 750000,
       "officials": [],
       "link": "https://www.justice.gov/usao-ndfl/pr/chipley-based-physical-therapy-practice-pays-over-750000-resolve-false-claims-act",
       "link_label": "DOJ Press Release",
@@ -6092,7 +6186,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:03.277392"
     },
     {
       "id": "doj-2026-01-21-4111871201",
@@ -6115,7 +6210,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:03.981985"
     },
     {
       "id": "doj-2026-01-20-1968412201",
@@ -6207,7 +6303,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:04.844914"
     },
     {
       "id": "doj-2026-01-12-3914269674",
@@ -6279,7 +6376,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:05.562744"
     },
     {
       "id": "doj-2026-01-07-1994340529",
@@ -6303,7 +6401,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:06.596086"
     },
     {
       "id": "doj-2026-01-07-1130922516",
@@ -6349,7 +6448,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:07.165010"
     },
     {
       "id": "doj-2025-12-22-807616206",
@@ -6388,14 +6488,17 @@
       "link": "https://www.justice.gov/usao-ma/pr/former-new-york-doctor-sentenced-receiving-kickbacks-0",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare"
+      ],
       "entities": [],
       "state": "MA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:08.034780"
     },
     {
       "id": "doj-2025-12-18-364097162",
@@ -6441,7 +6544,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:08.691536"
     },
     {
       "id": "doj-2025-12-18-1217491721",
@@ -6465,7 +6569,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:09.382359"
     },
     {
       "id": "doj-2025-12-18-1319882104",
@@ -6473,8 +6578,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Austin Pain Management Doctor and Pain Medicine Practice to Pay $13,625,000 to Settle Civil False Claims Act Allegations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$13,625,000",
+      "amount_numeric": 13625000,
       "officials": [],
       "link": "https://www.justice.gov/usao-wdtx/pr/austin-pain-management-doctor-and-pain-medicine-practice-pay-13625000-settle-civil",
       "link_label": "DOJ Press Release",
@@ -6488,7 +6593,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:10.080943"
     },
     {
       "id": "doj-2025-12-15-3633982256",
@@ -6512,7 +6618,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:10.742401"
     },
     {
       "id": "doj-2025-12-15-1740657257",
@@ -6520,8 +6627,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Medical Software Company Agrees to Pay $500,000 to Resolve Allegations of Causing Medically Unnecessary Breast Cancer Screening Claims",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$500,000",
+      "amount_numeric": 500000,
       "officials": [],
       "link": "https://www.justice.gov/usao-ma/pr/medical-software-company-agrees-pay-500000-resolve-allegations-causing-medically",
       "link_label": "DOJ Press Release",
@@ -6535,7 +6642,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:11.364296"
     },
     {
       "id": "doj-2025-12-15-2813942706",
@@ -6559,7 +6667,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:12.116654"
     },
     {
       "id": "doj-2025-12-11-1155968297",
@@ -6614,8 +6723,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Telehealth Company Agrees to Pay $300,000 to Resolve False Claims Act Allegations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$300,000",
+      "amount_numeric": 300000,
       "officials": [],
       "link": "https://www.justice.gov/usao-nh/pr/telehealth-company-agrees-pay-300000-resolve-false-claims-act-allegations",
       "link_label": "DOJ Press Release",
@@ -6630,7 +6739,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:12.858562"
     },
     {
       "id": "doj-2025-12-10-3145604155",
@@ -6638,8 +6748,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Spokane Physician Pays $120,000 to Resolve Allegations He Prescribed Controlled Substances Without Legitimate Medical Purpose",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$120,000",
+      "amount_numeric": 120000,
       "officials": [],
       "link": "https://www.justice.gov/usao-edwa/pr/spokane-physician-pays-120000-resolve-allegations-he-prescribed-controlled-substances",
       "link_label": "DOJ Press Release",
@@ -6653,7 +6763,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:14.278905"
     },
     {
       "id": "doj-2025-12-03-1461515342",
@@ -6674,7 +6785,8 @@
       "entities": [],
       "state": "LA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "ai_enriched_at": "2026-04-07T19:04:15.110734"
     },
     {
       "id": "doj-2025-12-02-1158754839",
@@ -6749,8 +6861,8 @@
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Nurse Practitioner Sentenced to 18 Months and Ordered to Pay over $160,000 in Restitution for Health Care Fraud and Unlawful Drug Distribution",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$160,000",
+      "amount_numeric": 160000,
       "officials": [],
       "link": "https://www.justice.gov/usao-ndny/pr/nurse-practitioner-sentenced-18-months-and-ordered-pay-over-160000-restitution-health",
       "link_label": "DOJ Press Release",
@@ -6764,7 +6876,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:16.020919"
     },
     {
       "id": "doj-2025-11-24-3316291949",
@@ -6787,7 +6900,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:16.633883"
     },
     {
       "id": "doj-2025-11-24-696476044",
@@ -6811,7 +6925,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:19.237967"
     },
     {
       "id": "doj-2025-11-24-1773728046",
@@ -6819,8 +6934,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Missouri Home Health Care Company Agrees to Pay $534,475 False Claims Act Settlement",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$534,475",
+      "amount_numeric": 534475,
       "officials": [],
       "link": "https://www.justice.gov/usao-edmo/pr/missouri-home-health-care-company-agrees-pay-534475-false-claims-act-settlement",
       "link_label": "DOJ Press Release",
@@ -6836,7 +6951,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:19.869196"
     },
     {
       "id": "doj-2025-11-24-559131543",
@@ -6844,8 +6960,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Southern Colorado Hospital and Doctors Agree to Pay $650,000 to Resolve Allegations That They Unlawfully Prescribed Opioids and Other Controlled Substances",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$650,000",
+      "amount_numeric": 650000,
       "officials": [],
       "link": "https://www.justice.gov/usao-co/pr/southern-colorado-hospital-and-doctors-agree-pay-650000-resolve-allegations-they",
       "link_label": "DOJ Press Release",
@@ -6860,7 +6976,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:20.690220"
     },
     {
       "id": "doj-2025-11-24-3403144743",
@@ -6954,7 +7071,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:21.478286"
     },
     {
       "id": "doj-2025-11-18-3128738892",
@@ -6986,8 +7104,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Memphis Doctor to Pay $375,296.90 to Settle Fraudulent Billing Allegations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$375,296.90",
+      "amount_numeric": 375296,
       "officials": [],
       "link": "https://www.justice.gov/usao-wdtn/pr/memphis-doctor-pay-37529690-settle-fraudulent-billing-allegations-0",
       "link_label": "DOJ Press Release",
@@ -7001,7 +7119,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:22.077154"
     },
     {
       "id": "doj-2025-11-17-2747256093",
@@ -7073,7 +7192,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:24.547983"
     },
     {
       "id": "doj-2025-11-17-3845852564",
@@ -7135,14 +7255,19 @@
       "link": "https://www.justice.gov/usao-md/pr/diagnostic-laboratory-agrees-pay-more-9-million-settle-alleged-false-claims-act",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Genetic Testing"
+      ],
       "entities": [],
       "state": "IN",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:25.233422"
     },
     {
       "id": "doj-2025-11-13-3692875603",
@@ -7190,7 +7315,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:25.934364"
     },
     {
       "id": "doj-2025-10-21-797229075",
@@ -7229,14 +7355,17 @@
       "link": "https://www.justice.gov/usao-edpa/pr/bucks-county-home-care-company-and-its-owners-and-managers-charged-alleged-health-care",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Home Health"
+      ],
       "entities": [],
       "state": "NJ",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:26.582430"
     },
     {
       "id": "doj-2025-10-01-1408649606",
@@ -7282,7 +7411,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:27.479182"
     },
     {
       "id": "doj-2025-09-24-881240589",
@@ -7306,7 +7436,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:28.093440"
     },
     {
       "id": "doj-2025-09-24-558322553",
@@ -7354,7 +7485,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:28.822531"
     },
     {
       "id": "doj-2025-09-16-1000772530",
@@ -7403,7 +7535,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:29.436440"
     },
     {
       "id": "doj-2025-09-16-1346123610",
@@ -7424,7 +7557,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:30.011510"
     },
     {
       "id": "doj-2025-09-12-3084539056",
@@ -7449,7 +7583,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:31.272259"
     },
     {
       "id": "doj-2025-09-10-286393915",
@@ -7472,7 +7607,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:31.842355"
     },
     {
       "id": "doj-2025-09-10-3071756259",
@@ -7496,7 +7632,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:32.488720"
     },
     {
       "id": "doj-2025-09-08-143654408",
@@ -7510,14 +7647,18 @@
       "link": "https://www.justice.gov/usao-wdpa/pr/owner-facility-intellectually-disabled-adults-pleads-guilty-health-care-fraud",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid",
+        "Adult Day Care"
+      ],
       "entities": [],
       "state": "PA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:33.492609"
     },
     {
       "id": "doj-2025-09-08-68394441",
@@ -7531,14 +7672,18 @@
       "link": "https://www.justice.gov/usao-wdva/pr/owners-1st-adult-n-pediatric-healthcare-pled-guilty",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid",
+        "Behavioral Health"
+      ],
       "entities": [],
       "state": "MD",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:34.322241"
     },
     {
       "id": "doj-2025-08-29-507674245",
@@ -7561,7 +7706,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:35.220723"
     },
     {
       "id": "doj-2025-08-28-3535260710",
@@ -7585,7 +7731,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:36.018334"
     },
     {
       "id": "doj-2025-08-27-2870962131",
@@ -7593,8 +7740,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Louisville Physician Agrees to Pay $250,000 to Settle False Claims Act Allegations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$250,000",
+      "amount_numeric": 250000,
       "officials": [],
       "link": "https://www.justice.gov/usao-wdky/pr/louisville-physician-agrees-pay-250000-settle-false-claims-act-allegations",
       "link_label": "DOJ Press Release",
@@ -7610,7 +7757,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:36.657898"
     },
     {
       "id": "doj-2025-08-27-4213954199",
@@ -7633,7 +7781,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:37.404875"
     },
     {
       "id": "doj-2025-08-27-814561773",
@@ -7654,7 +7803,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:38.452826"
     },
     {
       "id": "doj-2025-08-25-277820596",
@@ -7678,7 +7828,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:39.327015"
     },
     {
       "id": "doj-2025-08-22-2608032975",
@@ -7686,8 +7837,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Mississippi Medicaid Recipients Agree To Pay Over $170,000 To Resolve False Claims Act Allegations Of Health Care Benefits Fraud",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$170,000",
+      "amount_numeric": 170000,
       "officials": [],
       "link": "https://www.justice.gov/usao-sdms/pr/mississippi-medicaid-recipients-agree-pay-over-170000-resolve-false-claims-act",
       "link_label": "DOJ Press Release",
@@ -7701,7 +7852,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:39.950039"
     },
     {
       "id": "doj-2025-08-21-1770757312",
@@ -7725,7 +7877,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:40.680209"
     },
     {
       "id": "doj-2025-08-21-2492575617",
@@ -7739,14 +7892,17 @@
       "link": "https://www.justice.gov/usao-sdny/pr/brooklyn-cardiologist-sentenced-37-months-prison-connection-health-care-fraud-and-0",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare"
+      ],
       "entities": [],
       "state": "NY",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:41.211641"
     },
     {
       "id": "doj-2025-08-20-2228101950",
@@ -7817,7 +7973,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:42.062722"
     },
     {
       "id": "doj-2025-08-14-973070332",
@@ -7863,7 +8020,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:42.751903"
     },
     {
       "id": "doj-2025-08-13-4053894",
@@ -7877,14 +8035,18 @@
       "link": "https://www.justice.gov/usao-ct/pr/connecticut-lab-its-owners-and-officers-pay-more-12-million-settle-false-claims-act",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
       "entities": [],
       "state": "CT",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:43.380819"
     },
     {
       "id": "doj-2025-08-12-3397431578",
@@ -7898,14 +8060,17 @@
       "link": "https://www.justice.gov/usao-wdpa/pr/superseding-indictment-against-pittsburgh-health-care-facility-owner-adds-charges",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Nursing Home"
+      ],
       "entities": [],
       "state": "PA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:44.167028"
     },
     {
       "id": "doj-2025-08-11-3088674483",
@@ -7942,14 +8107,18 @@
       "link": "https://www.justice.gov/usao-edva/pr/richmond-psychotherapist-convicted-healthcare-fraud-pay-over-1m",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Behavioral Health"
+      ],
       "entities": [],
       "state": "VA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:44.767609"
     },
     {
       "id": "doj-2025-08-11-3096933694",
@@ -7980,8 +8149,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Allentown-Area Pharmacy and Its Owner Agree to Pay $825,000 to Resolve Allegations of False Claims Act Liability",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$825,000",
+      "amount_numeric": 825000,
       "officials": [],
       "link": "https://www.justice.gov/usao-edpa/pr/allentown-area-pharmacy-and-its-owner-agree-pay-825000-resolve-allegations-false",
       "link_label": "DOJ Press Release",
@@ -7996,7 +8165,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:45.305732"
     },
     {
       "id": "doj-2025-08-07-320656245",
@@ -8021,7 +8191,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:45.867990"
     },
     {
       "id": "doj-2025-08-06-2857904017",
@@ -8029,8 +8200,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "APRN and Medical Practice to Pay Over $600k and Cease Connecticut Medicaid Participation to Settle False Claims Act Allegations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$600k",
+      "amount_numeric": 600000,
       "officials": [],
       "link": "https://www.justice.gov/usao-ct/pr/aprn-and-medical-practice-pay-over-600k-and-cease-connecticut-medicaid-participation",
       "link_label": "DOJ Press Release",
@@ -8045,7 +8216,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:46.550298"
     },
     {
       "id": "doj-2025-08-06-832361645",
@@ -8150,8 +8322,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "United States Reaches $501,556 Civil Settlement Resolving Allegations of False Claims to Federal Health Care Programs",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$501,556",
+      "amount_numeric": 501556,
       "officials": [],
       "link": "https://www.justice.gov/usao-edmo/pr/united-states-reaches-501556-civil-settlement-resolving-allegations-false-claims",
       "link_label": "DOJ Press Release",
@@ -8167,7 +8339,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:47.651486"
     },
     {
       "id": "doj-2025-07-21-421450124",
@@ -8175,8 +8348,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Eye Consultants of Pennsylvania, PC Agrees To Pay $790,000.00 To Settle False Claims Act Allegations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$790,000.00",
+      "amount_numeric": 790000,
       "officials": [],
       "link": "https://www.justice.gov/usao-mdpa/pr/eye-consultants-pennsylvania-pc-agrees-pay-79000000-settle-false-claims-act",
       "link_label": "DOJ Press Release",
@@ -8190,7 +8363,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:48.188315"
     },
     {
       "id": "doj-2025-07-18-914832517",
@@ -8204,14 +8378,17 @@
       "link": "https://www.justice.gov/usao-cdil/pr/rossi-sentenced-additional-three-years-prison-healthcare-fraud-related-covid-testing-0",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Telehealth"
+      ],
       "entities": [],
       "state": "IL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:49.179421"
     },
     {
       "id": "doj-2025-07-18-3215787058",
@@ -8235,7 +8412,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:49.871790"
     },
     {
       "id": "doj-2025-07-17-866941594",
@@ -8243,8 +8421,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "United States and the States of Georgia, Colorado, and South Carolina Obtain $114.5M in Judgments in a Sprawling Cancer Genetic Testing Lab Scheme",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$114.5M",
+      "amount_numeric": 114500000,
       "officials": [],
       "link": "https://www.justice.gov/usao-sc/pr/united-states-and-states-georgia-colorado-and-south-carolina-obtain-1145m-judgments",
       "link_label": "DOJ Press Release",
@@ -8259,7 +8437,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:50.564899"
     },
     {
       "id": "doj-2025-07-16-3566847185",
@@ -8284,7 +8463,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:51.141964"
     },
     {
       "id": "doj-2025-07-16-518935439",
@@ -8331,7 +8511,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:52.217949"
     },
     {
       "id": "doj-2025-07-15-442981577",
@@ -8345,14 +8526,17 @@
       "link": "https://www.justice.gov/usao-id/pr/urgent-care-operator-pays-3-million-dollars-resolve-alleged-violations-false-claims-act",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare"
+      ],
       "entities": [],
       "state": "ID",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:53.001354"
     },
     {
       "id": "doj-2025-07-15-211175681",
@@ -8375,7 +8559,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:53.668890"
     },
     {
       "id": "doj-2025-07-15-1315223511",
@@ -8396,7 +8581,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:54.330942"
     },
     {
       "id": "doj-2025-07-11-21221624",
@@ -8404,8 +8590,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Home Health Care Provider To Pay $334,807 To Settle False Claims Act Allegations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$334,807",
+      "amount_numeric": 334807,
       "officials": [],
       "link": "https://www.justice.gov/usao-edmi/pr/home-health-care-provider-pay-334807-settle-false-claims-act-allegations",
       "link_label": "DOJ Press Release",
@@ -8419,7 +8605,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:57.403329"
     },
     {
       "id": "doj-2025-07-11-1077592231",
@@ -8443,7 +8630,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:58.030581"
     },
     {
       "id": "doj-2025-07-10-302256570",
@@ -8468,7 +8656,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:58.606500"
     },
     {
       "id": "doj-2025-07-07-1272789542",
@@ -8493,7 +8682,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:59.172224"
     },
     {
       "id": "doj-2025-07-07-1733296651",
@@ -8516,7 +8706,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:04:59.712620"
     },
     {
       "id": "doj-2025-07-02-1103786005",
@@ -8619,8 +8810,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Ambulance Company And Its Owners Agree To Pay $900,000 To Settle False Claims Act Allegations Of Medically Unnecessary Ambulance Services",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$900,000",
+      "amount_numeric": 900000,
       "officials": [],
       "link": "https://www.justice.gov/usao-mdfl/pr/ambulance-company-and-its-owners-agree-pay-900000-settle-false-claims-act-allegations",
       "link_label": "DOJ Press Release",
@@ -8636,7 +8827,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:00.383500"
     },
     {
       "id": "doj-2025-07-01-3829140106",
@@ -8730,7 +8922,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:00.980506"
     },
     {
       "id": "doj-2025-06-30-858442612",
@@ -8800,7 +8993,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:01.604955"
     },
     {
       "id": "doj-2025-06-30-440009396",
@@ -8871,7 +9065,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:02.145879"
     },
     {
       "id": "doj-2025-06-30-2346134373",
@@ -8941,7 +9136,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:02.891752"
     },
     {
       "id": "doj-2025-06-30-664340218",
@@ -9016,7 +9212,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:03.422252"
     },
     {
       "id": "doj-2025-06-30-973125829",
@@ -9060,7 +9257,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:03.978422"
     },
     {
       "id": "doj-2025-06-30-1485394000",
@@ -9097,14 +9295,18 @@
       "link": "https://www.justice.gov/usao-mdla/pr/national-health-care-fraud-takedown-results-324-defendants-charged-connection-over-146",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
       "entities": [],
       "state": "LA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:04.546129"
     },
     {
       "id": "doj-2025-06-30-2738567534",
@@ -9128,7 +9330,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:06.099429"
     },
     {
       "id": "doj-2025-06-30-768550733",
@@ -9151,7 +9354,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:07.236127"
     },
     {
       "id": "doj-2025-06-30-962075124",
@@ -9223,7 +9427,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:07.845365"
     },
     {
       "id": "doj-2025-06-30-637335433",
@@ -9367,7 +9572,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:08.426923"
     },
     {
       "id": "doj-2025-06-27-1495052289",
@@ -9391,7 +9597,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:09.234121"
     },
     {
       "id": "doj-2025-06-26-3127130108",
@@ -9414,7 +9621,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:10.025889"
     },
     {
       "id": "doj-2025-06-26-324041486",
@@ -9422,8 +9630,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "NUWAY Alliance Agrees to Pay $18,500,000 Settlement in Medicaid Kickbacks Scheme, False Claims Act Violations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$18,500,000",
+      "amount_numeric": 18500000,
       "officials": [],
       "link": "https://www.justice.gov/usao-mn/pr/nuway-alliance-agrees-pay-18500000-settlement-medicaid-kickbacks-scheme-false-claims-act",
       "link_label": "DOJ Press Release",
@@ -9437,7 +9645,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:10.710550"
     },
     {
       "id": "doj-2025-06-26-2566114644",
@@ -9538,8 +9747,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "South Florida Medical Providers Agree to Pay $810,301 to Resolve Allegations of Fraudulently Billing Medicare",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$810,301",
+      "amount_numeric": 810301,
       "officials": [],
       "link": "https://www.justice.gov/usao-sdfl/pr/south-florida-medical-providers-agree-pay-810301-resolve-allegations-fraudulently",
       "link_label": "DOJ Press Release",
@@ -9553,7 +9762,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:11.451246"
     },
     {
       "id": "doj-2025-06-12-68739499",
@@ -9576,7 +9786,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:11.975939"
     },
     {
       "id": "doj-2025-06-11-3405267707",
@@ -9630,8 +9841,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Doctor at L5 Pain Clinic Sentenced to 40 Months in Prison, Ordered to Pay $35,000 Fine and $200,000 in Forfeiture",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$200,000",
+      "amount_numeric": 200000,
       "officials": [],
       "link": "https://www.justice.gov/usao-wdva/pr/doctor-l5-pain-clinic-sentenced-40-months-prison-ordered-pay-35000-fine-and-200000",
       "link_label": "DOJ Press Release",
@@ -9645,7 +9856,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:13.790300"
     },
     {
       "id": "doj-2025-06-10-1441872301",
@@ -9694,7 +9906,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:15.053378"
     },
     {
       "id": "doj-2025-06-03-2021139974",
@@ -9741,7 +9954,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:15.843339"
     },
     {
       "id": "doj-2025-06-03-493193980",
@@ -9764,7 +9978,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:16.474413"
     },
     {
       "id": "doj-2025-06-02-227142135",
@@ -9772,8 +9987,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Residential Treatment Provider Agrees to Pay $346,369 to Settle False Claims Act Allegations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$346,369",
+      "amount_numeric": 346369,
       "officials": [],
       "link": "https://www.justice.gov/usao-me/pr/residential-treatment-provider-agrees-pay-346369-settle-false-claims-act-allegations",
       "link_label": "DOJ Press Release",
@@ -9788,7 +10003,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:17.615521"
     },
     {
       "id": "doj-2025-05-30-238571667",
@@ -9809,7 +10025,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:18.267618"
     },
     {
       "id": "doj-2025-05-30-3412498147",
@@ -9830,7 +10047,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:19.208230"
     },
     {
       "id": "doj-2025-05-30-1219299273",
@@ -9854,7 +10072,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:20.357289"
     },
     {
       "id": "doj-2025-05-29-1239204358",
@@ -9900,7 +10119,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:21.128963"
     },
     {
       "id": "doj-2025-05-27-1460203017",
@@ -9995,7 +10215,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:21.774388"
     },
     {
       "id": "doj-2025-05-22-2270456962",
@@ -10018,7 +10239,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:22.602720"
     },
     {
       "id": "doj-2025-05-21-2258549710",
@@ -10026,20 +10248,24 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Agendia, Inc., Knoxville Comprehensive Breast Center, PLLC, And Knoxville Dermatopathology Laboratory, LLC Agree To Settle False Claims Act Allegations For More Than $3,750,000",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$3,750,000",
+      "amount_numeric": 3750000,
       "officials": [],
       "link": "https://www.justice.gov/usao-edtn/pr/agendia-inc-knoxville-comprehensive-breast-center-pllc-and-knoxville-0",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Genetic Testing"
+      ],
       "entities": [],
       "state": "TN",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:23.641119"
     },
     {
       "id": "doj-2025-05-21-2206755188",
@@ -10063,7 +10289,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:24.365953"
     },
     {
       "id": "doj-2025-05-20-810670970",
@@ -10134,7 +10361,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:25.135782"
     },
     {
       "id": "doj-2025-05-19-3636943254",
@@ -10159,7 +10387,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:25.938664"
     },
     {
       "id": "doj-2025-05-16-2637975628",
@@ -10252,7 +10481,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:26.806305"
     },
     {
       "id": "doj-2025-05-09-495866515",
@@ -10276,7 +10506,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:27.547134"
     },
     {
       "id": "doj-2025-05-09-3218014410",
@@ -10299,7 +10530,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:28.295025"
     },
     {
       "id": "doj-2025-05-09-1137645234",
@@ -10322,7 +10554,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:30.107240"
     },
     {
       "id": "doj-2025-05-06-1400204696",
@@ -10370,7 +10603,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:31.023252"
     },
     {
       "id": "doj-2025-04-30-1504350157",
@@ -10487,7 +10721,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:33.608969"
     },
     {
       "id": "doj-2025-04-25-3080020997",
@@ -10508,7 +10743,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:34.580720"
     },
     {
       "id": "doj-2025-04-24-1743037607",
@@ -10522,14 +10758,20 @@
       "link": "https://www.justice.gov/usao-mdpa/pr/former-owner-york-pain-management-practice-sentenced-42-months-health-care-fraud-money",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Opioids",
+        "Behavioral Health"
+      ],
       "entities": [],
       "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:39.361944"
     },
     {
       "id": "doj-2025-04-23-2747836921",
@@ -10550,7 +10792,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:40.088014"
     },
     {
       "id": "doj-2025-04-23-959892856",
@@ -10588,14 +10831,18 @@
       "link": "https://www.justice.gov/usao-nj/pr/operators-new-jersey-company-sentenced-prison-and-enter-related-civil-settlement",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
       "entities": [],
       "state": "GA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:40.905612"
     },
     {
       "id": "doj-2025-04-17-1153115369",
@@ -10641,7 +10888,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:41.548171"
     },
     {
       "id": "doj-2025-04-17-1678577162",
@@ -10664,7 +10912,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:42.233767"
     },
     {
       "id": "doj-2025-04-17-3524233051",
@@ -10732,7 +10981,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:43.887746"
     },
     {
       "id": "doj-2025-04-11-3109416189",
@@ -10755,7 +11005,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:44.674384"
     },
     {
       "id": "doj-2025-04-10-2956623029",
@@ -10822,7 +11073,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:46.736752"
     },
     {
       "id": "doj-2025-04-07-3368904670",
@@ -10836,14 +11088,20 @@
       "link": "https://www.justice.gov/usao-ri/pr/pain-management-clinic-owners-and-operators-indicted-health-care-fraud-charges",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Opioids",
+        "Behavioral Health"
+      ],
       "entities": [],
       "state": "RI",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:48.393734"
     },
     {
       "id": "doj-2025-04-04-1407840511",
@@ -10866,7 +11124,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:49.035773"
     },
     {
       "id": "doj-2025-04-04-2219586018",
@@ -10890,7 +11149,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:49.693903"
     },
     {
       "id": "doj-2025-04-03-2129192524",
@@ -10914,7 +11174,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:50.623873"
     },
     {
       "id": "doj-2025-04-02-623905336",
@@ -10928,14 +11189,18 @@
       "link": "https://www.justice.gov/usao-ma/pr/national-sales-director-new-york-based-mobile-diagnostic-company-pleads-guilty-kickback",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Genetic Testing"
+      ],
       "entities": [],
       "state": "MA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:51.266572"
     },
     {
       "id": "doj-2025-04-02-388085362",
@@ -10959,7 +11224,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:51.774919"
     },
     {
       "id": "doj-2025-04-02-4248106716",
@@ -10967,8 +11233,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Beckley Medical Clinic And Physician Agree To Pay $152,382.70 To Resolve False Claims Act Allegations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$152,382.70",
+      "amount_numeric": 152382,
       "officials": [],
       "link": "https://www.justice.gov/usao-sdwv/pr/beckley-medical-clinic-and-physician-agree-pay-15238270-resolve-false-claims-act",
       "link_label": "DOJ Press Release",
@@ -10983,7 +11249,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:52.566593"
     },
     {
       "id": "doj-2025-03-27-1650864718",
@@ -11077,7 +11344,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:53.152500"
     },
     {
       "id": "doj-2025-03-26-3634776053",
@@ -11091,14 +11359,17 @@
       "link": "https://www.justice.gov/usao-ndtx/pr/convicted-nurse-practitioner-forfeit-over-40-million-foreign-accounts-health-care",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Behavioral Health"
+      ],
       "entities": [],
       "state": "TX",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:54.115671"
     },
     {
       "id": "doj-2025-03-26-1600437648",
@@ -11112,14 +11383,17 @@
       "link": "https://www.justice.gov/usao-sdny/pr/acting-us-attorney-announces-5-million-false-claims-act-settlement-providers-programs",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid"
+      ],
       "entities": [],
       "state": "NY",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:55.130326"
     },
     {
       "id": "doj-2025-03-26-3926352260",
@@ -11127,8 +11401,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Medical Device Manufacturer And Its Owner Agree To Pay $550,000 To Resolve False Claims Act Allegations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$550,000",
+      "amount_numeric": 550000,
       "officials": [],
       "link": "https://www.justice.gov/usao-wdmi/pr/2025_0326_Prometheus_Settlement",
       "link_label": "DOJ Press Release",
@@ -11143,7 +11417,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:55.739259"
     },
     {
       "id": "doj-2025-03-24-2370101919",
@@ -11213,7 +11488,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:56.404854"
     },
     {
       "id": "doj-2025-03-20-424352297",
@@ -11227,14 +11503,20 @@
       "link": "https://www.justice.gov/usao-nj/pr/new-jersey-pain-clinic-admits-health-care-fraud-and-agrees-criminal-and-civil-penalties",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Opioids",
+        "Behavioral Health"
+      ],
       "entities": [],
       "state": "NJ",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:58.278651"
     },
     {
       "id": "doj-2025-03-19-1784983540",
@@ -11257,7 +11539,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:58.975091"
     },
     {
       "id": "doj-2025-03-18-1953653951",
@@ -11303,7 +11586,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:05:59.654192"
     },
     {
       "id": "doj-2025-03-14-907242669",
@@ -11328,7 +11612,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:00.239033"
     },
     {
       "id": "doj-2025-03-14-4226505279",
@@ -11351,7 +11636,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:01.025320"
     },
     {
       "id": "doj-2025-03-14-4149133546",
@@ -11420,7 +11706,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:01.884520"
     },
     {
       "id": "doj-2025-03-11-1924768508",
@@ -11443,7 +11730,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:02.487154"
     },
     {
       "id": "doj-2025-03-10-3679741773",
@@ -11464,7 +11752,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:04.658814"
     },
     {
       "id": "doj-2025-03-10-3473559209",
@@ -11472,8 +11761,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Doctor Agrees To Pay $468,000 To Settle Civil False Claims Act Allegations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$468,000",
+      "amount_numeric": 468000,
       "officials": [],
       "link": "https://www.justice.gov/usao-wdtx/pr/doctor-agrees-pay-468000-settle-civil-false-claims-act-allegations",
       "link_label": "DOJ Press Release",
@@ -11487,7 +11776,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:05.337670"
     },
     {
       "id": "doj-2025-03-06-2093993786",
@@ -11532,7 +11822,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:05.976194"
     },
     {
       "id": "doj-2025-03-06-2856077363",
@@ -11555,7 +11846,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:06.638385"
     },
     {
       "id": "doj-2025-03-05-836385474",
@@ -11578,7 +11870,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:08.584112"
     },
     {
       "id": "doj-2025-03-05-2543434025",
@@ -11601,7 +11894,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:09.515315"
     },
     {
       "id": "doj-2025-03-03-69491902",
@@ -11622,7 +11916,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:10.450601"
     },
     {
       "id": "doj-2025-02-28-4183616648",
@@ -11648,7 +11943,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:11.052382"
     },
     {
       "id": "doj-2025-02-28-3215621622",
@@ -11671,7 +11967,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:13.718820"
     },
     {
       "id": "doj-2025-02-27-2467154593",
@@ -11718,7 +12015,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:14.404976"
     },
     {
       "id": "doj-2025-02-25-4291877380",
@@ -11741,7 +12039,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:15.011742"
     },
     {
       "id": "doj-2025-02-24-1543100463",
@@ -11795,8 +12094,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Ohio doctor agrees to pay $600,000 to settle False Claims Act allegations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$600,000",
+      "amount_numeric": 600000,
       "officials": [],
       "link": "https://www.justice.gov/usao-sdoh/pr/ohio-doctor-agrees-pay-600000-settle-false-claims-act-allegations",
       "link_label": "DOJ Press Release",
@@ -11810,7 +12109,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:19.479687"
     },
     {
       "id": "doj-2025-02-20-254976578",
@@ -11884,7 +12184,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:20.546744"
     },
     {
       "id": "doj-2025-02-19-691144230",
@@ -11908,7 +12209,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:21.161160"
     },
     {
       "id": "doj-2025-02-12-933517736",
@@ -11932,7 +12234,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:21.740023"
     },
     {
       "id": "doj-2025-02-04-813690700",
@@ -11956,7 +12259,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:22.292900"
     },
     {
       "id": "doj-2025-02-04-1683610405",
@@ -12003,7 +12307,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:22.944271"
     },
     {
       "id": "doj-2025-01-31-351999022",
@@ -12049,7 +12354,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:23.611129"
     },
     {
       "id": "doj-2025-01-27-869715626",
@@ -12057,8 +12363,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Philadelphia Mental Health Clinic and Its Psychiatrist Owner Agree to Pay $900,000 to Resolve False Claims Act Lawsuit for Alleged Medicaid Fraud",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$900,000",
+      "amount_numeric": 900000,
       "officials": [],
       "link": "https://www.justice.gov/usao-edpa/pr/philadelphia-mental-health-clinic-and-its-psychiatrist-owner-agree-pay-900000-resolve",
       "link_label": "DOJ Press Release",
@@ -12073,7 +12379,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:24.414174"
     },
     {
       "id": "doj-2025-01-27-2343441085",
@@ -12120,7 +12427,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:28.886101"
     },
     {
       "id": "doj-2025-01-17-3838852947",
@@ -12143,7 +12451,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:29.551004"
     },
     {
       "id": "doj-2025-01-17-4067321120",
@@ -12167,7 +12476,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:30.381128"
     },
     {
       "id": "doj-2025-01-17-2535030533",
@@ -12175,8 +12485,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Health Care Plan Agrees to Pay Over $500,000 As Part of Self-Disclosure of Potential False Claims Act Violations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "Over $500,000",
+      "amount_numeric": 500000,
       "officials": [],
       "link": "https://www.justice.gov/usao-edmi/pr/health-care-plan-agrees-pay-over-500000-part-self-disclosure-potential-false-claims",
       "link_label": "DOJ Press Release",
@@ -12191,7 +12501,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:31.048907"
     },
     {
       "id": "doj-2025-01-16-2323583445",
@@ -12215,7 +12526,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:31.795136"
     },
     {
       "id": "doj-2025-01-15-1968993948",
@@ -12229,14 +12541,19 @@
       "link": "https://www.justice.gov/usao-edtx/pr/texas-hospital-ceo-sentenced-federal-prison-role-health-care-kickback-conspiracy",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Hospital"
+      ],
       "entities": [],
       "state": "TX",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:32.395374"
     },
     {
       "id": "doj-2025-01-15-3856123390",
@@ -12259,7 +12576,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:32.944701"
     },
     {
       "id": "doj-2025-01-13-3375927787",
@@ -12282,7 +12600,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:35.150256"
     },
     {
       "id": "doj-2025-01-13-4028236152",
@@ -12306,7 +12625,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:35.784616"
     },
     {
       "id": "doj-2025-01-08-589032976",
@@ -12352,7 +12672,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:36.770330"
     },
     {
       "id": "doj-2025-01-07-3772948121",
@@ -12377,7 +12698,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:37.580267"
     },
     {
       "id": "doj-2025-01-07-1796492592",
@@ -12408,8 +12730,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Telehealth Company Pays $386,000 to Resolve Allegations of Overbilling for Medicare Telehealth Time",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$386,000",
+      "amount_numeric": 386000,
       "officials": [],
       "link": "https://www.justice.gov/usao-wdky/pr/telehealth-company-pays-386000-resolve-allegations-overbilling-medicare-telehealth",
       "link_label": "DOJ Press Release",
@@ -12424,7 +12746,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:39.508090"
     },
     {
       "id": "doj-2025-01-02-2804233657",
@@ -12432,8 +12755,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "LabCorp and University Health System Agree To Pay $388,667 To Resolve Alleged False Claims Act Violations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$388,667",
+      "amount_numeric": 388667,
       "officials": [],
       "link": "https://www.justice.gov/usao-edtn/pr/labcorp-and-university-health-system-agree-pay-388667-resolve-alleged-false-claims-act",
       "link_label": "DOJ Press Release",
@@ -12447,7 +12770,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:40.161826"
     },
     {
       "id": "doj-2025-01-02-4283638988",
@@ -12455,20 +12779,23 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Virginia Beach doctor agrees to $625,000 False Claims Act settlement",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$625,000",
+      "amount_numeric": 625000,
       "officials": [],
       "link": "https://www.justice.gov/usao-edva/pr/virginia-beach-doctor-agrees-625000-false-claims-act-settlement",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare"
+      ],
       "entities": [],
       "state": "VA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:41.929233"
     },
     {
       "id": "hhs-oig-2026-03-09-2348143186",
@@ -12512,7 +12839,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:42.579097"
     },
     {
       "id": "doj-2025-12-05-1246483037",
@@ -12566,8 +12894,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Connecticut Dentists Pay More than $714K to Settle False Claims Allegations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$714,000",
+      "amount_numeric": 714000,
       "officials": [],
       "link": "https://www.justice.gov/usao-ct/pr/connecticut-dentists-pay-more-714k-settle-false-claims-allegations",
       "link_label": "DOJ Press Release",
@@ -12581,7 +12909,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:44.385306"
     },
     {
       "id": "doj-2025-11-17-119758127",
@@ -12595,14 +12924,20 @@
       "link": "https://www.justice.gov/usao-edmi/pr/oncologist-sentenced-prison-illegally-selling-cancer-drugs",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Pharmacy",
+        "Off-Label"
+      ],
       "entities": [],
       "state": "MI",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:45.146119"
     },
     {
       "id": "doj-2025-09-22-554453420",
@@ -12626,7 +12961,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:45.849991"
     },
     {
       "id": "doj-2025-09-11-568483712",
@@ -12649,7 +12985,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:47.530119"
     },
     {
       "id": "doj-2025-08-19-2542748640",
@@ -12663,14 +13000,18 @@
       "link": "https://www.justice.gov/usao-ndca/pr/california-behavioral-medicine-provider-agrees-pay-275-million-resolve-alleged-false",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Behavioral Health"
+      ],
       "entities": [],
       "state": "CA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:52.649943"
     },
     {
       "id": "doj-2025-07-31-1664232202",
@@ -12678,8 +13019,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Florida Woman to Pay $400,000 to Settle Allegations of Falsifying Diagnoses in connection with an Amherst Compounding Pharmacy",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$400,000",
+      "amount_numeric": 400000,
       "officials": [],
       "link": "https://www.justice.gov/usao-nh/pr/florida-woman-pay-400000-settle-allegations-falsifying-diagnoses-connection-amherst",
       "link_label": "DOJ Press Release",
@@ -12695,7 +13036,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:53.461939"
     },
     {
       "id": "doj-2025-07-31-724261442",
@@ -12718,7 +13060,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:54.119312"
     },
     {
       "id": "doj-2025-05-22-803218501",
@@ -12741,7 +13084,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:54.667563"
     },
     {
       "id": "doj-2025-05-16-2799245681",
@@ -12749,8 +13093,8 @@
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Connecticut Physiatrist and Practice Pay $427k to Settle False Claims, Improper Billing Allegations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$427,000",
+      "amount_numeric": 427000,
       "officials": [],
       "link": "https://www.justice.gov/usao-ct/pr/connecticut-physiatrist-and-practice-pay-427k-settle-false-claims-improper-billing",
       "link_label": "DOJ Press Release",
@@ -12764,7 +13108,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:55.284859"
     },
     {
       "id": "doj-2025-05-09-1418567954",
@@ -12772,8 +13117,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Norwalk Dentists Pay More Than $600K To Settle False Claims Allegations",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$600,000",
+      "amount_numeric": 600000,
       "officials": [],
       "link": "https://www.justice.gov/usao-ct/pr/norwalk-dentists-pay-more-600k-settle-false-claims-allegations",
       "link_label": "DOJ Press Release",
@@ -12787,7 +13132,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:55.877119"
     },
     {
       "id": "doj-2025-04-21-3127599967",
@@ -12818,8 +13164,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Two California Doctors Agree To Settlements Totaling $375,000 To Resolve Allegations Of Fraud Schemes Related To “Electroacupuncture” Devices",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$375,000",
+      "amount_numeric": 375000,
       "officials": [],
       "link": "https://www.justice.gov/usao-edca/pr/two-california-doctors-agree-settlements-totaling-375000-resolve-allegations-fraud",
       "link_label": "DOJ Press Release",
@@ -12833,7 +13179,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:56.790017"
     },
     {
       "id": "doj-2025-01-28-1040393229",
@@ -12841,8 +13188,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Greensboro Laboratory and Owner Agree to Pay $850,000 to Resolve Allegations of False Claims for Urine Drug Testing",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$850,000",
+      "amount_numeric": 850000,
       "officials": [],
       "link": "https://www.justice.gov/usao-mdnc/pr/greensboro-laboratory-and-owner-agree-pay-850000-resolve-allegations-false-claims",
       "link_label": "DOJ Press Release",
@@ -12857,7 +13204,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "ai_enriched_at": "2026-04-07T19:06:57.662319"
     },
     {
       "id": "doj-2025-01-17-1866079757",
