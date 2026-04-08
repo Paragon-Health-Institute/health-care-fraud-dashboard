@@ -59,10 +59,10 @@ FEEDS = [
     {"name": "CMS",         "agency": "CMS",           "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "cms"},
     {"name": "HHS",         "agency": "HHS",           "url": "https://www.hhs.gov/rss/news.xml",                                         "enabled": False, "source_type": "official", "browser_fallback": True},
     {"name": "DOJ-USAO",    "agency": "DOJ",           "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "doj_usao"},
-    {"name": "GAO",         "agency": "GAO",           "url": "https://www.gao.gov/rss/reports.xml",                                      "enabled": True,  "source_type": "official"},
-    {"name": "H-Oversight", "agency": "Congress",      "url": "https://oversight.house.gov/feed/",                                        "enabled": True,  "source_type": "official"},
+    {"name": "GAO",         "agency": "GAO",           "url": "https://www.gao.gov/rss/reports.xml",                                      "enabled": True,  "source_type": "official", "browser_fallback": True},
+    {"name": "H-Oversight", "agency": "Congress",      "url": "https://oversight.house.gov/feed/",                                        "enabled": True,  "source_type": "official", "browser_fallback": True},
     {"name": "H-E&C",       "agency": "Congress",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "energy_commerce"},
-    {"name": "S-Finance",   "agency": "Congress",      "url": "https://www.finance.senate.gov/rss/feeds/?type=press",                     "enabled": True,  "source_type": "official"},
+    {"name": "S-Finance",   "agency": "Congress",      "url": "https://www.finance.senate.gov/rss/feeds/?type=press",                     "enabled": True,  "source_type": "official", "browser_fallback": True},
     {"name": "S-HELP",      "agency": "Congress",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "help_committee"},
     {"name": "H-W&M",       "agency": "Congress",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "ways_means"},
     {"name": "HHS-OIG-RPT", "agency": "HHS-OIG",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "oig_reports"},
@@ -113,24 +113,62 @@ def test_healthcare_context(text):
     return False
 
 def get_action_type(title, desc):
-    text = f"{title} {desc}".lower()
-    if re.search(r'signed into law|enacted|passes bill|bill signed|legislation|executive order|presidential memo|law.*(takes|went) effect', text):
-        return 'Legislation'
-    if re.search(r'hearing|committee\s+(hearing|held|examine|vote)|testimony|testif|subcommittee.*hearing|gao.*(report|finds|audit)|congressional.*report|senate.*report|house.*report', text):
-        return 'Congressional Hearing'
-    if re.search(r'plead|convict|indict|charg|guilty|arrest|prosecut', text):
+    """Classify a scraped item into one of ~10 action types.
+
+    Title-only checks run first, in priority order, so a criminal
+    prosecution press release whose body text mentions "court hearing"
+    or "testified" doesn't get mislabeled as a Congressional Hearing.
+    Full text is only consulted as a fallback for ambiguous titles.
+    """
+    title_l = (title or '').lower()
+    full_text = f"{title} {desc}".lower()
+
+    # ---- Title-only enforcement detection (highest priority) ----
+    # Criminal verbs in the title = Criminal Enforcement, period.
+    if re.search(r'\b(plead|pleads|pleaded|convict|convicted|indict|indicted|'
+                 r'charg(ed|es|ing)|guilty|sentenc(e|ed|ing)|arrest(ed)?|'
+                 r'prosecut(ed|ion)?)\b', title_l):
         return 'Criminal Enforcement'
-    if re.search(r'civil|settlement|civil.+action|false claims act', text):
+    # Civil/settlement verbs in the title = Civil Action
+    if re.search(r'\b(settlement|settles?|to pay|agree(s|d)? to pay|consent (judgment|decree)|'
+                 r'civil action|false claims act|qui tam)\b', title_l):
         return 'Civil Action'
-    if re.search(r'audit|review|report|oig', text):
+
+    # ---- Title-only legislation/hearing/report detection ----
+    if re.search(r'signed into law|enacted|passes bill|bill signed|legislation|'
+                 r'executive order|presidential memo|law.*(takes|went) effect',
+                 title_l):
+        return 'Legislation'
+    if re.search(r'\b(hearing|testimony|testifies?|subcommittee hearing|'
+                 r'committee (hearing|held|examines?|votes?))\b', title_l):
+        return 'Congressional Hearing'
+    if re.search(r'\b(audit|inspection|evaluation report)\b', title_l):
         return 'Audit'
-    if re.search(r'rule|regulation|final.+rule|proposed.+rule|loophole', text):
+    if re.search(r'\b(senate report|house report|congressional report|'
+                 r'gao (report|finds))\b', title_l):
+        return 'Report'
+    if re.search(r'\b(rule|regulation|final rule|proposed rule|loophole)\b', title_l):
         return 'Rule/Regulation'
-    if re.search(r'task force|division|unit|strike force|creat', text):
+    if re.search(r'\b(task force|strike force|division|unit) (created|formed|launched|announced)\b', title_l):
         return 'Structural/Organizational'
-    if re.search(r'investigat|fact.?find|mission', text):
+    if re.search(r'\b(launches? (an? )?investigation|opens? (an? )?investigation|'
+                 r'fact.?find(ing)?|sends?.*(letter|inquiry))\b', title_l):
         return 'Investigation'
-    if re.search(r'ai|artificial intelligence|machine learning', text):
+
+    # ---- Fall back to full-text checks for ambiguous titles ----
+    if re.search(r'plead|convict|indict|charg|guilty|arrest|prosecut', full_text):
+        return 'Criminal Enforcement'
+    if re.search(r'civil|settlement|false claims act', full_text):
+        return 'Civil Action'
+    if re.search(r'audit|review|report|oig', full_text):
+        return 'Audit'
+    if re.search(r'rule|regulation|loophole', full_text):
+        return 'Rule/Regulation'
+    if re.search(r'task force|strike force', full_text):
+        return 'Structural/Organizational'
+    if re.search(r'investigat|fact.?find', full_text):
+        return 'Investigation'
+    if re.search(r'\bai\b|artificial intelligence|machine learning', full_text):
         return 'Technology/Innovation'
     return 'Administrative Action'
 
@@ -159,8 +197,73 @@ def generate_tags(text):
     """
     return _auto_tags(text)
 
+# Site-specific suffixes that pollute <title> tags. Stripped during
+# canonical-title extraction so item titles match the actual headline.
+TITLE_SUFFIX_PATTERNS = [
+    " | United States Department of Justice",
+    " | DEA.gov",
+    " | U.S. Department of the Treasury",
+    " | CMS",
+    " | HHS.gov",
+    " | Office of Inspector General | Government Oversight | U.S. Department of Health and Human Services",
+    " | Office of Inspector General",
+    " | U.S. GAO",
+    " | U.S. Government Accountability Office (U.S. GAO)",
+    " | The United States Senate Committee on Finance",
+    " | Energy and Commerce Committee",
+    " - United States Senate Committee on Health, Education, Labor and Pensions",
+    " | House Committee on Ways and Means",
+    " | Committee on Oversight and Accountability",
+]
+TITLE_PREFIX_RE = re.compile(
+    r"^(?:Office of Public Affairs|Central District of California|"
+    r"Eastern District of [A-Za-z ]+|Western District of [A-Za-z ]+|"
+    r"Northern District of [A-Za-z ]+|Southern District of [A-Za-z ]+|"
+    r"District of [A-Za-z ]+|Middle District of [A-Za-z ]+)\s*\|\s*"
+)
+BAD_TITLES = {"Access Denied", "Just a moment...", "Page Not Found", ""}
+
+
+def normalize_page_title(raw):
+    """Strip boilerplate breadcrumb prefixes and site suffixes from a
+    fetched <title>/<h1> string. Used to derive canonical item titles
+    from press release detail pages.
+    """
+    if not raw:
+        return ""
+    t = raw.strip()
+    for suf in sorted(TITLE_SUFFIX_PATTERNS, key=len, reverse=True):
+        if t.endswith(suf):
+            t = t[: -len(suf)].rstrip()
+    t = TITLE_PREFIX_RE.sub("", t)
+    t = re.sub(r"\s+", " ", t).strip()
+    t = t.replace("\u00a0", " ").strip()
+    return t
+
+
+def _looks_like_bad_title(t):
+    if not t:
+        return True
+    s = t.strip()
+    if s in BAD_TITLES:
+        return True
+    if len(s) < 10:
+        return True
+    if "Just a moment" in s or "Access Denied" in s or "Page Not Found" in s:
+        return True
+    return False
+
+
 def fetch_detail_page(session, url):
-    """Fetch a detail page and return (text, doj_link)."""
+    """Fetch a detail page and return (text, doj_link, canonical_title).
+
+    The canonical_title is extracted from (in order of preference):
+      1. <meta property="og:title">
+      2. <h1> on the page
+      3. <title> tag, stripped of site/breadcrumb boilerplate
+    Returns "" for canonical_title if nothing usable was found — callers
+    should fall back to the listing-page link text in that case.
+    """
     try:
         resp = session.get(url, timeout=20)
         resp.raise_for_status()
@@ -171,6 +274,25 @@ def fetch_detail_page(session, url):
             if 'justice.gov' in a_tag['href'] and '/pr/' in a_tag['href']:
                 doj_link = a_tag['href']
                 break
+        # Extract canonical title — try og:title, h1, then <title>
+        canonical_title = ""
+        og = soup.find('meta', attrs={'property': 'og:title'})
+        if og and og.get('content'):
+            cand = normalize_page_title(og['content'])
+            if not _looks_like_bad_title(cand):
+                canonical_title = cand
+        if not canonical_title:
+            h1 = soup.find('h1')
+            if h1:
+                cand = normalize_page_title(h1.get_text(strip=True))
+                if not _looks_like_bad_title(cand):
+                    canonical_title = cand
+        if not canonical_title:
+            title_tag = soup.find('title')
+            if title_tag:
+                cand = normalize_page_title(title_tag.get_text(strip=True))
+                if not _looks_like_bad_title(cand):
+                    canonical_title = cand
         # Try common content containers
         main = (soup.find('main') or soup.find('article') or
                 soup.find('div', class_='field-item') or
@@ -178,11 +300,11 @@ def fetch_detail_page(session, url):
         if main:
             for tag in main.find_all(['nav', 'footer', 'aside', 'script', 'style']):
                 tag.decompose()
-            return re.sub(r'\s+', ' ', main.get_text(' ', strip=True)), doj_link
-        return "", doj_link
+            return re.sub(r'\s+', ' ', main.get_text(' ', strip=True)), doj_link, canonical_title
+        return "", doj_link, canonical_title
     except Exception as e:
         log(f"    Detail fetch failed for {url}: {e}")
-        return "", None
+        return "", None, ""
 
 def make_id(prefix, date_str, link, agency=""):
     hash_input = link or (date_str + agency)
@@ -360,8 +482,9 @@ def scrape_oig(session):
                     date_match = DATE_RE.search(text)
                     if date_match:
                         date_str = date_match.group()
-                # Fetch OIG detail page — also extracts DOJ press release link if present
-                detail_text, doj_link = fetch_detail_page(session, href)
+                # Fetch OIG detail page — also extracts DOJ press release link
+                # and canonical headline (h1/og:title)
+                detail_text, doj_link, canonical_title = fetch_detail_page(session, href)
                 # If DOJ press release exists, use it as the canonical link.
                 canonical_link = doj_link if doj_link else href
                 # In normal mode we also fetch the DOJ press release text to
@@ -370,9 +493,14 @@ def scrape_oig(session):
                 # and we don't store descriptions anyway, so the incremental
                 # quality isn't worth the latency or failure rate.
                 if doj_link and not backfill:
-                    doj_text, _ = fetch_detail_page(session, doj_link)
+                    doj_text, _, doj_canonical = fetch_detail_page(session, doj_link)
                     if doj_text:
                         detail_text = doj_text  # use DOJ text for description/tags
+                    if doj_canonical:
+                        canonical_title = doj_canonical  # prefer DOJ headline
+                # Override listing-page title with the canonical headline
+                if canonical_title:
+                    title = canonical_title
                 # Fallback: extract date from detail page text (e.g. "Action Details Date: March 27, 2026")
                 if not date_str and detail_text:
                     date_match = DATE_RE.search(detail_text)
@@ -441,8 +569,10 @@ def scrape_cms(session):
                 date_match = re.search(r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+\d{1,2},?\s+\d{4}', date_el)
                 if date_match:
                     date_str = date_match.group()
-            # Fetch detail page for description
-            detail_text, _ = fetch_detail_page(session, href)
+            # Fetch detail page for description and canonical title
+            detail_text, _, canonical_title = fetch_detail_page(session, href)
+            if canonical_title:
+                title = canonical_title
             desc = ""
             if detail_text:
                 cleaned = detail_text
@@ -486,12 +616,15 @@ def scrape_energy_commerce(session):
             title = heading.get_text(strip=True) if heading else ""
             if not title or len(title) < 10:
                 continue
-            # Fetch detail page for description
+            # Fetch detail page for description and canonical title
             detail_text = ""
+            _detail_title = ""
             try:
-                detail_text, _ = fetch_detail_page(session, href)
+                detail_text, _, _detail_title = fetch_detail_page(session, href)
             except Exception:
                 pass
+            if _detail_title:
+                title = _detail_title
             desc = ""
             if detail_text:
                 cleaned = detail_text
@@ -540,12 +673,15 @@ def scrape_help_committee(session):
                     dm2 = re.search(r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}', parent.get_text())
                     if dm2:
                         date_str = dm2.group()
-            # Fetch detail page for description
+            # Fetch detail page for description and canonical title
             detail_text = ""
+            _detail_title = ""
             try:
-                detail_text, _ = fetch_detail_page(session, href)
+                detail_text, _, _detail_title = fetch_detail_page(session, href)
             except Exception:
                 pass
+            if _detail_title:
+                title = _detail_title
             desc = ""
             if detail_text:
                 cleaned = detail_text
@@ -605,12 +741,15 @@ def scrape_ways_means(session):
                 dm = re.search(r'/(\d{4})/(\d{2})/(\d{2})/', href)
                 if dm:
                     date_str = f"{dm.group(1)}-{dm.group(2)}-{dm.group(3)}"
-            # Fetch detail page for description
+            # Fetch detail page for description and canonical title
             detail_text = ""
+            _detail_title = ""
             try:
-                detail_text, _ = fetch_detail_page(session, href)
+                detail_text, _, _detail_title = fetch_detail_page(session, href)
             except Exception:
                 pass
+            if _detail_title:
+                title = _detail_title
             desc = ""
             if detail_text:
                 cleaned = detail_text
@@ -658,12 +797,15 @@ def scrape_doj_usao(session):
                 )
                 if dm:
                     date_str = dm.group()
-            # Fetch detail page for description
+            # Fetch detail page for description and canonical title
             detail_text = ""
+            _detail_title = ""
             try:
-                detail_text, _ = fetch_detail_page(session, href)
+                detail_text, _, _detail_title = fetch_detail_page(session, href)
             except Exception:
                 pass
+            if _detail_title:
+                title = _detail_title
             desc = ""
             if detail_text:
                 cleaned = detail_text
@@ -717,12 +859,14 @@ def fetch_rss(session, url, use_browser_fallback=False):
         else:
             date_str = entry.get('published', entry.get('updated', ''))
 
-        # If RSS summary is short/empty, fetch the detail page
+        # If RSS summary is short/empty, fetch the detail page (also captures
+        # canonical title from h1/og:title to override RSS-provided title)
         desc_clean = clean_html(desc)
         detail_text = ""
+        _detail_title = ""
         if link and len(desc_clean) < 100:
             try:
-                detail_text, _ = fetch_detail_page(session, link)
+                detail_text, _, _detail_title = fetch_detail_page(session, link)
                 if detail_text:
                     cleaned = detail_text
                     if title in cleaned:
@@ -734,6 +878,8 @@ def fetch_rss(session, url, use_browser_fallback=False):
                             desc = desc[:last_period + 1]
             except Exception:
                 pass
+        if _detail_title:
+            title = _detail_title
 
         items.append({
             'title': title,
@@ -784,8 +930,10 @@ def scrape_oig_reports(session):
                     if rt in body_text:
                         report_type = rt
                         break
-                # Fetch detail page for description
-                detail_text, _ = fetch_detail_page(session, href)
+                # Fetch detail page for description and canonical title
+                detail_text, _, canonical_title = fetch_detail_page(session, href)
+                if canonical_title:
+                    title = canonical_title
                 desc = ""
                 if detail_text:
                     cleaned = detail_text
@@ -857,6 +1005,17 @@ def main():
                              'Hearing, Report, etc.). Used by the daily auto-'
                              'merge pipeline which only publishes to the '
                              'Federal Enforcement tab.')
+    parser.add_argument('--oversight-only', action='store_true',
+                        help='Inverse of --enforcement-only. Only accept '
+                             'items classified as oversight-type (Audit, '
+                             'Investigation, Administrative Action, '
+                             'Rule/Regulation, Hearing, Report, '
+                             'Structural/Organizational, Legislation, '
+                             'Congressional Hearing, Technology/Innovation). '
+                             'Routes results to data/needs_review_oversight.json '
+                             'instead of actions.json. Used by the daily '
+                             'oversight pipeline which feeds the Oversight & '
+                             'Accountability tab via human/AI review.')
     args = parser.parse_args()
     silent = args.silent
     if args.no_browser:
@@ -867,9 +1026,23 @@ def main():
 
     # Cutoff: backfill mode uses the explicit floor and ignores last_scraped.
     # Normal mode uses last_scraped to only pick up new items since last run.
+    # Oversight mode uses its OWN last_scraped key so it doesn't share state
+    # with the enforcement pipeline (they run on different schedules).
     if args.backfill_from:
         last_scraped_date = args.backfill_from
         log(f"BACKFILL MODE: floor = {last_scraped_date} (ignoring last_scraped)")
+    elif args.oversight_only:
+        ov_path_for_cutoff = os.path.join(SCRIPT_DIR, "data", "needs_review_oversight.json")
+        if os.path.exists(ov_path_for_cutoff):
+            try:
+                ov_meta = load_json(ov_path_for_cutoff, {"metadata": {}}).get("metadata", {})
+                last_scraped_raw = ov_meta.get("last_scraped", "")
+            except Exception:
+                last_scraped_raw = ""
+        else:
+            last_scraped_raw = ""
+        last_scraped_date = last_scraped_raw[:10] if last_scraped_raw else "2025-01-01"
+        log(f"Last oversight scrape: {last_scraped_date} — skipping older entries")
     else:
         last_scraped_raw = data["metadata"].get("last_scraped") or data["metadata"].get("last_updated", "")
         last_scraped_date = last_scraped_raw[:10] if last_scraped_raw else "2025-01-01"
@@ -880,10 +1053,16 @@ def main():
     globals()['BACKFILL_FLOOR'] = last_scraped_date
     globals()['OPA_ONLY'] = bool(args.opa_only)
     globals()['ENFORCEMENT_ONLY'] = bool(args.enforcement_only)
+    globals()['OVERSIGHT_ONLY'] = bool(args.oversight_only)
     if args.opa_only:
         log("OPA-ONLY MODE: dropping items not linking to /opa/pr/")
     if args.enforcement_only:
         log("ENFORCEMENT-ONLY MODE: dropping items not typed Criminal Enforcement / Civil Action")
+    if args.oversight_only:
+        log("OVERSIGHT-ONLY MODE: dropping enforcement items, routing to needs_review_oversight.json")
+    if args.enforcement_only and args.oversight_only:
+        log("ERROR: --enforcement-only and --oversight-only are mutually exclusive", "red")
+        sys.exit(2)
 
     # Dedup sets
     existing_links = set()
@@ -909,6 +1088,22 @@ def main():
                     existing_links.add(pending["link"])
         except Exception as e:
             log(f"  WARNING: could not load needs_review.json: {e}")
+
+    # In oversight mode, also dedup against the oversight review queue so
+    # the daily oversight pipeline doesn't re-flag items that already went
+    # through review (promoted, pending, or rejected).
+    oversight_review_path = os.path.join(SCRIPT_DIR, "data", "needs_review_oversight.json")
+    if os.path.exists(oversight_review_path):
+        try:
+            ov_review = load_json(oversight_review_path, {"items": [], "rejected_links": []})
+            for link in ov_review.get("rejected_links", []) or []:
+                if link:
+                    existing_links.add(link)
+            for pending in ov_review.get("items", []) or []:
+                if pending.get("link"):
+                    existing_links.add(pending["link"])
+        except Exception as e:
+            log(f"  WARNING: could not load needs_review_oversight.json: {e}")
 
     session = create_session()
     added = 0
@@ -1011,6 +1206,11 @@ def main():
                     continue
                 if globals().get('ENFORCEMENT_ONLY') and not is_enforcement:
                     continue
+                # Oversight-only: drop enforcement items entirely. Oversight
+                # items will be routed to needs_review_oversight.json at save
+                # time, never directly into actions.json.
+                if globals().get('OVERSIGHT_ONLY') and is_enforcement:
+                    continue
 
                 # Dollar amounts are only kept on Criminal Enforcement /
                 # Civil Action items. Oversight (Audit, Investigation,
@@ -1087,13 +1287,35 @@ def main():
     if added > 0:
         data["metadata"]["last_updated"] = datetime.now().isoformat()
 
-    if added > 0:
-        data["actions"].extend(new_actions)
-        log(f"Added {added} action(s).")
+    if globals().get('OVERSIGHT_ONLY'):
+        # Route oversight items to the oversight review queue, never directly
+        # to actions.json. The oversight pipeline (audit-oversight,
+        # ai-review-oversight) is responsible for promoting items to the
+        # main actions.json.
+        ov_path = os.path.join(SCRIPT_DIR, "data", "needs_review_oversight.json")
+        ov_data = load_json(ov_path, {"items": [], "rejected_links": [], "metadata": {}})
+        if "items" not in ov_data:
+            ov_data["items"] = []
+        if "rejected_links" not in ov_data:
+            ov_data["rejected_links"] = []
+        if "metadata" not in ov_data:
+            ov_data["metadata"] = {}
+        if added > 0:
+            ov_data["items"].extend(new_actions)
+            log(f"Added {added} oversight item(s) to review queue.")
+        else:
+            log("No new oversight items found.")
+        ov_data["metadata"]["last_scraped"] = datetime.now().isoformat()
+        save_json(ov_path, ov_data)
+        # Do NOT touch actions.json metadata in oversight mode — the
+        # enforcement pipeline owns that key.
     else:
-        log("No new actions found.")
-
-    save_json(DATA_FILE, data)
+        if added > 0:
+            data["actions"].extend(new_actions)
+            log(f"Added {added} action(s).")
+        else:
+            log("No new actions found.")
+        save_json(DATA_FILE, data)
 
     log("Saved.")
     close_browser()

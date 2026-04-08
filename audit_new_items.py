@@ -48,6 +48,12 @@ MEDIA_FILE = os.path.join(SCRIPT_DIR, "data", "media.json")
 MEDIA_REVIEW_FILE = os.path.join(SCRIPT_DIR, "data", "needs_review_media.json")
 MEDIA_SUMMARY_FILE = os.path.join(SCRIPT_DIR, "data", "_media_audit_summary.md")
 
+# Oversight pipeline (parallel to enforcement). Items go to actions.json
+# under oversight types (Audit, Investigation, Hearing, Report, etc.)
+# after passing through needs_review_oversight.json + AI review.
+OVERSIGHT_REVIEW_FILE = os.path.join(SCRIPT_DIR, "data", "needs_review_oversight.json")
+OVERSIGHT_SUMMARY_FILE = os.path.join(SCRIPT_DIR, "data", "_oversight_audit_summary.md")
+
 # ---------------------------------------------------------------------------
 # Strict healthcare-context patterns. Anything matching these is auto-approved.
 # Anything that doesn't match is flagged for review (NOT auto-rejected).
@@ -1162,6 +1168,339 @@ def _append_media_ai_summary(promoted: list, rejected: list, escalated: list) ->
 
 
 # ---------------------------------------------------------------------------
+# Oversight pipeline — parallel to media/enforcement, routes oversight-type
+# items (Audit, Investigation, Hearing, Report, Administrative Action,
+# Rule/Regulation, Legislation, Structural/Organizational) into actions.json
+# after passing both regex and AI relevance checks.
+# ---------------------------------------------------------------------------
+OVERSIGHT_AI_PROMPT = """You are a relevance classifier for the Oversight & Accountability tab of a healthcare fraud dashboard.
+
+The Oversight tab tracks federal *oversight* actions about healthcare fraud — distinct from criminal/civil enforcement. In scope:
+
+## IN SCOPE (answer healthcare_fraud_oversight=true)
+
+- HHS-OIG audits, evaluations, inspections, semiannual reports about Medicare/Medicaid/CHIP/program-integrity findings
+- GAO reports on healthcare fraud, improper payments, program-integrity gaps in Medicare/Medicaid/TRICARE/ACA
+- Congressional hearings (House E&C, House Oversight, House Ways & Means, Senate Finance, Senate HELP) about healthcare fraud, improper payments, or program integrity
+- Congressional committee investigations or letters demanding info about healthcare fraud
+- CMS administrative anti-fraud actions: corrective action plans, program suspensions, moratoria, payment hold-ups, NPI revocations, deferral notices
+- Treasury/FinCEN advisories specifically about healthcare-fraud SARs or money-laundering typologies
+- White House / DOJ healthcare-fraud task force formation or org changes
+- Healthcare-fraud-relevant rules / regulations / policy changes (CMS Final Rule on DMEPOS screening, etc.)
+- Senate or House reports on healthcare fraud findings
+- DOJ FY recovery announcements that summarize healthcare-fraud results (the DOJ False Claims Act annual report etc.)
+
+## OUT OF SCOPE (answer healthcare_fraud_oversight=false)
+
+- DOJ/USAO criminal prosecutions or civil settlements (those go on the Federal Enforcement tab, not Oversight)
+- General congressional hearings unrelated to healthcare fraud (immigration, tax, defense, foreign aid, etc.)
+- HHS-OIG audits NOT about healthcare fraud or program integrity (e.g. SNAP, Head Start, OCR)
+- GAO reports unrelated to healthcare fraud (defense procurement, NASA, IRS service, etc.)
+- DEA drug seizures, gang takedowns, fentanyl trafficking arrests
+- General agency newsroom announcements (new staff, organizational announcements, awards)
+- News coverage of an oversight action (that goes on the Media tab)
+- Roundup posts, "ICYMI", press release indices
+
+## Borderline notes
+
+- A hearing titled "Examining Medicaid Improper Payments" → IN scope, high confidence
+- A hearing titled "Oversight of Federal Spending" → OUT, too broad
+- A report titled "DOJ Recovers $X Billion in False Claims Act Settlements in FY2025" → IN if it breaks out healthcare; the FCA report is annually a primary HC fraud doc
+- A CMS press release announcing a new CMS Administrator → OUT
+- A CMS press release announcing a new program integrity initiative → IN
+
+## OUTPUT
+
+Return ONLY valid JSON. No markdown fences, no explanation outside the JSON.
+
+{
+  "healthcare_fraud_oversight": true | false,
+  "confidence": integer 0-100,
+  "reason": "one sentence explaining the decision"
+}
+
+Confidence calibration:
+- 95-100: title makes it unambiguous
+- 70-94: title clearly implies one direction
+- 30-69: title is genuinely ambiguous
+- 0-29: unable to judge from title alone
+"""
+
+
+def load_oversight_review() -> dict:
+    review = load_json(OVERSIGHT_REVIEW_FILE, {"items": [], "rejected_links": []})
+    review.setdefault("items", [])
+    review.setdefault("rejected_links", [])
+    return review
+
+
+def cmd_audit_oversight() -> int:
+    """Run the regex healthcare check on items in needs_review_oversight.json.
+
+    Items that pass the HC keyword check get auto-promoted into actions.json.
+    Anything else stays in the review queue for AI review.
+    """
+    review = load_oversight_review()
+    pending = [a for a in review.get("items", [])
+               if not a.get("ai_decision") and not a.get("audit_decision")]
+
+    if not pending:
+        print("audit-oversight: no un-audited items in needs_review_oversight.json")
+        if os.path.exists(OVERSIGHT_SUMMARY_FILE):
+            os.remove(OVERSIGHT_SUMMARY_FILE)
+        return 0
+
+    print(f"audit-oversight: {len(pending)} pending items to check")
+
+    actions = load_json(DATA_FILE, {"metadata": {"version": "1.0", "last_updated": ""},
+                                     "actions": []})
+
+    auto_promoted = []
+    still_pending = []
+    for item in pending:
+        if is_obviously_healthcare(item):
+            auto_promoted.append(item)
+            item["audit_decision"] = "auto_approved"
+        else:
+            still_pending.append(item)
+            item["flag_reason"] = "title lacks healthcare keyword"
+
+    if auto_promoted:
+        for item in auto_promoted:
+            for k in ("flagged_at", "flag_reason", "audit_decision"):
+                item.pop(k, None)
+        actions.setdefault("actions", []).extend(auto_promoted)
+        actions["metadata"]["last_updated"] = datetime.now().isoformat()
+        save_json(DATA_FILE, actions)
+
+    promoted_ids = {a["id"] for a in auto_promoted}
+    review["items"] = [a for a in review["items"] if a.get("id") not in promoted_ids]
+    save_json(OVERSIGHT_REVIEW_FILE, review)
+
+    print(f"audit-oversight: {len(auto_promoted)} auto-promoted, "
+          f"{len(still_pending)} flagged for AI/human review")
+
+    _write_oversight_audit_summary(auto_promoted, still_pending)
+    return 0
+
+
+def _call_claude_oversight(client, title: str, link: str, agency: str, item_type: str) -> dict | None:
+    """Call Claude Haiku with the oversight classifier prompt."""
+    user_msg = f"Title: {title}\nAgency: {agency}\nType: {item_type}\nLink: {link}"
+    try:
+        resp = client.messages.create(
+            model=AI_MODEL,
+            max_tokens=300,
+            system=OVERSIGHT_AI_PROMPT,
+            messages=[{"role": "user", "content": user_msg}],
+        )
+        text = resp.content[0].text.strip()
+        if text.startswith("```"):
+            text = text.split("\n", 1)[1]
+            if text.endswith("```"):
+                text = text[:-3]
+            text = text.strip()
+        result = json.loads(text)
+        if "healthcare_fraud_oversight" not in result or "confidence" not in result:
+            return None
+        return result
+    except Exception as e:
+        print(f"    AI call failed: {e}", file=sys.stderr)
+        return None
+
+
+def cmd_ai_review_oversight() -> int:
+    """Process items in needs_review_oversight.json with Claude Haiku.
+
+    Same three-tier logic: auto-promote high-confidence yes,
+    auto-reject high-confidence no, escalate the rest.
+    """
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+    if not api_key:
+        print("ai-review-oversight: ANTHROPIC_API_KEY not set, skipping")
+        return 0
+
+    try:
+        import anthropic
+    except ImportError:
+        print("ai-review-oversight: anthropic package not installed, skipping")
+        return 0
+
+    review = load_oversight_review()
+    pending = [a for a in review.get("items", []) if "ai_decision" not in a]
+    if not pending:
+        print("ai-review-oversight: no un-reviewed items in needs_review_oversight.json")
+        return 0
+
+    print(f"ai-review-oversight: processing {len(pending)} item(s) with {AI_MODEL}")
+    client = anthropic.Anthropic(api_key=api_key)
+
+    actions = load_json(DATA_FILE, {"metadata": {"version": "1.0", "last_updated": ""},
+                                     "actions": []})
+
+    promoted = []
+    rejected = []
+    escalated = []
+
+    for item in pending:
+        title = item.get("title", "")
+        link = item.get("link", "")
+        agency = item.get("agency", "")
+        item_type = item.get("type", "")
+        print(f"  reviewing: {item['id']}")
+        print(f"             {title[:80]}")
+
+        decision = _call_claude_oversight(client, title, link, agency, item_type)
+        if decision is None:
+            print("             SKIP (API error, left in queue)")
+            continue
+
+        is_oversight = bool(decision.get("healthcare_fraud_oversight"))
+        conf = int(decision.get("confidence", 0))
+        reason = str(decision.get("reason", ""))[:200]
+
+        item["ai_decision"] = "healthcare_fraud_oversight" if is_oversight else "not_oversight"
+        item["ai_confidence"] = conf
+        item["ai_reason"] = reason
+        item["ai_model"] = AI_MODEL
+
+        if is_oversight and conf >= AUTO_PROMOTE_THRESHOLD:
+            clean = {k: v for k, v in item.items()
+                     if not k.startswith("ai_")
+                     and k not in ("flagged_at", "flag_reason", "audit_decision")}
+            actions.setdefault("actions", []).append(clean)
+            promoted.append(item)
+            print(f"             PROMOTE (confidence={conf}) — {reason[:80]}")
+        elif (not is_oversight) and conf >= AUTO_REJECT_THRESHOLD:
+            if link and link not in review["rejected_links"]:
+                review["rejected_links"].append(link)
+            rejected.append(item)
+            print(f"             REJECT  (confidence={conf}) — {reason[:80]}")
+        else:
+            escalated.append(item)
+            label = "oversight" if is_oversight else "not oversight"
+            print(f"             ESCALATE ({label}, confidence={conf}) — {reason[:80]}")
+
+    handled_ids = {a["id"] for a in promoted + rejected}
+    review["items"] = [a for a in review["items"] if a.get("id") not in handled_ids]
+
+    if promoted:
+        actions["metadata"]["last_updated"] = datetime.now().isoformat()
+
+    save_json(DATA_FILE, actions)
+    save_json(OVERSIGHT_REVIEW_FILE, review)
+
+    print()
+    print(f"ai-review-oversight: {len(promoted)} promoted, {len(rejected)} rejected, "
+          f"{len(escalated)} escalated")
+
+    _append_oversight_ai_summary(promoted, rejected, escalated)
+    return 0
+
+
+def cmd_oversight_promote(item_id: str) -> int:
+    review = load_oversight_review()
+    items = review.get("items", [])
+    for i, it in enumerate(items):
+        if it.get("id") == item_id:
+            it = items.pop(i)
+            for k in ("ai_decision", "ai_confidence", "ai_reason", "ai_model",
+                      "flagged_at", "flag_reason", "audit_decision"):
+                it.pop(k, None)
+            actions = load_json(DATA_FILE, {"metadata": {"version": "1.0",
+                                                          "last_updated": ""},
+                                              "actions": []})
+            actions.setdefault("actions", []).append(it)
+            actions["metadata"]["last_updated"] = datetime.now().isoformat()
+            save_json(DATA_FILE, actions)
+            save_json(OVERSIGHT_REVIEW_FILE, review)
+            print(f"oversight-promote: moved {item_id} to actions.json")
+            return 0
+    print(f"oversight-promote: no item with id {item_id}", file=sys.stderr)
+    return 1
+
+
+def cmd_oversight_reject(item_id: str) -> int:
+    review = load_oversight_review()
+    items = review.get("items", [])
+    for i, it in enumerate(items):
+        if it.get("id") == item_id:
+            link = it.get("link", "")
+            items.pop(i)
+            if link and link not in review["rejected_links"]:
+                review["rejected_links"].append(link)
+            save_json(OVERSIGHT_REVIEW_FILE, review)
+            print(f"oversight-reject: removed {item_id}, link blocked")
+            return 0
+    print(f"oversight-reject: no item with id {item_id}", file=sys.stderr)
+    return 1
+
+
+def cmd_oversight_list() -> int:
+    review = load_oversight_review()
+    items = review.get("items", [])
+    if not items:
+        print("(no items in needs_review_oversight.json)")
+        return 0
+    for it in items:
+        ai = it.get("ai_decision", "")
+        ai_str = f" [AI:{ai} c={it.get('ai_confidence', '?')}]" if ai else ""
+        print(f"  {it.get('id', '?'):40} {it.get('agency', '?'):10} {it.get('type', '?'):20} {it.get('date', '?'):10}{ai_str}")
+        print(f"    {it.get('title', '')[:120]}")
+    return 0
+
+
+def _write_oversight_audit_summary(approved: list, flagged: list) -> None:
+    lines = ["# Oversight Audit Summary", ""]
+    lines.append(f"_Generated: {datetime.now().isoformat()}_")
+    lines.append("")
+    if approved:
+        lines.append(f"## Auto-promoted ({len(approved)})")
+        for a in approved:
+            lines.append(f"- **{a.get('title', '')[:120]}** ({a.get('agency', '?')} / {a.get('type', '?')})")
+        lines.append("")
+    if flagged:
+        lines.append(f"## Flagged for AI/human review ({len(flagged)})")
+        for a in flagged:
+            lines.append(f"- {a.get('title', '')[:120]} ({a.get('agency', '?')} / {a.get('type', '?')})")
+        lines.append("")
+    with open(OVERSIGHT_SUMMARY_FILE, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
+
+
+def _append_oversight_ai_summary(promoted: list, rejected: list, escalated: list) -> None:
+    lines = ["", "---", ""]
+    if promoted:
+        lines.append(f"### Oversight AI-promoted ({len(promoted)})")
+        for a in promoted:
+            lines.append(f"- **{a.get('title', '')[:120]}**")
+            lines.append(f"  _confidence {a.get('ai_confidence')} — {a.get('ai_reason', '')[:150]}_")
+        lines.append("")
+    if rejected:
+        lines.append(f"### Oversight AI-rejected ({len(rejected)}, link blocked)")
+        for a in rejected:
+            lines.append(f"- {a.get('title', '')[:120]}")
+            lines.append(f"  _confidence {a.get('ai_confidence')} — {a.get('ai_reason', '')[:150]}_")
+        lines.append("")
+    if escalated:
+        lines.append(f"### Oversight AI-escalated ({len(escalated)}, needs your call)")
+        for a in escalated:
+            lines.append(f"- **{a.get('title', '')}**")
+            link = a.get("link", "")
+            if link:
+                lines.append(f"  [{link}]({link})")
+            lines.append(f"  _Claude: {a.get('ai_decision', '?')} @ confidence {a.get('ai_confidence')} — {a.get('ai_reason', '')[:200]}_")
+            lines.append(f"  `python audit_new_items.py oversight-promote {a['id']}`  or  `oversight-reject {a['id']}`")
+            lines.append("")
+    existing = ""
+    if os.path.exists(OVERSIGHT_SUMMARY_FILE):
+        with open(OVERSIGHT_SUMMARY_FILE, encoding="utf-8") as f:
+            existing = f.read()
+    with open(OVERSIGHT_SUMMARY_FILE, "w", encoding="utf-8") as f:
+        f.write(existing + "\n".join(lines))
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 def main() -> int:
@@ -1175,6 +1514,9 @@ def main() -> int:
             "audit", "list", "promote", "reject", "ai-review", "topic-check",
             # Media commands
             "audit-media", "list-media", "media-promote", "media-reject", "ai-review-media",
+            # Oversight commands
+            "audit-oversight", "list-oversight", "oversight-promote", "oversight-reject",
+            "ai-review-oversight",
         ],
     )
     parser.add_argument("item_id", nargs="?")
@@ -1206,6 +1548,19 @@ def main() -> int:
             print(f"{args.cmd} requires an item ID", file=sys.stderr)
             return 2
         return cmd_media_promote(args.item_id) if args.cmd == "media-promote" else cmd_media_reject(args.item_id)
+
+    # Oversight tab parallel commands
+    if args.cmd == "audit-oversight":
+        return cmd_audit_oversight()
+    if args.cmd == "list-oversight":
+        return cmd_oversight_list()
+    if args.cmd == "ai-review-oversight":
+        return cmd_ai_review_oversight()
+    if args.cmd in ("oversight-promote", "oversight-reject"):
+        if not args.item_id:
+            print(f"{args.cmd} requires an item ID", file=sys.stderr)
+            return 2
+        return cmd_oversight_promote(args.item_id) if args.cmd == "oversight-promote" else cmd_oversight_reject(args.item_id)
     return 1
 
 
