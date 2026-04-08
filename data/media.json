@@ -401,6 +401,27 @@
       "source_type": "news",
       "auto_fetched": false,
       "entities": []
+    },
+    {
+      "id": "nyt-2025-04-10-skin-substitutes-medicare",
+      "date": "2025-04-10",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "Medicare Bleeds Billions on Pricey Bandages, and Doctors Get a Cut",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.nytimes.com/2025/04/10/health/skin-substitutes-medicare-costs.html",
+      "link_label": "New York Times Investigation",
+      "social_posts": [],
+      "tags": [
+        "Skin Substitutes",
+        "Medicare"
+      ],
+      "state": "",
+      "source_type": "news",
+      "auto_fetched": false,
+      "entities": []
     }
   ]
 }
