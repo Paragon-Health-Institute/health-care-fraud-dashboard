@@ -110,132 +110,154 @@ HC_ENTITIES = re.compile(
 )
 
 
-# ---------------------------------------------------------------------------
-# Non-fraud crime demote list. Items matching these patterns get sent to AI
-# review even when the HC keyword check passes — because the title is about a
-# different category of crime that just happens to involve a doctor, hospital,
-# pharmacy, or other healthcare-adjacent entity.
-#
-# Examples this catches:
-#   - "Pediatrician Sentenced for Exchanging Prescriptions for Sex Acts"
-#     (HC keyword "pediatrician" but case is sexual misconduct, not billing fraud)
-#   - "Doctor Sentenced for Drug Trafficking Conspiracy"
-#     (HC keyword "doctor" but case is street drug distribution, not Medicare fraud)
-#   - "Hospital CEO Charged with Murder-for-Hire Plot"
-#     (HC keyword "hospital" but case is violent crime)
-#
-# These items still go to AI review (not auto-rejected) so a borderline case
-# with both a non-fraud crime and a real billing component can still get
-# promoted by the AI.
-# ---------------------------------------------------------------------------
-NON_FRAUD_CRIME_PATTERNS = re.compile(
-    # Note: each alternation must end at a word boundary on its own. Patterns
-    # that match a partial word (e.g. "kidnap" in "kidnapping") use \w* to
-    # consume the rest of the word so the regex engine reaches a true \b.
-    r"\b("
-    # Sex crimes / abuse
-    r"sex\s+acts?|sexual\s+(abuse|assault|misconduct|exploitation|contact)|"
-    r"lewd|indecent|child\s+(porn|exploit\w*|sex|abuse)|sextortion|"
-    # Violence
-    r"murder|homicide|manslaughter|kidnap\w*|abduction|"
-    r"murder.?for.?hire|attempted?\s+murder|"
-    r"shooting|shot\s+(to|and)|stabbed|stabbing|arson|"
-    r"violent\s+crime|aggravated\s+assault|armed\s+robbery|"
-    # Trafficking (people / drugs as commodity, not billing schemes)
-    r"human\s+traffick\w*|sex\s+traffick\w*|forced\s+labor|"
-    r"drug\s+traffick\w*|narcotic\s+traffick\w*|"
-    r"smuggl\w*\s+(?:drugs?|narcotics?|cocaine|heroin|fentanyl|persons|child|migrant|alien)|"
-    # Immigration & identity
-    r"illegal\s+(?:re)?entry|illegal\s+alien|unaccompanied\s+(?:alien|minor)\s+child|"
-    r"passport\s+fraud|visa\s+fraud|naturali[sz]ation\s+fraud|"
-    r"citizenship\s+fraud|alien\s+smuggl\w*|"
-    # Other federal benefit programs (not healthcare)
-    r"snap\s+(fraud|benefit)|food\s+stamp|"
-    r"social\s+security\s+(?:number|fraud|benefit)|ssn\s+fraud|"
-    r"unemployment\s+(?:insurance\s+)?(?:fraud|benefit)|"
-    r"housing\s+(?:stabilization|assistance|voucher)\s+fraud|hud\s+fraud|"
-    r"child\s+care\s+(?:fraud|program)|child\s+daycare\s+fraud|"
-    r"ppp\s+(?:loan\s+)?fraud|paycheck\s+protection|covid\s+relief\s+fraud|"
-    r"economic\s+injury\s+disaster|eidl\s+fraud|"
-    # Tax (unless explicitly tied to a healthcare crime)
-    r"tax\s+evasion(?!.*health)|tax\s+fraud(?!.*health|.*medic|.*pharm)|"
-    # Bank / mortgage (unless healthcare-tied)
-    r"bank\s+fraud(?!.*health|.*medic|.*pharm|.*pat[iy]ent)|"
-    r"mortgage\s+fraud(?!.*health|.*medic)|real\s+estate\s+fraud(?!.*health|.*medic)|"
-    # Defense / non-HC contracting
-    r"defense\s+contract(?:or|ing)|small\s+business\s+(?:government\s+)?contract|"
-    # Cybercrime that's not HIPAA / EHR
-    r"ransomware(?!.*hospital|.*medic|.*health)|"
-    # Roundup / non-actionable bulletin posts
-    r"icymi|highlights?\s+(?:a\s+)?(?:dozen|recent)|"
-    r"government\s+shutdown(?!.*medicaid)|"
-    r"new\s+(?:federal\s+)?prosecutor\s+(targets|named|appointed)|"
-    r"u\.s\.\s+attorney\s+(?:announces|highlights)\s+(?:new|appointment|hire)|"
-    # Generic / vague titles
-    r"woman\s+sentenced\s+to\s+\d+\s+months\s+in\s+prison\s*$|"
-    r"man\s+sentenced\s+to\s+\d+\s+months\s+in\s+prison\s*$"
-    r")\b",
-    re.IGNORECASE,
-)
-
-
-# Strong healthcare fraud phrases. If a title contains any of these, the
-# demote list does NOT apply — the case is unambiguously a healthcare fraud
-# matter that may also include side charges (tax, bank, unemployment, etc.).
-STRONG_HC_FRAUD = re.compile(
-    r"\b("
-    # "Health Care Fraud" / "Healthcare Fraud" — direct phrase
-    r"health\s*care\s+fraud|healthcare\s+fraud|"
-    # "Health Care, ... Fraud" / "Health Care and Tax Fraud" — multi-charge headlines
-    r"health\s*care[,\s]+(?:and\s+)?[\w\s]{0,20}\s+(?:fraud|schemes?)|"
-    r"healthcare[,\s]+(?:and\s+)?[\w\s]{0,20}\s+(?:fraud|schemes?)|"
-    # Programs
-    r"medicare\s+(?:fraud|advantage)|medicaid\s+fraud|tricare\s+fraud|medi-?cal\s+fraud|"
-    r"medical\s+(?:fraud|billing|claims)|"
-    r"pharmacy\s+(?:fraud|kickback)|prescription\s+(?:fraud|drug\s+fraud)|"
-    # Statutes
-    r"false\s+claims\s+act|qui\s+tam|"
-    r"anti.?kickback\s+statute|stark\s+law|stark\s+violation|"
-    # Categories
-    r"drug\s+diversion|"
-    r"adult\s+day\s+care|"  # adult day care is on the allowlist; never demote
-    r"prenatal\s+care|home\s+health|hospice\s+fraud|"
-    r"nursing\s+home\s+fraud|skilled\s+nursing|long.term\s+care|"
-    r"dme\s+fraud|durable\s+medical|"
-    r"telehealth\s+fraud|telemedicine\s+fraud|"
-    r"genetic\s+test|wound\s+care\s+fraud|behavioral\s+health\s+fraud|"
-    r"opioid\s+(?:billing|prescribing)\s+(?:fraud|scheme)|pill\s+mill"
-    r")\b",
-    re.IGNORECASE,
-)
-
-
-def is_non_fraud_crime(item: dict) -> bool:
-    """True if the title looks like a non-fraud crime that just happens to
-    involve a healthcare-adjacent person/entity. These items get demoted to
-    AI review even if the HC keyword check passes.
-
-    Short-circuited by STRONG_HC_FRAUD: if the title explicitly mentions
-    healthcare fraud / Medicare fraud / FCA / Stark Law / etc., we trust
-    that the case is a real HC matter even if a side charge is mentioned.
-    """
-    title = item.get("title", "") or ""
-    if STRONG_HC_FRAUD.search(title):
-        return False
-    return bool(NON_FRAUD_CRIME_PATTERNS.search(title))
-
-
 def is_obviously_healthcare(item: dict) -> bool:
-    """True if the item title or link slug clearly references healthcare AND
-    does not match a non-fraud crime pattern. Items matching the demote list
-    are sent to AI review regardless of HC keyword density.
+    """True if the item title or link slug clearly references healthcare.
+
+    Used as the first-stage regex pre-filter. Items matching here skip both
+    the DOJ topic check and the AI review and go straight to actions.json.
+    Items not matching here get the DOJ topic check next, then AI review.
+
+    Editorial policy: we defer to DOJ's "Health Care Fraud" topic tag as
+    the authoritative inclusion signal. We do NOT second-guess DOJ with a
+    non-fraud crime demote list. If DOJ considers a case healthcare fraud,
+    it belongs on the dashboard.
     """
-    if is_non_fraud_crime(item):
-        return False
     title = item.get("title", "") or ""
     link = item.get("link", "") or ""
     text = f"{title} {link}"
     return bool(HC_KEYWORDS.search(text) or HC_ENTITIES.search(text))
+
+
+# ---------------------------------------------------------------------------
+# DOJ topic extraction. Every justice.gov press release page carries a
+# .node-topics field rendered by the Drupal template, containing DOJ's own
+# topic classifications (e.g. "Health Care Fraud", "False Claims Act",
+# "Financial Fraud", "Immigration"). Topics are concatenated with spaces,
+# not delimited, so we greedy-match against a known vocabulary.
+#
+# This is the PRIMARY inclusion signal for the enforcement tab: if DOJ
+# tags a release as "Health Care Fraud", we auto-promote regardless of
+# what the title keywords suggest. We defer to DOJ's classification rather
+# than impose our own narrower editorial filter.
+# ---------------------------------------------------------------------------
+DOJ_TOPIC_VOCAB = [
+    "Health Care Fraud",
+    "Healthcare Fraud",  # rare variant; keep as a safety net
+    "Financial Fraud",
+    "False Claims Act",
+    "Identity Theft",
+    "Prescription Drugs",
+    "Consumer Protection",
+    "Asset Forfeiture",
+    "Drug Trafficking",
+    "Violent Crime",
+    "Civil Rights",
+    "Immigration",
+    "Public Corruption",
+    "Tax",
+    "Environment",
+    "Cybercrime",
+    "National Security",
+    "Disability Rights",
+    "Labor and Employment",
+    "Human Trafficking",
+    "Child Exploitation",
+    "Firearms Offenses",
+    "Antitrust",
+    "Indian Country",
+    "Project Safe Childhood",
+    "Disaster Fraud",
+    "Elder Justice",
+]
+
+
+def extract_topics_from_text(raw_text: str) -> list[str]:
+    """Parse the contents of a .node-topics element into a list of DOJ topics.
+
+    DOJ renders multi-topic pages as concatenated strings like
+    "Health Care Fraud Financial Fraud Identity Theft". We greedy-match
+    against DOJ_TOPIC_VOCAB, sorted longest-first so "Health Care Fraud"
+    beats "Health" or "Fraud".
+    """
+    if not raw_text:
+        return []
+    # Strip leading "Topic" / "Topics" label
+    text = re.sub(r"^\s*Topics?\s*", "", raw_text, flags=re.IGNORECASE).strip()
+    if not text:
+        return []
+    found = []
+    remaining = text
+    for topic in sorted(DOJ_TOPIC_VOCAB, key=len, reverse=True):
+        if topic in remaining:
+            found.append(topic)
+            remaining = remaining.replace(topic, " ")
+    return found
+
+
+def fetch_doj_topics(url: str, page=None) -> list[str] | None:
+    """Fetch a justice.gov press release and extract its DOJ topic tags.
+
+    Returns:
+      - list of topic strings (possibly empty) if the page loaded AND had
+        a .node-topics element
+      - None if the page failed to load OR had no .node-topics element
+
+    Accepts an optional Playwright ``page`` object so callers can reuse a
+    browser session across many fetches. If not provided, a temporary
+    browser is launched just for this call (expensive — prefer to batch).
+    """
+    if not url or "justice.gov" not in url:
+        return None
+
+    try:
+        from playwright.sync_api import sync_playwright
+        from bs4 import BeautifulSoup
+    except ImportError:
+        print("fetch_doj_topics: playwright or bs4 not installed", file=sys.stderr)
+        return None
+
+    def _extract_from_html(html: str) -> list[str] | None:
+        soup = BeautifulSoup(html, "lxml")
+        node = soup.find(class_="node-topics")
+        if not node:
+            return None
+        return extract_topics_from_text(node.get_text(" ", strip=True))
+
+    if page is not None:
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=25000)
+            page.wait_for_timeout(1200)
+            return _extract_from_html(page.content())
+        except Exception as e:
+            print(f"  fetch_doj_topics failed for {url}: {e}", file=sys.stderr)
+            return None
+
+    # Standalone fallback — launches a browser just for this call.
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        ctx = browser.new_context(
+            user_agent=(
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+            )
+        )
+        pg = ctx.new_page()
+        try:
+            pg.goto(url, wait_until="domcontentloaded", timeout=25000)
+            pg.wait_for_timeout(1200)
+            return _extract_from_html(pg.content())
+        except Exception as e:
+            print(f"  fetch_doj_topics failed for {url}: {e}", file=sys.stderr)
+            return None
+        finally:
+            browser.close()
+
+
+def has_hc_topic(topics: list[str] | None) -> bool:
+    """True if the DOJ topic list includes 'Health Care Fraud' (or variant)."""
+    if not topics:
+        return False
+    return any("Health Care Fraud" in t or "Healthcare Fraud" in t for t in topics)
 
 
 # ---------------------------------------------------------------------------
@@ -319,11 +341,7 @@ def cmd_audit() -> int:
     now = datetime.now().isoformat()
     for item in flagged:
         item["flagged_at"] = now
-        # Distinguish "no HC keyword" from "HC keyword but non-fraud crime"
-        if is_non_fraud_crime(item):
-            item["flag_reason"] = "title matches non-fraud crime pattern"
-        else:
-            item["flag_reason"] = "title lacks healthcare keyword"
+        item["flag_reason"] = "title lacks healthcare keyword"
         review["items"].append(item)
 
     save_json(DATA_FILE, data)
@@ -364,6 +382,20 @@ def cmd_list() -> int:
     return 0
 
 
+_REVIEW_METADATA_KEYS = (
+    "flagged_at", "flag_reason",
+    "ai_decision", "ai_confidence", "ai_reason", "ai_model",
+    "topic_checked_at", "audit_decision",
+    # doj_topics is kept — it's useful provenance even after promotion
+)
+
+
+def _strip_review_metadata(item: dict) -> dict:
+    """Return a copy of item with review-only fields removed."""
+    clean = {k: v for k, v in item.items() if k not in _REVIEW_METADATA_KEYS}
+    return clean
+
+
 def cmd_promote(item_id: str) -> int:
     """Move an item from needs_review.json back to actions.json."""
     review = load_review()
@@ -372,22 +404,17 @@ def cmd_promote(item_id: str) -> int:
         print(f"promote: no item with id {item_id!r} in {REVIEW_FILE}", file=sys.stderr)
         return 1
 
-    # Strip review-only metadata before re-adding
-    item.pop("flagged_at", None)
-    item.pop("flag_reason", None)
-    item.pop("ai_decision", None)
-    item.pop("ai_confidence", None)
-    item.pop("ai_reason", None)
+    clean = _strip_review_metadata(item)
 
     data = load_json(DATA_FILE, {"actions": []})
-    data.setdefault("actions", []).append(item)
+    data.setdefault("actions", []).append(clean)
     save_json(DATA_FILE, data)
 
     review["items"] = [a for a in review["items"] if a.get("id") != item_id]
     save_json(REVIEW_FILE, review)
 
     print(f"promoted {item_id} -> {os.path.basename(DATA_FILE)}")
-    print(f"  title: {item.get('title', '')[:80]}")
+    print(f"  title: {clean.get('title', '')[:80]}")
     return 0
 
 
@@ -410,6 +437,92 @@ def cmd_reject(item_id: str) -> int:
     print(f"  title: {item.get('title', '')[:80]}")
     if link:
         print(f"  link added to rejected_links — scraper will skip this URL going forward")
+    return 0
+
+
+def cmd_topic_check() -> int:
+    """Fetch DOJ .node-topics for every unstamped item in needs_review.json.
+
+    For each item in the queue that doesn't already have a `topic_checked_at`
+    timestamp, fetch the justice.gov page via Playwright, extract the topic
+    list, and store it as `doj_topics: [...]` plus the timestamp.
+
+    Items where DOJ tagged "Health Care Fraud" are auto-promoted into
+    actions.json. Items tagged with something else (False Claims Act,
+    Drug Trafficking, etc.) stay in the queue for AI review. Items where
+    the page has no .node-topics field also stay in the queue.
+
+    This runs between cmd_audit and cmd_ai_review in the daily pipeline.
+    Zero API cost; the only overhead is ~3s per Playwright fetch.
+    """
+    review = load_review()
+    pending = [
+        a for a in review.get("items", [])
+        if "topic_checked_at" not in a and a.get("link", "").startswith("https://www.justice.gov")
+    ]
+    if not pending:
+        print("topic-check: no un-checked justice.gov items in needs_review.json")
+        return 0
+
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        print("topic-check: playwright not installed, skipping")
+        return 0
+
+    print(f"topic-check: checking {len(pending)} item(s) against DOJ .node-topics")
+
+    data = load_json(DATA_FILE, {"actions": []})
+    promoted = []
+    tagged_non_hc = []
+    no_topic = []
+    now_iso = datetime.now().isoformat()
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        ctx = browser.new_context(
+            user_agent=(
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+            )
+        )
+        page = ctx.new_page()
+        for item in pending:
+            url = item.get("link", "")
+            topics = fetch_doj_topics(url, page=page)
+            item["topic_checked_at"] = now_iso
+
+            if topics is None:
+                item["doj_topics"] = None
+                no_topic.append(item)
+                print(f"  [NO TOPIC] {item['id']}: {item.get('title','')[:80]}")
+            elif has_hc_topic(topics):
+                item["doj_topics"] = topics
+                clean = _strip_review_metadata(item)
+                data.setdefault("actions", []).append(clean)
+                promoted.append(item)
+                print(f"  [PROMOTE]  {item['id']}: {topics}")
+                print(f"             {item.get('title','')[:80]}")
+            else:
+                item["doj_topics"] = topics
+                tagged_non_hc.append(item)
+                print(f"  [KEEP]     {item['id']}: {topics}")
+                print(f"             {item.get('title','')[:80]}")
+        browser.close()
+
+    # Remove promoted items from the review queue. Keep the rest (with
+    # their newly-stamped doj_topics + topic_checked_at) in the queue so
+    # they go through AI review next.
+    promoted_ids = {a["id"] for a in promoted}
+    review["items"] = [a for a in review["items"] if a.get("id") not in promoted_ids]
+
+    save_json(DATA_FILE, data)
+    save_json(REVIEW_FILE, review)
+
+    print()
+    print(f"topic-check: {len(promoted)} promoted (DOJ tagged HC), "
+          f"{len(tagged_non_hc)} kept (tagged non-HC), "
+          f"{len(no_topic)} kept (no topic field)")
     return 0
 
 
@@ -772,10 +885,7 @@ def cmd_audit_media() -> int:
             item["audit_decision"] = "auto_approved"
         else:
             still_pending.append(item)
-            if is_non_fraud_crime(item):
-                item["flag_reason"] = "title matches non-fraud crime pattern"
-            else:
-                item["flag_reason"] = "title lacks healthcare keyword"
+            item["flag_reason"] = "title lacks healthcare keyword"
 
     if auto_promoted:
         # Strip review-only metadata before adding to media.json
@@ -1062,7 +1172,7 @@ def main() -> int:
         default="audit",
         choices=[
             # Enforcement commands
-            "audit", "list", "promote", "reject", "ai-review",
+            "audit", "list", "promote", "reject", "ai-review", "topic-check",
             # Media commands
             "audit-media", "list-media", "media-promote", "media-reject", "ai-review-media",
         ],
@@ -1074,6 +1184,8 @@ def main() -> int:
         return cmd_audit()
     if args.cmd == "list":
         return cmd_list()
+    if args.cmd == "topic-check":
+        return cmd_topic_check()
     if args.cmd == "ai-review":
         return cmd_ai_review()
     if args.cmd in ("promote", "reject"):

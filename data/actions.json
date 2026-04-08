@@ -10598,29 +10598,6 @@
       ]
     },
     {
-      "id": "doj-2025-04-17-1153115369",
-      "date": "2025-04-17",
-      "agency": "DOJ",
-      "type": "Civil Action",
-      "title": "Former Owner Of Collapsed Nursing Home Empire Sentenced To 36 Months’ Imprisonment For $38 Million Tax Fraud Scheme",
-      "amount": "$38 Million",
-      "amount_numeric": 38000000.0,
-      "officials": [],
-      "link": "https://www.justice.gov/usao-nj/pr/former-owner-collapsed-nursing-home-empire-sentenced-36-months-imprisonment-38-million",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [
-        "Nursing Home"
-      ],
-      "entities": [],
-      "state": "NJ",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [
-        "HHS-OIG"
-      ]
-    },
-    {
       "id": "doj-2025-04-17-1009792437",
       "date": "2025-04-17",
       "agency": "DOJ",
@@ -12880,6 +12857,403 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2025-04-17-1153115369",
+      "date": "2025-04-17",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Former Owner Of Collapsed Nursing Home Empire Sentenced To 36 Months’ Imprisonment For $38 Million Tax Fraud Scheme",
+      "amount": "$38 Million",
+      "amount_numeric": 38000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-nj/pr/former-owner-collapsed-nursing-home-empire-sentenced-36-months-imprisonment-38-million",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Nursing Home"
+      ],
+      "entities": [],
+      "state": "NJ",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-03-24-1533705637",
+      "date": "2026-03-24",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Former St. Louis Area Pediatrician Sentenced to 20 Years in Prison for Exchanging Prescriptions for Sex Acts",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edmo/pr/former-st-louis-area-pediatrician-sentenced-20-years-prison-exchanging-prescriptions",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "MO",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-03-23-3884604121",
+      "date": "2026-03-23",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Dominican National Pleads Guilty to Federal Fraud Charges",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ri/pr/dominican-national-pleads-guilty-federal-fraud-charges",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "RI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "doj_topics": [
+        "Health Care Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-03-13-586985469",
+      "date": "2026-03-13",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Federal Jury Convicts Three Women For Conspiracy To Commit Wire Fraud Related To Rocky Hill Pharmacy",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edtn/pr/federal-jury-convicts-three-women-conspiracy-commit-wire-fraud-related-rocky-hill",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": "TN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "doj_topics": [
+        "Health Care Fraud",
+        "Identity Theft"
+      ]
+    },
+    {
+      "id": "doj-2026-02-27-2018971996",
+      "date": "2026-02-27",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Former New York National Sales Director Sentenced to Three Years in Prison For Kickback Scheme",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/former-new-york-national-sales-director-sentenced-three-years-prison-kickback-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "doj_topics": [
+        "Health Care Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-02-18-811042015",
+      "date": "2026-02-18",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "New York Man Sentenced to Eight Months in Prison for Kickback Scheme",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/new-york-man-sentenced-eight-months-prison-kickback-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "doj_topics": [
+        "Health Care Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-02-13-1587090313",
+      "date": "2026-02-13",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "New York Man Sentenced to 14 Months in Prison for Kickback Scheme",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/new-york-man-sentenced-14-months-prison-kickback-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "doj_topics": [
+        "Health Care Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-01-08-3550153304",
+      "date": "2026-01-08",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Indiana Woman Sentenced to 84 Months in Prison",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ndin/pr/indiana-woman-sentenced-84-months-prison",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "IN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "doj_topics": [
+        "Health Care Fraud",
+        "Identity Theft"
+      ]
+    },
+    {
+      "id": "doj-2025-12-19-1588024980",
+      "date": "2025-12-19",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "New Jersey Business Owner Sentenced to 87 Months for $172 Million Fraud and Money Laundering Scheme",
+      "amount": "$172 Million",
+      "amount_numeric": 172000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-nj/pr/new-jersey-business-owner-sentenced-87-months-172-million-fraud-and-money-laundering",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "NJ",
+      "source_type": "official",
+      "auto_fetched": true,
+      "doj_topics": [
+        "Health Care Fraud"
+      ]
+    },
+    {
+      "id": "doj-2025-11-13-1161273980",
+      "date": "2025-11-13",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Baltimore County Woman Sentenced For Impersonating Nurses And Aggravated Identity Theft",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-md/pr/baltimore-county-woman-sentenced-impersonating-nurses-and-aggravated-identity-theft",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "MD",
+      "source_type": "official",
+      "auto_fetched": true,
+      "doj_topics": [
+        "Health Care Fraud"
+      ]
+    },
+    {
+      "id": "doj-2025-11-06-286227865",
+      "date": "2025-11-06",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Business Owner Sentenced to More Than Five Years in Prison for Fraud and Money Laundering Schemes",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edpa/pr/business-owner-sentenced-more-five-years-prison-fraud-and-money-laundering-schemes",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "PA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "doj_topics": [
+        "Health Care Fraud",
+        "Financial Fraud"
+      ]
+    },
+    {
+      "id": "doj-2025-08-14-3956968141",
+      "date": "2025-08-14",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Baltimore County Woman Admits to Impersonating Nurses, Pleads Guilty to Aggravated Identity Theft",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-md/pr/baltimore-county-woman-admits-impersonating-nurses-pleads-guilty-aggravated-identity",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "MD",
+      "source_type": "official",
+      "auto_fetched": true,
+      "doj_topics": [
+        "Health Care Fraud"
+      ]
+    },
+    {
+      "id": "doj-2025-07-08-624831157",
+      "date": "2025-07-08",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Former Chief Operating Officer of Pain Care Centers Sentenced",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-wdva/pr/former-chief-operating-officer-pain-care-centers-sentenced",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "VA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "doj_topics": [
+        "Health Care Fraud"
+      ]
+    },
+    {
+      "id": "doj-2025-06-11-475422216",
+      "date": "2025-06-11",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "New York Man Pleads Guilty to $70 Million Kickback Scheme",
+      "amount": "$70 Million",
+      "amount_numeric": 70000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/new-york-man-pleads-guilty-70-million-kickback-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "doj_topics": [
+        "Health Care Fraud"
+      ]
+    },
+    {
+      "id": "doj-2025-05-20-2931087479",
+      "date": "2025-05-20",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Business Owner Pleads Guilty to Fraud and Money Laundering Schemes",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edpa/pr/business-owner-pleads-guilty-fraud-and-money-laundering-schemes",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "PA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "doj_topics": [
+        "Health Care Fraud",
+        "Financial Fraud",
+        "Disaster Fraud"
+      ]
+    },
+    {
+      "id": "doj-2025-05-08-1395501286",
+      "date": "2025-05-08",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Four Sentenced In $110 Million-Dollar Kickback Conspiracy",
+      "amount": "$110 Million",
+      "amount_numeric": 110000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-sdtx/pr/four-sentenced-110-million-dollar-kickback-conspiracy",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "TRICARE",
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": "TX",
+      "source_type": "official",
+      "auto_fetched": true,
+      "doj_topics": [
+        "Health Care Fraud"
+      ]
+    },
+    {
+      "id": "doj-2025-02-26-2072937642",
+      "date": "2025-02-26",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Woman Previously Convicted of Fraud and Identity Theft Offenses Sentenced to Additional Prison Time for Violating Supervised Release Conditions",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ct/pr/woman-previously-convicted-fraud-and-identity-theft-offenses-sentenced-additional-prison",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "CT",
+      "source_type": "official",
+      "auto_fetched": true,
+      "doj_topics": [
+        "Health Care Fraud",
+        "Disability Rights",
+        "Financial Fraud"
+      ]
+    },
+    {
+      "id": "doj-2025-01-03-246125753",
+      "date": "2025-01-03",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Operations Manager Pleads Guilty to Kickback Scheme",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/operations-manager-pleads-guilty-kickback-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "doj_topics": [
+        "Health Care Fraud"
       ]
     }
   ]

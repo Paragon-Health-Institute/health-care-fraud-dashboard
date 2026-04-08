@@ -50,7 +50,10 @@ jobs:
       - name: Audit new items (regex flag check)
         run: python audit_new_items.py
 
-      - name: AI review of flagged items (Claude Haiku)
+      - name: DOJ topic check (auto-promote items DOJ tags "Health Care Fraud")
+        run: python audit_new_items.py topic-check
+
+      - name: AI review of remaining flagged items (Claude Haiku)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python audit_new_items.py ai-review
