@@ -80,13 +80,15 @@ HEALTHCARE_TERMS = [re.compile(p, re.IGNORECASE) for p in [
 # ---------------------------------------------------------------------------
 FEEDS = [
     # --- Official agency feeds ---
-    # DOJ-OPA runs before the DOJ RSS so the topic-tag-gated scraper
-    # gets first dibs on /opa/pr/ items. Items from DOJ-OPA carry a
-    # doj_topics field as provenance; items that came via DOJ RSS or
-    # HHS-OIG's link extraction don't. Putting DOJ-OPA first preserves
-    # that provenance on all OPA-sourced items.
+    # DOJ-OPA is the canonical source for /opa/pr/ items (topic-tag-gated).
     {"name": "DOJ-OPA",     "agency": "DOJ",          "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "doj_opa"},
-    {"name": "DOJ",         "agency": "DOJ",          "url": "https://www.justice.gov/news/rss",                                          "enabled": True,  "source_type": "official", "browser_fallback": True},
+    # DOJ "Justice News" RSS (justice.gov/news/rss) is DISABLED: the feed
+    # is dominated by FOIA training events + unrelated USAO scraps, and
+    # the occasional /opa/pr/ item it carries is already caught by
+    # DOJ-OPA (with proper topic-tag provenance) or lands via HHS-OIG's
+    # link extraction. Keeping it enabled only introduced a race where
+    # OPA items landed in actions.json without doj_topics.
+    {"name": "DOJ",         "agency": "DOJ",          "url": "https://www.justice.gov/news/rss",                                          "enabled": False, "source_type": "official", "browser_fallback": True},
     {"name": "HHS-OIG",     "agency": "HHS-OIG",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "oig"},
     {"name": "CMS",         "agency": "CMS",           "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "cms"},
     {"name": "HHS",         "agency": "HHS",           "url": "https://www.hhs.gov/rss/news.xml",                                         "enabled": False, "source_type": "official", "browser_fallback": True},
@@ -971,19 +973,39 @@ def scrape_doj_opa(session):
 
 
 def scrape_doj_usao(session):
-    """Scrape DOJ USAO press releases using Playwright (Akamai-blocked)."""
+    """Scrape DOJ USAO (district-level) press releases using Playwright.
+
+    Uses the same topic-tag gate as scrape_doj_opa: each candidate's
+    detail page is checked for a 'Health Care Fraud' tag in its
+    .node-topics field, and items without that tag are skipped. This
+    defers to DOJ's own classification (project_doj_topic_authoritative.md)
+    instead of guessing from title keywords. Items that pass carry
+    _trust_source + _doj_topics for provenance.
+
+    The listing page is Akamai-protected; Playwright is required.
+    """
     if not HAS_PLAYWRIGHT:
         log("    Skipping DOJ-USAO (requires Playwright)")
         return []
     url = "https://www.justice.gov/usao/pressreleases"
     items = []
     try:
+        from audit_new_items import fetch_doj_topics, has_hc_topic
+    except ImportError as e:
+        log(f"  DOJ-USAO: cannot import topic helpers: {e}")
+        return []
+    try:
         soup = scrape_page_with_browser(url)
+        candidates = []
+        seen = set()
         for a_tag in soup.find_all('a', href=re.compile(r'/usao-.*/pr/')):
             title = a_tag.get_text(strip=True)
             if not title or len(title) < 10:
                 continue
             href = a_tag.get('href', '')
+            if href in seen:
+                continue
+            seen.add(href)
             if href.startswith('/'):
                 href = 'https://www.justice.gov' + href
             parent = a_tag.find_parent(['li', 'div', 'article', 'tr'])
@@ -995,33 +1017,66 @@ def scrape_doj_usao(session):
                 )
                 if dm:
                     date_str = dm.group()
-            # Fetch detail page for description and canonical title
-            detail_text = ""
-            _detail_title = ""
-            try:
-                detail_text, _, _detail_title = fetch_detail_page(session, href)
-            except Exception:
-                pass
-            if _detail_title:
-                title = _detail_title
-            desc = ""
-            if detail_text:
-                cleaned = detail_text
-                if title in cleaned:
-                    cleaned = cleaned.split(title, 1)[-1].strip()
-                desc = cleaned[:600].strip()
-                if len(cleaned) > 600:
-                    last_period = desc.rfind('.')
-                    if last_period > 200:
-                        desc = desc[:last_period + 1]
+            candidates.append((title, href, date_str))
 
-            items.append({
-                'title': title,
-                'description': desc,
-                'link': href,
-                'pub_date': date_str,
-                '_full_text': detail_text,
-            })
+        log(f"    DOJ-USAO: {len(candidates)} candidates, checking topic tags...")
+        browser = get_browser()
+        page = None
+        if browser is not None:
+            ctx = browser.new_context(
+                user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+                viewport={'width': 1280, 'height': 800},
+            )
+            page = ctx.new_page()
+        try:
+            kept = 0
+            for (title, href, date_str) in candidates:
+                # Topic tag gate
+                topics = fetch_doj_topics(href, page=page)
+                if not has_hc_topic(topics):
+                    continue
+                # Fetch detail page via requests for canonical title + body
+                detail_text = ""
+                _detail_title = ""
+                try:
+                    detail_text, _, _detail_title = fetch_detail_page(session, href)
+                except Exception:
+                    pass
+                if _detail_title:
+                    title = _detail_title
+                if not date_str and detail_text:
+                    dm = re.search(
+                        r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
+                        detail_text)
+                    if dm:
+                        date_str = dm.group()
+                desc = ""
+                if detail_text:
+                    cleaned = detail_text
+                    if title in cleaned:
+                        cleaned = cleaned.split(title, 1)[-1].strip()
+                    desc = cleaned[:600].strip()
+                    if len(cleaned) > 600:
+                        last_period = desc.rfind('.')
+                        if last_period > 200:
+                            desc = desc[:last_period + 1]
+                items.append({
+                    'title': title,
+                    'description': desc,
+                    'link': href,
+                    'pub_date': date_str,
+                    '_full_text': detail_text,
+                    '_trust_source': True,
+                    '_doj_topics': topics,
+                })
+                kept += 1
+            log(f"    DOJ-USAO: {kept} of {len(candidates)} candidates tagged 'Health Care Fraud'")
+        finally:
+            if page is not None:
+                try:
+                    page.context.close()
+                except Exception:
+                    pass
     except Exception as e:
         log(f"  WARNING: DOJ-USAO scrape - {e}")
     return items
