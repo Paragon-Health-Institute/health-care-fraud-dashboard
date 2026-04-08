@@ -236,19 +236,39 @@
       "auto_fetched": false
     },
     {
-      "id": "media-2025-02-21-wsj-unitedhealth-criminal-probe",
+      "id": "wsj-2025-02-21-unitedhealth-doj-diagnosis-investigation",
       "date": "2025-02-21",
       "agency": "Media",
       "type": "Investigative Report",
-      "title": "WSJ Investigation: DOJ Conducting Criminal Probe of UnitedHealth Medicare Advantage Billing",
-      "amount": "",
+      "title": "DOJ Investigates Medicare Billing Practices at UnitedHealth",
+      "amount": null,
       "amount_numeric": 0,
       "officials": [],
-      "link": "https://www.fiercehealthcare.com/payers/wsj-feds-investigating-unitedhealth-criminal-medicare-fraud",
-      "link_label": "WSJ / Fierce Healthcare",
+      "link": "https://www.wsj.com/health/healthcare/unitedhealth-medicare-doj-diagnosis-investigation-66b9f1db",
+      "link_label": "Wall Street Journal Investigation",
       "social_posts": [],
       "tags": [
-        "Home Health",
+        "Medicare",
+        "Medicare Advantage"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "news",
+      "auto_fetched": false
+    },
+    {
+      "id": "wsj-2025-05-14-unitedhealth-criminal-medicare-fraud",
+      "date": "2025-05-14",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "Feds Investigating UnitedHealth for Criminal Medicare Fraud",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.wsj.com/us-news/unitedhealth-medicare-fraud-investigation-df80667f",
+      "link_label": "Wall Street Journal Investigation",
+      "social_posts": [],
+      "tags": [
         "Medicare",
         "Medicare Advantage"
       ],
@@ -398,6 +418,26 @@
         "Medicaid"
       ],
       "state": "NY",
+      "source_type": "news",
+      "auto_fetched": false,
+      "entities": []
+    },
+    {
+      "id": "propublica-2025-05-06-arizona-medicaid-fraud-5-percent-recovered",
+      "date": "2025-05-06",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "Arizona Has Recovered Just 5% of Taxpayer Dollars Lost in a $2.5 Billion Medicaid Fraud Scheme",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.propublica.org/article/arizona-medicaid-fraud-investigation-taxpayer-funds",
+      "link_label": "ProPublica Investigation",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "state": "AZ",
       "source_type": "news",
       "auto_fetched": false,
       "entities": []
