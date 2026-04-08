@@ -254,6 +254,14 @@ TITLE_PREFIX_RE = re.compile(
 )
 BAD_TITLES = {"Access Denied", "Just a moment...", "Page Not Found", ""}
 
+# Bare site-name patterns that some sites put in their og:title (FinCEN,
+# Treasury, etc.) instead of the actual page title. If we see one of these
+# we fall through to h1/title instead of using og:title.
+BARE_SITE_NAME_RE = re.compile(
+    r'^(fincen|treasury|hhs|cms|dea|gao|medpac|macpac|justice|doj)\.gov$',
+    re.IGNORECASE,
+)
+
 
 def normalize_page_title(raw):
     """Strip boilerplate breadcrumb prefixes and site suffixes from a
@@ -281,6 +289,10 @@ def _looks_like_bad_title(t):
     if len(s) < 10:
         return True
     if "Just a moment" in s or "Access Denied" in s or "Page Not Found" in s:
+        return True
+    # Reject bare site names (e.g. some FinCEN/Treasury pages put "FinCEN.gov"
+    # in og:title instead of the real page title)
+    if BARE_SITE_NAME_RE.match(s):
         return True
     return False
 
