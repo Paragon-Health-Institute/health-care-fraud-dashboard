@@ -13255,6 +13255,71 @@
       "doj_topics": [
         "Health Care Fraud"
       ]
+    },
+    {
+      "id": "doj-2026-03-16-2381545372",
+      "date": "2026-03-16",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "U.S. Attorney Announces Additional Enforcement Action as Part of National Effort to Combat Electrical Stimulation Fraud Scheme and Recover Millions",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edpa/pr/us-attorney-announces-additional-enforcement-action-part-national-effort-combat",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "MO",
+      "source_type": "official",
+      "auto_fetched": true,
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2025-06-04-3502332805",
+      "date": "2025-06-04",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Rosedale Woman Pleads Guilty To Conspiracy To Distribute Controlled Substances And Money Laundering",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-md/pr/rosedale-woman-pleads-guilty-conspiracy-distribute-controlled-substances-and-money",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "MD",
+      "source_type": "official",
+      "auto_fetched": true,
+      "doj_topics": [
+        "Drug Trafficking"
+      ]
+    },
+    {
+      "id": "doj-2025-11-03-963980378",
+      "date": "2025-11-03",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Federal Grand Jury returns Second Superseding Indictment against Memphis Gynecologist",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-wdtn/pr/federal-grand-jury-returns-second-superseding-indictment-against-memphis-gynecologist",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medical Devices"
+      ],
+      "entities": [],
+      "state": "TN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "doj_topics": null
     }
   ]
 }
