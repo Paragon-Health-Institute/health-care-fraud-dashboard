@@ -68,6 +68,10 @@ FEEDS = [
     {"name": "HHS-OIG-RPT", "agency": "HHS-OIG",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "oig_reports"},
     {"name": "FDA",         "agency": "FDA",           "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml", "enabled": False, "source_type": "official"},
     {"name": "DEA",         "agency": "DEA",           "url": "https://www.dea.gov/press-releases/rss",                                   "enabled": True,  "source_type": "official", "browser_fallback": True},
+    # --- Commissions + Treasury anti-fraud (added Tier 2) ---
+    {"name": "MedPAC",      "agency": "MedPAC",        "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "medpac"},
+    {"name": "MACPAC",      "agency": "MACPAC",        "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "macpac"},
+    {"name": "FinCEN",      "agency": "Treasury",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "fincen"},
     # --- Media feeds disabled — Fraud Landscape is manually curated (see data/media.json) ---
     # --- State AG feeds disabled — state actions removed from dashboard ---
 ]
@@ -112,24 +116,40 @@ def test_healthcare_context(text):
             return True
     return False
 
-def get_action_type(title, desc):
-    """Classify a scraped item into one of ~10 action types.
+def get_action_type(title, desc, agency=None, link=None):
+    """Classify a scraped item into one of ~11 action types.
 
     Title-only checks run first, in priority order, so a criminal
     prosecution press release whose body text mentions "court hearing"
     or "testified" doesn't get mislabeled as a Congressional Hearing.
     Full text is only consulted as a fallback for ambiguous titles.
+
+    If `agency` or `link` is provided, they're used as source hints:
+      - MedPAC / MACPAC sources default to 'Report' unless the title
+        clearly indicates otherwise
+      - FinCEN sources default to 'Administrative Action' (advisories)
+      - The fallback 'Audit' classification only fires when the source
+        is HHS-OIG or GAO, avoiding the old bug where any release
+        containing the word 'audit' in its body got labeled Audit
     """
     title_l = (title or '').lower()
     full_text = f"{title} {desc}".lower()
+    agency_l = (agency or '').lower()
+    link_l = (link or '').lower()
+
+    # Source hints — used both early (for commission reports) and late
+    # (for disambiguating the Audit fallback)
+    is_oig = 'oig' in agency_l or 'oig.hhs.gov' in link_l
+    is_gao = 'gao' in agency_l or 'gao.gov' in link_l
+    is_medpac = 'medpac' in agency_l or 'medpac.gov' in link_l
+    is_macpac = 'macpac' in agency_l or 'macpac.gov' in link_l
+    is_fincen = 'fincen' in agency_l or 'fincen.gov' in link_l or 'treasury' in agency_l
 
     # ---- Title-only enforcement detection (highest priority) ----
-    # Criminal verbs in the title = Criminal Enforcement, period.
     if re.search(r'\b(plead|pleads|pleaded|convict|convicted|indict|indicted|'
                  r'charg(ed|es|ing)|guilty|sentenc(e|ed|ing)|arrest(ed)?|'
                  r'prosecut(ed|ion)?)\b', title_l):
         return 'Criminal Enforcement'
-    # Civil/settlement verbs in the title = Civil Action
     if re.search(r'\b(settlement|settles?|to pay|agree(s|d)? to pay|consent (judgment|decree)|'
                  r'civil action|false claims act|qui tam)\b', title_l):
         return 'Civil Action'
@@ -145,8 +165,16 @@ def get_action_type(title, desc):
     if re.search(r'\b(audit|inspection|evaluation report)\b', title_l):
         return 'Audit'
     if re.search(r'\b(senate report|house report|congressional report|'
-                 r'gao (report|finds))\b', title_l):
+                 r'gao (report|finds)|report to the congress|report to congress)\b', title_l):
         return 'Report'
+    # MedPAC/MACPAC publications default to Report (any publication from
+    # these commissions is either a report to Congress, issue brief, or
+    # comment letter — all "report"-like)
+    if is_medpac or is_macpac:
+        return 'Report'
+    # FinCEN advisories/alerts default to Administrative Action
+    if is_fincen and re.search(r'\b(advisor|alert|guidance|notice|bulletin)\b', title_l):
+        return 'Administrative Action'
     if re.search(r'\b(rule|regulation|final rule|proposed rule|loophole)\b', title_l):
         return 'Rule/Regulation'
     if re.search(r'\b(task force|strike force|division|unit) (created|formed|launched|announced)\b', title_l):
@@ -160,7 +188,10 @@ def get_action_type(title, desc):
         return 'Criminal Enforcement'
     if re.search(r'civil|settlement|false claims act', full_text):
         return 'Civil Action'
-    if re.search(r'audit|review|report|oig', full_text):
+    # Tightened: only classify as Audit in the fallback tier if the source
+    # is actually an audit agency (HHS-OIG or GAO). Previously any body
+    # text containing the word "report" or "review" got mislabeled Audit.
+    if (is_oig or is_gao) and re.search(r'audit|review|report|evaluation|inspection', full_text):
         return 'Audit'
     if re.search(r'rule|regulation|loophole', full_text):
         return 'Rule/Regulation'
@@ -956,6 +987,200 @@ def scrape_oig_reports(session):
             log(f"  WARNING: OIG reports page {page} - {e}", "yellow")
     return items
 
+
+def scrape_medpac(session):
+    """Scrape MedPAC documents listing.
+
+    MedPAC publishes Reports to Congress (Mar/Jun), Issue Briefs, Comment
+    Letters, and Press Releases. We skip 'Chapters' (sub-documents of the
+    Reports) to avoid duplicate coverage. The healthcare-context filter
+    in the main loop further narrows these to fraud/program-integrity
+    items (most MedPAC work is about payment policy, not fraud).
+    """
+    url = "https://www.medpac.gov/document/"
+    items = []
+    try:
+        resp = session.get(url, timeout=20)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, 'lxml')
+        for art in soup.select('article.document-archive-item'):
+            date_el = art.select_one('.document-archive-item-date')
+            type_el = art.select_one('.document-archive-item-type')
+            link_el = art.select_one('a.document-archive-item-link')
+            if not link_el:
+                continue
+            date_str = date_el.get_text(strip=True) if date_el else ""
+            doc_type = type_el.get_text(strip=True) if type_el else ""
+            # Skip chapter sub-documents — the parent Report entry covers them
+            if doc_type.lower() == 'chapters':
+                continue
+            title = link_el.get_text(strip=True)
+            href = link_el.get('href', '')
+            if not title or not href:
+                continue
+            # Fetch detail page for description + canonical title
+            detail_text = ""
+            _detail_title = ""
+            try:
+                detail_text, _, _detail_title = fetch_detail_page(session, href)
+            except Exception:
+                pass
+            if _detail_title:
+                title = _detail_title
+            desc = ""
+            if detail_text:
+                cleaned = detail_text
+                if title in cleaned:
+                    cleaned = cleaned.split(title, 1)[-1].strip()
+                desc = cleaned[:600].strip()
+                if len(cleaned) > 600:
+                    last_period = desc.rfind('.')
+                    if last_period > 200:
+                        desc = desc[:last_period + 1]
+            items.append({
+                'title': title,
+                'description': desc,
+                'link': href,
+                'pub_date': date_str,
+                '_full_text': detail_text,
+            })
+    except Exception as e:
+        log(f"  WARNING: MedPAC scrape - {e}", "yellow")
+    return items
+
+
+def scrape_macpac(session):
+    """Scrape MACPAC publications listing.
+
+    MACPAC publishes Reports to Congress (Mar/Jun), Issue Briefs, Comment
+    Letters, Chapters. The healthcare-context filter narrows these to
+    Medicaid program-integrity items.
+    """
+    url = "https://www.macpac.gov/publication/"
+    items = []
+    try:
+        resp = session.get(url, timeout=20)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, 'lxml')
+        for art in soup.select('article.publication'):
+            header = art.select_one('header.article-header')
+            if not header:
+                continue
+            byline = header.select_one('.byline')
+            date_str = byline.get_text(strip=True) if byline else ""
+            link_el = header.find('a', href=True)
+            if not link_el:
+                continue
+            title = link_el.get('title') or link_el.get_text(strip=True)
+            href = link_el['href']
+            if not title or not href:
+                continue
+            # Skip chapter sub-documents
+            class_str = " ".join(art.get('class', []))
+            if 'publication-type-chapter' in class_str:
+                continue
+            # Fetch detail page
+            detail_text = ""
+            _detail_title = ""
+            try:
+                detail_text, _, _detail_title = fetch_detail_page(session, href)
+            except Exception:
+                pass
+            if _detail_title:
+                title = _detail_title
+            desc = ""
+            if detail_text:
+                cleaned = detail_text
+                if title in cleaned:
+                    cleaned = cleaned.split(title, 1)[-1].strip()
+                desc = cleaned[:600].strip()
+                if len(cleaned) > 600:
+                    last_period = desc.rfind('.')
+                    if last_period > 200:
+                        desc = desc[:last_period + 1]
+            items.append({
+                'title': title,
+                'description': desc,
+                'link': href,
+                'pub_date': date_str,
+                '_full_text': detail_text,
+            })
+    except Exception as e:
+        log(f"  WARNING: MACPAC scrape - {e}", "yellow")
+    return items
+
+
+def scrape_fincen(session):
+    """Scrape FinCEN press releases + advisories.
+
+    FinCEN periodically issues healthcare-fraud advisories targeting SAR
+    filers. The listing page on the Drupal site renders titles as anchors
+    under /news/news-releases/. Dates aren't in the listing HTML (loaded
+    dynamically) — we fetch each HC-candidate detail page for the date.
+    """
+    url = "https://www.fincen.gov/news/press-releases"
+    items = []
+    try:
+        resp = session.get(url, timeout=20)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, 'lxml')
+        seen_hrefs = set()
+        for a in soup.select('a[href^="/news/news-releases/"]'):
+            href = a.get('href', '')
+            title = a.get_text(strip=True)
+            if not title or len(title) < 15:
+                continue
+            if href in seen_hrefs:
+                continue
+            seen_hrefs.add(href)
+            full_href = 'https://www.fincen.gov' + href
+            # Pre-filter on title: only fetch detail pages for items that
+            # look healthcare-related. FinCEN publishes a LOT of items
+            # that aren't about healthcare fraud (Iran sanctions, real
+            # estate money laundering, crypto enforcement, etc.).
+            if not re.search(r'health\s*care|medicare|medicaid|prescription|'
+                             r'hospital|hospice|pharmac|fraud\s+scheme',
+                             title, re.I):
+                continue
+            # Fetch detail page for date + description + canonical title
+            detail_text = ""
+            _detail_title = ""
+            try:
+                detail_text, _, _detail_title = fetch_detail_page(session, full_href)
+            except Exception:
+                pass
+            if _detail_title:
+                title = _detail_title
+            date_str = ""
+            if detail_text:
+                date_match = re.search(
+                    r'(January|February|March|April|May|June|July|August|'
+                    r'September|October|November|December)\s+\d{1,2},?\s+\d{4}',
+                    detail_text)
+                if date_match:
+                    date_str = date_match.group()
+            desc = ""
+            if detail_text:
+                cleaned = detail_text
+                if title in cleaned:
+                    cleaned = cleaned.split(title, 1)[-1].strip()
+                desc = cleaned[:600].strip()
+                if len(cleaned) > 600:
+                    last_period = desc.rfind('.')
+                    if last_period > 200:
+                        desc = desc[:last_period + 1]
+            items.append({
+                'title': title,
+                'description': desc,
+                'link': full_href,
+                'pub_date': date_str,
+                '_full_text': detail_text,
+            })
+    except Exception as e:
+        log(f"  WARNING: FinCEN scrape - {e}", "yellow")
+    return items
+
+
 # ---------------------------------------------------------------------------
 # Fetch dispatcher
 # ---------------------------------------------------------------------------
@@ -976,6 +1201,12 @@ def fetch_feed(session, feed):
         return scrape_help_committee(session)
     if scrape_mode == 'ways_means':
         return scrape_ways_means(session)
+    if scrape_mode == 'medpac':
+        return scrape_medpac(session)
+    if scrape_mode == 'macpac':
+        return scrape_macpac(session)
+    if scrape_mode == 'fincen':
+        return scrape_fincen(session)
     if not feed.get('url'):
         return []
     return fetch_rss(session, feed['url'], use_browser_fallback=feed.get('browser_fallback', False))
@@ -1191,7 +1422,10 @@ def main():
                 search_all = f"{title} {desc_clean} {full_text}"
 
                 state = get_state(search_all)
-                action_type = 'Investigative Report' if is_media else get_action_type(title, search_all)
+                action_type = ('Investigative Report' if is_media
+                               else get_action_type(title, search_all,
+                                                    agency=feed.get('agency'),
+                                                    link=link))
                 tags = generate_tags(search_all)
 
                 # Enforcement-only filter: only add items classified as
