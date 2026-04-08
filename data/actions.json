@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-04-08T11:07:44.932172",
+    "last_updated": "2026-04-08T11:36:49.746806",
     "version": "1.0",
-    "last_scraped": "2026-04-08T08:39:53.995735"
+    "last_scraped": "2026-04-08T11:37:48.518414"
   },
   "actions": [
     {
@@ -13344,29 +13344,6 @@
       "related_agencies": []
     },
     {
-      "id": "hhs-oig-2026-03-30-2259323214",
-      "date": "2026-03-30",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "Louisiana Healthcare Connections Generally Complied With Federal and State Process Requirements When Denying Prior Authorization Requests",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2026/louisiana-healthcare-connections-generally-complied-with-federal-and-state-process-requirements-when-denying-prior-authorization-requests/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicaid",
-        "Behavioral Health"
-      ],
-      "entities": [],
-      "state": "LA",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
       "id": "hhs-oig-2026-03-23-2077213473",
       "date": "2026-03-23",
       "agency": "HHS-OIG",
@@ -13430,28 +13407,6 @@
       ],
       "entities": [],
       "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
-      "id": "hhs-oig-2026-03-16-2589921643",
-      "date": "2026-03-16",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "Indiana Generally Ensured That Selected Nursing Homes Complied With Federal Background Check Requirements",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2026/indiana-generally-ensured-that-selected-nursing-homes-complied-with-federal-background-check-requirements/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicaid",
-        "Nursing Home"
-      ],
-      "entities": [],
-      "state": "IN",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
@@ -13677,29 +13632,6 @@
       "related_agencies": []
     },
     {
-      "id": "hhs-oig-2026-01-30-2706492458",
-      "date": "2026-01-30",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "A Large Southeastern Hospital Could Improve Certain Security Controls to Enhance Its Ability to Prevent and Detect Cyberattacks",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2026/a-large-southeastern-hospital-could-improve-certain-security-controls-to-enhance-its-ability-to-prevent-and-detect-cyberattacks/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicaid",
-        "Telehealth"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
       "id": "hhs-oig-2026-01-23-1632031137",
       "date": "2026-01-23",
       "agency": "HHS-OIG",
@@ -13768,28 +13700,6 @@
       "related_agencies": []
     },
     {
-      "id": "hhs-oig-2025-12-19-3503827351",
-      "date": "2025-12-19",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "Audit of Medicare Administrative Contractor Information Security Program Evaluations for Fiscal Year 2024",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2026/audit-of-medicare-administrative-contractor-information-security-program-evaluations-for-fiscal-year-2024/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicaid"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
       "id": "macpac-2026-03-30-1479748036",
       "date": "2026-03-30",
       "agency": "MACPAC",
@@ -13811,23 +13721,69 @@
       "related_agencies": []
     },
     {
-      "id": "treasury-2026-03-30-2711680036",
-      "date": "2026-03-30",
-      "agency": "Treasury",
-      "type": "Administrative Action",
-      "title": "FinCEN Issues Advisory on Health Care Fraud Schemes Targeting Medicare, Medicaid, and Other Federal and State Health Care Benefit Programs",
-      "amount": null,
-      "amount_numeric": 0,
+      "id": "doj-2026-04-07-1949714811",
+      "date": "2026-04-07",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Business Owner Convicted of $1.9M Medicare, Medicaid, and Private Insurer Fraud Scheme",
+      "amount": "$1.9 million",
+      "amount_numeric": 1900000.0,
       "officials": [],
-      "link": "https://www.fincen.gov/news/news-releases/fincen-issues-advisory-health-care-fraud-schemes-targeting-medicare-medicaid-and",
-      "link_label": "FinCEN Advisory",
+      "link": "https://www.justice.gov/usao-edmi/pr/business-owner-convicted-19m-medicare-medicaid-and-private-insurer-fraud-scheme",
+      "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Pharmacy"
       ],
       "entities": [],
-      "state": null,
+      "state": "MI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-04-07-95672696",
+      "date": "2026-04-07",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "National Partnership of Insurance Brokers and its Former Subsidiary Agree to Pay Over $135 Million For Affordable Care Act Enrollment Fraud Scheme",
+      "amount": "$135 Million",
+      "amount_numeric": 135000000,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/national-partnership-insurance-brokers-and-its-former-subsidiary-agree-pay-over-135-million",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "ACA"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "doj-2026-04-02-3318459454",
+      "date": "2026-04-02",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Texas Doctor Charged with Illegally Distributing Millions of Opioid Pills",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/texas-doctor-charged-illegally-distributing-millions-opioid-pills",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "AR",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []

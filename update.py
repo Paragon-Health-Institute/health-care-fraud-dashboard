@@ -31,22 +31,48 @@ PENDING_FILE = os.path.join(SCRIPT_DIR, "data", "pending.json")
 # Keywords & healthcare terms (compiled regexes)
 # ---------------------------------------------------------------------------
 KEYWORDS = [re.compile(p, re.IGNORECASE) for p in [
-    r'health care fraud', r'healthcare fraud', r'medicare fraud', r'medicaid fraud',
-    r'hospice fraud', r'home care fraud', r'home health fraud', r'prescription fraud',
-    r'opioid fraud', r'health fraud', r'fraud takedown',
-    r'false claims', r'false billing', r'improper billing', r'kickback', r'overbilling',
-    r'upcoding', r'phantom billing', r'identity theft.*medicare', r'durable medical',
-    r'program integrity',
+    # Generic fraud/scheme verbs — must also pass HEALTHCARE_TERMS for a
+    # healthcare-context match, so 'fraud' alone is safe here.
+    r'\bfraud\b', r'\bscheme\b',
+    # False Claims Act and related civil-settlement language
+    r'false claims', r'false billing', r'improper billing',
+    r'\bfca\b', r'\bqui tam\b', r'stark law', r'anti-?kickback',
+    r'\bkickback', r'overbilling', r'upcoding', r'unbundl',
+    r'phantom billing', r'pill mill', r'drug diversion',
+    # Charges / convictions
+    r'plead[s ]? guilty', r'convict', r'sentenc',
+    r'indict', r'charge[sd]? with', r'arrest',
+    # Civil settlements
+    r'agree.*(to )?pay', r'settlement', r'\bsettles?\b', r'consent (judgment|decree)',
+    # Program integrity + enforcement language
+    r'program integrity', r'health care fraud', r'healthcare fraud',
+    r'\bfca\b', r'enrollment fraud', r'billing fraud',
+    r'takedown', r'strike force',
+    # Criminal drug distribution (controlled substance cases by licensed
+    # providers — these are health care crimes when the defendant is
+    # a doctor/pharmacist/pill mill operator)
+    r'illegally distribut', r'unlawful distribut',
+    # DME / durable medical (always fraud-adjacent in this context)
+    r'durable medical', r'\bdme\b', r'dmepos',
 ]]
 
 HEALTHCARE_TERMS = [re.compile(p, re.IGNORECASE) for p in [
     r'medicare', r'medicaid', r'tricare', r'health care', r'healthcare', r'hospital',
-    r'clinic', r'physician', r'medical', r'patient', r'prescription', r'pharmacist',
-    r'pharmacy', r'hospice', r'home health', r'nursing home', r'assisted living',
+    r'clinic', r'physician', r'\bdoctor\b', r'\bnurse\b', r'medical', r'patient',
+    r'prescription', r'pharmacist', r'pharmacy', r'hospice', r'home health',
+    r'nursing home', r'assisted living',
     r'\bcms\b', r'\bhhs\b', r'\boig\b', r'health insurance', r'health plan',
     r'clinical', r'diagnosis', r'therapy', r'dental fraud', r'ambulance fraud',
     r'\bdme\b', r'durable medical', r'behavioral health', r'substance abuse',
     r'affordable care act', r'aca enrollment', r'chip program',
+    # Opioid / pill mill language. NOTE: we intentionally do NOT include
+    # 'fentanyl' / 'oxycodone' / 'hydrocodone' / 'controlled substance'
+    # here — those terms dominate DOJ DEA street-level trafficking cases
+    # which are NOT healthcare fraud. Keep 'pill mill' and 'opioid pills'
+    # because those pattern-match provider-based prescription fraud.
+    r'pill mill', r'opioid pills', r'opioid prescri',
+    # Reimbursement / billing language
+    r'reimbursement', r'medication', r'\bstark law\b',
 ]]
 
 # ---------------------------------------------------------------------------
@@ -55,6 +81,7 @@ HEALTHCARE_TERMS = [re.compile(p, re.IGNORECASE) for p in [
 FEEDS = [
     # --- Official agency feeds ---
     {"name": "DOJ",         "agency": "DOJ",          "url": "https://www.justice.gov/news/rss",                                          "enabled": True,  "source_type": "official", "browser_fallback": True},
+    {"name": "DOJ-OPA",     "agency": "DOJ",          "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "doj_opa"},
     {"name": "HHS-OIG",     "agency": "HHS-OIG",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "oig"},
     {"name": "CMS",         "agency": "CMS",           "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "cms"},
     {"name": "HHS",         "agency": "HHS",           "url": "https://www.hhs.gov/rss/news.xml",                                         "enabled": False, "source_type": "official", "browser_fallback": True},
@@ -815,6 +842,82 @@ def scrape_ways_means(session):
         log(f"  WARNING: H-W&M scrape - {e}")
     return items
 
+def scrape_doj_opa(session):
+    """Scrape DOJ Office of Public Affairs press releases using Playwright.
+
+    This is THE canonical source for DOJ OPA releases, which include all
+    nationwide healthcare fraud takedowns, FCA settlements, and major
+    criminal cases. The DOJ 'Justice News' RSS feed (justice.gov/news/rss)
+    does NOT include OPA releases — it only has FOIA training events and
+    miscellaneous USAO items — so for a long time OPA releases were only
+    caught incidentally when HHS-OIG happened to link to them from its
+    enforcement listing. This scraper closes that gap.
+
+    The listing page is Akamai-protected; Playwright is required.
+    """
+    if not HAS_PLAYWRIGHT:
+        log("    Skipping DOJ-OPA (requires Playwright)")
+        return []
+    url = "https://www.justice.gov/news/press-releases"
+    items = []
+    try:
+        soup = scrape_page_with_browser(url)
+        for a_tag in soup.find_all('a', href=re.compile(r'^/opa/pr/')):
+            title = a_tag.get_text(strip=True)
+            if not title or len(title) < 20:
+                continue
+            href = a_tag.get('href', '')
+            if href.startswith('/'):
+                href = 'https://www.justice.gov' + href
+            parent = a_tag.find_parent(['li', 'div', 'article', 'tr'])
+            date_str = ""
+            if parent:
+                dm = re.search(
+                    r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
+                    parent.get_text()
+                )
+                if dm:
+                    date_str = dm.group()
+            # Fetch detail page for description + canonical title + date
+            detail_text = ""
+            _detail_title = ""
+            try:
+                detail_text, _, _detail_title = fetch_detail_page(session, href)
+            except Exception:
+                pass
+            if _detail_title:
+                title = _detail_title
+            # If no date on listing, extract from detail page (DOJ puts
+            # "Tuesday, April 7, 2026" in a date field)
+            if not date_str and detail_text:
+                dm = re.search(
+                    r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
+                    detail_text)
+                if dm:
+                    date_str = dm.group()
+            desc = ""
+            if detail_text:
+                cleaned = detail_text
+                if title in cleaned:
+                    cleaned = cleaned.split(title, 1)[-1].strip()
+                desc = cleaned[:600].strip()
+                if len(cleaned) > 600:
+                    last_period = desc.rfind('.')
+                    if last_period > 200:
+                        desc = desc[:last_period + 1]
+
+            items.append({
+                'title': title,
+                'description': desc,
+                'link': href,
+                'pub_date': date_str,
+                '_full_text': detail_text,
+            })
+    except Exception as e:
+        log(f"  WARNING: DOJ-OPA scrape - {e}")
+    return items
+
+
 def scrape_doj_usao(session):
     """Scrape DOJ USAO press releases using Playwright (Akamai-blocked)."""
     if not HAS_PLAYWRIGHT:
@@ -961,8 +1064,21 @@ def scrape_oig_reports(session):
                 title = a_tag.get_text(strip=True)
                 if not title or len(title) < 10:
                     continue
-                # Skip clean audits — "in accordance with" means no violations found
-                if re.search(r'\bin accordance with\b', title, re.I):
+                # Skip clean-bill-of-health audits. HHS-OIG uses three
+                # stock phrases when an auditee passed compliance review:
+                #   "in accordance with"
+                #   "Generally Complied With"
+                #   "Generally Ensured That"
+                # None of these are fraud findings — auditee did the right
+                # thing and the OIG is just documenting that. Skip them.
+                if re.search(r'\b(in accordance with|generally complied with|'
+                             r'generally ensured that)\b', title, re.I):
+                    continue
+                # Skip IT security / cybersecurity audits — these aren't
+                # HC fraud oversight, they're information security reviews.
+                if re.search(r'\b(information security program|cybersecurity|'
+                             r'security controls to (enhance|prevent|detect))\b',
+                             title, re.I):
                     continue
                 href = a_tag['href']
                 if href.startswith('/'):
@@ -1207,6 +1323,8 @@ def fetch_feed(session, feed):
         return scrape_cms(session)
     if scrape_mode == 'doj_usao':
         return scrape_doj_usao(session)
+    if scrape_mode == 'doj_opa':
+        return scrape_doj_opa(session)
     if scrape_mode == 'energy_commerce':
         return scrape_energy_commerce(session)
     if scrape_mode == 'help_committee':
