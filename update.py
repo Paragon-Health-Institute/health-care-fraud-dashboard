@@ -288,15 +288,50 @@ def get_state(text):
             return abbr
     return None
 
-def extract_amount(text):
-    m = re.search(r'\$[\d,]+(?:\.\d+)?\s*billion', text, re.IGNORECASE)
-    if m:
-        num = float(re.sub(r'[\$,\s]', '', m.group().lower().replace('billion', '')))
-        return {"display": m.group(), "numeric": num * 1e9}
-    m = re.search(r'\$[\d,]+(?:\.\d+)?\s*million', text, re.IGNORECASE)
-    if m:
-        num = float(re.sub(r'[\$,\s]', '', m.group().lower().replace('million', '')))
-        return {"display": m.group(), "numeric": num * 1e6}
+def extract_amount(text, title=""):
+    """Extract a dollar amount from text, preferring the title.
+
+    The title always contains the case-specific amount (e.g. "$135 Million"
+    for a specific settlement). The body text often contains DOJ boilerplate
+    like "Since January 2009, the Justice Department has recovered over
+    $45 billion through False Claims Act cases..." — that aggregate figure
+    is NOT the case-specific amount.
+
+    Strategy: check the title first. If no amount in the title, fall back
+    to body text but SKIP known boilerplate patterns.
+    """
+    def _parse(t):
+        m = re.search(r'\$[\d,]+(?:\.\d+)?\s*billion', t, re.IGNORECASE)
+        if m:
+            num = float(re.sub(r'[\$,\s]', '', m.group().lower().replace('billion', '')))
+            return {"display": m.group(), "numeric": num * 1e9}
+        m = re.search(r'\$[\d,]+(?:\.\d+)?\s*million', t, re.IGNORECASE)
+        if m:
+            num = float(re.sub(r'[\$,\s]', '', m.group().lower().replace('million', '')))
+            return {"display": m.group(), "numeric": num * 1e6}
+        return None
+
+    # 1. Try the title first — always case-specific
+    if title:
+        result = _parse(title)
+        if result:
+            return result
+
+    # 2. Fall back to body text, but strip DOJ boilerplate
+    if text:
+        # Remove the common DOJ boilerplate paragraph about total FCA recoveries
+        cleaned = re.sub(
+            r'since (january|fiscal year).*?(justice department|department of justice).*?'
+            r'recover\w*.*?\$[\d,.]+\s*(billion|million)[^.]*\.',
+            '', text, flags=re.IGNORECASE | re.DOTALL)
+        # Also remove "the largest health care fraud takedown" aggregate paragraphs
+        cleaned = re.sub(
+            r'(this|the)\s+(national|largest|record).*?takedown.*?\$[\d,.]+\s*(billion|million)[^.]*\.',
+            '', cleaned, flags=re.IGNORECASE | re.DOTALL)
+        result = _parse(cleaned)
+        if result:
+            return result
+
     return None
 
 def generate_tags(text):
@@ -2262,7 +2297,7 @@ def main():
                 # etc.) and Media items never get an amount. See project
                 # memory: project_amounts_enforcement_only.
                 if action_type in ('Criminal Enforcement', 'Civil Action'):
-                    amt_info = extract_amount(search_all)
+                    amt_info = extract_amount(search_all, title=title)
                 else:
                     amt_info = None
 
