@@ -1995,8 +1995,8 @@
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
-      "link": "https://www.fox9.com/news/dr-oz-gov-walz-address-systemic-fraud-mn-medicaid-system",
-      "link_label": "FOX 9 News Report",
+      "link": "https://www.cms.gov/newsroom/press-releases/trump-administration-prioritizes-affordability-announcing-major-crackdown-health-care-fraud",
+      "link_label": "CMS Press Release",
       "social_posts": [],
       "tags": [
         "Medicaid"
@@ -2015,8 +2015,8 @@
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
-      "link": "https://www.fox9.com/news/fraud-minnesota-trump-admin-audit-mn-medicaid-receipts-defer-payment-14-programs",
-      "link_label": "FOX 9 News Report",
+      "link": "https://www.whitehouse.gov/releases/2026/01/heres-what-the-trump-administration-is-doing-to-crush-minnesotas-fraud-epidemic/",
+      "link_label": "White House Release",
       "social_posts": [],
       "tags": [
         "Medicaid"
