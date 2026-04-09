@@ -301,14 +301,33 @@ def extract_amount(text, title=""):
     to body text but SKIP known boilerplate patterns.
     """
     def _parse(t):
+        # Try "$X Billion" first
         m = re.search(r'\$[\d,]+(?:\.\d+)?\s*billion', t, re.IGNORECASE)
         if m:
             num = float(re.sub(r'[\$,\s]', '', m.group().lower().replace('billion', '')))
             return {"display": m.group(), "numeric": num * 1e9}
+        # Then "$X Million"
         m = re.search(r'\$[\d,]+(?:\.\d+)?\s*million', t, re.IGNORECASE)
         if m:
             num = float(re.sub(r'[\$,\s]', '', m.group().lower().replace('million', '')))
             return {"display": m.group(), "numeric": num * 1e6}
+        # Then "$X,XXX" shorthand (e.g. "$850,000", "$4.75M")
+        m = re.search(r'\$([\d,]+(?:\.\d+)?)\s*[MmBb]\b', t)
+        if m:
+            raw = m.group(1).replace(',', '')
+            val = float(raw)
+            unit = t[m.end()-1].lower()
+            if unit == 'b':
+                return {"display": f"${m.group(1)} Billion", "numeric": val * 1e9}
+            else:
+                return {"display": f"${m.group(1)} Million", "numeric": val * 1e6}
+        # Finally raw dollar amounts >= $10,000 (e.g. "$850,000", "$704,349")
+        m = re.search(r'\$([\d,]+(?:\.\d+)?)\b', t)
+        if m:
+            raw = m.group(1).replace(',', '')
+            val = float(raw)
+            if val >= 10_000:  # skip trivially small amounts
+                return {"display": m.group(), "numeric": val}
         return None
 
     # 1. Try the title first — always case-specific
