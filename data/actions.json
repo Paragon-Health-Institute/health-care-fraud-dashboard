@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-09T15:15:35.384987",
+    "last_updated": "2026-04-09T16:49:32.591803",
     "version": "1.0",
     "last_scraped": "2026-04-09T08:51:05.838375"
   },
@@ -14209,6 +14209,30 @@
       "source_type": "official",
       "auto_fetched": false,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2025-01-23-arbor-homecare-100m-masshealth",
+      "date": "2025-01-23",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Operator of Home Health Care Company Sentenced to 12 Years in Prison for Multimillion Dollar Health Care Fraud Scheme",
+      "amount": "$100 Million",
+      "amount_numeric": 100000000,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/operator-home-health-care-company-sentenced-12-years-prison-multimillion-dollar-health",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Home Health"
+      ],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
