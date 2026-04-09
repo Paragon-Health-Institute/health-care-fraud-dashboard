@@ -1305,14 +1305,25 @@ def cmd_audit_oversight() -> int:
     actions = load_json(DATA_FILE, {"metadata": {"version": "1.0", "last_updated": ""},
                                      "actions": []})
 
+    # Sources where the listing page mixes fraud-relevant and non-fraud
+    # content. Items from these agencies NEVER auto-promote on the regex
+    # pass — they always go to AI review for nuance. This prevents CMS
+    # rate announcements, GAO defense reports, and congressional hearing
+    # roundups from landing on the Oversight tab just because the title
+    # mentions "Medicare" or "Medicaid".
+    ALWAYS_AI_REVIEW_AGENCIES = {'CMS', 'GAO', 'Congress', 'MedPAC', 'MACPAC'}
+
     auto_promoted = []
     still_pending = []
     for item in pending:
-        # Use the stricter oversight-specific gate instead of the
-        # generic is_obviously_healthcare. Prevents auto-promotion of
-        # HHS-OIG audits about NIH grants, LIHEAP, FISMA, child welfare,
-        # foster care, etc. that happen to have "Health" in the title.
-        if is_oversight_hc_fraud(item):
+        agency = item.get("agency", "")
+        # Force AI review for mixed-content sources
+        if agency in ALWAYS_AI_REVIEW_AGENCIES:
+            still_pending.append(item)
+            item["flag_reason"] = f"{agency} items always go to AI review (mixed-content source)"
+        # Use the stricter oversight-specific gate for remaining sources
+        # (HHS-OIG, Treasury, etc.)
+        elif is_oversight_hc_fraud(item):
             auto_promoted.append(item)
             item["audit_decision"] = "auto_approved"
         else:
