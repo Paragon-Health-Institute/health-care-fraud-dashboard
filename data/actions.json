@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-09T15:09:43.484812",
+    "last_updated": "2026-04-09T15:15:35.384987",
     "version": "1.0",
     "last_scraped": "2026-04-09T08:51:05.838375"
   },
@@ -14155,6 +14155,54 @@
       "tags": [
         "Medicare",
         "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": []
+    },
+    {
+      "id": "doj-hhs-2024-12-06-hcfac-annual-report-fy2023",
+      "date": "2024-12-06",
+      "agency": "HHS-OIG",
+      "type": "Report",
+      "title": "Health Care Fraud and Abuse Control Program Annual Report FY2023: $3.4 Billion Returned to Federal Government",
+      "amount": "$3.4 Billion",
+      "amount_numeric": 3400000000,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2024/health-care-fraud-and-abuse-control-program-report-fiscal-year-2023/",
+      "link_label": "HHS-OIG / DOJ Joint Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": [
+        "DOJ"
+      ]
+    },
+    {
+      "id": "hhs-oig-2025-03-14-strategic-plan-2025-2030",
+      "date": "2025-03-14",
+      "agency": "HHS-OIG",
+      "type": "Report",
+      "title": "HHS-OIG Strategic Plan 2025-2030: Managed Care, Nursing Homes, and Grants Identified as Priority Areas",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/about-oig/strategic-plan/",
+      "link_label": "HHS-OIG Strategic Plan",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Medicare Advantage",
+        "Nursing Home"
       ],
       "entities": [],
       "state": null,
