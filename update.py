@@ -119,6 +119,7 @@ FEEDS = [
     {"name": "DOJ",         "agency": "DOJ",          "url": "https://www.justice.gov/news/rss",                                          "enabled": False, "source_type": "official", "browser_fallback": True},
     {"name": "HHS-OIG",     "agency": "HHS-OIG",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "oig"},
     {"name": "CMS",         "agency": "CMS",           "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "cms"},
+    {"name": "CMS-Fraud",   "agency": "CMS",           "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "cms_fraud"},
     {"name": "HHS",         "agency": "HHS",           "url": "https://www.hhs.gov/rss/news.xml",                                         "enabled": False, "source_type": "official", "browser_fallback": True},
     {"name": "DOJ-USAO",    "agency": "DOJ",           "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "doj_usao"},
     {"name": "GAO",         "agency": "GAO",           "url": "https://www.gao.gov/rss/reports.xml",                                      "enabled": True,  "source_type": "official", "browser_fallback": True},
@@ -834,6 +835,55 @@ def scrape_cms(session):
         except Exception as e:
             log(f"  WARNING: CMS scrape - {e}", "yellow")
     return items
+
+def scrape_cms_fraud_page(session):
+    """Scrape cms.gov/fraud — CMS's dedicated anti-fraud landing page.
+
+    This page carries PDF fact sheets, annual reports, data dashboards,
+    and hot-spot analyses that CMS publishes OUTSIDE of the newsroom.
+    The FDOC, CRUSH, WISeR, hospice fraud, RADV, and DMEPOS fraud
+    content all live here. Updates ~quarterly (not daily), so this is
+    a low-volume but high-value source.
+
+    Requires Playwright because the page is JS-rendered.
+    """
+    if not HAS_PLAYWRIGHT:
+        log("    Skipping CMS-Fraud (requires Playwright)")
+        return []
+    items = []
+    try:
+        soup = scrape_page_with_browser("https://www.cms.gov/fraud")
+        seen = set()
+        for a_tag in soup.find_all('a', href=True):
+            href = a_tag.get('href', '')
+            title = a_tag.get_text(strip=True)
+            if not title or len(title) < 15:
+                continue
+            if href in seen:
+                continue
+            seen.add(href)
+            # Only CMS PDF fact sheets + reports — the real content
+            if not re.search(r'\.pdf$|/files/document/', href, re.I):
+                continue
+            if href.startswith('/'):
+                href = 'https://www.cms.gov' + href
+            # Pre-filter: must be fraud-related content
+            if not re.search(r'fraud|crush|fdoc|wiser|hospice|moratorium|'
+                             r'integrity|improper|radv|dmepos|hot.spot|'
+                             r'dual.enrollment|annual.report',
+                             f"{title} {href}", re.I):
+                continue
+            items.append({
+                'title': title,
+                'description': '',
+                'link': href,
+                'pub_date': '',  # PDFs don't have inline dates
+                '_full_text': '',
+            })
+    except Exception as e:
+        log(f"  WARNING: CMS fraud page scrape - {e}", "yellow")
+    return items
+
 
 def scrape_h_oversight(session):
     """Scrape House Oversight Committee press releases using Playwright.
@@ -1928,6 +1978,8 @@ def fetch_feed(session, feed):
         return scrape_doj_opa(session)
     if scrape_mode == 'h_oversight':
         return scrape_h_oversight(session)
+    if scrape_mode == 'cms_fraud':
+        return scrape_cms_fraud_page(session)
     if scrape_mode == 'oig_press':
         return scrape_oig_press(session)
     if scrape_mode == 'senate_judiciary':
