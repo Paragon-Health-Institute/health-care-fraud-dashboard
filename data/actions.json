@@ -14163,30 +14163,6 @@
       "related_agencies": []
     },
     {
-      "id": "doj-hhs-2024-12-06-hcfac-annual-report-fy2023",
-      "date": "2024-12-06",
-      "agency": "HHS-OIG",
-      "type": "Report",
-      "title": "Health Care Fraud and Abuse Control Program Annual Report FY2023: $3.4 Billion Returned to Federal Government",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2024/health-care-fraud-and-abuse-control-program-report-fiscal-year-2023/",
-      "link_label": "HHS-OIG / DOJ Joint Report",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicaid"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": false,
-      "related_agencies": [
-        "DOJ"
-      ]
-    },
-    {
       "id": "hhs-oig-2025-03-14-strategic-plan-2025-2030",
       "date": "2025-03-14",
       "agency": "HHS-OIG",
