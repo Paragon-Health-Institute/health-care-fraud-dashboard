@@ -2187,7 +2187,12 @@ def main():
                 desc_clean = clean_html(desc_raw)
                 link = item.get('link', '')
 
-                search_text = f"{title} {desc_clean}"
+                # Use full detail text if available (from scrapers that
+                # fetch detail pages). This is critical for CMS items
+                # where fraud keywords appear deep in the body, past
+                # the 600-char description truncation point.
+                full_text = item.get('_full_text', '')
+                search_text = f"{title} {desc_clean} {full_text}"
                 # Every item must pass the healthcare-context filter,
                 # regardless of source. Previously we trusted the HHS-OIG
                 # fraud/enforcement listing to be pre-filtered to healthcare,
@@ -2262,16 +2267,12 @@ def main():
                 if globals().get('OPA_ONLY') and '/opa/pr/' not in link:
                     continue
 
-                # Use full detail text if available (from scrapers that fetch detail pages)
-                full_text = item.get('_full_text', '')
-                search_all = f"{title} {desc_clean} {full_text}"
-
-                state = get_state(search_all)
+                state = get_state(search_text)
                 action_type = ('Investigative Report' if is_media
-                               else get_action_type(title, search_all,
+                               else get_action_type(title, search_text,
                                                     agency=feed.get('agency'),
                                                     link=link))
-                tags = generate_tags(search_all)
+                tags = generate_tags(search_text)
 
                 # Enforcement-only filter: only add items classified as
                 # Criminal Enforcement or Civil Action. Oversight items
