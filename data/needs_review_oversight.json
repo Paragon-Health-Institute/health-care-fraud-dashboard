@@ -1,9 +1,130 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-04-08T14:06:24.888869"
+    "last_scraped": "2026-04-09T09:49:03.160404"
   },
-  "items": [],
+  "items": [
+    {
+      "id": "cms-2026-04-09-1769082188",
+      "date": "2026-04-09",
+      "agency": "CMS",
+      "type": "Administrative Action",
+      "title": "CMS Issues Guidance to Implement New Limits on Federal Medicaid and CHIP Funding for Certain Noncitizens",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-issues-guidance-implement-new-limits-federal-medicaid-chip-funding-certain-noncitizens",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Medicaid",
+        "Hospice"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
+    },
+    {
+      "id": "cms-2026-04-09-160222268",
+      "date": "2026-04-09",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "2027 Medicare Advantage and Part D Rate Announcement",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Medicaid",
+        "Hospice"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
+    },
+    {
+      "id": "cms-2026-04-09-3422526735",
+      "date": "2026-04-09",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "Fiscal Year 2027 Medicare Inpatient Psychiatric Facility Prospective Payment System Proposed Rule (CMS-1847-P)",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/fact-sheets/fiscal-year-2027-medicare-inpatient-psychiatric-facility-prospective-payment-system-proposed-rule",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Medicaid",
+        "Hospice"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
+    },
+    {
+      "id": "macpac-2026-04-09-2505491462",
+      "date": "2026-04-09",
+      "agency": "MACPAC",
+      "type": "Report",
+      "title": "Implementing Community Engagement Requirements in Medicaid",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.macpac.gov/publication/implementing-community-engagement-requirements-in-medicaid/",
+      "link_label": "MACPAC Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
+    },
+    {
+      "id": "macpac-2026-04-09-2236929372",
+      "date": "2026-04-09",
+      "agency": "MACPAC",
+      "type": "Report",
+      "title": "Exploring the Role of the State Medicaid Agency in the Program of All-Inclusive Care for the Elderly: Policy Options",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.macpac.gov/publication/exploring-the-role-of-the-state-medicaid-agency-in-the-program-of-all-inclusive-care-for-the-elderly-policy-options/",
+      "link_label": "MACPAC Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
+    }
+  ],
   "rejected_links": [
     "https://oig.hhs.gov/reports/all/2026/vibrent-health-claimed-unallowable-costs-under-a-national-institutes-of-health-other-transaction-award/",
     "https://oig.hhs.gov/reports/all/2026/review-of-the-department-of-health-and-human-services-compliance-with-the-federal-information-security-modernization-act-of-2014-for-fiscal-year-2025/",

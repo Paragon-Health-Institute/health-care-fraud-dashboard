@@ -151,6 +151,7 @@ OVERSIGHT_FRAUD_GATE = re.compile(
     r"fraud|kickback|false\s+claim|qui\s+tam|anti-?kickback|stark\s+law|"
     r"improper\s+payment|overpayment|unrecovered|unallowable\s+"
     r"(medicaid|medicare)|program\s+integrity|"
+    r"semiannual\s+report|expected\s+recoveries|"
     # Provider / beneficiary schemes
     r"billing\s+scheme|upcod|unbundl|phantom\s+billing|pill\s+mill|"
     r"drug\s+diversion|"

@@ -126,6 +126,10 @@ FEEDS = [
     {"name": "S-HELP",      "agency": "Congress",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "help_committee"},
     {"name": "H-W&M",       "agency": "Congress",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "ways_means"},
     {"name": "HHS-OIG-RPT", "agency": "HHS-OIG",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "oig_reports"},
+    {"name": "HHS-OIG-PR",  "agency": "HHS-OIG",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "oig_press"},
+    # --- Congressional Judiciary committees (HC fraud oversight of DOJ) ---
+    {"name": "S-Judiciary",  "agency": "Congress",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "senate_judiciary"},
+    {"name": "H-Judiciary",  "agency": "Congress",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "house_judiciary"},
     {"name": "FDA",         "agency": "FDA",           "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml", "enabled": False, "source_type": "official"},
     {"name": "DEA",         "agency": "DEA",           "url": "https://www.dea.gov/press-releases/rss",                                   "enabled": True,  "source_type": "official", "browser_fallback": True},
     # --- Commissions + Treasury anti-fraud (added Tier 2) ---
@@ -820,6 +824,254 @@ def scrape_h_oversight(session):
             })
     except Exception as e:
         log(f"  WARNING: H-Oversight scrape - {e}")
+    return items
+
+
+def scrape_oig_press(session):
+    """Scrape HHS-OIG newsroom press releases.
+
+    Separate from the enforcement listing (/fraud/enforcement/) and the
+    reports listing (/reports/all/). The newsroom announces semiannual
+    reports, enforcement results, policy statements, and data briefs
+    that don't always appear on the other two pages.
+
+    Source: oig.hhs.gov/newsroom/news-releases-articles/
+    """
+    url = "https://oig.hhs.gov/newsroom/news-releases-articles/"
+    items = []
+    try:
+        resp = session.get(url, timeout=20)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, 'lxml')
+        for card in soup.select('li.usa-card'):
+            a_tag = card.select_one('h2.usa-card__heading a')
+            if not a_tag:
+                a_tag = card.select_one('a[href]')
+            if not a_tag:
+                continue
+            title = a_tag.get_text(strip=True)
+            if not title or len(title) < 15:
+                continue
+            href = a_tag.get('href', '')
+            if href.startswith('/'):
+                href = 'https://oig.hhs.gov' + href
+            # Extract date from card metadata
+            date_str = ""
+            date_span = card.select_one('span.text-base-dark')
+            if date_span:
+                date_str = date_span.get_text(strip=True)
+            if not date_str:
+                dm = re.search(
+                    r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
+                    card.get_text(' ', strip=True))
+                if dm:
+                    date_str = dm.group()
+            # Fetch detail page for body text + canonical title
+            detail_text = ""
+            _detail_title = ""
+            try:
+                detail_text, _, _detail_title = fetch_detail_page(session, href)
+            except Exception:
+                pass
+            if _detail_title:
+                title = _detail_title
+            desc = ""
+            if detail_text:
+                cleaned = detail_text
+                if title in cleaned:
+                    cleaned = cleaned.split(title, 1)[-1].strip()
+                desc = cleaned[:600].strip()
+                if len(cleaned) > 600:
+                    last_period = desc.rfind('.')
+                    if last_period > 200:
+                        desc = desc[:last_period + 1]
+            items.append({
+                'title': title,
+                'description': desc,
+                'link': href,
+                'pub_date': date_str,
+                '_full_text': detail_text,
+            })
+    except Exception as e:
+        log(f"  WARNING: OIG press scrape - {e}", "yellow")
+    return items
+
+
+# Pre-filter for congressional committee scrapers. Only return items
+# whose title OR body text mentions a healthcare fraud concept. This
+# prevents immigration, SCOTUS nomination, defense spending, and other
+# non-HC Judiciary items from entering the pipeline.
+_CONGRESS_HC_PREFILTER = re.compile(
+    r'\b(medicare|medicaid|medi-?cal|tricare|health\s*care|healthcare|'
+    r'hospital|hospice|home\s+health|nursing\s+(home|facility)|'
+    r'pharmacy|pharmacist|prescription|opioid|fentanyl|pill\s+mill|'
+    r'physician|doctor|clinic|medical|patient|'
+    r'insurance\s+(fraud|ceo|compan|executive)|'
+    r'false\s+claims?\s+act|anti-?kickback|stark\s+law|'
+    r'program\s+integrity|improper\s+payment|'
+    r'fraud.{0,15}(waste|abuse)|'
+    r'dme|durable\s+medical|genetic\s+test|telehealth|'
+    r'cms\b|hhs\b|oig\b|fda\b)\b',
+    re.IGNORECASE,
+)
+
+
+def scrape_senate_judiciary(session):
+    """Scrape Senate Judiciary Committee press releases.
+
+    The Senate Judiciary Committee publishes mostly non-HC content
+    (immigration, SCOTUS, defense). We pre-filter aggressively on HC
+    keywords in the title, and if the title is ambiguous, we fetch the
+    detail page and check the body text too. Only items that pass the
+    HC pre-filter are returned to the main loop for normal processing.
+
+    Source: judiciary.senate.gov/press/majority + /press/minority
+    """
+    items = []
+    for path in ['/press/majority', '/press/minority']:
+        url = f"https://www.judiciary.senate.gov{path}"
+        try:
+            resp = session.get(url, timeout=20)
+            if resp.status_code != 200:
+                log(f"    S-Judiciary {path}: HTTP {resp.status_code}")
+                continue
+            soup = BeautifulSoup(resp.text, 'lxml')
+            for h3 in soup.find_all('h3'):
+                a_tag = h3.find('a', href=True)
+                if not a_tag:
+                    continue
+                title = a_tag.get_text(strip=True)
+                if not title or len(title) < 15:
+                    continue
+                href = a_tag.get('href', '')
+                if href.startswith('/'):
+                    href = 'https://www.judiciary.senate.gov' + href
+                # Date — look for sibling p.Heading--time (format MM.DD.YYYY)
+                date_str = ""
+                parent = h3.find_parent(['div', 'li', 'article'])
+                if parent:
+                    date_el = parent.find('p', class_=re.compile(r'Heading--time'))
+                    if date_el:
+                        dm = re.search(r'(\d{2})\.(\d{2})\.(\d{4})', date_el.get_text())
+                        if dm:
+                            date_str = f"{dm.group(3)}-{dm.group(1)}-{dm.group(2)}"
+                # Pre-filter: title must mention HC.
+                # If ambiguous, fetch body and check there.
+                title_passes = bool(_CONGRESS_HC_PREFILTER.search(title))
+                detail_text = ""
+                _detail_title = ""
+                if not title_passes:
+                    # Fetch body for second-chance check
+                    try:
+                        detail_text, _, _detail_title = fetch_detail_page(session, href)
+                    except Exception:
+                        pass
+                    if detail_text and _CONGRESS_HC_PREFILTER.search(detail_text):
+                        title_passes = True
+                if not title_passes:
+                    continue
+                # If we didn't fetch yet (title passed on first check), fetch now
+                if not detail_text:
+                    try:
+                        detail_text, _, _detail_title = fetch_detail_page(session, href)
+                    except Exception:
+                        pass
+                if _detail_title:
+                    title = _detail_title
+                desc = ""
+                if detail_text:
+                    cleaned = detail_text
+                    if title in cleaned:
+                        cleaned = cleaned.split(title, 1)[-1].strip()
+                    desc = cleaned[:600].strip()
+                    if len(cleaned) > 600:
+                        last_period = desc.rfind('.')
+                        if last_period > 200:
+                            desc = desc[:last_period + 1]
+                items.append({
+                    'title': title,
+                    'description': desc,
+                    'link': href,
+                    'pub_date': date_str,
+                    '_full_text': detail_text,
+                })
+        except Exception as e:
+            log(f"  WARNING: S-Judiciary {path} scrape - {e}")
+    return items
+
+
+def scrape_house_judiciary(session):
+    """Scrape House Judiciary Committee press releases using Playwright.
+
+    The House Judiciary site is JS-rendered (Drupal with client-side
+    listing). Playwright is required. Same aggressive HC pre-filter
+    as Senate Judiciary.
+
+    Source: judiciary.house.gov/news
+    """
+    if not HAS_PLAYWRIGHT:
+        log("    Skipping H-Judiciary (requires Playwright)")
+        return []
+    items = []
+    try:
+        soup = scrape_page_with_browser("https://judiciary.house.gov/news")
+        # Look for press release anchors — modern Drupal uses /media/press-releases/
+        # or /news/documentsingle type patterns
+        seen = set()
+        for a_tag in soup.find_all('a', href=True):
+            href = a_tag.get('href', '')
+            title = a_tag.get_text(strip=True)
+            if not title or len(title) < 20:
+                continue
+            if href in seen:
+                continue
+            # Only follow links that look like press releases
+            if not re.search(r'judiciary\.house\.gov/.*(press|release|news)', href, re.I):
+                if not href.startswith('/'):
+                    continue
+            seen.add(href)
+            if href.startswith('/'):
+                href = 'https://judiciary.house.gov' + href
+            # Pre-filter on HC keywords in title
+            if not _CONGRESS_HC_PREFILTER.search(title):
+                continue
+            # Extract date from parent if visible
+            parent = a_tag.find_parent(['div', 'li', 'article', 'tr'])
+            date_str = ""
+            if parent:
+                dm = re.search(
+                    r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}|\d{1,2}/\d{1,2}/\d{2,4}',
+                    parent.get_text(' ', strip=True))
+                if dm:
+                    date_str = dm.group()
+            # Fetch detail page
+            detail_text = ""
+            _detail_title = ""
+            try:
+                detail_text, _, _detail_title = fetch_detail_page(session, href)
+            except Exception:
+                pass
+            if _detail_title:
+                title = _detail_title
+            desc = ""
+            if detail_text:
+                cleaned = detail_text
+                if title in cleaned:
+                    cleaned = cleaned.split(title, 1)[-1].strip()
+                desc = cleaned[:600].strip()
+                if len(cleaned) > 600:
+                    last_period = desc.rfind('.')
+                    if last_period > 200:
+                        desc = desc[:last_period + 1]
+            items.append({
+                'title': title,
+                'description': desc,
+                'link': href,
+                'pub_date': date_str,
+                '_full_text': detail_text,
+            })
+    except Exception as e:
+        log(f"  WARNING: H-Judiciary scrape - {e}")
     return items
 
 
@@ -1585,6 +1837,12 @@ def fetch_feed(session, feed):
         return scrape_doj_opa(session)
     if scrape_mode == 'h_oversight':
         return scrape_h_oversight(session)
+    if scrape_mode == 'oig_press':
+        return scrape_oig_press(session)
+    if scrape_mode == 'senate_judiciary':
+        return scrape_senate_judiciary(session)
+    if scrape_mode == 'house_judiciary':
+        return scrape_house_judiciary(session)
     if scrape_mode == 'energy_commerce':
         return scrape_energy_commerce(session)
     if scrape_mode == 'help_committee':
