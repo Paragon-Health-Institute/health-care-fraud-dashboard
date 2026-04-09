@@ -78,6 +78,12 @@ MONITORED_PAGES = [
         "label": "GAO High-Risk List",
         "link_re": r"/products/gao-|/assets/gao-|\.(pdf)$",
     },
+    {
+        "url": "https://oig.hhs.gov/compliance/",
+        "agency": "HHS-OIG",
+        "label": "HHS-OIG Compliance Guidance",
+        "link_re": r"\.(pdf)$|/compliance/|icpg|gcpg",
+    },
 ]
 
 # Pre-filter: only track links whose anchor text mentions fraud/HC concepts
@@ -85,7 +91,8 @@ HC_SIGNAL = re.compile(
     r"fraud|integrity|improper|waste|abuse|medicare|medicaid|"
     r"hospice|dme|crush|fdoc|wiser|radv|strike force|"
     r"health care|healthcare|annual report|strategic plan|"
-    r"high.risk|hot.spot|dual enrollment|skin substitute",
+    r"high.risk|hot.spot|dual enrollment|skin substitute|"
+    r"compliance program|icpg|gcpg",
     re.IGNORECASE,
 )
 

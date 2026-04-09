@@ -14254,29 +14254,6 @@
       "source_type": "official",
       "auto_fetched": false,
       "related_agencies": []
-    },
-    {
-      "id": "hhs-oig-2025-10-20-behavioral-health-ghost-networks",
-      "date": "2025-10-20",
-      "agency": "HHS-OIG",
-      "type": "Report",
-      "title": "HHS-OIG: Many Medicare Advantage and Medicaid Managed Care Plans Have Limited Behavioral Health Provider Networks and Inactive Providers",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2025/many-medicare-advantage-and-medicaid-managed-care-plans-have-limited-behavioral-health-provider-networks-and-inactive-providers/",
-      "link_label": "HHS-OIG Report",
-      "social_posts": [],
-      "tags": [
-        "Medicare Advantage",
-        "Medicaid",
-        "Behavioral Health"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": false,
-      "related_agencies": []
     }
   ]
 }

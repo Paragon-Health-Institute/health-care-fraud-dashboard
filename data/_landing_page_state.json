@@ -11,7 +11,7 @@
         "https://www.cms.gov/files/document/fdoc-fact-sheet-updated.pdf"
       ],
       "count": 7,
-      "last_checked": "2026-04-09T15:19:07.204552"
+      "last_checked": "2026-04-09T16:55:00.523488"
     },
     "https://oig.hhs.gov/fraud/": {
       "links": [
@@ -25,7 +25,7 @@
         "https://oig.hhs.gov/reports/all/?report-type=SAR&hhs-agency=#results"
       ],
       "count": 8,
-      "last_checked": "2026-04-09T15:19:12.341480"
+      "last_checked": "2026-04-09T16:55:05.654787"
     },
     "https://oig.hhs.gov/about-oig/strategic-plan/": {
       "links": [
@@ -33,7 +33,7 @@
         "https://oig.hhs.gov/documents/root/10232/2025-2030%20Strategic%20Plan.pdf"
       ],
       "count": 2,
-      "last_checked": "2026-04-09T15:19:16.870416"
+      "last_checked": "2026-04-09T16:55:10.311513"
     },
     "https://oig.hhs.gov/reports-and-publications/hcfac/": {
       "links": [
@@ -61,13 +61,23 @@
         "https://oig.hhs.gov/reports/all/?report-type=SAR&hhs-agency=#results"
       ],
       "count": 22,
-      "last_checked": "2026-04-09T15:19:23.415312"
+      "last_checked": "2026-04-09T16:55:15.217919"
     },
     "https://www.gao.gov/high-risk-list": {
       "links": [],
       "count": 0,
-      "last_checked": "2026-04-09T15:19:27.157676"
+      "last_checked": "2026-04-09T16:55:19.232315"
+    },
+    "https://oig.hhs.gov/compliance/": {
+      "links": [
+        "https://oig.hhs.gov/compliance/corporate-integrity-agreements/",
+        "https://oig.hhs.gov/compliance/alerts/",
+        "https://oig.hhs.gov/compliance/general-compliance-program-guidance/",
+        "https://oig.hhs.gov/compliance/compliance-resource-material/"
+      ],
+      "count": 4,
+      "last_checked": "2026-04-09T16:55:24.222088"
     }
   },
-  "last_checked": "2026-04-09T15:19:27.157684"
+  "last_checked": "2026-04-09T16:55:24.222098"
 }
