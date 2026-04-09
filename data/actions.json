@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-09T16:49:32.591803",
+    "last_updated": "2026-04-09T16:52:15.380821",
     "version": "1.0",
     "last_scraped": "2026-04-09T08:51:05.838375"
   },
@@ -14233,6 +14233,50 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "hhs-oig-2026-02-03-ma-icpg-compliance-guidance",
+      "date": "2026-02-03",
+      "agency": "HHS-OIG",
+      "type": "Report",
+      "title": "HHS-OIG Releases Medicare Advantage Industry Segment-Specific Compliance Program Guidance (ICPG) — First MA-Specific Guidance Since 1999",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/compliance/ma-icpg/",
+      "link_label": "HHS-OIG Compliance Guidance",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2025-10-20-behavioral-health-ghost-networks",
+      "date": "2025-10-20",
+      "agency": "HHS-OIG",
+      "type": "Report",
+      "title": "HHS-OIG: Many Medicare Advantage and Medicaid Managed Care Plans Have Limited Behavioral Health Provider Networks and Inactive Providers",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2025/many-medicare-advantage-and-medicaid-managed-care-plans-have-limited-behavioral-health-provider-networks-and-inactive-providers/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicaid",
+        "Behavioral Health"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": []
     }
   ]
 }
