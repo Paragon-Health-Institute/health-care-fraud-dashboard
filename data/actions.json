@@ -12385,17 +12385,16 @@
       "id": "hhs-oig-2026-03-09-2348143186",
       "date": "2026-03-09",
       "agency": "HHS-OIG",
-      "type": "Criminal Enforcement",
+      "type": "Audit",
       "title": "Emergency Department Procedure Codes Used on Medicare Claims for Services Billed With Nonemergency Department Sites of Service Resulted in Over $15 Million in Improper and Potentially Improper Payments",
-      "amount": "$15 Million",
-      "amount_numeric": 15000000.0,
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/emergency-department-procedure-codes-used-on-medicare-claims-for-services-billed-with-nonemergency-department-sites-of-service-resulted-in-over-15-million-in-improper-and-potentially-improper-payments/",
       "link_label": "HHS-OIG Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare",
-        "Medicaid"
+        "Medicare"
       ],
       "entities": [],
       "state": null,

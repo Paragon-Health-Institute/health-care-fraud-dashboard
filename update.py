@@ -2145,6 +2145,20 @@ def main():
                     if actual_agency != 'HHS-OIG':
                         related_agencies.append('HHS-OIG')
 
+                # Federal Enforcement tab = DOJ prosecutions ONLY.
+                # If an item is classified as Criminal Enforcement or
+                # Civil Action but the final agency isn't DOJ, it's a
+                # classifier mistake (e.g. an OIG audit whose body text
+                # contained "charged" in a billing context). Reclassify
+                # as Audit so it goes to the Oversight tab instead.
+                if is_enforcement and actual_agency != 'DOJ':
+                    action_type = 'Audit'
+                    is_enforcement = False
+                    if globals().get('ENFORCEMENT_ONLY'):
+                        continue  # skip entirely in enforcement mode
+                    if globals().get('OVERSIGHT_ONLY'):
+                        pass  # will be routed to oversight queue
+
                 id_prefix = 'media' if is_media else re.sub(r'\W', '-', actual_agency.lower())
                 link_label = f"{feed['name']} Report" if is_media else f"{actual_agency} Press Release"
 
