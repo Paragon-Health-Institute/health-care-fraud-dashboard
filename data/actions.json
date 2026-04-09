@@ -13418,30 +13418,6 @@
       "related_agencies": []
     },
     {
-      "id": "hhs-oig-2026-03-16-2415354795",
-      "date": "2026-03-16",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "Nursing Homes’ Inappropriate Use of Antipsychotic Drugs Poses a Risk to Residents",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2026/nursing-homes-inappropriate-use-of-antipsychotic-drugs-poses-a-risk-to-residents/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicaid",
-        "Pharmacy",
-        "Nursing Home"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
       "id": "hhs-oig-2026-03-12-1343196656",
       "date": "2026-03-12",
       "agency": "HHS-OIG",
