@@ -1305,30 +1305,76 @@ def cmd_audit_oversight() -> int:
     actions = load_json(DATA_FILE, {"metadata": {"version": "1.0", "last_updated": ""},
                                      "actions": []})
 
-    # Sources where the listing page mixes fraud-relevant and non-fraud
-    # content. Items from these agencies NEVER auto-promote on the regex
-    # pass — they always go to AI review for nuance. This prevents CMS
-    # rate announcements, GAO defense reports, and congressional hearing
-    # roundups from landing on the Oversight tab just because the title
-    # mentions "Medicare" or "Medicaid".
-    ALWAYS_AI_REVIEW_AGENCIES = {'CMS', 'GAO', 'Congress', 'MedPAC', 'MACPAC'}
+    # Mixed-content sources (CMS, GAO, Congress, MedPAC, MACPAC) publish
+    # both fraud-relevant and non-fraud content. For these we use a
+    # TWO-TIER gate:
+    #   Tier 1: Strong fraud signal in title → auto-promote (no API call)
+    #   Tier 2: HC program name but no fraud signal → AI review
+    #   Neither → reject outright
+    #
+    # This makes the pipeline self-sustaining: ~80% of items get decided
+    # by regex alone (auto-promote or reject), and only the genuinely
+    # ambiguous ~20% go to Claude for a binary yes/no.
+    MIXED_CONTENT_AGENCIES = {'CMS', 'GAO', 'Congress', 'MedPAC', 'MACPAC'}
+    STRONG_FRAUD_SIGNAL = re.compile(
+        r"\b("
+        r"fraud|kickback|false\s+claim|qui\s+tam|anti-?kickback|"
+        r"improper\s+payment|overpayment|program\s+integrity|"
+        r"anti-?fraud|fraud.{0,10}(waste|abuse)|waste.{0,10}abuse|"
+        r"moratorium|suspension|corrective\s+action|deferral\s+of\s+funds?|"
+        r"enforcement|takedown|strike\s+force|"
+        r"whistleblower|criminal\s+referral|"
+        r"upcod|unbundl|billing\s+scheme|phantom\s+billing|"
+        r"pill\s+mill|drug\s+diversion|"
+        r"excluded?\s+provider|revok|debarment"
+        r")\b",
+        re.IGNORECASE,
+    )
+    # Minimum HC context for borderline items that go to AI review —
+    # items without even a basic HC-program mention get rejected outright
+    # since AI review would reject them anyway.
+    HC_PROGRAM_MENTION = re.compile(
+        r"\b(medicare|medicaid|medi-?cal|chip|tricare|"
+        r"affordable\s+care|health\s+care|healthcare|"
+        r"hospice|home\s+health|nursing\s+home|dme|"
+        r"prescription|pharmacy|opioid)\b",
+        re.IGNORECASE,
+    )
 
     auto_promoted = []
     still_pending = []
     for item in pending:
         agency = item.get("agency", "")
-        # Force AI review for mixed-content sources
-        if agency in ALWAYS_AI_REVIEW_AGENCIES:
-            still_pending.append(item)
-            item["flag_reason"] = f"{agency} items always go to AI review (mixed-content source)"
-        # Use the stricter oversight-specific gate for remaining sources
-        # (HHS-OIG, Treasury, etc.)
+        title = item.get("title", "") or ""
+
+        if agency in MIXED_CONTENT_AGENCIES:
+            # Tier 1: strong fraud signal → auto-promote
+            if STRONG_FRAUD_SIGNAL.search(title):
+                auto_promoted.append(item)
+                item["audit_decision"] = "auto_approved"
+            # Tier 2: HC program mention but no fraud signal → AI review
+            elif HC_PROGRAM_MENTION.search(title):
+                still_pending.append(item)
+                item["flag_reason"] = "HC program mentioned but no fraud signal — needs AI review"
+            # Neither → reject outright
+            else:
+                still_pending.append(item)
+                item["flag_reason"] = "no HC fraud signal and no HC program mention — auto-reject"
+                item["audit_decision"] = "auto_rejected"
+        # Trusted fraud-specific sources (HHS-OIG, Treasury, etc.)
         elif is_oversight_hc_fraud(item):
             auto_promoted.append(item)
             item["audit_decision"] = "auto_approved"
         else:
             still_pending.append(item)
             item["flag_reason"] = "title lacks HC fraud / program integrity signal"
+
+    # Handle auto-rejected items (no HC fraud signal AND no HC program name)
+    auto_rejected = [a for a in still_pending if a.get("audit_decision") == "auto_rejected"]
+    for item in auto_rejected:
+        link = item.get("link", "")
+        if link and link not in review["rejected_links"]:
+            review["rejected_links"].append(link)
 
     if auto_promoted:
         for item in auto_promoted:
@@ -1338,12 +1384,16 @@ def cmd_audit_oversight() -> int:
         actions["metadata"]["last_updated"] = datetime.now().isoformat()
         save_json(DATA_FILE, actions)
 
-    promoted_ids = {a["id"] for a in auto_promoted}
-    review["items"] = [a for a in review["items"] if a.get("id") not in promoted_ids]
+    # Remove promoted + auto-rejected from the review queue.
+    # Only items flagged for AI review (Tier 2) remain.
+    handled_ids = {a["id"] for a in auto_promoted + auto_rejected}
+    review["items"] = [a for a in review["items"] if a.get("id") not in handled_ids]
     save_json(OVERSIGHT_REVIEW_FILE, review)
 
+    ai_pending = len(still_pending) - len(auto_rejected)
     print(f"audit-oversight: {len(auto_promoted)} auto-promoted, "
-          f"{len(still_pending)} flagged for AI/human review")
+          f"{len(auto_rejected)} auto-rejected, "
+          f"{ai_pending} flagged for AI review")
 
     _write_oversight_audit_summary(auto_promoted, still_pending)
     return 0
