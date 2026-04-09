@@ -1361,6 +1361,7 @@ def scrape_doj_opa(session):
                     '_full_text': detail_text,
                     '_trust_source': True,  # bypass HC keyword filter
                     '_doj_topics': topics,  # store for provenance
+                    '_related_agencies': ['HHS-OIG'],  # OIG investigates virtually all HC fraud cases
                 })
                 kept += 1
             log(f"    DOJ-OPA: {kept} of {len(candidates)} candidates tagged 'Health Care Fraud'")
@@ -1471,6 +1472,7 @@ def scrape_doj_usao(session):
                     '_full_text': detail_text,
                     '_trust_source': True,
                     '_doj_topics': topics,
+                    '_related_agencies': ['HHS-OIG'],
                 })
                 kept += 1
             log(f"    DOJ-USAO: {kept} of {len(candidates)} candidates tagged 'Health Care Fraud'")
@@ -2144,6 +2146,14 @@ def main():
                     # source through this pipeline.
                     if actual_agency != 'HHS-OIG':
                         related_agencies.append('HHS-OIG')
+
+                # Merge in related_agencies from the scraper (e.g. DOJ-OPA
+                # and DOJ-USAO set _related_agencies: ['HHS-OIG'] on items
+                # that passed the HC Fraud topic gate, since OIG investigates
+                # virtually all federal healthcare fraud cases).
+                for ra in item.get('_related_agencies', []):
+                    if ra not in related_agencies:
+                        related_agencies.append(ra)
 
                 # Federal Enforcement tab = DOJ prosecutions ONLY.
                 # If an item is classified as Criminal Enforcement or
