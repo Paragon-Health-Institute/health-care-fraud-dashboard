@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-09T16:52:15.380821",
+    "last_updated": "2026-04-10T09:43:36.068235",
     "version": "1.0",
     "last_scraped": "2026-04-10T08:53:10.048118"
   },
@@ -14229,6 +14229,48 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
+      "related_agencies": []
+    },
+    {
+      "id": "congress-2026-04-09-1170495907",
+      "date": "2026-04-09",
+      "agency": "Congress",
+      "type": "Administrative Action",
+      "title": "Working Families Tax Cuts Fight Medicaid Fraud",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "http://www.finance.senate.gov/chairmans-news/working-families-tax-cuts-fight-medicaid-fraud",
+      "link_label": "Congress Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "macpac-2026-04-09-3786719833",
+      "date": "2026-04-09",
+      "agency": "MACPAC",
+      "type": "Report",
+      "title": "Introduction to Medicaid Program Integrity",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.macpac.gov/publication/introduction-to-medicaid-program-integrity/",
+      "link_label": "MACPAC Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
       "related_agencies": []
     }
   ]
