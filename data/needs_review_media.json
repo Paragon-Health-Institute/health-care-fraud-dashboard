@@ -1,4 +1,40 @@
 {
-  "items": [],
-  "rejected_links": []
+  "items": [
+    {
+      "id": "media-2026-04-10-2808233283",
+      "date": "2026-04-10",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "Trump’s DOJ Will Move Forward With Colony Ridge Settlement Despite Concerns From Judge",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.propublica.org/article/colony-ridge-settlement-court-hearing-doj",
+      "link_label": "ProPublica Report",
+      "social_posts": [],
+      "tags": [],
+      "state": "",
+      "source_type": "news",
+      "auto_fetched": true,
+      "entities": [],
+      "flagged_at": "2026-04-11T09:30:11.180402",
+      "flag_reason": "title lacks healthcare keyword",
+      "ai_decision": "not_journalism",
+      "ai_confidence": 85,
+      "ai_reason": "This article is primarily about a DOJ settlement action and judicial proceeding, making it an agency-led story that belongs on the Oversight tab rather than the Media Investigations tab for healthcare",
+      "ai_model": "claude-haiku-4-5-20251001"
+    }
+  ],
+  "rejected_links": [
+    "https://www.propublica.org/article/impersonating-propublica-reporter",
+    "https://www.propublica.org/article/tennessee-school-threats-law-changed",
+    "https://kffhealthnews.org/morning-briefing/friday-april-10-2026/",
+    "https://kffhealthnews.org/morning-breakout/first-edition-friday-april-10-2026/",
+    "https://www.propublica.org/atpropublica/propublica-and-the-texas-tribune-launch-second-year-of-texas-investigative-initiativ",
+    "https://www.propublica.org/article/trump-doj-colony-ridge-texas-settlement-victims",
+    "https://kffhealthnews.org/morning-breakout/feds-investigate-los-angeles-schools-over-gender-identity-parents-rights/",
+    "https://kffhealthnews.org/morning-breakout/first-edition-thursday-april-9-2026/",
+    "https://kffhealthnews.org/morning-briefing/thursday-april-9-2026/",
+    "https://www.statnews.com/2026/04/08/23andme-genetic-changes-weight-loss-glp1/"
+  ]
 }
