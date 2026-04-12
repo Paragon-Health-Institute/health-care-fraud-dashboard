@@ -2262,10 +2262,12 @@ def main():
                 if not re.match(r'^\d{4}-\d{2}-\d{2}$', date_str):
                     date_str = parse_date(date_str)
 
-                # Enforce Jan 2025 floor and last-scraped cutoff
+                # Enforce Jan 2025 floor only. We do NOT skip items
+                # older than last_scraped_date because agencies sometimes
+                # backdate press releases or publish items days/weeks
+                # after the issue date. Dedup (link + title) prevents
+                # duplicates without losing backdated items.
                 if date_str < '2025-01-01':
-                    continue
-                if date_str < last_scraped_date:
                     continue
 
                 # Federal Enforcement tab rule: items classified as Criminal
