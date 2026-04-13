@@ -1,4 +1,9 @@
 {
   "items": [],
-  "rejected_links": []
+  "rejected_links": [
+    "https://www.propublica.org/article/trump-midterm-elections-takeover",
+    "https://kffhealthnews.org/morning-breakout/first-edition-monday-april-13-2026/",
+    "https://kffhealthnews.org/morning-briefing/friday-april-10-2026/",
+    "https://kffhealthnews.org/morning-breakout/first-edition-friday-april-10-2026/"
+  ]
 }
