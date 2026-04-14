@@ -1,4 +1,33 @@
 {
-  "items": [],
-  "rejected_links": []
+  "items": [
+    {
+      "id": "media-2026-04-14-2499797644",
+      "date": "2026-04-14",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "Minnesota officials push law change to make it easier to withhold payments to providers facing fraud claims",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cbsnews.com/minnesota/news/minnesota-house-fraud-payment-prevention-providers/",
+      "link_label": "CBS News Report",
+      "social_posts": [],
+      "tags": [],
+      "state": "MN",
+      "source_type": "news",
+      "auto_fetched": true,
+      "entities": [],
+      "flagged_at": "2026-04-14T10:03:29.298424",
+      "flag_reason": "title lacks healthcare keyword",
+      "ai_decision": "not_journalism",
+      "ai_confidence": 78,
+      "ai_reason": "This is agency/policy action coverage focused on legislative process rather than investigation or exposure of a specific healthcare fraud scheme.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    }
+  ],
+  "rejected_links": [
+    "https://www.propublica.org/article/trump-midterm-elections-takeover",
+    "https://kffhealthnews.org/morning-briefing/monday-april-13-2026/",
+    "https://kffhealthnews.org/morning-breakout/first-edition-monday-april-13-2026/"
+  ]
 }

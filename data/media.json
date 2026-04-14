@@ -1,9 +1,47 @@
 {
   "metadata": {
-    "last_updated": "2026-04-03T11:08:41.322889",
+    "last_updated": "2026-04-14T10:03:29.394092",
     "version": "1.0"
   },
   "stories": [
+    {
+      "id": "media-2026-04-13-362595843",
+      "date": "2026-04-13",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "With Funds Frozen, Minnesota Sweeps Medicaid Providers For Signs Of Fraud",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://kffhealthnews.org/morning-breakout/with-funds-frozen-minnesota-sweeps-medicaid-providers-for-signs-of-fraud/",
+      "link_label": "KFF Health News Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "state": "MN",
+      "source_type": "news",
+      "auto_fetched": true,
+      "entities": []
+    },
+    {
+      "id": "media-2026-04-13-1814572202",
+      "date": "2026-04-13",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "How To Make a High-Deductible Health Plan Work for You",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://kffhealthnews.org/news/article/health-care-helpline-npr-hsa-savings-account-high-deductible-plan-tips/",
+      "link_label": "KFF Health News Report",
+      "social_posts": [],
+      "tags": [],
+      "state": "",
+      "source_type": "news",
+      "auto_fetched": true,
+      "entities": []
+    },
     {
       "id": "cbs-2026-04-02-la-hospice-investigation",
       "date": "2026-04-02",
