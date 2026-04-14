@@ -133,27 +133,6 @@
       "entities": []
     },
     {
-      "id": "media-2025-09-25-propublica-npi-loophole-fraud",
-      "date": "2025-09-25",
-      "agency": "Media",
-      "type": "Investigative Report",
-      "title": "We Showed How Easy It Is to Commit Health Care Fraud. Now Senators Want to Close the Loophole.",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.propublica.org/article/senators-bipartisan-bill-close-loophole-health-plans",
-      "link_label": "ProPublica Investigation",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicare Advantage"
-      ],
-      "state": "TX",
-      "source_type": "news",
-      "auto_fetched": false,
-      "entities": []
-    },
-    {
       "id": "media-2025-10-15-kare11-mn-housing-hustle-series",
       "date": "2025-10-15",
       "agency": "Media",
