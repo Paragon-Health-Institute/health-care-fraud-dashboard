@@ -256,33 +256,6 @@
       "ai_model": "claude-haiku-4-5-20251001"
     },
     {
-      "id": "hhs-oig-2025-12-17-2126061275",
-      "date": "2025-12-17",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "Essence Healthcare, Inc., Did Not Comply With Federal Requirement for Reporting Direct and Indirect Remunerations for Contract Years 2017 Through 2020",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2026/essence-healthcare-inc-did-not-comply-with-federal-requirement-for-reporting-direct-and-indirect-remunerations-for-contract-years-2017-through-2020/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicaid"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal",
-      "ai_decision": "healthcare_fraud_oversight",
-      "ai_confidence": 85,
-      "ai_reason": "HHS-OIG audit of Medicare Advantage plan's compliance with federal remuneration-reporting requirements, which is a program-integrity oversight action within scope.",
-      "ai_model": "claude-haiku-4-5-20251001"
-    },
-    {
       "id": "hhs-oig-2025-12-12-2979897275",
       "date": "2025-12-12",
       "agency": "HHS-OIG",
@@ -605,32 +578,6 @@
       "ai_decision": "not_oversight",
       "ai_confidence": 78,
       "ai_reason": "This is an HHS-OIG audit about nursing facility compliance with background check requirements, which relates to facility quality/safety oversight rather than healthcare fraud or program-integrity fina",
-      "ai_model": "claude-haiku-4-5-20251001"
-    },
-    {
-      "id": "macpac-2026-04-09-3856359816",
-      "date": "2026-04-09",
-      "agency": "MACPAC",
-      "type": "Report",
-      "title": "State and Federal Tools for Ensuring Accountability of Medicaid Managed Care Plans: Draft Chapter",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.macpac.gov/publication/state-and-federal-tools-for-ensuring-accountability-of-medicaid-managed-care-plans-draft-chapter/",
-      "link_label": "MACPAC Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicaid"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
-      "ai_decision": "healthcare_fraud_oversight",
-      "ai_confidence": 78,
-      "ai_reason": "MACPAC report on state and federal accountability tools for Medicaid managed care plans directly addresses program integrity oversight mechanisms, though the title does not explicitly mention fraud.",
       "ai_model": "claude-haiku-4-5-20251001"
     },
     {

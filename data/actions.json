@@ -14936,6 +14936,49 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2025-12-17-2126061275",
+      "date": "2025-12-17",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Essence Healthcare, Inc., Did Not Comply With Federal Requirement for Reporting Direct and Indirect Remunerations for Contract Years 2017 Through 2020",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/essence-healthcare-inc-did-not-comply-with-federal-requirement-for-reporting-direct-and-indirect-remunerations-for-contract-years-2017-through-2020/",
+      "link_label": "HHS-OIG Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "macpac-2026-04-09-3856359816",
+      "date": "2026-04-09",
+      "agency": "MACPAC",
+      "type": "Report",
+      "title": "State and Federal Tools for Ensuring Accountability of Medicaid Managed Care Plans: Draft Chapter",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.macpac.gov/publication/state-and-federal-tools-for-ensuring-accountability-of-medicaid-managed-care-plans-draft-chapter/",
+      "link_label": "MACPAC Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
