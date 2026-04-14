@@ -1,59 +1,9 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-04-14T09:04:27.442363"
+    "last_scraped": "2026-04-14T13:36:30.026371"
   },
   "items": [
-    {
-      "id": "cms-2026-04-09-1769082188",
-      "date": "2026-04-09",
-      "agency": "CMS",
-      "type": "Administrative Action",
-      "title": "CMS Issues Guidance to Implement New Limits on Federal Medicaid and CHIP Funding for Certain Noncitizens",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.cms.gov/newsroom/press-releases/cms-issues-guidance-implement-new-limits-federal-medicaid-chip-funding-certain-noncitizens",
-      "link_label": "CMS Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare Advantage",
-        "Medicare",
-        "Medicaid",
-        "Hospice"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
-    },
-    {
-      "id": "cms-2026-04-09-160222268",
-      "date": "2026-04-09",
-      "agency": "CMS",
-      "type": "Rule/Regulation",
-      "title": "2027 Medicare Advantage and Part D Rate Announcement",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement",
-      "link_label": "CMS Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare Advantage",
-        "Medicare",
-        "Medicaid",
-        "Hospice"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
-    },
     {
       "id": "cms-2026-04-09-3422526735",
       "date": "2026-04-09",
@@ -77,29 +27,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
-    },
-    {
-      "id": "macpac-2026-04-09-2505491462",
-      "date": "2026-04-09",
-      "agency": "MACPAC",
-      "type": "Report",
-      "title": "Implementing Community Engagement Requirements in Medicaid",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.macpac.gov/publication/implementing-community-engagement-requirements-in-medicaid/",
-      "link_label": "MACPAC Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicaid"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This is a payment system rate-setting rule with no indication of fraud, improper payment, or program-integrity focus; it is a routine prospective payment system update outside the scope of healthcare-",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "macpac-2026-04-09-2236929372",
@@ -122,7 +54,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 75,
+      "ai_reason": "This MACPAC report examines state Medicaid agency roles in PACE program administration and policy options, not healthcare fraud oversight, audits, improper payments, or program-integrity findings.",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "cms-2026-04-14-2093339046",
@@ -146,33 +82,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
-    },
-    {
-      "id": "cms-2026-04-02-589180614",
-      "date": "2026-04-02",
-      "agency": "CMS",
-      "type": "Rule/Regulation",
-      "title": "Fiscal Year (FY) 2027 Hospice Wage Index and Payment Rate Update and Hospice Quality Reporting Program Requirements Proposed Rule (CMS-1851-P)",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.cms.gov/newsroom/fact-sheets/fiscal-year-fy-2027-hospice-wage-index-payment-rate-update-hospice-quality-reporting-program",
-      "link_label": "CMS Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicaid",
-        "Hospice",
-        "Telehealth",
-        "Hospital"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 72,
+      "ai_reason": "This is a CMS payment policy announcement about MA and Part D rates and sustainability; while it mentions 'accountability,' the title focuses on payment policy mechanics rather than healthcare fraud o",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "cms-2026-04-02-2772573053",
@@ -197,56 +111,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
-    },
-    {
-      "id": "cms-2026-04-14-3530477629",
-      "date": "2026-04-14",
-      "agency": "CMS",
-      "type": "Rule/Regulation",
-      "title": "Medicare Beneficiaries to See Simpler and More Flexible Plan Choices, Better Drug Coverage, Higher Quality and Lower Costs in 2027",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.cms.gov/newsroom/press-releases/medicare-beneficiaries-see-simpler-more-flexible-plan-choices-better-drug-coverage-higher-quality",
-      "link_label": "CMS Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare Advantage",
-        "Medicare",
-        "Medicaid",
-        "Behavioral Health"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
-    },
-    {
-      "id": "cms-2026-04-14-2161418688",
-      "date": "2026-04-14",
-      "agency": "CMS",
-      "type": "Administrative Action",
-      "title": "HHS and CMS Announce Healthcare Advisory Committee Members to Improve Patient Care and Modernize the U.S. Healthcare System",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.cms.gov/newsroom/press-releases/hhs-cms-announce-healthcare-advisory-committee-members-improve-patient-care-modernize-u-s-healthcare",
-      "link_label": "CMS Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare Advantage",
-        "Medicare",
-        "Medicaid"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 72,
+      "ai_reason": "This is a general CMS rate-setting and contract rule for Medicare Advantage and Part D plans, not specifically focused on healthcare fraud, program integrity, or oversight of fraud activities.",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "cms-2026-05-26-1979894230",
@@ -271,54 +140,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
-    },
-    {
-      "id": "cms-2025-05-12-2340770195",
-      "date": "2025-05-12",
-      "agency": "CMS",
-      "type": "Administrative Action",
-      "title": "CMS Announces Manufacturer Participation in Third Cycle of Medicare Drug Price Negotiation",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.cms.gov/newsroom/fact-sheets/cms-announces-manufacturer-participation-third-cycle-medicare-drug-price-negotiation",
-      "link_label": "CMS Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicaid",
-        "Pharmacy"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
-    },
-    {
-      "id": "cms-2026-04-14-4076448500",
-      "date": "2026-04-14",
-      "agency": "CMS",
-      "type": "Administrative Action",
-      "title": "Medicare.gov Enhanced Log In",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.cms.gov/newsroom/fact-sheets/medicare-gov-enhanced-log",
-      "link_label": "CMS Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicaid"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This is a CMS administrative rule on claims attachments and electronic signatures standards—operational/compliance infrastructure, not a healthcare fraud or program integrity oversight action.",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "cms-2026-03-13-862669547",
@@ -341,27 +167,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
-    },
-    {
-      "id": "congress-2026-04-09-1599802248",
-      "date": "2026-04-09",
-      "agency": "Congress",
-      "type": "Congressional Hearing",
-      "title": "NEXT WEEK: Senate HELP Committee to Hold Hearing On Making Prescription Drugs More Affordable for Families, Using Free Market Approach | The U.S. Senate Committee on Health, Education, Labor & Pensions",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.help.senate.gov/rep/newsroom/press/next-week-senate-help-committee-to-hold-hearing-on-making-prescription-drugs-more-affordable-for-families-using-free-market-approach",
-      "link_label": "Congress Press Release",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 72,
+      "ai_reason": "This is a broad CMS regulatory proposal on healthcare costs and consumer choice; without specific mention of fraud, improper payments, or program integrity, it appears to be general healthcare policy ",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "hhs-oig-2026-03-16-2415354795",
@@ -386,67 +196,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
-    },
-    {
-      "id": "hhs-oig-2026-02-24-1526217069",
-      "date": "2026-02-24",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "Centers for Disease Control and Prevention Fiscal Year 2025 Detailed Accounting Submission and Fiscal Year 2027 Budget Formulation Compliance Report for National Drug Control Activities, and the Accompanying Required Assertions",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2026/centers-for-disease-control-and-prevention-fiscal-year-2025-detailed-accounting-submission-and-fiscal-year-2027-budget-formulation-compliance-report-for-national-drug-control-activities-and-the-accompanying-required-assertions/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
-    },
-    {
-      "id": "hhs-oig-2026-02-24-4148855139",
-      "date": "2026-02-24",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "Food and Drug Administration Fiscal Year 2025 Detailed Accounting Submission and Fiscal Year 2027 Budget Formulation Compliance Report for National Drug Control Activities, and the Accompanying Required Assertions",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2026/food-and-drug-administration-fiscal-year-2025-detailed-accounting-submission-and-fiscal-year-2027-budget-formulation-compliance-report-for-national-drug-control-activities-and-the-accompanying-required-assertions/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
-    },
-    {
-      "id": "hhs-oig-2026-02-24-916146368",
-      "date": "2026-02-24",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "National Institutes of Health Fiscal Year 2025 Detailed Accounting Submission and Fiscal Year 2027 Budget Formulation Compliance Report for National Drug Control Activities, and the Accompanying Required Assertions",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2026/national-institutes-of-health-fiscal-year-2025-detailed-accounting-submission-and-fiscal-year-2027-budget-formulation-compliance-report-for-national-drug-control-activities-and-the-accompanying-required-assertions/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 82,
+      "ai_reason": "This HHS-OIG audit concerns patient safety and clinical practice standards in nursing homes, not healthcare fraud, improper payments, or program integrity violations.",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "hhs-oig-2026-02-11-2094837257",
@@ -469,7 +223,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 82,
+      "ai_reason": "This is a technical pricing comparison report focused on Part B drug pricing data, not healthcare fraud detection, program integrity violations, or oversight findings related to fraud.",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "hhs-oig-2025-12-17-3750420795",
@@ -491,7 +249,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 72,
+      "ai_reason": "This HHS-OIG audit examines Provider Relief Fund compliance and expending requirements at assisted living facilities, which is a program-integrity/financial-stewardship issue rather than healthcare fr",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "hhs-oig-2025-12-17-2126061275",
@@ -514,7 +276,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "healthcare_fraud_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "HHS-OIG audit of Medicare Advantage plan's compliance with federal remuneration-reporting requirements, which is a program-integrity oversight action within scope.",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "hhs-oig-2025-12-12-2979897275",
@@ -537,7 +303,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "healthcare_fraud_oversight",
+      "ai_confidence": 82,
+      "ai_reason": "HHS-OIG audit examining Medicare Part B payment methodology and coverage policies for biosimilar drugs, which relates to program integrity and potential improper payment prevention.",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "hhs-oig-2025-12-12-2753675806",
@@ -560,7 +330,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 82,
+      "ai_reason": "This HHS-OIG audit examines drug access trends for dual-eligible enrollees under Part D, which is a beneficiary access and coverage issue, not a healthcare fraud or program-integrity findings audit.",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "hhs-oig-2025-12-11-210978774",
@@ -584,70 +358,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
-    },
-    {
-      "id": "hhs-oig-2025-12-10-1074400336",
-      "date": "2025-12-10",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "The National Institutes of Health Generally Implemented the Safe Workplace Federal Reporting Requirement, but Opportunities Exist To Improve the Reporting and Monitoring Processes",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2025/the-national-institutes-of-health-generally-implemented-the-safe-workplace-federal-reporting-requirement-but-opportunities-exist-to-improve-the-reporting-and-monitoring-processes/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
-    },
-    {
-      "id": "hhs-oig-2025-12-09-318116228",
-      "date": "2025-12-09",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "The Indian Health Service Did Not Ensure That Commissioned Corps Officers’ Background Investigations Complied With Federal Requirements",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2025/the-indian-health-service-did-not-ensure-that-commissioned-corps-officers-background-investigations-complied-with-federal-requirements/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
-    },
-    {
-      "id": "hhs-oig-2025-12-09-2884687292",
-      "date": "2025-12-09",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "Arkansas Could Better Ensure That Intermediate Care Facilities for Individuals With Intellectual Disabilities Comply With Federal Requirements for Life Safety, Emergency Preparedness, and Infection Control",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2025/arkansas-could-better-ensure-that-intermediate-care-facilities-for-individuals-with-intellectual-disabilities-comply-with-federal-requirements-for-life-safety-emergency-preparedness-and-infection-control/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicaid"
-      ],
-      "entities": [],
-      "state": "AR",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This HHS-OIG audit addresses nursing home background check compliance, which is a patient safety and regulatory oversight issue, not a healthcare fraud or program-integrity investigation.",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "hhs-oig-2025-12-02-2879936244",
@@ -671,7 +386,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "healthcare_fraud_oversight",
+      "ai_confidence": 82,
+      "ai_reason": "HHS-OIG audit examining provider compliance with federal and state requirements at healthcare facilities, which is program-integrity oversight in scope.",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "hhs-oig-2025-11-25-2792753072",
@@ -691,7 +410,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "healthcare_fraud_oversight",
+      "ai_confidence": 82,
+      "ai_reason": "HHS-OIG audit examining provider compliance with federal requirements for expended funds, which falls within program-integrity oversight scope.",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "hhs-oig-2025-11-13-1200453971",
@@ -714,55 +437,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
-    },
-    {
-      "id": "hhs-oig-2025-11-05-3143992849",
-      "date": "2025-11-05",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "Texas' Ambulance Services Supplemental Payment Program Did Not Comply With Federal and State Reimbursement Requirements",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2025/texas-ambulance-services-supplemental-payment-program-did-not-comply-with-federal-and-state-reimbursement-requirements/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicaid",
-        "Ambulance"
-      ],
-      "entities": [],
-      "state": "TX",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
-    },
-    {
-      "id": "hhs-oig-2025-10-29-3916606227",
-      "date": "2025-10-29",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "South Carolina Did Not Comply With Federal Waiver and State Requirements at 19 of 20 Adult Day Care Facilities",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2025/south-carolina-did-not-comply-with-federal-waiver-and-state-requirements-at-19-of-20-adult-day-care-facilities/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicaid",
-        "Adult Day Care"
-      ],
-      "entities": [],
-      "state": "SC",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 78,
+      "ai_reason": "This HHS-OIG report concerns pricing data comparison for Medicare Part B drugs, which is program administration/pricing transparency rather than fraud detection, oversight of improper payments, or pro",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "hhs-oig-2025-10-24-4195171670",
@@ -787,7 +466,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 72,
+      "ai_reason": "This HHS-OIG audit examines nursing home quality/compliance outcomes under CMS's Special Focus Facility Program, which is a program-integrity/enforcement mechanism but focuses on quality deficiencies ",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "hhs-oig-2025-10-21-1863578982",
@@ -810,7 +493,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This HHS-OIG audit concerns compliance with life safety, emergency preparedness, and infection control standards for intermediate care facilities, which is regulatory oversight of facility operations,",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "hhs-oig-2025-10-10-950280723",
@@ -833,7 +520,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 78,
+      "ai_reason": "This is a cybersecurity/IT penetration test report on Medicaid Management Information Systems, not a healthcare fraud or program-integrity audit.",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "hhs-oig-2025-10-09-1851240255",
@@ -857,69 +548,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
-    },
-    {
-      "id": "hhs-oig-2025-09-29-1146369715",
-      "date": "2025-09-29",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "California Met Some Requirements of the Projects for Assistance in Transition From Homelessness Program but Did Not Accurately Report Program Activities for Selected Providers",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2025/california-met-some-requirements-of-the-projects-for-assistance-in-transition-from-homelessness-program-but-did-not-accurately-report-program-activities-for-selected-providers/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": "CA",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
-    },
-    {
-      "id": "hhs-oig-2025-09-26-3538221348",
-      "date": "2025-09-26",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "HRSA Rural Communities Opioid Response Program Award Recipients Generally Met All Core Activities and Benchmarks",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2025/hrsa-rural-communities-opioid-response-program-award-recipients-generally-met-all-core-activities-and-benchmarks/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [
-        "Opioids"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
-    },
-    {
-      "id": "hhs-oig-2025-09-26-4119498099",
-      "date": "2025-09-26",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "West Virginia Did Not Comply With Intake, Screening, Assessment, and Investigation Requirements for Responding to Reports of Child Abuse and Neglect",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2025/west-virginia-did-not-comply-with-intake-screening-assessment-and-investigation-requirements-for-responding-to-reports-of-child-abuse-and-neglect/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": "VA",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 75,
+      "ai_reason": "This is an HHS-OIG audit about compliance with health/safety/administrative requirements at residential settings, not about healthcare fraud or program-integrity billing/payment issues.",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "hhs-oig-2025-09-19-1262283182",
@@ -941,29 +574,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
-    },
-    {
-      "id": "hhs-oig-2025-09-11-3305044007",
-      "date": "2025-09-11",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "The Patient Safety Organization Program: Key Barriers Impeding Nationwide Progress Toward Reducing Patient Harm in Hospitals",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2025/the-patient-safety-organization-program-key-barriers-impeding-nationwide-progress-toward-reducing-patient-harm-in-hospitals/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [
-        "Nursing Home"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "healthcare_fraud_oversight",
+      "ai_confidence": 82,
+      "ai_reason": "HHS-OIG audit examining hospital compliance with federal program requirements (Provider Relief Fund balance billing rules), which falls within program-integrity oversight of healthcare funds.",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "hhs-oig-2025-09-05-3856873005",
@@ -986,27 +601,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
-    },
-    {
-      "id": "hhs-oig-2025-08-27-860338678",
-      "date": "2025-08-27",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "ACF Did Not Monitor States’ Compliance With All American Rescue Plan Child Care Stabilization Grant Provisions",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2025/acf-did-not-monitor-states-compliance-with-all-american-rescue-plan-child-care-stabilization-grant-provisions/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "title lacks HC fraud / program integrity signal"
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 78,
+      "ai_reason": "This is an HHS-OIG audit about nursing facility compliance with background check requirements, which relates to facility quality/safety oversight rather than healthcare fraud or program-integrity fina",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "macpac-2026-04-09-3856359816",
@@ -1028,52 +627,11 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
-    },
-    {
-      "id": "macpac-2026-04-09-422638427",
-      "date": "2026-04-09",
-      "agency": "MACPAC",
-      "type": "Report",
-      "title": "Children and Youth with Special Health Care Needs (CYSHCN) Transitions to Adult Coverage: Draft Chapter and Recommendations",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.macpac.gov/publication/children-and-youth-with-special-health-care-needs-cyshcn-transitions-to-adult-coverage-draft-chapter-and-recommendations/",
-      "link_label": "MACPAC Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicaid"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
-    },
-    {
-      "id": "macpac-2026-04-09-2083213801",
-      "date": "2026-04-09",
-      "agency": "MACPAC",
-      "type": "Report",
-      "title": "Medicaid Coverage of Assistive Technology for Adults: Policy Scan and Literature Review",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.macpac.gov/publication/medicaid-coverage-of-assistive-technology-for-adults-policy-scan-and-literature-review/",
-      "link_label": "MACPAC Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicaid"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "healthcare_fraud_oversight",
+      "ai_confidence": 78,
+      "ai_reason": "MACPAC report on state and federal accountability tools for Medicaid managed care plans directly addresses program integrity oversight mechanisms, though the title does not explicitly mention fraud.",
+      "ai_model": "claude-haiku-4-5-20251001"
     },
     {
       "id": "macpac-2026-04-09-856414847",
@@ -1097,7 +655,35 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
-      "flag_reason": "HC program mentioned but no fraud signal — needs AI review"
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 72,
+      "ai_reason": "This MACPAC report on PBM operations in Medicaid addresses program administration and policy but lacks explicit healthcare fraud, improper payments, or program-integrity focus.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "congress-2026-04-14-372046569",
+      "date": "2026-04-14",
+      "agency": "Congress",
+      "type": "Congressional Hearing",
+      "title": "Health Subcommittee Chairman Buchanan Field Hearing Opening Statement: Patients and Taxpayers Depend on Congress to Think about Health Care Differently - Ways and Means",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://waysandmeans.house.gov/2026/04/14/health-subcommittee-chairman-buchanan-field-hearing-opening-statement-patients-and-taxpayers-depend-on-congress-to-think-about-health-care-differently/",
+      "link_label": "Congress Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 72,
+      "ai_reason": "Opening statement from Ways and Means Health Subcommittee hearing about healthcare policy broadly; title indicates general healthcare reform discussion rather than fraud oversight, audits, or program ",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1144,6 +730,31 @@
     "https://waysandmeans.house.gov/2026/03/25/chairman-smith-opening-statement-bipartisan-legislation-helps-vulnerable-americans-and-forces-irs-to-better-serve-taxpayers/",
     "https://www.macpac.gov/publication/health-and-welfare-in-self-directed-home-and-community-based-services-hcbs-environmental-scan-2/",
     "https://www.macpac.gov/publication/automation-in-the-prior-authorization-process-findings-2/",
-    "https://www.macpac.gov/publication/intensive-community-based-behavioral-health-services-findings-from-federal-and-state-review/"
+    "https://www.macpac.gov/publication/intensive-community-based-behavioral-health-services-findings-from-federal-and-state-review/",
+    "https://www.gao.gov/products/gao-26-108283",
+    "https://waysandmeans.house.gov/2026/04/14/chairman-smith-field-hearing-opening-statement-more-needs-to-be-done-to-help-americans-live-longer-healthier-lives/",
+    "https://www.cms.gov/newsroom/press-releases/cms-issues-guidance-implement-new-limits-federal-medicaid-chip-funding-certain-noncitizens",
+    "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement",
+    "https://www.macpac.gov/publication/implementing-community-engagement-requirements-in-medicaid/",
+    "https://www.cms.gov/newsroom/fact-sheets/fiscal-year-fy-2027-hospice-wage-index-payment-rate-update-hospice-quality-reporting-program",
+    "https://www.cms.gov/newsroom/press-releases/medicare-beneficiaries-see-simpler-more-flexible-plan-choices-better-drug-coverage-higher-quality",
+    "https://www.cms.gov/newsroom/press-releases/hhs-cms-announce-healthcare-advisory-committee-members-improve-patient-care-modernize-u-s-healthcare",
+    "https://www.cms.gov/newsroom/fact-sheets/cms-announces-manufacturer-participation-third-cycle-medicare-drug-price-negotiation",
+    "https://www.cms.gov/newsroom/fact-sheets/medicare-gov-enhanced-log",
+    "https://www.help.senate.gov/rep/newsroom/press/next-week-senate-help-committee-to-hold-hearing-on-making-prescription-drugs-more-affordable-for-families-using-free-market-approach",
+    "https://oig.hhs.gov/reports/all/2026/centers-for-disease-control-and-prevention-fiscal-year-2025-detailed-accounting-submission-and-fiscal-year-2027-budget-formulation-compliance-report-for-national-drug-control-activities-and-the-accompanying-required-assertions/",
+    "https://oig.hhs.gov/reports/all/2026/food-and-drug-administration-fiscal-year-2025-detailed-accounting-submission-and-fiscal-year-2027-budget-formulation-compliance-report-for-national-drug-control-activities-and-the-accompanying-required-assertions/",
+    "https://oig.hhs.gov/reports/all/2026/national-institutes-of-health-fiscal-year-2025-detailed-accounting-submission-and-fiscal-year-2027-budget-formulation-compliance-report-for-national-drug-control-activities-and-the-accompanying-required-assertions/",
+    "https://oig.hhs.gov/reports/all/2025/the-national-institutes-of-health-generally-implemented-the-safe-workplace-federal-reporting-requirement-but-opportunities-exist-to-improve-the-reporting-and-monitoring-processes/",
+    "https://oig.hhs.gov/reports/all/2025/the-indian-health-service-did-not-ensure-that-commissioned-corps-officers-background-investigations-complied-with-federal-requirements/",
+    "https://oig.hhs.gov/reports/all/2025/arkansas-could-better-ensure-that-intermediate-care-facilities-for-individuals-with-intellectual-disabilities-comply-with-federal-requirements-for-life-safety-emergency-preparedness-and-infection-control/",
+    "https://oig.hhs.gov/reports/all/2025/south-carolina-did-not-comply-with-federal-waiver-and-state-requirements-at-19-of-20-adult-day-care-facilities/",
+    "https://oig.hhs.gov/reports/all/2025/california-met-some-requirements-of-the-projects-for-assistance-in-transition-from-homelessness-program-but-did-not-accurately-report-program-activities-for-selected-providers/",
+    "https://oig.hhs.gov/reports/all/2025/hrsa-rural-communities-opioid-response-program-award-recipients-generally-met-all-core-activities-and-benchmarks/",
+    "https://oig.hhs.gov/reports/all/2025/west-virginia-did-not-comply-with-intake-screening-assessment-and-investigation-requirements-for-responding-to-reports-of-child-abuse-and-neglect/",
+    "https://oig.hhs.gov/reports/all/2025/the-patient-safety-organization-program-key-barriers-impeding-nationwide-progress-toward-reducing-patient-harm-in-hospitals/",
+    "https://oig.hhs.gov/reports/all/2025/acf-did-not-monitor-states-compliance-with-all-american-rescue-plan-child-care-stabilization-grant-provisions/",
+    "https://www.macpac.gov/publication/children-and-youth-with-special-health-care-needs-cyshcn-transitions-to-adult-coverage-draft-chapter-and-recommendations/",
+    "https://www.macpac.gov/publication/medicaid-coverage-of-assistive-technology-for-adults-policy-scan-and-literature-review/"
   ]
 }

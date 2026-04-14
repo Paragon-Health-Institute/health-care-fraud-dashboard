@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-14T09:10:39.728987",
+    "last_updated": "2026-04-14T13:37:38.165890",
     "version": "1.0",
     "last_scraped": "2026-04-14T09:10:39.728982"
   },
@@ -14910,6 +14910,29 @@
       ],
       "entities": [],
       "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2025-11-05-3143992849",
+      "date": "2025-11-05",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Texas' Ambulance Services Supplemental Payment Program Did Not Comply With Federal and State Reimbursement Requirements",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2025/texas-ambulance-services-supplemental-payment-program-did-not-comply-with-federal-and-state-reimbursement-requirements/",
+      "link_label": "HHS-OIG Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Ambulance"
+      ],
+      "entities": [],
+      "state": "TX",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
