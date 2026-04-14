@@ -2319,7 +2319,7 @@ def main():
                 # etc.) and Media items never get an amount. See project
                 # memory: project_amounts_enforcement_only.
                 if action_type in ('Criminal Enforcement', 'Civil Action'):
-                    amt_info = extract_amount(search_all, title=title)
+                    amt_info = extract_amount(search_text, title=title)
                 else:
                     amt_info = None
 

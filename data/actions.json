@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-04-09T16:52:15.380821",
+    "last_updated": "2026-04-14T08:58:00.966322",
     "version": "1.0",
-    "last_scraped": "2026-04-12T08:13:07.290850"
+    "last_scraped": "2026-04-14T08:58:00.966305"
   },
   "actions": [
     {
@@ -12879,30 +12879,6 @@
       ]
     },
     {
-      "id": "doj-2026-03-23-3884604121",
-      "date": "2026-03-23",
-      "agency": "DOJ",
-      "type": "Criminal Enforcement",
-      "title": "Dominican National Pleads Guilty to Federal Fraud Charges",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.justice.gov/usao-ri/pr/dominican-national-pleads-guilty-federal-fraud-charges",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": "RI",
-      "source_type": "official",
-      "auto_fetched": true,
-      "doj_topics": [
-        "Health Care Fraud"
-      ],
-      "related_agencies": [
-        "HHS-OIG"
-      ]
-    },
-    {
       "id": "doj-2026-03-13-586985469",
       "date": "2026-03-13",
       "agency": "DOJ",
@@ -14230,6 +14206,201 @@
       "source_type": "official",
       "auto_fetched": false,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-04-10-1461471060",
+      "date": "2026-04-10",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Slidell Doctor Sentenced For $6.6 Million In Health Care Fraud",
+      "amount": "$6.6 Million",
+      "amount_numeric": 6600000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edla/pr/slidell-doctor-sentenced-66-million-health-care-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "LA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-04-08-519169628",
+      "date": "2026-04-08",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "San Fernando Valley Clinic Operator Sentenced to 18 Years in Federal Prison for Role in Ring that Sold Illegal Opioid Prescriptions for Cash",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-cdca/pr/san-fernando-valley-clinic-operator-sentenced-18-years-federal-prison-role-ring-sold",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-04-07-3869967335",
+      "date": "2026-04-07",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Justice Department Prosecutes a Half-Billion Dollars in Healthcare and COVID Fraud Schemes Exploiting Taxpayer Funded Programs",
+      "amount": "$500 million",
+      "amount_numeric": 500000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/justice-department-prosecutes-half-billion-dollars-healthcare-and-covid-fraud-schemes",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "ACA",
+        "Pharmacy",
+        "Behavioral Health",
+        "Addiction Treatment",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-03-26-326973497",
+      "date": "2026-03-26",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Nine Charged in Benefit Fraud Crackdown",
+      "amount": "$9 million",
+      "amount_numeric": 9000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/nine-charged-benefit-fraud-crackdown",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-04-13-3585786378",
+      "date": "2026-04-13",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Podiatrist and Pharmaceutical Sales Representative Sentenced in $3.2 Million Healthcare Fraud Conspiracy Involving Unlicensed Person Performing Skin Grafts",
+      "amount": "$3.2 Million",
+      "amount_numeric": 3200000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edca/pr/podiatrist-and-pharmaceutical-sales-representative-sentenced-32-million-healthcare",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Health Care Fraud",
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2025-09-23-1367908120",
+      "date": "2025-09-23",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Hospitals Charged CMS for Trauma Team Activations That Did Not Comply With Federal Requirements",
+      "amount": "$2.4 billion",
+      "amount_numeric": 2400000000.0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2025/hospitals-charged-cms-for-trauma-team-activations-that-did-not-comply-with-federal-requirements/",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2025-08-29-2477526905",
+      "date": "2025-08-29",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "National Government Services, Inc., Reopened and Corrected Cost Report Final Settlements for Desk Reviews Only With Obvious Errors To Correct Payments Made to Medicare Providers",
+      "amount": "$5.6 million",
+      "amount_numeric": 5600000.0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2025/national-government-services-inc-reopened-and-corrected-cost-report-final-settlements-for-desk-reviews-only-with-obvious-errors-to-correct-payments-made-to-medicare-providers/",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2025-08-28-4032621475",
+      "date": "2025-08-28",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Novitas Solutions, Inc., Reopened and Corrected Cost Report Final Settlements for Desk Reviews Only With Obvious Errors To Correct Payments Made to Medicare Providers",
+      "amount": "$9.4 million",
+      "amount_numeric": 9400000.0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2025/novitas-solutions-inc-reopened-and-corrected-cost-report-final-settlements-for-desk-reviews-only-with-obvious-errors-to-correct-payments-made-to-medicare-providers/",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
