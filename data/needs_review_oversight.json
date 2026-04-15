@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-04-14T13:36:30.026371"
+    "last_scraped": "2026-04-15T09:55:34.199312"
   },
   "items": [
     {
@@ -702,6 +702,7 @@
     "https://oig.hhs.gov/reports/all/2025/the-patient-safety-organization-program-key-barriers-impeding-nationwide-progress-toward-reducing-patient-harm-in-hospitals/",
     "https://oig.hhs.gov/reports/all/2025/acf-did-not-monitor-states-compliance-with-all-american-rescue-plan-child-care-stabilization-grant-provisions/",
     "https://www.macpac.gov/publication/children-and-youth-with-special-health-care-needs-cyshcn-transitions-to-adult-coverage-draft-chapter-and-recommendations/",
-    "https://www.macpac.gov/publication/medicaid-coverage-of-assistive-technology-for-adults-policy-scan-and-literature-review/"
+    "https://www.macpac.gov/publication/medicaid-coverage-of-assistive-technology-for-adults-policy-scan-and-literature-review/",
+    "https://energycommerce.house.gov/posts/chairmen-guthrie-and-griffith-announce-hearing-on-department-of-health-and-human-services-fy-2027-budget"
   ]
 }
