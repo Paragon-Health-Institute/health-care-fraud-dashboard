@@ -1408,12 +1408,18 @@ def cmd_audit_oversight() -> int:
         link = item.get("link", "") or ""
 
         # Commentary blocklist: op-eds, chairman's statements, floor remarks.
-        # These use fraud vocabulary but aren't actions. Auto-reject first,
-        # before any fraud-signal or HC-keyword check.
-        if COMMENTARY_URL_PATHS.search(link) or COMMENTARY_TITLE.search(title):
+        # URL-path match (e.g. /chairmans-news/) is an unambiguous
+        # messaging-section signal — auto-reject. Title-only match is
+        # softer: "Chairman X Statement" COULD describe a real action,
+        # so route to AI review instead of rejecting outright.
+        if COMMENTARY_URL_PATHS.search(link):
             still_pending.append(item)
-            item["flag_reason"] = "commentary/op-ed/chairman's-news — not an action"
+            item["flag_reason"] = "URL in commentary/press-statement section — not an action"
             item["audit_decision"] = "auto_rejected"
+            continue
+        if COMMENTARY_TITLE.search(title):
+            still_pending.append(item)
+            item["flag_reason"] = "title looks like a statement/op-ed — needs AI review to confirm action vs messaging"
             continue
 
         if agency in MIXED_CONTENT_AGENCIES:

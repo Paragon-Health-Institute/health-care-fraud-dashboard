@@ -120,7 +120,10 @@ FEEDS = [
     {"name": "HHS-OIG",     "agency": "HHS-OIG",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "oig"},
     {"name": "CMS",         "agency": "CMS",           "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "cms"},
     {"name": "CMS-Fraud",   "agency": "CMS",           "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "cms_fraud"},
-    {"name": "HHS",         "agency": "HHS",           "url": "https://www.hhs.gov/rss/news.xml",                                         "enabled": False, "source_type": "official", "browser_fallback": True},
+    # HHS press room is Akamai Bot Manager-blocked (403 even with Playwright).
+    # Scraper scaffolding is in place; requires stealth tooling to enable.
+    # Items from hhs.gov/press-room/ are added manually (~1-2/month).
+    {"name": "HHS",         "agency": "HHS",           "url": None,                                                                       "enabled": False, "source_type": "official", "scrape": "hhs_press"},
     {"name": "DOJ-USAO",    "agency": "DOJ",           "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "doj_usao"},
     {"name": "GAO",         "agency": "GAO",           "url": "https://www.gao.gov/rss/reports.xml",                                      "enabled": True,  "source_type": "official", "browser_fallback": True},
     {"name": "H-Oversight", "agency": "Congress",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "h_oversight"},
@@ -1999,6 +2002,122 @@ def scrape_macpac(session):
     return items
 
 
+def scrape_hhs_press(session):
+    """Scrape HHS press room (hhs.gov/press-room).
+
+    HHS-proper (the department, distinct from HHS-OIG) publishes
+    announcements about anti-fraud task forces, General Counsel hires
+    tied to fraud enforcement, Secretary statements on Medicaid/Medicare
+    integrity initiatives, and cross-agency coordination efforts. These
+    don't appear on the OIG or CMS streams.
+
+    Most HHS press releases are NOT fraud-related (they cover grants,
+    programs, vaccine policy, public health). We pre-filter on title
+    keywords before fetching detail pages.
+
+    Normal mode: pages 0-2 (30 items, ~1 month).
+    Backfill mode: pages 0-20 (full ~210-item archive), with floor
+    early-stop.
+
+    HHS bot-blocks generic requests (403) even with Sec-Fetch-* headers —
+    requires Playwright for browser fingerprinting, same as CMS.
+    """
+    if not HAS_PLAYWRIGHT:
+        log("    Skipping HHS press (requires Playwright)")
+        return []
+    base_url = "https://www.hhs.gov/press-room/index.html"
+    # Title pre-filter: only fetch detail pages for items with fraud-enforcement
+    # vocabulary. Broader than HC_KEYWORDS (which flood on "medicare"/"medicaid")
+    # but narrower than just any HC mention.
+    FRAUD_SIGNAL = re.compile(
+        r"\b(fraud|kickback|false\s+claim|qui\s+tam|anti-?kickback|"
+        r"enforcement|strike\s+force|task\s+force|investigat|"
+        r"indictment|sentenc|guilty|convict|plea|takedown|"
+        r"overpay|improper\s+payment|moratorium|corrective\s+action|"
+        r"program\s+integrity|anti-?fraud|waste.{0,10}abuse|"
+        r"u\.?s\.?\s+attorney|prosecut|whistleblower|exclus|debarment|"
+        r"special\s+focus|medicaid\s+integrity|medicare\s+integrity)\b",
+        re.IGNORECASE,
+    )
+    backfill = globals().get('BACKFILL_MODE', False)
+    floor = globals().get('BACKFILL_FLOOR', '2025-01-01')
+    max_pages = 20 if backfill else 2
+    items = []
+    prev_len = 0
+    for page_n in range(max_pages + 1):
+        url = base_url if page_n == 0 else f"{base_url}?page={page_n}"
+        try:
+            soup = scrape_page_with_browser(url)
+            cards = soup.select('li.usa-collection__item.teaser-news')
+            if not cards:
+                # Fallback selector in case HHS tweaks class names
+                cards = soup.select('li.usa-collection__item')
+            for card in cards:
+                a_tag = card.select_one('h2.usa-collection__heading a')
+                if not a_tag:
+                    a_tag = card.select_one('a.usa-link')
+                if not a_tag:
+                    continue
+                title = a_tag.get_text(strip=True)
+                if not title or len(title) < 10:
+                    continue
+                # Pre-filter: skip items without fraud-enforcement vocabulary
+                if not FRAUD_SIGNAL.search(title):
+                    continue
+                href = a_tag.get('href', '')
+                if href.startswith('/'):
+                    href = 'https://www.hhs.gov' + href
+                # Date from listing card
+                date_str = ""
+                time_el = card.select_one('time')
+                if time_el:
+                    date_str = time_el.get('datetime', '').split('T')[0] or time_el.get_text(strip=True)
+                # Fetch detail page for canonical title + body
+                detail_text = ""
+                _detail_title = ""
+                try:
+                    detail_text, _, _detail_title = fetch_detail_page(session, href)
+                except Exception:
+                    pass
+                if _detail_title:
+                    title = _detail_title
+                desc = ""
+                if detail_text:
+                    cleaned = detail_text
+                    if title in cleaned:
+                        cleaned = cleaned.split(title, 1)[-1].strip()
+                    desc = cleaned[:600].strip()
+                    if len(cleaned) > 600:
+                        last_period = desc.rfind('.')
+                        if last_period > 200:
+                            desc = desc[:last_period + 1]
+                items.append({
+                    'title': title,
+                    'description': desc,
+                    'link': href,
+                    'pub_date': date_str,
+                    '_full_text': detail_text,
+                })
+            # Backfill early-stop
+            if backfill and page_n >= 1:
+                page_items = items[prev_len:]
+                parsed_dates = []
+                for it in page_items:
+                    pd = it.get('pub_date', '')
+                    if pd:
+                        try:
+                            parsed_dates.append(parse_date(pd))
+                        except Exception:
+                            pass
+                if parsed_dates and max(parsed_dates) < floor:
+                    log(f"  HHS press backfill: page {page_n} all older than {floor}, stopping")
+                    break
+            prev_len = len(items)
+        except Exception as e:
+            log(f"  WARNING: HHS press scrape page {page_n} - {e}", "yellow")
+    return items
+
+
 def scrape_fincen(session):
     """Scrape FinCEN press releases + advisories.
 
@@ -2108,6 +2227,8 @@ def fetch_feed(session, feed):
         return scrape_macpac(session)
     if scrape_mode == 'fincen':
         return scrape_fincen(session)
+    if scrape_mode == 'hhs_press':
+        return scrape_hhs_press(session)
     if not feed.get('url'):
         return []
     return fetch_rss(session, feed['url'], use_browser_fallback=feed.get('browser_fallback', False))
