@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-16T14:17:21.236350",
+    "last_updated": "2026-04-16T14:23:12.592367",
     "version": "1.0",
     "last_scraped": "2026-04-16T09:00:59.717572"
   },
@@ -1192,7 +1192,10 @@
       "social_posts": [],
       "tags": [
         "Pharmacy",
-        "Wound Care"
+        "Wound Care",
+        "Medicaid",
+        "Medicare",
+        "ACA"
       ],
       "state": "TX",
       "source_type": "official",
@@ -1577,7 +1580,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medical Devices"
+        "Medical Devices",
+        "Medicaid"
       ],
       "state": "MA",
       "source_type": "official",
@@ -2734,7 +2738,8 @@
       "social_posts": [],
       "tags": [
         "Medical Devices",
-        "Hospital"
+        "Hospital",
+        "Medicaid"
       ],
       "entities": [],
       "state": "TX",
@@ -4196,7 +4201,8 @@
       "social_posts": [],
       "tags": [
         "Pharmacy",
-        "Opioids"
+        "Opioids",
+        "Medicaid"
       ],
       "entities": [],
       "state": "FL",
@@ -4544,7 +4550,10 @@
       "social_posts": [],
       "tags": [
         "Pharmacy",
-        "Opioids"
+        "Opioids",
+        "Medicaid",
+        "Medicare",
+        "ACA"
       ],
       "entities": [],
       "state": "TX",
@@ -4691,7 +4700,8 @@
       "social_posts": [],
       "tags": [
         "Nursing Home",
-        "Wound Care"
+        "Wound Care",
+        "ACA"
       ],
       "entities": [],
       "state": "OH",
@@ -6534,7 +6544,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Medicaid"
       ],
       "entities": [],
       "state": "MO",
@@ -6657,7 +6668,8 @@
       "social_posts": [],
       "tags": [
         "Pharmacy",
-        "Opioids"
+        "Opioids",
+        "Medicaid"
       ],
       "entities": [],
       "state": "NY",
@@ -6807,7 +6819,8 @@
       "social_posts": [],
       "tags": [
         "Addiction Treatment",
-        "Physical Therapy"
+        "Physical Therapy",
+        "Medicaid"
       ],
       "entities": [],
       "state": "NY",
@@ -7002,7 +7015,8 @@
       "social_posts": [],
       "tags": [
         "Medical Devices",
-        "Lab Testing"
+        "Lab Testing",
+        "Medicaid"
       ],
       "entities": [],
       "state": "MA",
@@ -7568,7 +7582,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Medicaid"
       ],
       "entities": [],
       "state": "MI",
@@ -8755,7 +8770,8 @@
       "social_posts": [],
       "tags": [
         "Pharmacy",
-        "Opioids"
+        "Opioids",
+        "Medicaid"
       ],
       "entities": [],
       "state": "VA",
@@ -10226,7 +10242,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Lab Testing"
+        "Lab Testing",
+        "Medicaid"
       ],
       "entities": [],
       "state": "TX",
@@ -10443,7 +10460,8 @@
       "social_posts": [],
       "tags": [
         "Opioids",
-        "Pharmacy"
+        "Pharmacy",
+        "Medicaid"
       ],
       "entities": [],
       "state": "NY",
@@ -10565,7 +10583,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "Medicaid"
       ],
       "entities": [],
       "state": "CA",
@@ -10688,7 +10707,8 @@
       "tags": [
         "Addiction Treatment",
         "Opioids",
-        "Pharmacy"
+        "Pharmacy",
+        "Medicaid"
       ],
       "entities": [],
       "state": "VA",
@@ -10760,7 +10780,10 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Medicaid",
+        "Medicare",
+        "ACA"
       ],
       "entities": [],
       "state": "NJ",
@@ -10929,7 +10952,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Medicaid"
       ],
       "entities": [],
       "state": "MI",
@@ -11007,7 +11031,8 @@
         "Genetic Testing",
         "Lab Testing",
         "Telehealth",
-        "Opioids"
+        "Opioids",
+        "Medicaid"
       ],
       "entities": [],
       "state": "NJ",
@@ -11082,7 +11107,8 @@
       "social_posts": [],
       "tags": [
         "Opioids",
-        "Addiction Treatment"
+        "Addiction Treatment",
+        "Medicaid"
       ],
       "entities": [],
       "state": "VT",
@@ -11378,7 +11404,8 @@
       "social_posts": [],
       "tags": [
         "Hospital",
-        "Opioids"
+        "Opioids",
+        "Medicaid"
       ],
       "entities": [],
       "state": "IA",
@@ -11551,7 +11578,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Behavioral Health"
+        "Behavioral Health",
+        "Medicaid"
       ],
       "entities": [],
       "state": "MA",
@@ -11696,7 +11724,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Medicaid"
       ],
       "entities": [],
       "state": "MD",
@@ -11914,7 +11943,8 @@
       "social_posts": [],
       "tags": [
         "Medical Devices",
-        "Lab Testing"
+        "Lab Testing",
+        "Medicaid"
       ],
       "entities": [],
       "state": "MA",
@@ -12796,7 +12826,8 @@
       "social_posts": [],
       "tags": [
         "Opioids",
-        "Pharmacy"
+        "Pharmacy",
+        "Medicaid"
       ],
       "entities": [],
       "state": "VA",
@@ -12891,7 +12922,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Medicaid"
       ],
       "entities": [],
       "state": "VA",
@@ -13058,7 +13090,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "ACA",
+        "Medicare"
       ],
       "entities": [],
       "state": "FL",
@@ -13130,7 +13164,9 @@
       "social_posts": [],
       "tags": [
         "Pharmacy",
-        "Medical Devices"
+        "Medical Devices",
+        "Medicaid",
+        "Medicare"
       ],
       "entities": [],
       "state": "MI",
@@ -14892,7 +14928,8 @@
       "social_posts": [],
       "tags": [
         "Opioids",
-        "Pharmacy"
+        "Pharmacy",
+        "Medicaid"
       ],
       "entities": [],
       "state": "CA",
@@ -15636,7 +15673,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Medicaid"
       ],
       "entities": [],
       "state": "NY",
