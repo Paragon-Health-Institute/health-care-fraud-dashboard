@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-04-15T17:01:41.896364",
+    "last_updated": "2026-04-16T09:00:59.717582",
     "version": "1.0",
-    "last_scraped": "2026-04-15T09:00:28.837361"
+    "last_scraped": "2026-04-16T09:00:59.717572"
   },
   "actions": [
     {
@@ -15017,6 +15017,31 @@
       "source_type": "official",
       "auto_fetched": false,
       "entities": []
+    },
+    {
+      "id": "doj-2026-04-14-1446064656",
+      "date": "2026-04-14",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Florida Nursing Assistant Sentenced to Nine Years in Prison for $11.4M Health Care Fraud Scheme Targeting Medicare Beneficiaries",
+      "amount": "$11.4 Million",
+      "amount_numeric": 11400000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/florida-nursing-assistant-sentenced-nine-years-prison-114m-health-care-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "ACA",
+        "DME"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
