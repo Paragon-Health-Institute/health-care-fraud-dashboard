@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-16T10:04:43.121364",
+    "last_updated": "2026-04-16T13:34:51.578665",
     "version": "1.0",
     "last_scraped": "2026-04-16T09:00:59.717572"
   },
@@ -184,7 +184,7 @@
         "Medicare"
       ],
       "entities": [],
-      "state": "TX, FL, MD",
+      "state": "TX",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -305,7 +305,7 @@
         "Medicare Advantage"
       ],
       "entities": [],
-      "state": "CA, OR",
+      "state": "CA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -519,7 +519,7 @@
         "TRICARE"
       ],
       "entities": [],
-      "state": "AL, MS",
+      "state": "MS",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -2261,7 +2261,7 @@
         "TRICARE",
         "Lab Testing"
       ],
-      "state": "AR, TX, VA",
+      "state": "VA",
       "source_type": "official",
       "auto_fetched": false,
       "entities": [],
@@ -2798,7 +2798,7 @@
         "Medicare",
         "Telehealth"
       ],
-      "state": "TX",
+      "state": "LA",
       "source_type": "official",
       "auto_fetched": false,
       "entities": [],
@@ -4068,7 +4068,7 @@
         "DME"
       ],
       "entities": [],
-      "state": "FL",
+      "state": "VT",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -4217,7 +4217,7 @@
         "Telehealth"
       ],
       "entities": [],
-      "state": "KS",
+      "state": "MO",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -4290,7 +4290,7 @@
         "Medicaid"
       ],
       "entities": [],
-      "state": "CA",
+      "state": "IL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -4388,7 +4388,7 @@
         "DME"
       ],
       "entities": [],
-      "state": "FL",
+      "state": "MS",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -4575,7 +4575,7 @@
         "Addiction Treatment"
       ],
       "entities": [],
-      "state": "AZ",
+      "state": "LA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -4886,7 +4886,7 @@
         "Nursing Home"
       ],
       "entities": [],
-      "state": "MD",
+      "state": "SC",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -5533,7 +5533,7 @@
         "Lab Testing"
       ],
       "entities": [],
-      "state": "TN",
+      "state": "WV",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -5989,7 +5989,7 @@
         "Medicaid"
       ],
       "entities": [],
-      "state": "FL",
+      "state": "NH",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -6436,7 +6436,7 @@
         "Lab Testing"
       ],
       "entities": [],
-      "state": "MA",
+      "state": "NY",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -6718,7 +6718,7 @@
         "Opioids"
       ],
       "entities": [],
-      "state": "LA",
+      "state": "TX",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -7244,7 +7244,7 @@
         "Medicaid"
       ],
       "entities": [],
-      "state": "FL",
+      "state": "NH",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -8346,7 +8346,7 @@
         "Genetic Testing"
       ],
       "entities": [],
-      "state": "CO",
+      "state": "SC",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -8465,7 +8465,7 @@
         "Medicaid"
       ],
       "entities": [],
-      "state": "MD",
+      "state": "DC",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -8901,7 +8901,7 @@
         "Medicaid"
       ],
       "entities": [],
-      "state": "MD",
+      "state": "DC",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -8926,7 +8926,7 @@
         "TRICARE"
       ],
       "entities": [],
-      "state": null,
+      "state": "DC",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -10734,7 +10734,7 @@
         "Telehealth"
       ],
       "entities": [],
-      "state": "GA",
+      "state": "NJ",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -11070,7 +11070,7 @@
         "Telehealth"
       ],
       "entities": [],
-      "state": "MA",
+      "state": "NY",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -12693,7 +12693,7 @@
         "Lab Testing"
       ],
       "entities": [],
-      "state": "LA",
+      "state": "TX",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -13143,7 +13143,7 @@
         "Lab Testing"
       ],
       "entities": [],
-      "state": "MA",
+      "state": "NY",
       "source_type": "official",
       "auto_fetched": true,
       "doj_topics": [
@@ -13169,7 +13169,7 @@
         "Medicare"
       ],
       "entities": [],
-      "state": "MA",
+      "state": "NY",
       "source_type": "official",
       "auto_fetched": true,
       "doj_topics": [
@@ -13195,7 +13195,7 @@
         "Medicare"
       ],
       "entities": [],
-      "state": "MA",
+      "state": "NY",
       "source_type": "official",
       "auto_fetched": true,
       "doj_topics": [
@@ -13390,7 +13390,7 @@
         "Lab Testing"
       ],
       "entities": [],
-      "state": "MA",
+      "state": "NY",
       "source_type": "official",
       "auto_fetched": true,
       "doj_topics": [

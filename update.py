@@ -2598,7 +2598,11 @@ def main():
                 if globals().get('OPA_ONLY') and '/opa/pr/' not in link:
                     continue
 
-                state = get_state(search_text)
+                # State detection prioritizes title over body text. Body often
+                # mentions unrelated states (defendant's prior out-of-state convictions,
+                # venue transfers, comparison data). Title almost always names the
+                # relevant state for the case.
+                state = get_state(title) or get_state(search_text)
                 action_type = ('Investigative Report' if is_media
                                else get_action_type(title, search_text,
                                                     agency=feed.get('agency'),

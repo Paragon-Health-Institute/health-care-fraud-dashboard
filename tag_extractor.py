@@ -65,10 +65,10 @@ VULNERABLE AREAS (which service area was abused):
 2. **Verbatim citations.** For every tag you select, cite a verbatim phrase (8+ words long) from the article text as evidence. The phrase must appear in the source EXACTLY as written. Do not paraphrase.
 
 3. **Program tag selection rules:**
-   - "Medicare Advantage" applies if MA plans, MA risk adjustment, or MA-specific contracts are mentioned. The general "Medicare" tag does NOT need to also apply unless Medicare FFS is separately discussed.
-   - "Medicare" applies to Medicare Part A/B/D, Medicare FFS, or generic Medicare references. Do NOT add Medicare just because Medicare Advantage is mentioned.
-   - "Medicaid" applies to Medicaid, Medi-Cal, or CHIP. Add it for ANY Medicaid-related case (including managed-care cases — Medicaid and Medicaid Managed Care co-apply).
-   - "Medicaid Managed Care" applies when a Medicaid MCO or managed care organization is the payer, when capitation payments or risk adjustment fraud against Medicaid plans are at issue, or when named Medicaid MCOs (Centene, Molina, etc.) are the subject. When this tag applies, also apply "Medicaid".
+   - "Medicare" applies to any Medicare-related case — FFS Part A/B/D, Medicare Advantage, or generic Medicare references. If Medicare Advantage applies, also apply Medicare (Medicare Advantage IS Medicare).
+   - "Medicare Advantage" applies if MA plans, MA risk adjustment, or MA-specific contracts are mentioned. When this tag applies, also apply "Medicare".
+   - "Medicaid" applies to Medicaid, Medi-Cal, or CHIP. If Medicaid Managed Care applies, also apply Medicaid.
+   - "Medicaid Managed Care" applies when a Medicaid MCO or managed care organization is the payer, when capitation payments or risk-adjustment fraud against Medicaid plans are at issue, or when named Medicaid MCOs (Centene, Molina, etc.) are the subject. When this tag applies, also apply "Medicaid".
    - "TRICARE" applies only if TRICARE/CHAMPUS is named.
    - "ACA" applies if Affordable Care Act marketplace, exchange enrollment, or premium tax credits are central to the case.
 
