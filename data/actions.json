@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-16T14:01:12.605919",
+    "last_updated": "2026-04-16T14:17:21.236350",
     "version": "1.0",
     "last_scraped": "2026-04-16T09:00:59.717572"
   },
@@ -5155,7 +5155,10 @@
       "social_posts": [],
       "tags": [
         "Addiction Treatment",
-        "Physical Therapy"
+        "Physical Therapy",
+        "Medicare",
+        "Medicaid",
+        "ACA"
       ],
       "entities": [],
       "state": "LA",
@@ -6284,7 +6287,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medical Devices"
+        "Medical Devices",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "CO",
@@ -6849,7 +6854,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Medicare"
       ],
       "entities": [],
       "state": "WA",
@@ -8641,7 +8647,8 @@
       "social_posts": [],
       "tags": [
         "Lab Testing",
-        "Hospital"
+        "Hospital",
+        "TRICARE"
       ],
       "entities": [],
       "state": "ID",
@@ -12447,7 +12454,8 @@
       "social_posts": [],
       "tags": [
         "Pharmacy",
-        "Opioids"
+        "Opioids",
+        "Medicaid"
       ],
       "entities": [],
       "state": "NY",
