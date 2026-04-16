@@ -145,6 +145,22 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
 .agency-DEA            { background: #BF360C; }
 .agency-MedPAC         { background: #00695C; }
 .agency-MACPAC         { background: #00838F; }
+.news-sourced-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 3px 10px;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: #6c757d;
+  background: #f0f0f0;
+  border: 1px dashed #c0c0c0;
+  border-radius: var(--radius);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  cursor: help;
+}
 .type-badge { font-size: 0.65rem; font-weight: 600; padding: 3px 9px; border-radius: var(--radius); border: 1px solid currentColor; font-family: 'Public Sans', sans-serif; letter-spacing: 0.02em; }
 .type-Criminal-Enforcement     { color: var(--type-criminal); background: rgba(198,40,40,0.07); }
 .type-Civil-Action             { color: var(--type-civil); background: rgba(255,148,26,0.1); }
@@ -613,6 +629,17 @@ function appendCards(count, view) {
       docBtn.classList.remove('d-none');
       docBtn.href = safeUrl(action.link);
       docBtn.querySelector('span').textContent = action.link_label || 'View Document';
+      // News-sourced badge: when the link points to a news outlet (not a
+      // .gov source), show a small disclaimer next to the source button
+      // so readers know the action is real but we don't yet have an
+      // official source. Placed inline with the link label for context.
+      if (action.source_type && action.source_type !== 'official') {
+        const ns = document.createElement('span');
+        ns.className = 'news-sourced-badge';
+        ns.textContent = 'News-sourced';
+        ns.title = 'No official .gov source was available when this item was added. The action itself is real; the link points to news coverage.';
+        docBtn.parentNode.appendChild(ns);
+      }
     }
     grid.appendChild(col);
   }
