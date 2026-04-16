@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-16T15:28:49.332025",
+    "last_updated": "2026-04-16T15:32:55.905193",
     "version": "1.0",
     "last_scraped": "2026-04-16T09:00:59.717572"
   },
@@ -1655,7 +1655,7 @@
       "date": "2026-01-27",
       "agency": "Congress",
       "type": "Structural/Organizational",
-      "title": "Chair Cassidy, HELP Committee Republicans Launch Task Force to Eliminate Fraud in Federal Spending, Protect American Taxpayers | The U.S. Senate Committee on Health, Education, Labor & Pensions",
+      "title": "Chair Cassidy, HELP Committee Republicans Launch Task Force to Eliminate Fraud in Federal Spending, Protect American Taxpayers",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -1953,7 +1953,7 @@
       "date": "2026-01-12",
       "agency": "Congress",
       "type": "Report",
-      "title": "Grassley Report Details UnitedHealth’s Record of Appearing to Game the Medicare Advantage System, Turning Risk Adjustment into Its Own Business | U.S. Senator Chuck Grassley of Iowa",
+      "title": "Grassley Report Details UnitedHealth’s Record of Appearing to Game the Medicare Advantage System, Turning Risk Adjustment into Its Own Business",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -14442,7 +14442,7 @@
       "date": "2026-03-30",
       "agency": "MACPAC",
       "type": "Report",
-      "title": "In response to a Centers for Medicare & Medicaid Services (CMS) request for information on combatting fraud, waste, and abuse in federal health care programs, MACPAC outlined four...",
+      "title": "Comment Letter: Medicaid Program Integrity",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -14457,8 +14457,7 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": [],
-      "narrative_title": "Comment Letter: Medicaid Program Integrity"
+      "related_agencies": []
     },
     {
       "id": "doj-2026-04-07-692450150",
@@ -14823,7 +14822,7 @@
       "date": "2025-03-14",
       "agency": "HHS-OIG",
       "type": "Report",
-      "title": "The Office of Inspector General Strategic Plan 2025–2030 establishes the goals and priorities that guide OIG’s work to carry out its mission to provide objective oversight to promote the economy, efficiency, effectiveness, and integrity of HHS programs, as well as the health and welfare of the people they serve.",
+      "title": "HHS-OIG Strategic Plan 2025-2030: Managed Care, Nursing Homes, and Grants Identified as Priority Areas",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -14841,8 +14840,7 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "related_agencies": [],
-      "narrative_title": "HHS-OIG Strategic Plan 2025-2030: Managed Care, Nursing Homes, and Grants Identified as Priority Areas"
+      "related_agencies": []
     },
     {
       "id": "doj-2025-01-23-arbor-homecare-100m-masshealth",
