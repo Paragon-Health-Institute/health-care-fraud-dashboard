@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-04-15T17:19:23.287115"
+    "last_scraped": "2026-04-16T09:54:21.811185"
   },
   "items": [
     {
@@ -631,6 +631,30 @@
       "ai_confidence": 72,
       "ai_reason": "Opening statement from Ways and Means Health Subcommittee hearing about healthcare policy broadly; title indicates general healthcare reform discussion rather than fraud oversight, audits, or program ",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "congress-2026-04-15-3104321583",
+      "date": "2026-04-15",
+      "agency": "Congress",
+      "type": "Administrative Action",
+      "title": "Chairman Cassidy Unveils Agenda to Make Health Care Affordable Again | The U.S. Senate Committee on Health, Education, Labor & Pensions",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-unveils-agenda-to-make-health-care-affordable-again",
+      "link_label": "Congress Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This is a Senate HELP Committee press release announcing a chairman's agenda on healthcare affordability, which is a general healthcare policy initiative unrelated to fraud, improper payments, or prog",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -704,6 +728,14 @@
     "https://www.macpac.gov/publication/children-and-youth-with-special-health-care-needs-cyshcn-transitions-to-adult-coverage-draft-chapter-and-recommendations/",
     "https://www.macpac.gov/publication/medicaid-coverage-of-assistive-technology-for-adults-policy-scan-and-literature-review/",
     "https://energycommerce.house.gov/posts/chairmen-guthrie-and-griffith-announce-hearing-on-department-of-health-and-human-services-fy-2027-budget",
-    "http://www.finance.senate.gov/chairmans-news/working-families-tax-cuts-fight-medicaid-fraud"
+    "http://www.finance.senate.gov/chairmans-news/working-families-tax-cuts-fight-medicaid-fraud",
+    "https://www.gao.gov/products/gao-26-900719",
+    "https://energycommerce.house.gov/posts/chairman-griffith-delivers-opening-statement-at-subcommittee-on-legislative-hearing-on-solutions-aimed-at-improving-the-health-of-americans",
+    "https://energycommerce.house.gov/posts/health-subcommittee-holds-legislative-hearing-exploring-bills-that-uplift-the-public-health-of-our-country",
+    "http://www.finance.senate.gov/chairmans-news/crapo-announces-hearing-on-2027-hhs-budget",
+    "http://www.finance.senate.gov/ranking-members-news/wyden-whitehouse-sound-alarm-on-illegal-scheme-from-hhs-to-share-child-support-data-with-immigration-enforcement",
+    "https://www.help.senate.gov/rep/newsroom/press/next-week-senate-help-committee-to-hold-hearing-with-secretary-kennedy-on-hhs-budget",
+    "https://waysandmeans.house.gov/2026/04/15/chairman-smith-floor-statement-on-tax-day-resolution-republicans-made-workers-families-farmers-and-small-businesses-our-top-priority/",
+    "https://waysandmeans.house.gov/2026/04/15/chairman-smith-in-washington-examiner-working-families-tax-cuts-delivered-historic-tax-refund-season/"
   ]
 }

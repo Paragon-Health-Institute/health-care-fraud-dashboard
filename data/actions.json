@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-16T09:00:59.717582",
+    "last_updated": "2026-04-16T09:54:21.980391",
     "version": "1.0",
     "last_scraped": "2026-04-16T09:00:59.717572"
   },
@@ -15042,6 +15042,48 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "gao-2026-04-15-1413068311",
+      "date": "2026-04-15",
+      "agency": "GAO",
+      "type": "Audit",
+      "title": "Combating Fraud: Challenges in Managing Fraud Risks in Federally Funded, State-Administered Programs",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.gao.gov/products/gao-26-109093",
+      "link_label": "GAO Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "congress-2026-04-15-4121773732",
+      "date": "2026-04-15",
+      "agency": "Congress",
+      "type": "Congressional Hearing",
+      "title": "Sessions Opens Hearing on Preventing Fraud in State-Run Federal Programs - United States House Committee on Oversight and Government Reform",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oversight.house.gov/release/sessions-opens-hearing-on-preventing-fraud-in-state-run-federal-programs/",
+      "link_label": "Congress Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "MN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
