@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-16T14:30:17.017181",
+    "last_updated": "2026-04-16T14:34:28.762720",
     "version": "1.0",
     "last_scraped": "2026-04-16T09:00:59.717572"
   },
@@ -14561,27 +14561,6 @@
       "related_agencies": [
         "HHS-OIG"
       ]
-    },
-    {
-      "id": "macpac-2026-03-05-45262624",
-      "date": "2026-03-05",
-      "agency": "MACPAC",
-      "type": "Report",
-      "title": "Provider Enrollment and Credentialing in Medicaid",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.macpac.gov/publication/provider-enrollment-and-credentialing-in-medicaid/",
-      "link_label": "MACPAC Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicaid"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
     },
     {
       "id": "hhs-oig-2026-01-21-302086731",

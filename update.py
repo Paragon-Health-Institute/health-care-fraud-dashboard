@@ -2042,6 +2042,36 @@ def scrape_oig_reports(session):
     return items
 
 
+# Fraud-keyword gate for MACPAC/MedPAC publications. Both commissions
+# publish extensively on payment policy, access, and enrollment —
+# important healthcare policy but not in our scope. Require fraud-
+# specific vocabulary in title OR body before accepting an item.
+_MACPAC_MEDPAC_FRAUD_GATE = re.compile(
+    r"\b("
+    r"fraud|integrity|waste.{0,15}abuse|abuse.{0,15}waste|"
+    r"improper\s+payment|overpayment|kickback|false\s+claim|"
+    r"qui\s+tam|anti-?fraud|program\s+integrity|"
+    r"excluded?\s+provider|enforcement|suspension|moratorium|"
+    r"corrective\s+action|takedown|strike\s+force|"
+    r"upcod|risk\s+adjustment\s+(fraud|upcoding|manipulation)"
+    r")\b",
+    re.IGNORECASE,
+)
+
+
+def _fraud_gate_check(title, body, max_body_chars=2000):
+    """True if title OR first ~2k chars of body mention fraud-specific terms.
+
+    Used for MACPAC/MedPAC where most publications are general policy and
+    only a subset touch fraud/integrity. Scanning early body (not full body)
+    keeps the gate strict — passing mentions buried deep in a policy paper
+    don't qualify.
+    """
+    if _MACPAC_MEDPAC_FRAUD_GATE.search(title or ""):
+        return True
+    return bool(_MACPAC_MEDPAC_FRAUD_GATE.search((body or "")[:max_body_chars]))
+
+
 def scrape_medpac(session):
     """Scrape MedPAC documents listing.
 
@@ -2087,6 +2117,12 @@ def scrape_medpac(session):
                 pass
             if _detail_title:
                 title = _detail_title
+            # Fraud-keyword gate: MedPAC publishes extensively on Medicare
+            # payment policy, access, and benefits — most of it isn't
+            # fraud-focused. Require fraud/integrity vocabulary in title
+            # or early body text before accepting.
+            if not _fraud_gate_check(title, detail_text):
+                continue
             desc = ""
             if detail_text:
                 cleaned = detail_text
@@ -2157,6 +2193,12 @@ def scrape_macpac(session):
                 pass
             if _detail_title:
                 title = _detail_title
+            # Fraud-keyword gate: skip publications where neither title nor
+            # early body mentions fraud/integrity/waste/abuse. MACPAC publishes
+            # many general policy items (enrollment, payment, access) that
+            # aren't in scope for this dashboard.
+            if not _fraud_gate_check(title, detail_text):
+                continue
             desc = ""
             if detail_text:
                 cleaned = detail_text
