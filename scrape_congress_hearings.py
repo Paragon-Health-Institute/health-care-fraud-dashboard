@@ -503,15 +503,25 @@ def resolve_committee_url(title, committee_code, session=None):
     candidate = pattern.format(slug=slug)
     try:
         import requests as _req
-        r = _req.head(candidate, timeout=6, allow_redirects=True,
+        # Do NOT follow redirects: some sites (senate.gov) redirect
+        # missing pages to a custom 404 page that returns 200. We need
+        # to see the raw status of the candidate URL.
+        r = _req.head(candidate, timeout=6, allow_redirects=False,
                       headers={"User-Agent": "Mozilla/5.0"})
         if r.status_code == 200:
             return candidate
-        # Some sites return 405 for HEAD; try GET
+        # HEAD sometimes blocked (405/403) — try GET no-redirect
         if r.status_code in (405, 403):
-            r = _req.get(candidate, timeout=10, allow_redirects=True,
+            r = _req.get(candidate, timeout=10, allow_redirects=False,
                          headers={"User-Agent": "Mozilla/5.0"})
             if r.status_code == 200:
+                return candidate
+        # 301 (permanent redirect) to a non-404 target is fine — but
+        # we need to verify the redirect target isn't a 404 page.
+        if r.status_code == 301:
+            loc = r.headers.get("Location", "")
+            if loc and "404" not in loc.lower() and "notfound" not in loc.lower():
+                # Accept the candidate (redirect target is some canonical URL)
                 return candidate
     except Exception:
         pass

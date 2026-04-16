@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-16T15:07:36.725404",
+    "last_updated": "2026-04-16T15:27:54.421002",
     "version": "1.0",
     "last_scraped": "2026-04-16T09:00:59.717572"
   },
@@ -1639,7 +1639,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://www.cms.gov/files/document/cms-letter-ca-caa-enforcement-and-dispute-resolution.pdf",
-      "link_label": "CMS Letter (PDF)",
+      "link_label": "CMS Letter",
       "social_posts": [],
       "tags": [
         "Home Health",
@@ -2087,7 +2087,7 @@
     {
       "id": "cms-2026-01-06-minnesota-cap-rejected",
       "date": "2026-01-06",
-      "agency": "CMS",
+      "agency": "White House",
       "type": "Administrative Action",
       "title": "CMS Escalates Oversight of Minnesota Medicaid Over Fraud, Waste, and Abuse Concerns",
       "amount": null,
@@ -2100,9 +2100,12 @@
         "Medicaid"
       ],
       "state": "MN",
-      "source_type": "news",
+      "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "related_agencies": [
+        "CMS"
+      ]
     },
     {
       "id": "hhs-oig-2025-12-medicaid-deceased-enrollees-207m",
@@ -3455,7 +3458,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://www.justice.gov/criminal/media/1400046/dl",
-      "link_label": "DOJ White-Collar Enforcement Plan (PDF)",
+      "link_label": "DOJ White-Collar Enforcement Plan",
       "social_posts": [],
       "tags": [
         "Medicaid",
@@ -15899,8 +15902,8 @@
       "amount": "",
       "amount_numeric": 0,
       "officials": [],
-      "link": "https://www.judiciary.senate.gov/committee-activity/hearings/hearings-to-examine-fraud-in-minnesota",
-      "link_label": "Committee Hearing Page",
+      "link": "https://www.congress.gov/event/119-congress/senate-event/337967",
+      "link_label": "Congress.gov Event",
       "tags": [],
       "state": "",
       "source_type": "official",
