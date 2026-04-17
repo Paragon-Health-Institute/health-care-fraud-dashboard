@@ -36,7 +36,7 @@ AREA_TAGS = frozenset({
     "Autism/ABA",
     "Wound Care",
     "Adult Day Care",
-    "Behavioral Health",
+    "Mental Health",
     "Prenatal Care",
     "Skin Substitutes",
     "Personal Care",
@@ -71,52 +71,95 @@ def filter_tags(tags):
 
 # Regex patterns mapped to allowlist tags. Use only canonical tag names.
 # Used by scrapers to auto-tag from text. Each pattern is case-insensitive.
+#
+# **STRICT EXTRACTION RULE:** Each pattern matches only TERMS THAT LITERALLY
+# APPEAR IN SOURCE TEXT. No inferential triggers, no industry-context guessing.
+# If a tag can't be matched by a literal keyword or a recognized synonym,
+# it doesn't apply.
+#
+# Examples of what we DON'T do:
+#   - "Risk adjustment" alone doesn't imply Medicare Advantage (could be
+#     MA, could be ACA, could be ERISA plans — ambiguous).
+#   - "MCO" alone doesn't imply Medicaid Managed Care (could be commercial).
+#   - Company names (Centene, Molina, UnitedHealth) aren't used as proxies
+#     for a program — the source text must literally mention the program.
 TAG_PATTERNS = [
-    # Programs
-    (r"\bmedicare advantage\b|\brisk adjust", "Medicare Advantage"),
-    (r"\bmedicare\b", "Medicare"),
-    (r"\bmedicaid\b|\bmedi-cal\b", "Medicaid"),
-    # Medicaid Managed Care (Medicaid MCO) — must come after Medicaid
-    # so base program tag is also applied; mirrors how Medicare Advantage
-    # coexists with Medicare (when the body discusses both).
-    (r"medicaid\s+managed\s+care|\bmco\b|managed\s+care\s+organization|"
-     r"\bcentene\b|\bmolina\s+healthcare\b|capitation.*medicaid|"
-     r"medicaid.*capitation", "Medicaid Managed Care"),
-    (r"\btricare\b", "TRICARE"),
-    (r"affordable care act|\baca\b|obamacare", "ACA"),
-    # Areas
-    (r"\bdurable medical|\bdme\b|\bdmepos\b|wheelchair|orthotic brace|power mobility", "DME"),
+    # ---------- Programs ----------
+    # Medicare Advantage: explicit phrase or "MA plan/enrollee/contract" usage.
+    (r"\bmedicare\s+advantage\b|\bmedicare\s+part\s+c\b|\bma\s+plan\b|\b(ma|medicare\s+advantage)\s+enrollees?\b", "Medicare Advantage"),
+    # Medicare: literal word match, but the boilerplate agency phrase "centers for medicare & medicaid services" and variants must not count alone.
+    (r"\bmedicare\b(?!\s*&\s*medicaid\s+services\b)", "Medicare"),
+    # Medicaid: literal word match, excluding the boilerplate agency phrase.
+    (r"\bmedicaid\b(?!\s+services\b(?:\s|\.|,|$))|\bmedi-cal\b", "Medicaid"),
+    # Medicaid Managed Care: require explicit phrase. MCO/managed-care-organization
+    # alone is ambiguous (commercial MCOs exist) so require a nearby 'medicaid'.
+    (r"medicaid\s+managed\s+care|medicaid\s+mco\b|managed\s+care.{0,30}medicaid|"
+     r"medicaid.{0,30}managed\s+care\s+plan", "Medicaid Managed Care"),
+    (r"\btricare\b|\bchampus\b", "TRICARE"),
+    # ACA: require an explicit ACA phrase. "ACA" as a bare acronym can match
+    # non-healthcare contexts; keep the 3-letter form gated to clear contexts.
+    (r"affordable\s+care\s+act|obamacare|aca\s+marketplace|aca\s+exchange|"
+     r"aca\s+enrollment|aca\s+subsid|aca\s+premium\s+tax\s+credit|"
+     r"premium\s+tax\s+credit", "ACA"),
+
+    # ---------- Areas ----------
+    (r"\bdurable\s+medical\s+equipment\b|\bdmepos\b|\bdme\s+(supplier|fraud|scheme|provider|billing)\b|"
+     r"power\s+(wheelchair|mobility)|orthotic\s+brace", "DME"),
     (r"\bhospice\b", "Hospice"),
-    (r"\bpharmac", "Pharmacy"),
-    # Genetic Testing must come before Lab Testing so CGX/PGX schemes
-    # get the more specific tag
-    (r"genetic test|\bcgx\b|\bpgx\b|pharmacogenom|cancer\s+genomic|hereditary\s+cancer\s+(test|panel)", "Genetic Testing"),
-    # Lab Testing — broader lab fraud (toxicology, blood panels, COVID, pathology)
-    (r"\blaboratory\b|\btoxicolog|\burine\s+drug\s+test|urinalysis.*fraud|"
-     r"blood\s+(test|panel)\s+fraud|\bcovid.*test(ing)?.*fraud|"
-     r"pathology\s+lab|lab\s+(kickback|billing|test)\s+(scheme|fraud)|"
-     r"unnecessary\s+lab\s+test", "Lab Testing"),
-    (r"telehealth|telemedic", "Telehealth"),
-    (r"\bhome health\b", "Home Health"),
-    (r"nursing home|skilled nursing|long.term care facility", "Nursing Home"),
-    (r"medical device|implant.*fraud", "Medical Devices"),
-    (r"autism|\baba\b therapy|applied behavior", "Autism/ABA"),
-    (r"wound care|wound.*graft", "Wound Care"),
-    (r"adult day care|daycare.*fraud", "Adult Day Care"),
-    (r"behavioral health|mental health.*fraud|psychiatric.*fraud|counseling.*fraud", "Behavioral Health"),
-    (r"prenatal care|prenatal.*coordination", "Prenatal Care"),
-    (r"skin substitute|allograft", "Skin Substitutes"),
-    # Personal Care — Medicaid PCA/PCS (personal care attendant/services), non-medical ADL help
-    (r"personal\s+care\s+(attendant|assistant|service|program)|\bpca\b\s+(fraud|service|program|scheme)|"
-     r"\bpcs\b\s+(service|program|fraud)|home\s+care\s+attendant|"
-     r"consumer.directed\s+personal|cdpap", "Personal Care"),
-    (r"physical therapy", "Physical Therapy"),
-    (r"assisted living", "Assisted Living"),
-    (r"ambulance", "Ambulance"),
-    (r"hospital.*fraud|hospital.*scheme", "Hospital"),
-    (r"addiction|sober living|substance abuse.*treatment|rehab.*fraud|suboxone|methadone.*fraud", "Addiction Treatment"),
-    (r"opioid|fentanyl|oxycodone|controlled substance|pill mill|hydrocodone", "Opioids"),
-    (r"off-label", "Off-Label"),
+    # Pharmacy: require explicit pharmacy word, not just "pharmaceutical"
+    # (which pulls in any drug-manufacturer FCA case without pharmacy billing).
+    (r"\bpharmac(y|ies|ist)\b|\bcompound\s+pharmac|pill\s+mill\s+pharmacy", "Pharmacy"),
+    # Genetic Testing — specific before Lab Testing
+    (r"\bgenetic\s+test(ing)?\b|\bcgx\b|\bpgx\b|pharmacogenom|"
+     r"cancer\s+genomic|hereditary\s+cancer\s+(test|panel)", "Genetic Testing"),
+    # Lab Testing — require explicit lab/laboratory vocab or specific test fraud
+    (r"\b(clinical\s+)?laborator(y|ies)\b|\btoxicolog|"
+     r"\burine\s+drug\s+test|blood\s+test\s+fraud|"
+     r"\bcovid(-19)?\s+test(ing)?\s+(scheme|fraud|billing)|"
+     r"pathology\s+lab|unnecessary\s+lab\s+test", "Lab Testing"),
+    (r"\btelehealth\b|\btelemedicin(e|al)\b", "Telehealth"),
+    (r"\bhome\s+health\b(?!\s+aides?\s+who\s+|\s+agency\s+staff)", "Home Health"),
+    (r"\bnursing\s+home\b|\bskilled\s+nursing\b|\blong[-\s]term\s+care\s+facility\b", "Nursing Home"),
+    # Medical Devices: require explicit device word, not just "medical"
+    (r"\bmedical\s+device(s)?\b|\bdevice\s+(manufactur|kickback)", "Medical Devices"),
+    # Autism/ABA: explicit phrase required. "ABA" as bare acronym shouldn't count.
+    (r"\bautism\b|\bapplied\s+behavior\s+analysis\b|\baba\s+therapy\b|\baba\s+services\b", "Autism/ABA"),
+    (r"\bwound\s+care\b|wound\s+graft|skin\s+graft\s+fraud", "Wound Care"),
+    (r"\badult\s+day\s+care\b|\badult\s+day\s+services?\b|\badult\s+day\s+health\b", "Adult Day Care"),
+    # Mental Health (renamed from Behavioral Health): require the service,
+    # clinic, or scheme type — not just a defendant's profession. A
+    # "psychologist was arrested" mention doesn't mean the case is ABOUT
+    # mental health services; we need the fraud itself to be
+    # mental-health-focused.
+    (r"\bmental\s+health\s+(clinic|services|provider|billing|fraud|program|practice|treatment)\b|"
+     r"\bpsychiatr(y|ic)\s+(clinic|services|practice|billing|fraud)\b|"
+     r"\bpsychotherap(y|ist)\b|"
+     r"\bcounseling\s+(services|fraud|clinic|practice)\b|"
+     r"\bmental\s+illness\s+treatment\b|"
+     r"\bbehavioral\s+health\s+(clinic|services|practice|billing|provider)\b",
+     "Mental Health"),
+    (r"\bprenatal\s+care\b|prenatal\s+coordination", "Prenatal Care"),
+    (r"\bskin\s+substitute|allograft\b|amniotic\s+membrane\s+product", "Skin Substitutes"),
+    (r"\bpersonal\s+care\s+(attendant|assistant|service|program|aide)\b|"
+     r"\bpca\s+(fraud|service|program|scheme)\b|"
+     r"\bpcs\s+(service|program|fraud)\b|"
+     r"home\s+care\s+attendant|"
+     r"consumer[-\s]directed\s+personal|\bcdpap\b", "Personal Care"),
+    (r"\bphysical\s+therap(y|ist)\b", "Physical Therapy"),
+    (r"\bassisted\s+living\b", "Assisted Living"),
+    (r"\bambulance\b|non[-\s]emergency\s+(medical\s+)?transport", "Ambulance"),
+    # Hospital: require explicit hospital fraud/billing context (not just
+    # "investigated by hospital staff" mentions).
+    (r"\bhospital\s+(fraud|scheme|kickback|billing|overpayment|paid\s+kickbacks?)\b|"
+     r"\bhospital\s+(group|system)\s+(agrees|charged|settles)\b|"
+     r"(charged|fraudulently\s+billed)\s+\w+\s+hospital", "Hospital"),
+    (r"\baddiction\s+(treatment|recovery)\b|\bsober\s+living\b|"
+     r"\bsubstance\s+abuse\s+treatment\b|\brehab(ilitation)?\s+(fraud|scheme|clinic)\b|"
+     r"\bsuboxone\b|\bmethadone\s+(fraud|clinic)\b|"
+     r"\bopioid\s+treatment\s+program\b", "Addiction Treatment"),
+    (r"\bopioid(s)?\b|\bfentanyl\b|\boxycodone\b|\bhydrocodone\b|"
+     r"\bcontrolled\s+substance\b|\bpill\s+mill\b", "Opioids"),
+    (r"\boff[-\s]label\b", "Off-Label"),
 ]
 
 
@@ -124,7 +167,7 @@ def auto_tags(text):
     """Generate allowlist tags from a text blob via regex matching.
 
     Always returns tags from `ALLOWED_TAGS` only — safe to use as the
-    sole source of tags in scrapers.
+    sole source of tags in scrapers. Strict: literal term matches only.
     """
     import re
     if not text:
