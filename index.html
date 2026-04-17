@@ -498,7 +498,8 @@ function formatDate(d) {
   const parts = d.split('-');
   const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   if (parts.length === 3) return months[parseInt(parts[1],10)-1] + ' ' + parseInt(parts[2],10) + ', ' + parts[0];
-  if (parts.length === 2) return months[parseInt(parts[1],10)-1] + ' ' + parts[0];
+  // Month-only date (YYYY-MM) — used when the source states month+year but not a specific day
+  if (parts.length === 2) return months[parseInt(parts[1],10)-1] + ', ' + parts[0];
   return d;
 }
 
@@ -637,7 +638,7 @@ function appendCards(count, view) {
         const ns = document.createElement('span');
         ns.className = 'news-sourced-badge';
         ns.textContent = 'News-sourced';
-        ns.title = 'No official .gov source was available when this item was added. The action itself is real; the link points to news coverage.';
+        ns.title = 'No official .gov source was available when this item was added.';
         docBtn.parentNode.appendChild(ns);
       }
     }

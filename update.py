@@ -142,6 +142,7 @@ FEEDS = [
     {"name": "MedPAC",      "agency": "MedPAC",        "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "medpac"},
     {"name": "MACPAC",      "agency": "MACPAC",        "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "macpac"},
     {"name": "FinCEN",      "agency": "Treasury",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "fincen"},
+    {"name": "WhiteHouse",  "agency": "White House",   "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "whitehouse"},
     # --- Media feeds disabled — Fraud Landscape is manually curated (see data/media.json) ---
     # --- State AG feeds disabled — state actions removed from dashboard ---
 ]
@@ -2551,6 +2552,102 @@ def scrape_hhs_press(session):
     return items
 
 
+def scrape_whitehouse(session):
+    """Scrape whitehouse.gov for healthcare-fraud-relevant releases.
+
+    WH publishes at two listing pages:
+      - /releases/  — general press releases, fact sheets
+      - /presidential-actions/  — executive orders, proclamations
+
+    Both are relatively sparse on HC-fraud content (WH generally only
+    covers it when there's a major announcement), so we use a narrow
+    title pre-filter to avoid polluting the review queue with
+    unrelated WH content (tax, foreign policy, defense, etc.).
+    """
+    items = []
+    # Pre-filter: only fetch items whose title looks HC-fraud-relevant.
+    # Broader than the enforcement filter — WH typically announces things
+    # at a level above specific schemes (e.g., task force creation).
+    HC_TITLE_FILTER = re.compile(
+        r"\b("
+        r"fraud|medicare|medicaid|tricare|health\s*care|healthcare|"
+        r"affordable\s+care|obamacare|\baca\b|"
+        r"prescription|pharmac|opioid|drug\s+abuse|"
+        r"hospital|hospice|nursing\s+home|telehealth|"
+        r"hhs\b|cms\b"
+        r")\b",
+        re.I,
+    )
+    listing_urls = [
+        "https://www.whitehouse.gov/releases/",
+        "https://www.whitehouse.gov/presidential-actions/",
+    ]
+    seen_hrefs = set()
+    for list_url in listing_urls:
+        try:
+            resp = session.get(list_url, timeout=20)
+            resp.raise_for_status()
+            soup = BeautifulSoup(resp.text, 'lxml')
+            # Iterate h2/h3/h4 with anchor children — standard WP pattern
+            for h in soup.find_all(['h2', 'h3', 'h4']):
+                a_tag = h.find('a', href=True)
+                if not a_tag:
+                    continue
+                href = a_tag.get('href', '')
+                if not href or href in seen_hrefs:
+                    continue
+                # Skip the listing/index itself
+                if href.rstrip('/').endswith('/releases') or href.rstrip('/').endswith('/presidential-actions'):
+                    continue
+                # Only accept full release URLs (contain a year segment)
+                if not re.search(r'/(releases|presidential-actions)/\d{4}/', href):
+                    continue
+                title = a_tag.get_text(strip=True)
+                if not title or len(title) < 15:
+                    continue
+                # Pre-filter for HC-fraud vocabulary
+                if not HC_TITLE_FILTER.search(title):
+                    continue
+                seen_hrefs.add(href)
+                # Try to pick up date near the heading
+                date_str = ""
+                nearby_time = h.find_next('time')
+                if nearby_time:
+                    date_str = nearby_time.get('datetime', '')[:10] or nearby_time.get_text(strip=True)
+                # Fetch detail for body, canonical title, canonical date
+                detail_text = ""
+                _detail_title = ""
+                _detail_date = None
+                try:
+                    detail_text, _, _detail_title, _detail_date = fetch_detail_page(session, href)
+                except Exception:
+                    pass
+                if _detail_title:
+                    title = _detail_title
+                if _detail_date:
+                    date_str = _detail_date
+                desc = ""
+                if detail_text:
+                    cleaned = detail_text
+                    if title in cleaned:
+                        cleaned = cleaned.split(title, 1)[-1].strip()
+                    desc = cleaned[:600].strip()
+                    if len(cleaned) > 600:
+                        last_period = desc.rfind('.')
+                        if last_period > 200:
+                            desc = desc[:last_period + 1]
+                items.append({
+                    'title': title,
+                    'description': desc,
+                    'link': href,
+                    'pub_date': date_str,
+                    '_full_text': detail_text,
+                })
+        except Exception as e:
+            log(f"  WARNING: White House scrape ({list_url}) - {e}", "yellow")
+    return items
+
+
 def scrape_fincen(session):
     """Scrape FinCEN press releases + advisories.
 
@@ -2663,6 +2760,8 @@ def fetch_feed(session, feed):
         return scrape_fincen(session)
     if scrape_mode == 'hhs_press':
         return scrape_hhs_press(session)
+    if scrape_mode == 'whitehouse':
+        return scrape_whitehouse(session)
     if not feed.get('url'):
         return []
     return fetch_rss(session, feed['url'], use_browser_fallback=feed.get('browser_fallback', False))
@@ -3002,6 +3101,38 @@ def main():
 
                 id_prefix = 'media' if is_media else re.sub(r'\W', '-', actual_agency.lower())
                 link_label = f"{feed['name']} Report" if is_media else f"{actual_agency} Press Release"
+
+                # Agency/domain consistency check — warn when an item's agency
+                # doesn't match its link domain. This catches ingest mistakes
+                # like agency=CMS with link=whitehouse.gov. When they mismatch,
+                # the most common correct fix is: flip the primary agency to
+                # the publisher (matching the domain) and move the original
+                # agency to related_agencies.
+                _AGENCY_DOMAINS = {
+                    'DOJ':          'justice.gov',
+                    'CMS':          'cms.gov',
+                    'HHS':          'hhs.gov',
+                    'HHS-OIG':      'oig.hhs.gov',
+                    'GAO':          'gao.gov',
+                    'Treasury':     ('fincen.gov', 'treasury.gov', 'home.treasury.gov'),
+                    'White House':  'whitehouse.gov',
+                    'Congress':     ('house.gov', 'senate.gov', 'congress.gov'),
+                    'DEA':          'dea.gov',
+                    'FDA':          'fda.gov',
+                    'MedPAC':       'medpac.gov',
+                    'MACPAC':       'macpac.gov',
+                }
+                def _link_matches_agency(agency, link):
+                    if not agency or not link:
+                        return True
+                    domains = _AGENCY_DOMAINS.get(agency)
+                    if domains is None:
+                        return True  # unknown agency; don't warn
+                    if isinstance(domains, str):
+                        domains = (domains,)
+                    return any(d in link.lower() for d in domains)
+                if not _link_matches_agency(actual_agency, link) and feed.get('source_type') == 'official':
+                    log(f"  WARNING: agency '{actual_agency}' does not match domain of link {link[:80]} — check classification", "yellow")
 
                 # NOTE: description field is intentionally NOT written.
                 # The dashboard displays only title/link/date/tags. See

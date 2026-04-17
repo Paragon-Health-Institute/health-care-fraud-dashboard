@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-17T15:15:10.132881",
+    "last_updated": "2026-04-17T15:18:35.255804",
     "version": "1.0",
     "last_scraped": "2026-04-17T09:00:06.387066"
   },
@@ -14617,7 +14617,7 @@
     },
     {
       "id": "cms-2025-12-01-crushing-fraud-annual-report",
-      "date": "2026-02-01",
+      "date": "2026-02",
       "agency": "CMS",
       "type": "Report",
       "title": "CPI Crushing Fraud: Annual Report 2025",
@@ -14639,7 +14639,7 @@
     },
     {
       "id": "cms-2026-01-28-hot-spot-dmepos",
-      "date": "2025-09-01",
+      "date": "2025-09",
       "agency": "CMS",
       "type": "Report",
       "title": "CMS Fraud Hot Spot: DMEPOS Suppliers",
@@ -14661,7 +14661,7 @@
     },
     {
       "id": "cms-2026-01-28-fast-facts-radv",
-      "date": "2025-07-01",
+      "date": "2025-07",
       "agency": "CMS",
       "type": "Report",
       "title": "Recovering Improper Payments in Medicare Advantage Fast Facts",
@@ -14683,7 +14683,7 @@
     },
     {
       "id": "cms-2026-01-28-fast-facts-hospice-fraud",
-      "date": "2026-01-01",
+      "date": "2026-01",
       "agency": "CMS",
       "type": "Report",
       "title": "Hospice Fast Facts",
@@ -14705,7 +14705,7 @@
     },
     {
       "id": "cms-2026-01-28-fast-facts-dual-enrollment",
-      "date": "2025-09-01",
+      "date": "2025-09",
       "agency": "CMS",
       "type": "Report",
       "title": "Dual Enrollment Fast Facts",
@@ -15837,7 +15837,7 @@
     },
     {
       "id": "cms-pdf-2025-06-fdoc-sprint-strategy",
-      "date": "2025-06-01",
+      "date": "2025-06",
       "agency": "CMS",
       "type": "Report",
       "title": "Fraud Defense Operations Center Fast Facts",
@@ -15854,7 +15854,7 @@
     },
     {
       "id": "cms-pdf-2026-01-fdoc-fact-sheet-update",
-      "date": "2026-01-01",
+      "date": "2026-01",
       "agency": "CMS",
       "type": "Report",
       "title": "Fraud Defense Operations Center Fast Facts",
