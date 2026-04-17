@@ -207,17 +207,17 @@ def extract_usao_state(link):
 # When a city name is ambiguous (e.g., "Springfield" in multiple states),
 # it's OMITTED entirely rather than guessed.
 _CITY_TO_STATE = {
-    'birmingham': 'AL', 'montgomery': 'AL', 'huntsville': 'AL', 'mobile': 'AL',
+    'birmingham': 'AL', 'montgomery': 'AL', 'huntsville': 'AL',
     'anchorage': 'AK',
     'phoenix': 'AZ', 'tucson': 'AZ', 'mesa': 'AZ', 'scottsdale': 'AZ', 'tempe': 'AZ', 'chandler': 'AZ',
     'little rock': 'AR', 'fayetteville': 'AR',
     'los angeles': 'CA', 'san diego': 'CA', 'san jose': 'CA', 'san francisco': 'CA',
-    'fresno': 'CA', 'sacramento': 'CA', 'long beach': 'CA', 'oakland': 'CA',
+    'fresno': 'CA', 'sacramento': 'CA', 'long beach': 'CA',
     'bakersfield': 'CA', 'anaheim': 'CA', 'santa ana': 'CA', 'riverside': 'CA',
     'stockton': 'CA', 'irvine': 'CA', 'modesto': 'CA', 'huntington beach': 'CA',
-    'santa rosa': 'CA', 'rancho cucamonga': 'CA', 'ontario': 'CA', 'santa clarita': 'CA',
-    'garden grove': 'CA', 'oceanside': 'CA', 'elk grove': 'CA', 'corona': 'CA',
-    'lancaster': 'CA', 'palmdale': 'CA', 'pasadena': 'CA', 'orange': 'CA',
+    'santa rosa': 'CA', 'rancho cucamonga': 'CA', 'santa clarita': 'CA',
+    'garden grove': 'CA', 'oceanside': 'CA', 'elk grove': 'CA',
+    'palmdale': 'CA', 'pasadena': 'CA',
     'fullerton': 'CA', 'thousand oaks': 'CA', 'visalia': 'CA', 'berkeley': 'CA',
     'simi valley': 'CA', 'torrance': 'CA', 'sunnyvale': 'CA', 'hayward': 'CA',
     'concord': 'CA', 'roseville': 'CA', 'salinas': 'CA', 'escondido': 'CA',
@@ -247,7 +247,6 @@ _CITY_TO_STATE = {
     'dubuque': 'IA',
     'wichita': 'KS', 'overland park': 'KS', 'topeka': 'KS',
     'louisville': 'KY', 'lexington': 'KY', 'bowling green': 'KY', 'frankfort': 'KY',
-    'ashland city': 'KY',
     'new orleans': 'LA', 'baton rouge': 'LA', 'shreveport': 'LA', 'lafayette': 'LA',
     'lake charles': 'LA',
     'bangor': 'ME', 'lewiston': 'ME',
@@ -256,12 +255,12 @@ _CITY_TO_STATE = {
     'brockton': 'MA', 'new bedford': 'MA', 'quincy': 'MA',
     'detroit': 'MI', 'grand rapids': 'MI', 'warren': 'MI', 'sterling heights': 'MI',
     'ann arbor': 'MI', 'lansing': 'MI', 'flint': 'MI', 'dearborn': 'MI',
-    'southfield': 'MI', 'oakton': 'MI',
+    'southfield': 'MI',
     'minneapolis': 'MN', 'st paul': 'MN', 'saint paul': 'MN', 'duluth': 'MN',
     'jackson': 'MS', 'gulfport': 'MS',
     'kansas city mo': 'MO', 'st louis': 'MO', 'saint louis': 'MO',
     'independence': 'MO', 'jefferson city': 'MO',
-    'billings': 'MT', 'helena': 'MT',
+    'helena': 'MT',
     'omaha': 'NE', 'lincoln': 'NE',
     'las vegas': 'NV', 'henderson': 'NV', 'reno': 'NV', 'north las vegas': 'NV',
     'carson city': 'NV',
@@ -271,8 +270,8 @@ _CITY_TO_STATE = {
     'albuquerque': 'NM', 'las cruces': 'NM', 'santa fe': 'NM',
     'new york city': 'NY', 'buffalo': 'NY', 'yonkers': 'NY', 'syracuse': 'NY',
     'albany': 'NY', 'new rochelle': 'NY', 'brooklyn': 'NY', 'bronx': 'NY',
-    'queens': 'NY', 'manhattan': 'NY', 'staten island': 'NY', 'harlem': 'NY',
-    'larchmont': 'NY', 'long island': 'NY',
+    'manhattan': 'NY', 'staten island': 'NY', 'harlem': 'NY',
+    'long island': 'NY',
     'charlotte': 'NC', 'raleigh': 'NC', 'greensboro': 'NC', 'durham': 'NC',
     'winston-salem': 'NC', 'cary': 'NC', 'kinston': 'NC',
     'fargo': 'ND', 'bismarck': 'ND',
@@ -318,6 +317,16 @@ _CITY_TO_STATE = {
 # - "Kansas City" (MO or KS — we only map "kansas city mo")
 # - "Glendale" (CA or AZ)
 # - "Arlington" (VA, TX)
+# - "Oakland" (CA, but Oakland COUNTY in MI is extremely common)
+# - "Lancaster" (CA, PA, SC, TX, OH — widely ambiguous)
+# - "Larchmont" (NY village, but also Larchmont neighborhood in LA/CA)
+# - "Orange" (CA, NJ, CT — plus the word itself)
+# - "Ontario" (CA — also Canadian province, heavily ambiguous)
+# - "Mobile" (AL — but also a common adjective/noun)
+# - "Reading" (PA — but also the verb)
+# - "Billings" (MT — but also verb form of "billing", e.g. "false billings")
+# - "Queens" (NY borough — but "queens" is also a common noun)
+# - "Corona" (CA — word means "crown" and is a virus name post-2020)
 
 # Regex matching any city name as a whole word, longest-first.
 _CITY_RE = re.compile(
@@ -328,11 +337,22 @@ _CITY_RE = re.compile(
 
 def extract_city_states(text):
     """Return a list of state codes implied by city names found in text.
-    Handles multi-state when multiple cities appear."""
+    Handles multi-state when multiple cities appear.
+
+    Skips matches immediately followed by "County" — "Raleigh County"
+    (WV) shouldn't resolve to Raleigh, NC; "Oakland County" (MI)
+    shouldn't resolve to Oakland, CA. When a city name precedes
+    "County", the phrase is a county reference, not a city reference,
+    and the state can't be inferred from the city dict alone.
+    """
     if not text:
         return []
     found = []
     for m in _CITY_RE.finditer(text):
+        # Skip if followed by "County" — it's a county ref, not a city
+        after = text[m.end():m.end() + 10]
+        if re.match(r'\s+County\b', after, re.IGNORECASE):
+            continue
         code = _CITY_TO_STATE.get(m.group(0).lower())
         if code and code not in found:
             found.append(code)
@@ -500,51 +520,192 @@ _NATIONAL_TITLE_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Body text that indicates a case spans the country. When triggered, the
+# item is too nationwide for a single-state tag — return None rather than
+# picking a defendant-origin demonym.
+_NATIONAL_BODY_RE = re.compile(
+    r"\b(nationwide|across\s+the\s+country|multi-?state\s+scheme|"
+    r"nationally|throughout\s+the\s+United\s+States|"
+    r"in\s+multiple\s+states)\b",
+    re.IGNORECASE,
+)
+
+# Role nouns that turn a state name into a demonym ("Florida Man",
+# "Illinois Doctor"). When a state appears ONLY in this pattern, it's a
+# defendant-origin signal, not a fraud-location signal — needs body
+# corroboration to count.
+_DEMONYM_ROLE_WORDS = (
+    r"Man|Woman|Men|Women|Resident|Native|Citizen|Duo|Pair|Couple|Trio|"
+    r"Brothers?|Sisters?|Doctor|Physician|Nurse|Nursing\s+Assistant|"
+    r"Chiropractor|Podiatrist|Pharmacist|Dentist|Psychologist|Therapist|"
+    r"Pastor|Attorney|Lawyer|Defendant|Official|Representative|"
+    r"Businessman|Businesswoman|Businessperson|Business\s+Owner|"
+    r"Clinic\s+Operator|Pharmacy\s+Owner|CEO|Executive|Owner|Manager|"
+    r"Company|Pharmacy|Clinic"
+)
+
+# "State of X" / "the States of X, Y, and Z" / "X ex rel" — explicit
+# state-as-party signal, much stronger than a demonym.
+_STATE_AS_PARTY_RE = re.compile(
+    r"(?:the\s+)?States?\s+of\s+([A-Z][A-Za-z]+(?:\s+[A-Z][A-Za-z]+)?"
+    r"(?:,\s*(?:and\s+)?[A-Z][A-Za-z]+(?:\s+[A-Z][A-Za-z]+)?)*)",
+    re.IGNORECASE,
+)
+
+
+def extract_state_party_mentions(text):
+    """Find 'State of X' / 'States of X, Y, and Z' / 'X ex rel' patterns.
+
+    Returns state abbrs in the order they appear. Captures only the
+    explicit-party framing — ignores incidental state name mentions.
+    """
+    if not text:
+        return []
+    out = []
+    for m in _STATE_AS_PARTY_RE.finditer(text):
+        blob = m.group(1)
+        # Split on commas and "and" to handle "Georgia, Colorado, and South Carolina"
+        for part in re.split(r",\s*|\s+and\s+", blob):
+            part = part.strip()
+            # Try longest first (handle "South Carolina" before "Carolina")
+            for name, abbr in sorted(STATE_MAP.items(), key=lambda x: -len(x[0])):
+                if part.lower() == name.lower():
+                    if abbr not in out:
+                        out.append(abbr)
+                    break
+    # Also capture "X ex rel" qui tam pattern (one state per match)
+    for m in re.finditer(r"\b([A-Z][A-Za-z]+(?:\s+[A-Z][A-Za-z]+)?)\s+ex\s+rel\b", text):
+        name = m.group(1).strip()
+        for sname, abbr in STATE_MAP.items():
+            if name.lower() == sname.lower():
+                if abbr not in out:
+                    out.append(abbr)
+                break
+    return out
+
+
+def _title_demonym_states(title):
+    """Return state abbrs that appear in title ONLY as demonyms.
+
+    A demonym is state-name followed by a role noun (Man, Doctor, etc.).
+    If a state appears in title AND at least one occurrence is NOT a
+    demonym (e.g., "Fraud in Illinois"), it's considered a real signal
+    and NOT returned here.
+    """
+    if not title:
+        return []
+    demonym_only = []
+    for name, abbr in sorted(STATE_MAP.items(), key=lambda x: -len(x[0])):
+        # Find all occurrences of this state name in title
+        matches = list(re.finditer(r"\b" + re.escape(name) + r"\b", title, re.IGNORECASE))
+        if not matches:
+            continue
+        all_demonym = True
+        for m in matches:
+            after = title[m.end():m.end() + 60]
+            if not re.match(r"\s+(?:" + _DEMONYM_ROLE_WORDS + r")\b", after, re.IGNORECASE):
+                all_demonym = False
+                break
+        if all_demonym:
+            demonym_only.append(abbr)
+    return demonym_only
+
+
+def _demonym_corroborated(body_text, state_name):
+    """True if state_name appears in body_text outside demonym patterns.
+
+    "Florida Man" in title corroborated only if body mentions Florida in
+    a non-demonym context: "Florida pharmacy", "in Florida", "Florida-based",
+    etc. If every body occurrence is also a demonym, it's NOT corroborated.
+    """
+    if not body_text:
+        return False
+    matches = list(re.finditer(r"\b" + re.escape(state_name) + r"\b", body_text, re.IGNORECASE))
+    if not matches:
+        return False
+    for m in matches:
+        after = body_text[m.end():m.end() + 60]
+        if not re.match(r"\s+(?:" + _DEMONYM_ROLE_WORDS + r")\b", after, re.IGNORECASE):
+            return True
+    return False
+
 
 def get_state(text, title=None, link=None):
     """Return a state code (or comma-separated list) from available signals.
 
-    **Title-first rule**: if the title names one or more states, those are
-    authoritative — they're usually the fraud-location signal ("Waukesha
-    Medical Equipment Company..." -> WI). USAO district is only used as a
-    FALLBACK when no state appears in the title, because prosecution venue
-    (the USAO district) is often incidental to the fraud itself and mixing
-    the two kinds of signal makes state filters noisy.
+    **Rule (2026-04-17, revised):** prosecution venue + explicit party
+    mentions win. Demonyms ("Florida Man", "Illinois Doctor") are weak
+    signals and only count when corroborated by the body text.
 
     Priority order:
-      0. National/nationwide titles short-circuit to None (no single-state
-         tag for inherently-national actions like the "324 Defendants"
-         takedowns).
-      1. All state names matched in TITLE — multi-state aware.
-      2. USAO district from LINK (DOJ items only) — ONLY when no title state.
-      3. City in TITLE via `_CITY_TO_STATE` — only when nothing above matched.
-      4. Body-text fallback for items without title/link signals.
+      0. National-scope guard: title OR body matches nationwide/multi-state
+         pattern -> None.
+      1. USAO district from LINK (DOJ items) -> primary state.
+      2. State-as-party patterns ("State of X", "States of X, Y, Z",
+         "X ex rel") in title+body -> append.
+      3. Non-demonym state names in title (e.g., "Fraud in Illinois" —
+         Illinois appears not as a demonym) -> append.
+      4. City in title via `_CITY_TO_STATE` -> append.
+      5. Title demonyms ("Florida Man") -> append ONLY if corroborated
+         by a non-demonym mention of that state in body text.
+      6. Body-text fallback (longest state-name match) -> use only if
+         nothing above produced a result.
 
-    See project note `state_tag_meaning_tbd.md` for the deferred question of
-    whether "state" should mean fraud-location, defendant origin, or
-    prosecution venue when they differ. Current rule prefers fraud-location.
+    See `state_tag_meaning_tbd.md` for the design discussion.
     """
-    # Path 0: national-scope short-circuit
+    # Path 0: national-scope short-circuit (title OR body)
     if title and _NATIONAL_TITLE_RE.search(title):
         return None
-    # Path 1: state names in title (multi-state aware)
-    if title:
-        title_states = extract_all_state_names(title)
-        if title_states:
-            return ", ".join(title_states)
-    # Path 2: USAO district (fallback only)
+    if text and _NATIONAL_BODY_RE.search(text):
+        return None
+
+    states = []  # ordered, deduped
+
+    # Path 1: USAO district (primary)
     usao = extract_usao_state(link) if link else None
     if usao:
-        return usao
-    # Path 3: city in title (fallback only)
+        states.append(usao)
+
+    # Path 2: state-as-party ("State of X", "States of X, Y, Z")
+    combined_text = (title or "") + "\n" + (text or "")
+    for s in extract_state_party_mentions(combined_text):
+        if s not in states:
+            states.append(s)
+
+    # Path 3: non-demonym state names in title (real signals)
     if title:
-        city_states = extract_city_states(title)
-        if city_states:
-            return ", ".join(city_states)
-    # Path 4: body-text fallback
-    for name, abbr in sorted(STATE_MAP.items(), key=lambda x: -len(x[0])):
-        if re.search(r'\b' + re.escape(name) + r'\b', text):
-            return abbr
+        demonym_states = set(_title_demonym_states(title))
+        for s in extract_all_state_names(title):
+            if s in demonym_states:
+                continue  # defer to path 5 (needs corroboration)
+            if s not in states:
+                states.append(s)
+
+    # Path 4: city in title
+    if title:
+        for s in extract_city_states(title):
+            if s not in states:
+                states.append(s)
+
+    # Path 5: title demonyms — only if corroborated by body text
+    if title and text:
+        for name, abbr in sorted(STATE_MAP.items(), key=lambda x: -len(x[0])):
+            if abbr in states:
+                continue
+            # Only consider if present as a demonym in title
+            if abbr not in _title_demonym_states(title):
+                continue
+            if _demonym_corroborated(text, name):
+                states.append(abbr)
+
+    if states:
+        return ", ".join(states)
+
+    # Path 6: body-text fallback (longest name wins)
+    if text:
+        for name, abbr in sorted(STATE_MAP.items(), key=lambda x: -len(x[0])):
+            if re.search(r"\b" + re.escape(name) + r"\b", text):
+                return abbr
     return None
 
 def extract_amount(text, title=""):
