@@ -1,8 +1,8 @@
 # Scraping Coverage Report
 
-*Auto-generated 2026-04-17 15:59 UTC from `build_scraping_report.py`. Source of truth is live code + data; to edit narrative sections, edit `_scraping_report_template.md`. Feed list, scraper descriptions, and coverage counts are regenerated from `update.py`, `.github/workflows/*.yml`, and `data/actions.json`.*
+*Auto-generated {{GENERATED_AT}} from `build_scraping_report.py`. Source of truth is live code + data; to edit narrative sections, edit `_scraping_report_template.md`. Feed list, scraper descriptions, and coverage counts are regenerated from `update.py`, `.github/workflows/*.yml`, and `data/actions.json`.*
 
-Summary: 23 configured feeds, 18 scrape_* functions.
+Summary: {{AUTO_FEED_COUNT}} configured feeds, {{AUTO_SCRAPER_COUNT}} scrape_* functions.
 
 ---
 
@@ -25,15 +25,7 @@ From those queues, items are either promoted to `actions.json`, rejected (added 
 
 ## Scheduling
 
-| Workflow | Schedule | File |
-|---|---|---|
-| Daily Fraud Dashboard Update | Daily 7:17 UTC | `daily-update.yml` |
-| Daily Congressional Hearings Update | Daily 9:13 UTC | `hearings-update.yml` |
-| Daily Media Investigations Update | Daily 8:42 UTC | `media-update.yml` |
-| Weekly News-Source Upgrade Check | Suns 10:07 UTC | `news-source-check.yml` |
-| Daily Oversight Update | Daily 8:23 UTC | `oversight-update.yml` |
-| Daily Scraping Report Rebuild | Daily 11:31 UTC | `scraping-report.yml` |
-| Weekly Landing Page Monitor | Mons 9:43 UTC | `weekly-monitor.yml` |
+{{AUTO_SCHEDULE}}
 
 Times are deliberately off-minute (not `:00` or `:30`) to spread API load. Each workflow auto-commits changes to `main` when results change.
 
@@ -41,144 +33,7 @@ Times are deliberately off-minute (not `:00` or `:30`) to spread API load. Each 
 
 ## Feeds by agency
 
-### DOJ
-
-- **`DOJ-OPA`** — *official* (enabled)
-  - Function: `scrape_doj_opa()`
-  - Scrape DOJ Office of Public Affairs press releases using Playwright.
-  - URL: https://www.justice.gov/news/press-releases
-  - URL: https://www.justice.gov
-- **`DOJ`** — *official* (**disabled**)
-  - Method: RSS feed
-  - URL: https://www.justice.gov/news/rss
-- **`DOJ-USAO`** — *official* (enabled)
-  - Function: `scrape_doj_usao()`
-  - Scrape DOJ USAO (district-level) press releases using Playwright.
-  - URL: https://www.justice.gov/usao/pressreleases
-  - URL: https://www.justice.gov
-
-### HHS-OIG
-
-- **`HHS-OIG`** — *official* (enabled)
-  - Function: `scrape_oig()`
-  - Scrape HHS-OIG enforcement actions page.
-  - URL: https://oig.hhs.gov/fraud/enforcement/?type=criminal-and-civil-actions
-  - URL: https://oig.hhs.gov/fraud/enforcement/
-- **`HHS-OIG-RPT`** — *official* (enabled)
-  - Function: `scrape_oig_reports()`
-  - Scrape HHS-OIG audit/inspection reports.
-  - URL: https://oig.hhs.gov/reports/all/
-  - URL: https://oig.hhs.gov
-- **`HHS-OIG-PR`** — *official* (enabled)
-  - Function: `scrape_oig_press()`
-  - Scrape HHS-OIG newsroom press releases.
-  - URL: https://oig.hhs.gov/newsroom/news-releases-articles/
-  - URL: https://oig.hhs.gov
-
-### CMS
-
-- **`CMS`** — *official* (enabled)
-  - Function: `scrape_cms()`
-  - Scrape CMS newsroom press releases with pagination.
-  - URL: https://www.cms.gov/newsroom?page={page_n}
-  - URL: https://www.cms.gov
-- **`CMS-Fraud`** — *official* (enabled)
-  - Function: `scrape_cms_fraud_page()`
-  - Scrape cms.gov/fraud — CMS's dedicated anti-fraud landing page.
-  - URL: https://www.cms.gov/fraud
-  - URL: https://www.cms.gov
-
-### HHS
-
-- **`HHS`** — *official* (**disabled**)
-  - Function: `scrape_hhs_press()`
-  - Scrape HHS press room (hhs.gov/press-room).
-  - URL: https://www.hhs.gov/press-room/index.html
-  - URL: https://www.hhs.gov
-
-### Congress
-
-- **`H-Oversight`** — *official* (enabled)
-  - Function: `scrape_h_oversight()`
-  - Scrape House Oversight Committee press releases using Playwright.
-  - URL: https://oversight.house.gov/release/
-- **`H-E&C`** — *official* (enabled)
-  - Function: `scrape_energy_commerce()`
-  - Scrape House Energy & Commerce press releases using Playwright.
-  - URL: https://energycommerce.house.gov/news/press-release
-  - URL: https://energycommerce.house.gov
-- **`S-Finance`** — *official* (enabled)
-  - Method: RSS feed
-  - URL: https://www.finance.senate.gov/rss/feeds/?type=press
-- **`S-HELP`** — *official* (enabled)
-  - Function: `scrape_help_committee()`
-  - Scrape Senate HELP Committee press releases using Playwright.
-  - URL: https://www.help.senate.gov/chair/newsroom
-  - URL: https://www.help.senate.gov
-- **`H-W&M`** — *official* (enabled)
-  - Function: `scrape_ways_means()`
-  - Scrape House Ways & Means Committee news using Playwright.
-  - URL: https://waysandmeans.house.gov/news/
-  - URL: https://waysandmeans.house.gov
-- **`S-Judiciary`** — *official* (enabled)
-  - Function: `scrape_senate_judiciary()`
-  - Scrape Senate Judiciary Committee press releases.
-  - URL: https://www.judiciary.senate.gov{path}
-  - URL: https://www.judiciary.senate.gov
-- **`H-Judiciary`** — *official* (enabled)
-  - Function: `scrape_house_judiciary()`
-  - Scrape House Judiciary Committee press releases using Playwright.
-  - URL: https://judiciary.house.gov/news
-  - URL: https://judiciary.house.gov
-
-### White House
-
-- **`WhiteHouse`** — *official* (enabled)
-  - Function: `scrape_whitehouse()`
-  - Scrape whitehouse.gov for healthcare-fraud-relevant releases.
-  - URL: https://www.whitehouse.gov/releases/
-  - URL: https://www.whitehouse.gov/presidential-actions/
-
-### GAO
-
-- **`GAO`** — *official* (enabled)
-  - Method: RSS feed
-  - URL: https://www.gao.gov/rss/reports.xml
-
-### DEA
-
-- **`DEA`** — *official* (enabled)
-  - Method: RSS feed
-  - URL: https://www.dea.gov/press-releases/rss
-
-### MedPAC
-
-- **`MedPAC`** — *official* (enabled)
-  - Function: `scrape_medpac()`
-  - Scrape MedPAC documents listing.
-  - URL: https://www.medpac.gov/document/
-
-### MACPAC
-
-- **`MACPAC`** — *official* (enabled)
-  - Function: `scrape_macpac()`
-  - Scrape MACPAC publications listing.
-  - URL: https://www.macpac.gov/publication/
-
-### Treasury
-
-- **`FinCEN`** — *official* (enabled)
-  - Function: `scrape_fincen()`
-  - Scrape FinCEN press releases + advisories.
-  - URL: https://www.fincen.gov/news/press-releases
-  - URL: https://www.fincen.gov
-
-### FDA
-
-- **`FDA`** — *official* (**disabled**)
-  - Method: RSS feed
-  - URL: https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml
-
+{{AUTO_FEEDS}}
 
 ---
 
@@ -232,19 +87,7 @@ Items are deduped against existing `actions.json` by:
 
 ## Current coverage
 
-| Source | Items |
-|---|---|
-| DOJ | 522 |
-| HHS-OIG | 52 |
-| CMS | 30 |
-| Congress | 26 |
-| White House | 5 |
-| GAO | 5 |
-| MACPAC | 4 |
-| Treasury | 3 |
-| HHS | 1 |
-| Media (manual) | 20 |
-| **Total** | **668** |
+{{AUTO_COVERAGE}}
 
 ---
 
