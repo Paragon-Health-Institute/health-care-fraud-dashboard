@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-17T14:56:00.194937",
+    "last_updated": "2026-04-17T15:11:18.074560",
     "version": "1.0",
     "last_scraped": "2026-04-17T09:00:06.387066"
   },
@@ -659,7 +659,7 @@
       "date": "2026-03-17",
       "agency": "CMS",
       "type": "Investigation",
-      "title": "Dr. Oz Sends Fraud Inquiry to Florida Governor DeSantis, Calling State a Hotspot for Health Care Fraud",
+      "title": "Trump administration widens Medicaid fraud crackdown to Florida, calling it a 'hotspot'",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -676,7 +676,8 @@
       "state": "FL",
       "source_type": "news",
       "auto_fetched": false,
-      "related_agencies": []
+      "related_agencies": [],
+      "narrative_title": "Dr. Oz Sends Fraud Inquiry to Florida Governor DeSantis, Calling State a Hotspot for Health Care Fraud"
     },
     {
       "id": "whitehouse-2026-03-16-task-force-eliminate-fraud",
@@ -1090,7 +1091,7 @@
       "date": "2026-03-03",
       "agency": "CMS",
       "type": "Investigation",
-      "title": "Dr. Oz Launches Medicaid Fraud Investigation of New York; Sends 50-Question Letter to Gov. Hochul",
+      "title": "Dr. Mehmet Oz launches investigation of New York's Medicaid program",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -1106,7 +1107,8 @@
       "state": "NY",
       "source_type": "news",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "Dr. Oz Launches Medicaid Fraud Investigation of New York; Sends 50-Question Letter to Gov. Hochul"
     },
     {
       "id": "doj-2026-02-atlanta-gastro-settlement",
@@ -1184,7 +1186,8 @@
       "auto_fetched": false,
       "entities": [],
       "related_agencies": [
-        "HHS"
+        "HHS",
+        "White House"
       ],
       "narrative_title": "CMS/HHS Announce Major Anti-Fraud Package: $259.5M MN Deferral, DMEPOS Moratorium, CRUSH Initiative"
     },
@@ -1928,7 +1931,7 @@
       "date": "2026-01-10",
       "agency": "CMS",
       "type": "Investigation",
-      "title": "Dr. Oz and Deputy Secretary O'Neill Fact-Finding Mission to Minnesota",
+      "title": "Dr. Oz on Medicaid fraud 'fact-finding mission' in Minnesota, $2B could be at stake",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -1941,7 +1944,8 @@
       "state": "MN",
       "source_type": "news",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "Dr. Oz and Deputy Secretary O'Neill Fact-Finding Mission to Minnesota"
     },
     {
       "id": "doj-2026-01-national-fraud-division-whitehouse",
@@ -2314,7 +2318,7 @@
       "date": "2025-12-03",
       "agency": "GAO",
       "type": "Report",
-      "title": "GAO Finds ACA Subsidy Fraud Risks Persist After Testing Fictitious Applicants",
+      "title": "Patient Protection and Affordable Care Act: Preliminary Results from Ongoing Review Suggest Fraud Risks in the Advance Premium Tax Credit Persist",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -2327,7 +2331,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "GAO Finds ACA Subsidy Fraud Risks Persist After Testing Fictitious Applicants"
     },
     {
       "id": "doj-2025-12-patrick-moore-kickbacks-sentenced",
@@ -3119,7 +3124,7 @@
       "date": "2025-06-26",
       "agency": "GAO",
       "type": "Report",
-      "title": "GAO Report: Medicaid Managed Care's Near-0% Improper Payment Estimate Fails to Capture Program Integrity Risks",
+      "title": "Medicaid Managed Care: Improper Payment Estimate",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -3132,7 +3137,8 @@
       "entities": [],
       "state": null,
       "source_type": "official",
-      "auto_fetched": false
+      "auto_fetched": false,
+      "narrative_title": "GAO Report: Medicaid Managed Care's Near-0% Improper Payment Estimate Fails to Capture Program Integrity Risks"
     },
     {
       "id": "cms-2025-06-marketplace-integrity-final-rule",
@@ -3649,7 +3655,7 @@
       "date": "2025-03-11",
       "agency": "GAO",
       "type": "Report",
-      "title": "GAO: Federal Government Made $162 Billion in Improper Payments in FY2024; Medicare and Medicaid Account for More Than Half",
+      "title": "Program Integrity: Agencies and Congress Can Take Actions to Better Manage Improper Payments and Fraud Risks",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -3664,14 +3670,15 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "related_agencies": []
+      "related_agencies": [],
+      "narrative_title": "GAO: Federal Government Made $162 Billion in Improper Payments in FY2024; Medicare and Medicaid Account for More Than Half"
     },
     {
       "id": "gao-2025-02-25-high-risk-list",
       "date": "2025-02-25",
       "agency": "GAO",
       "type": "Report",
-      "title": "GAO 2025 High-Risk List: Medicare and Medicaid Maintain High-Risk Status",
+      "title": "High-Risk Series: Heightened Attention to High-Risk Areas Could Yield Billions in Savings and A More Efficient and Effective Government",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -3685,7 +3692,8 @@
       "entities": [],
       "state": null,
       "source_type": "official",
-      "auto_fetched": false
+      "auto_fetched": false,
+      "narrative_title": "GAO 2025 High-Risk List: Medicare and Medicaid Maintain High-Risk Status"
     },
     {
       "id": "doj-2025-02-20-dmerx-schreck-plea",
