@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-17T14:47:20.381120",
+    "last_updated": "2026-04-17T14:56:00.194937",
     "version": "1.0",
     "last_scraped": "2026-04-17T09:00:06.387066"
   },
@@ -3090,33 +3090,6 @@
       ]
     },
     {
-      "id": "doj-2025-07-cms-dof-data-fusion-center",
-      "date": "2025-06-30",
-      "agency": "DOJ",
-      "type": "Structural/Organizational",
-      "title": "National Health Care Fraud Takedown Results in 324 Defendants Charged in Connection with Over $14.6 Billion in Alleged Fraud",
-      "amount": "",
-      "amount_numeric": 0.0,
-      "officials": [],
-      "link": "https://www.justice.gov/opa/pr/national-health-care-fraud-takedown-results-324-defendants-charged-connection-over-146",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare Advantage",
-        "Medicare",
-        "Medicaid",
-        "DME"
-      ],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": false,
-      "entities": [],
-      "related_agencies": [
-        "HHS-OIG"
-      ],
-      "narrative_title": "DOJ Announces Health Care Fraud Data Fusion Center"
-    },
-    {
       "id": "doj-2025-07-nd-bismarck-1-8m-fraud",
       "date": "2025-06-30",
       "agency": "DOJ",
@@ -3377,7 +3350,7 @@
       "id": "doj-2025-05-12-white-collar-enforcement-plan",
       "date": "2025-05-12",
       "agency": "DOJ",
-      "type": "Structural/Organizational",
+      "type": "Administrative Action",
       "title": "DOJ Criminal Division Names Health Care Fraud an Enforcement Priority",
       "amount": "",
       "amount_numeric": 0.0,
