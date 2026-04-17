@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-04-16T15:47:16.296924",
+    "last_updated": "2026-04-17T09:00:06.387075",
     "version": "1.0",
-    "last_scraped": "2026-04-16T09:00:59.717572"
+    "last_scraped": "2026-04-17T09:00:06.387066"
   },
   "actions": [
     {
@@ -15802,6 +15802,59 @@
         "Senate Judiciary Subcommittee on Border Security and Immigration"
       ],
       "_filter_reason": "fraud keyword + HC committee (Senate Judiciary Subcommittee on Border Security and Immigration)"
+    },
+    {
+      "id": "doj-2026-04-16-3777779748",
+      "date": "2026-04-16",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "United States Sues Illinois Doctor for Fraudulent Billing in Durable Medical Equipment Scheme",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/united-states-sues-illinois-doctor-fraudulent-billing-durable-medical-equipment-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME"
+      ],
+      "entities": [],
+      "state": "IL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-04-16-3903432334",
+      "date": "2026-04-16",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Clayton Chiropractor Sentenced to 100 Months in Prison",
+      "amount": "$4.7 million",
+      "amount_numeric": 4700000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edmo/pr/creve-coeur-chiropractor-sentenced-100-months-prison",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "TRICARE",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "MO",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Health Care Fraud"
+      ]
     }
   ]
 }
