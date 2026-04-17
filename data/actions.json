@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-17T10:45:48.847934",
+    "last_updated": "2026-04-17T10:52:17.941952",
     "version": "1.0",
     "last_scraped": "2026-04-17T09:00:06.387066"
   },
@@ -15677,7 +15677,7 @@
       "date": "2025-02-12",
       "agency": "Congress",
       "type": "Hearing",
-      "title": "“The War on Waste: Stamping Out the Scourge of Improper Payments and Fraud”",
+      "title": "The War on Waste: Stamping Out the Scourge of Improper Payments and Fraud",
       "amount": "",
       "amount_numeric": 0,
       "officials": [],
@@ -15699,7 +15699,7 @@
       "date": "2025-03-11",
       "agency": "Congress",
       "type": "Hearing",
-      "title": "“Shifting Gears: Moving from Recovery to Prevention of Improper Payments and Fraud”",
+      "title": "Shifting Gears: Moving from Recovery to Prevention of Improper Payments and Fraud",
       "amount": "",
       "amount_numeric": 0,
       "officials": [],
@@ -15721,7 +15721,7 @@
       "date": "2025-06-24",
       "agency": "Congress",
       "type": "Hearing",
-      "title": "“Locking in the DOGE Cuts: Ending Waste, Fraud, and Abuse for Good”",
+      "title": "Locking in the DOGE Cuts: Ending Waste, Fraud, and Abuse for Good",
       "amount": "",
       "amount_numeric": 0,
       "officials": [],
@@ -15814,28 +15814,6 @@
       ]
     },
     {
-      "id": "congress-2026-04-16-747015175",
-      "date": "2026-04-16",
-      "agency": "Congress",
-      "type": "Hearing",
-      "title": "Hearing Wrap Up: Fraud Runs Rampant When States Do Not Prevent It - United States House Committee on Oversight and Government Reform",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oversight.house.gov/release/hearing-wrap-up-fraud-runs-rampant-when-states-do-not-prevent-it/",
-      "link_label": "Congress Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicaid"
-      ],
-      "entities": [],
-      "state": "KY",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
       "id": "congress-2026-04-16-1824692934",
       "date": "2026-04-16",
       "agency": "Congress",
@@ -15850,27 +15828,6 @@
       "tags": [],
       "entities": [],
       "state": "TX",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
-      "id": "congress-2026-04-15-4121773732",
-      "date": "2026-04-15",
-      "agency": "Congress",
-      "type": "Hearing",
-      "title": "Sessions Opens Hearing on Preventing Fraud in State-Run Federal Programs - United States House Committee on Oversight and Government Reform",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oversight.house.gov/release/sessions-opens-hearing-on-preventing-fraud-in-state-run-federal-programs/",
-      "link_label": "Congress Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicaid"
-      ],
-      "entities": [],
-      "state": "MS",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
