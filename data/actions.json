@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-17T15:18:35.255804",
+    "last_updated": "2026-04-17T15:25:03.238530",
     "version": "1.0",
     "last_scraped": "2026-04-17T09:00:06.387066"
   },
@@ -1945,7 +1945,10 @@
       "source_type": "news",
       "auto_fetched": false,
       "entities": [],
-      "narrative_title": "Dr. Oz and Deputy Secretary O'Neill Fact-Finding Mission to Minnesota"
+      "narrative_title": "Dr. Oz and Deputy Secretary O'Neill Fact-Finding Mission to Minnesota",
+      "related_agencies": [
+        "HHS"
+      ]
     },
     {
       "id": "doj-2026-01-national-fraud-division-whitehouse",
@@ -2025,20 +2028,21 @@
       "date": "2025-12-05",
       "agency": "CMS",
       "type": "Administrative Action",
-      "title": "CMS Directs Minnesota to Submit Medicaid Corrective Action Plan by Year-End",
+      "title": "Trump admin to audit Minnesota Medicaid receipts, defer payment to 14 programs",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
-      "link": "https://www.cms.gov/newsroom/press-releases/trump-administration-prioritizes-affordability-announcing-major-crackdown-health-care-fraud",
-      "link_label": "CMS Press Release",
+      "link": "https://www.fox9.com/news/fraud-minnesota-trump-admin-audit-mn-medicaid-receipts-defer-payment-14-programs",
+      "link_label": "FOX 9 News",
       "social_posts": [],
       "tags": [
         "Medicaid"
       ],
       "state": "MN",
-      "source_type": "official",
+      "source_type": "news",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "CMS Directs Minnesota to Submit Medicaid Corrective Action Plan by Year-End"
     },
     {
       "id": "cms-2026-01-06-minnesota-cap-rejected",
