@@ -1147,6 +1147,28 @@ def _is_hearing_about(title):
     return bool(_HEARING_ABOUT_PATTERN.search(title))
 
 
+# Pattern for "Member X introduces / files / proposes bill / legislation"
+# press releases. Dashboard doesn't systematically track bill introductions,
+# so including these leads to arbitrary/inconsistent coverage.
+_BILL_INTRO_PATTERN = re.compile(
+    r"\b("
+    r"introduce(s|d)?\s+(a?\s+)?(new\s+)?(bipartisan\s+)?(bill|legislation|act)\b|"
+    r"(introduces|reintroduces|unveils|releases)\s+.{0,40}?\b(bill|legislation|act|proposal)\b|"
+    r"bill\s+(to\s+fight|to\s+combat|to\s+address|to\s+prevent)|"
+    r"legislative\s+proposal\s+to\s+(fight|combat|address|prevent)|"
+    r"file(s|d)?\s+.{0,30}?\blegislation\b"
+    r")",
+    re.IGNORECASE,
+)
+
+
+def _is_bill_intro(title):
+    """True if the title is a 'Member X introduces bill' press release."""
+    if not title:
+        return False
+    return bool(_BILL_INTRO_PATTERN.search(title))
+
+
 def scrape_h_oversight(session):
     """Scrape House Oversight Committee press releases using Playwright.
 
@@ -1198,6 +1220,13 @@ def scrape_h_oversight(session):
             # via scrape_congress_hearings.py (Congress.gov API). Avoids
             # duplicate coverage of the same event.
             if _is_hearing_about(title):
+                continue
+            # Reject "Member X introduces bill" press releases — the
+            # dashboard doesn't track bill introductions consistently, so
+            # these get arbitrary inclusion. Actual legislation that
+            # passes + affects fraud enforcement should appear via its
+            # implementing agency's press release instead.
+            if _is_bill_intro(title):
                 continue
             desc = ""
             if detail_text:
@@ -1436,6 +1465,10 @@ def scrape_senate_judiciary(session):
                 # scrape_congress_hearings.py (Congress.gov API).
                 if _is_hearing_about(title):
                     continue
+                # Reject "Member X introduces bill" press releases — not
+                # tracked consistently across dashboard.
+                if _is_bill_intro(title):
+                    continue
                 desc = ""
                 if detail_text:
                     cleaned = detail_text
@@ -1517,6 +1550,13 @@ def scrape_house_judiciary(session):
             # duplicate coverage of the same event.
             if _is_hearing_about(title):
                 continue
+            # Reject "Member X introduces bill" press releases — the
+            # dashboard doesn't track bill introductions consistently, so
+            # these get arbitrary inclusion. Actual legislation that
+            # passes + affects fraud enforcement should appear via its
+            # implementing agency's press release instead.
+            if _is_bill_intro(title):
+                continue
             desc = ""
             if detail_text:
                 cleaned = detail_text
@@ -1574,6 +1614,13 @@ def scrape_energy_commerce(session):
             # via scrape_congress_hearings.py (Congress.gov API). Avoids
             # duplicate coverage of the same event.
             if _is_hearing_about(title):
+                continue
+            # Reject "Member X introduces bill" press releases — the
+            # dashboard doesn't track bill introductions consistently, so
+            # these get arbitrary inclusion. Actual legislation that
+            # passes + affects fraud enforcement should appear via its
+            # implementing agency's press release instead.
+            if _is_bill_intro(title):
                 continue
             desc = ""
             if detail_text:
@@ -1637,6 +1684,13 @@ def scrape_help_committee(session):
             # via scrape_congress_hearings.py (Congress.gov API). Avoids
             # duplicate coverage of the same event.
             if _is_hearing_about(title):
+                continue
+            # Reject "Member X introduces bill" press releases — the
+            # dashboard doesn't track bill introductions consistently, so
+            # these get arbitrary inclusion. Actual legislation that
+            # passes + affects fraud enforcement should appear via its
+            # implementing agency's press release instead.
+            if _is_bill_intro(title):
                 continue
             desc = ""
             if detail_text:
@@ -1711,6 +1765,13 @@ def scrape_ways_means(session):
             # via scrape_congress_hearings.py (Congress.gov API). Avoids
             # duplicate coverage of the same event.
             if _is_hearing_about(title):
+                continue
+            # Reject "Member X introduces bill" press releases — the
+            # dashboard doesn't track bill introductions consistently, so
+            # these get arbitrary inclusion. Actual legislation that
+            # passes + affects fraud enforcement should appear via its
+            # implementing agency's press release instead.
+            if _is_bill_intro(title):
                 continue
             desc = ""
             if detail_text:
