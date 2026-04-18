@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-04-17T09:53:12.438659"
+    "last_scraped": "2026-04-18T09:10:17.041768"
   },
   "items": [
     {
@@ -770,6 +770,7 @@
     "https://oversight.house.gov/release/burlison-opens-roundtable-on-artificial-intelligence-and-american-prosperity/",
     "https://waysandmeans.house.gov/2026/04/16/president-trumps-las-vegas-visit-highlights-huge-wins-for-hardworking-americans/",
     "https://www.gao.gov/products/gao-26-108070",
-    "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-delivers-remarks-during-hearing-on-making-prescription-drugs-more-affordable-for-families-using-free-market-approach"
+    "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-delivers-remarks-during-hearing-on-making-prescription-drugs-more-affordable-for-families-using-free-market-approach",
+    "https://energycommerce.house.gov/posts/house-passes-permitting-reform-bills-to-cut-the-red-tape-holding-back-american-manufacturing-and-economic-growth"
   ]
 }
