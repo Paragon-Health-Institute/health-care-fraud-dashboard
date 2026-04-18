@@ -1,9 +1,29 @@
 {
   "metadata": {
-    "last_updated": "2026-04-17T10:03:16.039406",
+    "last_updated": "2026-04-18T09:36:27.235335",
     "version": "1.0"
   },
   "stories": [
+    {
+      "id": "media-2026-04-17-3379509963",
+      "date": "2026-04-17",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "California was warned of shocking hospice fraud. Inaction allowed scams to continue",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.latimes.com/california/story/2026-04-17/california-was-warned-of-shocking-hospice-fraud-inaction-allowed-problems-to-persist",
+      "link_label": "Los Angeles Times Report",
+      "social_posts": [],
+      "tags": [
+        "Hospice"
+      ],
+      "state": "CA",
+      "source_type": "news",
+      "auto_fetched": true,
+      "entities": []
+    },
     {
       "id": "cbs-2026-04-02-la-hospice-investigation",
       "date": "2026-04-02",
