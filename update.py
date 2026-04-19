@@ -645,7 +645,8 @@ def get_state(text, title=None, link=None):
          "X ex rel") in title+body -> append.
       3. Non-demonym state names in title (e.g., "Fraud in Illinois" —
          Illinois appears not as a demonym) -> append.
-      4. City in title via `_CITY_TO_STATE` -> append.
+      4. City in title via `_CITY_TO_STATE` -> append, but ONLY when no
+         USAO (to avoid noise from incidental city names in /usao-xx/ items).
       5. Title demonyms ("Florida Man") -> append ONLY if corroborated
          by a non-demonym mention of that state in body text.
       6. Body-text fallback (longest state-name match) -> use only if
@@ -681,8 +682,12 @@ def get_state(text, title=None, link=None):
             if s not in states:
                 states.append(s)
 
-    # Path 4: city in title
-    if title:
+    # Path 4: city in title — ONLY if USAO absent. USAO is authoritative
+    # for DOJ-district items; appending city to USAO can add noise (a
+    # random city name in a title doesn't necessarily mean fraud happened
+    # there). City is a fallback for /opa/ (Main DOJ) and non-DOJ items
+    # where USAO isn't available.
+    if title and not usao:
         for s in extract_city_states(title):
             if s not in states:
                 states.append(s)
