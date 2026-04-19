@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-18T08:09:18.952026",
+    "last_updated": "2026-04-19T17:48:53.435407",
     "version": "1.0",
     "last_scraped": "2026-04-19T08:18:17.501093"
   },
@@ -14295,28 +14295,6 @@
       "related_agencies": []
     },
     {
-      "id": "hhs-oig-2026-01-20-3806878876",
-      "date": "2026-01-20",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "2025 Top Management & Performance Challenges Facing HHS",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2025/2025-top-management-performance-challenges-facing-hhs/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicaid"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
       "id": "hhs-oig-2026-01-16-1450191636",
       "date": "2026-01-16",
       "agency": "HHS-OIG",
@@ -15884,6 +15862,52 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
+      ]
+    },
+    {
+      "id": "hhs-oig-2025-12-02-2879936244",
+      "date": "2025-12-02",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "New Jersey Did Not Ensure Providers Complied With Federal and State Requirements at All 20 Adult Day Health Services Facilities Audited",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2025/new-jersey-did-not-ensure-providers-complied-with-federal-and-state-requirements-at-all-20-adult-day-health-services-facilities-audited/",
+      "link_label": "HHS-OIG Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Adult Day Care"
+      ],
+      "entities": [],
+      "state": "NJ",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2025-12-12-stelara-biosimilars-part-b",
+      "date": "2025-12-12",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Excluding Noncovered Versions Would Have Substantially Lowered Fourth-Quarter 2025 Part B Payment Amounts for Stelara Biosimilars",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2025/excluding-noncovered-versions-would-have-substantially-lowered-fourth-quarter-2025-part-b-payment-amounts-for-stelara-biosimilars/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "CMS"
       ]
     }
   ]
