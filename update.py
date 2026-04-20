@@ -19,6 +19,7 @@ from tag_allowlist import (
     auto_tags as _auto_tags,
     filter_tags as _filter_tags,
     strip_boilerplate as _strip_boilerplate,
+    apply_co_apply as _apply_co_apply,
 )
 
 try:
@@ -930,15 +931,17 @@ def generate_tags(title, full_text=""):
     if client is not None and full_text:
         try:
             from tag_extractor import extract_tags_with_evidence
-            return extract_tags_with_evidence(client, title, full_text)
+            return _apply_co_apply(extract_tags_with_evidence(client, title, full_text))
         except Exception as e:
             log(f"  tag_extractor failed, falling back to regex: {e}", "yellow")
     # Regex fallback: strip DOJ boilerplate from body (Strike Force
     # paragraph, ACA enforcement-authority sentences, etc.) so passing
     # mentions in standard closing language don't trip false-positive
-    # ACA/Medicare/Medicaid tags. Title always counts as-is.
+    # ACA/Medicare/Medicaid tags. Title always counts as-is. Co-apply
+    # rules (Hospice -> Medicare, DME -> Medicare, etc.) ensure that
+    # Medicare-specific service categories preserve their parent program.
     clean_body = _strip_boilerplate(full_text) if full_text else ""
-    return _auto_tags(f"{title} {clean_body}")
+    return _apply_co_apply(_auto_tags(f"{title} {clean_body}"))
 
 # Site-specific suffixes that pollute <title> tags. Stripped during
 # canonical-title extraction so item titles match the actual headline.

@@ -51,6 +51,42 @@ AREA_TAGS = frozenset({
 ALLOWED_TAGS = PROGRAM_TAGS | AREA_TAGS
 
 
+# Co-apply rules: presence of KEY implies presence of VALUE.
+# Used by taggers to preserve parent-program tags on items whose body
+# text may not explicitly say "Medicare" but whose fraud is inherent
+# to a Medicare-specific service/product.
+#
+# Hospice is a Medicare Part A benefit (Medicaid hospice coverage is
+# narrow, usually just dual-eligibles). DMEPOS and Skin Substitutes
+# are Medicare Part B product categories. Medicare Advantage is a
+# Medicare program. Medicaid Managed Care is a Medicaid program.
+CO_APPLY = {
+    "Medicare Advantage":    "Medicare",
+    "Medicaid Managed Care": "Medicaid",
+    "Hospice":               "Medicare",
+    "DME":                   "Medicare",
+    "Skin Substitutes":      "Medicare",
+}
+
+
+def apply_co_apply(tags):
+    """Given a list/set of tags, add parent tags per CO_APPLY rules.
+    Returns a new list preserving order, with parents inserted after
+    their first triggering child. Idempotent.
+    """
+    if not tags:
+        return []
+    result = []
+    seen = set()
+    for t in tags:
+        if t in seen: continue
+        seen.add(t); result.append(t)
+        parent = CO_APPLY.get(t)
+        if parent and parent not in seen:
+            seen.add(parent); result.append(parent)
+    return result
+
+
 # ---------------------------------------------------------------------------
 # DOJ boilerplate stripping
 # ---------------------------------------------------------------------------

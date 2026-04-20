@@ -39,6 +39,7 @@ from tag_allowlist import (
     AREA_TAGS,
     auto_tags as regex_auto_tags,
     strip_boilerplate,
+    apply_co_apply,
 )
 
 AI_MODEL = "claude-haiku-4-5-20251001"
@@ -95,7 +96,7 @@ Examples that should NOT get tagged:
 
 5. **Program tag rules:**
    - "Medicare Advantage" requires the phrase "Medicare Advantage", "MA plan", "Part C", or explicit MA-specific billing context. When it applies, also apply "Medicare".
-   - "Medicare" applies when the word "Medicare" appears as the subject of the case (not just in CMS boilerplate).
+   - "Medicare" applies when the word "Medicare" appears as the subject of the case (not just in CMS boilerplate). Also apply "Medicare" whenever you apply "Hospice", "DME", or "Skin Substitutes" — those are Medicare-specific service/product categories (Hospice is a Medicare Part A benefit; DMEPOS and Skin Substitutes are Medicare Part B).
    - "Medicaid Managed Care" requires the phrase "Medicaid Managed Care", "Medicaid MCO", or explicit context that a Medicaid managed care plan is the payer. When it applies, also apply "Medicaid".
    - "Medicaid" applies when the word "Medicaid" or "Medi-Cal" appears as the subject.
    - "TRICARE" requires the word TRICARE or CHAMPUS.
@@ -217,7 +218,7 @@ def extract_tags_with_evidence(client, title: str, full_text: str,
     # If no client, fall back to regex (use cleaned body so fallback
     # also benefits from boilerplate stripping).
     if client is None:
-        return regex_auto_tags(f"{title} {clean_body}")
+        return apply_co_apply(regex_auto_tags(f"{title} {clean_body}"))
 
     user_msg = f"TITLE: {title}\n\nTEXT:\n{source_for_prompt}"
     try:
@@ -231,7 +232,7 @@ def extract_tags_with_evidence(client, title: str, full_text: str,
     except Exception as e:
         if debug:
             print(f"  [tag_extractor] API error: {e}", file=sys.stderr)
-        return regex_auto_tags(f"{title} {clean_body}")
+        return apply_co_apply(regex_auto_tags(f"{title} {clean_body}"))
 
     # Strip possible markdown fences
     if text.startswith("```"):
@@ -247,12 +248,12 @@ def extract_tags_with_evidence(client, title: str, full_text: str,
     except Exception as e:
         if debug:
             print(f"  [tag_extractor] JSON parse error: {e}; raw={text[:200]}", file=sys.stderr)
-        return regex_auto_tags(f"{title} {clean_body}")
+        return apply_co_apply(regex_auto_tags(f"{title} {clean_body}"))
 
     if not isinstance(raw, list):
         if debug:
             print(f"  [tag_extractor] non-array response: {type(raw)}", file=sys.stderr)
-        return regex_auto_tags(f"{title} {clean_body}")
+        return apply_co_apply(regex_auto_tags(f"{title} {clean_body}"))
 
     validated = []
     seen = set()
@@ -288,9 +289,13 @@ def extract_tags_with_evidence(client, title: str, full_text: str,
         if regex_tags:
             if debug:
                 print(f"  [tag_extractor] AI returned 0, falling back to regex: {regex_tags}", file=sys.stderr)
-            return regex_tags
+            return apply_co_apply(regex_tags)
 
-    return validated
+    # Apply co-apply rules to AI-validated tags (Hospice -> Medicare,
+    # DME -> Medicare, Skin Substitutes -> Medicare, MA -> Medicare,
+    # MCO -> Medicaid). The prompt instructs the model to do this,
+    # but apply defensively in case the model misses a parent.
+    return apply_co_apply(validated)
 
 
 def make_client():

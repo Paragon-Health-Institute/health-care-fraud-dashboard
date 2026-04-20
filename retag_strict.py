@@ -58,10 +58,25 @@ REPORT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                             "tmp_retag_strict_report.json")
 
 # Tag co-apply rules. When a child tag is present, its parent must also
-# appear (mirrors the co-apply rules in the extractor prompt).
+# appear. This preserves program-level tags on items whose body text
+# may not explicitly say "Medicare" or "Medicaid" because the fraud
+# is framed around a specific program (e.g., a Hospice case is
+# inherently about Medicare because Hospice is a Medicare Part A
+# benefit — even if the DOJ press release uses "federal health care
+# programs" rather than literally saying "Medicare").
+#
+# Rules are directional: presence of the child implies presence of
+# the parent.
 _CO_APPLY = {
-    "Medicare Advantage": "Medicare",
+    # Subprogram -> parent program
+    "Medicare Advantage":    "Medicare",
     "Medicaid Managed Care": "Medicaid",
+    # Medicare-specific service/product categories. These exist almost
+    # exclusively within Medicare (Medicaid doesn't cover hospice the
+    # same way, and DMEPOS + Skin Substitutes are Medicare Part B).
+    "Hospice":               "Medicare",
+    "DME":                   "Medicare",
+    "Skin Substitutes":      "Medicare",
 }
 
 
@@ -161,32 +176,22 @@ def strict_tags_for(title: str, body: str, client=None,
         return len(re.findall(pat, body_clean, re.I))
 
     # Get all body matches, then filter PROGRAM tags by occurrence count
-    body_all = set(filter_tags(auto_tags(body_clean)))
-    body_tags = set()
-    for tag in body_all:
-        if tag in _PROGRAM_SET:
-            # Require >=2 occurrences of the program name in body
-            if tag == "Medicare":
-                if count(r"\bmedicare\b") >= 2:
-                    body_tags.add(tag)
-            elif tag == "Medicaid":
-                if count(r"\bmedicaid\b|\bmedi-cal\b") >= 2:
-                    body_tags.add(tag)
-            elif tag == "Medicare Advantage":
-                # MA is specific enough that one mention is fine
-                body_tags.add(tag)
-            elif tag == "Medicaid Managed Care":
-                body_tags.add(tag)
-            elif tag == "TRICARE":
-                # Be strict — TRICARE is often in a program-enumeration
-                # boilerplate ("defrauded Medicare, Medicaid, and TRICARE")
-                if count(r"\btricare\b|\bchampus\b") >= 2:
-                    body_tags.add(tag)
-            elif tag == "ACA":
-                body_tags.add(tag)
-        else:
-            # Area tags: 1 mention is enough (they're specific)
-            body_tags.add(tag)
+    # 1+ threshold for all tags. The 2+ threshold that used to guard
+    # Medicare/Medicaid/TRICARE was belt-and-suspenders protection against
+    # boilerplate false positives ("Centers for Medicare & Medicaid Services"
+    # + "including Medicare, Medicaid, and the Affordable Care Act"
+    # enumerations). We now have three stronger layers of protection:
+    #   1. body_clean collapses "Centers for Medicare & Medicaid Services"
+    #      to "cms" before counting (line above)
+    #   2. strip_boilerplate() removes Strike Force paragraphs, ACA
+    #      enforcement-authority sentences, boilerplate enumerations
+    #   3. fetch_body() removes "Related Press Releases" / "Related Content"
+    #      sidebars that embed unrelated case titles
+    # With those in place, a single surviving "Medicare" mention in the
+    # body is almost certainly substantive. The 2+ threshold had started
+    # false-negatively dropping real Medicare cases (e.g., "Arizona
+    # Cardiology $4.75M" where Medicare is only mentioned 1-2x).
+    body_tags = set(filter_tags(auto_tags(body_clean)))
 
     all_tags = title_tags | body_tags
 
