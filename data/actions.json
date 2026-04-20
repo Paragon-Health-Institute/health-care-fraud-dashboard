@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T18:24:44.850961",
+    "last_updated": "2026-04-20T18:27:36.255530",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -1090,7 +1090,10 @@
       "link_label": "Washington Times Report",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Home Health",
+        "Adult Day Care",
+        "Personal Care"
       ],
       "state": "NY",
       "source_type": "news",
