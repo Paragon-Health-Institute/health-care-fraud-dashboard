@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T17:24:22.907709",
+    "last_updated": "2026-04-20T17:25:11.330288",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -14408,7 +14408,10 @@
       "link": "https://www.fiercehealthcare.com/providers/cms-sets-real-time-medical-fraud-center-doge-federal-contractor-rolls-out-commercial-tool",
       "link_label": "Fierce Healthcare",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
       "entities": [],
       "state": null,
       "source_type": "news",
