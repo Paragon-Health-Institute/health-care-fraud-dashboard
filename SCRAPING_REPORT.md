@@ -1,6 +1,6 @@
 # Scraping Coverage Report
 
-*Auto-generated 2026-04-20 09:17 UTC from `build_scraping_report.py`. Source of truth is live code + data; to edit narrative sections, edit `_scraping_report_template.md`. Feed list, scraper descriptions, and coverage counts are regenerated from `update.py`, `.github/workflows/*.yml`, and `data/actions.json`.*
+*Auto-generated 2026-04-20 09:23 UTC from `build_scraping_report.py`. Source of truth is live code + data; to edit narrative sections, edit `_scraping_report_template.md`. Feed list, scraper descriptions, and coverage counts are regenerated from `update.py`, `.github/workflows/*.yml`, and `data/actions.json`.*
 
 Summary: 23 configured feeds, 18 scrape_* functions.
 
@@ -179,6 +179,14 @@ Times are deliberately off-minute (not `:00` or `:30`) to spread API load. Each 
   - Method: RSS feed
   - URL: https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml
 
+
+**Also for Congress (not in `FEEDS[]`, runs as a separate workflow):**
+
+- **`scrape_congress_hearings.py`** — standalone pipeline querying the Congress.gov API at `api.congress.gov/v3/committee-meeting/`. Extracts HC-fraud-relevant hearings by title keywords, committee routing (House Oversight, Senate HELP, House E&C, etc.), and witness signals. Auto-commits confident items to `actions.json` as `type=Hearing`; ambiguous items go to a review-queue artifact (not committed, 30-day retention on GitHub Actions).
+  - Scheduled daily at **9:13 UTC** via `hearings-update.yml`
+  - Requires `CONGRESS_GOV_API_KEY` secret
+
+This is separate from the committee press-release scrapers listed above — a given congressional hearing may produce both a hearing item (from Congress.gov API) and a committee press release (from the committee scraper) with different URLs.
 
 ---
 
