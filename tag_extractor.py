@@ -33,7 +33,13 @@ import os
 import re
 import sys
 
-from tag_allowlist import ALLOWED_TAGS, PROGRAM_TAGS, AREA_TAGS, auto_tags as regex_auto_tags
+from tag_allowlist import (
+    ALLOWED_TAGS,
+    PROGRAM_TAGS,
+    AREA_TAGS,
+    auto_tags as regex_auto_tags,
+    strip_boilerplate,
+)
 
 AI_MODEL = "claude-haiku-4-5-20251001"
 
@@ -192,13 +198,26 @@ def extract_tags_with_evidence(client, title: str, full_text: str,
     if not title and not full_text:
         return []
 
-    # Anchor source for validation: title + body (truncated for prompt)
-    source_for_prompt = full_text[:MAX_TEXT_CHARS]
+    # Defense-in-depth: strip known DOJ boilerplate passages (Strike Force
+    # paragraph, ACA enforcement-authority sentences, "including Medicare,
+    # Medicaid, and the Affordable Care Act" enumerations, etc.) BEFORE
+    # passing to the AI or falling back to regex. The system prompt
+    # already instructs the model to ignore boilerplate, but pre-stripping
+    # removes the failure mode entirely. Validation still happens against
+    # the original text so evidence citations must match real source
+    # content, but the model's INPUT is the cleaned version.
+    clean_body = strip_boilerplate(full_text) if full_text else ""
+
+    # Anchor source for validation: title + body (truncated for prompt).
+    # Validation uses the ORIGINAL full text so cited phrases can match
+    # anything the source actually says.
+    source_for_prompt = clean_body[:MAX_TEXT_CHARS]
     source_for_validation = _normalize_for_validation(f"{title} {full_text}")
 
-    # If no client, fall back to regex
+    # If no client, fall back to regex (use cleaned body so fallback
+    # also benefits from boilerplate stripping).
     if client is None:
-        return regex_auto_tags(f"{title} {full_text}")
+        return regex_auto_tags(f"{title} {clean_body}")
 
     user_msg = f"TITLE: {title}\n\nTEXT:\n{source_for_prompt}"
     try:
@@ -212,7 +231,7 @@ def extract_tags_with_evidence(client, title: str, full_text: str,
     except Exception as e:
         if debug:
             print(f"  [tag_extractor] API error: {e}", file=sys.stderr)
-        return regex_auto_tags(f"{title} {full_text}")
+        return regex_auto_tags(f"{title} {clean_body}")
 
     # Strip possible markdown fences
     if text.startswith("```"):
@@ -228,12 +247,12 @@ def extract_tags_with_evidence(client, title: str, full_text: str,
     except Exception as e:
         if debug:
             print(f"  [tag_extractor] JSON parse error: {e}; raw={text[:200]}", file=sys.stderr)
-        return regex_auto_tags(f"{title} {full_text}")
+        return regex_auto_tags(f"{title} {clean_body}")
 
     if not isinstance(raw, list):
         if debug:
             print(f"  [tag_extractor] non-array response: {type(raw)}", file=sys.stderr)
-        return regex_auto_tags(f"{title} {full_text}")
+        return regex_auto_tags(f"{title} {clean_body}")
 
     validated = []
     seen = set()
@@ -265,7 +284,7 @@ def extract_tags_with_evidence(client, title: str, full_text: str,
     # the rare case where Claude is overly conservative on something
     # the keyword matcher confidently knows.
     if not validated:
-        regex_tags = regex_auto_tags(f"{title} {full_text}")
+        regex_tags = regex_auto_tags(f"{title} {clean_body}")
         if regex_tags:
             if debug:
                 print(f"  [tag_extractor] AI returned 0, falling back to regex: {regex_tags}", file=sys.stderr)
