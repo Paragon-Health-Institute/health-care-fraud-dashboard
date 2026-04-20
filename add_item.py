@@ -47,9 +47,40 @@ from update import (
     get_action_type,
     normalize_link,
     scrape_page_with_browser,
+    extract_amount,
+    _looks_like_bad_title,
     HAS_PLAYWRIGHT,
 )
 from tag_allowlist import filter_tags
+
+# Agency -> expected domain, for consistency warnings (mirrors update.py)
+_AGENCY_DOMAINS = {
+    "DOJ":        "justice.gov",
+    "CMS":        "cms.gov",
+    "HHS":        "hhs.gov",
+    "HHS-OIG":    "oig.hhs.gov",
+    "GAO":        "gao.gov",
+    "Treasury":   "treasury.gov",
+    "White House": "whitehouse.gov",
+    "MACPAC":     "macpac.gov",
+    "MedPAC":     "medpac.gov",
+    "DEA":        "dea.gov",
+    "FDA":        "fda.gov",
+    "Congress":   None,  # many subdomains
+}
+
+# Known news outlet domains (source_type = "news" when link is here)
+_NEWS_DOMAINS = {
+    "cbsnews.com", "nytimes.com", "wsj.com", "washingtonpost.com",
+    "npr.org", "foxnews.com", "bloomberg.com", "reuters.com",
+    "axios.com", "propublica.org", "kffhealthnews.org", "statnews.com",
+    "theguardian.com", "nypost.com", "latimes.com", "kare11.com",
+    "azcir.org", "wsmv.com", "clickorlando.com", "townhall.com",
+    "foxillinois.com", "foxla.com", "city-journal.org",
+    "californiaglobe.com", "realclearinvestigations.com",
+    "washingtontimes.com", "kstp.com", "deadlinedetroit.com",
+    "clickondetroit.com", "fiercehealthcare.com",
+}
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ACTIONS_FILE = os.path.join(SCRIPT_DIR, "data", "actions.json")
@@ -145,6 +176,15 @@ def build_item_from_url(url: str, agency_override: str = "",
             "Could not extract title from source. Manual intervention needed."
         )
 
+    # Title sanity check: reject boilerplate titles that slipped past
+    # the og:title / h1 extraction (e.g., "Office of Public Affairs |
+    # United States Department of Justice")
+    if _looks_like_bad_title(canonical_title):
+        raise ValueError(
+            f"Extracted title looks like boilerplate: {canonical_title!r}. "
+            "Re-check source and pass --title explicitly if needed."
+        )
+
     # Date: use canonical if available, else YYYY-MM fallback
     if canonical_date:
         date_str = canonical_date
@@ -187,6 +227,59 @@ def build_item_from_url(url: str, agency_override: str = "",
         action_type = get_action_type(canonical_title, body_text[:500],
                                        agency=agency, link=url)
 
+    # ----- Gap fixes (2026-04-20) to match auto-scraper behavior -----
+
+    # Agency/domain consistency warning
+    expected_domain = _AGENCY_DOMAINS.get(agency)
+    if expected_domain:
+        if expected_domain not in host.lower():
+            print(f"  WARNING: agency={agency} but link host={host}. "
+                  f"Expected {expected_domain}. Consider flipping "
+                  f"primary agency to the publisher (--agency).",
+                  file=sys.stderr)
+
+    # Source type auto-detect: news if host matches known outlet
+    host_clean = host.lower().replace("www.", "")
+    source_type = "news" if any(n in host_clean for n in _NEWS_DOMAINS) else "official"
+
+    # .gov-link check for enforcement items
+    is_enforcement = action_type in ("Criminal Enforcement", "Civil Action")
+    if is_enforcement and not host.lower().endswith(".gov") and source_type == "official":
+        print(f"  WARNING: enforcement item ({action_type}) but link is "
+              f"NOT on a .gov domain: {host}. Federal Enforcement tab "
+              f"requires .gov sources. Either change --type or use a "
+              f"different source URL.", file=sys.stderr)
+
+    # Dollar amount extraction — ONLY on enforcement items.
+    # extract_amount returns {"display": str, "numeric": float} or None.
+    # Our schema stores amount (string) and amount_numeric (int) as
+    # two separate fields, matching auto-scraped items.
+    if is_enforcement:
+        amt = extract_amount(body_text, title=canonical_title)
+        if amt:
+            amount_str = amt.get("display", "")
+            amount_numeric = int(amt.get("numeric", 0))
+        else:
+            amount_str = ""
+            amount_numeric = 0
+    else:
+        # Oversight/admin/etc. items never carry amounts
+        amount_str = ""
+        amount_numeric = 0
+
+    # related_agencies defaults (matches scrape_doj_opa/_usao behavior)
+    related_agencies = []
+    if agency == "DOJ" and not is_media:
+        # DOJ HC fraud cases: HHS-OIG is nearly-always an investigator
+        # partner. (Individual items can be refined later per the
+        # FDA-rule precedent — only confirmed investigators.)
+        related_agencies.append("HHS-OIG")
+    # If agency isn't HHS-OIG but link IS on oig.hhs.gov (syndicated
+    # OIG page linking to DOJ), add HHS-OIG
+    if agency != "HHS-OIG" and "oig.hhs.gov" in host.lower():
+        if "HHS-OIG" not in related_agencies:
+            related_agencies.append("HHS-OIG")
+
     # Build deterministic id from date + normalized URL slug
     slug = re.sub(r"[^a-z0-9-]+", "-",
                    urlparse(url).path.rstrip("/").split("/")[-1].lower())[:60]
@@ -199,8 +292,8 @@ def build_item_from_url(url: str, agency_override: str = "",
         "agency": agency,
         "type": action_type,
         "title": canonical_title,
-        "amount": "",
-        "amount_numeric": 0,
+        "amount": amount_str,
+        "amount_numeric": amount_numeric,
         "officials": [],
         "link": url,
         "link_label": link_label,
@@ -208,9 +301,9 @@ def build_item_from_url(url: str, agency_override: str = "",
         "tags": tags,
         "entities": [],
         "state": state,
-        "source_type": "official",
+        "source_type": source_type,
         "auto_fetched": False,
-        "related_agencies": [],
+        "related_agencies": related_agencies,
     }
 
 

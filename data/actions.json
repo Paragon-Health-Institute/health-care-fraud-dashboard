@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T15:10:34.644952",
+    "last_updated": "2026-04-20T15:22:57.277645",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -1714,7 +1714,10 @@
       "source_type": "official",
       "auto_fetched": false,
       "entities": [],
-      "narrative_title": "DOJ Announces Record $6.8B in False Claims Act Recoveries in FY2025; Health Care Accounts for $5.7B"
+      "narrative_title": "DOJ Announces Record $6.8B in False Claims Act Recoveries in FY2025; Health Care Accounts for $5.7B",
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-15-brooklyn-daycare",
@@ -2568,7 +2571,9 @@
       "source_type": "official",
       "auto_fetched": false,
       "entities": [],
-      "related_agencies": [],
+      "related_agencies": [
+        "HHS-OIG"
+      ],
       "narrative_title": "DOJ Expands Health Care Fraud Strike Force to Massachusetts"
     },
     {
@@ -2884,7 +2889,8 @@
       "auto_fetched": false,
       "entities": [],
       "related_agencies": [
-        "HHS"
+        "HHS",
+        "HHS-OIG"
       ],
       "narrative_title": "DOJ and HHS Launch False Claims Act Working Group"
     },
@@ -3325,7 +3331,10 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "cms-2025-05-12-medicaid-provider-tax-proposed-rule",
