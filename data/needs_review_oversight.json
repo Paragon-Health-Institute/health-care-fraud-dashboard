@@ -1,10 +1,38 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-04-19T09:11:36.214603",
+    "last_scraped": "2026-04-20T10:14:45.966140",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
-  "items": [],
+  "items": [
+    {
+      "id": "hhs-oig-2026-01-20-3806878876",
+      "date": "2026-01-20",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "2025 Top Management & Performance Challenges Facing HHS",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2025/2025-top-management-performance-challenges-facing-hhs/",
+      "link_label": "HHS-OIG Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 72,
+      "ai_reason": "HHS-OIG's annual 'Top Management & Performance Challenges' report is a broad strategic overview of HHS priorities; while it may touch on fraud/integrity as one of many challenges, it is not primarily ",
+      "ai_model": "claude-haiku-4-5-20251001"
+    }
+  ],
   "rejected_links": [
     "https://oig.hhs.gov/reports/all/2026/vibrent-health-claimed-unallowable-costs-under-a-national-institutes-of-health-other-transaction-award/",
     "https://oig.hhs.gov/reports/all/2026/review-of-the-department-of-health-and-human-services-compliance-with-the-federal-information-security-modernization-act-of-2014-for-fiscal-year-2025/",
