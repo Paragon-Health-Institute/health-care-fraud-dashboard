@@ -31,6 +31,25 @@
       "ai_confidence": 72,
       "ai_reason": "HHS-OIG's annual 'Top Management & Performance Challenges' report is a broad strategic overview of HHS priorities; while it may touch on fraud/integrity as one of many challenges, it is not primarily ",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "hhs-oig-2026-04-20-3733065491",
+      "date": "2026-04-20",
+      "agency": "HHS-OIG",
+      "type": "Report",
+      "title": "Report Fraud, Waste, & Abuse",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/fraud/report-fraud/",
+      "link_label": "HHS-OIG Fraud Hub",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ],
   "rejected_links": [
