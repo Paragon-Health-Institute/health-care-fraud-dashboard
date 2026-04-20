@@ -1,29 +1,9 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T10:25:41.334323",
+    "last_updated": "2026-04-20T09:37:20.893185",
     "version": "1.0"
   },
   "stories": [
-    {
-      "id": "media-2026-04-17-2278363199",
-      "date": "2026-04-17",
-      "agency": "Media",
-      "type": "Investigative Report",
-      "title": "Michigan surgeon gets prison time for $7M Medicare fraud scheme",
-      "amount": "",
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.cbsnews.com/detroit/news/michigan-surgeon-gets-prison-time-7-million-medicare-fraud-scheme/",
-      "link_label": "CBS News Report",
-      "social_posts": [],
-      "tags": [
-        "Medicare"
-      ],
-      "state": "MI",
-      "source_type": "news",
-      "auto_fetched": true,
-      "entities": []
-    },
     {
       "id": "media-2026-04-17-3379509963",
       "date": "2026-04-17",
