@@ -30,7 +30,8 @@
       "Bash(awk '/^\\\\[[0-9]+\\\\/166\\\\] [a-z]/{p=1;print;next} /^\\\\[[0-9]+\\\\/166\\\\] body empty/{p=0;next} p' C:/Users/khall/AppData/Local/Temp/claude/C--Users-khall-HealthcareFraudDashboard-v3/663f04b4-8bf6-457c-aa9d-5ddcb76f2fb2/tasks/bxpyta3jx.output)",
       "WebFetch(domain:www.judiciary.senate.gov)",
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'FDOC item: drop \"Pilot\" from title \\(not in source\\) *)",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Fix LCD item date \\(2025-12-24, posting date\\) and drop Medicaid tag\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Fix LCD item date \\(2025-12-24, posting date\\) and drop Medicaid tag\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Fix CMS illegal-immigrants oversight item date to 2025-05-27\")"
     ]
   }
 }
