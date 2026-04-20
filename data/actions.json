@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T18:23:25.113372",
+    "last_updated": "2026-04-20T18:24:44.850961",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -1140,7 +1140,8 @@
         "Medicare",
         "Hospital",
         "Medicare Advantage",
-        "Lab Testing"
+        "Lab Testing",
+        "ACA"
       ],
       "state": null,
       "source_type": "official",
