@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T17:20:16.562354",
+    "last_updated": "2026-04-20T17:22:41.888357",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -279,7 +279,7 @@
         "Hospice"
       ],
       "entities": [],
-      "state": "CA",
+      "state": null,
       "source_type": "news",
       "auto_fetched": false,
       "related_agencies": [
@@ -682,7 +682,7 @@
         "Medicaid"
       ],
       "entities": [],
-      "state": "MN, CA, IL, NY, ME, CO",
+      "state": null,
       "source_type": "official",
       "auto_fetched": false,
       "narrative_title": "President Trump Establishes Task Force to Eliminate Fraud via Executive Order"
@@ -1167,7 +1167,7 @@
         "Medicare",
         "Medical Devices"
       ],
-      "state": "MN",
+      "state": null,
       "source_type": "official",
       "auto_fetched": false,
       "entities": [],
@@ -1376,7 +1376,7 @@
       "link_label": "Senate HSGAC Hearing",
       "social_posts": [],
       "tags": [],
-      "state": "MN",
+      "state": null,
       "source_type": "official",
       "auto_fetched": false,
       "entities": [],
@@ -1807,7 +1807,7 @@
       "tags": [
         "Medicaid"
       ],
-      "state": "CA",
+      "state": null,
       "source_type": "official",
       "auto_fetched": false,
       "entities": [],
@@ -15429,7 +15429,7 @@
       "social_posts": [],
       "tags": [],
       "entities": [],
-      "state": "MN",
+      "state": null,
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
