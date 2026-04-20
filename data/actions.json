@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T17:17:45.373887",
+    "last_updated": "2026-04-20T17:20:16.562354",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -887,7 +887,7 @@
     },
     {
       "id": "congress-2026-03-06-house-ec-medicaid-investigation-expansion",
-      "date": "2026-03-06",
+      "date": "2026-03-05",
       "agency": "Congress",
       "type": "Investigation",
       "title": "E&C Leaders Expand Investigation into Medicaid Fraud Nationwide",
@@ -900,7 +900,7 @@
       "tags": [
         "Medicaid",
         "Medicare",
-        "Ambulance",
+        "Medical Transportation",
         "Pharmacy",
         "Personal Care",
         "Adult Day Care",
@@ -999,7 +999,7 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Ambulance",
+        "Medical Transportation",
         "Medicare"
       ],
       "date": "2026-03-06",
@@ -8850,7 +8850,7 @@
       "tags": [
         "Medicare",
         "Medicaid",
-        "Ambulance"
+        "Medical Transportation"
       ],
       "entities": [],
       "state": "FL",
@@ -11848,7 +11848,7 @@
       "tags": [
         "Medicaid",
         "Pharmacy",
-        "Ambulance"
+        "Medical Transportation"
       ],
       "entities": [],
       "state": "LA",
@@ -15261,7 +15261,7 @@
       "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
-        "Ambulance",
+        "Medical Transportation",
         "Medicaid"
       ],
       "entities": [],

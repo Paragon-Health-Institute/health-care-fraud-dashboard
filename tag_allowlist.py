@@ -42,7 +42,7 @@ AREA_TAGS = frozenset({
     "Personal Care",
     "Physical Therapy",
     "Assisted Living",
-    "Ambulance",
+    "Medical Transportation",
     "Hospital",
     "Addiction Treatment",
     "Opioids",
@@ -275,7 +275,12 @@ TAG_PATTERNS = [
      r"consumer[-\s]directed\s+personal|\bcdpap\b", "Personal Care"),
     (r"\bphysical\s+therap(y|ist)\b", "Physical Therapy"),
     (r"\bassisted\s+living\b", "Assisted Living"),
-    (r"\bambulance\b|non[-\s]emergency\s+(medical\s+)?transport", "Ambulance"),
+    # Covers both ambulance fraud (Medicare) and NEMT fraud (Medicaid).
+    # Regulators and DOJ typically talk about "medical transportation"
+    # as the umbrella term spanning both.
+    (r"\bambulance\b|non[-\s]emergency\s+(medical\s+)?transport|"
+     r"\bNEMT\b|"
+     r"\bmedical\s+transportation\b", "Medical Transportation"),
     # Hospital: require explicit hospital fraud/billing context (not just
     # "investigated by hospital staff" mentions).
     (r"\bhospital\s+(fraud|scheme|kickback|billing|overpayment|paid\s+kickbacks?)\b|"
