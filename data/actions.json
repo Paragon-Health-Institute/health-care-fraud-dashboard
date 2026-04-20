@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T11:26:25.212680",
+    "last_updated": "2026-04-20T11:29:47.267238",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -2635,7 +2635,8 @@
       "auto_fetched": false,
       "entities": [],
       "related_agencies": [
-        "HHS-OIG"
+        "HHS-OIG",
+        "FDA"
       ]
     },
     {
@@ -5479,7 +5480,8 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
-        "HHS-OIG"
+        "HHS-OIG",
+        "FDA"
       ]
     },
     {
@@ -6436,7 +6438,8 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
-        "HHS-OIG"
+        "HHS-OIG",
+        "FDA"
       ]
     },
     {
@@ -6980,7 +6983,8 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
-        "HHS-OIG"
+        "HHS-OIG",
+        "FDA"
       ]
     },
     {
@@ -7597,7 +7601,8 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
-        "HHS-OIG"
+        "HHS-OIG",
+        "FDA"
       ]
     },
     {
@@ -10549,7 +10554,8 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
-        "HHS-OIG"
+        "HHS-OIG",
+        "FDA"
       ]
     },
     {
@@ -11908,7 +11914,8 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
-        "HHS-OIG"
+        "HHS-OIG",
+        "FDA"
       ]
     },
     {
@@ -12175,7 +12182,8 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
-        "HHS-OIG"
+        "HHS-OIG",
+        "FDA"
       ]
     },
     {
@@ -15990,7 +15998,8 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
-        "HHS-OIG"
+        "HHS-OIG",
+        "FDA"
       ]
     },
     {
