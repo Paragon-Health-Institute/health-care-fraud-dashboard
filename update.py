@@ -1154,6 +1154,42 @@ def fetch_detail_page(session, url):
     try:
         resp = session.get(url, timeout=20)
         resp.raise_for_status()
+
+        # PDF branch: if the URL or Content-Type indicates PDF, extract
+        # text with pypdf. CMS Fast Facts, annual reports, and many
+        # federal agency publications are PDF-only — HTML parsing skips
+        # them entirely. This lets the strict tagger see PDF body
+        # content instead of only the title.
+        ct = resp.headers.get('content-type', '').lower()
+        if url.lower().endswith('.pdf') or 'application/pdf' in ct:
+            try:
+                import io
+                from pypdf import PdfReader
+                reader = PdfReader(io.BytesIO(resp.content))
+                # Use first 12k chars so we don't overfetch giant reports
+                parts = []
+                for page in reader.pages:
+                    try:
+                        parts.append(page.extract_text() or '')
+                    except Exception:
+                        continue
+                text = re.sub(r'\s+', ' ', ' '.join(parts))[:12000]
+                # PDFs don't have og:title / h1. Use PDF document title
+                # if present; otherwise return empty (caller will use
+                # listing-page title).
+                doc_title = ''
+                try:
+                    if reader.metadata and reader.metadata.title:
+                        doc_title = reader.metadata.title.strip()
+                except Exception:
+                    pass
+                # PDFs usually don't have a proper canonical date; rely
+                # on caller's date fallback.
+                return (text, None, doc_title, None)
+            except Exception as e:
+                log(f"    PDF parse failed for {url}: {e}")
+                return "", None, "", None
+
         soup = BeautifulSoup(resp.text, 'lxml')
         # Extract DOJ press release link if present
         doj_link = None

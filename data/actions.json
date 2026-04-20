@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T17:36:49.130212",
+    "last_updated": "2026-04-20T17:39:47.018047",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -14353,9 +14353,9 @@
     },
     {
       "id": "cms-2025-06-25-exchange-integrity",
-      "date": "2025-06-25",
+      "date": "2025-01-28",
       "agency": "CMS",
-      "type": "Rule/Regulation",
+      "type": "Administrative Action",
       "title": "CMS Actions to Protect Consumers and Strengthen Exchange Program Integrity",
       "amount": null,
       "amount_numeric": 0,
@@ -14365,7 +14365,6 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Medicare",
         "ACA"
       ],
       "entities": [],
