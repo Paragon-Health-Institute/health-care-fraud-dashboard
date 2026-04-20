@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T11:29:47.267238",
+    "last_updated": "2026-04-20T11:35:34.749311",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -2635,8 +2635,7 @@
       "auto_fetched": false,
       "entities": [],
       "related_agencies": [
-        "HHS-OIG",
-        "FDA"
+        "HHS-OIG"
       ]
     },
     {
@@ -7601,8 +7600,7 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
-        "HHS-OIG",
-        "FDA"
+        "HHS-OIG"
       ]
     },
     {
