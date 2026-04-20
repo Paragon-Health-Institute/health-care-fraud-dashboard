@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T10:53:18.997347",
+    "last_updated": "2026-04-20T11:05:08.816133",
     "version": "1.0",
     "last_scraped": "2026-04-20T09:23:48.423009"
   },
@@ -230,7 +230,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/medicare-home-health-agency-provider-compliance-audit-vns-health/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Home Health",
@@ -1510,7 +1510,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://www.judiciary.senate.gov/committee-activity/hearings/somali-scammers-fighting-fraud-in-minnesota-and-beyond-02-04-2026",
-      "link_label": "Senate Judiciary Release",
+      "link_label": "Senate Judiciary Hearing",
       "social_posts": [],
       "tags": [
         "Medicaid"
@@ -1896,7 +1896,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://www.grassley.senate.gov/news/news-releases/grassley-report-details-unitedhealths-record-of-appearing-to-game-the-medicare-advantage-system-turning-risk-adjustment-into-its-own-business",
-      "link_label": "Senate Report",
+      "link_label": "Congress Release",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -2674,7 +2674,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://www.finance.senate.gov/hearings/the-presidents-2026-health-care-agenda",
-      "link_label": "Senate Finance Release",
+      "link_label": "Senate Finance Hearing",
       "social_posts": [],
       "tags": [
         "ACA",
@@ -3351,7 +3351,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://www.justice.gov/criminal/media/1400046/dl",
-      "link_label": "DOJ Report",
+      "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
         "Medicaid",
@@ -6845,7 +6845,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/fraud/enforcement/texas-man-charged-with-conspiracy-to-obtain-controlled-substances-by-fraud/",
-      "link_label": "DOJ Press Release",
+      "link_label": "HHS-OIG Press Release",
       "social_posts": [],
       "tags": [
         "Pharmacy",
@@ -6869,7 +6869,7 @@
       "amount_numeric": 1000000.0,
       "officials": [],
       "link": "https://oig.hhs.gov/fraud/enforcement/indian-national-sentenced-to-prison-for-medicare-fraud-scheme-that-stole-more-than-1-million-in-taxpayer-funds/",
-      "link_label": "DOJ Press Release",
+      "link_label": "HHS-OIG Press Release",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -6893,7 +6893,7 @@
       "amount_numeric": 1900000.0,
       "officials": [],
       "link": "https://oig.hhs.gov/fraud/enforcement/largest-north-carolina-behavioral-health-practice-agrees-to-pay-19-million-to-resolve-allegedly-false-medicare-claims/",
-      "link_label": "DOJ Press Release",
+      "link_label": "HHS-OIG Press Release",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -11234,7 +11234,7 @@
       "amount_numeric": 6000000.0,
       "officials": [],
       "link": "https://oig.hhs.gov/fraud/enforcement/attorney-general-jeff-jackson-announces-health-care-fraud-and-money-laundering-guilty-plea/",
-      "link_label": "DOJ Press Release",
+      "link_label": "HHS-OIG Press Release",
       "social_posts": [],
       "tags": [
         "Medicaid"
@@ -13022,7 +13022,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/emergency-department-procedure-codes-used-on-medicare-claims-for-services-billed-with-nonemergency-department-sites-of-service-resulted-in-over-15-million-in-improper-and-potentially-improper-payments/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14008,7 +14008,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/medicare-advantage-compliance-audit-of-specific-diagnosis-codes-that-priority-health-contract-h2320-submitted-to-cms/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare Advantage",
@@ -14030,7 +14030,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/congressional-mandate-part-b-payment-amounts-for-one-drug-included-noncovered-self-administered-versions-in-2024/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14052,7 +14052,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/nursing-homes-inappropriately-diagnosed-residents-with-schizophrenia-to-mask-the-misuse-of-antipsychotic-drugs/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14075,7 +14075,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/medicare-advantage-compliance-audit-of-specific-diagnosis-codes-that-gateway-health-plan-inc-contract-h5932-submitted-to-cms/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare Advantage",
@@ -14097,7 +14097,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/medicare-advantage-compliance-audit-of-specific-diagnosis-codes-that-blue-cross-and-blue-shield-of-alabama-contract-h0104-submitted-to-cms/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare Advantage",
@@ -14119,7 +14119,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/sarasota-memorial-hospital-received-at-least-121-million-in-medicare-overpayments/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14142,7 +14142,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/colorado-made-at-least-778-million-in-improper-fee-for-service-medicaid-payments-for-applied-behavior-analysis-provided-to-children/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14165,7 +14165,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/office-of-inspector-generals-partnership-with-the-office-of-the-utah-inspector-general-inspector-generals-report-audit-of-capitation-payments-made-concurrently-with-another-state/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14188,7 +14188,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/fourteen-of-thirty-selected-indian-health-service-and-rural-providers-did-not-comply-or-may-not-have-complied-with-terms-and-conditions-and-federal-requirements-for-expending-provider-relief-fund-payments/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [],
       "entities": [],
@@ -14207,7 +14207,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/medicare-home-health-agency-provider-compliance-audit-alternate-solutions-homecare-of-dayton/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14230,7 +14230,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/missouri-did-not-obtain-millions-of-dollars-in-rebates-for-medicaid-physician-administered-and-pharmacy-drugs/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14253,7 +14253,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/west-virginia-did-not-obtain-rebates-associated-with-millions-of-dollars-in-medicaid-physician-administered-drugs-dispensed-to-enrollees-of-medicaid-managed-care-organizations/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14277,7 +14277,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/total-medicare-part-b-spending-on-lab-tests-rose-in-2024-driven-by-increased-spending-on-genetic-tests/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14301,7 +14301,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/maine-made-at-least-456-million-in-improper-fee-for-service-medicaid-payments-for-rehabilitative-and-community-support-services-provided-to-children-diagnosed-with-autism/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14506,7 +14506,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://www.cms.gov/newsroom/fact-sheets/cms-actions-protect-consumers-strengthen-exchange-program-integrity",
-      "link_label": "CMS Press Release",
+      "link_label": "CMS Fact Sheet",
       "social_posts": [],
       "tags": [
         "ACA"
@@ -14638,7 +14638,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://www.cms.gov/files/document/cpi-radvfact-sheet.pdf",
-      "link_label": "CMS Fact Sheet",
+      "link_label": "CMS Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14660,7 +14660,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://www.cms.gov/files/document/hospice-fact-sheet-1-28-26.pdf",
-      "link_label": "CMS Fact Sheet",
+      "link_label": "CMS Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14682,7 +14682,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://www.cms.gov/files/document/cpi-dual-enrollment-fast-facts.pdf",
-      "link_label": "CMS Fact Sheet",
+      "link_label": "CMS Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14704,7 +14704,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/about-oig/strategic-plan/",
-      "link_label": "HHS-OIG Report",
+      "link_label": "HHS-OIG Press Release",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14753,7 +14753,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/compliance/ma-icpg/",
-      "link_label": "HHS-OIG Report",
+      "link_label": "HHS-OIG Press Release",
       "social_posts": [],
       "tags": [
         "Medicare Advantage",
@@ -14906,7 +14906,7 @@
       "amount_numeric": 2400000000.0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/hospitals-charged-cms-for-trauma-team-activations-that-did-not-comply-with-federal-requirements/",
-      "link_label": "DOJ Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14931,7 +14931,7 @@
       "amount_numeric": 5600000.0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/national-government-services-inc-reopened-and-corrected-cost-report-final-settlements-for-desk-reviews-only-with-obvious-errors-to-correct-payments-made-to-medicare-providers/",
-      "link_label": "DOJ Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14955,7 +14955,7 @@
       "amount_numeric": 9400000.0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/novitas-solutions-inc-reopened-and-corrected-cost-report-final-settlements-for-desk-reviews-only-with-obvious-errors-to-correct-payments-made-to-medicare-providers/",
-      "link_label": "DOJ Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14979,7 +14979,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/medicare-home-health-agency-provider-compliance-audit-guardian-home-care-llc/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -15002,7 +15002,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/oklahoma-medicaid-fraud-control-unit-2025-inspection/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicaid",
@@ -15024,7 +15024,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/podiatrists-claims-for-routine-foot-care-services-did-not-comply-with-medicare-requirements/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -15046,7 +15046,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/podiatrists-claims-for-evaluation-and-management-services-did-not-comply-with-medicare-requirements/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -15068,7 +15068,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/medicare-improperly-paid-selected-optometrists-for-services-provided-to-enrollees-at-nursing-facilities/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -15091,7 +15091,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/medicare-payments-for-continuous-glucose-monitors-and-supplies-exceeded-supplier-costs-and-retail-market-prices-indicating-medicare-can-save-at-least-tens-of-millions-of-dollars-in-one-year/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -15114,7 +15114,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/gaps-in-nihs-oversight-put-millions-in-funding-for-other-transactions-at-greater-risk-of-fraud-waste-or-abuse/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [],
       "entities": [],
@@ -15133,7 +15133,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/nearly-all-skilled-nursing-services-provided-by-pinnacle-multicare-nursing-and-rehabilitation-center-did-not-meet-medicare-payment-requirements/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -15156,7 +15156,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/office-of-inspector-generals-partnership-with-the-office-of-the-kentucky-state-auditor-of-public-accounts-state-auditors-report-how-kentucky-failed-to-prevent-over-800-million-of-medicaid-waste/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -15178,7 +15178,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/pennsylvania-correctly-invoiced-rebates-to-manufacturers-for-most-physician-administered-drugs-dispensed-to-enrollees-of-medicaid-managed-care-organizations/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -15202,7 +15202,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/medicare-home-health-agency-provider-compliance-audit-vna-care-network/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -15225,7 +15225,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/many-medicare-advantage-and-medicaid-managed-care-plans-have-limited-behavioral-health-provider-networks-and-inactive-providers/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare Advantage",
@@ -15250,7 +15250,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/vermont-medicaid-fraud-control-unit-2024-inspection/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicaid"
@@ -15271,7 +15271,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/medicare-could-have-saved-3015-million-if-bundled-payment-rates-for-opioid-use-disorder-treatment-services-had-reflected-services-provided-to-enrollees/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -15295,7 +15295,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/new-jersey-did-not-ensure-that-some-medicaid-personal-care-assistant-services-provided-under-the-personal-preference-program-met-federal-and-state-requirements/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -15320,7 +15320,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/texas-did-not-calculate-or-collect-hospice-cap-overpayments-totaling-105-million/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -15343,7 +15343,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/serious-falls-resulting-in-hospitalization-among-medicare-enrolled-nursing-home-residents-july-2022-june-2023/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -15367,7 +15367,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/nursing-homes-failed-to-report-43-percent-of-falls-with-major-injury-and-hospitalization-among-their-medicare-enrolled-residents/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -15391,7 +15391,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/by-requiring-emergency-preparedness-plans-for-independent-labs-cms-could-better-ensure-that-medicare-enrollees-have-access-to-infectious-disease-diagnostic-testing-during-a-public-health-emergency/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -15436,7 +15436,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/texas-ambulance-services-supplemental-payment-program-did-not-comply-with-federal-and-state-reimbursement-requirements/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -15459,7 +15459,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/essence-healthcare-inc-did-not-comply-with-federal-requirement-for-reporting-direct-and-indirect-remunerations-for-contract-years-2017-through-2020/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -15588,7 +15588,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://www.gao.gov/products/gao-26-109093",
-      "link_label": "GAO Press Release",
+      "link_label": "GAO Report",
       "social_posts": [],
       "tags": [
         "Medicaid"
@@ -15814,7 +15814,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://www.cms.gov/files/document/cms-fraud-waste-and-abuse-sprint-strategy.pdf",
-      "link_label": "CMS Fact Sheet",
+      "link_label": "CMS Report",
       "tags": [],
       "state": "",
       "source_type": "official",
@@ -15831,7 +15831,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://www.cms.gov/files/document/fdoc-fact-sheet-updated.pdf",
-      "link_label": "CMS Fact Sheet",
+      "link_label": "CMS Report",
       "tags": [],
       "state": "",
       "source_type": "official",
@@ -15871,7 +15871,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/new-jersey-did-not-ensure-providers-complied-with-federal-and-state-requirements-at-all-20-adult-day-health-services-facilities-audited/",
-      "link_label": "HHS-OIG Press Release",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -15903,9 +15903,7 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": [
-        "CMS"
-      ]
+      "related_agencies": []
     },
     {
       "id": "doj-2026-04-16-hares-metro-detroit-surgeon-7m",

@@ -819,23 +819,43 @@ _COMMITTEE_URL_LABELS = [
     ('help.senate.gov/',             'Senate HELP Release'),
     ('finance.senate.gov/',          'Senate Finance Release'),
     ('judiciary.senate.gov/',        'Senate Judiciary Release'),
+    ('judiciary.house.gov/hearings/', 'House Judiciary Hearing'),
     ('judiciary.house.gov/',         'House Judiciary Release'),
-    ('hsgac.senate.gov/',            'Senate HSGAC Hearing'),
+    ('hsgac.senate.gov/hearings/',   'Senate HSGAC Hearing'),
+    ('hsgac.senate.gov/',            'Senate HSGAC Release'),
     ('congress.gov/committee-meeting/', 'Congress.gov Hearing'),
+    ('congress.gov/event/',          'Congress.gov Hearing'),
 ]
 
 # URL pattern -> label for non-Congress agencies where doc type matters
 # (a /fact-sheets/ URL should say "Fact Sheet", not "Press Release").
 _AGENCY_URL_LABELS = [
     ('cms.gov/newsroom/fact-sheets/', 'CMS Fact Sheet'),
+    ('cms.gov/newsroom/press-releases/', 'CMS Press Release'),
     ('cms.gov/blog/',                 'CMS Blog Post'),
     ('cms.gov/files/',                'CMS Report'),
+    ('cms.gov/training-education/',   'CMS Report'),
     ('whitehouse.gov/fact-sheets/',   'White House Fact Sheet'),
     ('whitehouse.gov/presidential-actions/', 'White House Release'),
     ('whitehouse.gov/releases/',      'White House Release'),
     ('oig.hhs.gov/reports/',          'HHS-OIG Report'),
+    ('oig.hhs.gov/documents/',        'HHS-OIG Report'),
     ('oig.hhs.gov/fraud/strike-force/', 'HHS-OIG Report'),
+    ('oig.hhs.gov/newsroom/',         'HHS-OIG Press Release'),
+    ('oig.hhs.gov/fraud/enforcement/', 'HHS-OIG Press Release'),
     ('gao.gov/products/',             'GAO Report'),
+    ('macpac.gov/publication/',       'MACPAC Report'),
+    ('macpac.gov/',                   'MACPAC Report'),
+    ('medpac.gov/document/',          'MedPAC Report'),
+    ('medpac.gov/',                   'MedPAC Report'),
+    ('federalregister.gov/',          'Federal Register'),
+    # DOJ non-/pr/ doc paths (annual reports, case summaries, policy memos)
+    ('justice.gov/archives/opa/documents/', 'DOJ Report'),
+    ('justice.gov/opa/documents/',    'DOJ Report'),
+    ('justice.gov/criminal/file/',    'DOJ Report'),
+    ('justice.gov/criminal/criminal-fraud/', 'DOJ Report'),
+    # Senate Grassley / other senator websites (not committee)
+    ('grassley.senate.gov/',          'Senate Grassley Release'),
 ]
 
 
@@ -855,6 +875,34 @@ def derive_link_label(agency, link, feed_name=None, is_media=False):
     link_l = (link or "").lower()
     # Congress items: use committee-specific label
     if agency == 'Congress':
+        # First pass: detect hearings by "/hearing" anywhere in the path
+        # (handles URLs like hsgac.senate.gov/subcommittees/dmdcc/
+        # hearings/... where a simple prefix match misses). This runs
+        # BEFORE the prefix map so that e.g. "hsgac.senate.gov/" → Release
+        # doesn't win over an actual hearing URL.
+        if '/hearing' in link_l or '/event/' in link_l or '/committee-meeting/' in link_l:
+            import re as _re_local
+            m = _re_local.search(r'//([\w.]+)/', link_l)
+            host = m.group(1) if m else ''
+            host_map = {
+                'www.hsgac.senate.gov':     'Senate HSGAC',
+                'hsgac.senate.gov':         'Senate HSGAC',
+                'www.finance.senate.gov':   'Senate Finance',
+                'finance.senate.gov':       'Senate Finance',
+                'www.help.senate.gov':      'Senate HELP',
+                'help.senate.gov':          'Senate HELP',
+                'www.judiciary.senate.gov': 'Senate Judiciary',
+                'judiciary.senate.gov':     'Senate Judiciary',
+                'oversight.house.gov':      'House Oversight',
+                'judiciary.house.gov':      'House Judiciary',
+                'energycommerce.house.gov': 'House E&C',
+                'waysandmeans.house.gov':   'House Ways & Means',
+            }
+            if host in host_map:
+                return f"{host_map[host]} Hearing"
+            if 'congress.gov' in host:
+                return "Congress.gov Hearing"
+        # Second pass: committee URL prefix map (press releases etc.)
         for pat, lbl in _COMMITTEE_URL_LABELS:
             if pat in link_l:
                 return lbl
