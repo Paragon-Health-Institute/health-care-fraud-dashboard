@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T09:55:15.640746",
+    "last_updated": "2026-04-20T10:16:56.192813",
     "version": "1.0",
     "last_scraped": "2026-04-20T09:23:48.423009"
   },
@@ -3528,7 +3528,6 @@
         "Medicaid",
         "Medical Devices",
         "Medicare",
-        "Off-Label",
         "Lab Testing"
       ],
       "state": "PA",
@@ -11780,8 +11779,7 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare",
-        "Off-Label"
+        "Medicare"
       ],
       "entities": [],
       "state": "GA",
@@ -12269,8 +12267,7 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare",
-        "Off-Label"
+        "Medicare"
       ],
       "entities": [],
       "state": "IL",

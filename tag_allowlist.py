@@ -46,7 +46,6 @@ AREA_TAGS = frozenset({
     "Hospital",
     "Addiction Treatment",
     "Opioids",
-    "Off-Label",
 })
 
 ALLOWED_TAGS = PROGRAM_TAGS | AREA_TAGS
@@ -251,7 +250,6 @@ TAG_PATTERNS = [
      r"\bopioid\s+treatment\s+program\b", "Addiction Treatment"),
     (r"\bopioid(s)?\b|\bfentanyl\b|\boxycodone\b|\bhydrocodone\b|"
      r"\bcontrolled\s+substance\b|\bpill\s+mill\b", "Opioids"),
-    (r"\boff[-\s]label\b", "Off-Label"),
 ]
 
 
