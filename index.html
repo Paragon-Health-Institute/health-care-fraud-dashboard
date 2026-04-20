@@ -844,10 +844,10 @@ function populateTagFilter(selectId, dataArray) {
     });
     sel.appendChild(gp);
   }
-  // Areas group
+  // Vulnerable Areas group
   if (areaTags.length) {
     const ga = document.createElement('optgroup');
-    ga.label = 'Areas';
+    ga.label = 'Vulnerable Areas';
     areaTags.forEach(t => {
       const opt = document.createElement('option');
       opt.value = t;

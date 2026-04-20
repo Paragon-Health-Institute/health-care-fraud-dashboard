@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T11:12:33.199239",
+    "last_updated": "2026-04-20T11:26:25.212680",
     "version": "1.0",
-    "last_scraped": "2026-04-20T09:23:48.423009"
+    "last_scraped": "2026-04-20T11:23:57.676436"
   },
   "actions": [
     {
@@ -15945,6 +15945,168 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-03-17-1482269859",
+      "date": "2026-03-17",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Maryland Man Who Conspired with Doctor to Illegally Distribute Promethazine-Codeine and other Controlled Substances Sentenced to 42 Months in Prison",
+      "amount": "$100,000",
+      "amount_numeric": 100000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-wdva/pr/maryland-man-who-conspired-doctor-illegally-distribute-promethazine-codeine-and-other",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "VA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-03-06-3267581586",
+      "date": "2026-03-06",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Former ExThera Medical Corporation Executive Admits to Concealing Patient Deaths from FDA and Company Enters Deferred Prosecution Agreement",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/former-exthera-medical-corporation-executive-admits-concealing-patient-deaths-fda-and",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-02-24-1158549415",
+      "date": "2026-02-24",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Pharmacist and Business Owner Convicted of $3M Medicare, Medicaid, and Private Insurer Fraud Scheme",
+      "amount": "$3 Million",
+      "amount_numeric": 3000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edmi/pr/pharmacist-and-business-owner-convicted-3m-medicare-medicaid-and-private-insurer-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": "MI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-02-13-4207468607",
+      "date": "2026-02-13",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "St. Margaret’s Center Pays $1.3 Million Under the False Claims Act",
+      "amount": "$1.3 Million",
+      "amount_numeric": 1300000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ndny/pr/st-margarets-center-pays-13-million-under-false-claims-act",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Nursing Home"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-02-10-3471397581",
+      "date": "2026-02-10",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Pair Plead Guilty to Conspiring with Annandale-Based Doctor to Illegally Distributing Oxycodone and other Controlled Substances",
+      "amount": "$40,000",
+      "amount_numeric": 40000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-wdva/pr/pair-plead-guilty-conspiring-annandale-based-doctor-illegally-distributing-oxycodone",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "VA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-01-23-1124898150",
+      "date": "2026-01-23",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Cheshire Nurse Admits Illegally Distributing Controlled Substances",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ct/pr/cheshire-nurse-admits-illegally-distributing-controlled-substances",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "CT",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2025-12-16-1110249600",
+      "date": "2025-12-16",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "RST-Sanexas, Inc. and Its Owners Agree to Pay $1.5 Million to Resolve Allegations That They Caused False Claims and Accepted and Paid Illegal Kickbacks",
+      "amount": "$1.5 Million",
+      "amount_numeric": 1500000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edpa/pr/rst-sanexas-inc-and-its-owners-agree-pay-15-million-resolve-allegations-they-caused",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "PA",
+      "source_type": "official",
+      "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
       ]
