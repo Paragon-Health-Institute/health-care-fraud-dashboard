@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T10:16:56.192813",
+    "last_updated": "2026-04-20T10:53:18.997347",
     "version": "1.0",
     "last_scraped": "2026-04-20T09:23:48.423009"
   },
@@ -355,7 +355,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oversight.house.gov/release/oversight-committee-launches-investigation-into-rampant-taxpayer-fraud-in-california-hospice-programs/",
-      "link_label": "House Oversight Press Release",
+      "link_label": "House Oversight Release",
       "social_posts": [],
       "tags": [
         "Hospice",
@@ -549,7 +549,7 @@
       "amount_numeric": 2655463.63,
       "officials": [],
       "link": "https://www.justice.gov/usao-edwi/pr/owner-now-closed-milwaukee-prenatal-care-coordination-company-sentenced-60-months",
-      "link_label": "DOJ-USAO Press Release",
+      "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
         "Medicaid",
@@ -644,7 +644,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://energycommerce.house.gov/events/o-and-i-subcommittee-protecting-patients-and-safeguarding-taxpayer-dollars-the-role-of-cms-in-combatting-medicare-and-medicaid-fraud",
-      "link_label": "House E&C",
+      "link_label": "House E&C Release",
       "social_posts": [],
       "tags": [
         "Medicaid",
@@ -906,7 +906,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://energycommerce.house.gov/posts/e-and-c-leaders-expand-investigation-into-medicaid-fraud-nationwide",
-      "link_label": "House E&C Committee",
+      "link_label": "House E&C Release",
       "social_posts": [],
       "tags": [
         "Medicaid",
@@ -1076,7 +1076,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://oversight.house.gov/hearing/oversight-of-fraud-and-misuse-of-federal-funds-in-minnesota-part-ii/",
-      "link_label": "Committee Hearing Page",
+      "link_label": "House Oversight Hearing",
       "social_posts": [],
       "tags": [
         "Medicaid"
@@ -1397,7 +1397,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://www.hsgac.senate.gov/subcommittees/dmdcc/hearings/examining-fraud-in-state-and-federal-programs/",
-      "link_label": "HSGAC Hearing",
+      "link_label": "Senate HSGAC Hearing",
       "social_posts": [],
       "tags": [
         "Medicaid"
@@ -1442,7 +1442,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://judiciary.house.gov/media/press-releases/chairmen-jordan-fitzgerald-and-van-drew-subpoena-insurance-providers-documents",
-      "link_label": "House Judiciary",
+      "link_label": "House Judiciary Release",
       "social_posts": [],
       "tags": [
         "ACA"
@@ -1510,7 +1510,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://www.judiciary.senate.gov/committee-activity/hearings/somali-scammers-fighting-fraud-in-minnesota-and-beyond-02-04-2026",
-      "link_label": "Senate Judiciary Committee",
+      "link_label": "Senate Judiciary Release",
       "social_posts": [],
       "tags": [
         "Medicaid"
@@ -1531,7 +1531,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://www.congress.gov/event/119-congress/house-event/118917",
-      "link_label": "Congress.gov Event",
+      "link_label": "Congress.gov Hearing",
       "social_posts": [],
       "tags": [
         "Medicaid",
@@ -1624,7 +1624,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://www.help.senate.gov/rep/newsroom/press/chair-cassidy-help-committee-republicans-launch-task-force-to-eliminate-fraud-in-federal-spending-protect-american-taxpayers",
-      "link_label": "Senate HELP Committee",
+      "link_label": "Senate HELP Release",
       "social_posts": [],
       "tags": [],
       "state": null,
@@ -1668,7 +1668,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://waysandmeans.house.gov/event/full-committee-hearing-with-health-insurance-ceos/",
-      "link_label": "Committee Hearing Page",
+      "link_label": "House Ways & Means Hearing",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -1690,7 +1690,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/fall-2025-semiannual-report-to-congress/",
-      "link_label": "HHS-OIG Semiannual Report",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicaid",
@@ -1712,7 +1712,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://energycommerce.house.gov/posts/e-and-c-leaders-launch-investigation-into-ongoing-medicaid-fraud-in-minnesota",
-      "link_label": "House E&C",
+      "link_label": "House E&C Release",
       "social_posts": [],
       "tags": [
         "Medicaid"
@@ -1992,7 +1992,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://oversight.house.gov/hearing/oversight-of-fraud-and-misuse-of-federal-funds-in-minnesota/",
-      "link_label": "Committee Hearing Page",
+      "link_label": "House Oversight Hearing",
       "social_posts": [],
       "tags": [
         "Autism/ABA",
@@ -2084,7 +2084,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://oversight.house.gov/release/chairman-comer-widens-investigation-into-fraud-in-minnesotas-social-services-programs/",
-      "link_label": "House Oversight",
+      "link_label": "House Oversight Release",
       "social_posts": [],
       "tags": [
         "Medicaid"
@@ -2105,7 +2105,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oversight.house.gov/release/chairman-comer-launches-investigation-into-massive-fraud-in-minnesotas-social-services-system-on-governor-walzs-watch/",
-      "link_label": "House Oversight",
+      "link_label": "House Oversight Release",
       "social_posts": [],
       "tags": [
         "Autism/ABA",
@@ -2242,7 +2242,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://judiciary.house.gov/media/press-releases/judiciary-republicans-probe-insurance-companies-obamacare-fraud",
-      "link_label": "House Judiciary Committee",
+      "link_label": "House Judiciary Release",
       "social_posts": [],
       "tags": [
         "ACA",
@@ -2674,7 +2674,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://www.finance.senate.gov/hearings/the-presidents-2026-health-care-agenda",
-      "link_label": "Senate Finance Committee",
+      "link_label": "Senate Finance Release",
       "social_posts": [],
       "tags": [
         "ACA",
@@ -2944,7 +2944,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://oversight.house.gov/release/oversight-committee-launches-investigation-into-new-yorks-abuse-of-federal-funds-in-medicaid-program/",
-      "link_label": "House Oversight Committee",
+      "link_label": "House Oversight Release",
       "social_posts": [],
       "tags": [
         "Medicaid"
@@ -3068,7 +3068,7 @@
       "amount_numeric": 650000000.0,
       "officials": [],
       "link": "https://www.justice.gov/criminal/criminal-fraud/health-care-fraud-unit/2025-national-hcf-case-summaries",
-      "link_label": "DOJ 2025 Takedown Case Summaries",
+      "link_label": "DOJ Report",
       "social_posts": [],
       "tags": [
         "Medicaid",
@@ -3160,7 +3160,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://www.whitehouse.gov/presidential-actions/2025/06/eliminating-waste-fraud-and-abuse-in-medicaid/",
-      "link_label": "White House",
+      "link_label": "White House Release",
       "social_posts": [],
       "tags": [
         "Medicaid",
@@ -3207,7 +3207,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/spring-2025-semiannual-report-to-congress/",
-      "link_label": "HHS-OIG Semiannual Report",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Home Health",
@@ -3351,7 +3351,7 @@
       "amount_numeric": 0.0,
       "officials": [],
       "link": "https://www.justice.gov/criminal/media/1400046/dl",
-      "link_label": "DOJ White-Collar Enforcement Plan",
+      "link_label": "DOJ Report",
       "social_posts": [],
       "tags": [
         "Medicaid",
@@ -3444,7 +3444,7 @@
       "amount_numeric": 202000000.0,
       "officials": [],
       "link": "https://www.justice.gov/usao-sdny/pr/us-attorney-announces-202-million-settlement-gilead-sciences-using-speaker-programs",
-      "link_label": "DOJ Press Release (S.D.N.Y.)",
+      "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
         "Medicaid",
@@ -3948,7 +3948,7 @@
       "amount_numeric": 18500000,
       "officials": [],
       "link": "https://www.justice.gov/usao-edva/pr/chesapeake-hospital-indicted-healthcare-fraud-involving-unnecessary-surgical",
-      "link_label": "DOJ EDVA Press Release",
+      "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
         "Hospital",
@@ -14324,7 +14324,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://www.macpac.gov/publication/comment-letter-medicaid-program-integrity/",
-      "link_label": "MACPAC Press Release",
+      "link_label": "MACPAC Report",
       "social_posts": [],
       "tags": [
         "Medicaid",
@@ -14594,7 +14594,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://www.cms.gov/files/document/crushing-fraud-annual-report.pdf",
-      "link_label": "CMS Annual Report",
+      "link_label": "CMS Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14616,7 +14616,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://www.cms.gov/files/document/hot-spot-dmepos-suppliers.pdf",
-      "link_label": "CMS Hot Spot Report",
+      "link_label": "CMS Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14704,7 +14704,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/about-oig/strategic-plan/",
-      "link_label": "HHS-OIG Strategic Plan",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -14753,7 +14753,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/compliance/ma-icpg/",
-      "link_label": "HHS-OIG Compliance Guidance",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
         "Medicare Advantage",
@@ -15414,7 +15414,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://www.macpac.gov/publication/introduction-to-medicaid-program-integrity/",
-      "link_label": "MACPAC Press Release",
+      "link_label": "MACPAC Report",
       "social_posts": [],
       "tags": [
         "Medicaid"
@@ -15481,7 +15481,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://www.macpac.gov/publication/state-and-federal-tools-for-ensuring-accountability-of-medicaid-managed-care-plans-draft-chapter/",
-      "link_label": "MACPAC Press Release",
+      "link_label": "MACPAC Report",
       "social_posts": [],
       "tags": [
         "Medicaid",
@@ -15609,7 +15609,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oversight.house.gov/hearing/fraud-prevention-understanding-fraud-in-federally-funded-programs-run-by-the-states/",
-      "link_label": "Committee Hearing Page",
+      "link_label": "House Oversight Hearing",
       "social_posts": [],
       "tags": [
         "Medicaid"
@@ -15630,7 +15630,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oversight.house.gov/hearing/the-war-on-waste-stamping-out-the-scourge-of-improper-payments-and-fraud/",
-      "link_label": "Committee Hearing Page",
+      "link_label": "House Oversight Hearing",
       "tags": [],
       "state": "",
       "source_type": "official",
@@ -15652,7 +15652,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oversight.house.gov/hearing/shifting-gears-moving-from-recovery-to-prevention-of-improper-payments-and-fraud/",
-      "link_label": "Committee Hearing Page",
+      "link_label": "House Oversight Hearing",
       "tags": [],
       "state": "",
       "source_type": "official",
@@ -15674,7 +15674,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oversight.house.gov/hearing/locking-in-the-doge-cuts-ending-waste-fraud-and-abuse-for-good/",
-      "link_label": "Committee Hearing Page",
+      "link_label": "House Oversight Hearing",
       "tags": [],
       "state": "",
       "source_type": "official",
@@ -15696,7 +15696,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://www.congress.gov/event/119-congress/senate-event/337967",
-      "link_label": "Congress.gov Event",
+      "link_label": "Congress.gov Hearing",
       "tags": [],
       "state": "MN",
       "source_type": "official",
@@ -15793,7 +15793,7 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://www.macpac.gov/publication/medicaid-program-integrity/",
-      "link_label": "MACPAC Press Release",
+      "link_label": "MACPAC Report",
       "social_posts": [],
       "tags": [
         "Medicaid"

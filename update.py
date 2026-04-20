@@ -799,6 +799,74 @@ def _get_ai_client():
     return _AI_CLIENT
 
 
+# Canonical link_label map for congressional committee URLs. Used by
+# derive_link_label() so the "View Source" button on each card is
+# consistently labeled across items from the same committee (previously
+# the same committee would produce "House Oversight", "House Oversight
+# Press Release", "House Oversight Release", "House Oversight Committee",
+# and "Committee Hearing Page" depending on which scraper and path).
+#
+# Convention: "{Committee Name} {Release|Hearing}" — no "Committee"
+# suffix (redundant), "Release" for press releases, "Hearing" for
+# hearing pages.
+_COMMITTEE_URL_LABELS = [
+    ('oversight.house.gov/hearing/', 'House Oversight Hearing'),
+    ('oversight.house.gov/release/', 'House Oversight Release'),
+    ('oversight.house.gov/',         'House Oversight Release'),
+    ('energycommerce.house.gov/',    'House E&C Release'),
+    ('waysandmeans.house.gov/event/', 'House Ways & Means Hearing'),
+    ('waysandmeans.house.gov/',      'House Ways & Means Release'),
+    ('help.senate.gov/',             'Senate HELP Release'),
+    ('finance.senate.gov/',          'Senate Finance Release'),
+    ('judiciary.senate.gov/',        'Senate Judiciary Release'),
+    ('judiciary.house.gov/',         'House Judiciary Release'),
+    ('hsgac.senate.gov/',            'Senate HSGAC Hearing'),
+    ('congress.gov/committee-meeting/', 'Congress.gov Hearing'),
+]
+
+# URL pattern -> label for non-Congress agencies where doc type matters
+# (a /fact-sheets/ URL should say "Fact Sheet", not "Press Release").
+_AGENCY_URL_LABELS = [
+    ('cms.gov/newsroom/fact-sheets/', 'CMS Fact Sheet'),
+    ('cms.gov/blog/',                 'CMS Blog Post'),
+    ('cms.gov/files/',                'CMS Report'),
+    ('whitehouse.gov/fact-sheets/',   'White House Fact Sheet'),
+    ('whitehouse.gov/presidential-actions/', 'White House Release'),
+    ('whitehouse.gov/releases/',      'White House Release'),
+    ('oig.hhs.gov/reports/',          'HHS-OIG Report'),
+    ('oig.hhs.gov/fraud/strike-force/', 'HHS-OIG Report'),
+    ('gao.gov/products/',             'GAO Report'),
+]
+
+
+def derive_link_label(agency, link, feed_name=None, is_media=False):
+    """Produce a consistent link_label for a scraped item.
+
+    Resolution order:
+      1. Media items: "{feed_name} Report" (e.g., "KARE 11 Report")
+      2. Congress items: committee-specific label from URL pattern
+      3. Non-Congress agency items: URL-based doc-type refinement
+         (e.g., CMS fact-sheet URLs get "CMS Fact Sheet", not "CMS
+         Press Release")
+      4. Fallback: "{agency} Press Release"
+    """
+    if is_media:
+        return f"{feed_name} Report" if feed_name else "Media Report"
+    link_l = (link or "").lower()
+    # Congress items: use committee-specific label
+    if agency == 'Congress':
+        for pat, lbl in _COMMITTEE_URL_LABELS:
+            if pat in link_l:
+                return lbl
+        return "Congress Release"  # generic fallback
+    # Non-Congress agencies: URL-based doc-type refinement
+    for pat, lbl in _AGENCY_URL_LABELS:
+        if pat in link_l:
+            return lbl
+    # Fallback: agency-named press release
+    return f"{agency} Press Release"
+
+
 def generate_tags(title, full_text=""):
     """Generate allowlist tags from title + body text.
 
@@ -3563,7 +3631,9 @@ def main():
                         pass  # will be routed to oversight queue
 
                 id_prefix = 'media' if is_media else re.sub(r'\W', '-', actual_agency.lower())
-                link_label = f"{feed['name']} Report" if is_media else f"{actual_agency} Press Release"
+                link_label = derive_link_label(
+                    actual_agency, link, feed_name=feed['name'], is_media=is_media
+                )
 
                 # Agency/domain consistency check — warn when an item's agency
                 # doesn't match its link domain. This catches ingest mistakes

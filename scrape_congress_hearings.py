@@ -610,11 +610,24 @@ def apply_to_actions(results):
         committee_url = resolve_committee_url(r["title"], primary_cc)
         if committee_url:
             link = committee_url
-            link_label = f"{r['committees'][0] if r['committees'] else 'Committee'} Hearing"
+            # Use update.derive_link_label for consistency with the main
+            # scraper — produces "House Oversight Hearing", "Senate HSGAC
+            # Hearing", etc. from the URL pattern. Falls back to committee
+            # name + " Hearing" when URL doesn't match known patterns.
+            try:
+                from update import derive_link_label
+                link_label = derive_link_label('Congress', link)
+                # If derive returned the generic fallback, use the
+                # committee name from Congress.gov data for specificity
+                if link_label == 'Congress Release':
+                    cname = r['committees'][0] if r['committees'] else 'Committee'
+                    link_label = f"{cname} Hearing"
+            except Exception:
+                link_label = f"{r['committees'][0] if r['committees'] else 'Committee'} Hearing"
             resolved_committee += 1
         else:
             link = r["congress_url"]
-            link_label = "Congress.gov Event"
+            link_label = "Congress.gov Hearing"
         new_items.append({
             "id": f"congress-{r['chamber']}-{r['eventId']}",
             "date": r["date"],
