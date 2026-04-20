@@ -132,15 +132,16 @@ def fetch_and_enrich(item, session):
     # Tags
     fresh_tags = filter_tags(generate_tags(canonical_title or item.get("title", ""),
                                              body_text))
-    # State
-    fresh_state = get_state(body_text,
-                              title=canonical_title or item.get("title", ""),
-                              link=url)
-    # Link label
-    fresh_link_label = derive_link_label(agency, url, is_media=is_media)
-    # Type
+    # Type — computed before state so state extraction can skip body
+    # fallback for policy items (state rule v3 update)
     fresh_type = get_action_type(canonical_title or item.get("title", ""),
                                   body_text[:500], agency=agency, link=url)
+    # State (item-type-aware)
+    fresh_state = get_state(body_text,
+                              title=canonical_title or item.get("title", ""),
+                              link=url, item_type=fresh_type)
+    # Link label
+    fresh_link_label = derive_link_label(agency, url, is_media=is_media)
     # Amount (enforcement only)
     is_enf = fresh_type in ("Criminal Enforcement", "Civil Action")
     fresh_amount = ""

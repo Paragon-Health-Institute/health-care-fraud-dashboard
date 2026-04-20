@@ -545,7 +545,12 @@ _NATIONAL_TITLE_RE = re.compile(
     r"^national\s+(health|healthcare|health\s*care)\s+fraud\s+takedown|"
     r"\bnationwide\b|"
     r"\b\d+\s+(additional\s+)?states\b|"
-    r"\bmulti-?state\b",
+    r"\bmulti-?state\b|"
+    r"\bfederal\s+benefit\s+programs?\b|"
+    r"\btaxpayer-funded\s+programs?\b|"
+    r"\bgovernment-wide\b|"
+    r"\bnational\s+strategy\b|"
+    r"\bcross-agency\b",
     re.IGNORECASE,
 )
 
@@ -555,9 +560,21 @@ _NATIONAL_TITLE_RE = re.compile(
 _NATIONAL_BODY_RE = re.compile(
     r"\b(nationwide|across\s+the\s+country|multi-?state\s+scheme|"
     r"nationally|throughout\s+the\s+United\s+States|"
-    r"in\s+multiple\s+states)\b",
+    r"in\s+multiple\s+states|government-wide|cross-agency)\b",
     re.IGNORECASE,
 )
+
+# Item types where body-text state fallback is unreliable and should be
+# skipped. These are policy/hearing/report/org items where incidental
+# state mentions (senator home states, witness testimony, example
+# jurisdictions) get wrongly assigned as the item's geographic scope.
+# Enforcement + Investigation items keep the body fallback because
+# they're usually state-specific.
+_STATE_BODY_FALLBACK_SKIP_TYPES = {
+    'Hearing', 'Report', 'Audit', 'Rule/Regulation',
+    'Administrative Action', 'Structural/Organizational',
+    'Presidential Action', 'Legislation',
+}
 
 # Role nouns that turn a state name into a demonym ("Florida Man",
 # "Illinois Doctor"). When a state appears ONLY in this pattern, it's a
@@ -659,12 +676,15 @@ def _demonym_corroborated(body_text, state_name):
     return False
 
 
-def get_state(text, title=None, link=None):
+def get_state(text, title=None, link=None, item_type=None):
     """Return a state code (or comma-separated list) from available signals.
 
-    **Rule (2026-04-17, revised):** prosecution venue + explicit party
+    **Rule (2026-04-20, revised):** prosecution venue + explicit party
     mentions win. Demonyms ("Florida Man", "Illinois Doctor") are weak
-    signals and only count when corroborated by the body text.
+    signals and only count when corroborated by the body text. For
+    non-enforcement items, body-text fallback is skipped (policy/
+    hearing items shouldn't get state from incidental mentions like
+    senator home states or witness testimony).
 
     Priority order:
       0. National-scope guard: title OR body matches nationwide/multi-state
@@ -679,7 +699,15 @@ def get_state(text, title=None, link=None):
       5. Title demonyms ("Florida Man") -> append ONLY if corroborated
          by a non-demonym mention of that state in body text.
       6. Body-text fallback (longest state-name match) -> use only if
-         nothing above produced a result.
+         nothing above produced a result AND `item_type` is NOT a
+         policy/hearing/report type (see _STATE_BODY_FALLBACK_SKIP_TYPES).
+         Body fallback is reliable for enforcement items (state = the
+         venue) but not for policy items where incidental state mentions
+         (senator home states, witness affiliations) leak through.
+
+    `item_type` is the action type classification (Criminal Enforcement,
+    Hearing, Report, etc.). When omitted, body fallback runs unconditionally
+    (backward-compatible with older callers; auto-scraper always passes it).
 
     See `state_tag_meaning_tbd.md` for the design discussion.
     """
@@ -735,7 +763,12 @@ def get_state(text, title=None, link=None):
     if states:
         return ", ".join(states)
 
-    # Path 6: body-text fallback (longest name wins)
+    # Path 6: body-text fallback (longest name wins). SKIPPED for
+    # policy/hearing/report item types because these get false-positive
+    # state assignments from incidental body mentions (senator home
+    # states, witness testimony, example jurisdictions).
+    if item_type and item_type in _STATE_BODY_FALLBACK_SKIP_TYPES:
+        return None
     if text:
         for name, abbr in sorted(STATE_MAP.items(), key=lambda x: -len(x[0])):
             if re.search(r"\b" + re.escape(name) + r"\b", text):
@@ -3620,17 +3653,22 @@ def main():
                 if globals().get('OPA_ONLY') and '/opa/pr/' not in link:
                     continue
 
-                # State detection prioritizes title over body text. Body often
-                # mentions unrelated states (defendant's prior out-of-state convictions,
-                # venue transfers, comparison data). Title almost always names the
-                # relevant state for the case.
-                # State priority: title > USAO district > city > body.
-                # See get_state() — multi-state titles return comma-separated.
-                state = get_state(search_text, title=title, link=link)
+                # Action type first — used as a hint for state extraction
+                # (body-text fallback is skipped for policy/hearing types
+                # per state rule v3 refinement).
                 action_type = ('Investigative Report' if is_media
                                else get_action_type(title, search_text,
                                                     agency=feed.get('agency'),
                                                     link=link))
+
+                # State detection: USAO -> party-state -> non-demonym title
+                # -> city-if-no-USAO -> corroborated demonym -> body-fallback
+                # (only for enforcement/investigation types). Policy items
+                # (hearings, rules, reports) skip body-fallback so they
+                # don't get wrongly assigned state from incidental body
+                # mentions. See get_state() and state_tag_meaning_tbd.md.
+                state = get_state(search_text, title=title, link=link,
+                                   item_type=action_type)
                 tags = generate_tags(title, full_text)
 
                 # Enforcement-only filter: only add items classified as

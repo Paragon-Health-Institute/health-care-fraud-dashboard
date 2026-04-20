@@ -214,18 +214,21 @@ def build_item_from_url(url: str, agency_override: str = "",
     # Tags: use the strict pipeline
     tags = filter_tags(generate_tags(canonical_title, body_text))
 
-    # State
-    state = get_state(body_text, title=canonical_title, link=url)
-
     # Link label
     link_label = derive_link_label(agency, url, is_media=is_media)
 
-    # Type
+    # Type — computed BEFORE state because state extraction consults
+    # action_type to decide whether to run body-text fallback (policy
+    # items skip it).
     if type_override:
         action_type = type_override
     else:
         action_type = get_action_type(canonical_title, body_text[:500],
                                        agency=agency, link=url)
+
+    # State (item-type-aware per state rule v3)
+    state = get_state(body_text, title=canonical_title, link=url,
+                       item_type=action_type)
 
     # ----- Gap fixes (2026-04-20) to match auto-scraper behavior -----
 
