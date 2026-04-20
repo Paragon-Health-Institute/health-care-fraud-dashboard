@@ -1240,6 +1240,27 @@ def fetch_detail_page(session, url):
             for tag in main.find_all(class_=re.compile(
                     r"social-share|share-links", re.I)):
                 tag.decompose()
+            # Heading-text-based related-sidebar strip: CMS and some other
+            # agencies render "Related Releases" / "Related Press Releases"
+            # as a heading rather than via a class hook. Decompose the
+            # heading and every sibling after it so the sidebar's
+            # unrelated press-release titles can't leak into tag extraction.
+            _related_heading_re = re.compile(
+                r"^\s*(related\s+(releases|press\s+releases|content|"
+                r"stor(y|ies)|articles?)|more\s+(news|press|from))\b",
+                re.I,
+            )
+            for h in main.find_all(["h2", "h3", "h4"]):
+                if _related_heading_re.match(h.get_text(" ", strip=True) or ""):
+                    # remove this heading and all following siblings
+                    sib = h.find_next_sibling()
+                    h.decompose()
+                    while sib is not None:
+                        nxt = sib.find_next_sibling()
+                        try: sib.decompose()
+                        except Exception: pass
+                        sib = nxt
+                    break
             return (re.sub(r'\s+', ' ', main.get_text(' ', strip=True)),
                     doj_link, canonical_title, canonical_date)
         return "", doj_link, canonical_title, canonical_date

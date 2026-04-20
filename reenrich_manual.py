@@ -78,7 +78,7 @@ _NEWS_DOMAINS = {
     "foxillinois.com", "foxla.com", "city-journal.org",
     "californiaglobe.com", "realclearinvestigations.com",
     "washingtontimes.com", "kstp.com", "deadlinedetroit.com",
-    "clickondetroit.com", "fiercehealthcare.com",
+    "clickondetroit.com", "fiercehealthcare.com", "fox9.com",
 }
 
 

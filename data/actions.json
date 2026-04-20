@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T17:39:47.018047",
+    "last_updated": "2026-04-20T18:05:58.448743",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -1969,8 +1969,8 @@
       "narrative_title": "House Oversight Hearing: Oversight of Fraud and Misuse of Federal Funds in Minnesota — Part I"
     },
     {
-      "id": "cms-2025-12-05-minnesota-corrective-action-directive",
-      "date": "2025-12-05",
+      "id": "cms-2026-01-07-minnesota-audit-deferral",
+      "date": "2026-01-07",
       "agency": "CMS",
       "type": "Administrative Action",
       "title": "Trump admin to audit Minnesota Medicaid receipts, defer payment to 14 programs",
@@ -2488,10 +2488,9 @@
       "link_label": "CMS Press Release",
       "social_posts": [],
       "tags": [
+        "Medicare",
         "Skin Substitutes",
-        "Medicaid",
-        "Wound Care",
-        "Medicare"
+        "Wound Care"
       ],
       "entities": [],
       "state": null,
@@ -2757,8 +2756,6 @@
       "agency": "CMS",
       "social_posts": [],
       "tags": [
-        "Hospice",
-        "Medicaid",
         "Medicare"
       ],
       "date": "2025-06-30",
@@ -14458,7 +14455,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "DME",
+        "Skin Substitutes"
       ],
       "entities": [],
       "state": null,
@@ -14467,7 +14465,7 @@
       "related_agencies": []
     },
     {
-      "id": "cms-2026-01-28-hot-spot-dmepos",
+      "id": "cms-2025-09-hot-spot-dmepos",
       "date": "2025-09",
       "agency": "CMS",
       "type": "Report",
@@ -14489,7 +14487,7 @@
       "related_agencies": []
     },
     {
-      "id": "cms-2026-01-28-fast-facts-radv",
+      "id": "cms-2025-07-fast-facts-radv",
       "date": "2025-07",
       "agency": "CMS",
       "type": "Report",
@@ -14524,6 +14522,7 @@
       "social_posts": [],
       "tags": [
         "Medicare",
+        "Medicare Advantage",
         "Hospice"
       ],
       "entities": [],
@@ -14533,7 +14532,7 @@
       "related_agencies": []
     },
     {
-      "id": "cms-2026-01-28-fast-facts-dual-enrollment",
+      "id": "cms-2025-09-fast-facts-dual-enrollment",
       "date": "2025-09",
       "agency": "CMS",
       "type": "Report",
@@ -14545,8 +14544,8 @@
       "link_label": "CMS Report",
       "social_posts": [],
       "tags": [
-        "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "ACA"
       ],
       "entities": [],
       "state": null,
@@ -15655,7 +15654,7 @@
     },
     {
       "id": "cms-pdf-2026-01-fdoc-fact-sheet-update",
-      "date": "2026-01",
+      "date": "2026-01-28",
       "agency": "CMS",
       "type": "Report",
       "title": "Fraud Defense Operations Center Fast Facts",
@@ -15664,7 +15663,13 @@
       "officials": [],
       "link": "https://www.cms.gov/files/document/fdoc-fact-sheet-updated.pdf",
       "link_label": "CMS Report",
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "DME",
+        "Genetic Testing",
+        "Lab Testing",
+        "Skin Substitutes"
+      ],
       "state": "",
       "source_type": "official",
       "auto_fetched": false,
@@ -15951,6 +15956,27 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "cms-2025-12-06-minnesota-warning-letter",
+      "date": "2025-12-06",
+      "agency": "CMS",
+      "type": "Administrative Action",
+      "title": "Dr. Oz calls for Gov. Walz to address ‘systemic fraud’ in MN Medicaid system",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.fox9.com/news/dr-oz-gov-walz-address-systemic-fraud-mn-medicaid-system",
+      "link_label": "FOX 9 News",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "MN",
+      "source_type": "news",
+      "auto_fetched": false,
+      "related_agencies": []
     }
   ]
 }

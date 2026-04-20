@@ -158,6 +158,15 @@ _BOILERPLATE_PATTERNS = [
         r"an?\s+allegation[^.]*presumed\s+innocent[^.]*\.",
         _re.IGNORECASE,
     ),
+    # CMS agency name — "Centers for Medicare & Medicaid Services" and
+    # "Medicare and Medicaid Services" variants. These are pure agency-name
+    # mentions and should NOT count as Medicare/Medicaid program tags.
+    # Masked here so tag regex only sees substantive program mentions.
+    _re.compile(
+        r"(?:Centers\s+for\s+)?Medicare\s+(?:&|and)\s+Medicaid\s+Services"
+        r"(?:'s)?",
+        _re.IGNORECASE,
+    ),
 ]
 
 
@@ -238,7 +247,7 @@ TAG_PATTERNS = [
     # (which pulls in any drug-manufacturer FCA case without pharmacy billing).
     (r"\bpharmac(y|ies|ist)\b|\bcompound\s+pharmac|pill\s+mill\s+pharmacy", "Pharmacy"),
     # Genetic Testing — specific before Lab Testing
-    (r"\bgenetic\s+test(ing)?\b|\bcgx\b|\bpgx\b|pharmacogenom|"
+    (r"\bgenetic\s+test(ing|s)?\b|\bcgx\b|\bpgx\b|pharmacogenom|"
      r"cancer\s+genomic|hereditary\s+cancer\s+(test|panel)", "Genetic Testing"),
     # Lab Testing — require explicit lab/laboratory vocab or specific test fraud
     (r"\b(clinical\s+)?laborator(y|ies)\b|\btoxicolog|"
