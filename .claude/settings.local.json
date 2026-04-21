@@ -34,7 +34,8 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Fix CMS illegal-immigrants oversight item date to 2025-05-27\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Fix MN CAP-approved date to 2026-03-20 \\(KSTP publication date, news-sourced consistency\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Vance task force item: swap Medicare -> Home Health tag\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"WV Medicaid rebates audit: add Medicaid Managed Care tag\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"WV Medicaid rebates audit: add Medicaid Managed Care tag\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Remove duplicate Maine autism audit press release \\(same as Jan 16 report\\)\")"
     ]
   }
 }

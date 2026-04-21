@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T21:44:22.227568",
+    "last_updated": "2026-04-20T21:47:07.953458",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -15566,28 +15566,6 @@
       "doj_topics": [
         "Health Care Fraud"
       ]
-    },
-    {
-      "id": "hhs-oig-2026-01-22-1976565815",
-      "date": "2026-01-22",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "HHS-OIG Audit Finds Maine Made At Least $45.6 Million in Improper Medicaid Payments for Autism Services",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/newsroom/news-releases-articles/hhs-oig-audit-finds-maine-made-at-least-456-million-in-improper-medicaid-payments-for-autism-services/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicaid",
-        "Autism/ABA"
-      ],
-      "entities": [],
-      "state": "ME",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
     },
     {
       "id": "macpac-2026-04-16-1062808214",
