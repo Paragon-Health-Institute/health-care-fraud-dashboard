@@ -66,7 +66,8 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"AZ Indigenous Medicaid item: drop Mental Health \\(addiction-only fraud per body; Mental Health rule excludes addiction\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"WSMV Russian TN catheter fraud: date 2026-02-19 \\(UTC->local fix\\), add DME tag\")",
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Convert article:published_time UTC -> publisher local TZ before extracting date *)",
-      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'KARE11 MN Medicaid audit item: add tags for all vulnerable services named in report *)"
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'KARE11 MN Medicaid audit item: add tags for all vulnerable services named in report *)",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Fix KARE11 MN Housing Stabilization fraud item date: 2025-10-15 -> 2025-09-18 \\(per article:published_time\\)\")"
     ]
   }
 }
