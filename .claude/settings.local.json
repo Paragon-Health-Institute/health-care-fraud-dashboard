@@ -48,7 +48,8 @@
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Prefer HHS-OIG '\\\\''Issued'\\\\'' date over canonical page-posted date *)",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" add index.html)",
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Split tag filter into separate Programs + Vulnerable Areas dropdowns *)",
-      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Restore ACA Insurance Brokers + add Bucks County, Pharmacy President items *)"
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Restore ACA Insurance Brokers + add Bucks County, Pharmacy President items *)",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Add 2 missed HHS-OIG enforcement items; reject St. Louis pandemic fraud *)"
     ]
   }
 }

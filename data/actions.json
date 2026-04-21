@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T09:42:30.444440",
+    "last_updated": "2026-04-21T09:45:34.172605",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -15983,6 +15983,46 @@
       ],
       "entities": [],
       "state": "PA",
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-04-20-former-pharmacy-president-sentenced-to-24-months-in-prison-f",
+      "date": "2026-04-20",
+      "agency": "HHS-OIG",
+      "type": "Criminal Enforcement",
+      "title": "Former Pharmacy President Sentenced to 24 Months in Prison for Health Care Fraud and Kickback Scheme Involving Compounded Medications",
+      "amount": "$33 million",
+      "amount_numeric": 33000000,
+      "officials": [],
+      "link": "https://oig.hhs.gov/fraud/enforcement/former-pharmacy-president-sentenced-to-24-months-in-prison-for-health-care-fraud-and-kickback-scheme-involving-compounded-medications/",
+      "link_label": "HHS-OIG Press Release",
+      "social_posts": [],
+      "tags": [
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": "NJ",
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-04-20-illegal-alien-previously-convicted-of-drug-offenses-charged-",
+      "date": "2026-04-20",
+      "agency": "HHS-OIG",
+      "type": "Criminal Enforcement",
+      "title": "Illegal Alien Previously Convicted of Drug Offenses Charged with Healthcare Benefit Fraud and Aggravated Identity Theft",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/fraud/enforcement/illegal-alien-previously-convicted-of-drug-offenses-charged-with-healthcare-benefit-fraud-and-aggravated-identity-theft/",
+      "link_label": "HHS-OIG Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "MA",
       "source_type": "official",
       "auto_fetched": false,
       "related_agencies": []
