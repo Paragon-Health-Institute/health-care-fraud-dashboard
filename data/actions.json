@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T15:54:42.828988",
+    "last_updated": "2026-04-21T15:56:34.250581",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -13375,8 +13375,8 @@
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Former New York National Sales Director Sentenced to Three Years in Prison For Kickback Scheme",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$70.6 million",
+      "amount_numeric": 70600000,
       "officials": [],
       "link": "https://www.justice.gov/usao-ma/pr/former-new-york-national-sales-director-sentenced-three-years-prison-kickback-scheme",
       "link_label": "DOJ Press Release",
@@ -13385,7 +13385,7 @@
         "Medicare"
       ],
       "entities": [],
-      "state": "MA, NY",
+      "state": "MA",
       "source_type": "official",
       "auto_fetched": true,
       "doj_topics": [

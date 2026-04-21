@@ -104,7 +104,8 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Sarasota Lab item: drop Medicaid tag \\(body only mentions Medicaid in AKS boilerplate; case is Medicare-specific\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" add tag_allowlist.py)",
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Strip Anti-Kickback Statute boilerplate before tag extraction *)",
-      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'extract_amount: strip '\\\\''Fined $X'\\\\'' from titles so penalties don'\\\\''t get stored as fraud amount *)"
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'extract_amount: strip '\\\\''Fined $X'\\\\'' from titles so penalties don'\\\\''t get stored as fraud amount *)",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Former NY Sales Director item: state MA only \\(NY was defendant role\\), amount \\\\$70.6M \\(scheme total\\)\")"
     ]
   }
 }
