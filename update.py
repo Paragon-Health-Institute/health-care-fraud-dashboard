@@ -2670,18 +2670,22 @@ def extract_investigator_agencies(body_text):
         r"partnered\s+with|in\s+coordination\s+with)\b",
         re.IGNORECASE,
     )
-    # HHS-OIG name variants
+    # HHS-OIG name variants. Uses (?:and|&) since DOJ releases vary
+    # between "Health and Human Services" and "Health & Human Services".
+    # Uses "Office of (?:the )?Inspector General" because both forms appear.
     oig_re = re.compile(
         r"\bHHS[-\s]?OIG\b|"
-        r"\bHHS\s+Office\s+of\s+Inspector\s+General\b|"
-        # "Office of Inspector General ... Health and Human Services"
-        r"\bOffice\s+of\s+Inspector\s+General\s+(?:for\s+the\s+)?"
-        r"(?:U\.?S\.?\s+)?(?:Department\s+of\s+)?Health\s+and\s+Human\s+Services\b|"
-        # "Department of Health and Human Services Office of Inspector General"
-        r"\bDepartment\s+of\s+Health\s+and\s+Human\s+Services[-,]?\s+"
-        r"Office\s+of\s+Inspector\s+General\b|"
-        # "Health and Human Services Office of Inspector General" (name-first variant)
-        r"\bHealth\s+and\s+Human\s+Services\s+Office\s+of\s+Inspector\s+General\b",
+        r"\bHHS\s+Office\s+of\s+(?:the\s+)?Inspector\s+General\b|"
+        # "Office of [the] Inspector General ... Health (and|&) Human Services"
+        r"\bOffice\s+of\s+(?:the\s+)?Inspector\s+General\s+(?:for\s+the\s+)?"
+        r"(?:U\.?S\.?\s+)?(?:Department\s+of\s+)?"
+        r"Health\s+(?:and|&)\s+Human\s+Services\b|"
+        # "Department of Health (and|&) Human Services[']? Office of [the] Inspector General"
+        r"\bDepartment\s+of\s+Health\s+(?:and|&)\s+Human\s+Services['\u2019]?s?[-,]?\s+"
+        r"Office\s+of\s+(?:the\s+)?Inspector\s+General\b|"
+        # "Health (and|&) Human Services[']? Office of [the] Inspector General"
+        r"\bHealth\s+(?:and|&)\s+Human\s+Services['\u2019]?s?\s+"
+        r"Office\s+of\s+(?:the\s+)?Inspector\s+General\b",
         re.IGNORECASE,
     )
     # Scan 600-char windows around each investigator signal; look for HHS-OIG

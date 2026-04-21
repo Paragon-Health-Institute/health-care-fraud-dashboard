@@ -127,7 +127,8 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" add backfill_tags.py)",
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Add backfill_tags.py — re-extract tags with current regex + boilerplate strip + MFCU signal *)",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"MultiCare Health System item: add \\\\$3.73M settlement amount\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Former NFL Player item: state MS -> FL, MS \\(FL=venue+accomplices, MS=operations+proceeds\\)\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Former NFL Player item: state MS -> FL, MS \\(FL=venue+accomplices, MS=operations+proceeds\\)\")",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Expand HHS-OIG regex: '\\\\''&'\\\\'' separator, '\\\\''Office of the Inspector General'\\\\'', possessive apostrophe *)"
     ]
   }
 }
