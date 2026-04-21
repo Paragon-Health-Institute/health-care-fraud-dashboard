@@ -337,8 +337,11 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
         <select class="form-select filter-select" id="stateFilter" onchange="applyFilters()">
           <option value="all">All States</option>
         </select>
-        <select class="form-select filter-select" id="tagFilter" onchange="tagFilterChanged('tagFilter', applyFilters)">
-          <option value="all">All Tags</option>
+        <select class="form-select filter-select" id="programFilter" onchange="tagFilterChanged('programFilter', applyFilters)">
+          <option value="all">All Programs</option>
+        </select>
+        <select class="form-select filter-select" id="areaFilter" onchange="tagFilterChanged('areaFilter', applyFilters)">
+          <option value="all">All Vulnerable Areas</option>
         </select>
         <input type="date" class="form-control filter-date" id="dateFrom" onchange="applyFilters()" title="From date" min="2025-01-01" />
         <input type="date" class="form-control filter-date" id="dateTo" onchange="applyFilters()" title="To date" min="2025-01-01" />
@@ -356,8 +359,11 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
         <select class="form-select filter-select" id="oversightStateFilter" onchange="applyOversightFilters()">
           <option value="all">All States</option>
         </select>
-        <select class="form-select filter-select" id="oversightTagFilter" onchange="tagFilterChanged('oversightTagFilter', applyOversightFilters)">
-          <option value="all">All Tags</option>
+        <select class="form-select filter-select" id="oversightProgramFilter" onchange="tagFilterChanged('oversightProgramFilter', applyOversightFilters)">
+          <option value="all">All Programs</option>
+        </select>
+        <select class="form-select filter-select" id="oversightAreaFilter" onchange="tagFilterChanged('oversightAreaFilter', applyOversightFilters)">
+          <option value="all">All Vulnerable Areas</option>
         </select>
         <input type="date" class="form-control filter-date" id="oversightDateFrom" onchange="applyOversightFilters()" title="From date" min="2025-01-01" />
         <input type="date" class="form-control filter-date" id="oversightDateTo" onchange="applyOversightFilters()" title="To date" min="2025-01-01" />
@@ -369,8 +375,11 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
         <select class="form-select filter-select" id="landscapeStateFilter" onchange="filterLandscape()">
           <option value="all">All States</option>
         </select>
-        <select class="form-select filter-select" id="landscapeTagFilter" onchange="tagFilterChanged('landscapeTagFilter', filterLandscape)">
-          <option value="all">All Tags</option>
+        <select class="form-select filter-select" id="landscapeProgramFilter" onchange="tagFilterChanged('landscapeProgramFilter', filterLandscape)">
+          <option value="all">All Programs</option>
+        </select>
+        <select class="form-select filter-select" id="landscapeAreaFilter" onchange="tagFilterChanged('landscapeAreaFilter', filterLandscape)">
+          <option value="all">All Vulnerable Areas</option>
         </select>
         <input type="date" class="form-control filter-date" id="landscapeDateFrom" onchange="filterLandscape()" title="From date" min="2025-01-01" />
         <input type="date" class="form-control filter-date" id="landscapeDateTo" onchange="filterLandscape()" title="To date" min="2025-01-01" />
@@ -614,7 +623,10 @@ function appendCards(count, view) {
       const pill = document.createElement('span');
       pill.className = 'tag-pill';
       if (PROGRAMS.has(tag)) pill.classList.add('program-pill');
-      if (activeTag && tag === activeTag) pill.classList.add('active-tag');
+      if ((activeProgram && tag === activeProgram) ||
+          (activeArea    && tag === activeArea)) {
+        pill.classList.add('active-tag');
+      }
       pill.textContent = tag;
       pill.addEventListener('click', () => toggleTagFilter(tag));
       tagsEl.appendChild(pill);
@@ -673,15 +685,36 @@ function updateLoadMore(view) {
   }
 }
 
-let activeTag = null;
+// Two independent active-tag slots: one for Programs (Medicare, Medicaid,
+// etc.) and one for Vulnerable Areas (DME, Hospice, etc.). A card must
+// satisfy BOTH if both are set (AND logic).
+let activeProgram = null;
+let activeArea = null;
+
+// All 6 dropdown ids (3 tabs × 2 categories) for sync operations
+const _PROGRAM_SELECTS = ['programFilter', 'oversightProgramFilter', 'landscapeProgramFilter'];
+const _AREA_SELECTS    = ['areaFilter',    'oversightAreaFilter',    'landscapeAreaFilter'];
+
+function _syncProgramSelects() {
+  _PROGRAM_SELECTS.forEach(id => {
+    const s = document.getElementById(id); if (s) s.value = activeProgram || 'all';
+  });
+}
+function _syncAreaSelects() {
+  _AREA_SELECTS.forEach(id => {
+    const s = document.getElementById(id); if (s) s.value = activeArea || 'all';
+  });
+}
 
 function toggleTagFilter(tag) {
-  activeTag = (activeTag === tag) ? null : tag;
-  // Keep all three tag dropdowns in sync with the new activeTag
-  ['tagFilter', 'oversightTagFilter', 'landscapeTagFilter'].forEach(id => {
-    const sel = document.getElementById(id);
-    if (sel) sel.value = activeTag || 'all';
-  });
+  // Route to program or area slot based on category
+  if (PROGRAM_TAGS_JS.has(tag)) {
+    activeProgram = (activeProgram === tag) ? null : tag;
+    _syncProgramSelects();
+  } else {
+    activeArea = (activeArea === tag) ? null : tag;
+    _syncAreaSelects();
+  }
   if (currentView === 'oversight') applyOversightFilters();
   else if (currentView === 'landscape') filterLandscape();
   else applyFilters();
@@ -705,9 +738,8 @@ function applyFilters() {
     }
     if (dateFrom && a.date < dateFrom) return false;
     if (dateTo   && a.date > dateTo)   return false;
-    if (activeTag) {
-      if (!(a.tags||[]).includes(activeTag)) return false;
-    }
+    if (activeProgram && !(a.tags||[]).includes(activeProgram)) return false;
+    if (activeArea    && !(a.tags||[]).includes(activeArea))    return false;
     if (search) {
       const hay = [a.title, a.agency, a.type,
                    (a.tags||[]).join(' '),
@@ -725,7 +757,8 @@ function applyFilters() {
   let countText = filtered.length === enforcementActions.length
     ? enforcementActions.length + ' actions'
     : filtered.length + ' of ' + enforcementActions.length + ' actions';
-  if (activeTag) countText += ' \u2022 Tag: ' + activeTag;
+  const tagSuffix = [activeProgram, activeArea].filter(Boolean).join(' + ');
+  if (tagSuffix) countText += ' \u2022 ' + tagSuffix;
   countEl.textContent = countText;
 }
 
@@ -746,9 +779,8 @@ function applyOversightFilters() {
     }
     if (dateFrom && a.date < dateFrom) return false;
     if (dateTo   && a.date > dateTo)   return false;
-    if (activeTag) {
-      if (!(a.tags||[]).includes(activeTag)) return false;
-    }
+    if (activeProgram && !(a.tags||[]).includes(activeProgram)) return false;
+    if (activeArea    && !(a.tags||[]).includes(activeArea))    return false;
     if (search) {
       const hay = [a.title, a.agency, a.type,
                    (a.tags||[]).join(' '),
@@ -765,7 +797,8 @@ function applyOversightFilters() {
   let countText = filtered.length === oversightActions.length
     ? oversightActions.length + ' actions'
     : filtered.length + ' of ' + oversightActions.length + ' actions';
-  if (activeTag) countText += ' \u2022 Tag: ' + activeTag;
+  const tagSuffix = [activeProgram, activeArea].filter(Boolean).join(' + ');
+  if (tagSuffix) countText += ' \u2022 ' + tagSuffix;
   countEl.textContent = countText;
 }
 
@@ -774,11 +807,10 @@ function clearFilters() {
   document.getElementById('agencyFilter').value = 'all';
   document.getElementById('typeFilter').value   = 'all';
   document.getElementById('stateFilter').value  = 'all';
-  const tagSel = document.getElementById('tagFilter');
-  if (tagSel) tagSel.value = 'all';
   document.getElementById('dateFrom').value = '';
   document.getElementById('dateTo').value   = '';
-  activeTag = null;
+  activeProgram = null; activeArea = null;
+  _syncProgramSelects(); _syncAreaSelects();
   applyFilters();
 }
 
@@ -787,11 +819,10 @@ function clearOversightFilters() {
   document.getElementById('oversightAgencyFilter').value = 'all';
   document.getElementById('oversightTypeFilter').value   = 'all';
   document.getElementById('oversightStateFilter').value  = 'all';
-  const tagSel = document.getElementById('oversightTagFilter');
-  if (tagSel) tagSel.value = 'all';
   document.getElementById('oversightDateFrom').value = '';
   document.getElementById('oversightDateTo').value   = '';
-  activeTag = null;
+  activeProgram = null; activeArea = null;
+  _syncProgramSelects(); _syncAreaSelects();
   applyOversightFilters();
 }
 
@@ -817,14 +848,13 @@ const PROGRAM_TAGS_JS = new Set([
   'Medicare', 'Medicaid', 'Medicare Advantage', 'Medicaid Managed Care',
   'TRICARE', 'ACA'
 ]);
-function populateTagFilter(selectId, dataArray) {
-  const sel = document.getElementById(selectId);
-  while (sel.options.length > 1) sel.remove(1);
+// Populate a split Programs-only or Areas-only dropdown.
+// `category`: 'program' or 'area'. Builds a flat option list (no optgroups
+// now that category is already baked into which select it is).
+function populateTagFilter(programSelectId, areaSelectId, dataArray) {
   const counts = new Map();
   dataArray.forEach(a => {
-    (a.tags || []).forEach(t => {
-      if (t) counts.set(t, (counts.get(t) || 0) + 1);
-    });
+    (a.tags || []).forEach(t => { if (t) counts.set(t, (counts.get(t) || 0) + 1); });
   });
   const programTags = [];
   const areaTags = [];
@@ -832,52 +862,41 @@ function populateTagFilter(selectId, dataArray) {
     if (PROGRAM_TAGS_JS.has(t)) programTags.push(t);
     else areaTags.push(t);
   });
-  // Programs group
-  if (programTags.length) {
-    const gp = document.createElement('optgroup');
-    gp.label = 'Programs';
-    programTags.forEach(t => {
+  const fill = (selId, tags) => {
+    const sel = document.getElementById(selId); if (!sel) return;
+    while (sel.options.length > 1) sel.remove(1);
+    tags.forEach(t => {
       const opt = document.createElement('option');
-      opt.value = t;
-      opt.textContent = t;
-      gp.appendChild(opt);
+      opt.value = t; opt.textContent = t;
+      sel.appendChild(opt);
     });
-    sel.appendChild(gp);
+  };
+  fill(programSelectId, programTags);
+  fill(areaSelectId, areaTags);
+  // Restore current selections
+  if (activeProgram) {
+    const s = document.getElementById(programSelectId);
+    if (s) for (const o of s.options) if (o.value === activeProgram) { s.value = activeProgram; break; }
   }
-  // Vulnerable Areas group
-  if (areaTags.length) {
-    const ga = document.createElement('optgroup');
-    ga.label = 'Vulnerable Areas';
-    areaTags.forEach(t => {
-      const opt = document.createElement('option');
-      opt.value = t;
-      opt.textContent = t;
-      ga.appendChild(opt);
-    });
-    sel.appendChild(ga);
-  }
-  // Restore current activeTag selection if it's still in the list
-  if (activeTag) {
-    for (const opt of sel.options) {
-      if (opt.value === activeTag) { sel.value = activeTag; break; }
-    }
+  if (activeArea) {
+    const s = document.getElementById(areaSelectId);
+    if (s) for (const o of s.options) if (o.value === activeArea) { s.value = activeArea; break; }
   }
 }
 
-// Tag dropdown onchange handler: sets activeTag so the existing
-// filter logic picks it up (same mechanism as clicking a tag pill).
-// Also keeps the OTHER tab's tag dropdown in sync so switching tabs
-// doesn't lose the current tag filter visual state.
+// Tag dropdown onchange handler: routes by the dropdown's category
+// (program vs area) so the two filters stay independent. Also syncs
+// all 3 tabs' matching dropdowns so switching tabs preserves state.
 function tagFilterChanged(selectId, applyFn) {
   const val = document.getElementById(selectId).value;
-  activeTag = (val === 'all') ? null : val;
-  // Mirror to all three tag dropdowns so they stay in sync
-  ['tagFilter', 'oversightTagFilter', 'landscapeTagFilter'].forEach(id => {
-    const other = document.getElementById(id);
-    if (other && other !== document.getElementById(selectId)) {
-      other.value = activeTag || 'all';
-    }
-  });
+  const isProgram = _PROGRAM_SELECTS.includes(selectId);
+  if (isProgram) {
+    activeProgram = (val === 'all') ? null : val;
+    _syncProgramSelects();
+  } else {
+    activeArea = (val === 'all') ? null : val;
+    _syncAreaSelects();
+  }
   applyFn();
 }
 
@@ -969,11 +988,11 @@ async function loadData() {
     populateFilterOptions('agencyFilter', enforcementActions, 'agency');
     populateFilterOptions('typeFilter', enforcementActions, 'type');
     populateStateFilter('stateFilter', enforcementActions);
-    populateTagFilter('tagFilter', enforcementActions);
+    populateTagFilter('programFilter', 'areaFilter', enforcementActions);
     populateFilterOptions('oversightAgencyFilter', oversightActions, 'agency');
     populateFilterOptions('oversightTypeFilter', oversightActions, 'type');
     populateStateFilter('oversightStateFilter', oversightActions);
-    populateTagFilter('oversightTagFilter', oversightActions);
+    populateTagFilter('oversightProgramFilter', 'oversightAreaFilter', oversightActions);
     updateLastUpdated(data.metadata && data.metadata.last_updated);
     // Restore last-viewed tab from sessionStorage (refresh preserves it;
     // new browser tabs/windows default back to Federal Enforcement).
@@ -1046,7 +1065,8 @@ function setView(view) {
   const searchInput = document.getElementById('searchInput');
   searchInput.placeholder = view === 'landscape' ? 'Search stories...' : view === 'oversight' ? 'Search oversight actions...' : 'Search enforcement actions...';
   searchInput.value = '';
-  activeTag = null;
+  activeProgram = null; activeArea = null;
+  _syncProgramSelects(); _syncAreaSelects();
   if (view === 'landscape') { loadLandscape(); filterLandscape(); }
   else if (view === 'oversight') { applyOversightFilters(); }
   else { applyFilters(); }
@@ -1064,7 +1084,7 @@ async function loadLandscape() {
     allStories = (data.stories || []).sort((a, b) => (b.date || '').localeCompare(a.date || ''));
     landscapeLoaded = true;
     populateStateFilter('landscapeStateFilter', allStories);
-    populateTagFilter('landscapeTagFilter', allStories);
+    populateTagFilter('landscapeProgramFilter', 'landscapeAreaFilter', allStories);
     filterLandscape();
   } catch (err) {
     console.error('Failed to load landscape data:', err);
@@ -1163,23 +1183,24 @@ function filterLandscape() {
     if (state !== 'all' && s.state !== state) return false;
     if (from && s.date < from) return false;
     if (to   && s.date > to)   return false;
-    if (activeTag && !(s.tags || []).includes(activeTag)) return false;
+    if (activeProgram && !(s.tags || []).includes(activeProgram)) return false;
+    if (activeArea    && !(s.tags || []).includes(activeArea))    return false;
     return true;
   });
   let countText = filtered.length + ' stories';
-  if (activeTag) countText += ' \u2022 Tag: ' + activeTag;
+  const tagSuffix = [activeProgram, activeArea].filter(Boolean).join(' + ');
+  if (tagSuffix) countText += ' \u2022 ' + tagSuffix;
   document.getElementById('landscapeResultCount').textContent = countText;
   renderStoryCards(filtered);
 }
 
 function clearLandscapeFilters() {
   document.getElementById('landscapeStateFilter').value = 'all';
-  const tagSel = document.getElementById('landscapeTagFilter');
-  if (tagSel) tagSel.value = 'all';
   document.getElementById('landscapeDateFrom').value = '';
   document.getElementById('landscapeDateTo').value = '';
   document.getElementById('searchInput').value = '';
-  activeTag = null;
+  activeProgram = null; activeArea = null;
+  _syncProgramSelects(); _syncAreaSelects();
   filterLandscape();
 }
 
