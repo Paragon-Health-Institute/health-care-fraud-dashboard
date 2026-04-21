@@ -119,7 +119,8 @@
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Add recheck_removed_hhs_oig.py — re-test with expanded patterns *)",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"NY Man 14-month kickback item: amount \\\\$70.6M \\(same TCD scheme as Former NY Sales Director\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"St. Margaret's Center item: date -> 2026-02-12\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Foreign Nationals Chicago \\\\$10M item: date -> 2026-02-12\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Foreign Nationals Chicago \\\\$10M item: date -> 2026-02-12\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Non-Emergent Medical Transportation Fraud item: add Medical Transportation tag\")"
     ]
   }
 }

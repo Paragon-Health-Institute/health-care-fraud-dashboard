@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T16:46:33.462444",
+    "last_updated": "2026-04-21T16:47:31.431202",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -5699,7 +5699,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Medical Transportation"
       ],
       "entities": [],
       "state": "CO",
