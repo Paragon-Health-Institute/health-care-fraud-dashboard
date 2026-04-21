@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T15:50:53.219985",
+    "last_updated": "2026-04-21T15:54:42.828988",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -5628,8 +5628,8 @@
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Founders/Owners of Hertel & Brown Physical and Aquatic Therapy Each Sentenced to Six Years in Prison and Fined $250,000 for Wire and Healthcare Fraud Conspiracy",
-      "amount": "$250,000",
-      "amount_numeric": 250000.0,
+      "amount": "",
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.justice.gov/usao-wdpa/pr/foundersowners-hertel-brown-physical-and-aquatic-therapy-each-sentenced-six-years",
       "link_label": "DOJ Press Release",

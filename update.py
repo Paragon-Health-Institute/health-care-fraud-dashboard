@@ -905,9 +905,20 @@ def extract_amount(text, title=""):
                 return {"display": m.group(), "numeric": val}
         return None
 
-    # 1. Try the title first — always case-specific
+    # 1. Try the title first — always case-specific. But strip fine
+    # phrasing so titles like "Sentenced and Fined $250,000" don't
+    # extract the fine as the fraud amount. Same rule applied to body.
     if title:
-        result = _parse(title)
+        title_stripped = re.sub(
+            r"(?:and\s+)?fined?\s+\$[\d,.]+(?:\s*(?:million|billion))?",
+            "", title, flags=re.IGNORECASE,
+        )
+        title_stripped = re.sub(
+            r"(?:a\s+)?(?:maximum\s+)?fine\s+of\s+(?:up\s+to\s+)?\$[\d,.]+"
+            r"(?:\s*(?:million|billion))?",
+            "", title_stripped, flags=re.IGNORECASE,
+        )
+        result = _parse(title_stripped)
         if result:
             return result
 
