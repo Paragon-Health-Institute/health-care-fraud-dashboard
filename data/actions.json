@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T14:28:50.276027",
+    "last_updated": "2026-04-21T14:29:05.442069",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -15467,8 +15467,8 @@
       "_filter_reason": "fraud keyword + HC committee (Senate Judiciary Subcommittee on Border Security and Immigration)"
     },
     {
-      "id": "doj-2026-04-16-3777779748",
-      "date": "2026-04-16",
+      "id": "doj-2026-04-15-3777779748",
+      "date": "2026-04-15",
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "United States Sues Illinois Doctor for Fraudulent Billing in Durable Medical Equipment Scheme",
