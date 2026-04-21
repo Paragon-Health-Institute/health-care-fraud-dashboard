@@ -788,6 +788,46 @@ def get_state(text, title=None, link=None, item_type=None):
             if _demonym_corroborated(text, name):
                 states.append(abbr)
 
+    # Path 5b: multi-state operator patterns. Body text like "operates in
+    # Michigan, Illinois, Indiana, Wisconsin, and Georgia" / "clinics in
+    # [states]" / "conducted business in [states]" indicates a multi-state
+    # provider/scheme. Append all states from such lists regardless of
+    # whether path 1 (USAO) already set a primary state. This is an
+    # enforcement-only signal — skipped for policy/report item types so
+    # "examples include California, Texas, Florida" in a general policy
+    # report doesn't wrongly assign states.
+    enf_only = not item_type or item_type in (
+        "Criminal Enforcement", "Civil Action", "Investigation",
+    )
+    if text and enf_only:
+        # Pattern: "(operat|clinic|facilit|office|location|patient|busines|
+        # provider|bill|serv)... in STATE, STATE(, STATE)*(, and|and) STATE"
+        # Require at least 2 states in the list to gate on clear multi-state
+        # intent.
+        ctx_re = re.compile(
+            r"\b(operat\w*|(?:clinic|facilit|office|location|patient|"
+            r"provider|fraud|scheme|business|billing|served?)s?)"
+            r"\s+(?:\w+\s+){0,6}in\s+"
+            r"((?:"
+            + r"|".join(sorted(STATE_MAP.keys(), key=lambda s: -len(s)))
+            + r")(?:\s*,\s*(?:and\s+)?(?:"
+            + r"|".join(sorted(STATE_MAP.keys(), key=lambda s: -len(s)))
+            + r")){1,20})",
+            re.IGNORECASE,
+        )
+        for m in ctx_re.finditer(text):
+            state_list = m.group(2)
+            for name in re.findall(
+                r"\b("
+                + r"|".join(sorted(STATE_MAP.keys(), key=lambda s: -len(s)))
+                + r")\b",
+                state_list,
+                re.IGNORECASE,
+            ):
+                abbr = STATE_MAP.get(name.title())
+                if abbr and abbr not in states:
+                    states.append(abbr)
+
     if states:
         return ", ".join(states)
 
