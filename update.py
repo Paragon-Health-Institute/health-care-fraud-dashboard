@@ -455,6 +455,30 @@ def get_action_type(title, desc, agency=None, link=None):
     is_macpac = 'macpac' in agency_l or 'macpac.gov' in link_l
     is_fincen = 'fincen' in agency_l or 'fincen.gov' in link_l or 'treasury' in agency_l
 
+    # URL-path guard: if the link is on an audit/report path, the item
+    # is oversight (Audit/Report/Evaluation) — never enforcement. Title
+    # keywords like "$9.4 million" or "Medicare fraud" on OIG audit pages
+    # used to misroute these to Civil Action; this guard prevents that.
+    # Applies to oig.hhs.gov/reports/all/, gao.gov/products/, and
+    # analogous audit-doc paths.
+    is_audit_path = (
+        'oig.hhs.gov/reports/' in link_l or
+        'gao.gov/products/' in link_l or
+        'macpac.gov/publication/' in link_l or
+        'medpac.gov/document' in link_l
+    )
+    if is_audit_path:
+        # Skip straight to the oversight classifier — bypass enforcement
+        # signal matching. The title still distinguishes Audit vs Report
+        # vs Evaluation downstream.
+        t = title_l
+        if 'annual report' in t or 'semiannual report' in t:
+            return 'Report'
+        if 'evaluation' in t or 'inspection' in t:
+            return 'Audit'  # Evaluations/inspections live under Audit type
+        # Default oversight-path classification: Audit
+        return 'Audit'
+
     # ---- Title-only enforcement detection (highest priority) ----
     #
     # Hybrid cases (title mentions BOTH criminal and civil signals, e.g.,

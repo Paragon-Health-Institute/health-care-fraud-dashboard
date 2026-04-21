@@ -96,7 +96,7 @@ def fetch_and_enrich(item, session):
     except Exception:
         body_text, doj_link, canonical_title, canonical_date = "", None, "", None
 
-    # Playwright fallback for Akamai-blocked
+    # Playwright fallback for Akamai-blocked (DOJ, HHS press, etc.)
     if not body_text and HAS_PLAYWRIGHT:
         try:
             soup = scrape_page_with_browser(url)
@@ -123,6 +123,15 @@ def fetch_and_enrich(item, session):
                         canonical_title = og["content"].strip()
                     elif soup.find("h1"):
                         canonical_title = soup.find("h1").get_text(strip=True)
+                # Canonical date from meta — DOJ USAO / CMS Playwright-
+                # rendered pages expose article:published_time reliably.
+                if not canonical_date:
+                    for prop in ("article:published_time",
+                                 "article:modified_time"):
+                        m = soup.find("meta", attrs={"property": prop})
+                        if m and m.get("content"):
+                            canonical_date = m["content"][:10]  # YYYY-MM-DD
+                            break
         except Exception:
             pass
 
