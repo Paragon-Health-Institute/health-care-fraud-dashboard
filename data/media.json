@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T10:59:54.148474",
+    "last_updated": "2026-04-21T11:01:53.446685",
     "version": "1.0"
   },
   "stories": [
@@ -132,8 +132,8 @@
       "entities": []
     },
     {
-      "id": "media-2026-02-20-wsmv-russian-tennessee-medicare",
-      "date": "2026-02-20",
+      "id": "media-2026-02-19-wsmv-russian-tennessee-medicare",
+      "date": "2026-02-19",
       "agency": "Media",
       "type": "Investigative Report",
       "title": "WSMV4 investigation reveals Russian connection to Tennessee Medicare billing scheme",
@@ -144,7 +144,8 @@
       "link_label": "WSMV4 Investigation",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "DME"
       ],
       "state": "TN",
       "source_type": "news",
