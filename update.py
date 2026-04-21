@@ -2898,6 +2898,11 @@ def scrape_oig_reports(session):
                 # Prefer structured canonical date over the listing-page regex.
                 # If they disagree by >7 days, log it — listing sometimes beats
                 # the structured tag (e.g. "last-modified" vs "published").
+                # Policy: for HHS-OIG reports, the listing page's "Issued"
+                # date is the authoritative date (it's the date OIG printed
+                # on the report and used for backfills). Only fall back to
+                # canonical_date when the listing didn't provide one.
+                # This keeps historical backfills and new scrapes consistent.
                 if canonical_date:
                     if date_str:
                         try:
@@ -2908,10 +2913,12 @@ def scrape_oig_reports(session):
                                 if abs((d1 - d2).days) > 7:
                                     log(f"  NOTE: OIG reports listing date {listing_iso} "
                                         f"disagrees with canonical {canonical_date} by "
-                                        f"{abs((d1-d2).days)}d for {href}")
+                                        f"{abs((d1-d2).days)}d for {href} — keeping listing date")
                         except Exception:
                             pass
-                    date_str = canonical_date
+                    else:
+                        # No listing date — use canonical as fallback
+                        date_str = canonical_date
                 desc = ""
                 if detail_text:
                     cleaned = detail_text

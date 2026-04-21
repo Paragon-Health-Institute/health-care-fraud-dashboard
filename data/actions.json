@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T09:27:28.901788",
+    "last_updated": "2026-04-21T09:29:22.769287",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -2148,7 +2148,7 @@
     },
     {
       "id": "hhs-oig-2025-12-humana-medicare-advantage-audit",
-      "date": "2025-12-16",
+      "date": "2025-12-08",
       "agency": "HHS-OIG",
       "type": "Audit",
       "title": "Medicare Advantage Compliance Audit of Specific Diagnosis Codes Humana Health Benefit of Louisiana (Contract H1951) Submitted to CMS",
@@ -15921,8 +15921,8 @@
       "related_agencies": []
     },
     {
-      "id": "hhs-oig-2026-04-20-1233698927",
-      "date": "2026-04-20",
+      "id": "hhs-oig-2026-04-17-1233698927",
+      "date": "2026-04-17",
       "agency": "HHS-OIG",
       "type": "Audit",
       "title": "CMS Has Limited Oversight of Selected Compounded Drugs Prescribed to Medicare Part D Enrollees",
