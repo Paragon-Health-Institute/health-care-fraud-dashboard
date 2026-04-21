@@ -922,6 +922,20 @@ def extract_amount(text, title=""):
         cleaned = re.sub(
             r'(this|the)\s+(national|largest|record).*?takedown.*?\$[\d,.]+\s*(billion|million)[^.]*\.',
             '', cleaned, flags=re.IGNORECASE | re.DOTALL)
+        # Remove statutory fine/penalty-cap phrasing. DOJ releases routinely
+        # describe the maximum sentence as "a fine of up to $250,000" or
+        # "maximum penalty of $500,000 per count" — these are not case
+        # amounts. Strip them before amount extraction so we don't end up
+        # storing the statutory cap as the fraud amount.
+        cleaned = re.sub(
+            r'(?:a\s+)?(?:maximum\s+)?(?:statutory\s+)?(?:fine|penalty)\s+of\s+'
+            r'(?:up\s+to\s+|not\s+(?:more\s+than|to\s+exceed)\s+)?'
+            r'\$[\d,.]+(?:\s*million|\s*billion|\s*per\s+count)?',
+            '', cleaned, flags=re.IGNORECASE)
+        # Also strip "fine of $X or twice the gross gain" pattern
+        cleaned = re.sub(
+            r'fine\s+of\s+(?:up\s+to\s+)?\$[\d,.]+\s+or\s+twice[^.]*',
+            '', cleaned, flags=re.IGNORECASE)
         result = _parse(cleaned)
         if result:
             return result

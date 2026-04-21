@@ -90,7 +90,8 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"FL Doctor false statements: add TRICARE tag \\(DCIS investigator presence indicates TRICARE fraud\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Bucks County consent judgment: add Adult Day Care tag \\(title explicitly names Adult Day Facilities\\)\")",
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Federal Enforcement tab: add disclaimer noting other investigating agencies *)",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Greenville CEO item: fix amount \\\\$250k -> \\\\$27.5M \\(\\\\$250k was statutory fine cap, not fraud amount\\)\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Greenville CEO item: fix amount \\\\$250k -> \\\\$27.5M \\(\\\\$250k was statutory fine cap, not fraud amount\\)\")",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'extract_amount: strip '\\\\''fine of up to $X'\\\\'' / statutory penalty cap phrasing *)"
     ]
   }
 }
