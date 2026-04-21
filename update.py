@@ -2559,6 +2559,48 @@ def scrape_ways_means(session):
         log(f"  WARNING: H-W&M scrape - {e}")
     return items
 
+def extract_investigator_agencies(body_text):
+    """Extract federal investigator agencies mentioned in a press release.
+
+    Looks ONLY for literal HHS-OIG mentions in investigator-context phrases
+    (no inference). DOJ press releases almost always include a "credits"
+    paragraph that names each investigator; we scan a window around
+    investigator-signal phrases and require an HHS-OIG match.
+
+    Dashboard scope (2026-04-21): only HHS-OIG is tracked in
+    related_agencies. DEA/FDA/FBI/etc. were removed — those cases are
+    captured via area tags (Opioids, Medical Devices) on DOJ items.
+
+    Returns a list, always ['HHS-OIG'] or []. No defaulting — if the
+    body doesn't literally credit HHS-OIG, this returns [].
+    """
+    if not body_text:
+        return []
+    # Investigator-signal phrases that DOJ releases use to credit investigators
+    signal_re = re.compile(
+        r"\b(investigat(?:ed|ion|ing|ors?)|special\s+agent|"
+        r"announced\s+by|announced\s+the|thanked|conducted\s+by|"
+        r"is\s+investigating|was\s+investigated|jointly\s+announced)\b",
+        re.IGNORECASE,
+    )
+    # HHS-OIG name variants
+    oig_re = re.compile(
+        r"\bHHS[-\s]?OIG\b|"
+        r"\bHHS\s+Office\s+of\s+Inspector\s+General\b|"
+        r"\bOffice\s+of\s+Inspector\s+General\s+(?:for\s+the\s+)?"
+        r"(?:U\.?S\.?\s+)?(?:Department\s+of\s+)?Health\s+and\s+Human\s+Services\b|"
+        r"\bDepartment\s+of\s+Health\s+and\s+Human\s+Services[-,]?\s+"
+        r"Office\s+of\s+Inspector\s+General\b",
+        re.IGNORECASE,
+    )
+    # Scan 600-char windows around each investigator signal; look for HHS-OIG
+    for m in signal_re.finditer(body_text):
+        window = body_text[max(0, m.start() - 200): m.end() + 400]
+        if oig_re.search(window):
+            return ['HHS-OIG']
+    return []
+
+
 def scrape_doj_opa(session):
     """Scrape DOJ Office of Public Affairs press releases using Playwright.
 
@@ -2668,7 +2710,9 @@ def scrape_doj_opa(session):
                     '_full_text': detail_text,
                     '_trust_source': True,  # bypass HC keyword filter
                     '_doj_topics': topics,  # store for provenance
-                    '_related_agencies': ['HHS-OIG'],  # OIG investigates virtually all HC fraud cases
+                    # related_agencies extracted from body — only HHS-OIG
+                    # when the release literally credits them as investigator
+                    '_related_agencies': extract_investigator_agencies(detail_text),
                 })
                 kept += 1
             log(f"    DOJ-OPA: {kept} of {len(candidates)} candidates tagged 'Health Care Fraud'")
@@ -2806,7 +2850,7 @@ def scrape_doj_usao(session):
                     '_full_text': detail_text,
                     '_trust_source': True,
                     '_doj_topics': topics,
-                    '_related_agencies': ['HHS-OIG'],
+                    '_related_agencies': extract_investigator_agencies(detail_text),
                 })
                 kept += 1
             log(f"    DOJ-USAO: {kept} of {len(candidates)} candidates tagged 'Health Care Fraud'")
@@ -3873,13 +3917,15 @@ def main():
                     elif re.search(r'sentenc|guilty plea|plead[s ]? guilty|convict|indict|charg|arrest|prison|ordered to pay|jury find|agrees to pay|consent judgment|settlement|resolve.*allegations', title.lower()):
                         actual_agency = 'DOJ'
                     # If we relabeled the primary agency away from HHS-OIG,
-                    # preserve the OIG provenance as a related agency. OIG is
-                    # the criminal investigative arm for Medicare/Medicaid
-                    # fraud and is named as the investigating agency on
-                    # virtually every healthcare fraud DOJ press release we
-                    # source through this pipeline.
+                    # extract the actual investigator agencies from the body
+                    # (only HHS-OIG is tracked). If body doesn't literally
+                    # credit HHS-OIG, leave related_agencies empty — don't
+                    # default.
                     if actual_agency != 'HHS-OIG':
-                        related_agencies.append('HHS-OIG')
+                        body_for_inv = item.get('_full_text') or desc_clean
+                        related_agencies.extend(
+                            extract_investigator_agencies(body_for_inv)
+                        )
 
                 # Merge in related_agencies from the scraper (e.g. DOJ-OPA
                 # and DOJ-USAO set _related_agencies: ['HHS-OIG'] on items
