@@ -70,7 +70,12 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Fix KARE11 MN Housing Stabilization fraud item date: 2025-10-15 -> 2025-09-18 \\(per article:published_time\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" add tag_allowlist.py data/actions.json data/media.json)",
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Restore Behavioral Health area tag + rebalance affected items *)",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Former Teacher \\\\$51M Medicare fraud item: date 2026-04-17 -> 2026-04-16\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Former Teacher \\\\$51M Medicare fraud item: date 2026-04-17 -> 2026-04-16\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" add update.py add_item.py build_scraping_report.py data/actions.json)",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Remove DEA + FDA from tracked agencies *)",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" add update.py backfill_investigators.py)",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Extract HHS-OIG from DOJ body text instead of defaulting *)",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"IL Doctor DME item: drop Telehealth tag \\(telemarketing-driven DME fraud, no actual telehealth vector\\)\")"
     ]
   }
 }
