@@ -82,7 +82,8 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Half-Billion DOJ umbrella item: state = FL, CA, NV \\(3 cases: APSF/FL, Medi-Cal/CA, Nevada ERC\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Backfill: skip PDF / download / media URLs \\(Playwright hangs waiting for download\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Add Genetic Testing tag to 2 telemedicine DME items \\(bodies mention genetic testing\\)\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Nine Charged Benefit Fraud Crackdown: clear amount \\(aggregate \\\\$9M spans SNAP+MassHealth+SSA; HC-specific portion not cleanly isolated\\)\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Nine Charged Benefit Fraud Crackdown: clear amount \\(aggregate \\\\$9M spans SNAP+MassHealth+SSA; HC-specific portion not cleanly isolated\\)\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Team Rehab PT item: state -> MI, IL, IN, WI, GA \\(5-state provider\\)\")"
     ]
   }
 }
