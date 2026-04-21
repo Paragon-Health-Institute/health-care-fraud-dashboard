@@ -35,7 +35,9 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Fix MN CAP-approved date to 2026-03-20 \\(KSTP publication date, news-sourced consistency\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Vance task force item: swap Medicare -> Home Health tag\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"WV Medicaid rebates audit: add Medicaid Managed Care tag\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Remove duplicate Maine autism audit press release \\(same as Jan 16 report\\)\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Remove duplicate Maine autism audit press release \\(same as Jan 16 report\\)\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" add tag_allowlist.py data/actions.json)",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Broaden Medicaid Managed Care regex to catch '\\\\''Medicaid + MCO'\\\\'' far-separated mentions *)"
     ]
   }
 }
