@@ -99,7 +99,8 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Long Island pill mill: amount \\\\$302,765 -> \\\\$152,765 \\(was fine+restitution sum; should be restitution only\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Mexican Man 14yr \\\\$6.85M HC fraud: add Medicaid Managed Care tag \\(MCOs per source\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"ExThera Medical item: date -> 2026-03-05\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"\\\\$12M Medicaid substance abuse facility item: add Addiction Treatment tag\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"\\\\$12M Medicaid substance abuse facility item: add Addiction Treatment tag\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Russian Citizen \\\\$1.2M laundering item: drop Medicaid tag \\(Medicare-only per title\\)\")"
     ]
   }
 }
