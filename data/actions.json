@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T14:58:57.527952",
+    "last_updated": "2026-04-21T15:09:51.680600",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -153,7 +153,8 @@
         "Medicare",
         "Telehealth",
         "DME",
-        "Lab Testing"
+        "Lab Testing",
+        "Genetic Testing"
       ],
       "entities": [],
       "state": "FL",
@@ -178,7 +179,8 @@
       "tags": [
         "Medicare",
         "DME",
-        "Telehealth"
+        "Telehealth",
+        "Genetic Testing"
       ],
       "entities": [],
       "state": "TX",
