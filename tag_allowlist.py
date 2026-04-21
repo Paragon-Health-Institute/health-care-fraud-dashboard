@@ -282,7 +282,7 @@ TAG_PATTERNS = [
      r"\bbehavioral\s+health\s+(clinic|services|practice|billing|provider)\b",
      "Mental Health"),
     (r"\bprenatal\s+care\b|prenatal\s+coordination", "Prenatal Care"),
-    (r"\bskin\s+substitute|allograft\b|amniotic\s+membrane\s+product", "Skin Substitutes"),
+    (r"\bskin\s+substitute|allograft\b|amniotic\s+membrane\s+product|\bskin\s+grafts?\b", "Skin Substitutes"),
     (r"\bpersonal\s+care\s+(attendant|assistant|service|program|aide)\b|"
      r"\bpca\s+(fraud|service|program|scheme)\b|"
      r"\bpcs\s+(service|program|fraud)\b|"
