@@ -86,7 +86,8 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Team Rehab PT item: state -> MI, IL, IN, WI, GA \\(5-state provider\\)\")",
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'get_state: add multi-state operator detector \\(Path 5b\\) *)",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Pakistani National item: state OR only \\(CA is defendant residence, fraud was at Oregon Clinical Lab\\)\")",
-      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am '_title_demonym_states: treat '\\\\''residing in STATE'\\\\'' / '\\\\''based in STATE'\\\\'' as weak signal *)"
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am '_title_demonym_states: treat '\\\\''residing in STATE'\\\\'' / '\\\\''based in STATE'\\\\'' as weak signal *)",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"FL Doctor false statements: add TRICARE tag \\(DCIS investigator presence indicates TRICARE fraud\\)\")"
     ]
   }
 }
