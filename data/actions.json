@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T21:59:49.130897",
+    "last_updated": "2026-04-20T22:03:55.132495",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -15188,28 +15188,6 @@
         "Medicaid",
         "Nursing Home",
         "Assisted Living"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
-      "id": "hhs-oig-2025-09-04-4104862517",
-      "date": "2025-09-04",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "By Requiring Emergency Preparedness Plans for Independent Labs, CMS Could Better Ensure That Medicare Enrollees Have Access to Infectious-Disease Diagnostic Testing During a Public Health Emergency",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2025/by-requiring-emergency-preparedness-plans-for-independent-labs-cms-could-better-ensure-that-medicare-enrollees-have-access-to-infectious-disease-diagnostic-testing-during-a-public-health-emergency/",
-      "link_label": "HHS-OIG Report",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Lab Testing"
       ],
       "entities": [],
       "state": null,
