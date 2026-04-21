@@ -120,7 +120,10 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"NY Man 14-month kickback item: amount \\\\$70.6M \\(same TCD scheme as Former NY Sales Director\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"St. Margaret's Center item: date -> 2026-02-12\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Foreign Nationals Chicago \\\\$10M item: date -> 2026-02-12\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Non-Emergent Medical Transportation Fraud item: add Medical Transportation tag\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Non-Emergent Medical Transportation Fraud item: add Medical Transportation tag\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -m \"Medical Transportation regex: match 'non-emergent' \\(adj\\) in addition to 'non-emergency' \\(noun\\)\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Restore HHS-OIG on 5 items after regex expansion \\(praised the work / HHS OIG noun-first variant\\)\")",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Restore HHS-OIG on 5 items recovered by expanded investigator regex *)"
     ]
   }
 }

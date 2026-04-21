@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T16:47:31.431202",
+    "last_updated": "2026-04-21T16:53:45.302859",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -4486,7 +4486,9 @@
       "state": "CA",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-12-2914979766",
@@ -5892,7 +5894,9 @@
       "state": "LA",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-28-1561144592",
@@ -10031,7 +10035,9 @@
       "state": "LA",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-27-3360699215",
@@ -10457,7 +10463,9 @@
       "state": "NY",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-05-1827227164",
@@ -11567,7 +11575,9 @@
       "state": "LA",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-10-3679741773",
