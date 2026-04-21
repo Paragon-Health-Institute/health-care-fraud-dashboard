@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T16:39:31.208548",
+    "last_updated": "2026-04-21T16:44:28.037818",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -13170,8 +13170,8 @@
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "New York Man Sentenced to 14 Months in Prison for Kickback Scheme",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$70.6 million",
+      "amount_numeric": 70600000,
       "officials": [],
       "link": "https://www.justice.gov/usao-ma/pr/new-york-man-sentenced-14-months-prison-kickback-scheme",
       "link_label": "DOJ Press Release",

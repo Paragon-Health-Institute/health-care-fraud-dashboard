@@ -113,7 +113,11 @@
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Apply investigator + date backfill \\(135 ra + 4 date corrections\\) *)",
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Federal Oversight tab: add per-agency scope disclaimer *)",
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Media Investigations tab: add scope disclaimer *)",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Oversight disclaimer: reorder agency scope alphabetically \\(CMS, Congress, GAO, HHS-OIG, MACPAC/MedPAC, White House\\)\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Oversight disclaimer: reorder agency scope alphabetically \\(CMS, Congress, GAO, HHS-OIG, MACPAC/MedPAC, White House\\)\")",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'extract_investigator_agencies: expand patterns + restore Slidell HHS-OIG *)",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" add recheck_removed_hhs_oig.py)",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Add recheck_removed_hhs_oig.py — re-test with expanded patterns *)",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"NY Man 14-month kickback item: amount \\\\$70.6M \\(same TCD scheme as Former NY Sales Director\\)\")"
     ]
   }
 }
