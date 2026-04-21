@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T14:56:01.547181",
+    "last_updated": "2026-04-21T14:58:57.527952",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -14651,7 +14651,7 @@
         "Opioids"
       ],
       "entities": [],
-      "state": null,
+      "state": "FL, CA, NV",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
