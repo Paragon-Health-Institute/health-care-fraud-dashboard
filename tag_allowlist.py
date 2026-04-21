@@ -230,13 +230,13 @@ TAG_PATTERNS = [
     (r"\bmedicaid\b(?!\s+services\b(?:\s|\.|,|$))|\bmedi-cal\b", "Medicaid"),
     # Medicaid Managed Care: require explicit phrase. MCO/managed-care-organization
     # alone is ambiguous (commercial MCOs exist) so require a nearby 'medicaid'.
-    (r"medicaid\s+managed\s+care|medicaid\s+mco\b|managed\s+care.{0,30}medicaid|"
-     r"medicaid.{0,30}managed\s+care\s+plan|"
+    (r"medicaid\s+managed[-\s]care|medicaid\s+mco\b|managed[-\s]care.{0,30}medicaid|"
+     r"medicaid.{0,30}managed[-\s]care\s+plan|"
      # Medicaid + Managed Care Organization(s)/MCOs co-mention (widened window)
-     r"medicaid.{0,150}managed\s+care\s+organization|"
-     r"managed\s+care\s+organization.{0,150}medicaid|"
+     r"medicaid.{0,150}managed[-\s]care\s+organization|"
+     r"managed[-\s]care\s+organization.{0,150}medicaid|"
      # Capitation payments to MCOs — the characteristic Medicaid MCO payment
-     r"capitation\s+payments?\s+to\s+managed\s+care",
+     r"capitation\s+payments?\s+to\s+managed[-\s]care",
      "Medicaid Managed Care"),
     (r"\btricare\b|\bchampus\b", "TRICARE"),
     # ACA: require an explicit ACA phrase. "ACA" as a bare acronym can match

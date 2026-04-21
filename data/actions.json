@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T21:56:03.186479",
+    "last_updated": "2026-04-20T21:56:59.595389",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -15002,7 +15002,8 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Drug Pricing"
+        "Drug Pricing",
+        "Medicaid Managed Care"
       ],
       "entities": [],
       "state": "PA",
