@@ -95,7 +95,8 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Chiropractor 43 months item: drop spurious Opioids tag \\(no opioid signal in body\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"DME Owner \\\\$59M item: drop Medicaid tag \\(Medicare-only per title\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Long Island pill mill item: date -> 2026-03-02\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Long Island pill mill: drop Medicaid tag\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Long Island pill mill: drop Medicaid tag\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Long Island pill mill: amount \\\\$302,765 -> \\\\$152,765 \\(was fine+restitution sum; should be restitution only\\)\")"
     ]
   }
 }
