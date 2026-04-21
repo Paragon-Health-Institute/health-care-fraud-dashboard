@@ -2680,11 +2680,13 @@ def extract_investigator_agencies(body_text):
         r"\bOffice\s+of\s+(?:the\s+)?Inspector\s+General\s+(?:for\s+the\s+)?"
         r"(?:U\.?S\.?\s+)?(?:Department\s+of\s+)?"
         r"Health\s+(?:and|&)\s+Human\s+Services\b|"
-        # "Department of Health (and|&) Human Services[']? Office of [the] Inspector General"
-        r"\bDepartment\s+of\s+Health\s+(?:and|&)\s+Human\s+Services['\u2019]?s?[-,]?\s+"
+        # "Department of Health (and|&) Human Services[']? (—|–|-)? Office of [the] Inspector General"
+        # Accepts possessive apostrophe and dash/en-dash/em-dash separator
+        r"\bDepartment\s+of\s+Health\s+(?:and|&)\s+Human\s+Services"
+        r"['\u2019]?s?\s*[-\u2013\u2014,]?\s*"
         r"Office\s+of\s+(?:the\s+)?Inspector\s+General\b|"
         # "Health (and|&) Human Services[']? Office of [the] Inspector General"
-        r"\bHealth\s+(?:and|&)\s+Human\s+Services['\u2019]?s?\s+"
+        r"\bHealth\s+(?:and|&)\s+Human\s+Services['\u2019]?s?\s*[-\u2013\u2014,]?\s*"
         r"Office\s+of\s+(?:the\s+)?Inspector\s+General\b",
         re.IGNORECASE,
     )
