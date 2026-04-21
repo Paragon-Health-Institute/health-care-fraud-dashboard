@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T17:37:36.758747",
+    "last_updated": "2026-04-21T17:45:41.739782",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -6172,14 +6172,13 @@
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Prison time for healthcare employees in multimillion dollar adult daycare fraud scheme",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$3.1 million",
+      "amount_numeric": 3100000,
       "officials": [],
       "link": "https://www.justice.gov/usao-sdtx/pr/prison-time-healthcare-employees-multimillion-dollar-adult-daycare-fraud-scheme",
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid",
         "Medicare",
         "Lab Testing",
         "Adult Day Care"
