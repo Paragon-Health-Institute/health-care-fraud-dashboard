@@ -262,7 +262,7 @@ TAG_PATTERNS = [
      r"pathology\s+lab|unnecessary\s+lab\s+test", "Lab Testing"),
     (r"\btelehealth\b|\btelemedicin(e|al)\b", "Telehealth"),
     (r"\bhome\s+health\b(?!\s+aides?\s+who\s+|\s+agency\s+staff)", "Home Health"),
-    (r"\bnursing\s+home\b|\bskilled\s+nursing\b|\blong[-\s]term\s+care\s+facility\b", "Nursing Home"),
+    (r"\bnursing\s+homes?\b|\bskilled\s+nursing\b|\blong[-\s]term\s+care\s+facility\b", "Nursing Home"),
     # Medical Devices: require explicit device word, not just "medical"
     (r"\bmedical\s+device(s)?\b|\bdevice\s+(manufactur|kickback)", "Medical Devices"),
     # Autism/ABA: explicit phrase required. "ABA" as bare acronym shouldn't count.

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T22:03:55.132495",
+    "last_updated": "2026-04-20T22:05:52.503945",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -14550,7 +14550,8 @@
       "tags": [
         "Medicaid",
         "Medicare",
-        "Medicaid Managed Care"
+        "Medicaid Managed Care",
+        "Nursing Home"
       ],
       "entities": [],
       "state": null,
