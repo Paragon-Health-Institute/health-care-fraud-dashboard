@@ -76,7 +76,8 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" add update.py backfill_investigators.py)",
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Extract HHS-OIG from DOJ body text instead of defaulting *)",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"IL Doctor DME item: drop Telehealth tag \\(telemarketing-driven DME fraud, no actual telehealth vector\\)\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Clayton Chiropractor item: date -> 2026-04-15\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Clayton Chiropractor item: date -> 2026-04-15\")",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Backfill: add date correction pass \\(UTC-rollover only\\) + manual-fix safety *)"
     ]
   }
 }
