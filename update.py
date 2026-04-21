@@ -659,30 +659,50 @@ def extract_state_party_mentions(text):
 
 
 def _title_demonym_states(title):
-    """Return state abbrs that appear in title ONLY as demonyms.
+    """Return state abbrs that appear in title ONLY as weak signals —
+    i.e. demonyms OR residence-context mentions (defendant residence,
+    not fraud location).
 
-    A demonym is state-name followed by a role noun (Man, Doctor, etc.).
-    If a state appears in title AND at least one occurrence is NOT a
-    demonym (e.g., "Fraud in Illinois"), it's considered a real signal
-    and NOT returned here.
+    Weak signals:
+      - Demonym: state-name followed by role noun (Man, Doctor, etc.)
+      - Residence context: "residing in STATE", "resident of STATE",
+        "based in STATE", "living in STATE", "from STATE", "of STATE"
+        when preceded by a person-describing phrase
+
+    If a state appears in title AND at least one occurrence is a real
+    signal (e.g., "Fraud in Illinois", "Illinois Doctor indicted in
+    Illinois Medicaid scheme"), the state is NOT flagged here.
+
+    Called by get_state() to defer these weak-signal states to Path 5
+    (requires body corroboration to apply).
     """
     if not title:
         return []
-    demonym_only = []
+    weak_only = []
     for name, abbr in sorted(STATE_MAP.items(), key=lambda x: -len(x[0])):
         # Find all occurrences of this state name in title
         matches = list(re.finditer(r"\b" + re.escape(name) + r"\b", title, re.IGNORECASE))
         if not matches:
             continue
-        all_demonym = True
+        all_weak = True
         for m in matches:
             after = title[m.end():m.end() + 60]
-            if not re.match(r"\s+(?:" + _DEMONYM_ROLE_WORDS + r")\b", after, re.IGNORECASE):
-                all_demonym = False
+            before = title[max(0, m.start() - 60):m.start()]
+            is_demonym = bool(re.match(
+                r"\s+(?:" + _DEMONYM_ROLE_WORDS + r")\b", after, re.IGNORECASE,
+            ))
+            is_residence = bool(re.search(
+                r"(?:residing|resident|based|living|located|headquartered)"
+                r"\s+(?:of|in|at)\s*(?:Southern|Northern|Eastern|Western|"
+                r"Central)?\s*$",
+                before, re.IGNORECASE,
+            ))
+            if not (is_demonym or is_residence):
+                all_weak = False
                 break
-        if all_demonym:
-            demonym_only.append(abbr)
-    return demonym_only
+        if all_weak:
+            weak_only.append(abbr)
+    return weak_only
 
 
 def _demonym_corroborated(body_text, state_name):
