@@ -112,7 +112,8 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" add data/actions.json apply_investigator_backfill.py backfill_investigators.py)",
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Apply investigator + date backfill \\(135 ra + 4 date corrections\\) *)",
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Federal Oversight tab: add per-agency scope disclaimer *)",
-      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Media Investigations tab: add scope disclaimer *)"
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Media Investigations tab: add scope disclaimer *)",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Oversight disclaimer: reorder agency scope alphabetically \\(CMS, Congress, GAO, HHS-OIG, MACPAC/MedPAC, White House\\)\")"
     ]
   }
 }
