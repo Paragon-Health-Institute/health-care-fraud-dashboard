@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T11:07:58.439668",
+    "last_updated": "2026-04-21T11:10:52.105617",
     "version": "1.0"
   },
   "stories": [
@@ -340,7 +340,8 @@
       "link_label": "Washington Post Investigation",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "DME"
       ],
       "state": null,
       "source_type": "news",
