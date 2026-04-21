@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-04-20T10:14:45.966140",
+    "last_scraped": "2026-04-21T09:58:12.522936",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -31,25 +31,6 @@
       "ai_confidence": 72,
       "ai_reason": "HHS-OIG's annual 'Top Management & Performance Challenges' report is a broad strategic overview of HHS priorities; while it may touch on fraud/integrity as one of many challenges, it is not primarily ",
       "ai_model": "claude-haiku-4-5-20251001"
-    },
-    {
-      "id": "hhs-oig-2026-04-20-3733065491",
-      "date": "2026-04-20",
-      "agency": "HHS-OIG",
-      "type": "Report",
-      "title": "Report Fraud, Waste, & Abuse",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/fraud/report-fraud/",
-      "link_label": "HHS-OIG Fraud Hub",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
     }
   ],
   "rejected_links": [
@@ -160,6 +141,7 @@
     "https://www.macpac.gov/publication/pharmacy-benefit-managers-and-medicaid/",
     "https://waysandmeans.house.gov/2026/04/14/health-subcommittee-chairman-buchanan-field-hearing-opening-statement-patients-and-taxpayers-depend-on-congress-to-think-about-health-care-differently/",
     "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-unveils-agenda-to-make-health-care-affordable-again",
-    "https://waysandmeans.house.gov/2026/04/16/chairman-smith-opening-statement-at-hhs-secretary-kennedy-hearing-americans-are-demanding-better-than-the-health-care-status-quo/"
+    "https://waysandmeans.house.gov/2026/04/16/chairman-smith-opening-statement-at-hhs-secretary-kennedy-hearing-americans-are-demanding-better-than-the-health-care-status-quo/",
+    "https://energycommerce.house.gov/posts/vice-chairman-allen-delivers-floor-remarks-on-legislation-to-streamline-bureaucratic-permitting-processes-and-strengthen-emergency-communications"
   ]
 }
