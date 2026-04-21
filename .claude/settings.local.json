@@ -108,7 +108,10 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Former NY Sales Director item: state MA only \\(NY was defendant role\\), amount \\\\$70.6M \\(scheme total\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Telemedicine Owner 7yr item: amount \\\\$27.9M -> \\\\$56M \\(scheme total per title, not amount paid\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Telemedicine Owner \\\\$56M item: state GA -> NJ\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Lancaster Trio item: swap Mental Health -> Behavioral Health\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Lancaster Trio item: swap Mental Health -> Behavioral Health\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" add data/actions.json apply_investigator_backfill.py backfill_investigators.py)",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Apply investigator + date backfill \\(135 ra + 4 date corrections\\) *)",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Federal Oversight tab: add per-agency scope disclaimer *)"
     ]
   }
 }
