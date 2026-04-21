@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T11:13:14.034892",
+    "last_updated": "2026-04-21T11:18:25.770142",
     "version": "1.0"
   },
   "stories": [
@@ -123,8 +123,8 @@
       "link_label": "AZCIR Investigation",
       "social_posts": [],
       "tags": [
-        "Addiction Treatment",
-        "Medicaid"
+        "Medicaid",
+        "Behavioral Health"
       ],
       "state": "AZ",
       "source_type": "news",
@@ -403,7 +403,7 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Addiction Treatment"
+        "Behavioral Health"
       ],
       "state": "AZ",
       "source_type": "news",

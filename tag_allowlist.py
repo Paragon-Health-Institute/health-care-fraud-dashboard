@@ -46,6 +46,7 @@ AREA_TAGS = frozenset({
     "Addiction Treatment",
     "Opioids",
     "Drug Pricing",
+    "Behavioral Health",
 })
 
 ALLOWED_TAGS = PROGRAM_TAGS | AREA_TAGS
@@ -302,6 +303,18 @@ TAG_PATTERNS = [
      r"\bopioid\s+treatment\s+program\b", "Addiction Treatment"),
     (r"\bopioid(s)?\b|\bfentanyl\b|\boxycodone\b|\bhydrocodone\b|"
      r"\bcontrolled\s+substance\b|\bpill\s+mill\b", "Opioids"),
+    # Behavioral Health: the Medicaid/state umbrella category that bundles
+    # mental health + substance use treatment. Use when the source treats
+    # the topic as the umbrella (state BH carve-out, OIG BH networks,
+    # AHCCCS BH program). Do NOT apply for strictly psychiatry/therapy
+    # (use Mental Health) or strictly rehab/sober-living (Addiction Treatment).
+    # Requires the explicit phrase "behavioral health" — other terms
+    # (behavioral therapy, behavior intervention) don't count because
+    # they refer to specific services, not the umbrella category.
+    (r"\bbehavioral\s+health\s+(services?|provider|program|practice|"
+     r"system|organization|agency|carve[-\s]out|network|billing|"
+     r"center|clinic|specialists?|treatment)\b",
+     "Behavioral Health"),
     # Drug Pricing: manufacturer/PBM/state-rebate/340B vector. Distinct
     # from Pharmacy (dispensing) and Opioids (controlled substances).
     # Captures: drug rebates, 340B program, PBM spread/rebate fraud,
