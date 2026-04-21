@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T10:08:19.806917",
+    "last_updated": "2026-04-21T10:49:54.608160",
     "version": "1.0"
   },
   "stories": [
@@ -60,7 +60,8 @@
       "tags": [
         "Home Health",
         "Hospice",
-        "Medicare"
+        "Medicare",
+        "Medicaid"
       ],
       "state": "LA",
       "source_type": "news",

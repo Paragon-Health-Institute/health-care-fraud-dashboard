@@ -53,7 +53,12 @@
       "Bash(gh run *)",
       "Bash(awk '/Fetching HHS-OIG\\\\.\\\\.\\\\./,/HHS-OIG: 0/')",
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Novitas cost report item: reclassify DOJ Civil Action -> HHS-OIG Audit *)",
-      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Reclassify 2 more misrouted OIG reports: DOJ enforcement -> HHS-OIG Audit *)"
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Reclassify 2 more misrouted OIG reports: DOJ enforcement -> HHS-OIG Audit *)",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Skin Substitutes regex: match '\\\\''skin graft\\(s\\)'\\\\'' too *)",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" add update.py reenrich_manual.py)",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Harden DOJ/OIG pipeline: date extraction + URL-path guard *)",
+      "Bash(pip index *)",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Add Medicaid tag to RCI citizen-sleuths article \\(13 Medicaid mentions in body\\)\")"
     ]
   }
 }
