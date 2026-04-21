@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T16:53:45.302859",
+    "last_updated": "2026-04-21T16:56:56.167838",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -5788,8 +5788,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "MultiCare Health System to Pay Millions to Settle Fraud Case",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$3.73 million",
+      "amount_numeric": 3728000,
       "officials": [],
       "link": "https://www.justice.gov/usao-edwa/pr/multicare-health-system-pay-millions-settle-fraud-case",
       "link_label": "DOJ Press Release",

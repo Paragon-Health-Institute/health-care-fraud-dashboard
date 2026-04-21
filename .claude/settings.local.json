@@ -123,7 +123,10 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Non-Emergent Medical Transportation Fraud item: add Medical Transportation tag\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -m \"Medical Transportation regex: match 'non-emergent' \\(adj\\) in addition to 'non-emergency' \\(noun\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Restore HHS-OIG on 5 items after regex expansion \\(praised the work / HHS OIG noun-first variant\\)\")",
-      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Restore HHS-OIG on 5 items recovered by expanded investigator regex *)"
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Restore HHS-OIG on 5 items recovered by expanded investigator regex *)",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" add backfill_tags.py)",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Add backfill_tags.py — re-extract tags with current regex + boilerplate strip + MFCU signal *)",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"MultiCare Health System item: add \\\\$3.73M settlement amount\")"
     ]
   }
 }
