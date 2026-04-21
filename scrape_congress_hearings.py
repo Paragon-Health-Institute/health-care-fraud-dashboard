@@ -34,6 +34,8 @@ from datetime import datetime
 
 import requests
 
+from tag_allowlist import auto_tags, apply_co_apply, filter_tags
+
 API_KEY = os.environ.get("CONGRESS_GOV_API_KEY", "")
 BASE = "https://api.congress.gov/v3"
 
@@ -639,7 +641,9 @@ def apply_to_actions(results):
             "officials": [],
             "link": link,
             "link_label": link_label,
-            "tags": [],  # will be filled by retag_existing or next run
+            # Tags from title via strict regex pipeline + co-apply parents.
+            # Body text isn't fetched here; retag-on-promotion can deepen.
+            "tags": filter_tags(apply_co_apply(auto_tags(r["title"] or ""))),
             "state": "",
             "source_type": "official",
             "auto_fetched": True,

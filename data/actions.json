@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T09:23:25.875789",
+    "last_updated": "2026-04-21T09:27:28.901788",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -15954,7 +15954,9 @@
       "officials": [],
       "link": "https://waysandmeans.house.gov/event/full-committee-hearing-on-protecting-patients-and-taxpayers-cracking-down-on-medicare-fraud",
       "link_label": "House Ways and Means Hearing",
-      "tags": [],
+      "tags": [
+        "Medicare"
+      ],
       "state": "",
       "source_type": "official",
       "auto_fetched": true,
