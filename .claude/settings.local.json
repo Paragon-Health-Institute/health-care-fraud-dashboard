@@ -60,7 +60,8 @@
       "Bash(pip index *)",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Add Medicaid tag to RCI citizen-sleuths article \\(13 Medicaid mentions in body\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Nick Shirley CA daycare/hospice article: drop Medicaid tag\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Nick Shirley item: date 2026-03-17, add Adult Day Care tag\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Nick Shirley item: date 2026-03-17, add Adult Day Care tag\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"LA doctor provider number article: add Hospice tag\")"
     ]
   }
 }
