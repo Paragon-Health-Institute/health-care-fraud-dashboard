@@ -34,6 +34,7 @@ from datetime import datetime, timedelta
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ACTIONS_FILE = os.path.join(SCRIPT_DIR, "data", "actions.json")
+DIFF_CACHE = os.path.join(SCRIPT_DIR, "backfill_investigators_diff.json")
 
 
 def fetch_body_and_date(url):
@@ -98,6 +99,10 @@ def main():
                     help="Write corrections. Default: dry-run diff report.")
     ap.add_argument("--limit", type=int, default=0,
                     help="Process only N items (for testing).")
+    ap.add_argument("--date-cutoff", default="",
+                    help="Skip DATE corrections on items with date >= this "
+                         "YYYY-MM-DD (to protect recently-manually-fixed "
+                         "dates). Doesn't affect related_agencies changes.")
     args = ap.parse_args()
 
     if not HAS_PLAYWRIGHT:
@@ -176,15 +181,45 @@ def main():
         for x, o, n in date_skipped_manual:
             print(f"  stored {o}  proposed {n}  | {x.get('title','')[:65]}")
 
+    # Always cache diffs to disk so --apply can use them without re-fetching
+    cache = {
+        "ra_diffs": [
+            {"id": x["id"], "old": old, "new": new}
+            for x, old, new in ra_diffs
+        ],
+        "date_diffs": [
+            {"id": x["id"], "old": old, "new": new}
+            for x, old, new in date_diffs
+        ],
+        "date_skipped": [
+            {"id": x["id"], "old": old, "proposed": new, "title": x.get("title","")[:100]}
+            for x, old, new in date_skipped_manual
+        ],
+    }
+    with open(DIFF_CACHE, "w", encoding="utf-8") as f:
+        json.dump(cache, f, indent=2, ensure_ascii=False)
+    print(f"\nDiffs cached to {DIFF_CACHE}")
+
     if args.apply:
+        # related_agencies: always apply (user confirmed full correction OK)
         for x, _, new_ra in ra_diffs:
             x["related_agencies"] = new_ra
-        for x, _, new_date in date_diffs:
+        # dates: skip items whose current stored date is >= cutoff (protect
+        # recently manually-fixed dates)
+        date_applied = 0
+        date_protected = 0
+        for x, old_date, new_date in date_diffs:
+            if args.date_cutoff and old_date >= args.date_cutoff:
+                date_protected += 1
+                continue
             x["date"] = new_date
+            date_applied += 1
         d["metadata"]["last_updated"] = datetime.now().isoformat()
         with open(ACTIONS_FILE, "w", encoding="utf-8") as f:
             json.dump(d, f, indent=2, ensure_ascii=False)
-        print(f"\nWrote {ACTIONS_FILE} with {len(ra_diffs)} ra + {len(date_diffs)} date corrections.")
+        print(f"\nWrote {ACTIONS_FILE}: {len(ra_diffs)} ra corrections + "
+              f"{date_applied} date corrections ({date_protected} date "
+              f"corrections protected by --date-cutoff {args.date_cutoff})")
     else:
         print("\n[DRY-RUN — rerun with --apply to write changes]")
 
