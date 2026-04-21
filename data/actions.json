@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T10:43:05.573828",
+    "last_updated": "2026-04-21T09:23:25.875789",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -15921,25 +15921,6 @@
       "related_agencies": []
     },
     {
-      "id": "hhs-oig-2026-04-20-3733065491",
-      "date": "2026-04-20",
-      "agency": "HHS-OIG",
-      "type": "Report",
-      "title": "Report Fraud, Waste, & Abuse",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/fraud/report-fraud/",
-      "link_label": "HHS-OIG Fraud Hub",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
       "id": "hhs-oig-2026-04-20-1233698927",
       "date": "2026-04-20",
       "agency": "HHS-OIG",
@@ -15958,50 +15939,6 @@
       ],
       "entities": [],
       "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
-      "id": "hhs-oig-2025-09-08-4104862517",
-      "date": "2025-09-08",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "By Requiring Emergency Preparedness Plans for Independent Labs, CMS Could Better Ensure That Medicare Enrollees Have Access to Infectious-Disease Diagnostic Testing During a Public Health Emergency",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2025/by-requiring-emergency-preparedness-plans-for-independent-labs-cms-could-better-ensure-that-medicare-enrollees-have-access-to-infectious-disease-diagnostic-testing-during-a-public-health-emergency/",
-      "link_label": "HHS-OIG Report",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Lab Testing"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
-      "id": "hhs-oig-2026-01-22-1976565815",
-      "date": "2026-01-22",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "HHS-OIG Audit Finds Maine Made At Least $45.6 Million in Improper Medicaid Payments for Autism Services",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/newsroom/news-releases-articles/hhs-oig-audit-finds-maine-made-at-least-456-million-in-improper-medicaid-payments-for-autism-services/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicaid",
-        "Autism/ABA"
-      ],
-      "entities": [],
-      "state": "ME",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []

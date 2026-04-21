@@ -37,7 +37,11 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"WV Medicaid rebates audit: add Medicaid Managed Care tag\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Remove duplicate Maine autism audit press release \\(same as Jan 16 report\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" add tag_allowlist.py data/actions.json)",
-      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Broaden Medicaid Managed Care regex to catch '\\\\''Medicaid + MCO'\\\\'' far-separated mentions *)"
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Broaden Medicaid Managed Care regex to catch '\\\\''Medicaid + MCO'\\\\'' far-separated mentions *)",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" pull --rebase)",
+      "Bash(git stash *)",
+      "Bash(git reset *)",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Remove 3 unwanted auto-promoted HHS-OIG items *)"
     ]
   }
 }
