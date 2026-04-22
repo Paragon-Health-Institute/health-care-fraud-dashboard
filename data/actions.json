@@ -8748,7 +8748,7 @@
         "Nursing Home"
       ],
       "entities": [],
-      "state": "NY",
+      "state": "NY, RI, KS, MO",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
