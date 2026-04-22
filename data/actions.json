@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-22T09:45:09.172827",
+    "last_updated": "2026-04-22T09:49:06.076346",
     "version": "1.0",
     "last_scraped": "2026-04-22T09:02:11.249285"
   },
@@ -15723,7 +15723,9 @@
       "link": "https://www.justice.gov/usao-ma/pr/illegal-alien-previously-convicted-drug-offenses-charged-healthcare-benefit-fraud-and",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid"
+      ],
       "entities": [],
       "state": "MA",
       "source_type": "official",
