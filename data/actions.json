@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T17:47:22.940843",
+    "last_updated": "2026-04-22T09:57:22.105856",
     "version": "1.0",
     "last_scraped": "2026-04-22T09:02:11.249285"
   },
@@ -15729,6 +15729,90 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "gao-2026-04-21-549269149",
+      "date": "2026-04-21",
+      "agency": "GAO",
+      "type": "Audit",
+      "title": "Medicare: CMS’s Use of Data Analytics to Identify and Prevent Fraud",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.gao.gov/products/gao-26-107799",
+      "link_label": "GAO Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2025-09-11-1218575408",
+      "date": "2025-09-11",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Puerto Rico Medicaid Fraud Control Unit: 2024 Onsite Review",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2025/puerto-rico-medicaid-fraud-control-unit-2024-onsite-review/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "PR",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2025-09-02-3916250947",
+      "date": "2025-09-02",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Most Children Enrolled in Medicaid Did Not Receive Timely Suicide-Related Followup Care",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2025/most-children-enrolled-in-medicaid-did-not-receive-timely-suicide-related-followup-care/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2025-12-16-2460282458",
+      "date": "2025-12-16",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Some Selected Health Centers Received Duplicate Reimbursement From HRSA For COVID-19 Testing Services",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2025/some-selected-health-centers-received-duplicate-reimbursement-from-hrsa-for-covid-19-testing-services/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Lab Testing"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }

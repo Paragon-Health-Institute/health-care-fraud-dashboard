@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-04-21T09:58:12.522936",
+    "last_scraped": "2026-04-22T09:57:17.913076",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -30,6 +30,35 @@
       "ai_decision": "not_oversight",
       "ai_confidence": 72,
       "ai_reason": "HHS-OIG's annual 'Top Management & Performance Challenges' report is a broad strategic overview of HHS priorities; while it may touch on fraud/integrity as one of many challenges, it is not primarily ",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "hhs-oig-2025-10-24-980368212",
+      "date": "2025-10-24",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Special Focus Facility Program Nursing Homes, 2013–2022",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2025/special-focus-facility-program-nursing-homes-20132022/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Nursing Home",
+        "Assisted Living"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 75,
+      "ai_reason": "This HHS-OIG audit examines the Special Focus Facility Program for nursing homes, which is a quality-of-care and compliance monitoring program, not a healthcare fraud or program-integrity investigatio",
       "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
@@ -146,6 +175,10 @@
     "https://oig.hhs.gov/fraud/report-fraud/",
     "https://oig.hhs.gov/reports/all/2025/by-requiring-emergency-preparedness-plans-for-independent-labs-cms-could-better-ensure-that-medicare-enrollees-have-access-to-infectious-disease-diagnostic-testing-during-a-public-health-emergency/",
     "https://oig.hhs.gov/newsroom/news-releases-articles/hhs-oig-audit-finds-maine-made-at-least-456-million-in-improper-medicaid-payments-for-autism-services/",
-    "https://www.cms.gov/newsroom/press-releases/cms-taking-action-address-benefit-integrity-issues-related-hospice-care"
+    "https://www.cms.gov/newsroom/press-releases/cms-taking-action-address-benefit-integrity-issues-related-hospice-care",
+    "https://energycommerce.house.gov/posts/house-passes-energy-and-commerce-bills-to-expand-access-to-care-and-promote-patient-health-outcomes",
+    "https://energycommerce.house.gov/posts/health-subcommittee-holds-hearing-on-department-of-health-and-human-services-fy-2027-budget",
+    "https://waysandmeans.house.gov/2026/04/21/seven-key-moments-hearing-with-hhs-secretary-robert-f-kennedy-jr/",
+    "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-discusses-mvp-agenda-to-make-health-care-affordable-on-senate-floor"
   ]
 }
