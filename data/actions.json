@@ -7498,9 +7498,7 @@
       "state": "DC",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": [
-        "HHS-OIG"
-      ]
+      "related_agencies": []
     },
     {
       "id": "doj-2025-09-10-3071756259",
