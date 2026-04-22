@@ -8215,7 +8215,7 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Eye Consultants of Pennsylvania, PC Agrees To Pay $790,000.00 To Settle False Claims Act Allegations",
-      "amount": "$790,000.00",
+      "amount": "$790,000",
       "amount_numeric": 790000.0,
       "officials": [],
       "link": "https://www.justice.gov/usao-mdpa/pr/eye-consultants-pennsylvania-pc-agrees-pay-79000000-settle-false-claims-act",
@@ -8346,7 +8346,6 @@
       "tags": [
         "Medicare",
         "Lab Testing",
-        "Opioids",
         "Genetic Testing"
       ],
       "entities": [],
@@ -8368,11 +8367,6 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid",
-        "Medicare",
-        "Nursing Home",
-        "Hospice",
-        "Pharmacy",
         "Opioids"
       ],
       "entities": [],
@@ -8395,9 +8389,11 @@
       "link": "https://www.justice.gov/usao-id/pr/urgent-care-operator-pays-3-million-dollars-resolve-alleged-violations-false-claims-act",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Lab Testing"
+      ],
       "entities": [],
-      "state": "ID",
+      "state": "ID, NM",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
