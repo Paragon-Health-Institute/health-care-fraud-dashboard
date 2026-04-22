@@ -5,28 +5,6 @@
   },
   "stories": [
     {
-      "id": "media-2026-04-21-politico-oz-medicaid-fraud-plan",
-      "date": "2026-04-21",
-      "agency": "Media",
-      "type": "Investigative Report",
-      "title": "Oz unveils nationwide plan to tackle Medicaid fraud at POLITICO Summit",
-      "amount": "",
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.politico.com/news/2026/04/21/oz-medicaid-fraud-plan-politico-summit-00883279",
-      "link_label": "POLITICO Report",
-      "social_posts": [],
-      "tags": [
-        "Medicaid",
-        "Personal Care"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "news",
-      "auto_fetched": false,
-      "related_agencies": []
-    },
-    {
       "id": "media-2026-04-21-793179376",
       "date": "2026-04-21",
       "agency": "Media",
