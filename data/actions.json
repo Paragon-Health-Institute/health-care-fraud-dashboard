@@ -8771,8 +8771,8 @@
         "TRICARE",
         "Medicare",
         "Genetic Testing",
-        "Physical Therapy",
-        "Opioids"
+        "Lab Testing",
+        "Physical Therapy"
       ],
       "entities": [],
       "state": "TX",
