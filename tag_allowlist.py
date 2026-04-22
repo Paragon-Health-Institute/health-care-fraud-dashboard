@@ -256,7 +256,13 @@ TAG_PATTERNS = [
      # Capitation payments to MCOs — the characteristic Medicaid MCO payment
      r"capitation\s+payments?\s+to\s+managed[-\s]care",
      "Medicaid Managed Care"),
-    (r"\btricare\b|\bchampus\b", "TRICARE"),
+    # TRICARE: literal TRICARE/CHAMPUS OR DCIS investigator presence
+    # (DCIS = Defense Criminal Investigative Service, DoD-IG's criminal
+    # arm, whose jurisdiction is TRICARE fraud — their involvement
+    # strongly implies TRICARE was a defrauded program).
+    # Lowercase per auto_tags case-folded-body convention.
+    (r"\btricare\b|\bchampus\b|\bdcis\b|"
+     r"\bdefense\s+criminal\s+investigative\s+service\b", "TRICARE"),
     # ACA: require an explicit ACA phrase. "ACA" as a bare acronym can match
     # non-healthcare contexts; keep the 3-letter form gated to clear contexts.
     (r"affordable\s+care\s+act|obamacare|aca\s+marketplace|aca\s+exchange|"
@@ -306,6 +312,14 @@ TAG_PATTERNS = [
      r"\bmental\s+illness\s+treatment\b|"
      r"\bbehavioral\s+health\s+(clinic|services|practice|billing|provider)\b",
      "Mental Health"),
+    # Behavioral Healthcare as company name (not "behavioral health" as
+    # program category — we have that pattern separately as Behavioral
+    # Health umbrella tag). This matches corporate names like
+    # "Behavioral Healthcare Company Executive Sentenced" (with or
+    # without "care" suffix on "health").
+    (r"\bbehavioral\s+health(?:care)?\s+(company|corporation|corp|"
+     r"practice|group|inc|llc|services?)\b",
+     "Behavioral Health"),
     (r"\bprenatal\s+care\b|prenatal\s+coordination", "Prenatal Care"),
     (r"\bskin\s+substitute|allograft\b|amniotic\s+membrane\s+product|\bskin\s+grafts?\b", "Skin Substitutes"),
     (r"\bpersonal\s+care\s+(attendant|assistant|service|program|aide)\b|"
