@@ -49,6 +49,32 @@
       "ai_confidence": 75,
       "ai_reason": "This article appears to focus on a presidential pardon decision and its political implications rather than investigative reporting on a specific healthcare fraud scheme itself.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "media-2026-04-21-3756909703",
+      "date": "2026-04-21",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "Letters to the Editor: California’s delay in enacting hospice regulations is a patient-safety failure",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.latimes.com/opinion/letters-to-the-editor/story/2026-04-21/hospice-fraud-california-regulations",
+      "link_label": "Los Angeles Times Report",
+      "social_posts": [],
+      "tags": [
+        "Hospice"
+      ],
+      "state": "CA",
+      "source_type": "news",
+      "auto_fetched": true,
+      "entities": [],
+      "flagged_at": "2026-04-22T10:09:38.165132",
+      "flag_reason": "HC keyword but no fraud/investigation signal — needs AI review",
+      "ai_decision": "not_journalism",
+      "ai_confidence": 78,
+      "ai_reason": "This is an opinion/letters-to-the-editor piece about regulatory delay and patient safety, not investigative journalism exposing a specific fraud scheme or provider.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -66,7 +92,10 @@
     "https://www.cbsnews.com/detroit/news/michigan-surgeon-gets-prison-time-7-million-medicare-fraud-scheme/",
     "https://www.clickondetroit.com/news/local/2026/04/17/79-year-old-oakland-county-surgeon-sentenced-in-7m-medicare-fraud-scheme/",
     "https://www.deadlinedetroit.com/articles/34470/metro_detroit_surgeon_gets_1_year_in_prison_in_7_million_medicare_fraud_scheme",
-    "https://kffhealthnews.org/news/article/listen-health-care-helpline-life-kit-high-deductible-plans-out-of-pocket-costs/"
+    "https://kffhealthnews.org/news/article/listen-health-care-helpline-life-kit-high-deductible-plans-out-of-pocket-costs/",
+    "https://www.reuters.com/legal/government/trump-order-targeting-dei-by-federal-contractors-challenged-lawsuit-2026-04-21/",
+    "https://projects.propublica.org/nonprofits/organizations/582088040/202513219349310706/full",
+    "https://projects.propublica.org/nonprofits/organizations/237093598/202423189349103932/full"
   ],
   "metadata": {
     "last_updated": "2026-04-20T09:07:20.350526"
