@@ -254,7 +254,25 @@ TAG_PATTERNS = [
     # Medicare: literal word match, but the boilerplate agency phrase "centers for medicare & medicaid services" and variants must not count alone.
     (r"\bmedicare\b(?!\s*&\s*medicaid\s+services\b)", "Medicare"),
     # Medicaid: literal word match, excluding the boilerplate agency phrase.
-    (r"\bmedicaid\b(?!\s+services\b(?:\s|\.|,|$))|\bmedi-cal\b", "Medicaid"),
+    # Also covers state-branded Medicaid programs (TennCare, MassHealth, etc.).
+    (r"\bmedicaid\b(?!\s+services\b(?:\s|\.|,|$))|"
+     r"\bmedi[-\s]cal\b|"
+     r"\btenncare\b|"
+     r"\bmasshealth\b|"
+     r"\bmainecare\b|"
+     r"\bsoonercare\b|"
+     r"\bapple\s+health\b|"
+     r"\bhusky\s+health\b|"
+     r"\bahcccs\b|"
+     r"\bbadgercare\b|"
+     r"\bkancare\b|"
+     r"\bnj\s+familycare\b|"
+     r"\bminnesotacare\b|"
+     r"\bhoosier\s+healthwise\b|"
+     r"\bhealthy\s+indiana\s+plan\b|"
+     r"\bhealthy\s+louisiana\b|"
+     r"\bhealth\s+first\s+colorado\b",
+     "Medicaid"),
     # Medicaid Managed Care: require explicit phrase. MCO/managed-care-organization
     # alone is ambiguous (commercial MCOs exist) so require a nearby 'medicaid'.
     (r"medicaid\s+managed[-\s]care|medicaid\s+mco\b|managed[-\s]care.{0,30}medicaid|"

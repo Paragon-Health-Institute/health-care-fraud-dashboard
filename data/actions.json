@@ -5311,7 +5311,8 @@
       "tags": [
         "Nursing Home",
         "Wound Care",
-        "Medicare"
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "TN",
@@ -13138,7 +13139,8 @@
       "social_posts": [],
       "tags": [
         "Pharmacy",
-        "Medicare"
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "TN",
@@ -14450,7 +14452,9 @@
       "link": "https://www.justice.gov/usao-ma/pr/nine-charged-benefit-fraud-crackdown",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid"
+      ],
       "entities": [],
       "state": "MA",
       "source_type": "official",
