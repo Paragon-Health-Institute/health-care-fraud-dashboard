@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-22T13:02:35.881255",
+    "last_updated": "2026-04-22T13:03:13.247760",
     "version": "1.0",
     "last_scraped": "2026-04-22T09:02:11.249285"
   },
@@ -2802,7 +2802,8 @@
         "TRICARE",
         "Medicare",
         "Pharmacy",
-        "Assisted Living"
+        "Assisted Living",
+        "Long-Term Care"
       ],
       "entities": [],
       "state": "NY",
@@ -6907,7 +6908,8 @@
       "social_posts": [],
       "tags": [
         "Lab Testing",
-        "Medicare"
+        "Medicare",
+        "Long-Term Care"
       ],
       "entities": [],
       "state": "MD, AZ",
