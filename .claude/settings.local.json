@@ -180,7 +180,8 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Revert LTC tag application — wait until full scan can complete \\(280 fetch failures left incomplete\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Apply Long-Term Care tag to 3 items from clean LTC scan \\(Omnicare verdict, GTI \\\\$1M lab, Skilled Nursing Co FCA suit\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Politico Oz Medicaid plan item: drop Personal Care tag\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Marketer \\\\$11.5M Genetic Testing item: fix amount \\\\$4.5M -> \\\\$11.5M \\(scheme total per title\\)\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Marketer \\\\$11.5M Genetic Testing item: fix amount \\\\$4.5M -> \\\\$11.5M \\(scheme total per title\\)\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"St Louis Doctor victims-seek item: drop HHS-OIG \\(no HHS-OIG mention in body\\)\")"
     ]
   }
 }
