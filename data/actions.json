@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-22T15:53:33.189125",
+    "last_updated": "2026-04-22T19:45:01.573254",
     "version": "1.0",
     "last_scraped": "2026-04-22T09:02:11.249285"
   },
@@ -2886,68 +2886,6 @@
         "Hospice"
       ],
       "state": null,
-      "source_type": "official",
-      "auto_fetched": false,
-      "entities": [],
-      "related_agencies": [
-        "HHS-OIG"
-      ]
-    },
-    {
-      "id": "doj-2025-06-operation-gold-rush",
-      "date": "2025-06-30",
-      "agency": "DOJ",
-      "type": "Criminal Enforcement",
-      "title": "National Health Care Fraud Takedown Results in 324 Defendants Charged in Connection with Over $14.6 Billion in Alleged Fraud",
-      "amount": "$10.6 Billion",
-      "amount_numeric": 10600000000.0,
-      "officials": [],
-      "link": "https://www.justice.gov/opa/pr/national-health-care-fraud-takedown-results-324-defendants-charged-connection-over-146",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [
-        "DME",
-        "Medicaid",
-        "Medicare",
-        "Addiction Treatment",
-        "Lab Testing",
-        "Opioids",
-        "Wound Care",
-        "Medicare Advantage",
-        "Hospice"
-      ],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": false,
-      "entities": [],
-      "related_agencies": [
-        "HHS-OIG"
-      ]
-    },
-    {
-      "id": "doj-2025-06-arizona-skin-grafts",
-      "date": "2025-06-30",
-      "agency": "DOJ",
-      "type": "Criminal Enforcement",
-      "title": "National Health Care Fraud Takedown Results in 324 Defendants Charged in Connection with Over $14.6 Billion in Alleged Fraud",
-      "amount": "$1.1 Billion",
-      "amount_numeric": 1100000000.0,
-      "officials": [],
-      "link": "https://www.justice.gov/opa/pr/national-health-care-fraud-takedown-results-324-defendants-charged-connection-over-146",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [
-        "DME",
-        "Medicaid",
-        "Medicare",
-        "Addiction Treatment",
-        "Lab Testing",
-        "Opioids",
-        "Wound Care",
-        "Medicare Advantage",
-        "Hospice"
-      ],
-      "state": "",
       "source_type": "official",
       "auto_fetched": false,
       "entities": [],

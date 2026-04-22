@@ -411,10 +411,26 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
   <div class="d-flex align-items-center justify-content-between mb-3" id="enforcementBlurb">
     <div>
       <p style="font-size:0.8rem;color:var(--text-muted);margin:0;">Federal criminal and civil actions against health care fraud</p>
-      <p style="font-size:0.75rem;color:var(--text-muted);margin:0;"><em>Primary agency is DOJ (the prosecutor). HHS-OIG is tagged when the release names it as an investigating agency or credits it for investigative assistance. Other federal investigators that frequently partner on these cases — the FBI, DEA, FDA Office of Criminal Investigations, IRS Criminal Investigation, Homeland Security Investigations, U.S. Postal Inspection Service, and the Defense Criminal Investigative Service — are not tagged individually on the dashboard. State Medicaid Fraud Control Units also co-investigate many cases and are likewise not tagged.</em></p>
-      <p style="font-size:0.75rem;color:var(--text-muted);margin:0.25rem 0 0 0;"><em>Dollar amounts aim to reflect the size of the fraud. When a press release explicitly names a loss or scheme size (e.g., "Medicare paid $520,000," "submitted $20 million in fraudulent claims"), that figure is used. When only a resolution amount is available (settlement, judgment, restitution, forfeiture, or criminal penalty), that figure stands in. False Claims Act settlements and judgments include statutory multipliers of up to 3× the actual government loss plus per-claim penalties, so those resolution amounts typically exceed the underlying loss by 1.5×–3×. Criminal penalties adjusted for ability to pay (rare in our data) are excluded.</em></p>
+      <p style="font-size:0.75rem;color:var(--text-muted);margin:0.25rem 0 0 0;">
+        <em><strong>Agencies:</strong> Primary agency is DOJ (the prosecutor). HHS-OIG is tagged when named as investigator or credited for assistance.<span class="disclaimer-more d-none"> Other federal investigators (FBI, DEA, FDA OCI, IRS-CI, HSI, USPIS, DCIS) and state Medicaid Fraud Control Units are not tagged individually.</span></em><br>
+        <em><strong>Amounts:</strong> Aim to reflect size of the fraud — stated loss or scheme size when the press release names one, else the resolution amount.<span class="disclaimer-more d-none"> FCA settlements/judgments include statutory multipliers (up to 3× government loss plus per-claim penalties), so those typically exceed the underlying loss by 1.5×–3×. Ability-to-pay-adjusted criminal penalties are excluded.</span></em>
+        <a href="#" id="disclaimerToggle" style="font-size:0.75rem;margin-left:0.25rem;">Read more</a>
+      </p>
     </div>
   </div>
+  <script>
+    (function() {
+      var toggle = document.getElementById('disclaimerToggle');
+      if (!toggle) return;
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        var mores = document.querySelectorAll('.disclaimer-more');
+        var expanded = !mores[0].classList.contains('d-none');
+        mores.forEach(function(m) { m.classList.toggle('d-none'); });
+        toggle.textContent = expanded ? 'Read more' : 'Read less';
+      });
+    })();
+  </script>
   <div id="noResults" class="text-center py-5 d-none">
     <i class="fa-solid fa-circle-exclamation fa-3x text-muted mb-3"></i>
     <p class="text-muted">No actions match your filters.</p>
