@@ -175,7 +175,8 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"\\\\$233M ACA Insurance Brokerage item: date -> 2025-11-17\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Revert wrong date change on Lloyd Strong sentencing \\(2026-02-18; different event from Nov 17 conviction\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Restore HHS-OIG on 2 SDTX items \\(Clinic Owner non-existent + \\\\$110M Hospice\\)\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Doctor 7yr \\\\$24M Medicare fraud: date -> 2025-10-23 \\(actual sentencing date, press release delayed by shutdown\\). Add Genetic Testing tag.\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Doctor 7yr \\\\$24M Medicare fraud: date -> 2025-10-23 \\(actual sentencing date, press release delayed by shutdown\\). Add Genetic Testing tag.\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Clinic Owner Non-Existent Patients item: drop Medicaid \\(Medicare-only case; MFCU is investigator name, not defrauded program\\)\")"
     ]
   }
 }
