@@ -1111,7 +1111,20 @@ def generate_tags(title, full_text=""):
     # rules (Hospice -> Medicare, DME -> Medicare, etc.) ensure that
     # Medicare-specific service categories preserve their parent program.
     clean_body = _strip_boilerplate(full_text) if full_text else ""
-    return _apply_co_apply(_auto_tags(f"{title} {clean_body}"))
+    tags = _apply_co_apply(_auto_tags(f"{title} {clean_body}"))
+    # Long-Term Care threshold rule: if body mentions generic
+    # "long-term care" 2+ times (beyond LTCH/LTAC specific matches
+    # already covered by regex), add the tag. Catches cases where LTC
+    # is a substantive focus of the scheme (targeting LTC residents,
+    # facilities as referral sources) without triggering on single
+    # incidental mentions. Skip if regex already added the tag.
+    if "Long-Term Care" not in tags and clean_body:
+        ltc_count = len(re.findall(
+            r"\blong[-\s]term\s+care\b", clean_body, re.IGNORECASE,
+        ))
+        if ltc_count >= 2:
+            tags.append("Long-Term Care")
+    return tags
 
 # Site-specific suffixes that pollute <title> tags. Stripped during
 # canonical-title extraction so item titles match the actual headline.
