@@ -338,8 +338,16 @@ TAG_PATTERNS = [
      r"\bsubstance\s+abuse\s+treatment\b|\brehab(ilitation)?\s+(fraud|scheme|clinic)\b|"
      r"\bsuboxone\b|\bmethadone\s+(fraud|clinic)\b|"
      r"\bopioid\s+treatment\s+program\b", "Addiction Treatment"),
+    # Opioids: require a specific opioid drug or unambiguous opioid
+    # phrase. Removed generic "controlled substance" from 2026-04-22 —
+    # it was causing false positives on amphetamine/Adderall and
+    # benzodiazepine cases (Cheshire Nurse, TX Man, NP 18 months,
+    # Digital Health Adderall). Suboxone and methadone intentionally
+    # excluded here — they belong under Addiction Treatment since
+    # they're MAT drugs, not opioid abuse markers.
     (r"\bopioid(s)?\b|\bfentanyl\b|\boxycodone\b|\bhydrocodone\b|"
-     r"\bcontrolled\s+substance\b|\bpill\s+mill\b", "Opioids"),
+     r"\bmorphine\b|\bcodeine\b|\bpercocet\b|\bvicodin\b|"
+     r"\bpill\s+mill\b", "Opioids"),
     # Behavioral Health: the Medicaid/state umbrella category that bundles
     # mental health + substance use treatment. Use when the source treats
     # the topic as the umbrella (state BH carve-out, OIG BH networks,
