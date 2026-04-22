@@ -135,7 +135,10 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Cheshire Nurse item: drop Opioids tag \\(actual drugs were amphetamines + benzodiazepines, not opioids\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -m \"Add 'with assistance from' / 'handling the matter' / 'handled by' to HHS-OIG signals; restore Priority Hospital Group\")",
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Add Long-Term Care area tag \\(LTCH/LTAC specific, distinct from Nursing Home\\) *)",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Zynex Former Executives \\(Jan 2026\\): restore HHS-OIG \\(body names HHS OIG as investigator\\)\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Zynex Former Executives \\(Jan 2026\\): restore HHS-OIG \\(body names HHS OIG as investigator\\)\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" add backfill_tags.py data/actions.json)",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Revert MFCU->Medicaid inference on 2 items + disable rule in backfill_tags.py *)",
+      "Bash(git fetch *)"
     ]
   }
 }
