@@ -146,7 +146,8 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Former Pharmacy President item: add Medicare + TRICARE tags\")",
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Replace native date pickers with year-month select dropdowns *)",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Atlantic Biologicals item: state FL -> FL, TX \\(Miami company but Houston pill-mill destination\\)\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"TX adult daycare item: restore HHS-OIG \\(body names HHS-OIG as investigator\\)\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"TX adult daycare item: restore HHS-OIG \\(body names HHS-OIG as investigator\\)\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Pain Clinic Owner L5 Medical: restore HHS-OIG \\(investigator per body\\)\")"
     ]
   }
 }
