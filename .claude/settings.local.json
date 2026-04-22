@@ -154,7 +154,8 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Two Pharmacists Oxycodone item: drop Medicaid \\(MFCU is investigator but no Medicaid billing fraud; scheme was cash + insurance billing not specifically Medicaid\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Digital Health Adderall item: drop Opioids \\(Adderall is amphetamine, not opioid\\); state CA -> CA, FL \\(FL medical practice co-charged\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"RST-Sanexas item: drop Physical Therapy \\(was regex bleed from Medicare coverage-rule quote, not the fraud vector\\)\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"TX Man Controlled Substance: drop Opioids \\(drugs not specified — could be any controlled substance\\)\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"TX Man Controlled Substance: drop Opioids \\(drugs not specified — could be any controlled substance\\)\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Local Physician Adulterating item: date -> 2025-12-18, restore HHS-OIG\")"
     ]
   }
 }
