@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-22T14:19:07.574809",
+    "last_updated": "2026-04-22T14:24:09.619120",
     "version": "1.0",
     "last_scraped": "2026-04-22T09:02:11.249285"
   },
@@ -4428,8 +4428,8 @@
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Marketer Sentenced for $11.5M Genetic Testing Fraud and Kickback Scheme",
-      "amount": "$4.5 Million",
-      "amount_numeric": 4500000.0,
+      "amount": "$11.5 Million",
+      "amount_numeric": 11500000,
       "officials": [],
       "link": "https://www.justice.gov/opa/pr/marketer-sentenced-115m-genetic-testing-fraud-and-kickback-scheme",
       "link_label": "DOJ Press Release",
