@@ -7447,14 +7447,15 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Nursing Home",
         "Home Health"
       ],
       "entities": [],
       "state": "VA",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-12-3084539056",
