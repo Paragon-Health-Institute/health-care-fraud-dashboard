@@ -8432,8 +8432,8 @@
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Law Enforcement Recovers Over $6 Million in Forfeited Assets from Miami Couple Sentenced to 9- and 3-Year Prison Terms for Health Care Fraud and Money Laundering Conspiracies",
-      "amount": "$6 Million",
-      "amount_numeric": 6000000.0,
+      "amount": "$20 Million",
+      "amount_numeric": 20000000,
       "officials": [],
       "link": "https://www.justice.gov/usao-sdfl/pr/law-enforcement-recovers-over-6-million-forfeited-assets-miami-couple-sentenced-9-and",
       "link_label": "DOJ Press Release",
@@ -8442,7 +8442,8 @@
         "Medicaid",
         "Medicare Advantage",
         "Medicare",
-        "Physical Therapy"
+        "Physical Therapy",
+        "Mental Health"
       ],
       "entities": [],
       "state": "FL",
