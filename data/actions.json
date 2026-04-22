@@ -7426,7 +7426,8 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Home Health"
+        "Home Health",
+        "Personal Care"
       ],
       "entities": [],
       "state": "VA",
@@ -7543,7 +7544,8 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Home Health"
+        "Home Health",
+        "Personal Care"
       ],
       "entities": [],
       "state": "VA",
@@ -7666,14 +7668,16 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Nursing Home",
-        "Home Health"
+        "Home Health",
+        "Personal Care"
       ],
       "entities": [],
       "state": "VA",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-25-277820596",
