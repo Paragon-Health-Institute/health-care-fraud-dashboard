@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-22T09:49:06.076346",
+    "last_updated": "2026-04-22T10:22:12.212901",
     "version": "1.0",
     "last_scraped": "2026-04-22T09:02:11.249285"
   },
@@ -4032,7 +4032,7 @@
         "Medicaid"
       ],
       "entities": [],
-      "state": "FL",
+      "state": "FL, TX",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
