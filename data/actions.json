@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-22T11:38:19.507749",
+    "last_updated": "2026-04-22T11:39:40.343394",
     "version": "1.0",
     "last_scraped": "2026-04-22T09:02:11.249285"
   },
@@ -6662,9 +6662,7 @@
       "link": "https://oig.hhs.gov/fraud/enforcement/texas-man-charged-with-conspiracy-to-obtain-controlled-substances-by-fraud/",
       "link_label": "HHS-OIG Press Release",
       "social_posts": [],
-      "tags": [
-        "Opioids"
-      ],
+      "tags": [],
       "entities": [],
       "state": "TX",
       "source_type": "official",
