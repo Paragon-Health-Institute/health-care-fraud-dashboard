@@ -178,7 +178,8 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Doctor 7yr \\\\$24M Medicare fraud: date -> 2025-10-23 \\(actual sentencing date, press release delayed by shutdown\\). Add Genetic Testing tag.\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Clinic Owner Non-Existent Patients item: drop Medicaid \\(Medicare-only case; MFCU is investigator name, not defrauded program\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Revert LTC tag application — wait until full scan can complete \\(280 fetch failures left incomplete\\)\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Apply Long-Term Care tag to 3 items from clean LTC scan \\(Omnicare verdict, GTI \\\\$1M lab, Skilled Nursing Co FCA suit\\)\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Apply Long-Term Care tag to 3 items from clean LTC scan \\(Omnicare verdict, GTI \\\\$1M lab, Skilled Nursing Co FCA suit\\)\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Politico Oz Medicaid plan item: drop Personal Care tag\")"
     ]
   }
 }
