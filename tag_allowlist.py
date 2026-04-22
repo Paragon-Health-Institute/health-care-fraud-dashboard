@@ -256,13 +256,12 @@ TAG_PATTERNS = [
      # Capitation payments to MCOs — the characteristic Medicaid MCO payment
      r"capitation\s+payments?\s+to\s+managed[-\s]care",
      "Medicaid Managed Care"),
-    # TRICARE: literal TRICARE/CHAMPUS OR DCIS investigator presence
-    # (DCIS = Defense Criminal Investigative Service, DoD-IG's criminal
-    # arm, whose jurisdiction is TRICARE fraud — their involvement
-    # strongly implies TRICARE was a defrauded program).
-    # Lowercase per auto_tags case-folded-body convention.
-    (r"\btricare\b|\bchampus\b|\bdcis\b|"
-     r"\bdefense\s+criminal\s+investigative\s+service\b", "TRICARE"),
+    # TRICARE: literal TRICARE/CHAMPUS mention only.
+    # Previously included DCIS / Defense Criminal Investigative Service
+    # as a trigger (DoD-IG's criminal arm with TRICARE jurisdiction) but
+    # retracted 2026-04-22 — DCIS investigates DoD matters broader than
+    # TRICARE, so their presence doesn't reliably imply TRICARE fraud.
+    (r"\btricare\b|\bchampus\b", "TRICARE"),
     # ACA: require an explicit ACA phrase. "ACA" as a bare acronym can match
     # non-healthcare contexts; keep the 3-letter form gated to clear contexts.
     (r"affordable\s+care\s+act|obamacare|aca\s+marketplace|aca\s+exchange|"
