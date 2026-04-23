@@ -9025,8 +9025,8 @@
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Eastern District of New York: 11 Defendants Indicted in Multi-Billion Health Care Fraud Scheme, the Largest Case by Loss Amount Ever Charged by the Department Of Justice",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$10.6 Billion",
+      "amount_numeric": 10600000000,
       "officials": [],
       "link": "https://www.justice.gov/usao-edny/pr/11-defendants-indicted-multi-billion-health-care-fraud-scheme-largest-case-loss-amount",
       "link_label": "DOJ Press Release",
@@ -9035,8 +9035,7 @@
         "DME",
         "Medicaid",
         "Medicare",
-        "Pharmacy",
-        "Opioids"
+        "Pharmacy"
       ],
       "entities": [],
       "state": "NY",
