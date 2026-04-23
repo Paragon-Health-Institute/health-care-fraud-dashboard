@@ -1394,12 +1394,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body" style="padding:24px 28px;font-size:0.9rem;line-height:1.65;color:#303030;">
-        <p style="margin-bottom:18px;">
-          Every item on this dashboard links to a primary source. Federal enforcement items are required to link to a
-          <code>.gov</code> press release. Oversight and media items can link to official agency output or to
-          investigative-journalism stories from a whitelisted set of news outlets.
-        </p>
-
         <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:8px 0 8px;">Official government sources (auto-scraped daily)</div>
         <ul style="padding-left:20px;margin-bottom:18px;">
           <li><strong>DOJ</strong> &mdash; the Office of Public Affairs press feed (filtered on the "Health Care Fraud" topic tag) plus a consolidated DOJ scraper that surfaces U.S. Attorney's Office releases from all 93 federal districts.</li>
@@ -1422,6 +1416,12 @@ document.addEventListener('DOMContentLoaded', () => {
           and the San Francisco Chronicle. Each candidate is AI-screened against the dashboard's inclusion
           criteria before it's added. Individual stories from outlets outside the whitelist can also be
           added manually when editorially warranted.
+        </p>
+        <p style="margin-bottom:10px;">
+          A small number of federal oversight and accountability items &mdash; for example, a cabinet official's
+          televised remarks announcing a crackdown, or a task-force update covered only in the press &mdash; are
+          added manually from news sources when a notable action doesn't yet have an official <code>.gov</code>
+          press release.
         </p>
 
         <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:16px 0 8px;">How items are classified</div>
