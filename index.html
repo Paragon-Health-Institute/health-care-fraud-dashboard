@@ -1393,22 +1393,28 @@ document.addEventListener('DOMContentLoaded', () => {
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body" style="padding:24px 28px;font-size:0.9rem;line-height:1.65;color:#303030;">
-        <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:8px 0 8px;">Federal Enforcement Actions tab &mdash; auto-scraped daily</div>
+        <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:8px 0 8px;">Federal Enforcement Actions tab</div>
         <p style="margin-bottom:8px;">
-          Every item on this tab links to an official <code>.gov</code> press release. Content is pulled
-          automatically from:
+          Every item on this tab links to an official <code>.gov</code> press release. Content is auto-scraped daily from DOJ:
         </p>
-        <ul style="padding-left:20px;margin-bottom:18px;">
-          <li><strong>DOJ</strong> &mdash; the Office of Public Affairs press feed (filtered on the "Health Care Fraud" topic tag) plus a consolidated DOJ scraper that surfaces U.S. Attorney's Office releases from all 93 federal districts.</li>
-          <li><strong>HHS-OIG</strong> &mdash; Office of Inspector General press releases.</li>
+        <ul style="padding-left:20px;margin-bottom:10px;">
+          <li>The <strong>Office of Public Affairs</strong> press feed.</li>
+          <li>A <strong>consolidated USAO scraper</strong> that surfaces U.S. Attorney's Office releases from all 93 federal districts.</li>
         </ul>
+        <p style="margin-bottom:18px;">
+          Both DOJ scrapers primarily gate items on DOJ's own "Health Care Fraud" topic tag, with a strict
+          body-text fallback (title must carry a healthcare signal, body must contain a fraud keyword AND
+          healthcare context) for legitimate releases DOJ's tagger missed. Settlement and prosecution items
+          from HHS-OIG, CMS, and State AGs also appear on this tab when their action type is classified as
+          Criminal Enforcement or Civil Action.
+        </p>
 
-        <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:8px 0 8px;">Federal Oversight &amp; Accountability tab &mdash; auto-scraped, with some manual additions</div>
+        <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:8px 0 8px;">Federal Oversight &amp; Accountability tab</div>
         <p style="margin-bottom:8px;">
           Most items come from these auto-scraped official sources:
         </p>
         <ul style="padding-left:20px;margin-bottom:10px;">
-          <li><strong>HHS-OIG</strong> &mdash; audit and evaluation reports feed.</li>
+          <li><strong>HHS-OIG</strong> &mdash; press releases and the audit/evaluation reports feed.</li>
           <li><strong>CMS</strong> &mdash; the CMS newsroom and the dedicated <code>/fraud</code> page.</li>
           <li><strong>HHS</strong> &mdash; the HHS press room (structurally constrained by Akamai bot protection; fraud-relevant HHS items typically cross-post to CMS, which is captured automatically).</li>
           <li><strong>GAO</strong> &mdash; RSS feed for healthcare-fraud-related reports and testimony.</li>
@@ -1418,21 +1424,29 @@ document.addEventListener('DOMContentLoaded', () => {
           <li><strong>MACPAC and MedPAC</strong> &mdash; congressional advisory commission reports on Medicaid and Medicare program integrity.</li>
         </ul>
         <p style="margin-bottom:18px;">
-          A small number of items on this tab are added manually when a notable federal accountability action
-          doesn't have an official <code>.gov</code> press release &mdash; for example, a cabinet official's
-          televised remarks announcing a crackdown, a task-force update covered only in the press, or a
-          letter to state governors that never went out as an agency release.
+          Tab membership is driven by each item's action type (audits, investigations, rules, hearings, etc.
+          land on this tab; settlements and prosecutions land on the Enforcement tab), so the same source
+          can feed either tab depending on what it's announcing. A small number of items are also added
+          manually when a notable federal accountability action doesn't have an official <code>.gov</code>
+          press release &mdash; for example, a cabinet official's televised remarks announcing a crackdown,
+          a task-force update covered only in the press, or a letter to state governors that never went out
+          as an agency release.
         </p>
 
-        <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:8px 0 8px;">Media Investigations tab &mdash; auto-scraped, with some manual additions</div>
+        <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:8px 0 8px;">Media Investigations tab &mdash; largely manually curated</div>
         <p style="margin-bottom:10px;">
-          Media items are pulled via Google News queries filtered to a whitelist of outlets with a documented
-          record of healthcare-fraud reporting: ProPublica, KFF Health News, STAT News, The New York Times,
-          The Wall Street Journal, The Washington Post, CBS News, NPR, Bloomberg, Reuters, The Atlantic,
-          The New Yorker, Los Angeles Times, Chicago Tribune, Boston Globe, Miami Herald, Tampa Bay Times,
-          and the San Francisco Chronicle. Each candidate is AI-screened against the dashboard's inclusion
-          criteria before it's added. Individual stories from outlets outside the whitelist can also be
-          added manually when editorially warranted.
+          Most items on this tab are added by hand &mdash; the author identifies notable investigative
+          journalism on healthcare fraud and includes stories on a case-by-case basis, from any outlet
+          that produces credible reporting.
+        </p>
+        <p style="margin-bottom:10px;">
+          A supplementary auto-scrape runs Google News queries against a narrower outlet whitelist
+          (ProPublica, KFF Health News, STAT News, The New York Times, The Wall Street Journal, The
+          Washington Post, CBS News, NPR, Bloomberg, Reuters, The Atlantic, The New Yorker, Los Angeles
+          Times, Chicago Tribune, Boston Globe, Miami Herald, Tampa Bay Times, and the San Francisco
+          Chronicle). Every auto-scraped candidate is AI-screened (Claude Haiku) against the dashboard's
+          inclusion criteria before it's added. Auto-inclusions currently make up a small fraction of
+          the tab; the rest are manual.
         </p>
 
         <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:16px 0 8px;">How items are classified</div>
