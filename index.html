@@ -1025,6 +1025,10 @@ function collectAgencies(actions) {
 function updateAgencyLists(actions) {
   const agencies = collectAgencies(actions);
   if (!agencies.length) return;
+  // Media items live in a separate media.json loaded only when the Media
+  // tab is opened, so they don't appear in actions. Append Media so the
+  // header/footer lists accurately reflect all three dashboard tabs.
+  if (!agencies.includes('Media')) agencies.push('Media');
   const header = document.getElementById('headerAgencyList');
   if (header) header.innerHTML = agencies.join(' &bull; ');
   const scope = document.getElementById('scopeAgencyList');
