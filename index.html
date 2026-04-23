@@ -485,7 +485,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
 <footer class="dashboard-footer">
   <div class="container-fluid px-4">
     <div class="d-flex flex-wrap justify-content-between align-items-center py-3">
-      <p class="mb-0 text-muted small" style="color:rgba(255,255,255,0.5)!important">Data sourced from <span id="footerAgencyList">DOJ, HHS, HHS-OIG, CMS, GAO, Congress, Treasury, White House, MedPAC, and MACPAC</span>, plus investigative media reports.</p>
+      <p class="mb-0 text-muted small" style="color:rgba(255,255,255,0.5)!important">Data sourced from <span id="footerAgencyList">DOJ, HHS, HHS-OIG, CMS, GAO, Congress, Treasury, White House, MedPAC, and MACPAC</span>, plus investigative media reports. <a href="#" data-bs-toggle="modal" data-bs-target="#sourcesModal" style="color:rgba(255,255,255,0.7);text-decoration:underline;text-underline-offset:2px;">Read more &rarr;</a></p>
       <p class="mb-0 text-muted small" style="color:rgba(255,255,255,0.5)!important">Built by <a href="https://paragoninstitute.org/profile/katherine-hall/" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.7);text-decoration:underline;text-underline-offset:2px;">Katherine Hall</a>, <a href="https://paragoninstitute.org/" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.7);text-decoration:underline;text-underline-offset:2px;">Paragon Health Institute</a></p>
     </div>
   </div>
@@ -1385,6 +1385,60 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <!-- ABOUT MODAL -->
+<!-- SOURCES MODAL -->
+<div class="modal fade" id="sourcesModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+    <div class="modal-content" style="border:none;border-radius:0.3rem;overflow:hidden;">
+      <div class="modal-header" style="background:#002E6D;color:white;border:none;">
+        <h5 class="modal-title" style="font-family:'Bona Nova',Georgia,serif;font-size:1.1rem;">Where This Data Comes From</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="padding:24px 28px;font-size:0.9rem;line-height:1.65;color:#303030;">
+        <p style="margin-bottom:18px;">
+          Every item on this dashboard links to a primary source. Federal enforcement items are required to link to a
+          <code>.gov</code> press release. Oversight and media items can link to official agency output or to
+          investigative-journalism stories from a whitelisted set of news outlets.
+        </p>
+
+        <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:8px 0 8px;">Official government sources (auto-scraped daily)</div>
+        <ul style="padding-left:20px;margin-bottom:18px;">
+          <li><strong>DOJ</strong> &mdash; the Office of Public Affairs press feed (filtered on the "Health Care Fraud" topic tag) plus individual U.S. Attorney's Office district scrapers covering every district that posts health-care-fraud enforcement.</li>
+          <li><strong>HHS-OIG</strong> &mdash; the Office of Inspector General press releases and the audit/evaluation reports feed.</li>
+          <li><strong>CMS</strong> &mdash; the CMS newsroom, fact sheets, and the dedicated <code>/fraud</code> page.</li>
+          <li><strong>HHS</strong> &mdash; the HHS press room (structurally constrained by Akamai bot protection; fraud-relevant HHS items typically cross-post to CMS, which is captured automatically).</li>
+          <li><strong>GAO</strong> &mdash; the Government Accountability Office RSS feed for healthcare-fraud-related reports and testimony.</li>
+          <li><strong>Congress</strong> &mdash; committee pages (House Oversight, House Energy &amp; Commerce, Senate Finance, Senate HSGAC) for investigations, hearings, and legislative action.</li>
+          <li><strong>White House</strong> &mdash; whitehouse.gov press releases, fact sheets, and executive orders.</li>
+          <li><strong>Treasury / FinCEN</strong> &mdash; financial-crime advisories and enforcement actions tied to healthcare fraud.</li>
+          <li><strong>MACPAC and MedPAC</strong> &mdash; congressional advisory commission reports on Medicaid and Medicare program integrity.</li>
+        </ul>
+
+        <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:8px 0 8px;">Investigative media</div>
+        <p style="margin-bottom:10px;">
+          Media items are pulled via Google News queries filtered to a whitelist of outlets with a documented
+          record of healthcare-fraud reporting (ProPublica, KFF Health News, STAT News, CBS News, NYT, WSJ,
+          Washington Post, NPR, Fox News, Bloomberg, Reuters, Axios, The Guardian, NY Post, LA Times, and several
+          regional outlets with active investigative desks). Each candidate is AI-screened against the dashboard's
+          inclusion criteria before it's added.
+        </p>
+
+        <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:16px 0 8px;">How items are classified</div>
+        <p style="margin-bottom:10px;">
+          Tags, state, amount, and action type are extracted from the source text using a combination of regex
+          rules and AI extraction with anchored citations (the model must quote the source verbatim for any field
+          it populates, and the code validates that the quote actually appears in the article). Titles on the
+          Federal Enforcement tab match the official press-release headline verbatim.
+        </p>
+
+        <p style="margin-bottom:0;font-size:0.82rem;color:#666;font-style:italic;">
+          This dashboard does not generate original reporting. It aggregates publicly available federal enforcement
+          and oversight activity into a single filterable view and links back to the original source for every item.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="modal fade" id="aboutModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" style="border:none;border-radius:0.3rem;overflow:hidden;">
