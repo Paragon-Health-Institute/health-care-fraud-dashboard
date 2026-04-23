@@ -1395,52 +1395,36 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="modal-body" style="padding:24px 28px;font-size:0.9rem;line-height:1.65;color:#303030;">
         <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:8px 0 8px;">Federal Enforcement Actions tab</div>
         <p style="margin-bottom:8px;">
-          Every item on this tab has an action type of Criminal Enforcement or Civil Action and links to an
-          official <code>.gov</code> press release. Content is auto-scraped daily from two sources, both DOJ:
+          Every item on this tab has an action type of Criminal Enforcement or Civil Action, links to an
+          official <code>.gov</code> press release, and is attributed to DOJ. The vast majority come from two
+          DOJ scrapers that run daily:
         </p>
         <ul style="padding-left:20px;margin-bottom:10px;">
-          <li><strong>DOJ Office of Public Affairs</strong> press feed &mdash; major takedowns, FCA settlements, and headline prosecutions.</li>
-          <li><strong>DOJ U.S. Attorney's Offices</strong> &mdash; a consolidated scraper that paginates through the nationwide USAO press-release feed, surfacing items from any of the 93 federal districts.</li>
+          <li><strong>DOJ U.S. Attorney's Offices</strong> &mdash; a consolidated scraper covering the nationwide USAO press-release feed from any of the 93 federal districts. This is the primary source and accounts for the largest share of items on this tab.</li>
+          <li><strong>DOJ Office of Public Affairs</strong> press feed &mdash; major takedowns, FCA settlements, and headline prosecutions announced at the Department level.</li>
         </ul>
-        <p style="margin-bottom:10px;">
-          Both DOJ scrapers use the same inclusion rule: if DOJ tagged the release with the "Health Care Fraud"
-          topic tag, the item is included unconditionally. Items DOJ didn't tag pass only if all three of the
-          following hold &mdash; the title contains a health-care-specific term, the body contains a
-          fraud/enforcement keyword, and the body contains health care context.
-        </p>
-        <p style="margin-bottom:10px;">
-          The <strong>HHS-OIG press releases</strong> scraper also feeds this tab indirectly: OIG regularly
-          announces enforcement outcomes by linking out to the DOJ press release. When an OIG item's link
-          points to <code>justice.gov</code> or its title contains enforcement keywords (sentenced, indicted,
-          convicted, agrees to pay, settlement, etc.), the ingestion code rewrites the agency field from
-          HHS-OIG to DOJ and the item lands here instead of on Oversight.
-        </p>
         <p style="margin-bottom:18px;">
-          A second gate ensures purity: if any Criminal Enforcement or Civil Action item comes through with
-          an agency other than DOJ after all re-labeling, the ingestion code reclassifies its type to Audit
-          so it routes to Oversight instead. The result is that 100% of items on the Federal Enforcement
-          tab are DOJ.
+          As a cross-coverage safety net, the <strong>HHS-OIG press-releases</strong> scraper also feeds this
+          tab: when an OIG release links to a DOJ press release or carries an enforcement headline (sentenced,
+          indicted, agrees to pay, etc.), the ingestion code rewrites it to a DOJ item and routes it here.
+          In current data this path contributes only a small fraction of items, because the DOJ scrapers
+          already catch the underlying releases directly.
         </p>
 
         <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:8px 0 8px;">Federal Oversight &amp; Accountability tab</div>
         <p style="margin-bottom:8px;">
           This tab holds every non-enforcement action type &mdash; audits, evaluations, investigations, rules,
-          hearings, reports, administrative actions, and similar. Auto-scraped sources:
+          hearings, reports, administrative actions, and similar. Daily auto-scraped sources:
         </p>
         <ul style="padding-left:20px;margin-bottom:10px;">
-          <li><strong>HHS-OIG</strong> &mdash; audit and evaluation reports feed, plus the subset of HHS-OIG press releases that aren't rewritten to DOJ by the enforcement re-routing described above (new audit announcements, industry advisories, oversight initiatives).</li>
+          <li><strong>HHS-OIG</strong> &mdash; audit and evaluation reports, plus non-enforcement press releases (audit announcements, advisories, oversight initiatives).</li>
           <li><strong>CMS</strong> &mdash; the CMS newsroom and the dedicated <code>/fraud</code> page.</li>
-          <li><strong>GAO</strong> &mdash; the Government Accountability Office reports RSS feed.</li>
-          <li><strong>Congress</strong> &mdash; committee-page scrapers for House Oversight, House Energy &amp; Commerce, House Ways &amp; Means, House Judiciary, Senate Finance, Senate HELP, and Senate Judiciary.</li>
-          <li><strong>Congress.gov hearings</strong> &mdash; a separate daily job that pulls congressional hearing records via the Congress.gov API, keeps items whose title matches a health-care-fraud phrase list (Medicare/Medicaid/TRICARE/etc. + fraud/kickback/anti-kickback/false claims/pill mill/etc.) or whose committee is a health care committee with fraud-context title wording, and files the result as action type <em>Hearing</em>.</li>
+          <li><strong>GAO</strong> &mdash; reports RSS feed.</li>
+          <li><strong>Congress</strong> &mdash; committee-page scrapers for House Oversight, House Energy &amp; Commerce, House Ways &amp; Means, House Judiciary, Senate Finance, Senate HELP, and Senate Judiciary, plus a daily scraper that pulls fraud-related congressional hearings via the Congress.gov API.</li>
           <li><strong>White House</strong> &mdash; whitehouse.gov press releases, fact sheets, and executive orders.</li>
-          <li><strong>Treasury / FinCEN</strong> &mdash; FinCEN financial-crime advisories and enforcement actions.</li>
+          <li><strong>Treasury / FinCEN</strong> &mdash; financial-crime advisories and enforcement actions.</li>
           <li><strong>MACPAC and MedPAC</strong> &mdash; congressional advisory commission reports on Medicaid and Medicare program integrity.</li>
         </ul>
-        <p style="margin-bottom:8px;">
-          The HHS press-room scraper exists but is disabled because the page is Akamai-bot-blocked (returns 403
-          even through Playwright). Fraud-relevant HHS items typically cross-post to CMS and get captured there.
-        </p>
         <p style="margin-bottom:18px;">
           A small number of items on this tab are added manually when a notable federal accountability action
           doesn't have an official <code>.gov</code> press release &mdash; for example, a cabinet official's
@@ -1450,35 +1434,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:8px 0 8px;">Media Investigations tab</div>
         <p style="margin-bottom:10px;">
-          This tab has two parallel intake paths. In practice, the vast majority of items currently on the
-          tab were added via the manual path.
+          Most items on this tab are added manually &mdash; the author includes notable investigative-journalism
+          stories on a case-by-case basis, from any outlet whose reporting fits the tab's scope.
         </p>
-        <p style="margin-bottom:6px;"><strong>Auto-scrape pipeline (runs daily).</strong></p>
-        <p style="margin-bottom:10px;">
-          A Google News RSS scraper runs a fixed set of queries (e.g. <em>"medicare fraud" investigation</em>,
-          <em>hospice fraud investigation</em>, <em>site:propublica.org healthcare fraud</em>), filters
-          candidates against a hard outlet whitelist (ProPublica, KFF Health News, STAT News, The New York
-          Times, The Wall Street Journal, The Washington Post, CBS News, NPR, Bloomberg, Reuters, The Atlantic,
-          The New Yorker, Los Angeles Times, Chicago Tribune, Boston Globe, Miami Herald, Tampa Bay Times,
-          and the San Francisco Chronicle), then runs each surviving candidate through a Claude Haiku
-          classifier whose prompt explicitly rejects agency-led stories, single-case press-release rewrites,
-          hearing rewrites, opinion pieces, drug trafficking cases without a billing-fraud angle, and general
-          healthcare policy coverage. Items that clear all three stages are committed to the tab without
-          manual review.
-        </p>
-        <p style="margin-bottom:6px;"><strong>Manual adds.</strong></p>
-        <p style="margin-bottom:10px;">
-          The author adds notable investigative-journalism stories directly, from any outlet whose reporting
-          clearly fits the tab's scope &mdash; including outlets not on the auto-scrape whitelist. This path
-          is how most items on the tab were added.
+        <p style="margin-bottom:18px;">
+          A daily auto-scrape also runs: Google News queries are filtered against a curated whitelist of
+          investigative-journalism outlets and each candidate is AI-screened (Claude Haiku) for fit before
+          being added. The AI's scope is narrow, so this path adds relatively few items; most stories on the
+          tab come from manual adds.
         </p>
 
         <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:16px 0 8px;">How items are classified</div>
         <p style="margin-bottom:10px;">
-          Tags, state, amount, and action type are extracted from the source text using a combination of regex
-          rules and AI extraction with anchored citations (the model must quote the source verbatim for any field
-          it populates, and the code validates that the quote actually appears in the article). Titles on the
-          Federal Enforcement tab match the official press-release headline verbatim.
+          Tags, state, amount, and action type are extracted from the source text using regex rules plus AI
+          extraction with anchored citations (the model must quote the source verbatim for any field it
+          populates, and the code validates that the quoted phrase actually appears in the article). Titles
+          on the Federal Enforcement tab match the official press-release headline verbatim.
         </p>
 
         <p style="margin-bottom:10px;font-size:0.82rem;color:#666;font-style:italic;">
