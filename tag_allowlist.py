@@ -194,6 +194,34 @@ _BOILERPLATE_PATTERNS = [
         r"(?:Medicare|Medicaid)[^.]*?federally\s+funded\s+healthcare\s+programs",
         _re.IGNORECASE,
     ),
+    # 2025 National Health Care Fraud Takedown — Galeotti harm-quote
+    # boilerplate. Every USAO release in the June 30, 2025 takedown
+    # contains the identical Criminal Division quote enumerating three
+    # generic harms from health-care-fraud schemes, the second of which
+    # is "(2) contribute to our nationwide opioid epidemic and exacerbate
+    # controlled substance addiction". This is a generic policy
+    # statement, NOT evidence that the specific district's case
+    # involves opioids or controlled substances. Strip so the Opioids
+    # tag isn't falsely applied from boilerplate on district items
+    # whose actual defendants have no opioid/narcotic case.
+    _re.compile(
+        r"contribute\s+to\s+(?:our\s+)?nationwide\s+opioid\s+epidemic"
+        r"[^.]*?controlled\s+substance\s+addiction",
+        _re.IGNORECASE,
+    ),
+    # 2025 National Health Care Fraud Takedown — national aggregate
+    # statistics line: "over $14.6 billion in intended losses and over
+    # 15 million pills of illegally diverted controlled substances".
+    # Present in every district release as national-scope context, not
+    # district-specific evidence. Strip so "controlled substances" from
+    # the national pill count doesn't trigger Opioids on DME- or
+    # billing-only district cases.
+    _re.compile(
+        r"(?:over|approximately|more\s+than)?\s*[\d.,]+\s*"
+        r"(?:million|billion)?\s*pills?\s+of\s+illegally\s+diverted\s+"
+        r"controlled\s+substances",
+        _re.IGNORECASE,
+    ),
 ]
 
 
