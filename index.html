@@ -1398,17 +1398,11 @@ document.addEventListener('DOMContentLoaded', () => {
           This tab holds criminal and civil cases prosecuted by DOJ, with most cases investigated by HHS-OIG.
           Every item links to an official <code>.gov</code> press release. Daily auto-scraped sources:
         </p>
-        <ul style="padding-left:20px;margin-bottom:10px;">
+        <ul style="padding-left:20px;margin-bottom:18px;">
           <li><strong>DOJ U.S. Attorney's Offices</strong> &mdash; a consolidated scraper covering the nationwide USAO press-release feed from any of the 93 federal districts. This is the primary source and accounts for the largest share of items on this tab.</li>
           <li><strong>DOJ Office of Public Affairs</strong> press feed &mdash; major takedowns, FCA settlements, and headline prosecutions announced at the Department level.</li>
+          <li><strong>HHS-OIG press releases</strong> &mdash; a cross-coverage safety net. When an OIG release links to a DOJ press release or carries an enforcement headline (sentenced, indicted, agrees to pay, etc.), it's routed here as a DOJ item. Contributes only a small fraction of items, since the DOJ scrapers usually catch the underlying release directly.</li>
         </ul>
-        <p style="margin-bottom:18px;">
-          As a cross-coverage safety net, the <strong>HHS-OIG press-releases</strong> scraper also feeds this
-          tab: when an OIG release links to a DOJ press release or carries an enforcement headline (sentenced,
-          indicted, agrees to pay, etc.), the ingestion code rewrites it to a DOJ item and routes it here.
-          In current data this path contributes only a small fraction of items, because the DOJ scrapers
-          already catch the underlying releases directly.
-        </p>
 
         <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:8px 0 8px;">Federal Oversight &amp; Accountability tab</div>
         <p style="margin-bottom:8px;">
