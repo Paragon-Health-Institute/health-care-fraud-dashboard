@@ -9346,12 +9346,9 @@
       "link": "https://www.justice.gov/usao-wdmi/pr/2025_0630_National_Health_Care_Fraud_Takedown",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [
-        "Medicare",
-        "DME"
-      ],
+      "tags": [],
       "entities": [],
-      "state": "MI",
+      "state": null,
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
