@@ -142,10 +142,18 @@ Do NOT output a description field — descriptions are not stored on the dashboa
                 action["officials"] = []
                 if result.get("state"):
                     action["state"] = result["state"]
-                if result.get("amount"):
-                    action["amount"] = result["amount"]
-                if result.get("amount_numeric"):
-                    action["amount_numeric"] = result["amount_numeric"]
+                # Amount: only fill if the item doesn't already have one.
+                # update.py runs an anchored, citation-validated AI
+                # extractor (amount_extractor.extract_amount_with_evidence)
+                # against the fetched body — that's strictly better than
+                # the title-only guess this enricher can produce, since
+                # this enricher only sees title + agency + link (no body).
+                # Never overwrite a good amount with a weaker signal.
+                if not action.get("amount") and not action.get("amount_numeric"):
+                    if result.get("amount"):
+                        action["amount"] = result["amount"]
+                    if result.get("amount_numeric"):
+                        action["amount_numeric"] = result["amount_numeric"]
                 # Only override agency for non-official items (media/news)
                 # Official feed items keep their feed-assigned agency
                 if not is_official and result.get("agency"):

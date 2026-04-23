@@ -1049,6 +1049,37 @@ def _get_ai_client():
     return _AI_CLIENT
 
 
+def extract_amount_hybrid(title, full_text, regex_search_text):
+    """Extract a fraud-size dollar amount, AI first with regex fallback.
+
+    The regex extractor (`extract_amount`) does fine on titles like
+    "Company Agrees to Pay $4.75M" but misses ~50% of sentencing and
+    settlement releases where the amount lives only in the body (often
+    worded as "caused a loss of $X", "fraudulently billed $X", "ordered
+    to pay restitution of $X"). It also picks the wrong figure when a
+    release mentions several ($500K restitution + $250K fine + $12M
+    scheme loss — the regex takes the first match, not the fraud size).
+
+    The AI extractor (`amount_extractor.extract_amount_with_evidence`) is
+    trained to pick the fraud size specifically and validates every
+    returned number against a verbatim citation from the body, so it
+    can't hallucinate. When it abstains (no dollar figure, or ambiguous),
+    it returns None and we fall back to the regex.
+
+    Returns the same shape as extract_amount: {"display", "numeric"} or None.
+    """
+    client = _get_ai_client()
+    if client is not None and full_text and len(full_text) > 200:
+        try:
+            from amount_extractor import extract_amount_with_evidence
+            ai = extract_amount_with_evidence(client, title or "", full_text)
+        except Exception:
+            ai = None
+        if ai:
+            return {"display": ai["display"], "numeric": ai["numeric"]}
+    return extract_amount(regex_search_text, title=title)
+
+
 # Canonical link_label map for congressional committee URLs. Used by
 # derive_link_label() so the "View Source" button on each card is
 # consistently labeled across items from the same committee (previously
@@ -4153,7 +4184,11 @@ def main():
                 # etc.) and Media items never get an amount. See project
                 # memory: project_amounts_enforcement_only.
                 if action_type in ('Criminal Enforcement', 'Civil Action'):
-                    amt_info = extract_amount(search_text, title=title)
+                    # AI extractor (anchored, validated) → regex fallback.
+                    # AI picks the fraud-size specifically and won't
+                    # hallucinate; regex is still the safety net when
+                    # AI abstains or the API is unavailable locally.
+                    amt_info = extract_amount_hybrid(title, full_text, search_text)
                 else:
                     amt_info = None
 
