@@ -108,6 +108,85 @@ HEALTHCARE_TERMS = [re.compile(p, re.IGNORECASE) for p in [
     r'\bintegrity\b', r'\bloophole\b', r'skin substitute',
 ]]
 
+# Strong healthcare signals that must appear in the TITLE of a DOJ press
+# release for us to trust an item when DOJ's own topic tagger fails. This
+# is intentionally narrower than HEALTHCARE_TERMS — generic words like
+# "medical" or "patient" appear in plenty of non-HC DOJ releases (FDA
+# policy, drug-trafficking sentencings, civil-rights consent decrees),
+# so we require a term that is essentially HC-specific on its own.
+HEALTHCARE_TITLE_TERMS = [re.compile(p, re.IGNORECASE) for p in [
+    # Federal healthcare programs
+    r'medicare', r'medicaid', r'tricare', r'champva',
+    r'\bCMS\b',  # Centers for Medicare & Medicaid Services
+    # Bare "health care" / "healthcare" — nearly always HC in DOJ releases
+    # ("Health Care Software Company", "Sovereign Health Group", "health
+    # care programs", "Health Crimes", "Health Services"). A few non-HC
+    # uses exist (e.g. "public health emergency" in drug-trafficking
+    # releases) but they're swamped by true positives, and Gate 2
+    # (test_healthcare_context body check) catches leftover false positives.
+    r'\bhealth\s*care\b', r'\bhealthcare\b',
+    r'\bhealth\s+services?\b', r'\bhealth\s+group\b',
+    r'\bhealth\s+crimes?\b', r'\bhealth\s+corporation\b',
+    # Explicit HC fraud categorization — retained for robustness
+    r'medical\s+fraud', r'health\s*care\s+benefit',
+    # Healthcare statutes
+    r'false\s+claims\s+act', r'\bfalse\s+claims?\b',
+    r'anti-?kickback', r'stark\s+law',
+    r'affordable\s+care\s+act', r'\bFDCA\b',
+    # Kickback as bare noun — overwhelmingly HC/gov-contracting
+    r'\bkickback\s+(scheme|conspiracy|scheme\w*|arrangement|allegation)',
+    # Healthcare providers and settings
+    r'\bphysician', r'\bdoctor\b', r'\bnurses?\b', r'pharmacist', r'\bpharmacy\b',
+    r'pharmaceutical',
+    r'chiropract', r'dentist', r'psychiatr', r'psycholog', r'optometr',
+    r'podiatr', r'physiatr', r'therapist',
+    r'cardiolog', r'oncolog', r'gastroenterolog', r'neurolog',
+    r'radiolog', r'urolog', r'dermatolog', r'hematolog',
+    r'nephrolog', r'gynecolog', r'obstetric', r'orthoped',
+    r'\bpediatric', r'anesthesiolog', r'ophthalmolog',
+    r'\bhospital\b', r'\bclinic\b', r'hospice', r'home\s*health',
+    r'nursing\s+home', r'skilled\s+nursing', r'assisted\s+living',
+    r'adult\s+day\s*care', r'\bday\s*care\s+fraud',
+    r'health\s+system', r'medical\s+center',
+    r'\blaboratory\b', r'\bdiagnostic', r'cancer\s+institute',
+    r'pain\s+(care|management)',
+    # Healthcare services / products
+    r'prescri', r'durable\s+medical', r'\bdme\b', r'dmepos',
+    r'skin\s+substitute', r'amniotic', r'behavioral\s+health',
+    r'behavioral\s+medicine', r'wound\s+care',
+    r'substance\s+abuse', r'pill\s+mill', r'drug\s+diversion',
+    r'\bopioid', r'drug\s+test', r'\binsulin\b',
+    r'medication', r'telehealth', r'telemedicine',
+    r'genetic\s+test', r'\blab\s+test', r'blood\s+test', r'respiratory\s+test',
+    r'urine\s+drug', r'addiction\s+treatment',
+    r'psychotherapy',
+    r'mental\s+health\s+(service|treatment|fraud)',
+    r'medical\s+equipment', r'medical\s+device',
+    r'medical\s+transportation', r'medical\s+transport\b',
+    r'medical\s+billing', r'billing\s+fraud',
+    r'medical\s+software', r'medically\s+unnecessary',
+    r'breast\s+cancer', r'benefit\s+fraud',
+    r'obtain.*controlled\s+substance',
+    r'physical\s+(therap|rehabilit)',
+    r'spine\s+device', r'electrical\s+stimulation',
+    r'electroacupunctu',
+    r'\bcovid[-\s]*1?9?\s*(test|vaccin)',
+    # Healthcare practice / business nouns
+    r'medical\s+practi', r'health\s*care\s+provider',
+    r'medical\s+provider', r'medical\s+director',
+    r'home\s*health\s+(agency|provider)',
+    r'medical\s+corporation',
+]]
+
+
+def test_hc_title_signal(title):
+    """True if the title contains a term that is essentially HC-specific."""
+    for pat in HEALTHCARE_TITLE_TERMS:
+        if pat.search(title or ''):
+            return True
+    return False
+
+
 # ---------------------------------------------------------------------------
 # Feed definitions
 # ---------------------------------------------------------------------------
@@ -2805,13 +2884,19 @@ def scrape_doj_opa(session):
                 topics, rendered_body = fetch_doj_page_data(href, page=page)
                 topic_gate_passed = has_hc_topic(topics)
                 if not topic_gate_passed:
-                    # Gate 1b body-text fallback: require BOTH a
-                    # fraud/oversight keyword match AND healthcare
-                    # context in the rendered body. Stricter than the
-                    # normal trusted-source bypass so we don't pollute
-                    # the enforcement tab.
+                    # Gate 1b strict fallback: accept only when ALL three
+                    # hold — (1) title carries a healthcare-specific
+                    # signal (HEALTHCARE_TITLE_TERMS), (2) body has a
+                    # fraud/enforcement keyword, (3) body has healthcare
+                    # context. A title-level signal is required because
+                    # test_any_keyword + test_healthcare_context alone
+                    # falsely matches DOJ releases about drug
+                    # trafficking, marijuana policy, immigration consent
+                    # decrees, and charity fraud — all of which contain
+                    # generic medical vocabulary in their bodies.
                     search_text = f"{title} {rendered_body}"
-                    if not (test_any_keyword(search_text)
+                    if not (test_hc_title_signal(title)
+                            and test_any_keyword(search_text)
                             and test_healthcare_context(search_text)):
                         continue
                     kept_via_fallback += 1
@@ -2965,13 +3050,17 @@ def scrape_doj_usao(session):
                 topics, rendered_body = fetch_doj_page_data(href, page=page)
                 topic_gate_passed = has_hc_topic(topics)
                 if not topic_gate_passed:
-                    # Body-text fallback: require BOTH a fraud/oversight
-                    # keyword match AND healthcare context in the
-                    # rendered body. Stricter than the normal
-                    # trusted-source bypass so we don't pollute the
-                    # enforcement tab with off-topic USAO press releases.
+                    # Strict fallback: require ALL three — title carries
+                    # a healthcare-specific signal, body has a
+                    # fraud/enforcement keyword, body has healthcare
+                    # context. Title signal is mandatory because body
+                    # keywords + HC context alone match DOJ releases
+                    # about drug trafficking, policy, immigration, and
+                    # charity fraud that happen to mention generic
+                    # medical vocabulary.
                     search_text = f"{title} {rendered_body}"
-                    if not (test_any_keyword(search_text)
+                    if not (test_hc_title_signal(title)
+                            and test_any_keyword(search_text)
                             and test_healthcare_context(search_text)):
                         continue
                     kept_via_fallback += 1
