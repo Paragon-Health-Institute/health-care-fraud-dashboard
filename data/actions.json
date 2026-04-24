@@ -10875,13 +10875,16 @@
                 "Medicare",
                 "DME",
                 "Telehealth",
-                "Genetic Testing"
+                "Genetic Testing",
+                "Lab Testing"
             ],
             "entities": [],
             "state": "OH",
             "source_type": "official",
             "auto_fetched": true,
-            "related_agencies": []
+            "related_agencies": [
+                "HHS-OIG"
+            ]
         },
         {
             "id": "doj-2025-04-10-2956623029",
