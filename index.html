@@ -1501,13 +1501,15 @@ document.addEventListener('DOMContentLoaded', () => {
           edits for readability.
         </p>
         <p style="margin-bottom:10px;">
-          <strong>State</strong> is tagged based on (1) the U.S. Attorney's district that prosecuted the
-          case, and (2) additional states the press release body explicitly names &mdash; typically
-          defendant residence, where fraud operations took place, or the defrauded state Medicaid program.
-          State names or demonyms mentioned only in passing (for example, an investigator quoted from
-          another state's field office) don't trigger a tag without body corroboration. Nationwide
-          corporate cases are tagged with the prosecuting district only, not every state where the
-          company operated.
+          <strong>State</strong> is tagged based on two signals: (1) the U.S. Attorney's district that
+          prosecuted the case, and (2) any additional states the press release body <em>definitively</em>
+          names as part of the fraud &mdash; for example, an enumerated list of operation locations
+          (&ldquo;labs in Texas, Maryland, and Tennessee&rdquo;), a specific defrauded state Medicaid
+          program, or a defendant's residence in a different state. Illustrative &ldquo;such as&rdquo;
+          examples, state names appearing only in an investigator's quote or a state MFCU reference,
+          and generic nationwide-scope language don't trigger a tag without specific corroboration.
+          Nationwide corporate cases are tagged with the prosecuting district only, not every state
+          where the company operated.
         </p>
         <p style="margin-bottom:10px;">
           <strong>Amount</strong> aims to reflect the size of the fraud &mdash; the stated loss or scheme
