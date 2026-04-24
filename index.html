@@ -208,10 +208,16 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
 .new-badge { background: var(--blaze); color: white; font-size: 0.62rem; font-weight: 800; padding: 2px 8px; border-radius: var(--radius); text-transform: uppercase; letter-spacing: 0.07em; animation: pulse 2s infinite; font-family: 'Public Sans', sans-serif; }
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.65; } }
 .dashboard-footer { background: var(--paragon-blue); margin-top: 48px; }
+/* Mobile filter toggle button (hidden on desktop) */
+.mobile-filter-toggle { display: none; }
+
+/* View-tabs labels: full on desktop, short on mobile */
+.tab-label-short { display: none; }
+
 @media (max-width: 768px) {
   .header-title { font-size: 1.1rem; }
   .header-subtitle { display: none; }
-  .search-wrapper { flex: 0 0 100%; }
+  .search-wrapper { flex: 1 1 auto; min-width: 0; }
   .filter-select, .filter-date { min-width: 120px; }
   .last-updated-badge { display: none; }
   /* Stats card: full width, no fixed min-height, smaller padding on mobile */
@@ -222,6 +228,43 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
   /* Header stack: title + card stack vertically with smaller gap; less vertical padding */
   .dashboard-header .d-flex.flex-column { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
   .header-narrative { font-size: 0.9rem; line-height: 1.5; }
+  /* View-tabs: shorter labels on mobile to prevent overflow */
+  .tab-label-full { display: none; }
+  .tab-label-short { display: inline; }
+  /* Mobile filter collapse: hide filter selects and clear buttons by default */
+  .mobile-filter-toggle { display: inline-flex; align-items: center; flex: 0 0 auto; }
+  #enforcementFilters, #oversightFilters, #landscapeFilters {
+    flex-basis: 100%;
+  }
+  #enforcementFilters .filter-select,
+  #enforcementFilters .filter-date,
+  #enforcementFilters .btn-outline-secondary,
+  #oversightFilters .filter-select,
+  #oversightFilters .filter-date,
+  #oversightFilters .btn-outline-secondary,
+  #landscapeFilters .filter-select,
+  #landscapeFilters .filter-date,
+  #landscapeFilters .btn-outline-secondary {
+    display: none !important;
+  }
+  /* When mobile-filters-open is set on body, reveal filters */
+  body.mobile-filters-open #enforcementFilters .filter-select,
+  body.mobile-filters-open #enforcementFilters .filter-date,
+  body.mobile-filters-open #enforcementFilters .btn-outline-secondary,
+  body.mobile-filters-open #oversightFilters .filter-select,
+  body.mobile-filters-open #oversightFilters .filter-date,
+  body.mobile-filters-open #oversightFilters .btn-outline-secondary,
+  body.mobile-filters-open #landscapeFilters .filter-select,
+  body.mobile-filters-open #landscapeFilters .filter-date,
+  body.mobile-filters-open #landscapeFilters .btn-outline-secondary {
+    display: inline-block !important;
+  }
+  /* Selects expand to fill row when filters open */
+  body.mobile-filters-open .filter-select,
+  body.mobile-filters-open .filter-date {
+    flex: 1 1 calc(50% - 0.5rem);
+    min-width: 0;
+  }
 }
 .spinning { animation: spin 1s linear infinite; }
 @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
@@ -324,13 +367,13 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
   <div class="container-fluid px-4">
     <div class="d-flex" style="gap:0;">
       <button class="view-tab active" id="btnCardView" onclick="setView('cards')">
-        <i class="fa-solid fa-scale-balanced me-2"></i>Federal Enforcement Actions
+        <i class="fa-solid fa-scale-balanced me-2"></i><span class="tab-label-full">Federal Enforcement Actions</span><span class="tab-label-short">Enforcement</span>
       </button>
       <button class="view-tab" id="btnOversightView" onclick="setView('oversight')">
-        <i class="fa-solid fa-building-columns me-2"></i>Federal Oversight &amp; Accountability
+        <i class="fa-solid fa-building-columns me-2"></i><span class="tab-label-full">Federal Oversight &amp; Accountability</span><span class="tab-label-short">Oversight</span>
       </button>
       <button class="view-tab" id="btnLandscapeView" onclick="setView('landscape')">
-        <i class="fa-solid fa-newspaper me-2"></i>Media Investigations
+        <i class="fa-solid fa-newspaper me-2"></i><span class="tab-label-full">Media Investigations</span><span class="tab-label-short">Media</span>
       </button>
     </div>
     <div class="d-flex flex-wrap align-items-center gap-2 py-2">
@@ -338,6 +381,9 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
         <i class="fa-solid fa-magnifying-glass search-icon"></i>
         <input type="text" id="searchInput" class="form-control search-input" placeholder="Search actions..." oninput="currentView === 'landscape' ? filterLandscape() : currentView === 'oversight' ? applyOversightFilters() : applyFilters()" />
       </div>
+      <button class="btn btn-sm btn-outline-secondary mobile-filter-toggle" onclick="toggleMobileFilters()" aria-expanded="false">
+        <i class="fa-solid fa-sliders me-1"></i><span class="mobile-filter-toggle-label">Filters</span>
+      </button>
       <div id="enforcementFilters" class="d-flex flex-wrap align-items-center gap-2">
         <select class="form-select filter-select" id="agencyFilter" onchange="refreshCrossFilters(enforcementActions, 'agencyFilter', 'typeFilter'); applyFilters()">
           <option value="all">All Agencies</option>
@@ -838,6 +884,14 @@ function applyOversightFilters() {
   const tagSuffix = [activeProgram, activeArea].filter(Boolean).join(' + ');
   if (tagSuffix) countText += ' \u2022 ' + tagSuffix;
   countEl.textContent = countText;
+}
+
+function toggleMobileFilters() {
+  const open = document.body.classList.toggle('mobile-filters-open');
+  const btn = document.querySelector('.mobile-filter-toggle');
+  if (btn) btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  const label = document.querySelector('.mobile-filter-toggle-label');
+  if (label) label.textContent = open ? 'Hide filters' : 'Filters';
 }
 
 function clearFilters() {
