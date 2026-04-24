@@ -11059,15 +11059,15 @@
             "agency": "DOJ",
             "type": "Criminal Enforcement",
             "title": "Lancaster County Trio Pleads Guilty To Conspiracy To Commit Health Care Fraud",
-            "amount": null,
-            "amount_numeric": 0,
+            "amount": "$246,335",
+            "amount_numeric": 246335,
             "officials": [],
             "link": "https://www.justice.gov/usao-sc/pr/lancaster-county-trio-pleads-guilty-conspiracy-commit-health-care-fraud",
             "link_label": "DOJ Press Release",
             "social_posts": [],
             "tags": [
                 "Medicaid",
-                "Mental Health"
+                "Behavioral Health"
             ],
             "entities": [],
             "state": "SC",
