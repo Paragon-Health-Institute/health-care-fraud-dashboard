@@ -10579,14 +10579,15 @@
             "social_posts": [],
             "tags": [
                 "Medicare",
-                "DME",
-                "Medicaid"
+                "DME"
             ],
             "entities": [],
             "state": "TX",
             "source_type": "official",
             "auto_fetched": true,
-            "related_agencies": []
+            "related_agencies": [
+                "HHS-OIG"
+            ]
         },
         {
             "id": "doj-2025-04-28-970392459",
