@@ -4890,7 +4890,7 @@
                 "Medicare"
             ],
             "entities": [],
-            "state": null,
+            "state": "PA",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
