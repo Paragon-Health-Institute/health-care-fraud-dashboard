@@ -1440,6 +1440,52 @@ def _extract_canonical_date(soup, url, response_headers=None):
     return None
 
 
+def _extract_publication_date_from_text(text):
+    """Extract a press-release publication date from rendered body text.
+
+    Used as a fallback when structured markup extraction via
+    _extract_canonical_date() isn't available (e.g., when requests is
+    blocked by Akamai and we only have the Playwright-rendered plain
+    text). Priority order:
+
+      1. Day-of-week-prefixed date at top of body — DOJ format
+         (e.g., "Thursday, April 23, 2026" appears right after the
+         press-release title on every DOJ OPA/USAO page).
+      2. "Updated Month DD, YYYY" pattern — authoritative post-date
+         DOJ stamps at the footer.
+      3. First "Month DD, YYYY" in the first 1200 chars of body —
+         last-resort fallback. Constrained to the head of the body
+         so we don't pick up sentencing dates, incident dates, or
+         other dates that appear mid-narrative.
+
+    Returns a date string like "April 23, 2026" or "" if nothing
+    reliable was found. Caller is responsible for parsing it into
+    a canonical YYYY-MM-DD form.
+    """
+    if not text:
+        return ''
+    MONTHS = r'January|February|March|April|May|June|July|August|September|October|November|December'
+    # 1. Day-of-week prefix (DOJ's top-of-page publication date)
+    m = re.search(
+        r'(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),?\s+'
+        r'(?:' + MONTHS + r')\s+\d{1,2},?\s+\d{4}',
+        text)
+    if m:
+        inner = re.search(r'(?:' + MONTHS + r')\s+\d{1,2},?\s+\d{4}', m.group())
+        if inner:
+            return inner.group()
+    # 2. "Updated Month DD, YYYY" — DOJ footer stamp
+    m = re.search(r'Updated\s+((?:' + MONTHS + r')\s+\d{1,2},?\s+\d{4})', text)
+    if m:
+        return m.group(1)
+    # 3. Last resort: first date in the first 1200 chars of body
+    head = text[:1200]
+    m = re.search(r'(?:' + MONTHS + r')\s+\d{1,2},?\s+\d{4}', head)
+    if m:
+        return m.group()
+    return ''
+
+
 def fetch_detail_page(session, url):
     """Fetch a detail page and return (text, doj_link, canonical_title, canonical_date).
 
@@ -1840,9 +1886,7 @@ def scrape_oig(session):
                 if canonical_date:
                     date_str = canonical_date
                 if not date_str and detail_text:
-                    date_match = DATE_RE.search(detail_text)
-                    if date_match:
-                        date_str = date_match.group()
+                    date_str = _extract_publication_date_from_text(detail_text)
                 # Extract first meaningful paragraph as description (skip title echo)
                 desc = ""
                 if detail_text:
@@ -1940,11 +1984,7 @@ def scrape_cms(session):
                     # Date priority: structured markup (canonical) > body-text regex
                     date_str = _detail_date or ""
                     if not date_str and detail_text:
-                        dm = re.search(
-                            r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
-                            detail_text)
-                        if dm:
-                            date_str = dm.group()
+                        date_str = _extract_publication_date_from_text(detail_text)
                     desc = ""
                     if detail_text:
                         cleaned = detail_text
@@ -2003,11 +2043,7 @@ def scrape_cms(session):
                 # Structured date first, body-text regex as fallback
                 date_str = canonical_date or ""
                 if not date_str and detail_text:
-                    dm = re.search(
-                        r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
-                        detail_text)
-                    if dm:
-                        date_str = dm.group()
+                    date_str = _extract_publication_date_from_text(detail_text)
                 desc = ""
                 if detail_text:
                     cleaned = detail_text
@@ -2942,11 +2978,7 @@ def scrape_doj_opa(session):
                 if canonical_title:
                     title = canonical_title
                 if not date_str and detail_text:
-                    dm = re.search(
-                        r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
-                        detail_text)
-                    if dm:
-                        date_str = dm.group()
+                    date_str = _extract_publication_date_from_text(detail_text)
                 desc = ""
                 if detail_text:
                     cleaned = detail_text
@@ -3111,11 +3143,7 @@ def scrape_doj_usao(session):
                 if _detail_title:
                     title = _detail_title
                 if not date_str and detail_text:
-                    dm = re.search(
-                        r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
-                        detail_text)
-                    if dm:
-                        date_str = dm.group()
+                    date_str = _extract_publication_date_from_text(detail_text)
                 desc = ""
                 if detail_text:
                     cleaned = detail_text
@@ -3818,12 +3846,7 @@ def scrape_fincen(session):
             # Structured date from detail page first, body-text regex fallback
             date_str = _detail_date or ""
             if not date_str and detail_text:
-                date_match = re.search(
-                    r'(January|February|March|April|May|June|July|August|'
-                    r'September|October|November|December)\s+\d{1,2},?\s+\d{4}',
-                    detail_text)
-                if date_match:
-                    date_str = date_match.group()
+                date_str = _extract_publication_date_from_text(detail_text)
             desc = ""
             if detail_text:
                 cleaned = detail_text
