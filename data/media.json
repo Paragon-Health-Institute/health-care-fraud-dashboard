@@ -1,9 +1,27 @@
 {
   "metadata": {
-    "last_updated": "2026-04-23T10:13:58.437258",
+    "last_updated": "2026-04-24T10:15:36.569306",
     "version": "1.0"
   },
   "stories": [
+    {
+      "id": "media-2026-04-22-490260431",
+      "date": "2026-04-22",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "Listen: What Our 2-Year-Long Investigation Into Medical Debt Reveals",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://kffhealthnews.org/health-care-costs/listen-sunday-story-npr-medical-debt-investigation-series/",
+      "link_label": "KFF Health News Report",
+      "social_posts": [],
+      "tags": [],
+      "state": "",
+      "source_type": "news",
+      "auto_fetched": true,
+      "entities": []
+    },
     {
       "id": "media-2026-04-21-793179376",
       "date": "2026-04-21",
