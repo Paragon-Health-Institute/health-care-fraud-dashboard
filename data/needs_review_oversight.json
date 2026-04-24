@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-04-23T10:02:01.227773",
+    "last_scraped": "2026-04-24T09:58:56.506325",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -184,6 +184,7 @@
     "https://energycommerce.house.gov/posts/house-passes-energy-and-commerce-resolution-to-recognize-the-importance-of-protecting-rural-communities-across-america",
     "http://www.finance.senate.gov/chairmans-news/crapo-statement-at-hearing-on-fy2027-hhs-budget",
     "http://www.finance.senate.gov/ranking-members-news/wyden-finance-committee-hearing-statement-slamming-trump-and-rfk-jrs-disastrous-health-care-agenda",
-    "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-delivers-remarks-during-hearing-with-secretary-kennedy-on-hhs-budget"
+    "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-delivers-remarks-during-hearing-with-secretary-kennedy-on-hhs-budget",
+    "https://www.cms.gov/newsroom/press-releases/cms-fda-announce-rapid-coverage-pathway-accelerate-patient-access-life-changing-medical-devices"
   ]
 }
