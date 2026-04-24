@@ -15878,28 +15878,6 @@
             "related_agencies": [
                 "HHS-OIG"
             ]
-        },
-        {
-            "id": "doj-2026-07-14-2467588594",
-            "date": "2026-04-23",
-            "agency": "DOJ",
-            "type": "Criminal Enforcement",
-            "title": "Healthcare Worker at Detention Facilities Pleads Guilty to Fraud",
-            "amount": "$1.59 million",
-            "amount_numeric": 1590000.0,
-            "officials": [],
-            "link": "https://www.justice.gov/usao-sdca/pr/healthcare-worker-detention-facilities-pleads-guilty-fraud",
-            "link_label": "DOJ Press Release",
-            "social_posts": [],
-            "tags": [],
-            "entities": [],
-            "state": "CA",
-            "source_type": "official",
-            "auto_fetched": true,
-            "related_agencies": [],
-            "doj_topics": [
-                "Financial Fraud"
-            ]
         }
     ]
 }
