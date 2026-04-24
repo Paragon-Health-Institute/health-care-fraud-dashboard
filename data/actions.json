@@ -10911,29 +10911,6 @@
             ]
         },
         {
-            "id": "doj-2025-04-09-2705052873",
-            "date": "2025-04-09",
-            "agency": "DOJ",
-            "type": "Criminal Enforcement",
-            "title": "Attorney General Jeff Jackson Announces Health Care Fraud And Money Laundering Guilty Plea",
-            "amount": "$6 Million",
-            "amount_numeric": 6000000.0,
-            "officials": [],
-            "link": "https://oig.hhs.gov/fraud/enforcement/attorney-general-jeff-jackson-announces-health-care-fraud-and-money-laundering-guilty-plea/",
-            "link_label": "HHS-OIG Press Release",
-            "social_posts": [],
-            "tags": [
-                "Medicaid"
-            ],
-            "entities": [],
-            "state": "MS",
-            "source_type": "official",
-            "auto_fetched": true,
-            "related_agencies": [
-                "HHS-OIG"
-            ]
-        },
-        {
             "id": "doj-2025-04-09-4144929312",
             "date": "2025-04-09",
             "agency": "DOJ",
