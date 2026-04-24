@@ -10266,14 +10266,15 @@
             "link_label": "DOJ Press Release",
             "social_posts": [],
             "tags": [
-                "Medical Devices",
-                "Medicare"
+                "Medical Devices"
             ],
             "entities": [],
             "state": "MA",
             "source_type": "official",
             "auto_fetched": true,
-            "related_agencies": []
+            "related_agencies": [
+                "HHS-OIG"
+            ]
         },
         {
             "id": "doj-2025-05-16-2637975628",
