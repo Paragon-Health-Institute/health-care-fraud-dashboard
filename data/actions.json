@@ -10964,27 +10964,6 @@
             ]
         },
         {
-            "id": "doj-2025-04-04-1407840511",
-            "date": "2025-04-04",
-            "agency": "DOJ",
-            "type": "Criminal Enforcement",
-            "title": "Former Traveling Nurse Sentenced To Prison For Tampering With Morphine",
-            "amount": null,
-            "amount_numeric": 0,
-            "officials": [],
-            "link": "https://www.justice.gov/usao-ma/pr/former-traveling-nurse-sentenced-prison-tampering-morphine",
-            "link_label": "DOJ Press Release",
-            "social_posts": [],
-            "tags": [
-                "Lab Testing"
-            ],
-            "entities": [],
-            "state": "MA",
-            "source_type": "official",
-            "auto_fetched": true,
-            "related_agencies": []
-        },
-        {
             "id": "doj-2025-04-04-2219586018",
             "date": "2025-04-04",
             "agency": "DOJ",
