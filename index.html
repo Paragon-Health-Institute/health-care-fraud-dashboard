@@ -1500,6 +1500,34 @@ document.addEventListener('DOMContentLoaded', () => {
           press-release headline (or, for media, the article headline) verbatim, with occasional manual
           edits for readability.
         </p>
+        <p style="margin-bottom:10px;">
+          <strong>State</strong> is tagged based on (1) the U.S. Attorney's district that prosecuted the
+          case, and (2) additional states the press release body explicitly names &mdash; typically
+          defendant residence, where fraud operations took place, or the defrauded state Medicaid program.
+          State names or demonyms mentioned only in passing (for example, an investigator quoted from
+          another state's field office) don't trigger a tag without body corroboration. Nationwide
+          corporate cases are tagged with the prosecuting district only, not every state where the
+          company operated.
+        </p>
+        <p style="margin-bottom:10px;">
+          <strong>Amount</strong> aims to reflect the size of the fraud &mdash; the stated loss or scheme
+          size when the press release names one, else the settlement, judgment, restitution, or forfeiture
+          amount. Statutory maximum fines and ability-to-pay-adjusted criminal penalties are excluded.
+          On oversight-tab items (audits, rules, hearings, reports) no dollar amount is stored, since the
+          item isn't a prosecution.
+        </p>
+        <p style="margin-bottom:10px;">
+          <strong>Tags</strong> are limited to a curated allowlist of programs (Medicare, Medicaid, TRICARE,
+          ACA, etc.) and vulnerable service areas (Hospice, Home Health, DME, Lab Testing, Genetic Testing,
+          Opioids, Nursing Home, and similar). The AI extractor must cite a verbatim source phrase for
+          each tag; if the body doesn't support it, the tag is dropped.
+        </p>
+        <p style="margin-bottom:10px;">
+          <strong>Action type</strong> (Criminal Enforcement, Civil Action, Audit, Investigation,
+          Rule/Regulation, Hearing, Report, etc.) determines which tab the item appears on. Criminal
+          Enforcement and Civil Action go to the Federal Enforcement tab; everything else goes to
+          Federal Oversight &amp; Accountability.
+        </p>
 
         <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:16px 0 8px;">Accuracy and corrections</div>
         <p style="margin-bottom:0;font-size:0.85rem;color:#303030;">
