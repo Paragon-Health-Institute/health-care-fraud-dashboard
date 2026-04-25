@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-25T08:15:37.232394",
+    "last_updated": "2026-04-25T09:15:19.015902",
     "version": "1.0",
     "last_scraped": "2026-04-25T08:15:37.232385"
   },
@@ -15915,6 +15915,25 @@
       "doj_topics": [
         "Health Care Fraud"
       ]
+    },
+    {
+      "id": "congress-2026-04-24-4163640387",
+      "date": "2026-04-24",
+      "agency": "Congress",
+      "type": "Legislation",
+      "title": "Comer Announces Full Committee Markup of Legislation to Protect Taxpayer Dollars and Root Out Rampant Fraud in Federal Programs - United States House Committee on Oversight and Government Reform",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oversight.house.gov/release/comer-announces-full-committee-markup-of-legislation-to-protect-taxpayer-dollars-and-root-out-rampant-fraud-in-federal-programs/",
+      "link_label": "House Oversight Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
