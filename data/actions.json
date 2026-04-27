@@ -11859,7 +11859,7 @@
                 "Long-Term Care"
             ],
             "entities": [],
-            "state": "MA",
+            "state": "MA, CT, NY",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
