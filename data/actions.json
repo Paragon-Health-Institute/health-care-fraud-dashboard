@@ -5095,8 +5095,8 @@
             "agency": "DOJ",
             "type": "Criminal Enforcement",
             "title": "Woman Sentenced for Fraud Scheme Involving Claims for Unnecessary Respiratory Tests Submitted with COVID-19 Tests",
-            "amount": null,
-            "amount_numeric": 0,
+            "amount": "$369 Million",
+            "amount_numeric": 369000000,
             "officials": [],
             "link": "https://www.justice.gov/opa/pr/woman-sentenced-fraud-scheme-involving-claims-unnecessary-respiratory-tests-submitted-covid",
             "link_label": "DOJ Press Release",
@@ -5104,7 +5104,8 @@
             "tags": [
                 "Assisted Living",
                 "Medicare",
-                "Lab Testing"
+                "Lab Testing",
+                "Nursing Home"
             ],
             "entities": [],
             "state": "CA",
