@@ -11772,8 +11772,8 @@
             "agency": "DOJ",
             "type": "Criminal Enforcement",
             "title": "Owner of Oahu Physical Therapy Clinic Sentenced to 9 Months in Federal Prison for Health Care Fraud",
-            "amount": null,
-            "amount_numeric": 0,
+            "amount": "$392,157",
+            "amount_numeric": 392157,
             "officials": [],
             "link": "https://www.justice.gov/usao-hi/pr/owner-oahu-physical-therapy-clinic-sentenced-9-months-federal-prison-health-care-fraud",
             "link_label": "DOJ Press Release",
@@ -11787,7 +11787,9 @@
             "state": "HI",
             "source_type": "official",
             "auto_fetched": true,
-            "related_agencies": []
+            "related_agencies": [
+                "HHS-OIG"
+            ]
         },
         {
             "id": "doj-2025-02-28-3215621622",
