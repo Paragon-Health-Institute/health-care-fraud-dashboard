@@ -12018,8 +12018,8 @@
             "agency": "DOJ",
             "type": "Criminal Enforcement",
             "title": "Columbia Physician Pleads Guilty to False Statements to Medicare",
-            "amount": null,
-            "amount_numeric": 0,
+            "amount": "$1.6 Million",
+            "amount_numeric": 1606408,
             "officials": [],
             "link": "https://www.justice.gov/usao-wdmo/pr/columbia-physician-pleads-guilty-false-statements-medicare",
             "link_label": "DOJ Press Release",
@@ -12035,7 +12035,9 @@
             "state": "MO",
             "source_type": "official",
             "auto_fetched": true,
-            "related_agencies": []
+            "related_agencies": [
+                "HHS-OIG"
+            ]
         },
         {
             "id": "doj-2025-02-19-691144230",
