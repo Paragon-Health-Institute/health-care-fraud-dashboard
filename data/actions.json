@@ -12186,14 +12186,15 @@
             "agency": "DOJ",
             "type": "Criminal Enforcement",
             "title": "Waterford Woman Sentenced to 2 Years in Prison for Stealing from Addiction and Mental Health Services Nonprofit",
-            "amount": null,
-            "amount_numeric": 0,
+            "amount": "$397,065",
+            "amount_numeric": 397065,
             "officials": [],
             "link": "https://www.justice.gov/usao-ct/pr/waterford-woman-sentenced-2-years-prison-stealing-addiction-and-mental-health-services",
             "link_label": "DOJ Press Release",
             "social_posts": [],
             "tags": [
-                "Mental Health"
+                "Mental Health",
+                "Addiction Treatment"
             ],
             "entities": [],
             "state": "CT",
