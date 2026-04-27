@@ -12093,16 +12093,15 @@
             "agency": "DOJ",
             "type": "Civil Action",
             "title": "Pharmacy LLC Agrees To Resolve False Claims Act Allegations Of Billing For Drugs Not Dispensed",
-            "amount": null,
-            "amount_numeric": 0,
+            "amount": "$350,000",
+            "amount_numeric": 350000,
             "officials": [],
             "link": "https://www.justice.gov/usao-nj/pr/pharmacy-llc-agrees-resolve-false-claims-act-allegations-billing-drugs-not-dispensed",
             "link_label": "DOJ Press Release",
             "social_posts": [],
             "tags": [
                 "Pharmacy",
-                "Medicare",
-                "Opioids"
+                "Medicare"
             ],
             "entities": [],
             "state": "NJ",
