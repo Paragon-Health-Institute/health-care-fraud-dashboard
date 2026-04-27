@@ -12570,7 +12570,9 @@
             "state": "KY",
             "source_type": "official",
             "auto_fetched": true,
-            "related_agencies": []
+            "related_agencies": [
+                "HHS-OIG"
+            ]
         },
         {
             "id": "doj-2025-01-02-2804233657",
