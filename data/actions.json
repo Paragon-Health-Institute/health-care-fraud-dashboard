@@ -11698,8 +11698,8 @@
             "agency": "DOJ",
             "type": "Criminal Enforcement",
             "title": "Addiction Treatment Center Supervisor Sentenced in Scheme to Defraud Federal, State, and Private Health Care Insurers",
-            "amount": null,
-            "amount_numeric": 0,
+            "amount": "$3.5 Million",
+            "amount_numeric": 3500000,
             "officials": [],
             "link": "https://www.justice.gov/usao-ri/pr/addiction-treatment-center-supervisor-sentenced-scheme-defraud-federal-state-and-private",
             "link_label": "DOJ Press Release",
@@ -11711,7 +11711,7 @@
                 "Mental Health"
             ],
             "entities": [],
-            "state": "RI",
+            "state": "RI, MA",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
