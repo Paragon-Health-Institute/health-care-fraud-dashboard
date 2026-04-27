@@ -12126,10 +12126,12 @@
                 "DME"
             ],
             "entities": [],
-            "state": "NC",
+            "state": "NC, FL",
             "source_type": "official",
             "auto_fetched": true,
-            "related_agencies": []
+            "related_agencies": [
+                "HHS-OIG"
+            ]
         },
         {
             "id": "doj-2025-02-03-3874049456",
