@@ -35,13 +35,15 @@ SYSTEM_PROMPT = """You are a strict dollar-amount extractor for a healthcare fra
 
 In order of preference (highest first):
 
-1. **Stated loss / scheme size** — money the government actually paid, false claims submitted, or scheme total. Phrases like "Medicare paid $X," "submitted over $X in false claims," "caused a loss of $X to Medicare," "fraudulent scheme totaling $X."
+1. **Scheme size** — total false claims submitted or total size of the fraudulent scheme. Phrases like "submitted over $X in false claims," "fraudulent scheme totaling $X," "$X kickback scheme," "billed Medicare for over $X." This is usually the headline figure and is preferred over stated loss when both appear.
 
-2. **Civil FCA settlement or judgment** — e.g., "agreed to pay $X to resolve," "$X judgment," "pay $X million to settle False Claims Act allegations."
+2. **Stated loss** — money the government actually paid as a result of the fraud. Phrases like "Medicare paid $X," "caused a loss of $X to Medicare," "resulted in $X in losses." Use this only when no scheme-size figure is named.
 
-3. **Restitution ordered** — "ordered to pay $X in restitution."
+3. **Civil FCA settlement or judgment** — e.g., "agreed to pay $X to resolve," "$X judgment," "pay $X million to settle False Claims Act allegations."
 
-4. **Forfeiture of proceeds of the fraud** — "forfeit $X traceable to the offense."
+4. **Restitution ordered** — "ordered to pay $X in restitution."
+
+5. **Forfeiture of proceeds of the fraud** — "forfeit $X traceable to the offense."
 
 ## WHAT TO EXCLUDE (return null instead)
 
@@ -56,12 +58,12 @@ If the press release is only a charge/indictment announcement without any dollar
 
 Return ONLY a single JSON object, no markdown fences:
 
-{"amount_numeric": 525520, "display": "$525,520", "kind": "stated_loss", "evidence": "the government presented evidence that Rossi is responsible for a total combined loss of $525,520.61"}
+{"amount_numeric": 525520, "display": "$525,520", "kind": "scheme_size", "evidence": "the government presented evidence that Rossi is responsible for a total combined loss of $525,520.61"}
 
 Where:
 - `amount_numeric`: integer or float, dollars (e.g., 525520 for $525,520; 135600000 for $135.6 million; 80000000 for $80 million)
 - `display`: short human-readable string ($525,520 / $1.43 Million / $135.6 Million / $80 Million). Use "Million" suffix for >= $1,000,000, "Billion" for >= $1,000,000,000, and a comma-formatted dollar figure otherwise.
-- `kind`: one of "stated_loss", "settlement", "judgment", "restitution", "forfeiture"
+- `kind`: one of "scheme_size", "stated_loss", "settlement", "judgment", "restitution", "forfeiture"
 - `evidence`: a verbatim phrase (12+ words) copied EXACTLY from the source text that contains the dollar figure. Must include the actual dollar amount as written in the source.
 
 If no suitable fraud-size amount is named in the source, return exactly:
