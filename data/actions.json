@@ -11872,8 +11872,8 @@
             "agency": "DOJ",
             "type": "Criminal Enforcement",
             "title": "Danville Woman Pleads Guilty to Health Care Fraud",
-            "amount": null,
-            "amount_numeric": 0,
+            "amount": "$116,536",
+            "amount_numeric": 116536,
             "officials": [],
             "link": "https://www.justice.gov/usao-wdva/pr/danville-woman-pleads-guilty-health-care-fraud",
             "link_label": "DOJ Press Release",
@@ -11887,7 +11887,9 @@
             "state": "VA",
             "source_type": "official",
             "auto_fetched": true,
-            "related_agencies": []
+            "related_agencies": [
+                "HHS-OIG"
+            ]
         },
         {
             "id": "doj-2025-02-24-1543100463",
