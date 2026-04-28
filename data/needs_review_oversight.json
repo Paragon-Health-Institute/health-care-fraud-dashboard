@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-04-27T10:30:18.920700",
+    "last_scraped": "2026-04-28T10:28:48.863771",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -185,6 +185,7 @@
     "http://www.finance.senate.gov/chairmans-news/crapo-statement-at-hearing-on-fy2027-hhs-budget",
     "http://www.finance.senate.gov/ranking-members-news/wyden-finance-committee-hearing-statement-slamming-trump-and-rfk-jrs-disastrous-health-care-agenda",
     "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-delivers-remarks-during-hearing-with-secretary-kennedy-on-hhs-budget",
-    "https://www.cms.gov/newsroom/press-releases/cms-fda-announce-rapid-coverage-pathway-accelerate-patient-access-life-changing-medical-devices"
+    "https://www.cms.gov/newsroom/press-releases/cms-fda-announce-rapid-coverage-pathway-accelerate-patient-access-life-changing-medical-devices",
+    "https://www.gao.gov/products/gao-26-108694"
   ]
 }

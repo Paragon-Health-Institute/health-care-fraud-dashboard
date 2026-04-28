@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-25T09:15:19.015902",
+    "last_updated": "2026-04-28T10:28:49.016795",
     "version": "1.0",
     "last_scraped": "2026-04-28T09:38:04.290380"
   },
@@ -15915,6 +15915,30 @@
       "doj_topics": [
         "Health Care Fraud"
       ]
+    },
+    {
+      "id": "congress-2026-04-27-536239460",
+      "date": "2026-04-27",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "Seven Key Moments: Hearing on Medicare Fraud - Ways and Means",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://waysandmeans.house.gov/2026/04/27/seven-key-moments-hearing-on-medicare-fraud/",
+      "link_label": "House Ways & Means Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Hospice",
+        "Nursing Home",
+        "Physical Therapy"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
