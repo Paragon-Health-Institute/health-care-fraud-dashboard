@@ -1,6 +1,6 @@
 # Scraping Coverage Report
 
-*Auto-generated 2026-04-27 12:59 UTC from `build_scraping_report.py`. Source of truth is live code + data; to edit narrative sections, edit `_scraping_report_template.md`. Feed list, scraper descriptions, and coverage counts are regenerated from `update.py`, `.github/workflows/*.yml`, and `data/actions.json`.*
+*Auto-generated 2026-04-28 13:08 UTC from `build_scraping_report.py`. Source of truth is live code + data; to edit narrative sections, edit `_scraping_report_template.md`. Feed list, scraper descriptions, and coverage counts are regenerated from `update.py`, `.github/workflows/*.yml`, and `data/actions.json`.*
 
 Summary: 23 configured feeds, 18 scrape_* functions.
 
@@ -284,10 +284,10 @@ Items are deduped against existing `actions.json` by:
 
 | Source | Items |
 |---|---|
-| DOJ | 530 |
+| DOJ | 529 |
 | HHS-OIG | 58 |
 | CMS | 31 |
-| Congress | 27 |
+| Congress | 28 |
 | GAO | 6 |
 | White House | 5 |
 | MACPAC | 4 |
