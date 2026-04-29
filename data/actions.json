@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-29T09:30:26.880785",
+    "last_updated": "2026-04-29T14:40:54.187838",
     "version": "1.0",
     "last_scraped": "2026-04-29T09:30:26.880776"
   },
@@ -15962,6 +15962,29 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "cms-2026-04-28-mehmet-oz-pledges-hospice-fraud-investigations-texas",
+      "date": "2026-04-28",
+      "agency": "CMS",
+      "type": "Investigation",
+      "title": "Mehmet Oz pledges hospice fraud investigations in Texas",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.washingtonexaminer.com/policy/healthcare/4546538/mehmet-oz-pledges-hospice-fraud-investigations-texas/",
+      "link_label": "Washington Examiner",
+      "social_posts": [],
+      "tags": [
+        "Hospice",
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "TX",
+      "source_type": "news",
+      "auto_fetched": false,
+      "related_agencies": []
     }
   ]
 }
