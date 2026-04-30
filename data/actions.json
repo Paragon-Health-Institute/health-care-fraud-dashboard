@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-30T09:32:59.822855",
+    "last_updated": "2026-04-30T10:23:51.521949",
     "version": "1.0",
     "last_scraped": "2026-04-30T09:32:59.822840"
   },
@@ -16033,6 +16033,28 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "hhs-oig-2026-04-23-857865370",
+      "date": "2026-04-23",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "CMS Could Strengthen Medicare Program Safeguards To Prevent and Detect Potentially Improper Payments for Virtual Check-in and E-visit Services",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/cms-could-strengthen-medicare-program-safeguards-to-prevent-and-detect-potentially-improper-payments-for-virtual-check-in-and-e-visit-services/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }

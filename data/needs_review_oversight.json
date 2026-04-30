@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-04-29T10:22:28.269282",
+    "last_scraped": "2026-04-30T10:23:51.355435",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -188,6 +188,9 @@
     "https://www.cms.gov/newsroom/press-releases/cms-fda-announce-rapid-coverage-pathway-accelerate-patient-access-life-changing-medical-devices",
     "https://www.gao.gov/products/gao-26-108694",
     "https://www.gao.gov/products/gao-26-108131",
-    "https://waysandmeans.house.gov/2026/04/28/what-they-are-saying-historic-bipartisan-reforms-support-long-term-success-for-transition-age-foster-youth/"
+    "https://waysandmeans.house.gov/2026/04/28/what-they-are-saying-historic-bipartisan-reforms-support-long-term-success-for-transition-age-foster-youth/",
+    "https://www.cms.gov/newsroom/news-alert/cms-extends-deadlines-generous-model-applications-drug-manufacturers-states",
+    "https://www.gao.gov/products/gao-26-108139",
+    "https://energycommerce.house.gov/posts/health-subcommittee-holds-legislative-hearing-on-policies-to-strengthen-fda-food-regulation"
   ]
 }
