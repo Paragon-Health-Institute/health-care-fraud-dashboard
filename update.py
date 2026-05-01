@@ -620,6 +620,13 @@ def get_action_type(title, desc, agency=None, link=None):
         return 'Rule/Regulation'
     if re.search(r'\b(task force|strike force|division|unit) (created|formed|launched|announced)\b', title_l):
         return 'Structural/Organizational'
+    # Reverse word order: "{Division/Unit} launches strike force",
+    # "Department forms task force", "DOJ creates new unit"
+    if re.search(r'\b(launch(es|ed|ing)?|form(s|ed|ing)?|create(s|d)?|'
+                 r'establish(es|ed|ing)?|announc(es|ed|ing)?|unveil(s|ed)?)\s+'
+                 r'(a |an |the |new )*(task force|strike force|division|unit|'
+                 r'office|task\s+team|enforcement\s+team)\b', title_l):
+        return 'Structural/Organizational'
     if re.search(r'\b(launches? (an? )?investigation|opens? (an? )?investigation|'
                  r'fact.?find(ing)?|sends?.*(letter|inquiry))\b', title_l):
         return 'Investigation'
@@ -838,10 +845,14 @@ def get_state(text, title=None, link=None, item_type=None):
 
     See `state_tag_meaning_tbd.md` for the design discussion.
     """
-    # Path 0: national-scope short-circuit (title OR body)
+    # Path 0: national-scope short-circuit (title-based only).
+    # Body-based national guard runs LATER (Path 0b, before body fallback)
+    # so that a title that explicitly enumerates specific states still
+    # produces a result even when the body contains incidental
+    # "nationally"/"nationwide"/"across the country" context (e.g., a
+    # regional strike-force announcement that mentions DOJ's broader
+    # nationwide enforcement effort).
     if title and _NATIONAL_TITLE_RE.search(title):
-        return None
-    if text and _NATIONAL_BODY_RE.search(text):
         return None
 
     states = []  # ordered, deduped
@@ -929,6 +940,16 @@ def get_state(text, title=None, link=None, item_type=None):
 
     if states:
         return ", ".join(states)
+
+    # Path 0b: body-based national-scope guard. Now that we've exhausted
+    # title-based paths without finding a state, fall through to body
+    # fallback only if the body doesn't read as nationwide. Items where
+    # the body says "nationwide/nationally/across the country/multi-state
+    # scheme/government-wide/cross-agency" with no specific state in the
+    # title shouldn't get tagged with a single state from incidental
+    # body mentions.
+    if text and _NATIONAL_BODY_RE.search(text):
+        return None
 
     # Path 6: body-text fallback (longest name wins). SKIPPED for
     # policy/hearing/report item types because these get false-positive
