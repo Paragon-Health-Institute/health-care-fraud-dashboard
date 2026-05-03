@@ -1649,6 +1649,50 @@ def fetch_detail_page(session, url):
                     break
             return (re.sub(r'\s+', ' ', main.get_text(' ', strip=True)),
                     doj_link, canonical_title, canonical_date)
+        # No main content found via requests. For Akamai-protected hosts
+        # (justice.gov press releases), the requests response is a
+        # blocking-page stub with no article meta and no body. Fall back
+        # to Playwright so we can read article:published_time and the
+        # rendered body from the real DOM.
+        if (not main) and HAS_PLAYWRIGHT and 'justice.gov' in url.lower():
+            try:
+                pw_soup = scrape_page_with_browser(url)
+                if pw_soup is not None:
+                    # Re-extract title (only if requests didn't get one)
+                    if not canonical_title:
+                        og = pw_soup.find('meta', attrs={'property': 'og:title'})
+                        if og and og.get('content'):
+                            cand = normalize_page_title(og['content'])
+                            if not _looks_like_bad_title(cand):
+                                canonical_title = cand
+                        if not canonical_title:
+                            h1 = pw_soup.find('h1')
+                            if h1:
+                                cand = normalize_page_title(h1.get_text(strip=True))
+                                if not _looks_like_bad_title(cand):
+                                    canonical_title = cand
+                    # Re-extract canonical date — the entire reason for
+                    # the fallback. Akamai's stub page has no
+                    # article:published_time meta; the rendered DOM does.
+                    if not canonical_date:
+                        canonical_date = _extract_canonical_date(pw_soup, url)
+                    # Re-extract DOJ link if not already found
+                    if not doj_link:
+                        for a_tag in pw_soup.find_all('a', href=True):
+                            if 'justice.gov' in a_tag['href'] and '/pr/' in a_tag['href']:
+                                doj_link = a_tag['href']
+                                break
+                    # Re-extract body
+                    pw_main = (pw_soup.find('main') or pw_soup.find('article') or
+                               pw_soup.find('div', class_='field-item') or
+                               pw_soup.find('div', class_='entry-content'))
+                    if pw_main:
+                        for t in pw_main.find_all(['nav','footer','aside','script','style']):
+                            t.decompose()
+                        body_text = re.sub(r'\s+', ' ', pw_main.get_text(' ', strip=True))
+                        return body_text, doj_link, canonical_title, canonical_date
+            except Exception as e:
+                log(f"    Playwright fallback failed for {url}: {e}")
         return "", doj_link, canonical_title, canonical_date
     except Exception as e:
         log(f"    Detail fetch failed for {url}: {e}")
