@@ -1644,6 +1644,50 @@ def _extract_publication_date_from_text(text):
     return ''
 
 
+_RELATED_SIDEBAR_CLASS_RE = re.compile(
+    r"(?:^|\s)(related-content|related-press|related-stor|"
+    r"views-blockrelated|more-news|more-press|"
+    r"you-may-also-like|further-reading|recommend)",
+    re.I,
+)
+_SOCIAL_SHARE_CLASS_RE = re.compile(r"social-share|share-links", re.I)
+_RELATED_HEADING_TEXT_RE = re.compile(
+    r"^\s*(related\s+(releases|press\s+releases|content|"
+    r"stor(y|ies)|articles?)|more\s+(news|press|from))\b",
+    re.I,
+)
+
+
+def _strip_related_sidebars(soup_main):
+    """Decompose related-press-release sidebars and social-share blocks
+    in-place. Used by both the requests path and the Playwright fallback
+    in fetch_detail_page so that sidebar content (which often contains
+    unrelated press release titles, dollar figures, and topic keywords)
+    doesn't leak into downstream tag/amount/HC-context extraction.
+
+    Class-based: 'related-content', 'views-blockrelated', etc.
+    Heading-based: 'Related Releases', 'Related Press Releases',
+    'Related Articles', 'More News' — sibling decompose after heading."""
+    if soup_main is None:
+        return
+    for tag in soup_main.find_all(class_=_RELATED_SIDEBAR_CLASS_RE):
+        tag.decompose()
+    for tag in soup_main.find_all(class_=_SOCIAL_SHARE_CLASS_RE):
+        tag.decompose()
+    for h in soup_main.find_all(["h2", "h3", "h4"]):
+        if _RELATED_HEADING_TEXT_RE.match(h.get_text(" ", strip=True) or ""):
+            sib = h.find_next_sibling()
+            h.decompose()
+            while sib is not None:
+                nxt = sib.find_next_sibling()
+                try:
+                    sib.decompose()
+                except Exception:
+                    pass
+                sib = nxt
+            break
+
+
 def fetch_detail_page(session, url):
     """Fetch a detail page and return (text, doj_link, canonical_title, canonical_date).
 
@@ -1737,38 +1781,7 @@ def fetch_detail_page(session, url):
             # that embed unrelated case titles (which drive tag-extraction
             # false positives like ACA being tagged on a Medicare DME
             # case because the sidebar links to an ACA case).
-            related_re = re.compile(
-                r"(?:^|\s)(related-content|related-press|related-stor|"
-                r"views-blockrelated|more-news|more-press|"
-                r"you-may-also-like|further-reading|recommend)",
-                re.I,
-            )
-            for tag in main.find_all(class_=related_re):
-                tag.decompose()
-            for tag in main.find_all(class_=re.compile(
-                    r"social-share|share-links", re.I)):
-                tag.decompose()
-            # Heading-text-based related-sidebar strip: CMS and some other
-            # agencies render "Related Releases" / "Related Press Releases"
-            # as a heading rather than via a class hook. Decompose the
-            # heading and every sibling after it so the sidebar's
-            # unrelated press-release titles can't leak into tag extraction.
-            _related_heading_re = re.compile(
-                r"^\s*(related\s+(releases|press\s+releases|content|"
-                r"stor(y|ies)|articles?)|more\s+(news|press|from))\b",
-                re.I,
-            )
-            for h in main.find_all(["h2", "h3", "h4"]):
-                if _related_heading_re.match(h.get_text(" ", strip=True) or ""):
-                    # remove this heading and all following siblings
-                    sib = h.find_next_sibling()
-                    h.decompose()
-                    while sib is not None:
-                        nxt = sib.find_next_sibling()
-                        try: sib.decompose()
-                        except Exception: pass
-                        sib = nxt
-                    break
+            _strip_related_sidebars(main)
             return (re.sub(r'\s+', ' ', main.get_text(' ', strip=True)),
                     doj_link, canonical_title, canonical_date)
         # No main content found via requests. For Akamai-protected hosts
@@ -1811,6 +1824,12 @@ def fetch_detail_page(session, url):
                     if pw_main:
                         for t in pw_main.find_all(['nav','footer','aside','script','style']):
                             t.decompose()
+                        # Strip related-press-release sidebars same as
+                        # the requests path. Without this, sidebar
+                        # content (unrelated case titles, dollar
+                        # figures, topic keywords) leaks into HC-context
+                        # and tag/amount extraction.
+                        _strip_related_sidebars(pw_main)
                         body_text = re.sub(r'\s+', ' ', pw_main.get_text(' ', strip=True))
                         return body_text, doj_link, canonical_title, canonical_date
             except Exception as e:
