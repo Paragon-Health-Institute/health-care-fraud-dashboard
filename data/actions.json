@@ -16336,30 +16336,6 @@
       "related_agencies": []
     },
     {
-      "id": "doj-2026-05-06-2491917549",
-      "date": "2026-05-06",
-      "agency": "DOJ",
-      "type": "Civil Action",
-      "title": "DISH Wireless LLC to Pay More than $17M to Resolve False Claims Act and Administrative Allegations Related to FCC’s Broadband Benefits Programs",
-      "amount": "$17 Million",
-      "amount_numeric": 17000000.0,
-      "officials": [],
-      "link": "https://www.justice.gov/opa/pr/dish-wireless-llc-pay-more-17m-resolve-false-claims-act-and-administrative-allegations",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicaid"
-      ],
-      "entities": [],
-      "state": "DC",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "doj_topics": [
-        "False Claims Act"
-      ]
-    },
-    {
       "id": "doj-2026-05-06-4145232598",
       "date": "2026-05-06",
       "agency": "DOJ",

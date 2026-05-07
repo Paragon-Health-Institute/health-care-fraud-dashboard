@@ -509,47 +509,85 @@ def test_healthcare_context(text):
             return True
     return False
 
-# Pandemic-loan-fraud indicators (PPP / EIDL / CARES Act). When these
-# appear without a healthcare nexus, the case is generic SBA financial
-# fraud and should not land on a healthcare fraud dashboard.
-_PPP_INDICATOR_RE = re.compile(
+# Indicators of fraud against non-healthcare federal benefit programs:
+# pandemic loans (PPP/EIDL/CARES), FCC broadband subsidies (EBBP/ACP/
+# Lifeline), Universal Service Fund. When these appear and the body
+# lacks a healthcare nexus, the case is non-HC and should not land on
+# a healthcare fraud dashboard.
+_NON_HC_BENEFIT_INDICATOR_RE = re.compile(
     r'\b(PPP|paycheck\s+protection\s+program|paycheck\s+protection|'
     r'EIDL|economic\s+injury\s+disaster\s+loan|CARES\s+Act|'
-    r'second-?draw\s+(PPP\s+)?loan|pandemic\s+loan|covid\s+loan)\b',
+    r'second-?draw\s+(PPP\s+)?loan|pandemic\s+loan|covid\s+loan|'
+    # FCC broadband/connectivity programs
+    r'EBBP|emergency\s+broadband\s+benefits?\s+program|'
+    r'ACP|affordable\s+connectivity\s+program|'
+    r'Lifeline\s+(?:program|service|subsidy|subsidies)|'
+    r'universal\s+service\s+(?:fund|administrative\s+company)|'
+    r'broadband\s+(?:subsid|discount))\b',
     re.IGNORECASE,
 )
-# Strong healthcare nexus signals — defrauded-program names + healthcare
-# facility/role nouns. Items with at least one of these in the body are
-# real healthcare cases (even if the fraud vehicle was a PPP loan).
-_HC_NEXUS_RE = re.compile(
-    r'\b(Medicare|Medicaid|TRICARE|CHAMPVA|ACA|VA\s+health|'
-    r'hospital|clinic|nursing\s*(home|facility)|skilled\s*nursing|'
+# Strong healthcare facility/role nexus — unambiguous healthcare-business
+# signals. A single Medicaid mention in an eligibility-list context
+# (e.g. "may qualify if enrolled in Medicaid, SNAP, SSI...") is NOT
+# strong enough to keep a non-HC item on the dashboard. We require a
+# concrete healthcare facility / role / provider keyword in addition
+# to (or instead of) defrauded-program names.
+_HC_FACILITY_ROLE_RE = re.compile(
+    r'\b(hospital|clinic|nursing\s*(home|facility)|skilled\s*nursing|'
     r'hospice|home\s*health|medical\s*practice|pharmacy|pharmacist|'
     r'physician|doctor|nurse(?!ry)|dentist|dental\s*practice|'
     r'patient|laborator(y|ies)|skin\s*substitute|durable\s*medical|'
     r'addiction\s*treatment|behavioral\s*health|mental\s*health|'
     r'health\s*care\s*provider|healthcare\s*provider|telehealth|'
-    r'opioid|controlled\s*substance|prescription)\b',
+    r'opioid|controlled\s*substance|prescription|chiropractor|'
+    r'optometr|psychiatr|cardiol|ortho|surger|prosthe|orthotic|'
+    r'medical\s+device|medical\s+equipment|wound\s*care|'
+    r'autism|aba|peer\s+support\s+specialist)\b',
+    re.IGNORECASE,
+)
+# Defrauded-program names. Mentioned alone, these can still be
+# eligibility-list noise (e.g. "to qualify, must be enrolled in
+# Medicaid"). When there's a non-HC-benefit indicator AND no facility/
+# role match, a defrauded-program-name-only match is treated as
+# insufficient. Otherwise (no non-HC indicator), they remain a valid
+# nexus signal.
+_HC_PROGRAM_RE = re.compile(
+    r'\b(Medicare|Medicaid|TRICARE|CHAMPVA|ACA|VA\s+health)\b',
     re.IGNORECASE,
 )
 
-def _is_ppp_fraud_without_healthcare_nexus(title, body):
-    """Return True if item is dominantly about pandemic-loan fraud
-    (PPP/EIDL/CARES) with no healthcare nexus. Triggered: ZERO mentions
-    of defrauded-program names and ZERO healthcare facility/role
-    keywords across title+body. Conservative by design — any plausible
-    healthcare signal lets the item through.
+def _is_non_hc_benefit_fraud_without_healthcare_nexus(title, body):
+    """Return True if item is dominantly about fraud against a non-
+    healthcare federal benefit program (PPP/EIDL/CARES, FCC EBBP/ACP/
+    Lifeline, Universal Service Fund) with no healthcare nexus.
 
-    See project_ppp_filter_deferred.md for the trigger case (Innodisk
-    USA / Fremont, $950K PPP fraud against a flash memory subsidiary
-    that slipped onto the dashboard 2026-05-04)."""
+    'Healthcare nexus' for this gate is stricter than the general
+    HEALTHCARE_TERMS check: incidental Medicaid/Medicare mentions in
+    an eligibility-list context aren't enough — we require a
+    healthcare facility/role keyword (hospital, clinic, doctor,
+    pharmacy, etc.). Defrauded-program names alone are accepted only
+    when the program is mentioned outside of an eligibility-list
+    context (heuristic: mentioned 2+ times, since incidental list
+    mentions are usually one-off).
+
+    See project_ppp_filter_deferred.md for the original PPP trigger
+    case (Innodisk USA, 2026-05-04). Extended 2026-05-07 to cover
+    DISH Wireless EBBP/ACP fraud (a single Medicaid mention in
+    eligibility-list context wrongly kept it on the dashboard)."""
     haystack = f"{title or ''} {body or ''}"
-    if not _PPP_INDICATOR_RE.search(haystack):
-        return False  # Not a PPP-fraud item, doesn't apply
-    # PPP-flagged. Now check healthcare nexus.
-    if _HC_NEXUS_RE.search(haystack):
-        return False  # Has nexus, keep
-    return True  # PPP fraud + no healthcare nexus, drop
+    if not _NON_HC_BENEFIT_INDICATOR_RE.search(haystack):
+        return False  # Not a non-HC-benefit item, gate doesn't apply
+    # Non-HC-benefit-flagged. Check for strong HC nexus.
+    if _HC_FACILITY_ROLE_RE.search(haystack):
+        return False  # Has facility/role nexus, keep
+    # Fall back to defrauded-program names — but require 2+ mentions
+    # to filter out single eligibility-list references.
+    if len(_HC_PROGRAM_RE.findall(haystack)) >= 2:
+        return False
+    return True  # Non-HC benefit fraud + insufficient HC nexus, drop
+
+# Backwards-compat alias — still referenced elsewhere in the file.
+_is_ppp_fraud_without_healthcare_nexus = _is_non_hc_benefit_fraud_without_healthcare_nexus
 
 def get_action_type(title, desc, agency=None, link=None):
     """Classify a scraped item into one of ~11 action types.
