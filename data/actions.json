@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-05-06T16:20:01.934076",
+    "last_updated": "2026-05-07T09:51:54.124593",
     "version": "1.0",
-    "last_scraped": "2026-05-06T09:42:52.416899"
+    "last_scraped": "2026-05-07T09:51:54.124584"
   },
   "actions": [
     {
@@ -16334,6 +16334,80 @@
       "source_type": "news",
       "auto_fetched": false,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-05-06-2491917549",
+      "date": "2026-05-06",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "DISH Wireless LLC to Pay More than $17M to Resolve False Claims Act and Administrative Allegations Related to FCC’s Broadband Benefits Programs",
+      "amount": "$17 Million",
+      "amount_numeric": 17000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/dish-wireless-llc-pay-more-17m-resolve-false-claims-act-and-administrative-allegations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "DC",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-05-06-4145232598",
+      "date": "2026-05-06",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Vascular Practice and Physician Agree to Pay More Than $6.73M to Settle False Claims Act Allegations of Unnecessary Vascular Interventional Procedures",
+      "amount": "$6.73 Million",
+      "amount_numeric": 6730000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/vascular-practice-and-physician-agree-pay-more-673m-settle-false-claims-act-allegations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-05-06-461801159",
+      "date": "2026-05-06",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Nonprofit Health Care Provider Agrees to Pay $750,000 to Resolve False Claims Act Allegations Involving Misbranded Contraceptives",
+      "amount": "$750,000",
+      "amount_numeric": 750000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ndca/pr/nonprofit-health-care-provider-agrees-pay-750000-resolve-false-claims-act-allegations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
