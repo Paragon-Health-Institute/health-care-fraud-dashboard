@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-05-07T09:51:54.124593",
+    "last_updated": "2026-05-08T08:56:24.659848",
     "version": "1.0",
-    "last_scraped": "2026-05-07T09:51:54.124584"
+    "last_scraped": "2026-05-08T08:56:24.659836"
   },
   "actions": [
     {
@@ -16378,6 +16378,29 @@
       ],
       "entities": [],
       "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-05-06-2395601683",
+      "date": "2026-05-06",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Illegal Alien Previously Convicted of Drug Trafficking Charged with Healthcare Benefit Fraud And Aggravated Identity Theft",
+      "amount": "$80,000",
+      "amount_numeric": 80000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/illegal-alien-previously-convicted-drug-trafficking-charged-healthcare-benefit-fraud-and",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "MA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
