@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-05-08T08:56:24.659848",
+    "last_updated": "2026-05-09T08:58:45.736275",
     "version": "1.0",
-    "last_scraped": "2026-05-08T08:56:24.659836"
+    "last_scraped": "2026-05-09T08:58:45.736268"
   },
   "actions": [
     {
@@ -16405,6 +16405,89 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-05-08-1410579107",
+      "date": "2026-05-08",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Former NFL Player Sentenced to Over 16 Years in Prison for $197M Medicare Fraud",
+      "amount": "$197 Million",
+      "amount_numeric": 197000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/former-nfl-player-sentenced-over-16-years-prison-197m-medicare-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME",
+        "Telehealth",
+        "Medical Devices"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-05-08-3170995279",
+      "date": "2026-05-08",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Three Affiliated Skilled Nursing Facilities to Pay $300,000 to Resolve False Claims Act Allegations Related to Medically Unnecessary Rehabilitation Services",
+      "amount": "$300,000",
+      "amount_numeric": 300000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/three-affiliated-skilled-nursing-facilities-pay-300000-resolve-false-claims-act-allegations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Nursing Home",
+        "Physical Therapy"
+      ],
+      "entities": [],
+      "state": "IL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-05-07-3284078871",
+      "date": "2026-05-07",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Brentwood Woman Pleads Guilty to Defrauding Taxpayers Out of $6.9 Million",
+      "amount": "$6.9 Million",
+      "amount_numeric": 6900000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-mdtn/pr/brentwood-woman-pleads-guilty-defrauding-taxpayers-out-69-million",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Wound Care"
+      ],
+      "entities": [],
+      "state": "TN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
       ]
     }
   ]
