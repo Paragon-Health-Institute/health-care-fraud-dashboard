@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-05-09T08:58:45.736275",
+    "last_updated": "2026-05-09T09:50:34.165547",
     "version": "1.0",
     "last_scraped": "2026-05-09T08:58:45.736268"
   },
@@ -16489,6 +16489,29 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "hhs-oig-2026-05-05-2497671266",
+      "date": "2026-05-05",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Utilization Trends and Medicare Part B Billing for Office-Based Peripheral Vascular Procedures Raise Questions About Program Integrity",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/utilization-trends-and-medicare-part-b-billing-for-office-based-peripheral-vascular-procedures-raise-questions-about-program-integrity/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Lab Testing",
+        "Drug Pricing"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }

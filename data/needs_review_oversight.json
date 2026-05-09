@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-05-08T10:03:04.213843",
+    "last_scraped": "2026-05-09T09:50:33.998992",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -88,6 +88,33 @@
       "ai_decision": "not_oversight",
       "ai_confidence": 85,
       "ai_reason": "This HHS-OIG audit addresses emergency power system adequacy in nursing homes, a patient safety and operational compliance issue, not healthcare fraud or program integrity.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "hhs-oig-2026-05-05-2376665276",
+      "date": "2026-05-05",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Comparison of Average Sales Prices and Average Manufacturer Prices: Results for the Fourth Quarter of 2025",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/comparison-of-average-sales-prices-and-average-manufacturer-prices-results-for-the-fourth-quarter-of-2025/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Drug Pricing"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 78,
+      "ai_reason": "This HHS-OIG audit compares pharmaceutical pricing data but lacks explicit connection to fraud detection, improper payments, or program-integrity violations; it appears to be a standard price-monitori",
       "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
