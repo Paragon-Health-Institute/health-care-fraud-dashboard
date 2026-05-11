@@ -169,6 +169,28 @@ _BOILERPLATE_PATTERNS = [
         r"(?:'s)?",
         _re.IGNORECASE,
     ),
+    # Generic "protect Medicare and Medicaid" stock-quote boilerplate.
+    # DOJ press releases often close with a quote like "critical programs
+    # like Medicare and Medicaid are protected" or "to protect Medicare,
+    # Medicaid, and other federal health care programs" — these are
+    # generic policy statements, not evidence of program-specific fraud.
+    # Mask so a Medicare-only case doesn't get a Medicaid tag (or vice
+    # versa) from boilerplate.
+    _re.compile(
+        r"\b(?:critical\s+)?programs?\s+(?:like|such\s+as)\s+"
+        r"Medicare(?:\s*,)?\s+(?:and\s+)?Medicaid\b",
+        _re.IGNORECASE,
+    ),
+    _re.compile(
+        r"\bprotect(?:ing)?\s+(?:the\s+)?Medicare(?:\s*,)?\s+(?:and\s+)?"
+        r"Medicaid(?:\s+programs?)?",
+        _re.IGNORECASE,
+    ),
+    _re.compile(
+        r"\bMedicare(?:\s*,)?\s+(?:and\s+)?Medicaid\s+(?:are|programs?\s+are)\s+"
+        r"(?:protected|safeguarded|preserved)",
+        _re.IGNORECASE,
+    ),
     # DOJ prosecutor unit names containing program keywords. The name
     # "Health Care Fraud & Opioid Abuse Prevention Unit" (USAO NJ etc.)
     # would otherwise trigger an Opioids tag on any case that unit
