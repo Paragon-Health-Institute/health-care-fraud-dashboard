@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-05-09T09:50:34.165547",
+    "last_updated": "2026-05-12T10:07:06.737847",
     "version": "1.0",
-    "last_scraped": "2026-05-11T10:50:05.866807"
+    "last_scraped": "2026-05-12T10:07:06.737837"
   },
   "actions": [
     {
@@ -16511,6 +16511,30 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-05-08-3687517024",
+      "date": "2026-05-08",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "One Sentenced, One Convicted for Conspiring with Annandale-Based Doctor to Illegally Distribute Promethazine-Codeine and other Controlled Substances",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-wdva/pr/one-sentenced-one-convicted-conspiring-annandale-based-doctor-illegally-distribute",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Pharmacy",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "VA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
