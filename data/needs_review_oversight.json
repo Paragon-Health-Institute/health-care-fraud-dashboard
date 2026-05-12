@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-05-11T11:43:14.008921",
+    "last_scraped": "2026-05-12T10:51:21.181936",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -115,6 +115,32 @@
       "ai_decision": "not_oversight",
       "ai_confidence": 78,
       "ai_reason": "This HHS-OIG audit compares pharmaceutical pricing data but lacks explicit connection to fraud detection, improper payments, or program-integrity violations; it appears to be a standard price-monitori",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "congress-2026-05-11-2889173390",
+      "date": "2026-05-11",
+      "agency": "Congress",
+      "type": "Administrative Action",
+      "title": "Chairmen Guthrie and Griffith Announce Health Subcommittee Markup of Public Health Reauthorizations and Policies to Improve FDA and Medicare",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://energycommerce.house.gov/posts/chairmen-guthrie-and-griffith-announce-health-subcommittee-markup-of-public-health-reauthorizations-and-policies-to-improve-fda-and-medicare",
+      "link_label": "House E&C Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This is a procedural announcement about subcommittee markup of FDA and Medicare policies, not a specific oversight action, investigation, or finding related to healthcare fraud or program integrity.",
       "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
