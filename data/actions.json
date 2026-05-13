@@ -16606,6 +16606,29 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
+      "related_agencies": [
+        "White House"
+      ]
+    },
+    {
+      "id": "white-house-2026-05-13-vance-medicaid-fraud-states",
+      "date": "2026-05-13",
+      "agency": "White House",
+      "type": "Administrative Action",
+      "title": "Vance to States: Address Fraud or Lose Federal Medicaid Funding",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.wsj.com/politics/policy/trump-jd-vance-medicaid-fraud-40e9e78e",
+      "link_label": "Wall Street Journal",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "news",
+      "auto_fetched": false,
       "related_agencies": []
     }
   ]
