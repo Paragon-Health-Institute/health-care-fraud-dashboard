@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-05-13T10:09:02.431849",
+    "last_updated": "2026-05-13T15:51:15.523076",
     "version": "1.0",
     "last_scraped": "2026-05-13T10:09:02.431834"
   },
@@ -16584,6 +16584,29 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "cms-2026-05-13-hospice-hha-moratorium",
+      "date": "2026-05-13",
+      "agency": "CMS",
+      "type": "Administrative Action",
+      "title": "CMS Announces Aggressive Nationwide Crackdown on Fraud with Six-Month Hospice and Home Health Agency Enrollment Moratoria",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-announces-aggressive-nationwide-crackdown-fraud-six-month-hospice-home-health-agency-enrollment",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Hospice",
+        "Home Health"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": []
     }
   ]
 }

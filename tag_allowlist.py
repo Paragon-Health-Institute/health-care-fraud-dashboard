@@ -185,6 +185,31 @@ _BOILERPLATE_PATTERNS = [
         r"\bMFCU(?:s)?\b",
         _re.IGNORECASE,
     ),
+    # Prior-action context references. CMS / DOJ press releases routinely
+    # cite earlier related actions as background ("today's announcement
+    # follows our declaration earlier this year of a similar moratorium
+    # to prevent fraudulent Medicare billing by certain durable medical
+    # equipment, prosthetics, orthotics, and supplies (DMEPOS) companies").
+    # These reference paragraphs describe a DIFFERENT prior action and
+    # shouldn't drive tag extraction for THIS item. Strip them so a new
+    # hospice moratorium doesn't get a DME tag from a prior-DME-moratorium
+    # mention.
+    _re.compile(
+        r"\b(?:today'?s\s+)?(?:announcement|action)?\s*follows?\s+"
+        r"(?:our|the|a)\s+(?:earlier|prior|previous|recent)\s+"
+        r"(?:declaration|announcement|action|moratori(?:um|a))[^.]*?\.",
+        _re.IGNORECASE,
+    ),
+    _re.compile(
+        r"\bfollows?\s+(?:our|the|a)\s+(?:declaration|announcement)\s+"
+        r"earlier\s+this\s+year[^.]*?\.",
+        _re.IGNORECASE,
+    ),
+    _re.compile(
+        r"\bsimilar\s+(?:to\s+)?(?:our\s+)?(?:previous|prior|recent)\s+"
+        r"moratori(?:um|a)[^.]*?\.",
+        _re.IGNORECASE,
+    ),
     # Generic "protect Medicare and Medicaid" stock-quote boilerplate.
     # DOJ press releases often close with a quote like "critical programs
     # like Medicare and Medicaid are protected" or "to protect Medicare,
