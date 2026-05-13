@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-05-12T10:51:21.181936",
+    "last_scraped": "2026-05-13T10:50:44.993828",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -142,6 +142,33 @@
       "ai_confidence": 85,
       "ai_reason": "This is a procedural announcement about subcommittee markup of FDA and Medicare policies, not a specific oversight action, investigation, or finding related to healthcare fraud or program integrity.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-05-12-3056644692",
+      "date": "2026-05-12",
+      "agency": "CMS",
+      "type": "Administrative Action",
+      "title": "HHS and CMS Announce First Meeting of Healthcare Advisory Committee",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/hhs-cms-announce-first-meeting-healthcare-advisory-committee",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This is a general organizational/administrative announcement about an advisory committee meeting, not a healthcare fraud oversight action, audit, investigation, or program-integrity finding.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -277,6 +304,10 @@
     "https://www.cms.gov/newsroom/blog/moving-prior-authorization-21st-century",
     "https://www.gao.gov/products/gao-26-107778",
     "https://www.help.senate.gov/rep/newsroom/press/icymi-chairman-cassidy-leads-help-committee-hearing-in-louisiana-on-making-health-care-affordable-for-families",
-    "https://www.gao.gov/products/gao-26-107792"
+    "https://www.gao.gov/products/gao-26-107792",
+    "https://www.gao.gov/products/gao-26-108505",
+    "https://www.gao.gov/products/gao-26-108896",
+    "https://energycommerce.house.gov/posts/energy-and-commerce-weekly-look-ahead-the-week-of-may-11th-2026",
+    "https://www.help.senate.gov/rep/newsroom/press/icymi-chairman-cassidy-pushes-to-make-health-care-affordable-for-families-in-new-op-ed"
   ]
 }
