@@ -169,6 +169,22 @@ _BOILERPLATE_PATTERNS = [
         r"(?:'s)?",
         _re.IGNORECASE,
     ),
+    # State Medicaid Fraud Control Unit ("MFCU") agency names. Every state
+    # has an MFCU that investigates Medicaid fraud, but the unit being in
+    # an investigator list is NOT evidence the case involves Medicaid
+    # (MFCUs occasionally co-investigate adjacent cases — opioid
+    # diversion, controlled-substance theft, elder abuse — where there's
+    # no Medicaid billing). Strip the unit name itself so it doesn't
+    # trigger a Medicaid tag from agency-name boilerplate alone.
+    _re.compile(
+        r"\b(?:[A-Z][a-z]+\s+)*"  # optional state prefix words
+        r"Medicaid\s+Fraud\s+Control\s+Unit",
+        _re.IGNORECASE,
+    ),
+    _re.compile(
+        r"\bMFCU(?:s)?\b",
+        _re.IGNORECASE,
+    ),
     # Generic "protect Medicare and Medicaid" stock-quote boilerplate.
     # DOJ press releases often close with a quote like "critical programs
     # like Medicare and Medicaid are protected" or "to protect Medicare,
