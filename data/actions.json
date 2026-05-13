@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-05-12T10:07:06.737847",
+    "last_updated": "2026-05-13T10:09:02.431849",
     "version": "1.0",
-    "last_scraped": "2026-05-12T10:07:06.737837"
+    "last_scraped": "2026-05-13T10:09:02.431834"
   },
   "actions": [
     {
@@ -16534,6 +16534,56 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-05-12-2290395017",
+      "date": "2026-05-12",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Another Member of Notorious Philadelphia ‘10th and O Crew’ Sentenced to 60 Months for Opioid Drug Conspiracy",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/another-member-notorious-philadelphia-10th-and-o-crew-sentenced-60-months-opioid-drug",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "PA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "doj-2026-05-12-734381785",
+      "date": "2026-05-12",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Utah Doctor and Two Nurses Charged with Health Care Fraud After Submitting False Claims to Medicare and Receiving Millions in Payout",
+      "amount": "$29 Million",
+      "amount_numeric": 29000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ut/pr/utah-doctor-and-two-nurses-charged-health-care-fraud-after-submitting-false-claims",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Wound Care",
+        "Skin Substitutes"
+      ],
+      "entities": [],
+      "state": "UT",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
       ]
     }
   ]
