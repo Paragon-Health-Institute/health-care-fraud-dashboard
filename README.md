@@ -1,3 +1,3 @@
-﻿# Healthcare Fraud Enforcement Dashboard
+# Health Care Fraud Enforcement Dashboard
 
-Live dashboard tracking federal healthcare fraud enforcement actions.
+Live dashboard tracking federal health care fraud enforcement actions.
