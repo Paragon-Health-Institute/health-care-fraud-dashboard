@@ -16654,6 +16654,30 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "cms-2026-05-13-ca-medicaid-1.3b-deferral",
+      "date": "2026-05-13",
+      "agency": "CMS",
+      "type": "Administrative Action",
+      "title": "White House cuts billions of dollars from California Medicaid",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.politico.com/news/2026/05/13/white-house-cuts-billions-california-medicaid-00919351",
+      "link_label": "Politico",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Hospice"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "news",
+      "auto_fetched": false,
+      "related_agencies": [
+        "White House"
+      ]
     }
   ]
 }
