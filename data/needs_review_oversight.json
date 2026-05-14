@@ -1,10 +1,64 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-05-13T10:50:44.993828",
+    "last_scraped": "2026-05-14T10:40:44.486987",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
-  "items": [],
+  "items": [
+    {
+      "id": "congress-2026-05-13-1542146113",
+      "date": "2026-05-13",
+      "agency": "Congress",
+      "type": "Administrative Action",
+      "title": "Health Subcommittee Advances Public Health Reauthorizations and Policies to Improve FDA and Medicare to Full Committee",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://energycommerce.house.gov/posts/health-subcommittee-advances-public-health-reauthorizations-and-policies-to-improve-fda-and-medicare-to-full-committee",
+      "link_label": "House E&C Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 72,
+      "ai_reason": "This appears to be a routine subcommittee advancement of FDA and Medicare policy reauthorizations, not specifically about healthcare fraud, improper payments, or program-integrity oversight.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "congress-2026-05-13-774876479",
+      "date": "2026-05-13",
+      "agency": "Congress",
+      "type": "Administrative Action",
+      "title": "Chairman Griffith Delivers Opening Statement at Subcommittee on Health Markup of Public Health Reauthorizations and Policies to Improve FDA and Medicare",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://energycommerce.house.gov/posts/chairman-griffith-delivers-opening-statement-at-subcommittee-on-health-markup-of-public-health-reauthorizations-and-policies-to-improve-fda-and-medicare",
+      "link_label": "House E&C Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 75,
+      "ai_reason": "This is a markup session on broad public health reauthorizations and FDA/Medicare policies, not specifically focused on healthcare fraud, improper payments, or program integrity oversight.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    }
+  ],
   "rejected_links": [
     "https://oig.hhs.gov/reports/all/2026/vibrent-health-claimed-unallowable-costs-under-a-national-institutes-of-health-other-transaction-award/",
     "https://oig.hhs.gov/reports/all/2026/review-of-the-department-of-health-and-human-services-compliance-with-the-federal-information-security-modernization-act-of-2014-for-fiscal-year-2025/",
@@ -148,6 +202,9 @@
     "https://oig.hhs.gov/reports/all/2026/most-nursing-homes-throughout-the-united-states-do-not-have-adequate-or-reliable-emergency-power-systems/",
     "https://oig.hhs.gov/reports/all/2026/comparison-of-average-sales-prices-and-average-manufacturer-prices-results-for-the-fourth-quarter-of-2025/",
     "https://energycommerce.house.gov/posts/chairmen-guthrie-and-griffith-announce-health-subcommittee-markup-of-public-health-reauthorizations-and-policies-to-improve-fda-and-medicare",
-    "https://www.cms.gov/newsroom/press-releases/hhs-cms-announce-first-meeting-healthcare-advisory-committee"
+    "https://www.cms.gov/newsroom/press-releases/hhs-cms-announce-first-meeting-healthcare-advisory-committee",
+    "https://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum",
+    "https://www.gao.gov/products/gao-26-109115",
+    "https://oversight.house.gov/release/chairman-comer-taps-rep-gill-to-lead-new-task-force-on-exposing-institutions-seeking-to-undermine-american-government-society/"
   ]
 }
