@@ -1043,8 +1043,46 @@ def get_state(text, title=None, link=None, item_type=None):
     # scheme/government-wide/cross-agency" with no specific state in the
     # title shouldn't get tagged with a single state from incidental
     # body mentions.
-    if text and _NATIONAL_BODY_RE.search(text):
-        return None
+    #
+    # IMPORTANT: apply the national-scope check to BOILERPLATE-STRIPPED
+    # body text. Otherwise the Strike Force footer ("...operating in 27
+    # federal districts across the country...") kills explicit case-
+    # specific state signals (e.g., "Southern District of Florida" in
+    # an OPA-published HCF prosecution). Boilerplate paragraphs describe
+    # DOJ's overall posture, not the case's geographic scope.
+    if text:
+        try:
+            from tag_allowlist import strip_boilerplate
+            text_for_national_check = strip_boilerplate(text)
+        except Exception:
+            text_for_national_check = text
+        if _NATIONAL_BODY_RE.search(text_for_national_check):
+            return None
+
+    # Path 5c (USAO district mention in body). DOJ OPA-published HCF
+    # cases ("/opa/pr/") have no /usao-xx/ slug in the link, so Path 1
+    # can't extract a state from the URL. But the body almost always
+    # names the prosecuting district ("federal jury in the Southern
+    # District of Florida convicted..."). Treat that mention as the
+    # primary state for OPA items, before falling through to the
+    # longest-name body match (which can pick incidental state mentions).
+    if text:
+        district_re = re.compile(
+            r"(?:Southern|Northern|Eastern|Western|Middle|Central)\s+"
+            r"District\s+of\s+("
+            + "|".join(re.escape(n) for n in STATE_MAP.keys())
+            + r")\b|"
+            r"District\s+of\s+("
+            + "|".join(re.escape(n) for n in STATE_MAP.keys() if n not in ("Virginia", "Carolina"))
+            + r")\b",
+            re.IGNORECASE,
+        )
+        m = district_re.search(text)
+        if m:
+            state_name = (m.group(1) or m.group(2) or "").title()
+            abbr = STATE_MAP.get(state_name)
+            if abbr:
+                return abbr
 
     # Path 6: body-text fallback (longest name wins). SKIPPED for
     # policy/hearing/report item types because these get false-positive

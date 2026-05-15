@@ -118,6 +118,21 @@ _BOILERPLATE_PATTERNS = [
         r"(?:in\s+)?\d+\s+(?:strike\s+force\s+)?(?:districts|teams)[^.]*\.",
         _re.IGNORECASE,
     ),
+    # Strike Force Program structural-summary sentence variant. DOJ HCF
+    # press releases include a closing sentence like:
+    # "Justice's Health Care Fraud Strike Force Program, currently
+    #  comprised of nine strike forces operating in federal districts
+    #  across the country, has charged more than 6,200 defendants who
+    #  collectively billed... $45 billion since 2007."
+    # The "across the country" boilerplate here used to trip up the
+    # state-extraction national-scope guard on cases that ARE state-
+    # specific (e.g., Southern District of Florida HealthSplash case).
+    # Strip the whole sentence.
+    _re.compile(
+        r"(?:[A-Za-z]+'?s?\s+)?Strike\s+Force\s+(?:Program|Unit)\b"
+        r"[^.]*?(?:operating|comprised\s+of|operates|consists)[^.]*?\.",
+        _re.IGNORECASE,
+    ),
     # Strike Force "since inception" historical record
     _re.compile(
         r"(?:Since\s+its?\s+inception\s+in\s+\w+\s+\d{4}[^.]*?)?"
