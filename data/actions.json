@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-05-15T10:05:42.529808",
+    "last_updated": "2026-05-15T10:44:40.430705",
     "version": "1.0",
     "last_scraped": "2026-05-15T10:05:42.529794"
   },
@@ -16731,6 +16731,27 @@
         "False Claims Act"
       ],
       "topic_checked_at": "2026-05-15T10:05:42.830616"
+    },
+    {
+      "id": "congress-2026-05-14-3766786389",
+      "date": "2026-05-14",
+      "agency": "Congress",
+      "type": "Administrative Action",
+      "title": "Burlison Leads Roundtable on Lowering the National Debt by Eliminating Waste, Fraud, and Abuse - United States House Committee on Oversight and Government Reform",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oversight.house.gov/release/burlison-leads-roundtable-on-lowering-the-national-debt-by-eliminating-waste-fraud-and-abuse/",
+      "link_label": "House Oversight Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
