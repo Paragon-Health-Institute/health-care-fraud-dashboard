@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-05-14T09:48:58.218095",
+    "last_updated": "2026-05-15T10:05:42.529808",
     "version": "1.0",
-    "last_scraped": "2026-05-14T09:48:58.218088"
+    "last_scraped": "2026-05-15T10:05:42.529794"
   },
   "actions": [
     {
@@ -16678,6 +16678,59 @@
       "related_agencies": [
         "White House"
       ]
+    },
+    {
+      "id": "doj-2026-05-14-1524663914",
+      "date": "2026-05-14",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Owner of Health Care Software Company Convicted of 1 Billion Dollar Medicare Fraud Conspiracy",
+      "amount": "$1 Billion",
+      "amount_numeric": 1000000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/owner-health-care-software-company-convicted-1-billion-dollar-medicare-fraud-conspiracy",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME",
+        "Pharmacy",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-05-14-2692447588",
+      "date": "2026-05-14",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Takeda Agrees to Pay $13.6M to Resolve False Claims Allegations Relating to Improper Payments to Physicians",
+      "amount": "$13.6 Million",
+      "amount_numeric": 13600000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/takeda-agrees-pay-136m-resolve-false-claims-allegations-relating-improper-payments",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "TRICARE"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "False Claims Act"
+      ],
+      "topic_checked_at": "2026-05-15T10:05:42.830616"
     }
   ]
 }
