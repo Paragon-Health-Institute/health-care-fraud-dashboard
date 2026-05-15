@@ -272,6 +272,33 @@ _BOILERPLATE_PATTERNS = [
         r"(?:Medicare|Medicaid)[^.]*?federally\s+funded\s+healthcare\s+programs",
         _re.IGNORECASE,
     ),
+    # AKS scope enumeration variants — the standalone phrase that
+    # appears mid-paragraph, e.g.:
+    #   "...referral of items or services covered by Medicare, Medicaid,
+    #    TRICARE, and other federal health care programs."
+    #   "...services payable under Medicare, Medicaid, and other federally
+    #    funded healthcare programs..."
+    # Generic enumeration of multiple programs followed by "and other
+    # federal/federally-funded health care programs" is AKS-scope
+    # phrasing, NOT evidence the case defrauded all listed programs.
+    _re.compile(
+        r"\b(?:items?|services|referrals?|claims?)\s+"
+        r"(?:or\s+(?:items?|services))?\s*"
+        r"(?:covered|payable|reimbursed|paid)\s+(?:by|under)\s+"
+        r"Medicare,?\s+Medicaid(?:,?\s+(?:TRICARE|the\s+Indian\s+Health\s+Service|"
+        r"CHAMPVA|VA))*"
+        r"\s*,?\s+and\s+other\s+"
+        r"(?:federal(?:ly\s+funded)?\s+)?(?:health\s*care|healthcare)\s+programs?",
+        _re.IGNORECASE,
+    ),
+    _re.compile(
+        r"\breferral\s+of\s+(?:items?|services|(?:items?\s+or\s+services))\s+"
+        r"covered\s+by\s+Medicare,?\s+Medicaid"
+        r"(?:,?\s+(?:TRICARE|the\s+Indian\s+Health\s+Service|CHAMPVA|VA))*"
+        r"[^.]*?(?:federal(?:ly\s+funded)?\s+)?"
+        r"(?:health\s*care|healthcare)\s+programs?",
+        _re.IGNORECASE,
+    ),
     # 2025 National Health Care Fraud Takedown — Galeotti harm-quote
     # boilerplate. Every USAO release in the June 30, 2025 takedown
     # contains the identical Criminal Division quote enumerating three
