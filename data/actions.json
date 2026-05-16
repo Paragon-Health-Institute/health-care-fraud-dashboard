@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-05-16T09:08:23.330096",
+    "last_updated": "2026-05-16T09:56:40.498649",
     "version": "1.0",
     "last_scraped": "2026-05-16T09:08:23.330084"
   },
@@ -16795,6 +16795,27 @@
       "tags": [],
       "entities": [],
       "state": "TX",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "cms-2026-05-15-12564439",
+      "date": "2026-05-15",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "CMS Final Rule Lowers Costs, Cracks Down on Fraud, and Expands State Control",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-final-rule-lowers-costs-cracks-down-fraud-expands-state-control",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "ACA"
+      ],
+      "entities": [],
+      "state": null,
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-05-15T10:44:40.277437",
+    "last_scraped": "2026-05-16T09:56:40.339513",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -205,6 +205,8 @@
     "https://www.cms.gov/newsroom/press-releases/hhs-cms-announce-first-meeting-healthcare-advisory-committee",
     "https://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum",
     "https://www.gao.gov/products/gao-26-109115",
-    "https://oversight.house.gov/release/chairman-comer-taps-rep-gill-to-lead-new-task-force-on-exposing-institutions-seeking-to-undermine-american-government-society/"
+    "https://oversight.house.gov/release/chairman-comer-taps-rep-gill-to-lead-new-task-force-on-exposing-institutions-seeking-to-undermine-american-government-society/",
+    "https://www.cms.gov/newsroom/fact-sheets/hhs-notice-benefit-payment-parameters-2027-final-rule",
+    "https://oversight.house.gov/release/burchett-and-biggs-continue-investigation-of-planned-parenthoods-misuse-of-federal-funds/"
   ]
 }
