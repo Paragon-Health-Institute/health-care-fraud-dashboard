@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-05-15T10:44:40.430705",
+    "last_updated": "2026-05-16T09:08:23.330096",
     "version": "1.0",
-    "last_scraped": "2026-05-15T10:05:42.529794"
+    "last_scraped": "2026-05-16T09:08:23.330084"
   },
   "actions": [
     {
@@ -16749,6 +16749,52 @@
       ],
       "entities": [],
       "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "doj-2026-05-15-2492878899",
+      "date": "2026-05-15",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Michigan Home Health Care Agency Owner Convicted of $1.6M Medicare Fraud Scheme and Kickback Conspiracy",
+      "amount": "$1.6 Million",
+      "amount_numeric": 1600000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/michigan-home-health-care-agency-owner-convicted-16m-medicare-fraud-scheme-and-kickback",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Home Health"
+      ],
+      "entities": [],
+      "state": "MI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-05-15-2289449106",
+      "date": "2026-05-15",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Justice Department Secures Landmark Resolution to End Pediatric “Gender-Affirming Care” and Create Detransition Clinic",
+      "amount": "$10 Million",
+      "amount_numeric": 10000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/justice-department-secures-landmark-resolution-end-pediatric-gender-affirming-care-and",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "TX",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
