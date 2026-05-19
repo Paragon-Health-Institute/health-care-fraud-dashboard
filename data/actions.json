@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-05-16T09:56:40.498649",
+    "last_updated": "2026-05-19T10:50:48.840669",
     "version": "1.0",
-    "last_scraped": "2026-05-18T11:17:18.398425"
+    "last_scraped": "2026-05-19T10:50:48.840656"
   },
   "actions": [
     {
@@ -16800,6 +16800,55 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-05-18-1552885203",
+      "date": "2026-05-18",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "New York Business Owner Sentenced to Prison for Using Shell Companies to Launder Health Care Fraud Proceeds for Transnational Criminal Organization",
+      "amount": "$1.5 Million",
+      "amount_numeric": 1500000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/new-york-business-owner-sentenced-prison-using-shell-companies-launder-health-care-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-05-15-3890881182",
+      "date": "2026-05-15",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Operators of Day Treatment Program for Children Agree to $15.2 Million Civil Judgment to Resolve Medicaid Fraud Allegations",
+      "amount": "$15.2 Million",
+      "amount_numeric": 15200000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edky/pr/operators-day-treatment-program-children-agree-152-million-civil-judgment-resolve",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Mental Health",
+        "Behavioral Health"
+      ],
+      "entities": [],
+      "state": "KY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
