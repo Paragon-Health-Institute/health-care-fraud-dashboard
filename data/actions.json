@@ -1279,25 +1279,27 @@
       ]
     },
     {
-      "id": "hhs-2026-02-13-medicaid-dataset-release",
-      "date": "2026-02-14",
+      "id": "hhs-2026-02-09-medicaid-provider-spending-dataset",
+      "date": "2026-02-09",
       "agency": "HHS",
       "type": "Administrative Action",
-      "title": "HHS Releases Medicaid Dataset to Crowdsource Fraud Detection",
+      "title": "Medicaid Provider Spending by HCPCS",
       "amount": "",
-      "amount_numeric": 0.0,
+      "amount_numeric": 0,
       "officials": [],
-      "link": "https://townhall.com/tipsheet/scott-mcclallen/2026/02/14/health-and-human-services-releases-massive-open-source-data-set-n2671316",
-      "link_label": "Townhall",
+      "link": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/",
+      "link_label": "HHS Open Data",
       "social_posts": [],
       "tags": [
         "Medicaid"
       ],
       "entities": [],
       "state": null,
-      "source_type": "news",
+      "source_type": "official",
       "auto_fetched": false,
-      "related_agencies": []
+      "related_agencies": [
+        "CMS"
+      ]
     },
     {
       "link": "https://www.justice.gov/opa/pr/two-foreign-nationals-indicted-chicago-part-10m-health-care-fraud-scheme",
@@ -16848,6 +16850,29 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
+      ]
+    },
+    {
+      "id": "hhs-2026-05-12-revoked-medicare-providers-dataset",
+      "date": "2026-05-12",
+      "agency": "HHS",
+      "type": "Administrative Action",
+      "title": "Revoked Medicare Providers and Suppliers",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://opendata.hhs.gov/datasets/medicare-revoked-providers-and-suppliers/",
+      "link_label": "HHS Open Data",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": [
+        "CMS"
       ]
     }
   ]
