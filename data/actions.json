@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-05-19T10:50:48.840669",
+    "last_updated": "2026-05-20T10:37:58.893325",
     "version": "1.0",
-    "last_scraped": "2026-05-19T10:50:48.840656"
+    "last_scraped": "2026-05-20T10:37:58.893310"
   },
   "actions": [
     {
@@ -16873,6 +16873,51 @@
       "auto_fetched": false,
       "related_agencies": [
         "CMS"
+      ]
+    },
+    {
+      "id": "doj-2026-05-19-3200710784",
+      "date": "2026-05-19",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Three Members of International Criminal Organization Sentenced to Lengthy Sentences in $2 Billion Telemedicine Healthcare Fraud Scheme",
+      "amount": "$2 Billion",
+      "amount_numeric": 2000000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/three-members-international-criminal-organization-sentenced-lengthy-sentences-2-billion",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Pharmacy",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "doj-2026-05-19-407007437",
+      "date": "2026-05-19",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "California Doctor Convicted of $45M Botox Fraud Scheme Targeting Medicare",
+      "amount": "$45 Million",
+      "amount_numeric": 45000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/california-doctor-convicted-45m-botox-fraud-scheme-targeting-medicare",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
       ]
     }
   ]
