@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-05-19T11:38:00.332451",
+    "last_scraped": "2026-05-20T11:27:43.593125",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -207,6 +207,10 @@
     "https://www.gao.gov/products/gao-26-109115",
     "https://oversight.house.gov/release/chairman-comer-taps-rep-gill-to-lead-new-task-force-on-exposing-institutions-seeking-to-undermine-american-government-society/",
     "https://www.cms.gov/newsroom/fact-sheets/hhs-notice-benefit-payment-parameters-2027-final-rule",
-    "https://oversight.house.gov/release/burchett-and-biggs-continue-investigation-of-planned-parenthoods-misuse-of-federal-funds/"
+    "https://oversight.house.gov/release/burchett-and-biggs-continue-investigation-of-planned-parenthoods-misuse-of-federal-funds/",
+    "https://www.gao.gov/products/oig-26-2sp",
+    "https://www.gao.gov/products/gao-26-109063",
+    "https://energycommerce.house.gov/posts/energy-and-commerce-weekly-look-ahead-the-week-of-may-18th-2026",
+    "https://waysandmeans.house.gov/2026/05/19/what-they-are-saying-broad-coalition-backs-historic-bipartisan-reforms-to-support-long-term-success-for-transition-age-foster-youth/"
   ]
 }
