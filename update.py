@@ -735,6 +735,17 @@ def get_action_type(title, desc, agency=None, link=None):
         return 'Administrative Action'
 
     # ---- Fall back to full-text checks for ambiguous titles ----
+    # Strong rule-signal check runs FIRST. CMS press releases sometimes use
+    # marketing-style titles ("CMS Moves to Rein In Misused Medicaid
+    # Dollars") for proposed/final rules, where the body uses explicit
+    # rule phrasing repeatedly. Without this check, incidental words like
+    # "fees charged to entities" or "providers" trip the criminal-fallback
+    # regex below and misclassify the item as Criminal Enforcement.
+    if re.search(
+        r'\b(proposed\s+rule|final\s+rule|interim\s+final\s+rule|'
+        r'notice\s+of\s+proposed\s+rulemaking|\bNPRM\b|'
+        r'proposed\s+regulation|final\s+regulation)\b', full_text):
+        return 'Rule/Regulation'
     if re.search(r'plead|convict|indict|charg|guilty|arrest|prosecut', full_text):
         return 'Criminal Enforcement'
     if re.search(r'civil|settlement|false claims act', full_text):
