@@ -104,8 +104,16 @@ HEALTHCARE_TERMS = [re.compile(p, re.IGNORECASE) for p in [
     r'pill mill', r'opioid pills', r'opioid prescri',
     # Reimbursement / billing language
     r'reimbursement', r'medication', r'\bstark law\b',
-    # Program integrity language (catches CMS oversight items)
-    r'\bintegrity\b', r'\bloophole\b', r'skin substitute',
+    # Program integrity language (catches CMS oversight items). Tightened
+    # from bare \bintegrity\b — that was matching unrelated phrases like
+    # "integrity of supply chains" (Canadian Steel customs FCA case
+    # 2026-05-20) and treating them as HC context, letting non-healthcare
+    # FCA items pass the Gate 1b body-text fallback. Require explicit
+    # "program integrity" / "Medicare/Medicaid/healthcare integrity"
+    # qualifier.
+    r'program\s+integrity', r'medicare\s+integrity', r'medicaid\s+integrity',
+    r'health\s*care\s+integrity', r'healthcare\s+integrity',
+    r'\bloophole\b', r'skin substitute',
 ]]
 
 # Strong healthcare signals that must appear in the TITLE of a DOJ press
