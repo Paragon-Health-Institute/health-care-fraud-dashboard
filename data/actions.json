@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-05-21T10:55:35.257737",
+    "last_updated": "2026-05-21T11:46:15.554910",
     "version": "1.0",
     "last_scraped": "2026-05-21T10:55:35.257728"
   },
@@ -16944,6 +16944,28 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "cms-2026-05-20-misused-medicaid-dollars",
+      "date": "2026-05-20",
+      "agency": "CMS",
+      "type": "Administrative Action",
+      "title": "CMS Moves to Rein In Misused Medicaid Dollars and Reward Quality Care",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-moves-rein-misused-medicaid-dollars-reward-quality-care",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Medicaid Managed Care"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": []
     }
   ]
 }
