@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-05-20T11:27:43.773027",
+    "last_updated": "2026-05-21T10:55:35.257737",
     "version": "1.0",
-    "last_scraped": "2026-05-20T10:37:58.893310"
+    "last_scraped": "2026-05-21T10:55:35.257728"
   },
   "actions": [
     {
@@ -16914,6 +16914,53 @@
       ],
       "entities": [],
       "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-05-20-1266241286",
+      "date": "2026-05-20",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Canadian Steel Companies and Owner to Pay $19M to Settle False Claims Act Allegations Relating to Evaded Customs Duties",
+      "amount": "$19 Million",
+      "amount_numeric": 19000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/canadian-steel-companies-and-owner-pay-19m-settle-false-claims-act-allegations-relating",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-05-19-3594790528",
+      "date": "2026-05-19",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Illinois Doctor Agrees to Pay $62,500 for Signing False Orders in Durable Medical Equipment Scheme",
+      "amount": "$62,500",
+      "amount_numeric": 62500.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/illinois-doctor-agrees-pay-62500-signing-false-orders-durable-medical-equipment-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "MA, IL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
