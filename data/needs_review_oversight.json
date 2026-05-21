@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-05-20T11:27:43.593125",
+    "last_scraped": "2026-05-21T11:44:33.872408",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -56,6 +56,34 @@
       "ai_decision": "not_oversight",
       "ai_confidence": 75,
       "ai_reason": "This is a markup session on broad public health reauthorizations and FDA/Medicare policies, not specifically focused on healthcare fraud, improper payments, or program integrity oversight.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-05-20-870647937",
+      "date": "2026-05-20",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "Medicaid Managed Care State Directed Payments and Medicaid Fee-For-Service Targeted Medicaid Practitioner Payments Proposed Rule (CMS-2449-P)",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/fact-sheets/medicaid-managed-care-state-directed-payments-medicaid-fee-service-targeted-medicaid-practitioner",
+      "link_label": "CMS Fact Sheet",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Medicaid Managed Care"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "healthcare_fraud_oversight",
+      "ai_confidence": 78,
+      "ai_reason": "CMS regulatory action on Medicaid payment mechanisms that directly affects program integrity and fraud risk controls, constituting healthcare-fraud-relevant policy governance.",
       "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
