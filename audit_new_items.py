@@ -291,6 +291,28 @@ def fetch_doj_page_data(url: str, page=None) -> tuple:
         print("fetch_doj_page_data: playwright or bs4 not installed", file=sys.stderr)
         return (None, "")
 
+    # Sidebar-strip regexes — mirror the ones in update.py
+    # _strip_related_sidebars(). Without these, the rendered DOM's
+    # "Related Press Releases" / "Related Content" sidebar leaks into
+    # body_text, and the body-text Gate 1b fallback in scrape_doj_opa /
+    # scrape_doj_usao matches HC keywords from unrelated sidebar items.
+    # Trigger case: Canadian Steel customs FCA item auto-promoted
+    # 2026-05-22 because sidebar items (Takeda Improper Payments to
+    # Physicians, 3 SNFs Medically Unnecessary Rehab) contained
+    # 'Medicare', 'physician', 'medical', 'health care' — making the
+    # Canadian Steel page appear healthcare-relevant.
+    _RELATED_CLASS_RE = re.compile(
+        r"(?:^|\s)(related-content|related-press|related-stor|"
+        r"views-blockrelated|more-news|more-press|"
+        r"you-may-also-like|further-reading|recommend)",
+        re.IGNORECASE,
+    )
+    _RELATED_HEADING_TEXT_RE = re.compile(
+        r"^\s*(related\s+(releases|press\s+releases|content|"
+        r"stor(y|ies)|articles?)|more\s+(news|press|from))\b",
+        re.IGNORECASE,
+    )
+
     def _extract(html: str):
         soup = BeautifulSoup(html, "lxml")
         node = soup.find(class_="node-topics")
@@ -302,6 +324,23 @@ def fetch_doj_page_data(url: str, page=None) -> tuple:
         if main:
             for t in main.find_all(["nav", "footer", "aside", "script", "style"]):
                 t.decompose()
+            # Strip related-press-release sidebars (class-based)
+            for t in main.find_all(class_=_RELATED_CLASS_RE):
+                t.decompose()
+            # Strip heading-based related sidebars: decompose the heading
+            # and every following sibling
+            for h in main.find_all(["h2", "h3", "h4"]):
+                if _RELATED_HEADING_TEXT_RE.match(h.get_text(" ", strip=True) or ""):
+                    sib = h.find_next_sibling()
+                    h.decompose()
+                    while sib is not None:
+                        nxt = sib.find_next_sibling()
+                        try:
+                            sib.decompose()
+                        except Exception:
+                            pass
+                        sib = nxt
+                    break
             body_text = main.get_text(" ", strip=True)
         return topics, body_text
 
