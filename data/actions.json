@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-05-22T10:34:17.129293",
+    "last_updated": "2026-05-22T11:23:48.071658",
     "version": "1.0",
     "last_scraped": "2026-05-22T10:34:17.129281"
   },
@@ -17037,6 +17037,25 @@
       "doj_topics": [
         "False Claims Act"
       ]
+    },
+    {
+      "id": "cms-2026-05-22-679284329",
+      "date": "2026-05-22",
+      "agency": "CMS",
+      "type": "Administrative Action",
+      "title": "CMS Crushing Fraud Quarterly Report (Q1 2026)",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/files/document/cpi-quarterly-dashboard.pdf",
+      "link_label": "CMS Report",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-05-21T11:44:33.872408",
+    "last_scraped": "2026-05-22T11:23:47.901219",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -84,6 +84,34 @@
       "ai_decision": "healthcare_fraud_oversight",
       "ai_confidence": 78,
       "ai_reason": "CMS regulatory action on Medicaid payment mechanisms that directly affects program integrity and fraud risk controls, constituting healthcare-fraud-relevant policy governance.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "hhs-oig-2026-05-21-528886971",
+      "date": "2026-05-21",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Connecticut Did Not Always Ensure Selected Nursing Homes Complied With Federal and State Background Check Requirements",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/connecticut-did-not-always-ensure-selected-nursing-homes-complied-with-federal-and-state-background-check-requirements/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Nursing Home",
+        "Assisted Living"
+      ],
+      "entities": [],
+      "state": "CT",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 75,
+      "ai_reason": "This HHS-OIG audit concerns nursing home compliance with background check requirements, which is a quality/safety oversight matter, not a healthcare fraud or program-integrity investigation.",
       "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
@@ -240,6 +268,9 @@
     "https://www.gao.gov/products/gao-26-109063",
     "https://energycommerce.house.gov/posts/energy-and-commerce-weekly-look-ahead-the-week-of-may-18th-2026",
     "https://waysandmeans.house.gov/2026/05/19/what-they-are-saying-broad-coalition-backs-historic-bipartisan-reforms-to-support-long-term-success-for-transition-age-foster-youth/",
-    "https://oig.hhs.gov/reports/all/2026/impacts-of-vertical-integration-in-medicare-part-d-on-sponsors-drug-costs-pharmacy-reimbursement-and-enrollee-cost-sharing/"
+    "https://oig.hhs.gov/reports/all/2026/impacts-of-vertical-integration-in-medicare-part-d-on-sponsors-drug-costs-pharmacy-reimbursement-and-enrollee-cost-sharing/",
+    "https://www.gao.gov/products/gao-26-108133",
+    "https://www.gao.gov/products/gao-26-108651",
+    "https://energycommerce.house.gov/posts/chairman-guthrie-delivers-opening-statement-at-full-committee-markup-of-16-bills"
   ]
 }
