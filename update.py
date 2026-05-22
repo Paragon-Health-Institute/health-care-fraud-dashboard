@@ -693,8 +693,10 @@ def get_action_type(title, desc, agency=None, link=None):
         return 'Hearing'
     if re.search(r'\b(audit|inspection|evaluation report)\b', title_l):
         return 'Audit'
-    if re.search(r'\b(senate report|house report|congressional report|'
-                 r'gao (report|finds)|report to the congress|report to congress)\b', title_l):
+    if re.search(r'\b((?:senate|house)(?:\s+\w+){0,5}\s+report|'
+                 r'congressional report|'
+                 r'gao (?:report|finds)|'
+                 r'report to (?:the )?congress)\b', title_l):
         return 'Report'
     # Agency periodic reports: "X Quarterly Report", "Annual Report", etc.
     # Catches items like 'CMS Crushing Fraud Quarterly Report (Q1 2026)'
