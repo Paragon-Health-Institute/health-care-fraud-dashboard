@@ -696,6 +696,14 @@ def get_action_type(title, desc, agency=None, link=None):
     if re.search(r'\b(senate report|house report|congressional report|'
                  r'gao (report|finds)|report to the congress|report to congress)\b', title_l):
         return 'Report'
+    # Agency periodic reports: "X Quarterly Report", "Annual Report", etc.
+    # Catches items like 'CMS Crushing Fraud Quarterly Report (Q1 2026)'
+    # that would otherwise fall through to the Administrative Action
+    # default. Requires "Report" as a noun with a periodicity adjective
+    # so a generic "Press Release reports on X" doesn't trigger.
+    if re.search(r'\b(quarterly|annual|semiannual|biennial|fiscal\s+year|fy\s*\d{4})\s+report\b',
+                 title_l):
+        return 'Report'
     # MedPAC/MACPAC publications default to Report (any publication from
     # these commissions is either a report to Congress, issue brief, or
     # comment letter — all "report"-like)
