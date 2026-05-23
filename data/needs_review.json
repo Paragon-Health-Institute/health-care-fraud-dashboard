@@ -30,6 +30,35 @@
       "ai_confidence": 35,
       "ai_reason": "Title mentions nonprofit CEO sentencing but provides no information about whether this involves healthcare, making it impossible to determine relevance without accessing the full press release content",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "doj-2026-05-21-3866578699",
+      "date": "2026-05-21",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Jury Convicts Unknown Man For Using Identity Of Deceased Child For 25 Years To Obtain Nearly $300,000 In Government Benefits",
+      "amount": "$300,000",
+      "amount_numeric": 300000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-id/pr/jury-convicts-unknown-man-using-identity-deceased-child-25-years-obtain-nearly-300000",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "ID",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flagged_at": "2026-05-23T09:20:04.892147",
+      "flag_reason": "title lacks healthcare keyword",
+      "topic_checked_at": "2026-05-23T09:20:05.038237",
+      "doj_topics": [],
+      "ai_decision": "not_healthcare_fraud",
+      "ai_confidence": 75,
+      "ai_reason": "This appears to be general government benefits fraud (likely Social Security or similar programs) rather than healthcare-specific fraud, as the press release does not mention Medicare, Medicaid, healt",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
