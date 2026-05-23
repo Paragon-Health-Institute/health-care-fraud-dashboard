@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-05-22T11:23:47.901219",
+    "last_scraped": "2026-05-23T10:11:16.987470",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -271,6 +271,9 @@
     "https://oig.hhs.gov/reports/all/2026/impacts-of-vertical-integration-in-medicare-part-d-on-sponsors-drug-costs-pharmacy-reimbursement-and-enrollee-cost-sharing/",
     "https://www.gao.gov/products/gao-26-108133",
     "https://www.gao.gov/products/gao-26-108651",
-    "https://energycommerce.house.gov/posts/chairman-guthrie-delivers-opening-statement-at-full-committee-markup-of-16-bills"
+    "https://energycommerce.house.gov/posts/chairman-guthrie-delivers-opening-statement-at-full-committee-markup-of-16-bills",
+    "https://www.gao.gov/products/gao-26-108978",
+    "https://energycommerce.house.gov/posts/chairman-guthrie-announces-full-committee-markup-of-16-bills",
+    "https://waysandmeans.house.gov/2026/05/22/ways-and-means-committee-continues-to-expand-health-care-access-for-seniors-in-rural-and-underserved-areas/"
   ]
 }

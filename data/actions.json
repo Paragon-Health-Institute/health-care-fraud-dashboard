@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-05-23T09:20:04.697342",
+    "last_updated": "2026-05-23T10:11:17.153427",
     "version": "1.0",
     "last_scraped": "2026-05-23T09:20:04.697330"
   },
@@ -17031,6 +17031,30 @@
       "tags": [],
       "entities": [],
       "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "doj-2026-05-22-286225928",
+      "date": "2026-05-22",
+      "agency": "DOJ",
+      "type": "Structural/Organizational",
+      "title": "This Week in Fraud: The Fraud Division Announced Expansion of Midwest Task Force and Authorization to Hire 15 New Medicaid Prosecutors, an Unprecedented Minnesota Health Care Fraud Takedown, and a $2 Billion Telemedicine Health Care Fraud Scheme",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/week-fraud-fraud-division-announced-expansion-midwest-task-force-and-authorization-hire-15",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Telehealth",
+        "Home Health"
+      ],
+      "entities": [],
+      "state": "MN",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
