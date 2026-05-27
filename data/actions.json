@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-05-23T10:11:17.153427",
+    "last_updated": "2026-05-27T11:07:10.244824",
     "version": "1.0",
-    "last_scraped": "2026-05-25T11:21:58.706387"
+    "last_scraped": "2026-05-27T11:07:10.244811"
   },
   "actions": [
     {
@@ -17058,6 +17058,86 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-05-22-3036052291",
+      "date": "2026-05-22",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Clinic Owner Convicted for $52M Health Care Fraud, Illegal Narcotics Distribution, and Kickback Scheme",
+      "amount": "$52 Million",
+      "amount_numeric": 52000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/clinic-owner-convicted-52m-health-care-fraud-illegal-narcotics-distribution-and-kickback",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Lab Testing",
+        "Addiction Treatment",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-05-22-296289364",
+      "date": "2026-05-22",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "APRN Charged with Defrauding Connecticut’s Medicaid Program",
+      "amount": "$1.35 Million",
+      "amount_numeric": 1350000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ct/pr/aprn-charged-defrauding-connecticuts-medicaid-program",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "CT",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-05-26-2740840895",
+      "date": "2026-05-26",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Rochester man sentenced for defrauding Medicare",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-wdny/pr/rochester-man-sentenced-defrauding-medicare",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud",
+        "Financial Fraud"
+      ]
     }
   ]
 }
