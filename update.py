@@ -1062,6 +1062,34 @@ def get_state(text, title=None, link=None, item_type=None):
                 if abbr and abbr not in states:
                     states.append(abbr)
 
+    # Path 5d: possessive + state + operations-noun. Captures multi-state
+    # operations where the body phrasing is "{X}'s Ohio facilities",
+    # "Acme Inc's California clinics", "its three Florida pharmacies",
+    # etc. — additive to Path 5b which catches "operates in X, Y, Z"
+    # style enumerations. Trigger case: Oglethorpe Inc. (Tampa, FL)
+    # operating "three of Oglethorpe's Ohio facilities" should be tagged
+    # FL, OH not just FL. Enforcement-only.
+    if text and enf_only:
+        _APOS = r"['’]"   # ASCII ' and Unicode ’ right single quote
+        _state_alt = r"|".join(sorted(STATE_MAP.keys(), key=lambda s: -len(s)))
+        poss_state_op_re = re.compile(
+            r"(?:\b\w+(?:" + _APOS + r"s|s" + _APOS + r")|its|their|our|"
+            r"the\s+(?:company|organization|defendant|provider|firm)"
+            + _APOS + r"?s?)"
+            r"(?:\s+\w+){0,5}\s+"
+            r"(?P<state>" + _state_alt + r")"
+            r"\s+(?:facilities|operations|clinics|hospitals|offices|"
+            r"locations|sites|stores|practices|centers|branches|"
+            r"pharmacies|labs|laboratories|agencies|outlets|providers|"
+            r"companies|subsidiaries|affiliates|homes|nursing\s+homes|"
+            r"group\s+homes|warehouses|plants)\b",
+            re.IGNORECASE,
+        )
+        for m in poss_state_op_re.finditer(text):
+            abbr = STATE_MAP.get(m.group('state').title())
+            if abbr and abbr not in states:
+                states.append(abbr)
+
     if states:
         return ", ".join(states)
 
