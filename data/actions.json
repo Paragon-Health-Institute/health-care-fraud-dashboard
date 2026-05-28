@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-05-28T11:08:10.450660",
+    "last_updated": "2026-05-28T11:56:22.078884",
     "version": "1.0",
     "last_scraped": "2026-05-28T11:08:10.450647"
   },
@@ -17163,6 +17163,44 @@
       "doj_topics": [
         "False Claims Act"
       ]
+    },
+    {
+      "id": "cms-2026-05-25-679284329",
+      "date": "2026-05-25",
+      "agency": "CMS",
+      "type": "Report",
+      "title": "CMS Crushing Fraud Quarterly Report (Q1 2026)",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/files/document/cpi-quarterly-dashboard.pdf",
+      "link_label": "CMS Anti-Fraud Landing Page",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "cms-2026-05-25-3750685668",
+      "date": "2026-05-25",
+      "agency": "CMS",
+      "type": "Report",
+      "title": "Fast Facts: Fraud Defense Operations Center (FDOC)",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/files/document/cpi-fdoc-fact-sheet-updated-first-year.pdf",
+      "link_label": "CMS Anti-Fraud Landing Page",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }

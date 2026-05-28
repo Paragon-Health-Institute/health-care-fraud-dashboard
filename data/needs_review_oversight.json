@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-05-25T12:05:57.124695",
+    "last_scraped": "2026-05-28T11:56:21.882023",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -113,63 +113,6 @@
       "ai_confidence": 75,
       "ai_reason": "This HHS-OIG audit concerns nursing home compliance with background check requirements, which is a quality/safety oversight matter, not a healthcare fraud or program-integrity investigation.",
       "ai_model": "claude-haiku-4-5-20251001"
-    },
-    {
-      "id": "cms-2026-05-25-679284329",
-      "date": "2026-05-25",
-      "agency": "CMS",
-      "type": "Report",
-      "title": "CMS Crushing Fraud Quarterly Report (Q1 2026)",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.cms.gov/files/document/cpi-quarterly-dashboard.pdf",
-      "link_label": "CMS Anti-Fraud Landing Page",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
-      "id": "cms-2026-05-25-3750685668",
-      "date": "2026-05-25",
-      "agency": "CMS",
-      "type": "Report",
-      "title": "Fast Facts: Fraud Defense Operations Center (FDOC)",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.cms.gov/files/document/cpi-fdoc-fact-sheet-updated-first-year.pdf",
-      "link_label": "CMS Anti-Fraud Landing Page",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
-      "id": "hhs-oig-2026-05-25-1853430051",
-      "date": "2026-05-25",
-      "agency": "HHS-OIG",
-      "type": "Report",
-      "title": "Review archived strategic plans",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/archives/oig-strategic-plans/",
-      "link_label": "HHS-OIG Strategic Plan",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
     }
   ],
   "rejected_links": [
@@ -331,6 +274,7 @@
     "https://energycommerce.house.gov/posts/chairman-guthrie-delivers-opening-statement-at-full-committee-markup-of-16-bills",
     "https://www.gao.gov/products/gao-26-108978",
     "https://energycommerce.house.gov/posts/chairman-guthrie-announces-full-committee-markup-of-16-bills",
-    "https://waysandmeans.house.gov/2026/05/22/ways-and-means-committee-continues-to-expand-health-care-access-for-seniors-in-rural-and-underserved-areas/"
+    "https://waysandmeans.house.gov/2026/05/22/ways-and-means-committee-continues-to-expand-health-care-access-for-seniors-in-rural-and-underserved-areas/",
+    "https://oig.hhs.gov/archives/oig-strategic-plans/"
   ]
 }
