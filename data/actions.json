@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-05-27T11:07:10.244824",
+    "last_updated": "2026-05-28T11:08:10.450660",
     "version": "1.0",
-    "last_scraped": "2026-05-27T11:07:10.244811"
+    "last_scraped": "2026-05-28T11:08:10.450647"
   },
   "actions": [
     {
@@ -17137,6 +17137,31 @@
       "doj_topics": [
         "Healthcare Fraud",
         "Financial Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-05-27-3086536330",
+      "date": "2026-05-27",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Oglethorpe Inc. and Top Executives Agree to Pay $32M to Resolve False Claims Act Allegations",
+      "amount": "$32 Million",
+      "amount_numeric": 32000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/oglethorpe-inc-and-top-executives-agree-pay-32m-resolve-false-claims-act-allegations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "OH",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "False Claims Act"
       ]
     }
   ]
