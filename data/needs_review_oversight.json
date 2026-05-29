@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-05-28T11:56:21.882023",
+    "last_scraped": "2026-05-29T11:46:23.937284",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -112,6 +112,32 @@
       "ai_decision": "not_oversight",
       "ai_confidence": 75,
       "ai_reason": "This HHS-OIG audit concerns nursing home compliance with background check requirements, which is a quality/safety oversight matter, not a healthcare fraud or program-integrity investigation.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-05-28-237768478",
+      "date": "2026-05-28",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "Federal Rule Takes Aim at Health Care Bureaucracy, Reducing Dispute Fees, and Boosting Transparency",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/federal-rule-takes-aim-health-care-bureaucracy-reducing-dispute-fees-boosting-transparency",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "ACA"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 72,
+      "ai_reason": "This appears to be a general CMS administrative rule about dispute fees and transparency rather than a healthcare-fraud-specific oversight action, audit finding, or program-integrity initiative.",
       "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
@@ -275,6 +301,8 @@
     "https://www.gao.gov/products/gao-26-108978",
     "https://energycommerce.house.gov/posts/chairman-guthrie-announces-full-committee-markup-of-16-bills",
     "https://waysandmeans.house.gov/2026/05/22/ways-and-means-committee-continues-to-expand-health-care-access-for-seniors-in-rural-and-underserved-areas/",
-    "https://oig.hhs.gov/archives/oig-strategic-plans/"
+    "https://oig.hhs.gov/archives/oig-strategic-plans/",
+    "https://www.cms.gov/newsroom/fact-sheets/federal-independent-dispute-resolution-operations-final-rule",
+    "https://oversight.house.gov/release/grothman-burlison-announce-roundtable-to-examine-how-the-working-families-tax-cuts-act-delivered-historic-economic-relief/"
   ]
 }
