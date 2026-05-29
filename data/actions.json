@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-05-28T11:56:22.078884",
+    "last_updated": "2026-05-29T10:59:07.864756",
     "version": "1.0",
-    "last_scraped": "2026-05-28T11:08:10.450647"
+    "last_scraped": "2026-05-29T10:59:07.864745"
   },
   "actions": [
     {
@@ -17201,6 +17201,30 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-05-28-2510435893",
+      "date": "2026-05-28",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Clinic Manager Convicted of $8M Medicare Fraud Scheme",
+      "amount": "$8 Million",
+      "amount_numeric": 8000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/clinic-manager-convicted-8m-medicare-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Physical Therapy"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
