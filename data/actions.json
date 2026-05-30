@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-05-29T10:59:07.864756",
+    "last_updated": "2026-05-30T09:30:07.160196",
     "version": "1.0",
-    "last_scraped": "2026-05-29T10:59:07.864745"
+    "last_scraped": "2026-05-30T09:30:07.160184"
   },
   "actions": [
     {
@@ -17220,6 +17220,30 @@
       ],
       "entities": [],
       "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-05-28-530967063",
+      "date": "2026-05-28",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Blood Test Lab Owner Sentenced to More Than 4 Years in Federal Prison for Using Shill to Collect Medicare Payments to Evade $11.2 Million in Taxes",
+      "amount": "$11.2 Million",
+      "amount_numeric": 11200000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-cdca/pr/blood-test-lab-owner-sentenced-more-4-years-federal-prison-using-shill-collect",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Lab Testing"
+      ],
+      "entities": [],
+      "state": "CA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
