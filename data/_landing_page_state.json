@@ -3,16 +3,17 @@
     "https://www.cms.gov/fraud": {
       "links": [
         "https://www.cms.gov/files/document/cpi-quarterly-dashboard.pdf",
-        "https://www.cms.gov/files/document/sample-beneficiary-hospice-notification.pdf",
         "https://www.cms.gov/files/document/crushing-fraud-annual-report.pdf",
         "https://www.cms.gov/files/document/hot-spot-dmepos-suppliers.pdf",
+        "https://www.cms.gov/files/document/cpi-fraud-spotlight-marketplace.pdf",
         "https://www.cms.gov/files/document/cpi-dual-enrollment-fast-facts.pdf",
         "https://www.cms.gov/files/document/cpi-radvfact-sheet.pdf",
         "https://www.cms.gov/files/document/hospice-fact-sheet-1-28-26.pdf",
-        "https://www.cms.gov/files/document/cpi-fdoc-fact-sheet-updated-first-year.pdf"
+        "https://www.cms.gov/files/document/cpi-fdoc-fact-sheet-updated-first-year.pdf",
+        "https://www.cms.gov/files/document/sample-beneficiary-hospice-notification.pdf"
       ],
-      "count": 8,
-      "last_checked": "2026-05-25T12:52:36.623780"
+      "count": 9,
+      "last_checked": "2026-06-01T15:42:05.836733"
     },
     "https://oig.hhs.gov/fraud/": {
       "links": [
@@ -27,7 +28,7 @@
         "https://oig.hhs.gov/reports/all/?report-type=SAR&hhs-agency=#results"
       ],
       "count": 9,
-      "last_checked": "2026-05-25T12:52:40.939089"
+      "last_checked": "2026-06-01T15:42:10.280751"
     },
     "https://oig.hhs.gov/about-oig/strategic-plan/": {
       "links": [
@@ -36,7 +37,7 @@
         "https://oig.hhs.gov/archives/oig-strategic-plans/"
       ],
       "count": 3,
-      "last_checked": "2026-05-25T12:52:44.928997"
+      "last_checked": "2026-06-01T15:42:14.205387"
     },
     "https://oig.hhs.gov/reports-and-publications/hcfac/": {
       "links": [
@@ -64,12 +65,12 @@
         "https://oig.hhs.gov/reports/all/?report-type=SAR&hhs-agency=#results"
       ],
       "count": 22,
-      "last_checked": "2026-05-25T12:52:49.184142"
+      "last_checked": "2026-06-01T15:42:18.512588"
     },
     "https://www.gao.gov/high-risk-list": {
       "links": [],
       "count": 0,
-      "last_checked": "2026-05-25T12:52:52.207313"
+      "last_checked": "2026-06-01T15:42:21.658278"
     },
     "https://oig.hhs.gov/compliance/": {
       "links": [
@@ -79,8 +80,8 @@
         "https://oig.hhs.gov/compliance/compliance-resource-material/"
       ],
       "count": 4,
-      "last_checked": "2026-05-25T12:52:56.422806"
+      "last_checked": "2026-06-01T15:42:25.579653"
     }
   },
-  "last_checked": "2026-05-25T12:52:56.422817"
+  "last_checked": "2026-06-01T15:42:25.579669"
 }

@@ -139,6 +139,25 @@
       "ai_confidence": 72,
       "ai_reason": "This appears to be a general CMS administrative rule about dispute fees and transparency rather than a healthcare-fraud-specific oversight action, audit finding, or program-integrity initiative.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-06-01-1220226674",
+      "date": "2026-06-01",
+      "agency": "CMS",
+      "type": "Report",
+      "title": "Fraud Spotlight: ACA Marketplace",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/files/document/cpi-fraud-spotlight-marketplace.pdf",
+      "link_label": "CMS Anti-Fraud Landing Page",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ],
   "rejected_links": [
