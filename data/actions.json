@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-05-30T09:30:07.160196",
+    "last_updated": "2026-06-01T13:06:50.036219",
     "version": "1.0",
-    "last_scraped": "2026-05-31T10:03:03.501767"
+    "last_scraped": "2026-06-01T13:06:50.036206"
   },
   "actions": [
     {
@@ -17248,6 +17248,31 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-06-01-3510515802",
+      "date": "2026-06-01",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Nurse Practitioner in Jacksonville Pleads Guilty to Unlawful Distribution of Controlled Substances",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-mdfl/pr/nurse-practitioner-jacksonville-pleads-guilty-unlawful-distribution-controlled",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Prescription Drugs",
+        "Drug Trafficking"
       ]
     }
   ]
