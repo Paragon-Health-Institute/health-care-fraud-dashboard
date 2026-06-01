@@ -39,6 +39,41 @@ from datetime import datetime
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_FILE = os.path.join(SCRIPT_DIR, "data", "actions.json")
+
+
+def _normalize_link_for_dedup(link: str) -> str:
+    """Minimal link normalization used by the review-queue dedup check.
+    Strips scheme, leading 'www.', trailing slash; lowercases the result.
+    Independent of update.py's normalize_link() to avoid a circular import."""
+    if not link:
+        return ""
+    try:
+        from urllib.parse import urlparse
+        p = urlparse(link)
+        host = p.netloc.lower()
+        if host.startswith("www."):
+            host = host[4:]
+        path = p.path.rstrip("/")
+        return f"{host}{path}".lower()
+    except Exception:
+        return link.lower().rstrip("/")
+
+
+def _build_existing_links(actions_data: dict) -> set:
+    """Return a set of normalized links currently in actions.json."""
+    out = set()
+    for a in (actions_data or {}).get("actions", []):
+        link = a.get("link") or ""
+        if link:
+            out.add(_normalize_link_for_dedup(link))
+    return out
+
+
+def _is_duplicate_link(link: str, existing_links: set) -> bool:
+    """True if `link` (normalized) is already in `existing_links`."""
+    if not link or not existing_links:
+        return False
+    return _normalize_link_for_dedup(link) in existing_links
 REVIEW_FILE = os.path.join(SCRIPT_DIR, "data", "needs_review.json")
 SUMMARY_FILE = os.path.join(SCRIPT_DIR, "data", "_audit_summary.md")
 
@@ -528,6 +563,13 @@ def cmd_promote(item_id: str) -> int:
     clean = _strip_review_metadata(item)
 
     data = load_json(DATA_FILE, {"actions": []})
+    # Dedup: refuse to promote if the link is already in actions.json.
+    if _is_duplicate_link(clean.get("link", ""), _build_existing_links(data)):
+        print(f"promote: SKIP {item_id} — link already in actions.json", file=sys.stderr)
+        # Remove from review queue so it doesn't keep getting re-checked
+        review["items"] = [a for a in review["items"] if a.get("id") != item_id]
+        save_json(REVIEW_FILE, review)
+        return 1
     data.setdefault("actions", []).append(clean)
     save_json(DATA_FILE, data)
 
@@ -594,9 +636,11 @@ def cmd_topic_check() -> int:
     print(f"topic-check: checking {len(pending)} item(s) against DOJ .node-topics")
 
     data = load_json(DATA_FILE, {"actions": []})
+    existing_links_set = _build_existing_links(data)
     promoted = []
     tagged_non_hc = []
     no_topic = []
+    skipped_dup = []
     now_iso = datetime.now().isoformat()
 
     with sync_playwright() as p:
@@ -619,8 +663,14 @@ def cmd_topic_check() -> int:
                 print(f"  [NO TOPIC] {item['id']}: {item.get('title','')[:80]}")
             elif has_hc_topic(topics):
                 item["doj_topics"] = topics
+                # Dedup: skip if link already in actions.json
+                if _is_duplicate_link(item.get("link", ""), existing_links_set):
+                    skipped_dup.append(item)
+                    print(f"  [SKIP-DUP] {item['id']}: link already in actions.json")
+                    continue
                 clean = _strip_review_metadata(item)
                 data.setdefault("actions", []).append(clean)
+                existing_links_set.add(_normalize_link_for_dedup(item.get("link", "")))
                 promoted.append(item)
                 print(f"  [PROMOTE]  {item['id']}: {topics}")
                 print(f"             {item.get('title','')[:80]}")
@@ -793,6 +843,7 @@ def cmd_ai_review() -> int:
     client = anthropic.Anthropic(api_key=api_key)
 
     data = load_json(DATA_FILE, {"actions": []})
+    existing_links_set = _build_existing_links(data)
     promoted_items = []
     rejected_items = []
     escalated_items = []
@@ -818,10 +869,17 @@ def cmd_ai_review() -> int:
         item["ai_model"] = AI_MODEL
 
         if is_hc and conf >= AUTO_PROMOTE_THRESHOLD:
+            # Dedup: skip if link already in actions.json
+            if _is_duplicate_link(item.get("link", ""), existing_links_set):
+                print(f"             SKIP-DUP — link already in actions.json")
+                # Treat as handled so it leaves the queue
+                promoted_items.append(item)
+                continue
             # Auto-promote: strip review metadata and add to actions
             clean = {k: v for k, v in item.items()
                      if not k.startswith("ai_") and k not in ("flagged_at", "flag_reason")}
             data.setdefault("actions", []).append(clean)
+            existing_links_set.add(_normalize_link_for_dedup(item.get("link", "")))
             promoted_items.append(item)
             print(f"             PROMOTE (confidence={conf}) — {reason[:80]}")
         elif (not is_hc) and conf >= AUTO_REJECT_THRESHOLD:
@@ -1518,12 +1576,25 @@ def cmd_audit_oversight() -> int:
             review["rejected_links"].append(link)
 
     if auto_promoted:
+        # Dedup: filter out any items whose link is already in actions.json
+        existing_links_set = _build_existing_links(actions)
+        deduped_promoted = []
+        skipped_dup_count = 0
         for item in auto_promoted:
+            if _is_duplicate_link(item.get("link", ""), existing_links_set):
+                skipped_dup_count += 1
+                continue
             for k in ("flagged_at", "flag_reason", "audit_decision"):
                 item.pop(k, None)
-        actions.setdefault("actions", []).extend(auto_promoted)
-        actions["metadata"]["last_updated"] = datetime.now().isoformat()
-        save_json(DATA_FILE, actions)
+            existing_links_set.add(_normalize_link_for_dedup(item.get("link", "")))
+            deduped_promoted.append(item)
+        if skipped_dup_count:
+            print(f"audit-oversight: skipped {skipped_dup_count} auto-promote(s) — links already in actions.json")
+        if deduped_promoted:
+            actions.setdefault("actions", []).extend(deduped_promoted)
+            actions["metadata"]["last_updated"] = datetime.now().isoformat()
+            save_json(DATA_FILE, actions)
+        # auto_promoted still tracks all (so they leave the queue)
 
     # Remove promoted + auto-rejected from the review queue.
     # Only items flagged for AI review (Tier 2) remain.
@@ -1593,6 +1664,7 @@ def cmd_ai_review_oversight() -> int:
 
     actions = load_json(DATA_FILE, {"metadata": {"version": "1.0", "last_updated": ""},
                                      "actions": []})
+    existing_links_set = _build_existing_links(actions)
 
     promoted = []
     rejected = []
@@ -1621,10 +1693,17 @@ def cmd_ai_review_oversight() -> int:
         item["ai_model"] = AI_MODEL
 
         if is_oversight and conf >= AUTO_PROMOTE_THRESHOLD:
+            # Dedup: skip if link already in actions.json
+            if _is_duplicate_link(item.get("link", ""), existing_links_set):
+                print(f"             SKIP-DUP — link already in actions.json")
+                # Treat as handled so it leaves the queue
+                promoted.append(item)
+                continue
             clean = {k: v for k, v in item.items()
                      if not k.startswith("ai_")
                      and k not in ("flagged_at", "flag_reason", "audit_decision")}
             actions.setdefault("actions", []).append(clean)
+            existing_links_set.add(_normalize_link_for_dedup(item.get("link", "")))
             promoted.append(item)
             print(f"             PROMOTE (confidence={conf}) — {reason[:80]}")
         elif (not is_oversight) and conf >= AUTO_REJECT_THRESHOLD:
@@ -1666,6 +1745,12 @@ def cmd_oversight_promote(item_id: str) -> int:
             actions = load_json(DATA_FILE, {"metadata": {"version": "1.0",
                                                           "last_updated": ""},
                                               "actions": []})
+            # Dedup: refuse to promote if link already in actions.json
+            if _is_duplicate_link(it.get("link", ""), _build_existing_links(actions)):
+                print(f"oversight-promote: SKIP {item_id} — link already in actions.json",
+                      file=sys.stderr)
+                save_json(OVERSIGHT_REVIEW_FILE, review)
+                return 1
             actions.setdefault("actions", []).append(it)
             actions["metadata"]["last_updated"] = datetime.now().isoformat()
             save_json(DATA_FILE, actions)
