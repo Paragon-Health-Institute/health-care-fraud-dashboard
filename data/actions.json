@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-06-01T13:06:50.036219",
+    "last_updated": "2026-06-01T13:52:33.293902",
     "version": "1.0",
     "last_scraped": "2026-06-01T13:06:50.036206"
   },
@@ -17274,6 +17274,28 @@
         "Prescription Drugs",
         "Drug Trafficking"
       ]
+    },
+    {
+      "id": "hhs-oig-2026-05-28-1728045528",
+      "date": "2026-05-28",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "CMS Potentially Overpaid Medicare Advantage Organizations $462 Million Based on Certain Unsupported Acute Stroke Diagnosis Codes",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/cms-potentially-overpaid-medicare-advantage-organizations-462-million-based-on-certain-unsupported-acute-stroke-diagnosis-codes/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
