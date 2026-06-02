@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-06-01T13:52:33.293902",
+    "last_updated": "2026-06-02T11:50:20.297928",
     "version": "1.0",
-    "last_scraped": "2026-06-01T13:06:50.036206"
+    "last_scraped": "2026-06-02T11:50:20.297917"
   },
   "actions": [
     {
@@ -17277,6 +17277,35 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-06-01-4003937815",
+      "date": "2026-06-01",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Laboratory Executives, Marketers, and Physician to Pay Over $2M to Settle Allegations of Illegal Kickbacks to Doctors",
+      "amount": "$2 Million",
+      "amount_numeric": 2000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/laboratory-executives-marketers-and-physician-pay-over-2m-settle-allegations-illegal",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "TRICARE",
+        "Lab Testing"
+      ],
+      "entities": [],
+      "state": "TX",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ]
     }
   ]
 }
