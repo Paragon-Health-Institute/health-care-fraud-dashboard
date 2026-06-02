@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-06-01T13:52:33.134007",
+    "last_scraped": "2026-06-02T12:20:30.822001",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -141,23 +141,57 @@
       "ai_model": "claude-haiku-4-5-20251001"
     },
     {
-      "id": "cms-2026-06-01-1220226674",
+      "id": "cms-2026-06-01-545394189",
       "date": "2026-06-01",
       "agency": "CMS",
-      "type": "Report",
-      "title": "Fraud Spotlight: ACA Marketplace",
+      "type": "Rule/Regulation",
+      "title": "CMS Launches Nationwide Framework to Implement Medicaid Work Requirements",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
-      "link": "https://www.cms.gov/files/document/cpi-fraud-spotlight-marketplace.pdf",
-      "link_label": "CMS Anti-Fraud Landing Page",
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-launches-nationwide-framework-implement-medicaid-work-requirements",
+      "link_label": "CMS Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid"
+      ],
       "entities": [],
       "state": null,
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 88,
+      "ai_reason": "Medicaid work requirements is a policy/eligibility rule change, not a healthcare fraud or program-integrity oversight action.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-06-01-3652899719",
+      "date": "2026-06-01",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "Medicaid Community Engagement Requirement for Certain Individuals Interim Final Rule with Comment Period (CMS-2454-IFC)",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/fact-sheets/medicaid-community-engagement-requirement-certain-individuals-interim-final-rule-comment-period-cms",
+      "link_label": "CMS Fact Sheet",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 78,
+      "ai_reason": "This is a CMS rule about Medicaid community engagement requirements for beneficiaries, which is a coverage/eligibility policy matter unrelated to healthcare fraud or program integrity oversight.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [

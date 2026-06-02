@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-06-02T11:50:20.297928",
+    "last_updated": "2026-06-02T12:20:30.997881",
     "version": "1.0",
     "last_scraped": "2026-06-02T11:50:20.297917"
   },
@@ -17306,6 +17306,25 @@
       "doj_topics": [
         "False Claims Act"
       ]
+    },
+    {
+      "id": "cms-2026-06-01-1220226674",
+      "date": "2026-06-01",
+      "agency": "CMS",
+      "type": "Report",
+      "title": "Fraud Spotlight: ACA Marketplace",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/files/document/cpi-fraud-spotlight-marketplace.pdf",
+      "link_label": "CMS Anti-Fraud Landing Page",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
