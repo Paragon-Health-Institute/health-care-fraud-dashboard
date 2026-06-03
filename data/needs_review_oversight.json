@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-06-02T12:20:30.822001",
+    "last_scraped": "2026-06-03T12:55:33.763296",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
