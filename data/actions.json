@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-06-02T12:20:30.997881",
+    "last_updated": "2026-06-03T12:17:36.127823",
     "version": "1.0",
-    "last_scraped": "2026-06-02T11:50:20.297917"
+    "last_scraped": "2026-06-03T12:17:36.127811"
   },
   "actions": [
     {
@@ -17325,6 +17325,51 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-06-02-1826741837",
+      "date": "2026-06-02",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Nurse Practitioner Convicted for Illegal Distribution of Controlled Substances",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/nurse-practitioner-convicted-illegal-distribution-controlled-substances",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "TN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-06-02-2522069680",
+      "date": "2026-06-02",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Nevada Man Pleads Guilty to Rigging Bids for Healthcare-Related and Other Air Force Projects",
+      "amount": "$1.8 Million",
+      "amount_numeric": 1800000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/nevada-man-pleads-guilty-rigging-bids-healthcare-related-and-other-air-force-projects",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "NV",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Antitrust"
+      ]
     }
   ]
 }
