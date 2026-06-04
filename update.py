@@ -2449,9 +2449,9 @@ def scrape_cms_fraud_page(session):
 _HEARING_ABOUT_PATTERN = re.compile(
     r"("
     # "Announce(s/d) ... Hearing" with up to 60 chars between
-    r"\bannounc\w*\s[\w\s,.&'-]{0,60}?\bhearing\b|"
+    r"\bannounc\w*\s[\w\s,.&'’-]{0,60}?\bhearing\b|"
     # "Opens / Opened ... Hearing"
-    r"\bopen(s|ed|ing)?\s[\w\s,.&'-]{0,30}?\bhearing\b|"
+    r"\bopen(s|ed|ing)?\s[\w\s,.&'’-]{0,30}?\bhearing\b|"
     # "Opening Statement ... Hearing" or "Opening Statement: Hearing"
     r"\bopening\s+(statement|remarks)[\s\S]{0,30}?\bhearing\b|"
     # Wrap-up phrasing
@@ -2463,7 +2463,7 @@ _HEARING_ABOUT_PATTERN = re.compile(
     # Closing statements
     r"\bclosing\s+(statement|remarks)[\s\S]{0,20}?\bhearing\b|"
     # Recap/readout about a hearing
-    r"\b(recap|readout|summary)\s[\w\s,.&'-]{0,20}?\bhearing\b|"
+    r"\b(recap|readout|summary)\s[\w\s,.&'’-]{0,20}?\bhearing\b|"
     # "Key Moments / Top Moments / Highlights / Takeaways" recap formats
     # e.g. "Seven Key Moments: Hearing on Medicare Fraud", "Top 5 Moments from Hearing"
     r"\b(key|top|best|biggest)\s+(\d+\s+)?(moments|takeaways|highlights|quotes)[\s\S]{0,30}?\bhearing\b|"

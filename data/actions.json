@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-06-04T11:30:31.522722",
+    "last_updated": "2026-06-04T16:27:51.623026",
     "version": "1.0",
     "last_scraped": "2026-06-04T10:50:09.449252"
   },
@@ -17399,26 +17399,24 @@
       ]
     },
     {
-      "id": "congress-2026-06-03-327527395",
-      "date": "2026-06-03",
+      "id": "congress-2026-05-27-universal-basic-fraud-medicaid-waiver-hearing",
+      "date": "2026-05-27",
       "agency": "Congress",
       "type": "Hearing",
-      "title": "Gill Opens Task Force’s First Hearing on Ohio Medicaid Waiver Fraud - United States House Committee on Oversight and Government Reform",
-      "amount": null,
+      "title": "Universal Basic Fraud: Vulnerabilities in Medicaid Waiver Programs",
+      "amount": "",
       "amount_numeric": 0,
       "officials": [],
-      "link": "https://oversight.house.gov/release/gill-opens-task-forces-first-hearing-on-ohio-medicaid-waiver-fraud/",
-      "link_label": "House Oversight Release",
+      "link": "https://oversight.house.gov/hearing/universal-basic-fraud-vulnerabilities-in-medicaid-waiver-programs/",
+      "link_label": "House Oversight Hearing",
       "social_posts": [],
       "tags": [
-        "Medicare",
-        "Medicaid",
-        "Home Health"
+        "Medicaid"
       ],
       "entities": [],
-      "state": "OH",
+      "state": null,
       "source_type": "official",
-      "auto_fetched": true,
+      "auto_fetched": false,
       "related_agencies": []
     }
   ]
