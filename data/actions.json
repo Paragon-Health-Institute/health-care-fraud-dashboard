@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-06-03T12:17:36.127823",
+    "last_updated": "2026-06-04T10:50:09.449263",
     "version": "1.0",
-    "last_scraped": "2026-06-03T12:17:36.127811"
+    "last_scraped": "2026-06-04T10:50:09.449252"
   },
   "actions": [
     {
@@ -17369,6 +17369,33 @@
       "related_agencies": [],
       "doj_topics": [
         "Antitrust"
+      ]
+    },
+    {
+      "id": "doj-2026-06-03-115302901",
+      "date": "2026-06-03",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Matrix, HealthFair, and HealthFair Founder Agree to Pay $56.5M to Resolve False Claims Act Allegations",
+      "amount": "$56.5 Million",
+      "amount_numeric": 56500000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/matrix-healthfair-and-healthfair-founder-agree-pay-565m-resolve-false-claims-act-allegations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
       ]
     }
   ]
