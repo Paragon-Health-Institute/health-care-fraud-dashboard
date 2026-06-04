@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-06-03T12:55:33.763296",
+    "last_scraped": "2026-06-04T11:30:31.341157",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -192,6 +192,56 @@
       "ai_confidence": 78,
       "ai_reason": "This is a CMS rule about Medicaid community engagement requirements for beneficiaries, which is a coverage/eligibility policy matter unrelated to healthcare fraud or program integrity oversight.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "congress-2026-06-03-2908665727",
+      "date": "2026-06-03",
+      "agency": "Congress",
+      "type": "Rule/Regulation",
+      "title": "Chairman Guthrie Supports CMS Rulemaking on Commonsense Medicaid Community Engagement Requirements",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://energycommerce.house.gov/posts/chairman-guthrie-supports-cms-rulemaking-on-commonsense-medicaid-community-engagement-requirements",
+      "link_label": "House E&C Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 82,
+      "ai_reason": "This is a congressional statement supporting CMS rulemaking on Medicaid community engagement requirements, which is healthcare policy but not related to fraud, improper payments, or program integrity.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "congress-2026-06-03-2051495359",
+      "date": "2026-06-03",
+      "agency": "Congress",
+      "type": "Administrative Action",
+      "title": "Chairman Cassidy Asks for Meeting with President Trump to Discuss Plan to Lower Health Care Costs | The U.S. Senate Committee on Health, Education, Labor & Pensions",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-asks-for-meeting-with-president-trump-to-discuss-plan-to-lower-health-care-costs",
+      "link_label": "Senate HELP Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 88,
+      "ai_reason": "This is a general healthcare policy/cost-reduction initiative request, not an oversight action focused on fraud, improper payments, or program integrity.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -356,6 +406,7 @@
     "https://waysandmeans.house.gov/2026/05/22/ways-and-means-committee-continues-to-expand-health-care-access-for-seniors-in-rural-and-underserved-areas/",
     "https://oig.hhs.gov/archives/oig-strategic-plans/",
     "https://www.cms.gov/newsroom/fact-sheets/federal-independent-dispute-resolution-operations-final-rule",
-    "https://oversight.house.gov/release/grothman-burlison-announce-roundtable-to-examine-how-the-working-families-tax-cuts-act-delivered-historic-economic-relief/"
+    "https://oversight.house.gov/release/grothman-burlison-announce-roundtable-to-examine-how-the-working-families-tax-cuts-act-delivered-historic-economic-relief/",
+    "https://waysandmeans.house.gov/2026/06/01/chairman-smith-applauds-trump-administration-actions-correcting-failed-biden-era-implementation-of-no-surprises-act/"
   ]
 }

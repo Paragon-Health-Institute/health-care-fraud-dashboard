@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-06-04T10:50:09.449263",
+    "last_updated": "2026-06-04T11:30:31.522722",
     "version": "1.0",
     "last_scraped": "2026-06-04T10:50:09.449252"
   },
@@ -17397,6 +17397,29 @@
       "doj_topics": [
         "False Claims Act"
       ]
+    },
+    {
+      "id": "congress-2026-06-03-327527395",
+      "date": "2026-06-03",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "Gill Opens Task Force’s First Hearing on Ohio Medicaid Waiver Fraud - United States House Committee on Oversight and Government Reform",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oversight.house.gov/release/gill-opens-task-forces-first-hearing-on-ohio-medicaid-waiver-fraud/",
+      "link_label": "House Oversight Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Home Health"
+      ],
+      "entities": [],
+      "state": "OH",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
