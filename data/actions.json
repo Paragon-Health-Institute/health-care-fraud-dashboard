@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-06-04T16:27:51.623026",
+    "last_updated": "2026-06-05T11:00:30.977892",
     "version": "1.0",
-    "last_scraped": "2026-06-04T10:50:09.449252"
+    "last_scraped": "2026-06-05T11:00:30.977882"
   },
   "actions": [
     {
@@ -17418,6 +17418,61 @@
       "source_type": "official",
       "auto_fetched": false,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-06-04-2352664267",
+      "date": "2026-06-04",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "National Fraud Enforcement Division’s Healthcare Fraud Unit Secures Six Trial Convictions Involving over $1.1 Billion in Fraud In Under Three Weeks: Convictions Span five Federal Districts & six Distinct Categories of Healthcare Fraud",
+      "amount": "$1.1 Billion",
+      "amount_numeric": 1100000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/national-fraud-enforcement-divisions-healthcare-fraud-unit-secures-six-trial-convictions",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "DME",
+        "Lab Testing",
+        "Telehealth",
+        "Home Health",
+        "Physical Therapy",
+        "Addiction Treatment",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "doj-2026-06-04-4100576920",
+      "date": "2026-06-04",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "New River Couple Sentenced for $12 Million AHCCCS Fraud Scheme",
+      "amount": "$12 Million",
+      "amount_numeric": 12000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-az/pr/new-river-couple-sentenced-12-million-ahcccs-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Mental Health",
+        "Behavioral Health"
+      ],
+      "entities": [],
+      "state": "AZ",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
     }
   ]
 }
