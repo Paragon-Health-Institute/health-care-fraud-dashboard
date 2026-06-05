@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-06-05T11:00:30.977892",
+    "last_updated": "2026-06-05T11:41:48.067088",
     "version": "1.0",
     "last_scraped": "2026-06-05T11:00:30.977882"
   },
@@ -17473,6 +17473,27 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "hhs-oig-2026-06-04-2911022672",
+      "date": "2026-06-04",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Lehigh Valley Hospital Received At Least $17.8 Million in Medicare Overpayments",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/lehigh-valley-hospital-received-at-least-178-million-in-medicare-overpayments/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }

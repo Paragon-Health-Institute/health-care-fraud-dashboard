@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-06-04T11:30:31.341157",
+    "last_scraped": "2026-06-05T11:41:47.868015",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -408,6 +408,11 @@
     "https://www.cms.gov/newsroom/fact-sheets/federal-independent-dispute-resolution-operations-final-rule",
     "https://oversight.house.gov/release/grothman-burlison-announce-roundtable-to-examine-how-the-working-families-tax-cuts-act-delivered-historic-economic-relief/",
     "https://waysandmeans.house.gov/2026/06/01/chairman-smith-applauds-trump-administration-actions-correcting-failed-biden-era-implementation-of-no-surprises-act/",
-    "https://oversight.house.gov/release/gill-opens-task-forces-first-hearing-on-ohio-medicaid-waiver-fraud/"
+    "https://oversight.house.gov/release/gill-opens-task-forces-first-hearing-on-ohio-medicaid-waiver-fraud/",
+    "https://www.gao.gov/products/gao-26-108044",
+    "https://oversight.house.gov/release/grothman-opens-roundtable-on-success-of-working-families-tax-cuts-act/",
+    "https://oversight.house.gov/release/burlison-opens-roundtable-on-success-of-working-families-tax-cuts-act/",
+    "https://energycommerce.house.gov/posts/chairmen-guthrie-joyce-and-latta-request-investigation-of-foreign-adversaries-efforts-to-block-american-data-center-buildout",
+    "https://www.gao.gov/products/gao-26-107677"
   ]
 }
