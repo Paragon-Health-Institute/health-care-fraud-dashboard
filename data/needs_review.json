@@ -92,6 +92,33 @@
       "ai_confidence": 85,
       "ai_reason": "This is a generic fraud partnership announcement without healthcare-specific terminology, fitting the 'roundups' or 'organizational news' category rather than a specific enforcement action.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "doj-2026-06-05-3472158233",
+      "date": "2026-06-05",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Chiropractor and Former CEO Pleads Guilty to Filing False Tax Returns",
+      "amount": "$1.3 Million",
+      "amount_numeric": 1300000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/chiropractor-and-former-ceo-pleads-guilty-filing-false-tax-returns",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "IL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flagged_at": "2026-06-06T09:35:50.528870",
+      "flag_reason": "title lacks healthcare keyword",
+      "topic_checked_at": "2026-06-06T09:35:50.679348",
+      "doj_topics": [],
+      "ai_decision": "not_healthcare_fraud",
+      "ai_confidence": 78,
+      "ai_reason": "The case involves tax fraud charges, which is explicitly listed as out of scope unless it is a side charge on a primary healthcare fraud case; the title indicates tax returns are the primary focus.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
