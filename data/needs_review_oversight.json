@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-06-05T11:41:47.868015",
+    "last_scraped": "2026-06-06T10:28:17.055428",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -413,6 +413,7 @@
     "https://oversight.house.gov/release/grothman-opens-roundtable-on-success-of-working-families-tax-cuts-act/",
     "https://oversight.house.gov/release/burlison-opens-roundtable-on-success-of-working-families-tax-cuts-act/",
     "https://energycommerce.house.gov/posts/chairmen-guthrie-joyce-and-latta-request-investigation-of-foreign-adversaries-efforts-to-block-american-data-center-buildout",
-    "https://www.gao.gov/products/gao-26-107677"
+    "https://www.gao.gov/products/gao-26-107677",
+    "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-presses-zohran-mamdani-nyc-hospital-on-major-health-breach-calls-for-safeguards-to-protect-patients"
   ]
 }
