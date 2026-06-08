@@ -698,6 +698,13 @@ def get_action_type(title, desc, agency=None, link=None):
                  r'gao (?:report|finds)|'
                  r'report to (?:the )?congress)\b', title_l):
         return 'Report'
+    # Committee-issued reports without explicit "Senate" / "House" prefix.
+    # Catches titles like "Oversight Committee Releases Bombshell Report on
+    # Minnesota Fraud" / "Finance Committee Publishes Annual Report" — these
+    # are committee report releases, not structural / administrative actions.
+    if re.search(r'\bcommittee\s+(?:releases?|publishes?|issues?|files?|'
+                 r'delivers?|unveils?)\s+(?:\w+\s+){0,5}\breport\b', title_l):
+        return 'Report'
     # Agency periodic reports: "X Quarterly Report", "Annual Report", etc.
     # Catches items like 'CMS Crushing Fraud Quarterly Report (Q1 2026)'
     # that would otherwise fall through to the Administrative Action
