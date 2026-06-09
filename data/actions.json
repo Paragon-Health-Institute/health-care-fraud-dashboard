@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-06-09T10:51:20.387380",
+    "last_updated": "2026-06-09T11:36:39.315311",
     "version": "1.0",
     "last_scraped": "2026-06-09T10:51:20.387368"
   },
@@ -17568,6 +17568,68 @@
       "doj_topics": [
         "False Claims Act"
       ]
+    },
+    {
+      "id": "congress-2026-06-08-4015607692",
+      "date": "2026-06-08",
+      "agency": "Congress",
+      "type": "Rule/Regulation",
+      "title": "Chairman Comer: Congress Must Stop Fraud to Protect Taxpayers - United States House Committee on Oversight and Government Reform",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oversight.house.gov/release/chairman-comer-congress-must-stop-fraud-to-protect-taxpayers/",
+      "link_label": "House Oversight Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Hospice"
+      ],
+      "entities": [],
+      "state": "MN, CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "congress-2026-06-08-3253696669",
+      "date": "2026-06-08",
+      "agency": "Congress",
+      "type": "Investigation",
+      "title": "Comer: Government Must Stop Fraud Before It Starts - United States House Committee on Oversight and Government Reform",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oversight.house.gov/release/comer-government-must-stop-fraud-before-it-starts/",
+      "link_label": "House Oversight Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "MN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-06-03-4221771575",
+      "date": "2026-06-03",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "CMS Should Improve Its Policies and Procedures for the Oversight of States’ Reported Medicaid Expenditures to Better Protect the Financial Integrity of the Medicaid Program",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/cms-should-improve-its-policies-and-procedures-for-the-oversight-of-states-reported-medicaid-expenditures-to-better-protect-the-financial-integrity-of-the-medicaid-program/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
