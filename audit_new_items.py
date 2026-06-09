@@ -1496,7 +1496,18 @@ def cmd_audit_oversight() -> int:
         r"floor\s+remarks|speech)\b|"
         r"^(opening|closing)\s+(statement|remarks)\b|"
         r"^op-?ed:\s|"
-        r"^my\s+statement\b",
+        r"^my\s+statement\b|"
+        # Colon-introduced commentary by named legislator with title.
+        # Pattern: "Chairman/Ranking Member/Senator/Rep. SURNAME: opinion"
+        r"^(?:chairman|chairwoman|ranking\s+member|senator|representative|"
+        r"rep\.|sen\.)\s+\w+\s*:\s|"
+        # Bare-surname colon commentary: "Comer: Government Must..." —
+        # Capitalized first word + colon, then an opinion-introduction word
+        # ('Congress/Government/We/Trump/Democrats/...'). Guards against
+        # legit titles with city/agency name + colon ('Houston: Texas
+        # Doctor Pleads Guilty', 'Strike Force: Report on Q1').
+        r"^[A-Z][a-z]+\s*:\s+(?:congress|government|america|we|the|biden|"
+        r"trump|obama|democrats?|republicans?|administration|states?)\b",
         re.IGNORECASE,
     )
     STRONG_FRAUD_SIGNAL = re.compile(

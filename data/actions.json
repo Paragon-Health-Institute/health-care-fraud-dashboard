@@ -17570,47 +17570,6 @@
       ]
     },
     {
-      "id": "congress-2026-06-08-4015607692",
-      "date": "2026-06-08",
-      "agency": "Congress",
-      "type": "Rule/Regulation",
-      "title": "Chairman Comer: Congress Must Stop Fraud to Protect Taxpayers - United States House Committee on Oversight and Government Reform",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oversight.house.gov/release/chairman-comer-congress-must-stop-fraud-to-protect-taxpayers/",
-      "link_label": "House Oversight Release",
-      "social_posts": [],
-      "tags": [
-        "Medicaid",
-        "Hospice"
-      ],
-      "entities": [],
-      "state": "MN, CA",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
-      "id": "congress-2026-06-08-3253696669",
-      "date": "2026-06-08",
-      "agency": "Congress",
-      "type": "Investigation",
-      "title": "Comer: Government Must Stop Fraud Before It Starts - United States House Committee on Oversight and Government Reform",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oversight.house.gov/release/comer-government-must-stop-fraud-before-it-starts/",
-      "link_label": "House Oversight Release",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": "MN",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
       "id": "hhs-oig-2026-06-03-4221771575",
       "date": "2026-06-03",
       "agency": "HHS-OIG",
