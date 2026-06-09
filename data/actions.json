@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-06-08T12:47:28.970245",
+    "last_updated": "2026-06-09T10:51:20.387380",
     "version": "1.0",
-    "last_scraped": "2026-06-08T12:15:18.526317"
+    "last_scraped": "2026-06-09T10:51:20.387368"
   },
   "actions": [
     {
@@ -17540,6 +17540,34 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-06-08-1385336765",
+      "date": "2026-06-08",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "United States Obtains $3.4M in a False Claims Act Judgment Against Nebraska Pharmacist",
+      "amount": "$3.4 Million",
+      "amount_numeric": 3400000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ne/pr/united-states-obtains-34m-false-claims-act-judgment-against-nebraska-pharmacist",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": "NE",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ]
     }
   ]
 }
