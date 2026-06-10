@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-06-09T11:36:39.125645",
+    "last_scraped": "2026-06-10T11:53:05.082047",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -266,6 +266,54 @@
       "ai_confidence": 82,
       "ai_reason": "CMS enrollment moratoria are administrative anti-fraud actions that restrict provider participation in response to fraud/program-integrity concerns, making this an oversight document.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "congress-2026-06-09-655717887",
+      "date": "2026-06-09",
+      "agency": "Congress",
+      "type": "Administrative Action",
+      "title": "Chairman Cassidy Calls on Congress, President Trump to Work Together to Lower Health Care Costs | The U.S. Senate Committee on Health, Education, Labor & Pensions",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-calls-on-congress-president-trump-to-work-together-to-lower-health-care-costs",
+      "link_label": "Senate HELP Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This is a general statement about lowering healthcare costs, not a specific oversight action, investigation, or finding related to healthcare fraud or improper payments.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "congress-2026-06-09-3223187009",
+      "date": "2026-06-09",
+      "agency": "Congress",
+      "type": "Administrative Action",
+      "title": "TODAY: Chairman Cassidy to Discuss His MVP Agenda, Lowering Health Care Costs for American Families | The U.S. Senate Committee on Health, Education, Labor & Pensions",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.help.senate.gov/rep/newsroom/press/today-chairman-cassidy-to-discuss-his-mvp-agenda-lowering-health-care-costs-for-american-families",
+      "link_label": "Senate HELP Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This is a general healthcare cost/policy agenda announcement by a Senate HELP Committee chair, not a specific oversight action on healthcare fraud or program integrity.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -456,6 +504,8 @@
     "https://www.gao.gov/products/gao-01-159sp",
     "https://energycommerce.house.gov/posts/energy-and-commerce-weekly-look-ahead-the-week-of-june-8th-2026",
     "https://oversight.house.gov/release/chairman-comer-congress-must-stop-fraud-to-protect-taxpayers/",
-    "https://oversight.house.gov/release/comer-government-must-stop-fraud-before-it-starts/"
+    "https://oversight.house.gov/release/comer-government-must-stop-fraud-before-it-starts/",
+    "https://www.gao.gov/products/gao-26-108886",
+    "https://oig.hhs.gov/reports/all/2026/the-office-of-refugee-resettlement-needs-to-improve-its-monitoring-of-unlicensed-unaccompanied-alien-children-program-care-providers-compliance-with-background-check-requirements/"
   ]
 }
