@@ -732,6 +732,26 @@ def get_action_type(title, desc, agency=None, link=None):
                  r'(a |an |the |new )*(task force|strike force|division|unit|'
                  r'office|task\s+team|enforcement\s+team)\b', title_l):
         return 'Structural/Organizational'
+    # Revival / relaunch / reactivation of task forces and units.
+    # Two forms:
+    #   "Sarcone Leads Revival of NDNY HCF Task Force"
+    #   "Department Relaunches Fraud Strike Force"
+    # Up to 7 modifier words allowed between the verb (and optional 'of')
+    # and the structural noun ('task force', 'strike force', 'division',
+    # 'unit', 'office', 'program', 'initiative').
+    if re.search(
+            r'\b(?:leads?|spearheads?|heads?|directs?)\s+(?:the\s+)?'
+            r'(?:revival|relaunch|reactivation|restoration|reconvening|restart)'
+            r'\s+of\s+(?:\w+\s+){0,7}'
+            r'(?:task\s+force|strike\s+force|division|unit|office|'
+            r'task\s+team|enforcement\s+team|program|initiative)\b|'
+            r'\b(?:reviv(?:es|ed|ing)|relaunch(?:es|ed|ing)?|'
+            r'reactivat(?:es|ed|ing)|reconven(?:es|ed|ing)|'
+            r'restart(?:s|ed|ing)?)\s+(?:\w+\s+){0,7}'
+            r'(?:task\s+force|strike\s+force|division|unit|office|'
+            r'task\s+team|enforcement\s+team|program|initiative)\b',
+            title_l):
+        return 'Structural/Organizational'
     if re.search(r'\b(launches? (an? )?investigation|opens? (an? )?investigation|'
                  r'fact.?find(ing)?|sends?.*(letter|inquiry))\b', title_l):
         return 'Investigation'
