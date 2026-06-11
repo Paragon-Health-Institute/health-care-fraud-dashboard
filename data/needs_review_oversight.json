@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-06-10T11:53:05.082047",
+    "last_scraped": "2026-06-11T12:23:51.894639",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -314,6 +314,34 @@
       "ai_confidence": 85,
       "ai_reason": "This is a general healthcare cost/policy agenda announcement by a Senate HELP Committee chair, not a specific oversight action on healthcare fraud or program integrity.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "hhs-oig-2026-06-08-3783427313",
+      "date": "2026-06-08",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Community Behavioral Health Did Not Comply With Requirements When Denying Prior Authorization Requests",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/community-behavioral-health-did-not-comply-with-requirements-when-denying-prior-authorization-requests/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Medicaid Managed Care",
+        "Behavioral Health"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 72,
+      "ai_reason": "This is an HHS-OIG audit about prior authorization compliance procedures, which is a program administration/quality issue rather than a healthcare fraud or program-integrity investigation.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -506,6 +534,10 @@
     "https://oversight.house.gov/release/chairman-comer-congress-must-stop-fraud-to-protect-taxpayers/",
     "https://oversight.house.gov/release/comer-government-must-stop-fraud-before-it-starts/",
     "https://www.gao.gov/products/gao-26-108886",
-    "https://oig.hhs.gov/reports/all/2026/the-office-of-refugee-resettlement-needs-to-improve-its-monitoring-of-unlicensed-unaccompanied-alien-children-program-care-providers-compliance-with-background-check-requirements/"
+    "https://oig.hhs.gov/reports/all/2026/the-office-of-refugee-resettlement-needs-to-improve-its-monitoring-of-unlicensed-unaccompanied-alien-children-program-care-providers-compliance-with-background-check-requirements/",
+    "https://www.gao.gov/products/gao-26-108997",
+    "https://oversight.house.gov/release/comer-stopping-fraudulent-payments-is-common-sense/",
+    "https://energycommerce.house.gov/posts/health-subcommittee-holds-hearing-to-examine-policies-increasing-price-transparency-for-patients-and-employers",
+    "https://www.gao.gov/products/gao-26-109213"
   ]
 }

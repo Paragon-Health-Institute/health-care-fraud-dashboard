@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-06-11T11:55:23.712121",
+    "last_updated": "2026-06-11T12:23:52.092533",
     "version": "1.0",
     "last_scraped": "2026-06-11T11:55:23.712107"
   },
@@ -17731,6 +17731,94 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "congress-2026-06-10-3868417872",
+      "date": "2026-06-10",
+      "agency": "Congress",
+      "type": "Investigation",
+      "title": "Comer Supports Bill to Ensure Government-Wide Anti-Fraud Analytics to Protect Taxpayers - United States House Committee on Oversight and Government Reform",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oversight.house.gov/release/comer-supports-bill-to-ensure-government-wide-anti-fraud-analytics-to-protect-taxpayers/",
+      "link_label": "House Oversight Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-06-08-1434843949",
+      "date": "2026-06-08",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "The Three Largest Medicare Advantage Organizations Denied Requests for Long-Term Acute Care and Inpatient Rehabilitation at Some of the Highest Rates",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/the-three-largest-medicare-advantage-organizations-denied-requests-for-long-term-acute-care-and-inpatient-rehabilitation-at-some-of-the-highest-rates/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Long-Term Care"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-06-08-3913608374",
+      "date": "2026-06-08",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Medicare Advantage Organizations Overturned Nearly All Appealed Prior Authorization Denials for Skilled Nursing Facility Admission, Raising Concerns About Initial Denials",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/medicare-advantage-organizations-overturned-nearly-all-appealed-prior-authorization-denials-for-skilled-nursing-facility-admission-raising-concerns-about-initial-denials/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Nursing Home"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-06-08-1418147256",
+      "date": "2026-06-08",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "California Made at Least $13.9 Million More in Medicaid Reimbursements for Clinical Diagnostic Laboratory Services Than Was Allowed by Federal and State Requirements",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/california-made-at-least-139-million-more-in-medicaid-reimbursements-for-clinical-diagnostic-laboratory-services-than-was-allowed-by-federal-and-state-requirements/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Lab Testing"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
