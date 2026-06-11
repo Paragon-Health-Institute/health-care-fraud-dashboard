@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-06-09T11:36:39.315311",
+    "last_updated": "2026-06-11T11:55:23.712121",
     "version": "1.0",
-    "last_scraped": "2026-06-10T11:09:51.324118"
+    "last_scraped": "2026-06-11T11:55:23.712107"
   },
   "actions": [
     {
@@ -17589,6 +17589,148 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-06-10-2098470441",
+      "date": "2026-06-10",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Ahold Delhaize USA Inc. to Pay $40M for Allegedly Reporting Inflated Drug Prices on Claims to Federal Healthcare Programs",
+      "amount": "$40 Million",
+      "amount_numeric": 40000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/ahold-delhaize-usa-inc-pay-40m-allegedly-reporting-inflated-drug-prices-claims-federal",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "TRICARE",
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": "PA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-06-10-3829752715",
+      "date": "2026-06-10",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Doctor and Staff Charged with Falsifying Data in Clinical Drug Trials",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/doctor-and-staff-charged-falsifying-data-clinical-drug-trials",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "doj-2026-06-10-3978269395",
+      "date": "2026-06-10",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "San Francisco Company Agrees to Pay Over Three Million Dollars to Resolve Allegations That They Submitted False Claims for Healthcare Payments",
+      "amount": "$3,325,000",
+      "amount_numeric": 3325000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ndca/pr/san-francisco-company-agrees-pay-over-three-million-dollars-resolve-allegations-they",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "TRICARE",
+        "Telehealth",
+        "Mental Health"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-06-10-2924802115",
+      "date": "2026-06-10",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Sarcone Leads Revival of NDNY Health Care Fraud Task Force",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ndny/pr/sarcone-leads-revival-ndny-health-care-fraud-task-force",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-06-09-2261920954",
+      "date": "2026-06-09",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Two Charged in Multi-Year Conspiracy to Buy and Sell Stolen Medicare Beneficiary Information from Major South Florida Health Care Network",
+      "amount": "$5 Million",
+      "amount_numeric": 5000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-sdfl/pr/two-charged-multi-year-conspiracy-buy-and-sell-stolen-medicare-beneficiary-information",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-06-10-4285056297",
+      "date": "2026-06-10",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Jacksonville Chiropractor Sentenced to a Year in Prison for Healthcare Fraud and Related Offenses",
+      "amount": "$268,000",
+      "amount_numeric": 268000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-cdil/pr/jacksonville-chiropractor-sentenced-year-prison-healthcare-fraud-and-related-offenses",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "IL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
     }
   ]
 }
