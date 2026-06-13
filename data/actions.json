@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-06-11T12:23:52.092533",
+    "last_updated": "2026-06-13T10:13:00.112946",
     "version": "1.0",
-    "last_scraped": "2026-06-12T11:14:15.425284"
+    "last_scraped": "2026-06-13T10:13:00.112936"
   },
   "actions": [
     {
@@ -17819,6 +17819,53 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-06-11-316614895",
+      "date": "2026-06-11",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Multi-Million-Dollar Prescription Fraud Scheme Results In Prison Sentence For Three East Tennesseans",
+      "amount": "$4.8 Million",
+      "amount_numeric": 4800000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edtn/pr/multi-million-dollar-prescription-fraud-scheme-results-prison-sentence-three-east",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": "TN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-06-11-947845500",
+      "date": "2026-06-11",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Nurse Sentenced to Two Years in Prison for Tampering with and Stealing Controlled Substances at Tampa Bay Area Hospital",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-mdfl/pr/nurse-sentenced-two-years-prison-tampering-and-stealing-controlled-substances-tampa",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
