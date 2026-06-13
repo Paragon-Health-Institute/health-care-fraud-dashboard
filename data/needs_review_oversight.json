@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-06-12T11:58:36.563262",
+    "last_scraped": "2026-06-13T10:45:41.190406",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -420,6 +420,34 @@
       "ai_confidence": 82,
       "ai_reason": "HHS-OIG audit on Medicare Part B billing integrity and improper payment of noncovered drugs—a program-integrity finding within Oversight scope.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-06-12-2715322526",
+      "date": "2026-06-12",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "CMS Proposed Rule Locks in Lower Prices and Fosters Innovation for the Medicare Drug Price Negotiation Program",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-proposed-rule-locks-lower-prices-fosters-innovation-medicare-drug-price-negotiation-program",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Pharmacy",
+        "Drug Pricing"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This CMS proposed rule concerns drug price negotiation and pricing policy, not healthcare fraud, improper payments, or program integrity oversight.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -616,6 +644,8 @@
     "https://www.gao.gov/products/gao-26-108997",
     "https://oversight.house.gov/release/comer-stopping-fraudulent-payments-is-common-sense/",
     "https://energycommerce.house.gov/posts/health-subcommittee-holds-hearing-to-examine-policies-increasing-price-transparency-for-patients-and-employers",
-    "https://www.gao.gov/products/gao-26-109213"
+    "https://www.gao.gov/products/gao-26-109213",
+    "https://www.cms.gov/newsroom/press-releases/cms-ensures-accrediting-organizations-uphold-trust-standards-oversight",
+    "https://www.cms.gov/newsroom/fact-sheets/strengthening-cms-oversight-accrediting-organizations"
   ]
 }
