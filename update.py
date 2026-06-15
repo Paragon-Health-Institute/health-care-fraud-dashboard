@@ -2520,7 +2520,13 @@ _BILL_INTRO_PATTERN = re.compile(
     r"(introduces|reintroduces|unveils|releases)\s+.{0,40}?\b(bill|legislation|act|proposal)\b|"
     r"bill\s+(to\s+fight|to\s+combat|to\s+address|to\s+prevent)|"
     r"legislative\s+proposal\s+to\s+(fight|combat|address|prevent)|"
-    r"file(s|d)?\s+.{0,30}?\blegislation\b"
+    r"file(s|d)?\s+.{0,30}?\blegislation\b|"
+    # Member endorses/supports/backs/cosponsors a bill — still about
+    # legislation; same scope-exclusion rationale as introductions
+    # ("Comer Supports Bill to Ensure Anti-Fraud Analytics" / "Senator
+    # Endorses Medicare Fraud Prevention Act").
+    r"(supports?|endors(es|ed)?|back(s|ed)?|co-?sponsor(s|ed)?|"
+    r"co-?author(s|ed)?|champion(s|ed)?)\s+.{0,40}?\b(bill|legislation|act|proposal)\b"
     r")",
     re.IGNORECASE,
 )
