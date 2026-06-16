@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-06-13T10:13:00.112946",
+    "last_updated": "2026-06-16T12:29:41.329858",
     "version": "1.0",
-    "last_scraped": "2026-06-15T13:32:18.954718"
+    "last_scraped": "2026-06-16T12:29:41.329848"
   },
   "actions": [
     {
@@ -17848,6 +17848,54 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-06-15-2434941468",
+      "date": "2026-06-15",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Ohio Doctor Ordered to Pay Nearly $1M for Facilitating Fraud on Medicare",
+      "amount": "$1 Million",
+      "amount_numeric": 1000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ndoh/pr/ohio-doctor-ordered-pay-nearly-1m-facilitating-fraud-medicare",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME",
+        "Genetic Testing",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "OH",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-06-15-2866547521",
+      "date": "2026-06-15",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Wasilla doctor sentenced to three years for possessing child pornography",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ak/pr/wasilla-doctor-sentenced-three-years-possessing-child-pornography",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "AK",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Project Safe Childhood"
       ]
     }
   ]
