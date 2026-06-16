@@ -669,10 +669,35 @@ def get_action_type(title, desc, agency=None, link=None):
         r'prosecut(ed|ion)?|deferred\s+prosecution|non-?prosecution\s+agreement|'
         r'criminal\s+resolution)\b', re.I)
     _civ_re = re.compile(
-        r'\b(settlement|settles?|to\s+pay|agree(s|d)?\s+to\s+pay|'
-        r'consent\s+(judgment|decree)|civil\s+action|false\s+claims\s+act|'
-        r'qui\s+tam|to\s+resolve\s+(false\s+claims|allegations)|'
-        r'to\s+settle\s+allegations)\b', re.I)
+        r'\b('
+        # Settlement / agreement (bare 'to pay' removed — matched too broadly:
+        # criminal restitution titles use 'Ordered to Pay $X'. Require
+        # 'agrees to pay' / 'settle' / 'civil' / 'false claims act' etc.)
+        r'settlement|settles?|'
+        r'agree(s|d)?\s+to\s+pay|'
+        r'consent\s+(judgment|decree)|'
+        # Civil descriptor
+        r'civil\s+(action|forfeiture|judgment|complaint|lawsuit|penalty|penalties)|'
+        # Statute / framework
+        r'false\s+claims?\s+act|'
+        r'qui\s+tam|'
+        # Resolution language
+        r'to\s+resolve\s+(false\s+claims|allegations)|'
+        r'to\s+settle\s+allegations|'
+        r'resolves?\s+(?:\w+\s+){0,3}allegations?\b|'
+        # DOJ-initiated civil actions
+        r'sues?\b|'
+        r'file(s|d)?\s+(?:a\s+|two\s+)?(?:nationwide\s+)?(?:civil\s+)?(?:lawsuit|suit|complaint|action)|'
+        r'\blawsuit\b|'
+        r'intervene(s|d)?\b|'
+        # Civil judgment outcomes
+        r'obtain(s|ed)?\s+(?:more\s+than\s+|over\s+)?(?:\$[\d,.]+(?:\s*million|\s*billion)?\s+(?:in\s+)?)?judgments?\b|'
+        r'judgment\s+against\b|'
+        # Civil asset forfeiture / seizure (criminal forfeiture usually
+        # has 'Sentenced' or 'Pleaded Guilty' in title so it'll trip the
+        # criminal regex first)
+        r'seizes?\b|seized\b|civil\s+forfeiture\b'
+        r')\b', re.I)
     crim_m = _crim_re.search(title_l)
     civ_m = _civ_re.search(title_l)
     if crim_m and civ_m:
