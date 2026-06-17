@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-06-16T13:09:31.726356",
+    "last_updated": "2026-06-17T12:03:19.136522",
     "version": "1.0",
-    "last_scraped": "2026-06-16T12:29:41.329848"
+    "last_scraped": "2026-06-17T12:03:19.136508"
   },
   "actions": [
     {
@@ -17919,6 +17919,78 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-06-16-2914001688",
+      "date": "2026-06-16",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Department of Justice Files Suit to Stop Ongoing Medicaid Fraud Related to New York’s $10 Billion Home-Care Program",
+      "amount": "$10 Billion",
+      "amount_numeric": 10000000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/department-justice-files-suit-stop-ongoing-medicaid-fraud-related-new-yorks-10-billion-home",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Personal Care"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "doj-2026-06-16-1564365153",
+      "date": "2026-06-16",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Justice Department Requires OhioHealth to Stop Using Anticompetitive Healthcare Contract Terms That Raise Costs for Ohio Patients",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/justice-department-requires-ohiohealth-stop-using-anticompetitive-healthcare-contract-terms",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "OH",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Antitrust"
+      ]
+    },
+    {
+      "id": "doj-2026-05-20-738144118",
+      "date": "2026-05-20",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Journey to Hope Health and Healing and Former CEO Agree to Pay $10.2 Million to Resolve False Claims Allegations",
+      "amount": "$10.2 Million",
+      "amount_numeric": 10200000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ri/pr/journey-hope-health-and-healing-and-former-ceo-agree-pay-102-million-resolve-false",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Mental Health",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "RI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "topic_checked_at": "2026-06-17T12:03:19.490233",
+      "doj_topics": null
     }
   ]
 }
