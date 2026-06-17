@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-06-16T13:09:31.533385",
+    "last_scraped": "2026-06-17T12:36:01.383254",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -648,6 +648,7 @@
     "https://www.cms.gov/newsroom/press-releases/cms-ensures-accrediting-organizations-uphold-trust-standards-oversight",
     "https://www.cms.gov/newsroom/fact-sheets/strengthening-cms-oversight-accrediting-organizations",
     "https://oversight.house.gov/release/comer-supports-bill-to-ensure-government-wide-anti-fraud-analytics-to-protect-taxpayers/",
-    "https://www.gao.gov/products/gao-26-107922"
+    "https://www.gao.gov/products/gao-26-107922",
+    "https://www.gao.gov/products/gao-26-108197"
   ]
 }

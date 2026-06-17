@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-06-17T12:03:19.136522",
+    "last_updated": "2026-06-17T12:36:01.581453",
     "version": "1.0",
     "last_scraped": "2026-06-17T12:03:19.136508"
   },
@@ -17991,6 +17991,27 @@
       ],
       "topic_checked_at": "2026-06-17T12:03:19.490233",
       "doj_topics": null
+    },
+    {
+      "id": "hhs-oig-2026-06-16-635684841",
+      "date": "2026-06-16",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Jefferson Regional Medical Center Received at Least $4.7 Million in Medicare Overpayments",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/jefferson-regional-medical-center-received-at-least-47-million-in-medicare-overpayments/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
