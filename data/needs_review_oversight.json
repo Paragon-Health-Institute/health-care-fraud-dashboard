@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-06-17T12:36:01.383254",
+    "last_scraped": "2026-06-18T12:03:01.743573",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -448,6 +448,62 @@
       "ai_confidence": 85,
       "ai_reason": "This CMS proposed rule concerns drug price negotiation and pricing policy, not healthcare fraud, improper payments, or program integrity oversight.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "hhs-oig-2026-06-17-3038696979",
+      "date": "2026-06-17",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "CMS’s Processes Were Not Effective in Ensuring the Accuracy of Staffing Information Reported in the Payroll-Based Journal",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/cmss-processes-were-not-effective-in-ensuring-the-accuracy-of-staffing-information-reported-in-the-payroll-based-journal/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Nursing Home",
+        "Assisted Living"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 78,
+      "ai_reason": "This HHS-OIG audit concerns staffing data accuracy in the Payroll-Based Journal (a nursing home reporting requirement), which is a compliance/quality issue but not a healthcare fraud or program-integr",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "hhs-oig-2026-06-16-3677528460",
+      "date": "2026-06-16",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "North Dakota Could Better Ensure That Providers Fully Comply With Federal Waiver and State Health, Safety, and Administrative Requirements at 44 Residential Settings",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/north-dakota-could-better-ensure-that-providers-fully-comply-with-federal-waiver-and-state-health-safety-and-administrative-requirements-at-44-residential-settings/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Adult Day Care"
+      ],
+      "entities": [],
+      "state": "ND",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 75,
+      "ai_reason": "This HHS-OIG audit concerns health, safety, and administrative compliance at residential settings under Medicaid waivers, not healthcare fraud or program-integrity investigations.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -649,6 +705,10 @@
     "https://www.cms.gov/newsroom/fact-sheets/strengthening-cms-oversight-accrediting-organizations",
     "https://oversight.house.gov/release/comer-supports-bill-to-ensure-government-wide-anti-fraud-analytics-to-protect-taxpayers/",
     "https://www.gao.gov/products/gao-26-107922",
-    "https://www.gao.gov/products/gao-26-108197"
+    "https://www.gao.gov/products/gao-26-108197",
+    "https://oversight.house.gov/release/comer-timmons-further-investigate-national-security-risks-in-science-and-technology-research-sharing-with-china/",
+    "https://www.help.senate.gov/rep/newsroom/press/today-chairman-cassidy-to-discuss-his-mvp-agenda-making-health-care-costs-affordable-for-american-families",
+    "https://www.help.senate.gov/rep/newsroom/press/postponed-chairman-cassidy-to-discuss-his-mvp-agenda-making-health-care-costs-affordable-for-american-families",
+    "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-delivers-remarks-before-help-committee-vote-on-bills-improving-american-families-access-to-quality-affordable-health-care"
   ]
 }
