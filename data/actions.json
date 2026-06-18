@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-06-17T12:36:01.581453",
+    "last_updated": "2026-06-18T11:22:57.270406",
     "version": "1.0",
-    "last_scraped": "2026-06-17T12:03:19.136508"
+    "last_scraped": "2026-06-18T11:22:57.270394"
   },
   "actions": [
     {
@@ -18012,6 +18012,61 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-06-17-2745868171",
+      "date": "2026-06-17",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Arkansas Pathology Laboratory and Its Owners Pay $30M to Settle Allegations of Kickbacks and Unnecessary Medical Testing",
+      "amount": "$30 Million",
+      "amount_numeric": 30000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/arkansas-pathology-laboratory-and-its-owners-pay-30m-settle-allegations-kickbacks-and",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Lab Testing"
+      ],
+      "entities": [],
+      "state": "AR",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-06-17-1807870322",
+      "date": "2026-06-17",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Nurse Practitioner Sentenced to 87 Months in Prison for $12M Medicare Fraud",
+      "amount": "$12 Million",
+      "amount_numeric": 12000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/nurse-practitioner-sentenced-87-months-prison-12m-medicare-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Genetic Testing",
+        "Lab Testing",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "LA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Tax"
+      ]
     }
   ]
 }
