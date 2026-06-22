@@ -119,6 +119,37 @@
       "ai_confidence": 78,
       "ai_reason": "The case involves tax fraud charges, which is explicitly listed as out of scope unless it is a side charge on a primary healthcare fraud case; the title indicates tax returns are the primary focus.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "doj-2026-06-18-3581857276",
+      "date": "2026-06-18",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Owner of Two South Florida Nursing Schools Pleads Guilty in Fraudulent Nursing Diploma Scheme",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-sdfl/pr/owner-two-south-florida-nursing-schools-pleads-guilty-fraudulent-nursing-diploma",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Home Health"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "flagged_at": "2026-06-22T13:12:14.531960",
+      "flag_reason": "title lacks healthcare keyword",
+      "topic_checked_at": "2026-06-22T13:12:14.695972",
+      "doj_topics": [],
+      "ai_decision": "not_healthcare_fraud",
+      "ai_confidence": 75,
+      "ai_reason": "This involves educational fraud (fraudulent diplomas) rather than healthcare insurance fraud, false medical claims, or provider billing schemes that would fall under Medicare/Medicaid enforcement.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
