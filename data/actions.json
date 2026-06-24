@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-06-22T13:12:14.328001",
+    "last_updated": "2026-06-24T10:32:45.843314",
     "version": "1.0",
-    "last_scraped": "2026-06-23T10:50:11.908530"
+    "last_scraped": "2026-06-24T10:32:45.843306"
   },
   "actions": [
     {
@@ -18066,6 +18066,192 @@
       ],
       "doj_topics": [
         "Tax"
+      ]
+    },
+    {
+      "id": "doj-2026-06-23-3560229918",
+      "date": "2026-06-23",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "National Health Care Fraud Takedown Results in 455 Defendants Charged in Connection with Over $6.5 Billion in Alleged Fraud",
+      "amount": "$6.5 Billion",
+      "amount_numeric": 6500000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/national-health-care-fraud-takedown-results-455-defendants-charged-connection-over-65",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "DME",
+        "Hospice",
+        "Pharmacy",
+        "Genetic Testing",
+        "Telehealth",
+        "Wound Care",
+        "Adult Day Care",
+        "Mental Health",
+        "Behavioral Health",
+        "Skin Substitutes",
+        "Personal Care",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-06-22-656991215",
+      "date": "2026-06-22",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Dominican National Sentenced for Fraudulently Obtaining Social Security Benefits and Medicare Coverage Using Stolen Identity",
+      "amount": "$3.4 Million",
+      "amount_numeric": 3400000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-sdfl/pr/dominican-national-sentenced-fraudulently-obtaining-social-security-benefits-and",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-06-23-3876068976",
+      "date": "2026-06-23",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "National Health Care Fraud Takedown Results in 455 Defendants Charged in Fraud Scheme Totaling Over $6.5 Billion",
+      "amount": "$6.5 Billion",
+      "amount_numeric": 6500000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edla/pr/national-health-care-fraud-takedown-results-455-defendants-charged-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "TRICARE",
+        "Lab Testing",
+        "Telehealth",
+        "Nursing Home",
+        "Assisted Living",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-06-23-2903443549",
+      "date": "2026-06-23",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "National Health Care Fraud Takedown Results in 455 Defendants Charged in Connection with Over $6.5 Billion in Alleged Fraud, Including Oahu Man Charged with Fraudulent Billing Resulting in $1.5 Million Loss",
+      "amount": "$6.5 Billion",
+      "amount_numeric": 6500000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-hi/pr/national-health-care-fraud-takedown-results-455-defendants-charged-connection-over-65",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Pharmacy",
+        "Telehealth",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-06-23-4268027906",
+      "date": "2026-06-23",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Two Charged in the District of Oregon as Part of the National Health Care Fraud Takedown",
+      "amount": "$6.5 Billion",
+      "amount_numeric": 6500000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-or/pr/two-charged-district-oregon-part-national-health-care-fraud-takedown",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Genetic Testing",
+        "Lab Testing",
+        "Telehealth",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "OR",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-06-23-4011150119",
+      "date": "2026-06-23",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "District of Arizona Announces Charges Involving Over $1.2 Billion in False or Fraudulent Claims as Part of National Health Care Fraud Takedown",
+      "amount": "$1.2 Billion",
+      "amount_numeric": 1200000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-az/pr/district-arizona-announces-charges-involving-over-12-billion-false-or-fraudulent-claims",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "TRICARE",
+        "Hospice",
+        "Telehealth",
+        "Skin Substitutes",
+        "Addiction Treatment",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "AZ",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
       ]
     }
   ]
