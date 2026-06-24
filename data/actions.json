@@ -18151,7 +18151,7 @@
         "Opioids"
       ],
       "entities": [],
-      "state": null,
+      "state": "LA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -18180,7 +18180,7 @@
         "Opioids"
       ],
       "entities": [],
-      "state": null,
+      "state": "HI",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
