@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-06-24T10:32:45.843314",
+    "last_updated": "2026-06-24T11:23:36.760813",
     "version": "1.0",
     "last_scraped": "2026-06-24T10:32:45.843306"
   },
@@ -18253,6 +18253,28 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "hhs-oig-2026-06-18-4222067940",
+      "date": "2026-06-18",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Medicare Could Have Saved $255.1 Million Related to Hospice Services for Certain New Hospice Enrollees",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/medicare-could-have-saved-2551-million-related-to-hospice-services-for-certain-new-hospice-enrollees/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Hospice"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }

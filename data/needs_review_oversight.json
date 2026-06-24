@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-06-23T11:36:17.232710",
+    "last_scraped": "2026-06-24T11:23:36.580821",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -504,6 +504,33 @@
       "ai_confidence": 75,
       "ai_reason": "This HHS-OIG audit concerns health, safety, and administrative compliance at residential settings under Medicaid waivers, not healthcare fraud or program-integrity investigations.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "congress-2026-06-23-3213713023",
+      "date": "2026-06-23",
+      "agency": "Congress",
+      "type": "Administrative Action",
+      "title": "Chairmen Guthrie and Griffith Announce Health Subcommittee Markup of 15 Bills Addressing Illicit Drugs and Health Care Price Transparency",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://energycommerce.house.gov/posts/chairmen-guthrie-and-griffith-announce-health-subcommittee-markup-of-15-bills",
+      "link_label": "House E&C Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 72,
+      "ai_reason": "While this involves a House Health Subcommittee markup, the focus is on illicit drugs and price transparency legislation rather than healthcare fraud oversight, audits, or program-integrity findings.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -709,6 +736,10 @@
     "https://oversight.house.gov/release/comer-timmons-further-investigate-national-security-risks-in-science-and-technology-research-sharing-with-china/",
     "https://www.help.senate.gov/rep/newsroom/press/today-chairman-cassidy-to-discuss-his-mvp-agenda-making-health-care-costs-affordable-for-american-families",
     "https://www.help.senate.gov/rep/newsroom/press/postponed-chairman-cassidy-to-discuss-his-mvp-agenda-making-health-care-costs-affordable-for-american-families",
-    "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-delivers-remarks-before-help-committee-vote-on-bills-improving-american-families-access-to-quality-affordable-health-care"
+    "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-delivers-remarks-before-help-committee-vote-on-bills-improving-american-families-access-to-quality-affordable-health-care",
+    "https://www.gao.gov/products/gao-26-108976",
+    "https://www.gao.gov/products/gao-26-108470",
+    "https://www.help.senate.gov/rep/newsroom/press/today-chairman-cassidy-to-discuss-his-mvp-agenda-making-health-care-costs-affordable-for-american-families-1",
+    "https://waysandmeans.house.gov/2026/06/23/what-they-are-saying-ways-means-policies-expand-and-protect-access-to-health-care-for-seniors-rural-and-underserved-communities/"
   ]
 }
