@@ -1028,7 +1028,16 @@ def get_state(text, title=None, link=None, item_type=None):
     # "nationally"/"nationwide"/"across the country" context (e.g., a
     # regional strike-force announcement that mentions DOJ's broader
     # nationwide enforcement effort).
-    if title and _NATIONAL_TITLE_RE.search(title):
+    #
+    # EXCEPTION: if there's a USAO district in the link, the district is
+    # an authoritative state signal regardless of national-scope title
+    # language. District USAOs often copy the OPA national takedown title
+    # verbatim ("National Health Care Fraud Takedown Results in 455
+    # Defendants..."), which would otherwise short-circuit to None and
+    # lose the district. Skip the short-circuit so Path 1 (USAO from
+    # link) wins.
+    has_usao = bool(link and extract_usao_state(link))
+    if title and _NATIONAL_TITLE_RE.search(title) and not has_usao:
         return None
 
     states = []  # ordered, deduped
