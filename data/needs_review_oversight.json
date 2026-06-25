@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-06-24T11:23:36.580821",
+    "last_scraped": "2026-06-25T09:37:34.629837",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -531,6 +531,57 @@
       "ai_confidence": 72,
       "ai_reason": "While this involves a House Health Subcommittee markup, the focus is on illicit drugs and price transparency legislation rather than healthcare fraud oversight, audits, or program-integrity findings.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "congress-2026-06-23-1308205063",
+      "date": "2026-06-23",
+      "agency": "Congress",
+      "type": "Administrative Action",
+      "title": "RESCHEDULED: Chairmen Guthrie and Griffith Announce Health Subcommittee Markup of 15 Bills Addressing Illicit Drugs and Health Care Price Transparency",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://energycommerce.house.gov/posts/rescheduled-chairmen-guthrie-and-griffith-announce-health-subcommittee-markup-of-15-bills-addressing-illicit-drugs-and-health-care-price-transparency",
+      "link_label": "House E&C Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 75,
+      "ai_reason": "This is a scheduling announcement for a bill markup on drug policy and price transparency, not an oversight action investigating healthcare fraud or improper payments.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "congress-2026-06-24-2279714451",
+      "date": "2026-06-24",
+      "agency": "Congress",
+      "type": "Administrative Action",
+      "title": "Chairman Cassidy Urges Congress, President Trump to Work Together, Lower Health Care Costs | The U.S. Senate Committee on Health, Education, Labor & Pensions",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-urges-congress-president-trump-to-work-together-lower-health-care-costs",
+      "link_label": "Senate HELP Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 88,
+      "ai_reason": "This is a general Senate statement about lowering health care costs, not about fraud oversight, program integrity investigations, audits, or anti-fraud actions.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -740,6 +791,9 @@
     "https://www.gao.gov/products/gao-26-108976",
     "https://www.gao.gov/products/gao-26-108470",
     "https://www.help.senate.gov/rep/newsroom/press/today-chairman-cassidy-to-discuss-his-mvp-agenda-making-health-care-costs-affordable-for-american-families-1",
-    "https://waysandmeans.house.gov/2026/06/23/what-they-are-saying-ways-means-policies-expand-and-protect-access-to-health-care-for-seniors-rural-and-underserved-communities/"
+    "https://waysandmeans.house.gov/2026/06/23/what-they-are-saying-ways-means-policies-expand-and-protect-access-to-health-care-for-seniors-rural-and-underserved-communities/",
+    "https://www.gao.gov/products/gao-26-108938",
+    "https://oversight.house.gov/release/higgins-announces-roundtable-on-the-biden-administrations-unaccompanied-alien-children-crisis/",
+    "https://energycommerce.house.gov/posts/energy-and-commerce-weekly-look-ahead-the-week-of-june-22nd-2026"
   ]
 }
