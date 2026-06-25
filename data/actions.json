@@ -18334,28 +18334,6 @@
       ]
     },
     {
-      "id": "congress-house-119410",
-      "date": "2026-06-25",
-      "agency": "Congress",
-      "type": "Hearing",
-      "title": "“Combating Waste, Fraud, and Abuse in SNAP”",
-      "amount": "",
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oversight.house.gov/hearing/combating-waste-fraud-and-abuse-in-snap/",
-      "link_label": "House Oversight and Government Reform Subcommittee on Delivering on Government Efficiency Hearing",
-      "tags": [],
-      "state": "",
-      "source_type": "official",
-      "auto_fetched": true,
-      "entities": [],
-      "_source": "congress.gov committee-meeting 119410",
-      "_committees": [
-        "House Oversight and Government Reform Subcommittee on Delivering on Government Efficiency"
-      ],
-      "_filter_reason": "fraud keyword + HC committee (House Oversight and Government Reform Subcommittee on Delivering on Government Efficiency)"
-    },
-    {
       "id": "congress-house-119405",
       "date": "2026-06-25",
       "agency": "Congress",
