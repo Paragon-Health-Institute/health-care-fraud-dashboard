@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-06-24T11:23:36.760813",
+    "last_updated": "2026-06-25T08:33:04.073292",
     "version": "1.0",
-    "last_scraped": "2026-06-24T10:32:45.843306"
+    "last_scraped": "2026-06-25T08:33:04.073282"
   },
   "actions": [
     {
@@ -18275,6 +18275,63 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-06-24-1659378155",
+      "date": "2026-06-24",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Cape May County Psychiatrist Admits to 17 Felony Counts for Unlawful Controlled Substance Prescriptions Linked to Sexual Conduct, Death, and Serious Bodily Injury",
+      "amount": "$250,000",
+      "amount_numeric": 250000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-nj/pr/cape-may-county-psychiatrist-admits-17-felony-counts-unlawful-controlled-substance",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Pharmacy",
+        "Mental Health"
+      ],
+      "entities": [],
+      "state": "NJ",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-06-24-3162254799",
+      "date": "2026-06-24",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Celina Pharmacy Owner Sentenced for Opioid Distribution/Health Care Fraud",
+      "amount": "$1,419,974",
+      "amount_numeric": 1419974.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-mdtn/pr/celina-pharmacy-owner-sentenced-opioid-distributionhealth-care-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Pharmacy",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "TN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Prescription Drugs",
+        "Healthcare Fraud"
+      ]
     }
   ]
 }
