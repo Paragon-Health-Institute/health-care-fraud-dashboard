@@ -1510,6 +1510,28 @@ def cmd_audit_oversight() -> int:
         r"trump|obama|democrats?|republicans?|administration|states?)\b",
         re.IGNORECASE,
     )
+    # SNAP / nutrition program filter. SNAP/food stamp/EBT/WIC items
+    # often pass STRONG_FRAUD_SIGNAL ('Combating Waste, Fraud, and Abuse
+    # in SNAP') and get auto-promoted despite being out of scope. Use
+    # this regex to route SNAP-only items (no healthcare keyword) to AI
+    # review. SNAP + healthcare combo items ('SNAP and Medicaid Hearing')
+    # keep normal flow.
+    NUTRITION_PROGRAM_RE = re.compile(
+        r'\b(snap|food\s+stamps?|electronic\s+benefit\s+transfer|\bebt\b|'
+        r'\bwic\b|women,?\s+infants?,?\s+and\s+children|'
+        r'nutrition\s+assistance|nutrition\s+benefits?|'
+        r'(supplemental\s+)?nutrition\s+program)\b', re.IGNORECASE,
+    )
+    HC_REFERENCE_RE = re.compile(
+        r'\b(medicare|medicaid|medi-?cal|chip|tricare|champva|'
+        r'affordable\s+care|aca\b|health\s*care|healthcare|'
+        r'hospice|home\s+health|nursing\s+home|\bdme\b|dmepos|'
+        r'prescription|pharmacy|pharmacist|opioid|'
+        r'physician|doctor|nurse|hospital|clinic|behavioral\s+health|'
+        r'genetic\s+test|telehealth|telemedicine|skin\s+substitute|'
+        r'durable\s+medical|public\s+health\s+emergenc|fda\b)\b',
+        re.IGNORECASE,
+    )
     STRONG_FRAUD_SIGNAL = re.compile(
         r"\b("
         r"fraud|kickback|false\s+claim|qui\s+tam|anti-?kickback|"
@@ -1555,6 +1577,13 @@ def cmd_audit_oversight() -> int:
         if COMMENTARY_TITLE.search(title):
             still_pending.append(item)
             item["flag_reason"] = "title looks like a statement/op-ed — needs AI review to confirm action vs messaging"
+            continue
+        # SNAP-only check: nutrition program with NO healthcare reference.
+        # SNAP + Medicaid combos keep normal flow.
+        if (NUTRITION_PROGRAM_RE.search(title)
+                and not HC_REFERENCE_RE.search(title)):
+            still_pending.append(item)
+            item["flag_reason"] = "title is SNAP/nutrition-program only with no healthcare reference — needs AI review"
             continue
 
         if agency in MIXED_CONTENT_AGENCIES:
