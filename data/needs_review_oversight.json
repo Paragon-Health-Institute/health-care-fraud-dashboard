@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-06-25T09:37:34.629837",
+    "last_scraped": "2026-06-26T09:37:35.516025",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -582,6 +582,93 @@
       "ai_confidence": 88,
       "ai_reason": "This is a general Senate statement about lowering health care costs, not about fraud oversight, program integrity investigations, audits, or anti-fraud actions.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "congress-2026-06-25-4119717133",
+      "date": "2026-06-25",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "Chairman Joyce Delivers Opening Statement at Subcommittee on Oversight and Investigations Hearing with State Medicaid Directors",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://energycommerce.house.gov/posts/chairman-joyce-delivers-opening-statement-at-subcommittee-on-oversight-and-investigations-hearing-with-state-medicaid-directors",
+      "link_label": "House E&C Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Hospice",
+        "Home Health",
+        "Autism/ABA",
+        "Adult Day Care",
+        "Mental Health",
+        "Behavioral Health",
+        "Medical Transportation"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "healthcare_fraud_oversight",
+      "ai_confidence": 78,
+      "ai_reason": "A congressional hearing with State Medicaid Directors under the Oversight & Investigations Subcommittee strongly implies focus on Medicaid program integrity, improper payments, or fraud findings, thou",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "congress-2026-06-25-500685409",
+      "date": "2026-06-25",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "O&I Subcommittee Holds Hearing with State Medicaid Directors as Part of Committee’s Extensive Probe into Medicaid Programs Nationwide",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://energycommerce.house.gov/posts/o-and-i-subcommittee-holds-hearing-with-state-medicaid-directors-as-part-of-committee-s-extensive-probe-into-medicaid-programs-nationwide",
+      "link_label": "House E&C Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "healthcare_fraud_oversight",
+      "ai_confidence": 78,
+      "ai_reason": "Congressional hearing on Medicaid program integrity by House E&C Committee's O&I Subcommittee, which typically investigates fraud, improper payments, and program vulnerabilities, though the title alon",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "congress-2026-06-25-1784466459",
+      "date": "2026-06-25",
+      "agency": "Congress",
+      "type": "Administrative Action",
+      "title": "Health Subcommittee Advances 15 Bills to Protect American Communities and Increase Health Care Price Transparency to the Full Committee",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://energycommerce.house.gov/posts/health-subcommittee-advances-15-bills-to-protect-american-communities-and-increase-health-care-price-transparency-to-the-full-committee",
+      "link_label": "House E&C Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 72,
+      "ai_reason": "While this involves a House health subcommittee advancing bills, the focus on 'price transparency' and 'protecting communities' suggests legislative activity on healthcare policy broadly, not specific",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -795,6 +882,9 @@
     "https://www.gao.gov/products/gao-26-108938",
     "https://oversight.house.gov/release/higgins-announces-roundtable-on-the-biden-administrations-unaccompanied-alien-children-crisis/",
     "https://energycommerce.house.gov/posts/energy-and-commerce-weekly-look-ahead-the-week-of-june-22nd-2026",
-    "https://oversight.house.gov/hearing/combating-waste-fraud-and-abuse-in-snap/"
+    "https://oversight.house.gov/hearing/combating-waste-fraud-and-abuse-in-snap/",
+    "https://www.gao.gov/products/gao-26-109066",
+    "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-unveils-landmark-discussion-draft-to-fix-340b-lower-health-costs-for-american-patients-and-families",
+    "https://oversight.house.gov/release/burchett-investigates-states-refusal-to-provide-snap-data-to-usda-to-reduce-waste-fraud-and-abuse/"
   ]
 }
