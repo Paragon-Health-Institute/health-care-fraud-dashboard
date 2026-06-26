@@ -268,6 +268,32 @@ def classify(meeting):
     has_hc_committee = any(committee_is_hc(c) for c in committee_codes)
     first_committee = committee_names[0] if committee_names else "?"
 
+    # GATE: SNAP/nutrition-program-only hearings are out of scope. Trigger
+    # case: 'Combating Waste, Fraud, and Abuse in SNAP' (June 25, 2026 House
+    # Oversight) auto-promoted via TIER 2 because 'fraud' + HC committee
+    # matched. SNAP is USDA food stamps, not healthcare. Skip when title
+    # has nutrition-program keyword (SNAP/food stamp/EBT/WIC/nutrition
+    # assistance/supplemental nutrition program) AND no healthcare
+    # reference (Medicare/Medicaid/CHIP/TRICARE/hospital/clinic/etc.).
+    # SNAP + healthcare combo titles ('SNAP and Medicaid Hearing') bypass
+    # this filter and keep normal flow.
+    _nutrition_re = re.compile(
+        r'\b(snap|food\s+stamps?|electronic\s+benefit\s+transfer|\bebt\b|'
+        r'\bwic\b|women,?\s+infants?,?\s+and\s+children|'
+        r'nutrition\s+assistance|nutrition\s+benefits?|'
+        r'(supplemental\s+)?nutrition\s+program)\b', re.IGNORECASE)
+    _hc_ref_re = re.compile(
+        r'\b(medicare|medicaid|medi-?cal|chip|tricare|champva|'
+        r'affordable\s+care|aca\b|health\s*care|healthcare|'
+        r'hospice|home\s+health|nursing\s+home|\bdme\b|dmepos|'
+        r'prescription|pharmacy|pharmacist|opioid|'
+        r'physician|doctor|nurse|hospital|clinic|behavioral\s+health|'
+        r'genetic\s+test|telehealth|telemedicine|skin\s+substitute|'
+        r'durable\s+medical|public\s+health\s+emergenc|fda\b)\b',
+        re.IGNORECASE)
+    if _nutrition_re.search(title) and not _hc_ref_re.search(title):
+        return "skip_no_signal", "SNAP/nutrition-program only — out of scope"
+
     # TIER 1: unambiguous fraud-in-healthcare phrase in title → always auto
     if HC_FRAUD_PHRASE.search(title):
         return "include_auto", "explicit HC-fraud phrase in title"

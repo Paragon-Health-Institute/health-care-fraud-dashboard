@@ -17943,28 +17943,6 @@
       "related_agencies": []
     },
     {
-      "id": "doj-2026-06-16-1564365153",
-      "date": "2026-06-16",
-      "agency": "DOJ",
-      "type": "Civil Action",
-      "title": "Justice Department Requires OhioHealth to Stop Using Anticompetitive Healthcare Contract Terms That Raise Costs for Ohio Patients",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.justice.gov/opa/pr/justice-department-requires-ohiohealth-stop-using-anticompetitive-healthcare-contract-terms",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": "OH",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "doj_topics": [
-        "Antitrust"
-      ]
-    },
-    {
       "id": "doj-2026-05-20-738144118",
       "date": "2026-05-20",
       "agency": "DOJ",
@@ -18456,28 +18434,6 @@
       ],
       "topic_checked_at": "2026-06-26T08:34:03.049293",
       "doj_topics": null
-    },
-    {
-      "id": "congress-house-119410",
-      "date": "2026-06-25",
-      "agency": "Congress",
-      "type": "Hearing",
-      "title": "“Combating Waste, Fraud, and Abuse in SNAP”",
-      "amount": "",
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oversight.house.gov/hearing/combating-waste-fraud-and-abuse-in-snap/",
-      "link_label": "House Oversight and Government Reform Subcommittee on Delivering on Government Efficiency Hearing",
-      "tags": [],
-      "state": "",
-      "source_type": "official",
-      "auto_fetched": true,
-      "entities": [],
-      "_source": "congress.gov committee-meeting 119410",
-      "_committees": [
-        "House Oversight and Government Reform Subcommittee on Delivering on Government Efficiency"
-      ],
-      "_filter_reason": "fraud keyword + HC committee (House Oversight and Government Reform Subcommittee on Delivering on Government Efficiency)"
     }
   ]
 }
