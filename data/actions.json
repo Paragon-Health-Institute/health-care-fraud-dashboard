@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-06-26T10:21:51.357612",
+    "last_updated": "2026-06-27T08:16:08.747983",
     "version": "1.0",
-    "last_scraped": "2026-06-26T08:34:02.713309"
+    "last_scraped": "2026-06-27T08:16:08.747971"
   },
   "actions": [
     {
@@ -18434,6 +18434,54 @@
       ],
       "topic_checked_at": "2026-06-26T08:34:03.049293",
       "doj_topics": null
+    },
+    {
+      "id": "doj-2026-06-25-3400528418",
+      "date": "2026-06-25",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "New York City Woman Pleads Guilty for Role in Multi-State Prescription Fraud Ring",
+      "amount": "$4 Million",
+      "amount_numeric": 4000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ndny/pr/new-york-city-woman-pleads-guilty-role-multi-state-prescription-fraud-ring",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-06-25-1950000065",
+      "date": "2026-06-25",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "U.S. Attorney Announces $2.2 Million Settlement With Urologists For Submitting False Claims To Medicare",
+      "amount": "$2.2 Million",
+      "amount_numeric": 2200000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-sdny/pr/us-attorney-announces-22-million-settlement-urologists-submitting-false-claims",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medical Devices"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
