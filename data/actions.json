@@ -18366,18 +18366,16 @@
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Caldwell Woman Charged in the District of Idaho as Part of the National Health Care Fraud Takedown",
-      "amount": "$3.7 Billion",
-      "amount_numeric": 3700000000.0,
+      "amount": "$22,000",
+      "amount_numeric": 22000,
       "officials": [],
       "link": "https://www.justice.gov/usao-id/pr/caldwell-woman-charged-district-idaho-part-national-health-care-fraud-takedown",
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare",
         "Hospice",
-        "Telehealth",
         "Nursing Home",
-        "Opioids"
+        "Behavioral Health"
       ],
       "entities": [],
       "state": "ID",
