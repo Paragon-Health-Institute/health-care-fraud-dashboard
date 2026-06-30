@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-06-30T09:36:03.734583",
+    "last_updated": "2026-06-30T10:22:35.785510",
     "version": "1.0",
     "last_scraped": "2026-06-30T08:38:31.294203"
   },
@@ -18501,6 +18501,30 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "congress-house-119416",
+      "date": "2026-06-30",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "H.R.4398, the “Veteran Burial Timeliness and Death Certificate Accountability Act”; \r\nH.R.4805, the “Warrior Impact from Neurological and G-Force Stress Act”; \r\nH.R.6835, the “Veterans Spinal Trauma Access to New Devices Act”; \r\nH.R.9376, the “Trauma Outreach, Understanding, and Resiliency through Spirituality Act”; \r\nH.R.9316, the “Travel Assistance for Veterans in Medical Deserts Act”; \r\nDiscussion Draft: the “Foreign Medical Program Integrity and Improvement Act”; \r\nDiscussion Draft: To direct the Secretary of Veterans Affairs to seek to enter into a memorandum of \r\nunderstanding with the Secretary of Health and Human Services to avoid duplicative, improper, or \r\nerroneous billings or payments for hospital care and medical services furnished under the laws \r\nadministered by the Secretary of Veterans Affairs; \r\nDiscussion Draft: To direct the Secretary of Veterans Affairs to coordinate with the Secretary of \r\nHealth and Human Services in administering the Veterans Community Care Program, and for other \r\npurposes; \r\nDiscussion Draft: To direct the Secretary of Veterans Affairs to seek to enter into a memorandum of \r\nunderstanding with the Secretary of Health and Human Services and to provide for coordination \r\nbetween the Secretaries in the administration of the Veterans Community Care Program and certain \r\nhealth plans under the Medicare program, and for other purposes; \r\nDiscussion Draft: VA Coaching into Care Act;  \r\nDiscussion Draft: National Task Force on Caregiving Youth of Veterans Act; \r\nDiscussion Draft: the “VHA OPEN Policies Act of 2026”; \r\nDiscussion Draft: “To direct the Secretary of Veterans Affairs to report biennially on staffing of \r\nmedical facilities of the Department of Veterans Affairs”; \r\nH.R.9018: “Fostering TRUST Act of 2026”; \r\nDiscussion Draft: the “Veterans Health Administration Personnel Transparency and Accountability \r\nAct” \r\nAct”",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.congress.gov/event/119-congress/house-event/119416",
+      "link_label": "Congress.gov Hearing",
+      "tags": [
+        "Medicare"
+      ],
+      "state": "",
+      "source_type": "official",
+      "auto_fetched": true,
+      "entities": [],
+      "_source": "congress.gov committee-meeting 119416",
+      "_committees": [
+        "House Veterans' Affairs Subcommittee on Health"
+      ],
+      "_filter_reason": "explicit HC-fraud phrase in title"
     }
   ]
 }
