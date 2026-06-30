@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-06-29T10:03:13.526165",
+    "last_scraped": "2026-06-30T09:36:03.542311",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -887,6 +887,8 @@
     "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-unveils-landmark-discussion-draft-to-fix-340b-lower-health-costs-for-american-patients-and-families",
     "https://oversight.house.gov/release/burchett-investigates-states-refusal-to-provide-snap-data-to-usda-to-reduce-waste-fraud-and-abuse/",
     "https://energycommerce.house.gov/posts/chairman-guthrie-health-vice-chair-harshbarger-congresswoman-miller-meeks-lead-site-visit-to-iowa-hospitals-to-highlight-benefits-of-the-rural-health-transformation-program",
-    "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-unveils-landmark-discussion-draft-to-fix-340b-lower-health-costs-for-american-patients-and-families-1"
+    "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-unveils-landmark-discussion-draft-to-fix-340b-lower-health-costs-for-american-patients-and-families-1",
+    "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2027-end-stage-renal-disease-esrd-prospective-payment-system-proposed-rule",
+    "https://www.gao.gov/products/gao-26-108498"
   ]
 }

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-06-27T08:16:08.747983",
+    "last_updated": "2026-06-30T09:36:03.734583",
     "version": "1.0",
     "last_scraped": "2026-06-30T08:38:31.294203"
   },
@@ -18482,6 +18482,25 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "gao-2026-06-29-298370758",
+      "date": "2026-06-29",
+      "agency": "GAO",
+      "type": "Audit",
+      "title": "Veterans Health Administration: Further Improvements Needed to Manage Fraud Risks in Beneficiary Travel Program",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.gao.gov/products/gao-26-107596",
+      "link_label": "GAO Report",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
