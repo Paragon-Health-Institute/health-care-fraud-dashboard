@@ -327,6 +327,49 @@ _BOILERPLATE_PATTERNS = [
         r"controlled\s+substances",
         _re.IGNORECASE,
     ),
+    # 2026 National Health Care Fraud Takedown — national-summary
+    # boilerplate. Every district release (June 2026) embeds a shared
+    # national-context block that contaminates per-district tag AND
+    # amount extraction:
+    #   - "...health care fraud and opioid abuse schemes involving over
+    #     $6.5 billion..." -> falsely tags Opioids on non-opioid district
+    #     cases
+    #   - "...the following health care fraudsters: one defendant in
+    #     Kyrenia ... $3.7 billion scheme; two defendants in Estonia ...
+    #     $10.6 billion scheme; ... Philippines ... $1.2 billion
+    #     telemedicine fraud scheme." -> falsely tags Telehealth and
+    #     pollutes amount extraction with $3.7B/$10.6B/$1.2B
+    #   - "...Medicare Trust Fund..." CMP line ($10B+)
+    #   - "...resulted in charges against 455 defendants..." ($6.5B stat)
+    # Trigger: Caldwell ID nurse Niki Cook (doj-2026-06-24-2216066618)
+    # got $3.7B + Opioids/Telehealth from this block instead of her
+    # actual $22K credentials-fraud case. See
+    # project_amount_extractor_prefer_scheme.md.
+    _re.compile(
+        r"(?:health\s+care|healthcare)\s+fraud\s+and\s+opioid\s+abuse\s+schemes"
+        r"[\s\S]*?(?:patient\s+harm[^.]*?death|false\s+claims)\.",
+        _re.IGNORECASE,
+    ),
+    _re.compile(
+        r"(?:the\s+)?following\s+health\s+care\s+fraudsters?:"
+        r"[\s\S]*?telemedicine\s+fraud\s+scheme\.?",
+        _re.IGNORECASE,
+    ),
+    _re.compile(
+        r"Civil\s+Monetary\s+Penalt(?:y|ies)\s+Law[\s\S]*?"
+        r"Medicare\s+Trust\s+Fund[^.]*?\.",
+        _re.IGNORECASE,
+    ),
+    # NOTE: deliberately NO separate "resulted in charges against N
+    # defendants ... false claims" pattern. It targets the SAME sentence
+    # as the opioid-summary pattern above ("...health care fraud and
+    # opioid abuse schemes involving over $6.5 billion in false claims...
+    # death."). With both present, the opioid-summary pattern runs first
+    # and removes the shared "...false claims...death." tail, leaving the
+    # 455-stat pattern's lazy [\s\S]*? to over-match thousands of chars
+    # into district case content (ate Broussard/nursing-home details in
+    # the EDLA release). The opioid-summary pattern alone covers the
+    # $6.5B national figure.
 ]
 
 

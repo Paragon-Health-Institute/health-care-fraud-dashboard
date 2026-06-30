@@ -18123,10 +18123,8 @@
         "Medicaid",
         "TRICARE",
         "Lab Testing",
-        "Telehealth",
         "Nursing Home",
-        "Assisted Living",
-        "Opioids"
+        "Assisted Living"
       ],
       "entities": [],
       "state": "LA",
@@ -18153,9 +18151,7 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Pharmacy",
-        "Telehealth",
-        "Opioids"
+        "Pharmacy"
       ],
       "entities": [],
       "state": "HI",
@@ -18184,9 +18180,7 @@
         "Medicare Advantage",
         "Medicare",
         "Genetic Testing",
-        "Lab Testing",
-        "Telehealth",
-        "Opioids"
+        "Lab Testing"
       ],
       "entities": [],
       "state": "OR",
@@ -18216,10 +18210,8 @@
         "Medicaid",
         "TRICARE",
         "Hospice",
-        "Telehealth",
         "Skin Substitutes",
-        "Addiction Treatment",
-        "Opioids"
+        "Addiction Treatment"
       ],
       "entities": [],
       "state": "AZ",
