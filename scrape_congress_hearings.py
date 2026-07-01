@@ -294,6 +294,25 @@ def classify(meeting):
     if _nutrition_re.search(title) and not _hc_ref_re.search(title):
         return "skip_no_signal", "SNAP/nutrition-program only — out of scope"
 
+    # GATE: legislative hearings / markup agendas. A "Legislative Hearing"
+    # (Congress.gov type=Hearing) whose title is a list of pending bills is
+    # about legislation, which the dashboard does not track. Trigger case:
+    # House Veterans' Affairs Subcommittee on Health legislative hearing on
+    # 13 veterans bills (congress-house-119416, June 30 2026) — a 1,893-char
+    # title of "H.R.4398, the ...Act; H.R.4805, the ...Act; Discussion
+    # Draft: ...". Detect by counting bill references (H.R.####, S.####,
+    # H.J.Res.####, Discussion Draft). 3+ references = legislative-hearing
+    # agenda. Manual removal doesn't stick (this scraper dedups only against
+    # actions.json, no reject-list), so the filter is the only durable fix.
+    # Tested clean: all 18 real fraud oversight hearings on the dashboard
+    # have 0-1 bill references; only multi-bill legislative agendas hit 3+.
+    _bill_ref_re = re.compile(
+        r'\bH\.?\s?R\.?\s?\d+\b|\bS\.?\s?\d+\b|'
+        r'\bH\.?\s?J\.?\s?Res\.?\s?\d+\b|\bS\.?\s?J\.?\s?Res\.?\s?\d+\b|'
+        r'Discussion\s+Draft\b', re.IGNORECASE)
+    if len(_bill_ref_re.findall(title)) >= 3:
+        return "skip_no_signal", "legislative hearing (3+ bill references) — legislation not tracked"
+
     # TIER 1: unambiguous fraud-in-healthcare phrase in title → always auto
     if HC_FRAUD_PHRASE.search(title):
         return "include_auto", "explicit HC-fraud phrase in title"
