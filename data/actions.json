@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-07-01T08:44:25.176971",
+    "last_updated": "2026-07-01T09:39:54.723795",
     "version": "1.0",
     "last_scraped": "2026-07-01T08:44:25.176960"
   },
@@ -18549,6 +18549,27 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "hhs-oig-2026-06-25-951637670",
+      "date": "2026-06-25",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Florida Medicaid Fraud Control Unit: 2025 Inspection",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/florida-medicaid-fraud-control-unit-2025-inspection/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
