@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-06-30T10:22:35.785510",
+    "last_updated": "2026-07-01T08:44:25.176971",
     "version": "1.0",
-    "last_scraped": "2026-06-30T08:38:31.294203"
+    "last_scraped": "2026-07-01T08:44:25.176960"
   },
   "actions": [
     {
@@ -18491,6 +18491,64 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-06-30-2009751965",
+      "date": "2026-06-30",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Telemedicine Company Owner and Author of Health Care Compliance Books Sentenced for $136M Medicare Fraud Scheme",
+      "amount": "$136 Million",
+      "amount_numeric": 136000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/telemedicine-company-owner-and-author-health-care-compliance-books-sentenced-136m-medicare",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME",
+        "Pharmacy",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-06-25-1184225429",
+      "date": "2026-06-25",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "U.S. Attorney’s Office for the Middle District of Florida Charges Defendants as Part of National Health Care Fraud Takedown",
+      "amount": "$6.5 Billion",
+      "amount_numeric": 6500000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-mdfl/pr/us-attorneys-office-middle-district-florida-charges-defendants-part-national-health",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Medicaid",
+        "TRICARE",
+        "DME",
+        "Genetic Testing",
+        "Lab Testing",
+        "Telehealth",
+        "Wound Care",
+        "Skin Substitutes"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
