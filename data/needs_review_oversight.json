@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-07-01T09:39:54.540943",
+    "last_scraped": "2026-07-02T09:34:17.615137",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -668,6 +668,35 @@
       "ai_decision": "not_oversight",
       "ai_confidence": 72,
       "ai_reason": "While this involves a House health subcommittee advancing bills, the focus on 'price transparency' and 'protecting communities' suggests legislative activity on healthcare policy broadly, not specific",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-07-01-2720489071",
+      "date": "2026-07-01",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "Calendar Year (CY) 2027 Home Health Prospective Payment System Proposed Rule Fact Sheet (CMS-1844-P)",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2027-home-health-prospective-payment-system-proposed-rule-fact-sheet-cms-1844-p",
+      "link_label": "CMS Fact Sheet",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "DME",
+        "Home Health"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This is a CMS payment system rule update for home health PPS rates and policies, not a healthcare-fraud-specific oversight action, audit, or program-integrity initiative.",
       "ai_model": "claude-haiku-4-5-20251001"
     }
   ],

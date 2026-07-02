@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-07-02T08:28:04.179566",
+    "last_updated": "2026-07-02T09:34:17.795474",
     "version": "1.0",
     "last_scraped": "2026-07-02T08:28:04.179555"
   },
@@ -18600,6 +18600,30 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "cms-2026-07-01-2911105091",
+      "date": "2026-07-01",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "CMS Proposes Updates to Strengthen Medicare Program Integrity, Combat Fraud, and Expand Access to Home Health Care",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-proposes-updates-strengthen-medicare-program-integrity-combat-fraud-expand-access-home-health",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME",
+        "Hospice",
+        "Home Health"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
