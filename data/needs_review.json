@@ -181,6 +181,35 @@
       "ai_confidence": 75,
       "ai_reason": "Title indicates theft of federal funds by a non-profit executive with no mention of healthcare, medical providers, or insurance schemes, suggesting this is likely a general government fraud case outsi",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "doj-2026-07-01-3422519432",
+      "date": "2026-07-01",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Alibaba Group and AUS Merchant Services Agree to Pay $600 Million to Resolve Allegations that they Failed to Prevent Illegal Sales of Pharmaceuticals, Pharmaceutical Equipment, and Other Illegal Products",
+      "amount": "$600 Million",
+      "amount_numeric": 600000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/alibaba-group-and-aus-merchant-services-agree-pay-600-million-resolve-allegations-they",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "RI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Consumer Protection"
+      ],
+      "flagged_at": "2026-07-02T08:28:04.362581",
+      "flag_reason": "title lacks healthcare keyword",
+      "topic_checked_at": "2026-07-02T08:28:04.517135",
+      "ai_decision": "not_healthcare_fraud",
+      "ai_confidence": 85,
+      "ai_reason": "This is a payment processing and product trafficking case involving illegal sales of pharmaceuticals, not healthcare provider fraud, false claims against health insurers, or healthcare-specific scheme",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [

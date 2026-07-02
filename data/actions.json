@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-07-01T10:31:42.078529",
+    "last_updated": "2026-07-02T08:28:04.179566",
     "version": "1.0",
-    "last_scraped": "2026-07-01T08:44:25.176960"
+    "last_scraped": "2026-07-02T08:28:04.179555"
   },
   "actions": [
     {
@@ -18570,6 +18570,36 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-06-30-2948041353",
+      "date": "2026-06-30",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Civil Complaint Filed Over False Laboratory Claims",
+      "amount": "$6.5 Billion",
+      "amount_numeric": 6500000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-de/pr/civil-complaint-filed-over-false-laboratory-claims",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "TRICARE",
+        "Lab Testing",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "DE",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
     }
   ]
 }
