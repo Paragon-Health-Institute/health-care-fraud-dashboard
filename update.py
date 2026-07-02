@@ -1389,17 +1389,28 @@ def extract_amount_hybrid(title, full_text, regex_search_text):
     it returns None and we fall back to the regex.
 
     Returns the same shape as extract_amount: {"display", "numeric"} or None.
+
+    Boilerplate note: both the AI and regex paths receive
+    boilerplate-stripped text. Without this, national-takedown district
+    releases (which embed a shared "...$6.5 billion... Kyrenia $3.7
+    billion... $1.2 billion telemedicine scheme... Medicare Trust Fund
+    $10 billion..." block) caused the extractor to pick a giant national
+    figure instead of the district defendant's amount (or None). The tag
+    extractor already strips this block via strip_boilerplate(); the
+    amount path is a separate code path and needs the same treatment.
     """
+    stripped_full = _strip_boilerplate(full_text) if full_text else full_text
+    stripped_regex = _strip_boilerplate(regex_search_text) if regex_search_text else regex_search_text
     client = _get_ai_client()
-    if client is not None and full_text and len(full_text) > 200:
+    if client is not None and stripped_full and len(stripped_full) > 200:
         try:
             from amount_extractor import extract_amount_with_evidence
-            ai = extract_amount_with_evidence(client, title or "", full_text)
+            ai = extract_amount_with_evidence(client, title or "", stripped_full)
         except Exception:
             ai = None
         if ai:
             return {"display": ai["display"], "numeric": ai["numeric"]}
-    return extract_amount(regex_search_text, title=title)
+    return extract_amount(stripped_regex, title=title)
 
 
 # Canonical link_label map for congressional committee URLs. Used by

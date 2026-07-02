@@ -18577,8 +18577,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Civil Complaint Filed Over False Laboratory Claims",
-      "amount": "$6.5 Billion",
-      "amount_numeric": 6500000000.0,
+      "amount": "",
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.justice.gov/usao-de/pr/civil-complaint-filed-over-false-laboratory-claims",
       "link_label": "DOJ Press Release",
@@ -18587,11 +18587,10 @@
         "Medicare",
         "Medicaid",
         "TRICARE",
-        "Lab Testing",
-        "Telehealth"
+        "Lab Testing"
       ],
       "entities": [],
-      "state": "DE",
+      "state": "DE, PA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [

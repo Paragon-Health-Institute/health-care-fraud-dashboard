@@ -351,13 +351,38 @@ _BOILERPLATE_PATTERNS = [
         _re.IGNORECASE,
     ),
     _re.compile(
+        # "fraud" is optional: releases vary between "telemedicine fraud
+        # scheme" and "telemedicine scheme" (DE Alpha Care lab complaint,
+        # 2026-07-02, used the shorter form and slipped past the stricter
+        # pattern).
         r"(?:the\s+)?following\s+health\s+care\s+fraudsters?:"
-        r"[\s\S]*?telemedicine\s+fraud\s+scheme\.?",
+        r"[\s\S]*?telemedicine\s+(?:fraud\s+)?scheme\.?",
         _re.IGNORECASE,
     ),
     _re.compile(
         r"Civil\s+Monetary\s+Penalt(?:y|ies)\s+Law[\s\S]*?"
         r"Medicare\s+Trust\s+Fund[^.]*?\.",
+        _re.IGNORECASE,
+    ),
+    # 2026 takedown "whole-of-government" national statistics — each of
+    # these sentences carries a national aggregate dollar figure that is
+    # NOT the district defendant's amount. Strip so the amount extractor
+    # doesn't grab $182M / $73M / $23M on a district item (the DE Alpha
+    # Care lab complaint had no district amount but these national stats
+    # remained after the billion-figures were stripped).
+    _re.compile(
+        r"seiz(?:e|ed|ing|ure\s+of)\s+(?:over\s+)?\$[\d,.]+\s*million\s+in\s+"
+        r"cash[^.]*?(?:assets|jewelry)[^.]*?[.;]",
+        _re.IGNORECASE,
+    ),
+    _re.compile(
+        r"Civil\s+Monetary\s+Payment\s+settlements\s+amounting\s+to[^.]*?\.",
+        _re.IGNORECASE,
+    ),
+    _re.compile(
+        r"Civil\s+charges\s+against\s+[\d,]+\s+defendants\s+for\s+\$[\d,.]+"
+        r"[\s\S]*?civil\s+settlements\s+with\s+[\d,]+\s+defendants\s+"
+        r"totaling\s+\$[\d,.]+\s*million\.",
         _re.IGNORECASE,
     ),
     # NOTE: deliberately NO separate "resulted in charges against N
