@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-07-02T09:34:17.795474",
+    "last_updated": "2026-07-03T10:16:37.561789",
     "version": "1.0",
-    "last_scraped": "2026-07-02T08:28:04.179555"
+    "last_scraped": "2026-07-03T10:16:37.561778"
   },
   "actions": [
     {
@@ -18623,6 +18623,59 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-07-01-3425957352",
+      "date": "2026-07-01",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Maryland Oncology Practice Agrees to Pay More Than $1.4M to Resolve False Claims Act Allegations of Fraudulent Billing",
+      "amount": "$1.4 Million",
+      "amount_numeric": 1400000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-md/pr/maryland-oncology-practice-agrees-pay-more-14m-resolve-false-claims-act-allegations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "MD",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-02-1992535325",
+      "date": "2026-07-02",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "No one is above the law—Florida mother-daughter duo sentenced and ordered to pay over $800k for fraud scheme",
+      "amount": "$735,717.63",
+      "amount_numeric": 735717.63,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-wy/pr/no-one-above-law-florida-mother-daughter-duo-sentenced-and-ordered-pay-over-800k-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "TRICARE",
+        "Autism/ABA",
+        "Mental Health",
+        "Behavioral Health"
+      ],
+      "entities": [],
+      "state": "WY, FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
     }
   ]
 }
