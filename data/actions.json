@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-07-03T10:16:37.561789",
+    "last_updated": "2026-07-07T10:38:18.566929",
     "version": "1.0",
-    "last_scraped": "2026-07-06T11:52:06.908101"
+    "last_scraped": "2026-07-07T10:38:18.566919"
   },
   "actions": [
     {
@@ -18676,6 +18676,52 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "doj-2026-07-02-912776290",
+      "date": "2026-07-02",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Two Defendants Charged with Multi-Million Dollar Health Care Fraud Scheme",
+      "amount": "$18 Million",
+      "amount_numeric": 18000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edny/pr/two-defendants-charged-multi-million-dollar-health-care-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Medical Transportation",
+        "Addiction Treatment"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-02-995206826",
+      "date": "2026-07-02",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Statement on Federal Decertification of the New York Medicaid Fraud Control Unit",
+      "amount": "$60 Million",
+      "amount_numeric": 60000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ndny/pr/statement-federal-decertification-new-york-medicaid-fraud-control-unit",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
