@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-07-06T12:21:06.178490",
+    "last_scraped": "2026-07-07T11:25:26.245361",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -725,6 +725,36 @@
       "ai_confidence": 85,
       "ai_reason": "This HHS-OIG audit examines formulary coverage for dual-eligible enrollees in Part D plans, which is a program administration and beneficiary access issue, not a healthcare fraud or program-integrity ",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "hhs-oig-2026-07-01-2083972070",
+      "date": "2026-07-01",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "New York Should Improve Its Oversight of Nursing Homes’ Compliance With Background Check Requirements",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/new-york-should-improve-its-oversight-of-nursing-homes-compliance-with-background-check-requirements/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Nursing Home",
+        "Assisted Living",
+        "Long-Term Care"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 78,
+      "ai_reason": "This HHS-OIG audit addresses nursing home compliance with background check requirements, which is a patient-safety and licensing issue rather than healthcare fraud or program-integrity oversight.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -948,6 +978,7 @@
     "https://www.gao.gov/products/gao-26-108498",
     "https://oversight.house.gov/release/higgins-leads-roundtable-on-addressing-unaccompanied-children-crisis/",
     "https://www.cms.gov/newsroom/fact-sheets/calendar-year-2027-hospital-outpatient-prospective-payment-system-opps-ambulatory-surgical-center",
-    "https://www.cms.gov/newsroom/press-releases/cms-acts-strengthen-care-quality-cut-drug-costs-slash-out-pocket-expenses-medicare-beneficiaries"
+    "https://www.cms.gov/newsroom/press-releases/cms-acts-strengthen-care-quality-cut-drug-costs-slash-out-pocket-expenses-medicare-beneficiaries",
+    "https://waysandmeans.house.gov/2026/07/06/chairman-smith-commends-trump-administration-for-launching-medicare-bridge-model-consistent-with-committee-action-to-improve-seniors-health-care-reduce-long-term-costs/"
   ]
 }
