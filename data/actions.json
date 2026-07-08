@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-07-07T10:38:18.566929",
+    "last_updated": "2026-07-08T09:43:52.611139",
     "version": "1.0",
-    "last_scraped": "2026-07-07T10:38:18.566919"
+    "last_scraped": "2026-07-08T09:43:52.611132"
   },
   "actions": [
     {
@@ -18722,6 +18722,60 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-07-06-2827607665",
+      "date": "2026-07-06",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Gardner Man Agrees to Plead Guilty to Tampering with Oxycodone",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/gardner-man-agrees-plead-guilty-tampering-oxycodone",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Hospice",
+        "Nursing Home",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-07-3410821055",
+      "date": "2026-07-07",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Founder/CEO and Clinical President of Digital Health Company Sentenced to 72 Months and 24 Months, Respectively, for $90 Million Scheme to Distribute over 37 Million Pills of Adderall",
+      "amount": "$90 Million",
+      "amount_numeric": 90000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/founderceo-and-clinical-president-digital-health-company-sentenced-8-years-90-million-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Pharmacy",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
     }
   ]
 }
