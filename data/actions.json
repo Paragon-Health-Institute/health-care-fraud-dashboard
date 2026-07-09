@@ -17926,8 +17926,8 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Department of Justice Files Suit to Stop Ongoing Medicaid Fraud Related to New York’s $10 Billion Home-Care Program",
-      "amount": "$10 Billion",
-      "amount_numeric": 10000000000.0,
+      "amount": "",
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.justice.gov/opa/pr/department-justice-files-suit-stop-ongoing-medicaid-fraud-related-new-yorks-10-billion-home",
       "link_label": "DOJ Press Release",
@@ -18704,10 +18704,10 @@
       "id": "doj-2026-07-02-995206826",
       "date": "2026-07-02",
       "agency": "DOJ",
-      "type": "Criminal Enforcement",
+      "type": "Administrative Action",
       "title": "Statement on Federal Decertification of the New York Medicaid Fraud Control Unit",
-      "amount": "$60 Million",
-      "amount_numeric": 60000000.0,
+      "amount": "",
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.justice.gov/usao-ndny/pr/statement-federal-decertification-new-york-medicaid-fraud-control-unit",
       "link_label": "DOJ Press Release",
@@ -18719,7 +18719,9 @@
       "state": "NY",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-07-06-2827607665",
