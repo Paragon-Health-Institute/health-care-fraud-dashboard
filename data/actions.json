@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-07-08T09:43:52.611139",
+    "last_updated": "2026-07-10T10:35:47.021898",
     "version": "1.0",
-    "last_scraped": "2026-07-09T10:42:46.344603"
+    "last_scraped": "2026-07-10T10:35:47.021889"
   },
   "actions": [
     {
@@ -18775,6 +18775,31 @@
       ],
       "doj_topics": [
         "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-07-08-3520380205",
+      "date": "2026-07-08",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Memphis Gynecologist Sentenced to 20 Years in Prison for Adulterating Medical Devices and Health Care Fraud",
+      "amount": "$41 Million",
+      "amount_numeric": 41000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-wdtn/pr/memphis-gynecologist-sentenced-20-years-prison-adulterating-medical-devices-and-health",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Medical Devices"
+      ],
+      "entities": [],
+      "state": "TN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
       ]
     }
   ]
