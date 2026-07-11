@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-07-10T10:35:47.021898",
+    "last_updated": "2026-07-11T09:05:23.000553",
     "version": "1.0",
-    "last_scraped": "2026-07-10T10:35:47.021889"
+    "last_scraped": "2026-07-11T09:05:23.000547"
   },
   "actions": [
     {
@@ -18796,6 +18796,56 @@
       ],
       "entities": [],
       "state": "TN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-09-1812291800",
+      "date": "2026-07-09",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Six Individuals, Including a Pharmacist and Doctor, Charged in Connection with $20 Million Healthcare Fraud and Kickback Scheme",
+      "amount": "$20 Million",
+      "amount_numeric": 20000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-nj/pr/six-individuals-including-pharmacist-and-doctor-charged-connection-20-million-healthcare",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": "NJ",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-10-395240103",
+      "date": "2026-07-10",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Guilford County Woman Pleads Guilty to Health Care Fraud in Connection with Million Dollar Urine Drug Testing Scheme",
+      "amount": "$1.7 Million",
+      "amount_numeric": 1700000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-mdnc/pr/guilford-county-woman-pleads-guilty-health-care-fraud-connection-million-dollar-urine",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Lab Testing",
+        "Addiction Treatment"
+      ],
+      "entities": [],
+      "state": "NC",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
