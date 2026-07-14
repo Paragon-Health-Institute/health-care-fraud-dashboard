@@ -540,6 +540,28 @@
       "source_type": "news",
       "auto_fetched": false,
       "related_agencies": []
+    },
+    {
+      "id": "media-2026-05-23-nyt-autism-clinics-medicaid",
+      "date": "2026-05-23",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "Short Naps, Long Hours: How Autism Clinics Squeeze Medicaid Dollars Out of Preschoolers",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.nytimes.com/2026/05/23/health/autism-therapy-clinics.html",
+      "link_label": "New York Times",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Autism/ABA"
+      ],
+      "entities": [],
+      "state": "NC",
+      "source_type": "news",
+      "auto_fetched": false,
+      "related_agencies": []
     }
   ]
 }
