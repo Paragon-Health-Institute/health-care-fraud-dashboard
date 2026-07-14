@@ -18894,6 +18894,27 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "cms-pdf-2026-06-medicaid-fraud-war-room",
+      "date": "2026-06",
+      "agency": "CMS",
+      "type": "Report",
+      "title": "Fast Facts: Medicaid Fraud War Room",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/files/document/medicaid-fraud-war-room-fast-facts.pdf",
+      "link_label": "CMS Report",
+      "tags": [
+        "Medicaid",
+        "Lab Testing",
+        "Genetic Testing"
+      ],
+      "state": "",
+      "source_type": "official",
+      "auto_fetched": false,
+      "entities": []
     }
   ]
 }
