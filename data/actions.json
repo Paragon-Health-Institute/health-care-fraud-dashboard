@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-07-11T09:05:23.000553",
+    "last_updated": "2026-07-14T09:24:07.254192",
     "version": "1.0",
-    "last_scraped": "2026-07-13T10:40:40.567903"
+    "last_scraped": "2026-07-14T09:24:07.254184"
   },
   "actions": [
     {
@@ -18846,6 +18846,30 @@
       ],
       "entities": [],
       "state": "NC",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-10-786502304",
+      "date": "2026-07-10",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Suspected Dominican National Charged with Possession with Intent to Distribute Fentanyl Analog, Healthcare Benefit Fraud and Aggravated Identity Theft",
+      "amount": "$30,000",
+      "amount_numeric": 30000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/suspected-dominican-national-charged-possession-intent-distribute-fentanyl-analog",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "MA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
