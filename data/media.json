@@ -562,6 +562,27 @@
       "source_type": "news",
       "auto_fetched": false,
       "related_agencies": []
+    },
+    {
+      "id": "media-2026-07-01-cbs-nyc-adult-daycare-medicaid",
+      "date": "2026-07-01",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "In one NYC neighborhood, dozens of adult daycares bill millions to taxpayers. Now the feds have questions.",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cbsnews.com/news/adult-daycare-centers-dr-oz-potential-fraud/",
+      "link_label": "CBS News Investigation",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Adult Day Care"
+      ],
+      "state": "NY",
+      "source_type": "news",
+      "auto_fetched": false,
+      "entities": []
     }
   ]
 }
