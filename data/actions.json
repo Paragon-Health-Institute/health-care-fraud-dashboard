@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-07-15T11:02:34.689095",
+    "last_updated": "2026-07-15T09:30:28.928538",
     "version": "1.0",
     "last_scraped": "2026-07-15T09:28:48.927308"
   },
@@ -18970,30 +18970,6 @@
       "doj_topics": []
     },
     {
-      "id": "congress-2026-07-14-3691381362",
-      "date": "2026-07-14",
-      "agency": "Congress",
-      "type": "Rule/Regulation",
-      "title": "New Watchdog Report Confirms Significant Structural Failures Enabling Widespread Obamacare Fraud - Ways and Means",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://waysandmeans.house.gov/2026/07/14/new-watchdog-report-confirms-significant-structural-failures-enabling-widespread-obamacare-fraud/",
-      "link_label": "House Ways & Means Release",
-      "social_posts": [],
-      "tags": [
-        "ACA",
-        "DME",
-        "Hospice",
-        "Home Health"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
       "id": "congress-house-119455",
       "date": "2026-07-15",
       "agency": "Congress",
@@ -19036,6 +19012,27 @@
         "Senate Homeland Security and Governmental Affairs"
       ],
       "_filter_reason": "fraud keyword + HC committee (Senate Homeland Security and Governmental Affairs)"
+    },
+    {
+      "id": "gao-2026-07-13-gao-26-108297",
+      "date": "2026-07-13",
+      "agency": "GAO",
+      "type": "Report",
+      "title": "Health Insurance Marketplaces: CMS Needs Stronger Controls to Prevent Unauthorized Actions by Agents and Brokers",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.gao.gov/products/gao-26-108297",
+      "link_label": "GAO Report",
+      "social_posts": [],
+      "tags": [
+        "ACA"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": []
     }
   ]
 }
