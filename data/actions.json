@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-07-15T10:20:52.169783",
+    "last_updated": "2026-07-15T11:02:34.689095",
     "version": "1.0",
     "last_scraped": "2026-07-15T09:28:48.927308"
   },
@@ -18992,6 +18992,50 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "congress-house-119455",
+      "date": "2026-07-15",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "“Emerging Fraud Threats and the Evolving Fraud Landscape”",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oversight.house.gov/hearing/emerging-fraud-threats-and-the-evolving-fraud-landscape/",
+      "link_label": "House Oversight and Government Reform Subcommittee on Government Operations Hearing",
+      "tags": [],
+      "state": "",
+      "source_type": "official",
+      "auto_fetched": true,
+      "entities": [],
+      "_source": "congress.gov committee-meeting 119455",
+      "_committees": [
+        "House Oversight and Government Reform Subcommittee on Government Operations"
+      ],
+      "_filter_reason": "fraud keyword + HC committee (House Oversight and Government Reform Subcommittee on Government Operations)"
+    },
+    {
+      "id": "congress-senate-338647",
+      "date": "2026-07-15",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "Hearings to examine exposing fraud in America.",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.congress.gov/event/119-congress/senate-event/338647",
+      "link_label": "Congress.gov Hearing",
+      "tags": [],
+      "state": "",
+      "source_type": "official",
+      "auto_fetched": true,
+      "entities": [],
+      "_source": "congress.gov committee-meeting 338647",
+      "_committees": [
+        "Senate Homeland Security and Governmental Affairs"
+      ],
+      "_filter_reason": "fraud keyword + HC committee (Senate Homeland Security and Governmental Affairs)"
     }
   ]
 }
