@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-07-14T10:16:33.470367",
+    "last_updated": "2026-07-15T09:28:48.927317",
     "version": "1.0",
-    "last_scraped": "2026-07-14T09:24:07.254184"
+    "last_scraped": "2026-07-15T09:28:48.927308"
   },
   "actions": [
     {
@@ -18915,6 +18915,59 @@
       "source_type": "official",
       "auto_fetched": false,
       "entities": []
+    },
+    {
+      "id": "doj-2026-07-14-2736771296",
+      "date": "2026-07-14",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Medical Device Company to Pay Over $550,000 to Resolve False Claims Act Allegations",
+      "amount": "$550,000",
+      "amount_numeric": 550000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/medical-device-company-pay-over-550000-resolve-false-claims-act-allegations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medical Devices"
+      ],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-07-14-171828051",
+      "date": "2026-07-14",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Pharmacy Owner and Technician Sentenced for Falsifying Audit Documents and Submitting Fraudulent Claims",
+      "amount": "$620,000",
+      "amount_numeric": 620000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/pharmacy-owner-and-technician-sentenced-falsifying-audit-documents-and-submitting-fraudulent",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "topic_checked_at": "2026-07-15T09:28:49.287583",
+      "doj_topics": []
     }
   ]
 }
