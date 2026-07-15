@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-07-14T10:16:33.298457",
+    "last_scraped": "2026-07-15T10:20:51.998523",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -755,6 +755,61 @@
       "ai_confidence": 78,
       "ai_reason": "This HHS-OIG audit addresses nursing home compliance with background check requirements, which is a patient-safety and licensing issue rather than healthcare fraud or program-integrity oversight.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-07-14-3549393320",
+      "date": "2026-07-14",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "CMS Proposes Transformational Medicare Reforms to Expand Accountable Care, Modernize Physician Payment, and Shift from Sick Care to Healthcare",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-proposes-transformational-medicare-reforms-expand-accountable-care-modernize-physician-payment",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This is a general Medicare payment and care-delivery reform proposal unrelated to fraud detection, program integrity, or anti-fraud oversight mechanisms.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-07-14-1102773094",
+      "date": "2026-07-14",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "Calendar Year (CY) 2027 Medicare Physician Fee Schedule Proposed Rule (CMS-1848-P) — Medicare Shared Savings Program Proposals",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2027-medicare-physician-fee-schedule-proposed-rule-cms-1848-p-medicare-shared",
+      "link_label": "CMS Fact Sheet",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Medicaid",
+        "DME"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This is a Medicare payment rate-setting rule (physician fee schedule) without indication of healthcare fraud or program-integrity components; while CMS rules can be in-scope when specifically addressi",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -982,6 +1037,10 @@
     "https://waysandmeans.house.gov/2026/07/06/chairman-smith-commends-trump-administration-for-launching-medicare-bridge-model-consistent-with-committee-action-to-improve-seniors-health-care-reduce-long-term-costs/",
     "https://www.gao.gov/products/gao-26-108297",
     "https://www.gao.gov/products/gao-26-108437",
-    "https://energycommerce.house.gov/posts/energy-and-commerce-weekly-look-ahead-the-week-of-july-13th-2026"
+    "https://energycommerce.house.gov/posts/energy-and-commerce-weekly-look-ahead-the-week-of-july-13th-2026",
+    "https://www.gao.gov/products/gao-26-108041",
+    "http://www.finance.senate.gov/ranking-members-news/wyden-merkley-demand-answers-from-kennedy-oz-on-newly-formed-healthcare-advisory-committee",
+    "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2027-medicare-physician-fee-schedule-proposed-rule",
+    "https://www.help.senate.gov/rep/newsroom/press/today-chairman-cassidy-to-discuss-his-mvp-agenda-lowering-health-care-costs"
   ]
 }
