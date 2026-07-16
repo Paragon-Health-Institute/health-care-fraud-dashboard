@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-07-15T09:30:28.928538",
+    "last_updated": "2026-07-16T09:36:36.545443",
     "version": "1.0",
-    "last_scraped": "2026-07-15T09:28:48.927308"
+    "last_scraped": "2026-07-16T09:36:36.545430"
   },
   "actions": [
     {
@@ -19033,6 +19033,33 @@
       "source_type": "official",
       "auto_fetched": false,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-07-15-2354187838",
+      "date": "2026-07-15",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Labcorp Agrees to Pay $14.5M to Resolve False Claims Act Allegations",
+      "amount": "$14.5 Million",
+      "amount_numeric": 14500000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/labcorp-agrees-pay-145m-resolve-false-claims-act-allegations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Lab Testing"
+      ],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ]
     }
   ]
 }
