@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-07-16T09:36:36.545443",
+    "last_updated": "2026-07-16T10:26:15.156105",
     "version": "1.0",
     "last_scraped": "2026-07-16T09:36:36.545430"
   },
@@ -19060,6 +19060,30 @@
       "doj_topics": [
         "False Claims Act"
       ]
+    },
+    {
+      "id": "congress-2026-07-14-3691381362",
+      "date": "2026-07-14",
+      "agency": "Congress",
+      "type": "Rule/Regulation",
+      "title": "New Watchdog Report Confirms Significant Structural Failures Enabling Widespread Obamacare Fraud - Ways and Means",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://waysandmeans.house.gov/2026/07/14/new-watchdog-report-confirms-significant-structural-failures-enabling-widespread-obamacare-fraud/",
+      "link_label": "House Ways & Means Release",
+      "social_posts": [],
+      "tags": [
+        "ACA",
+        "DME",
+        "Hospice",
+        "Home Health"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
