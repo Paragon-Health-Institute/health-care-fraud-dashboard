@@ -241,6 +241,35 @@
       "ai_confidence": 75,
       "ai_reason": "Title indicates 'federal benefits fraud' generally, which typically encompasses SNAP, unemployment, housing, or other non-healthcare assistance programs rather than Medicare/Medicaid or health insuran",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "doj-2026-07-16-1068835042",
+      "date": "2026-07-16",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Alabama man pleads guilty to his role in international drug trafficking ring involving pharmaceuticals",
+      "amount": "$1,000,000",
+      "amount_numeric": 1000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-wdny/pr/alabama-man-pleads-guilty-his-role-international-drug-trafficking-ring-involving",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "NY, AL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Drug Trafficking"
+      ],
+      "flagged_at": "2026-07-17T09:28:20.074498",
+      "flag_reason": "title lacks healthcare keyword",
+      "topic_checked_at": "2026-07-17T09:28:20.209823",
+      "ai_decision": "not_healthcare_fraud",
+      "ai_confidence": 75,
+      "ai_reason": "International drug trafficking ring involving pharmaceuticals constitutes street-level drug trafficking/criminal enterprise rather than healthcare fraud (false claims, billing schemes, or kickbacks ag",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
