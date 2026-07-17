@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-07-16T10:26:14.991036",
+    "last_scraped": "2026-07-17T10:17:12.565148",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -810,6 +810,61 @@
       "ai_confidence": 85,
       "ai_reason": "This is a Medicare payment rate-setting rule (physician fee schedule) without indication of healthcare fraud or program-integrity components; while CMS rules can be in-scope when specifically addressi",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-07-16-2775955434",
+      "date": "2026-07-16",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "Strengthening Original Medicare",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/blog/strengthening-original-medicare",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "DME",
+        "Lab Testing",
+        "Home Health",
+        "Nursing Home"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 72,
+      "ai_reason": "A CMS blog post about strengthening Original Medicare is a general policy/operational announcement rather than a specific healthcare-fraud oversight action, audit, or program-integrity initiative.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "gao-2026-07-16-50174057",
+      "date": "2026-07-16",
+      "agency": "GAO",
+      "type": "Audit",
+      "title": "Science & Tech Spotlight: AI for Medical Notes and Coding",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.gao.gov/products/gao-26-109116",
+      "link_label": "GAO Report",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 78,
+      "ai_reason": "This GAO report evaluates AI technology for medical documentation, not healthcare fraud, improper payments, or program integrity findings.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1043,6 +1098,7 @@
     "https://www.help.senate.gov/rep/newsroom/press/today-chairman-cassidy-to-discuss-his-mvp-agenda-lowering-health-care-costs",
     "https://www.gao.gov/products/gao-26-109098",
     "https://energycommerce.house.gov/posts/health-subcommittee-holds-hearing-to-examine-ways-to-drive-efficiencies-across-early-stage-clinical-development",
-    "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-delivers-remarks-during-confirmation-hearing-on-nominations-for-hhs-cdc"
+    "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-delivers-remarks-during-confirmation-hearing-on-nominations-for-hhs-cdc",
+    "https://energycommerce.house.gov/posts/chairman-guthrie-announces-full-committee-markup-of-29-bills"
   ]
 }

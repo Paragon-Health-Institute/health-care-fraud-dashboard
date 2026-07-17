@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-07-17T09:28:19.904840",
+    "last_updated": "2026-07-17T10:17:12.762378",
     "version": "1.0",
     "last_scraped": "2026-07-17T09:28:19.904831"
   },
@@ -19078,6 +19078,29 @@
         "DME",
         "Hospice",
         "Home Health"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "congress-2026-07-16-1185362234",
+      "date": "2026-07-16",
+      "agency": "Congress",
+      "type": "Administrative Action",
+      "title": "Grothman Announces Roundtable on Medicare Fraud in Skin Substitute Spending - United States House Committee on Oversight and Government Reform",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oversight.house.gov/release/grothman-announces-roundtable-on-medicare-fraud-in-skin-substitute-spending/",
+      "link_label": "House Oversight Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Wound Care",
+        "Skin Substitutes"
       ],
       "entities": [],
       "state": null,
