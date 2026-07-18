@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-07-17T10:17:12.762378",
+    "last_updated": "2026-07-18T09:05:54.826746",
     "version": "1.0",
-    "last_scraped": "2026-07-17T09:28:19.904831"
+    "last_scraped": "2026-07-18T09:05:54.826737"
   },
   "actions": [
     {
@@ -19107,6 +19107,50 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-07-17-3769762198",
+      "date": "2026-07-17",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Pennsylvania Doctor Pleads Guilty to Multiple Child Sexual Exploitation Offenses",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/pennsylvania-doctor-pleads-guilty-multiple-child-sexual-exploitation-offenses",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "PA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Project Safe Childhood"
+      ]
+    },
+    {
+      "id": "doj-2026-07-17-3157334025",
+      "date": "2026-07-17",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Nevada Man Pleads Guilty to Smuggling and Selling Misbranded Erectile Dysfunction and Prescription Drugs",
+      "amount": "$1.9 Million",
+      "amount_numeric": 1900000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-nv/pr/nevada-man-pleads-guilty-smuggling-and-selling-misbranded-erectile-dysfunction-and",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "NV",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Prescription Drugs"
+      ]
     }
   ]
 }
