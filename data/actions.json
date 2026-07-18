@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-07-18T09:05:54.826746",
+    "last_updated": "2026-07-18T09:53:08.369443",
     "version": "1.0",
     "last_scraped": "2026-07-18T09:05:54.826737"
   },
@@ -19151,6 +19151,25 @@
       "doj_topics": [
         "Prescription Drugs"
       ]
+    },
+    {
+      "id": "doj-2026-07-16-3294388557",
+      "date": "2026-07-16",
+      "agency": "DOJ",
+      "type": "Administrative Action",
+      "title": "U.S. Attorney’s Office Hosts Federal Fraud Forum and Announces Creation of Fraud Task Force in Southern District of Indiana",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-sdin/pr/us-attorneys-office-hosts-federal-fraud-forum-and-announces-creation-fraud-task-force",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "IN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
