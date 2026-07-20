@@ -155,13 +155,18 @@ def is_obviously_healthcare(item: dict) -> bool:
     """True if the item title or link slug clearly references healthcare.
 
     Used as the first-stage regex pre-filter. Items matching here skip both
-    the DOJ topic check and the AI review and go straight to actions.json.
+    the DOJ topic check and the AI review and go straight to actions.json —
+    UNLESS non_hc_topic_veto() fires first in cmd_audit (DOJ affirmatively
+    tagged the release with an unrelated crime area and not HC fraud), in
+    which case the item is routed to AI review regardless of this match.
     Items not matching here get the DOJ topic check next, then AI review.
 
-    Editorial policy: we defer to DOJ's "Health Care Fraud" topic tag as
-    the authoritative inclusion signal. We do NOT second-guess DOJ with a
-    non-fraud crime demote list. If DOJ considers a case healthcare fraud,
-    it belongs on the dashboard.
+    Editorial policy: we defer to DOJ's topic tags as the authoritative
+    signal in BOTH directions. If DOJ tagged "Health Care Fraud", the item
+    belongs on the dashboard unconditionally — we never demote it with our
+    own crime-type opinions. If DOJ instead tagged only a categorically
+    different crime area (see NON_HC_CRIME_TOPICS), the item needs AI
+    review before publishing — it is flagged, never silently dropped.
     """
     title = item.get("title", "") or ""
     link = item.get("link", "") or ""
@@ -416,6 +421,56 @@ def has_hc_topic(topics: list[str] | None) -> bool:
     return any("Health Care Fraud" in t or "Healthcare Fraud" in t for t in topics)
 
 
+# DOJ topic tags marking a release as a categorically different crime
+# area (child exploitation, immigration, violent crime, ...). When one of
+# these appears WITHOUT an HC-fraud topic, the item skips auto-approval
+# and goes to AI review instead. This does NOT second-guess DOJ — it
+# defers to DOJ's classification in both directions: tagged "Health Care
+# Fraud" -> include unconditionally; affirmatively tagged only an
+# unrelated crime area -> AI/human look before publishing. Items are
+# never silently dropped by this list (review queue, not reject).
+#
+# Trigger case: "Pennsylvania Doctor Pleads Guilty to Multiple Child
+# Sexual Exploitation Offenses" (July 2026) auto-approved because
+# "Doctor" matches HC_KEYWORDS, though DOJ tagged it only "Project Safe
+# Childhood".
+#
+# Topics that DO co-occur with genuine HC-fraud dashboard items must NOT
+# be listed here: False Claims Act, Drug Trafficking, Prescription
+# Drugs, Antitrust, Tax, Financial Fraud, Identity Theft, Disaster
+# Fraud (all verified present on kept items as of 2026-07).
+NON_HC_CRIME_TOPICS = (
+    "project safe childhood",
+    "child exploitation",
+    "crimes against children",
+    "human smuggling",
+    "human trafficking",
+    "immigration",
+    "firearms",
+    "violent crime",
+    "hate crime",
+    "national security",
+    "terrorism",
+)
+
+
+def non_hc_topic_veto(item: dict) -> str | None:
+    """Return the vetoing DOJ topic if this item should skip auto-approval.
+
+    Fires only when the item's DOJ topics include a NON_HC_CRIME_TOPICS
+    entry AND lack any HC-fraud topic. Returns None otherwise (including
+    when no topics were captured — absence of topics is not a veto).
+    """
+    topics = item.get("doj_topics") or item.get("_doj_topics") or []
+    if not topics or has_hc_topic(topics):
+        return None
+    for t in topics:
+        tl = t.lower()
+        if any(bad in tl for bad in NON_HC_CRIME_TOPICS):
+            return t
+    return None
+
+
 # ---------------------------------------------------------------------------
 # Storage helpers
 # ---------------------------------------------------------------------------
@@ -478,12 +533,21 @@ def cmd_audit() -> int:
 
     review = load_review()
     approved_new = []
-    flagged = []
+    flagged = []  # (item, flag_reason) pairs
     for item in new_items:
-        if is_obviously_healthcare(item):
+        # Topic veto runs BEFORE the keyword pre-filter: a DOJ release
+        # affirmatively tagged with an unrelated crime area (and not HC
+        # fraud) needs AI review even when the title matches HC_KEYWORDS
+        # (e.g., "Doctor" in a child-exploitation plea).
+        veto_topic = non_hc_topic_veto(item)
+        if veto_topic:
+            flagged.append((item,
+                            f"DOJ topic '{veto_topic}' without Health Care "
+                            f"Fraud tag — needs AI review"))
+        elif is_obviously_healthcare(item):
             approved_new.append(item)
         else:
-            flagged.append(item)
+            flagged.append((item, "title lacks healthcare keyword"))
 
     if not flagged:
         print(f"audit: all {len(new_items)} new items passed the healthcare check")
@@ -491,28 +555,29 @@ def cmd_audit() -> int:
         return 0
 
     # Strip flagged items from actions.json, append to needs_review.json
-    flagged_ids = {a["id"] for a in flagged}
+    flagged_ids = {a["id"] for a, _ in flagged}
     data["actions"] = [a for a in actions if a.get("id") not in flagged_ids]
 
     now = datetime.now().isoformat()
-    for item in flagged:
+    for item, reason in flagged:
         item["flagged_at"] = now
-        item["flag_reason"] = "title lacks healthcare keyword"
+        item["flag_reason"] = reason
         review["items"].append(item)
 
     save_json(DATA_FILE, data)
     save_json(REVIEW_FILE, review)
 
     print(f"audit: {len(approved_new)} auto-approved, {len(flagged)} flagged for review:")
-    for item in flagged:
+    for item, reason in flagged:
         print(f"  - {item['id']}: {item.get('title', '')[:80]}")
+        print(f"      reason: {reason}")
     print()
     print(f"  approved items kept in {os.path.basename(DATA_FILE)}")
     print(f"  flagged items moved to {os.path.basename(REVIEW_FILE)}")
     print(f"  promote a flagged item: python audit_new_items.py promote <id>")
     print(f"  permanently reject:     python audit_new_items.py reject <id>")
 
-    _write_summary(approved_new, flagged)
+    _write_summary(approved_new, [item for item, _ in flagged])
     return 0
 
 
