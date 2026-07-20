@@ -19109,28 +19109,6 @@
       "related_agencies": []
     },
     {
-      "id": "doj-2026-07-17-3769762198",
-      "date": "2026-07-17",
-      "agency": "DOJ",
-      "type": "Criminal Enforcement",
-      "title": "Pennsylvania Doctor Pleads Guilty to Multiple Child Sexual Exploitation Offenses",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.justice.gov/opa/pr/pennsylvania-doctor-pleads-guilty-multiple-child-sexual-exploitation-offenses",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": "PA",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "doj_topics": [
-        "Project Safe Childhood"
-      ]
-    },
-    {
       "id": "doj-2026-07-17-3157334025",
       "date": "2026-07-17",
       "agency": "DOJ",
