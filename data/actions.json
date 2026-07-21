@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-07-18T09:53:08.369443",
+    "last_updated": "2026-07-21T09:47:20.426876",
     "version": "1.0",
-    "last_scraped": "2026-07-20T10:26:16.813060"
+    "last_scraped": "2026-07-21T09:47:20.426865"
   },
   "actions": [
     {
@@ -19104,6 +19104,116 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-07-20-1255058666",
+      "date": "2026-07-20",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Florida Laboratory Agrees to Pay $9.8M to Resolve False Claims Act Liability Relating to Self-Disclosure of Compensation Arrangements",
+      "amount": "$9.8 Million",
+      "amount_numeric": 9800000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/florida-laboratory-agrees-pay-98m-resolve-false-claims-act-liability-relating-self",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Lab Testing"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-07-20-2184993399",
+      "date": "2026-07-20",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "New Mexico Woman Pleads Guilty to $4M Medicaid Fraud",
+      "amount": "$4 Million",
+      "amount_numeric": 4000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/new-mexico-woman-pleads-guilty-4m-medicaid-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Medical Transportation"
+      ],
+      "entities": [],
+      "state": "NM",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-20-1772599074",
+      "date": "2026-07-20",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Brooklyn Adult Daycare Owner Sentenced to 57 Months for Medicaid Fraud Scheme",
+      "amount": "$3.2 Million",
+      "amount_numeric": 3200000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/brooklyn-adult-daycare-owner-sentenced-57-months-medicaid-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Adult Day Care"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-20-3636141419",
+      "date": "2026-07-20",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Mid-Year Report: U.S. Attorney’s Office in Chicago Dramatically Increases Federal Violent Crime and Other Prosecutions While Implementing Numerous Significant Policy Initiatives and Reforms",
+      "amount": "$2.135 Billion",
+      "amount_numeric": 2134999999.9999998,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ndil/pr/mid-year-report-us-attorneys-office-chicago-dramatically-increases-federal-violent",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "DME",
+        "Lab Testing",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "IL, AZ, CA, GA, IN, MO, NJ, NY, WA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Project Safe Childhood",
+        "Public Corruption",
+        "National Security",
+        "Human Trafficking",
+        "Firearms Offenses",
+        "Healthcare Fraud",
+        "Drug Trafficking",
+        "Violent Crime",
+        "Immigration"
+      ]
     }
   ]
 }
