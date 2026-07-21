@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-07-20T11:20:33.145828",
+    "last_scraped": "2026-07-21T10:40:05.230805",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -867,42 +867,31 @@
       "ai_model": "claude-haiku-4-5-20251001"
     },
     {
-      "id": "hhs-oig-2026-07-20-3111123981",
+      "id": "congress-2026-07-20-2854933297",
       "date": "2026-07-20",
-      "agency": "HHS-OIG",
-      "type": "Report",
-      "title": "Semiannual Report to Congress",
+      "agency": "Congress",
+      "type": "Rule/Regulation",
+      "title": "Comer Announces Full Committee Markup to Lower Prescription Drug Prices, Strengthen Congressional D.C. Oversight, and Improve Government Operations - United States House Committee on Oversight and Government Reform",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
-      "link": "https://oig.hhs.gov/reports/sar/",
-      "link_label": "HHS-OIG Fraud Hub",
+      "link": "https://oversight.house.gov/release/comer-announces-full-committee-markup-to-lower-prescription-drug-prices-strengthen-congressional-d-c-oversight-and-improve-government-operations/",
+      "link_label": "House Oversight Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Pharmacy",
+        "Drug Pricing"
+      ],
       "entities": [],
       "state": null,
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
-      "id": "hhs-oig-2026-07-20-3111123981",
-      "date": "2026-07-20",
-      "agency": "HHS-OIG",
-      "type": "Report",
-      "title": "Semiannual Report to Congress",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/sar/",
-      "link_label": "HCFAC Annual Reports Archive",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This is a procedural announcement about committee markup on prescription drug prices and government operations, not an oversight action investigating healthcare fraud or improper payments.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1137,6 +1126,9 @@
     "https://www.gao.gov/products/gao-26-109098",
     "https://energycommerce.house.gov/posts/health-subcommittee-holds-hearing-to-examine-ways-to-drive-efficiencies-across-early-stage-clinical-development",
     "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-delivers-remarks-during-confirmation-hearing-on-nominations-for-hhs-cdc",
-    "https://energycommerce.house.gov/posts/chairman-guthrie-announces-full-committee-markup-of-29-bills"
+    "https://energycommerce.house.gov/posts/chairman-guthrie-announces-full-committee-markup-of-29-bills",
+    "https://energycommerce.house.gov/posts/energy-and-commerce-weekly-look-ahead-the-week-of-july-20th-2026",
+    "https://energycommerce.house.gov/posts/chairman-guthrie-delivers-opening-statement-at-full-committee-markup-to-promote-affordability-and-the-wellbeing-of-americans",
+    "https://www.cms.gov/newsroom/fact-sheets/manufacturer-effectuation-mfp-draft-guidance-2028-medicare-drug-price-negotiation"
   ]
 }

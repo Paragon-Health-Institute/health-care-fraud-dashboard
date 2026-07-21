@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-07-21T09:47:20.426876",
+    "last_updated": "2026-07-21T10:40:05.402931",
     "version": "1.0",
     "last_scraped": "2026-07-21T09:47:20.426865"
   },
@@ -19214,6 +19214,49 @@
         "Violent Crime",
         "Immigration"
       ]
+    },
+    {
+      "id": "hhs-oig-2026-07-20-3111123981",
+      "date": "2026-07-20",
+      "agency": "HHS-OIG",
+      "type": "Report",
+      "title": "Semiannual Report to Congress",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/sar/",
+      "link_label": "HHS-OIG Fraud Hub",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-07-15-1695309173",
+      "date": "2026-07-15",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Novitas Solutions, Inc., Improperly Paid Approximately $19.5 Million for Selected Medicare Part B Services Provided to Patients Residing in Nursing Homes",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/novitas-solutions-inc-improperly-paid-approximately-195-million-for-selected-medicare-part-b-services-provided-to-patients-residing-in-nursing-homes/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Nursing Home",
+        "Wound Care",
+        "Mental Health"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
