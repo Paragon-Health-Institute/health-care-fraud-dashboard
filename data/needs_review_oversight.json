@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-07-21T10:40:05.230805",
+    "last_scraped": "2026-07-22T10:40:03.126498",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1129,6 +1129,8 @@
     "https://energycommerce.house.gov/posts/chairman-guthrie-announces-full-committee-markup-of-29-bills",
     "https://energycommerce.house.gov/posts/energy-and-commerce-weekly-look-ahead-the-week-of-july-20th-2026",
     "https://energycommerce.house.gov/posts/chairman-guthrie-delivers-opening-statement-at-full-committee-markup-to-promote-affordability-and-the-wellbeing-of-americans",
-    "https://www.cms.gov/newsroom/fact-sheets/manufacturer-effectuation-mfp-draft-guidance-2028-medicare-drug-price-negotiation"
+    "https://www.cms.gov/newsroom/fact-sheets/manufacturer-effectuation-mfp-draft-guidance-2028-medicare-drug-price-negotiation",
+    "https://www.gao.gov/products/gao-26-109297",
+    "https://energycommerce.house.gov/posts/the-house-committee-on-energy-and-commerce-advances-17-bills-to-the-full-house-of-representatives"
   ]
 }

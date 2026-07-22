@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-07-22T09:46:23.487403",
+    "last_updated": "2026-07-22T10:40:03.316213",
     "version": "1.0",
     "last_scraped": "2026-07-22T09:46:23.487394"
   },
@@ -19354,6 +19354,97 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "gao-2026-07-21-2652399266",
+      "date": "2026-07-21",
+      "agency": "GAO",
+      "type": "Audit",
+      "title": "Program Integrity: Actions Needed to Reduce Improper Payment and Fraud Risks in VA Community Care and Medicare Advantage",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.gao.gov/products/gao-26-107946",
+      "link_label": "GAO Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "congress-2026-07-21-2355759539",
+      "date": "2026-07-21",
+      "agency": "Congress",
+      "type": "Administrative Action",
+      "title": "Grothman Leads Roundtable on Tackling Medicare Fraud in Skin Substitutes Funding - United States House Committee on Oversight and Government Reform",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oversight.house.gov/release/grothman-leads-roundtable-on-tackling-medicare-fraud-in-skin-substitutes-funding/",
+      "link_label": "House Oversight Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Nursing Home",
+        "Wound Care",
+        "Skin Substitutes",
+        "Assisted Living"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-07-17-2938295157",
+      "date": "2026-07-17",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Colorado Could Improve Its Electronic Visit Verification System and Claimed Federal Medicaid Reimbursement for Millions of Dollars in Personal Care Services That Did Not Comply With Federal and State Requirements",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/colorado-could-improve-its-electronic-visit-verification-system-and-claimed-federal-medicaid-reimbursement-for-millions-of-dollars-in-personal-care-services-that-did-not-comply-with-federal-and-state-requirements/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Personal Care"
+      ],
+      "entities": [],
+      "state": "CO",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-07-16-2790248253",
+      "date": "2026-07-16",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "States Have Missed Some Opportunities to Improve Medicaid Managed Care Organizations’ Provider Fraud Referrals",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/states-have-missed-some-opportunities-to-improve-medicaid-managed-care-organizations-provider-fraud-referrals/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Medicaid Managed Care"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
