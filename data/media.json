@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-05-11T08:54:10.320817",
+    "last_updated": "2026-07-22T14:00:27.014559",
     "version": "1.0"
   },
   "stories": [
@@ -583,6 +583,27 @@
       "source_type": "news",
       "auto_fetched": false,
       "entities": []
+    },
+    {
+      "id": "media-2026-07-21-virginia-nursing-home-possible-inflated-costs-july-21-2026",
+      "date": "2026-07-21",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "State takes no further action after auditors flag millions in possible 'inflated' nursing home costs",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.wtvr.com/news/local-news/virginia-nursing-home-possible-inflated-costs-july-21-2026",
+      "link_label": "WTVR Investigation",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Nursing Home"
+      ],
+      "entities": [],
+      "state": "VA",
+      "source_type": "news",
+      "auto_fetched": false
     }
   ]
 }
