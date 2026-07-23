@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-07-23T09:43:51.458983",
+    "last_updated": "2026-07-23T10:40:47.008540",
     "version": "1.0",
     "last_scraped": "2026-07-23T09:43:51.458976"
   },
@@ -19544,6 +19544,28 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "hhs-oig-2026-07-21-3527932349",
+      "date": "2026-07-21",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Wisconsin Physicians Service Insurance Corporation Made Incorrect Medicare Payments to Providers for Outpatient Services",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/wisconsin-physicians-service-insurance-corporation-made-incorrect-medicare-payments-to-providers-for-outpatient-services/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Drug Pricing"
+      ],
+      "entities": [],
+      "state": "WI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }

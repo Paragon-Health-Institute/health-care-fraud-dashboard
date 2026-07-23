@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-07-22T10:40:03.126498",
+    "last_scraped": "2026-07-23T10:40:46.809398",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -892,6 +892,58 @@
       "ai_confidence": 85,
       "ai_reason": "This is a procedural announcement about committee markup on prescription drug prices and government operations, not an oversight action investigating healthcare fraud or improper payments.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-07-21-1192108981",
+      "date": "2026-07-21",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "Amending the Indirect Hold Harmless Threshold of Health Care-Related Taxes Proposed Rule (CMS-2452-P)",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/fact-sheets/amending-indirect-hold-harmless-threshold-health-care-related-taxes-proposed-rule-cms-2452-p",
+      "link_label": "CMS Fact Sheet",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This proposed rule concerns health care-related tax thresholds and hold-harmless provisions, which is a financial/tax policy matter unrelated to healthcare fraud, improper payments, or program integri",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "congress-2026-07-22-2095390649",
+      "date": "2026-07-22",
+      "agency": "Congress",
+      "type": "Rule/Regulation",
+      "title": "House Passes Energy and Commerce Bills to Strengthen Public Health Efforts and Expand Access to Medical Innovation for American Patients",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://energycommerce.house.gov/posts/house-passes-energy-and-commerce-bills-to-strengthen-public-health-efforts-and-expand-access-to-medical-innovation-for-american-patients",
+      "link_label": "House E&C Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "Title focuses on strengthening public health and expanding medical access, with no indication of healthcare fraud, improper payments, or program-integrity oversight.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1131,6 +1183,8 @@
     "https://energycommerce.house.gov/posts/chairman-guthrie-delivers-opening-statement-at-full-committee-markup-to-promote-affordability-and-the-wellbeing-of-americans",
     "https://www.cms.gov/newsroom/fact-sheets/manufacturer-effectuation-mfp-draft-guidance-2028-medicare-drug-price-negotiation",
     "https://www.gao.gov/products/gao-26-109297",
-    "https://energycommerce.house.gov/posts/the-house-committee-on-energy-and-commerce-advances-17-bills-to-the-full-house-of-representatives"
+    "https://energycommerce.house.gov/posts/the-house-committee-on-energy-and-commerce-advances-17-bills-to-the-full-house-of-representatives",
+    "https://oversight.house.gov/release/house-passes-bipartisan-bills-to-increase-government-efficiency-and-transparency/",
+    "https://energycommerce.house.gov/posts/chairman-hudson-delivers-opening-statement-at-subcommittee-on-communications-and-technology-hearing-on-protecting-communications-networks-and-improving-connectivity"
   ]
 }
