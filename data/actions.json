@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-07-22T10:40:03.316213",
+    "last_updated": "2026-07-23T09:43:51.458983",
     "version": "1.0",
-    "last_scraped": "2026-07-22T09:46:23.487394"
+    "last_scraped": "2026-07-23T09:43:51.458976"
   },
   "actions": [
     {
@@ -19424,6 +19424,126 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-07-22-3283775268",
+      "date": "2026-07-22",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Medical Supply Company Owner Convicted of $30M Medicare Fraud Scheme",
+      "amount": "$30 Million",
+      "amount_numeric": 30000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/medical-supply-company-owner-convicted-30m-medicare-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "TRICARE",
+        "DME",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-22-443312297",
+      "date": "2026-07-22",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Florida Pharmacist Convicted of Massive Oxycodone Distribution Conspiracy",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/florida-pharmacist-convicted-massive-oxycodone-distribution-conspiracy",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Pharmacy",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-21-3070258040",
+      "date": "2026-07-21",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Owner of Long Island Ambulette Services Company Sentenced to Prison for Multimillion Dollar Healthcare Fraud Scheme",
+      "amount": "$19 Million",
+      "amount_numeric": 19000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edny/pr/owner-long-island-ambulette-services-company-sentenced-prison-multimillion-dollar",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Medical Transportation",
+        "Addiction Treatment"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-17-3238020519",
+      "date": "2026-07-17",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "EyePoint Pharmaceuticals to Pay $4.6 Million to Resolve False Claims Act Allegations",
+      "amount": "$4.6 Million",
+      "amount_numeric": 4600000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/eyepoint-pharmaceuticals-pay-46-million-resolve-false-claims-act-allegations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-17-2246490289",
+      "date": "2026-07-17",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "New Jersey Man Sentenced to 48 Months in Prison for Role in Multi-State Prescription Fraud Ring",
+      "amount": "$4 Million",
+      "amount_numeric": 4000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ndny/pr/new-jersey-man-sentenced-48-months-prison-role-multi-state-prescription-fraud-ring",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": "NY, NJ",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
