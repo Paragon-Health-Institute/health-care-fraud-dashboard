@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-07-23T10:40:47.008540",
+    "last_updated": "2026-07-24T09:42:17.457806",
     "version": "1.0",
-    "last_scraped": "2026-07-23T09:43:51.458976"
+    "last_scraped": "2026-07-24T09:42:17.457794"
   },
   "actions": [
     {
@@ -19566,6 +19566,87 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-07-22-3936738391",
+      "date": "2026-07-22",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Coeur d’Alene Physician Sentenced to 40 Months Imprisonment and $1.25 Million in Restitution for Involvement in Fraudulent Telemedicine Fraud Scheme",
+      "amount": "$1.25 Million",
+      "amount_numeric": 1250000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edwa/pr/coeur-dalene-physician-sentenced-40-months-imprisonment-and-125-million-restitution",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME",
+        "Genetic Testing",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "WA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-23-3481635448",
+      "date": "2026-07-23",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "CEO Of Bay Area Home Health Agency Convicted Of Health Care Fraud Conspiracy Targeting Medicare",
+      "amount": "$3 Million",
+      "amount_numeric": 3000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ndca/pr/ceo-bay-area-home-health-agency-convicted-health-care-fraud-conspiracy-targeting",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Home Health"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-07-23-3870904168",
+      "date": "2026-07-23",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Dallas Laboratory, Owners, and Investors Pay $24M to Resolve COVID-19 Testing Fraud Allegations",
+      "amount": "$24 Million",
+      "amount_numeric": 24000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/dallas-laboratory-owners-and-investors-pay-24m-resolve-covid-19-testing-fraud-allegations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Lab Testing"
+      ],
+      "entities": [],
+      "state": "TX",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ],
+      "topic_checked_at": "2026-07-24T09:42:17.783563"
     }
   ]
 }
