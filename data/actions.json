@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-07-24T09:42:17.457806",
+    "last_updated": "2026-07-24T10:33:21.369404",
     "version": "1.0",
     "last_scraped": "2026-07-24T09:42:17.457794"
   },
@@ -19647,6 +19647,44 @@
         "False Claims Act"
       ],
       "topic_checked_at": "2026-07-24T09:42:17.783563"
+    },
+    {
+      "id": "gao-2026-07-23-3919664647",
+      "date": "2026-07-23",
+      "agency": "GAO",
+      "type": "Audit",
+      "title": "Combating Fraud: Managing Risks in Federally Funded, State-Administered Programs",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.gao.gov/products/gao-26-109100",
+      "link_label": "GAO Report",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "congress-2026-07-23-3600975192",
+      "date": "2026-07-23",
+      "agency": "Congress",
+      "type": "Report",
+      "title": "GAO Report Affirms Oversight Committee Bills to Combat Fraud in Federally Funded State-Administered Programs - United States House Committee on Oversight and Government Reform",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oversight.house.gov/release/gao-report-affirms-oversight-committee-bills-to-combat-fraud-in-federally-funded-state-administered-programs/",
+      "link_label": "House Oversight Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
