@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-07-24T10:33:21.369404",
+    "last_updated": "2026-07-25T09:18:14.019504",
     "version": "1.0",
-    "last_scraped": "2026-07-24T09:42:17.457794"
+    "last_scraped": "2026-07-25T09:18:14.019490"
   },
   "actions": [
     {
@@ -19685,6 +19685,55 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-07-24-987372597",
+      "date": "2026-07-24",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Four Men Plead Guilty to $2M Minnesota Medicaid Fraud",
+      "amount": "$2 Million",
+      "amount_numeric": 2000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/four-men-plead-guilty-2m-minnesota-medicaid-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "MN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-24-4216889482",
+      "date": "2026-07-24",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Three Individuals Sentenced to Prison for Fraudulently Billing Medicare and Medicaid Through Opioid Addiction Treatment Clinics in Kentucky",
+      "amount": "$4.8 Million",
+      "amount_numeric": 4800000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/three-individuals-sentenced-prison-fraudulently-billing-medicare-and-medicaid-through-opioid",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Addiction Treatment",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "KY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
