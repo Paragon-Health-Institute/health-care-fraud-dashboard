@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-07-25T09:18:14.019504",
+    "last_updated": "2026-07-28T10:01:38.480722",
     "version": "1.0",
-    "last_scraped": "2026-07-27T10:55:58.165094"
+    "last_scraped": "2026-07-28T10:01:38.480712"
   },
   "actions": [
     {
@@ -19733,6 +19733,34 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-27-1459284758",
+      "date": "2026-07-27",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Adult Day Care Owner Pleads Guilty to $500,000 Medicare Fraud Scheme",
+      "amount": "$500,000",
+      "amount_numeric": 500000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/adult-day-care-owner-pleads-guilty-500000-medicare-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Adult Day Care",
+        "Mental Health"
+      ],
+      "entities": [],
+      "state": "MI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
       ]
     }
   ]
