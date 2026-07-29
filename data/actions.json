@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-07-28T10:01:38.480722",
+    "last_updated": "2026-07-29T10:03:32.289084",
     "version": "1.0",
-    "last_scraped": "2026-07-28T10:01:38.480712"
+    "last_scraped": "2026-07-29T10:03:32.289076"
   },
   "actions": [
     {
@@ -19761,6 +19761,32 @@
       ],
       "doj_topics": [
         "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-07-27-2150113020",
+      "date": "2026-07-27",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Addiction Recovery Care and Affiliates Agree to Pay $16.2 Million Civil Judgment to Resolve Medicaid Fraud Allegations",
+      "amount": "$16.2 Million",
+      "amount_numeric": 16200000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edky/pr/addiction-recovery-care-and-affiliates-agree-pay-162-million-civil-judgment-resolve",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Mental Health",
+        "Behavioral Health",
+        "Addiction Treatment"
+      ],
+      "entities": [],
+      "state": "KY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
       ]
     }
   ]
