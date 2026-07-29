@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-07-28T10:50:27.726076",
+    "last_scraped": "2026-07-29T11:02:36.040300",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -944,6 +944,33 @@
       "ai_confidence": 85,
       "ai_reason": "Title focuses on strengthening public health and expanding medical access, with no indication of healthcare fraud, improper payments, or program-integrity oversight.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "macpac-2026-07-28-2286348174",
+      "date": "2026-07-28",
+      "agency": "MACPAC",
+      "type": "Audit",
+      "title": "State Medicaid Enterprise Systems",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.macpac.gov/publication/state-medicaid-enterprise-systems/",
+      "link_label": "MACPAC Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 78,
+      "ai_reason": "MACPAC audit on state Medicaid IT systems is about enterprise infrastructure and operations, not healthcare fraud oversight or program-integrity findings.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1185,6 +1212,7 @@
     "https://www.gao.gov/products/gao-26-109297",
     "https://energycommerce.house.gov/posts/the-house-committee-on-energy-and-commerce-advances-17-bills-to-the-full-house-of-representatives",
     "https://oversight.house.gov/release/house-passes-bipartisan-bills-to-increase-government-efficiency-and-transparency/",
-    "https://energycommerce.house.gov/posts/chairman-hudson-delivers-opening-statement-at-subcommittee-on-communications-and-technology-hearing-on-protecting-communications-networks-and-improving-connectivity"
+    "https://energycommerce.house.gov/posts/chairman-hudson-delivers-opening-statement-at-subcommittee-on-communications-and-technology-hearing-on-protecting-communications-networks-and-improving-connectivity",
+    "https://www.gao.gov/products/gao-26-107790"
   ]
 }

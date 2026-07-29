@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-07-29T10:03:32.289084",
+    "last_updated": "2026-07-29T11:02:36.241985",
     "version": "1.0",
     "last_scraped": "2026-07-29T10:03:32.289076"
   },
@@ -19788,6 +19788,51 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "cms-2026-07-28-4042895317",
+      "date": "2026-07-28",
+      "agency": "CMS",
+      "type": "Structural/Organizational",
+      "title": "CMS Medicaid Fraud War Room Stops More Than $203 Million in Improper Payments During First 88 Days",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-medicaid-fraud-war-room-stops-more-203-million-improper-payments-during-first-88-days",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-07-24-1077588378",
+      "date": "2026-07-24",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Georgia Claimed at Least $26.1 Million More in Medicaid Reimbursements for Clinical Diagnostic Laboratory Services Than Was Allowed by Federal and State Requirements",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/georgia-claimed-at-least-261-million-more-in-medicaid-reimbursements-for-clinical-diagnostic-laboratory-services-than-was-allowed-by-federal-and-state-requirements/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Lab Testing"
+      ],
+      "entities": [],
+      "state": "GA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
