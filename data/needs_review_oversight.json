@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-07-29T11:02:36.040300",
+    "last_scraped": "2026-07-30T10:39:37.478619",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -971,6 +971,33 @@
       "ai_confidence": 78,
       "ai_reason": "MACPAC audit on state Medicaid IT systems is about enterprise infrastructure and operations, not healthcare fraud oversight or program-integrity findings.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "congress-2026-07-29-705575909",
+      "date": "2026-07-29",
+      "agency": "Congress",
+      "type": "Rule/Regulation",
+      "title": "CBO Confirms Democrats’ Inflation Expansion Act Raised Costs for Seniors & Taxpayers By $700 Billion, Protecting Health Care Empires Instead of Patients - Ways and Means",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://waysandmeans.house.gov/2026/07/29/cbo-confirms-democrats-inflation-expansion-act-raised-costs-for-seniors-taxpayers-by-700-billion-protecting-health-care-empires-instead-of-patients/",
+      "link_label": "House Ways & Means Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Drug Pricing"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 78,
+      "ai_reason": "This is a partisan political statement about healthcare costs and policy impact from Ways & Means Committee, not an oversight action investigating fraud, improper payments, or program integrity violat",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1213,6 +1240,11 @@
     "https://energycommerce.house.gov/posts/the-house-committee-on-energy-and-commerce-advances-17-bills-to-the-full-house-of-representatives",
     "https://oversight.house.gov/release/house-passes-bipartisan-bills-to-increase-government-efficiency-and-transparency/",
     "https://energycommerce.house.gov/posts/chairman-hudson-delivers-opening-statement-at-subcommittee-on-communications-and-technology-hearing-on-protecting-communications-networks-and-improving-connectivity",
-    "https://www.gao.gov/products/gao-26-107790"
+    "https://www.gao.gov/products/gao-26-107790",
+    "https://www.cms.gov/newsroom/fact-sheets/fiscal-year-2027-skilled-nursing-facility-prospective-payment-system-final-rule-cms-1843-f",
+    "https://www.gao.gov/products/gao-26-108989",
+    "https://energycommerce.house.gov/posts/congressional-leaders-get-answers-from-cbo-on-unbudgeted-ira-costs-and-multibillion-dollar-spending-revisions",
+    "https://www.cms.gov/newsroom/fact-sheets/fiscal-year-2027-medicare-inpatient-psychiatric-facility-prospective-payment-system-final-rule-cms",
+    "https://oig.hhs.gov/reports/all/2026/national-overview-of-state-level-challenges-and-efforts-to-minimize-or-eliminate-temporary-emergency-placements-in-foster-care/"
   ]
 }
