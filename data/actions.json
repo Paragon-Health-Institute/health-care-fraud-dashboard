@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-07-29T11:02:36.241985",
+    "last_updated": "2026-07-30T09:49:17.247859",
     "version": "1.0",
-    "last_scraped": "2026-07-29T10:03:32.289076"
+    "last_scraped": "2026-07-30T09:49:17.247851"
   },
   "actions": [
     {
@@ -19833,6 +19833,56 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-07-29-1970298024",
+      "date": "2026-07-29",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Fraud Division Resolves Fraud Investigation of Eye Care Group Under New Corporate Enforcement Policy; Health Care Executive Charged for Alleged Fraud and Kickbacks",
+      "amount": "$1 Million",
+      "amount_numeric": 1000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/fraud-division-resolves-fraud-investigation-eye-care-group-under-new-corporate-enforcement",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "NJ",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-29-2894769011",
+      "date": "2026-07-29",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Founder And Former CEO of New Jersey Based Eye Care Group Charged with Health Care Fraud Conspiracy and Paying Illegal Kickbacks",
+      "amount": "$3.4 Million",
+      "amount_numeric": 3400000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-nj/pr/founder-and-former-ceo-new-jersey-based-eye-care-group-charged-health-care-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "NJ",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
     }
   ]
 }
