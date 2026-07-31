@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-07-30T09:49:17.247859",
+    "last_updated": "2026-07-31T10:04:18.316221",
     "version": "1.0",
-    "last_scraped": "2026-07-30T09:49:17.247851"
+    "last_scraped": "2026-07-31T10:04:18.316214"
   },
   "actions": [
     {
@@ -19883,6 +19883,133 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "doj-2026-07-30-3872433704",
+      "date": "2026-07-30",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "CEO and VA Employee Plead Guilty to Paying and Receiving Illegal Health Care Kickbacks and Bribes",
+      "amount": "$14 Million",
+      "amount_numeric": 14000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/ceo-and-va-employee-plead-guilty-paying-and-receiving-illegal-health-care-kickbacks-and",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "doj-2026-07-29-707897828",
+      "date": "2026-07-29",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Oakland County Lab Agrees To Settle False Claims Act Allegations For $6,494,290.00",
+      "amount": "$6,494,290.00",
+      "amount_numeric": 6494290.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edmi/pr/oakland-county-lab-agrees-settle-false-claims-act-allegations-649429000",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Pharmacy",
+        "Lab Testing"
+      ],
+      "entities": [],
+      "state": "MI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-30-3476757695",
+      "date": "2026-07-30",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Justice Department’s Fraud Division Announces Unprecedented Fraud Enforcement Actions in Southeast Resulting from Federal–State Partnerships",
+      "amount": "$350 Million",
+      "amount_numeric": 350000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/justice-departments-fraud-division-announces-unprecedented-fraud-enforcement-actions",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Genetic Testing"
+      ],
+      "entities": [],
+      "state": "NC, MS, FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-04-07-3230503050",
+      "date": "2026-04-07",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Louisiana U.S. Attorneys Highlight Nine Recent Fraud Prosecutions Across the State",
+      "amount": "$73 Million",
+      "amount_numeric": 73000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edla/pr/louisiana-us-attorneys-highlight-nine-recent-fraud-prosecutions-across-state",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Genetic Testing"
+      ],
+      "entities": [],
+      "state": "LA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-07-30-1432620923",
+      "date": "2026-07-30",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Texas Laboratory, Former CEO, and Florida Businessman Pay a Total of $36.4M to Settle Allegations of Kickbacks and Unnecessary Genetic Testing",
+      "amount": "$36.4 Million",
+      "amount_numeric": 36400000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/texas-laboratory-former-ceo-and-florida-businessman-pay-total-364m-settle-allegations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Genetic Testing",
+        "Lab Testing",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "TX",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ],
+      "topic_checked_at": "2026-07-31T10:04:18.664469"
     }
   ]
 }
