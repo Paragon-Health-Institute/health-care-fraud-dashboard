@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-07-31T10:04:18.316221",
+    "last_updated": "2026-08-01T09:27:56.322704",
     "version": "1.0",
-    "last_scraped": "2026-07-31T10:04:18.316214"
+    "last_scraped": "2026-08-01T09:27:56.322692"
   },
   "actions": [
     {
@@ -20010,6 +20010,107 @@
         "False Claims Act"
       ],
       "topic_checked_at": "2026-07-31T10:04:18.664469"
+    },
+    {
+      "id": "doj-2026-07-31-2091843936",
+      "date": "2026-07-31",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Two Additional Ophthalmology Practices Agree to Pay $2.3M to Resolve Allegations of Fraudulent Claims to Medicare and Medicaid for Cranial Ultrasounds",
+      "amount": "$2.3 Million",
+      "amount_numeric": 2300000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/two-additional-ophthalmology-practices-agree-pay-23m-resolve-allegations-fraudulent-claims",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-07-30-2563088065",
+      "date": "2026-07-30",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Adult Day Care Provider Accused of $1.47 Million Missouri Medicaid Fraud",
+      "amount": "$1.47 Million",
+      "amount_numeric": 1470000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edmo/pr/adult-day-care-provider-accused-147-million-missouri-medicaid-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Adult Day Care"
+      ],
+      "entities": [],
+      "state": "MO",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-30-1616190623",
+      "date": "2026-07-30",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Healthcare Executive and Telemarketing Company Owner Sentenced to Prison for Exploiting Elderly Medicare Advantage Beneficiaries in $35 Million Fraud Scheme",
+      "amount": "$35 Million",
+      "amount_numeric": 35000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-sdfl/pr/healthcare-executive-and-telemarketing-company-owner-sentenced-prison-exploiting",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "DME",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-31-1552742432",
+      "date": "2026-07-31",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "CEO of Skincare Company Pleads Guilty to FDCA Charges and Mail Fraud",
+      "amount": "$800,000",
+      "amount_numeric": 800000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/ceo-skincare-company-pleads-guilty-fdca-charges-and-mail-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medical Devices"
+      ],
+      "entities": [],
+      "state": "VA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
     }
   ]
 }
