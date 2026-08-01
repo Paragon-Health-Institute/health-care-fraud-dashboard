@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-07-31T11:04:32.928343",
+    "last_scraped": "2026-08-01T10:16:35.274491",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1247,6 +1247,8 @@
     "https://www.cms.gov/newsroom/fact-sheets/fiscal-year-2027-medicare-inpatient-psychiatric-facility-prospective-payment-system-final-rule-cms",
     "https://oig.hhs.gov/reports/all/2026/national-overview-of-state-level-challenges-and-efforts-to-minimize-or-eliminate-temporary-emergency-placements-in-foster-care/",
     "https://www.cms.gov/newsroom/fact-sheets/fy-2027-inpatient-rehabilitation-facilities-irf-prospective-payment-system-pps-final-rule-cms-1845-f",
-    "https://www.cms.gov/newsroom/fact-sheets/fiscal-year-2027-hospice-wage-index-payment-rate-update-hospice-quality-reporting-program"
+    "https://www.cms.gov/newsroom/fact-sheets/fiscal-year-2027-hospice-wage-index-payment-rate-update-hospice-quality-reporting-program",
+    "https://www.cms.gov/newsroom/press-releases/cms-news-cms-announces-nationwide-expansion-proven-joint-replacement-program",
+    "https://www.cms.gov/newsroom/fact-sheets/fy-2027-hospital-inpatient-prospective-payment-system-long-term-care-hospital-prospective-payment"
   ]
 }

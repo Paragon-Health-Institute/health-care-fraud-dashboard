@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-01T09:27:56.322704",
+    "last_updated": "2026-08-01T10:16:35.456238",
     "version": "1.0",
     "last_scraped": "2026-08-01T09:27:56.322692"
   },
@@ -20111,6 +20111,28 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "hhs-oig-2026-07-28-79483756",
+      "date": "2026-07-28",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Hospice of the Valley - West Received at Least $8.6 Million in Medicare Overpayments",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/hospice-of-the-valley-west-received-at-least-86-million-in-medicare-overpayments/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Hospice"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
