@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-08-01T10:16:35.456238",
+    "last_updated": "2026-08-04T10:04:18.576140",
     "version": "1.0",
-    "last_scraped": "2026-08-03T10:56:23.283511"
+    "last_scraped": "2026-08-04T10:04:18.576129"
   },
   "actions": [
     {
@@ -20133,6 +20133,57 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-08-03-4213916128",
+      "date": "2026-08-03",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Medicare Advantage Provider Complete Health to Pay $14,100,000 to Settle False Claims Act Suit",
+      "amount": "$14,100,000",
+      "amount_numeric": 14100000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/medicare-advantage-provider-complete-health-pay-14100000-settle-false-claims-act-suit",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-07-31-2124725963",
+      "date": "2026-07-31",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Massachusetts Ophthalmology Practice to Pay Nearly $4 Million to Resolve False Claims Act Allegations",
+      "amount": "$4 Million",
+      "amount_numeric": 4000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/massachusetts-ophthalmology-practice-pay-nearly-4-million-resolve-false-claims-act",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
