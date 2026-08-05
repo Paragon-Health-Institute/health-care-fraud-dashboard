@@ -1214,6 +1214,77 @@ def get_state(text, title=None, link=None, item_type=None):
                 return abbr
     return None
 
+# Word-number vocabulary for spelled-out dollar amounts. Used by
+# _spell_out_dollars() to rewrite "four million dollars" as "$4 million"
+# before the digit-based amount patterns run.
+_NUM_WORDS = {
+    'a': 1, 'an': 1, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5,
+    'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10, 'eleven': 11,
+    'twelve': 12, 'thirteen': 13, 'fourteen': 14, 'fifteen': 15,
+    'sixteen': 16, 'seventeen': 17, 'eighteen': 18, 'nineteen': 19,
+    'twenty': 20, 'thirty': 30, 'forty': 40, 'fifty': 50, 'sixty': 60,
+    'seventy': 70, 'eighty': 80, 'ninety': 90,
+}
+_SCALE_WORDS = {'thousand': 1_000, 'million': 1_000_000, 'billion': 1_000_000_000}
+
+# "four", "twenty-five", "one hundred fifty" ... followed by a scale word
+# and then literally "dollars". Requiring the trailing "dollars" keeps this
+# from firing on counts of things ("four million claims", "six million
+# beneficiaries") — only money is rewritten.
+_SPELLED_AMOUNT_RE = re.compile(
+    r'\b((?:(?:' + '|'.join(_NUM_WORDS) + r'|hundred|and)[\s-]+)*'
+    r'(?:' + '|'.join(_NUM_WORDS) + r'|hundred))\s+'
+    r'(thousand|million|billion)\s+dollars\b',
+    re.IGNORECASE,
+)
+
+
+def _words_to_number(phrase):
+    """Convert an English number phrase to an int, or None if unparseable.
+
+    Handles 1-999 ("four", "twenty-five", "one hundred fifty"). Returns
+    None on anything unexpected so the caller can leave the text alone.
+    """
+    total = 0
+    current = 0
+    seen = False
+    for tok in re.split(r'[\s-]+', phrase.lower().strip()):
+        if not tok or tok == 'and':
+            continue
+        if tok == 'hundred':
+            current = (current or 1) * 100
+            seen = True
+        elif tok in _NUM_WORDS:
+            current += _NUM_WORDS[tok]
+            seen = True
+        else:
+            return None
+    return (total + current) if seen else None
+
+
+def _spell_out_dollars(text):
+    """Rewrite spelled-out money ("four million dollars") as "$4 million".
+
+    Leaves the surrounding text untouched, so qualifiers like "over" or
+    "more than" still read correctly and the existing digit patterns in
+    extract_amount() pick the value up normally.
+    """
+    if not text:
+        return text
+
+    def _sub(m):
+        value = _words_to_number(m.group(1))
+        if value is None:
+            return m.group(0)  # leave unrecognized phrasing alone
+        scale = m.group(2).lower()
+        if scale == 'thousand':
+            # extract_amount has no "thousand" pattern; emit plain dollars.
+            return f"${value * 1000:,}"
+        return f"${value:g} {scale}"
+
+    return _SPELLED_AMOUNT_RE.sub(_sub, text)
+
+
 def extract_amount(text, title=""):
     """Extract a dollar amount from text, preferring the title.
 
@@ -1234,6 +1305,14 @@ def extract_amount(text, title=""):
         return s
 
     def _parse(t):
+        # Normalize spelled-out amounts ("over four million dollars" ->
+        # "over $4 million") so the digit patterns below can see them.
+        # DOJ writes case figures in words often enough to matter: the
+        # Aug 2026 Philadelphia home-health release stated its only case
+        # figure as "over four million dollars in claims", so the regex
+        # fallback skipped it and picked up an unrelated $1.7M from a
+        # different case in the same release.
+        t = _spell_out_dollars(t)
         # Try "$X Billion" first
         m = re.search(r'\$[\d,]+(?:\.\d+)?\s*billion', t, re.IGNORECASE)
         if m:
