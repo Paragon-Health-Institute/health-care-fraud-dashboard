@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-08-04T10:04:18.576140",
+    "last_updated": "2026-08-05T10:02:42.982918",
     "version": "1.0",
-    "last_scraped": "2026-08-04T10:04:18.576129"
+    "last_scraped": "2026-08-05T10:02:42.982906"
   },
   "actions": [
     {
@@ -20157,6 +20157,56 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-08-04-164322138",
+      "date": "2026-08-04",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "The Fraud Division Announces Charges Against 19 Defendants for Medicaid Home Health Aid Schemes",
+      "amount": "$45 Billion",
+      "amount_numeric": 45000000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/fraud-division-announces-charges-against-19-defendants-medicaid-home-health-aid-schemes",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Home Health"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-08-04-3394991613",
+      "date": "2026-08-04",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "WMATA Train Operator Sentenced in Four-Year Scheme to Defraud AFLAC Insurance of More Than $360,000",
+      "amount": "$360,000",
+      "amount_numeric": 360000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-dc/pr/wmata-train-operator-sentenced-four-year-scheme-defraud-aflac-insurance-more-360000",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "DC",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Healthcare Fraud"
       ]
     }
   ]
