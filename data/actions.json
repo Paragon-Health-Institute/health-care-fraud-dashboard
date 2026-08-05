@@ -20165,8 +20165,8 @@
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "The Fraud Division Announces Charges Against 19 Defendants for Medicaid Home Health Aid Schemes",
-      "amount": "$45 Billion",
-      "amount_numeric": 45000000000.0,
+      "amount": "$4 Million",
+      "amount_numeric": 4000000.0,
       "officials": [],
       "link": "https://www.justice.gov/opa/pr/fraud-division-announces-charges-against-19-defendants-medicaid-home-health-aid-schemes",
       "link_label": "DOJ Press Release",
@@ -20177,7 +20177,7 @@
         "Home Health"
       ],
       "entities": [],
-      "state": null,
+      "state": "PA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
