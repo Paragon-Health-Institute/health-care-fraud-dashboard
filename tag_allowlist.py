@@ -133,10 +133,19 @@ _BOILERPLATE_PATTERNS = [
         r"[^.]*?(?:operating|comprised\s+of|operates|consists)[^.]*?\.",
         _re.IGNORECASE,
     ),
-    # Strike Force "since inception" historical record
+    # Strike Force "since inception" historical record.
+    # Covers both phrasings of the program-history sentence:
+    #   "...has charged more than 6,200 defendants who collectively
+    #    billed... more than $45 billion since 2007."
+    #   "...responsible nationally for the prosecution of over 6,200
+    #    defendants who collectively billed... more than $45 billion."
+    # The second variant appeared in the Aug 2026 Philadelphia strike-force
+    # expansion release and caused the amount extractor to tag a $4M
+    # 19-defendant case as $45 billion.
     _re.compile(
         r"(?:Since\s+its?\s+inception\s+in\s+\w+\s+\d{4}[^.]*?)?"
-        r"(?:have\s+)?charged\s+more\s+than\s+[\d,]+\s+defendants\s+"
+        r"(?:(?:have\s+|has\s+)?charged|(?:the\s+)?prosecution\s+of|prosecuted)\s+"
+        r"(?:more\s+than|over)\s+[\d,]+\s+defendants\s+"
         r"who\s+(?:have\s+)?(?:collectively\s+)?billed[^.]*?"
         r"(?:billion|million)[^.]*\.",
         _re.IGNORECASE,
