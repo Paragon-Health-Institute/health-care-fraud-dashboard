@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-06T10:06:10.132002",
+    "last_updated": "2026-08-06T11:01:18.466899",
     "version": "1.0",
     "last_scraped": "2026-08-06T10:06:10.131994"
   },
@@ -20332,6 +20332,27 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "hhs-oig-2026-08-03-2233920664",
+      "date": "2026-08-03",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Medicare Improperly Paid Physicians an Estimated $15.2 Million for Sacroiliac Joint Injections",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/medicare-improperly-paid-physicians-an-estimated-152-million-for-sacroiliac-joint-injections/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-08-05T10:51:49.392208",
+    "last_scraped": "2026-08-06T11:01:18.289483",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -998,6 +998,35 @@
       "ai_confidence": 78,
       "ai_reason": "This is a partisan political statement about healthcare costs and policy impact from Ways & Means Committee, not an oversight action investigating fraud, improper payments, or program integrity violat",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "hhs-oig-2026-08-03-3914067872",
+      "date": "2026-08-03",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Department of Health and Human Services Met Many Requirements, but It Did Not Fully Comply With the Payment Integrity Information Act of 2019 for Fiscal Year 2025",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/department-of-health-and-human-services-met-many-requirements-but-it-did-not-fully-comply-with-the-payment-integrity-information-act-of-2019-for-fiscal-year-2025/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Medicaid",
+        "ACA"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "healthcare_fraud_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "HHS-OIG audit evaluating compliance with the Payment Integrity Information Act, which is a core federal oversight mechanism for identifying and addressing improper payments in federal healthcare progr",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1249,6 +1278,9 @@
     "https://www.cms.gov/newsroom/fact-sheets/fy-2027-inpatient-rehabilitation-facilities-irf-prospective-payment-system-pps-final-rule-cms-1845-f",
     "https://www.cms.gov/newsroom/fact-sheets/fiscal-year-2027-hospice-wage-index-payment-rate-update-hospice-quality-reporting-program",
     "https://www.cms.gov/newsroom/press-releases/cms-news-cms-announces-nationwide-expansion-proven-joint-replacement-program",
-    "https://www.cms.gov/newsroom/fact-sheets/fy-2027-hospital-inpatient-prospective-payment-system-long-term-care-hospital-prospective-payment"
+    "https://www.cms.gov/newsroom/fact-sheets/fy-2027-hospital-inpatient-prospective-payment-system-long-term-care-hospital-prospective-payment",
+    "https://www.gao.gov/products/gao-26-108640",
+    "https://energycommerce.house.gov/posts/chairmen-guthrie-and-joyce-on-the-decertification-of-kentucky-opo-following-months-of-congressional-oversight",
+    "https://waysandmeans.house.gov/2026/08/05/second-tax-exempt-organ-procurement-organization-under-investigation-by-ways-means-committee-decertified-by-trump-administration/"
   ]
 }
