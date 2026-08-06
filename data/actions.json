@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-08-05T10:02:42.982918",
+    "last_updated": "2026-08-06T10:06:10.132002",
     "version": "1.0",
-    "last_scraped": "2026-08-05T10:02:42.982906"
+    "last_scraped": "2026-08-06T10:06:10.131994"
   },
   "actions": [
     {
@@ -20205,6 +20205,130 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-08-05-2289861313",
+      "date": "2026-08-05",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Texas Physician Sentenced to 12 Years in Prison for Operating a Houston-Area Pill Mill",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/texas-physician-sentenced-12-years-prison-operating-houston-area-pill-mill",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Pharmacy",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "TX",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "doj-2026-08-05-1609396661",
+      "date": "2026-08-05",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Nevada Doctor Charged with $95M Wound Care Fraud on Medicare",
+      "amount": "$95 Million",
+      "amount_numeric": 95000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/nevada-doctor-charged-95m-wound-care-fraud-medicare",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "TRICARE",
+        "Hospice",
+        "Wound Care",
+        "Skin Substitutes"
+      ],
+      "entities": [],
+      "state": "NV",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-31-1370694176",
+      "date": "2026-07-31",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Dozens Charged With Health Care Fraud in Federal and State Cases Involving $5.76 Million in Billings to Pennsylvania’s Medicaid Program",
+      "amount": "$5.76 Million",
+      "amount_numeric": 5760000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edpa/pr/dozens-charged-health-care-fraud-federal-and-state-cases-involving-576-million",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Home Health",
+        "Personal Care"
+      ],
+      "entities": [],
+      "state": "PA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-08-03-1344979848",
+      "date": "2026-08-03",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Philadelphia In-Home Care Services Provider Agrees to Pay $1 Million to Resolve Allegations of False Claims Act Violations",
+      "amount": "$1 Million",
+      "amount_numeric": 1000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edpa/pr/philadelphia-home-care-services-provider-agrees-pay-1-million-resolve-allegations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Home Health"
+      ],
+      "entities": [],
+      "state": "PA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-08-05-2049921256",
+      "date": "2026-08-05",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Iranian National Pleads Guilty to Conspiracy to Commit Healthcare Fraud",
+      "amount": "$2,124,363.41",
+      "amount_numeric": 2124363.41,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-or/pr/iranian-national-pleads-guilty-conspiracy-commit-healthcare-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "OR",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
       "doj_topics": [
         "Healthcare Fraud"
       ]
