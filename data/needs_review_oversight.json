@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-08-06T11:01:18.289483",
+    "last_scraped": "2026-08-07T09:21:22.698519",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1281,6 +1281,7 @@
     "https://www.cms.gov/newsroom/fact-sheets/fy-2027-hospital-inpatient-prospective-payment-system-long-term-care-hospital-prospective-payment",
     "https://www.gao.gov/products/gao-26-108640",
     "https://energycommerce.house.gov/posts/chairmen-guthrie-and-joyce-on-the-decertification-of-kentucky-opo-following-months-of-congressional-oversight",
-    "https://waysandmeans.house.gov/2026/08/05/second-tax-exempt-organ-procurement-organization-under-investigation-by-ways-means-committee-decertified-by-trump-administration/"
+    "https://waysandmeans.house.gov/2026/08/05/second-tax-exempt-organ-procurement-organization-under-investigation-by-ways-means-committee-decertified-by-trump-administration/",
+    "https://www.gao.gov/products/gao-26-107847"
   ]
 }
