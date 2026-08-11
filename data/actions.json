@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-11T08:20:23.448102",
+    "last_updated": "2026-08-11T09:19:48.100926",
     "version": "1.0",
     "last_scraped": "2026-08-11T08:20:23.448091"
   },
@@ -20410,6 +20410,28 @@
         "False Claims Act"
       ],
       "topic_checked_at": "2026-08-11T08:20:23.800501"
+    },
+    {
+      "id": "hhs-oig-2026-08-06-2058587710",
+      "date": "2026-08-06",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Medicare Home Health Agency Provider Compliance Audit: Deistic Home Health Care, Inc.",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/medicare-home-health-agency-provider-compliance-audit-deistic-home-health-care-inc/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Home Health"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
