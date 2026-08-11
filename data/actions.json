@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-08-06T11:01:18.466899",
+    "last_updated": "2026-08-11T08:20:23.448102",
     "version": "1.0",
-    "last_scraped": "2026-08-10T08:57:08.751404"
+    "last_scraped": "2026-08-11T08:20:23.448091"
   },
   "actions": [
     {
@@ -20353,6 +20353,63 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-08-10-1446619367",
+      "date": "2026-08-10",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Celina Pharmacy Owner/Two Pharmacies Agree to Pay $450,000 & Receive Ban on Handling Controlled Substances",
+      "amount": "$450,000",
+      "amount_numeric": 450000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-mdtn/pr/celina-pharmacy-ownertwo-pharmacies-agree-pay-450000-receive-ban-handling-controlled",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Pharmacy",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "TN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-08-10-2183776136",
+      "date": "2026-08-10",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Veloxis Pharmaceuticals Agrees to Pay Over $46M to Resolve Criminal and Civil Liability for Kickback Schemes",
+      "amount": "$46 Million",
+      "amount_numeric": 46000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/veloxis-pharmaceuticals-agrees-pay-over-46m-resolve-criminal-and-civil-liability-kickback",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "TRICARE",
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ],
+      "topic_checked_at": "2026-08-11T08:20:23.800501"
     }
   ]
 }
