@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-08-11T09:19:47.895544",
+    "last_scraped": "2026-08-12T09:37:47.470639",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1284,6 +1284,7 @@
     "https://waysandmeans.house.gov/2026/08/05/second-tax-exempt-organ-procurement-organization-under-investigation-by-ways-means-committee-decertified-by-trump-administration/",
     "https://www.gao.gov/products/gao-26-107847",
     "https://www.cms.gov/newsroom/fact-sheets/regulatory-alignment-predictable-immediate-device-coverage-pathway-cms-3487-nc-procedural-notice",
-    "https://waysandmeans.house.gov/2026/08/07/smith-on-july-jobs-report-private-sector-keeps-adding-jobs-thanks-to-the-working-families-tax-cuts/"
+    "https://waysandmeans.house.gov/2026/08/07/smith-on-july-jobs-report-private-sector-keeps-adding-jobs-thanks-to-the-working-families-tax-cuts/",
+    "https://www.cms.gov/newsroom/press-releases/cms-ends-federal-medicaid-chip-funding-sex-rejecting-procedures-children-youth"
   ]
 }
