@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-08-12T09:37:47.470639",
+    "last_scraped": "2026-08-13T09:39:16.004817",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1285,6 +1285,7 @@
     "https://www.gao.gov/products/gao-26-107847",
     "https://www.cms.gov/newsroom/fact-sheets/regulatory-alignment-predictable-immediate-device-coverage-pathway-cms-3487-nc-procedural-notice",
     "https://waysandmeans.house.gov/2026/08/07/smith-on-july-jobs-report-private-sector-keeps-adding-jobs-thanks-to-the-working-families-tax-cuts/",
-    "https://www.cms.gov/newsroom/press-releases/cms-ends-federal-medicaid-chip-funding-sex-rejecting-procedures-children-youth"
+    "https://www.cms.gov/newsroom/press-releases/cms-ends-federal-medicaid-chip-funding-sex-rejecting-procedures-children-youth",
+    "https://waysandmeans.house.gov/2026/08/12/chairman-smith-on-july-cpi-report-republicans-are-working-to-lower-costs-and-grow-wages-while-democrats-are-pushing-more-government-spending-and-higher-taxes-for-working-families/"
   ]
 }
