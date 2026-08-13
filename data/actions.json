@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-08-11T09:19:48.100926",
+    "last_updated": "2026-08-13T08:49:48.922892",
     "version": "1.0",
-    "last_scraped": "2026-08-12T08:44:51.287492"
+    "last_scraped": "2026-08-13T08:49:48.922884"
   },
   "actions": [
     {
@@ -20432,6 +20432,107 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-08-12-3774107398",
+      "date": "2026-08-12",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Former Brooklyn Bank Manager Sentenced to Prison for Laundering Proceeds of Medicare Fraud for Transnational Criminal Organization",
+      "amount": "$8 Million",
+      "amount_numeric": 8000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/former-brooklyn-bank-manager-sentenced-prison-laundering-proceeds-medicare-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-08-11-3658990885",
+      "date": "2026-08-11",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "International Fugitive Pleads Guilty to Healthcare Fraud Conspiracy and Failure to Appear",
+      "amount": "$1.2 Billion",
+      "amount_numeric": 1200000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-sc/pr/international-fugitive-pleads-guilty-healthcare-fraud-conspiracy-and-failure-appear",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "DME",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "SC",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-08-10-1858478689",
+      "date": "2026-08-10",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "United States Intervenes in False Claims Act Lawsuit Against Colorado Medical Companies",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-co/pr/united-states-intervenes-false-claims-act-lawsuit-against-colorado-medical-companies",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "TRICARE"
+      ],
+      "entities": [],
+      "state": "CO",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-08-10-4028774772",
+      "date": "2026-08-10",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "CFO of Boston-Area Spinal Device Company Sentenced to Four Months in Prison for Kickback Scheme",
+      "amount": "$4 Million",
+      "amount_numeric": 4000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/cfo-boston-area-spinal-device-company-sentenced-four-months-prison-kickback-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medical Devices"
+      ],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
     }
   ]
 }
