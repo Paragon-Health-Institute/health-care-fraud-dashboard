@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-08-13T09:39:16.004817",
+    "last_scraped": "2026-08-14T09:33:22.897838",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1027,6 +1027,33 @@
       "ai_confidence": 85,
       "ai_reason": "HHS-OIG audit evaluating compliance with the Payment Integrity Information Act, which is a core federal oversight mechanism for identifying and addressing improper payments in federal healthcare progr",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "hhs-oig-2026-08-10-985615895",
+      "date": "2026-08-10",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Comparison of Average Sales Prices and Average Manufacturer Prices: Results for the First Quarter of 2026",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/comparison-of-average-sales-prices-and-average-manufacturer-prices-results-for-the-first-quarter-of-2026/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Drug Pricing"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This is a technical pricing analysis report, not an oversight action related to healthcare fraud or program integrity violations.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1286,6 +1313,7 @@
     "https://www.cms.gov/newsroom/fact-sheets/regulatory-alignment-predictable-immediate-device-coverage-pathway-cms-3487-nc-procedural-notice",
     "https://waysandmeans.house.gov/2026/08/07/smith-on-july-jobs-report-private-sector-keeps-adding-jobs-thanks-to-the-working-families-tax-cuts/",
     "https://www.cms.gov/newsroom/press-releases/cms-ends-federal-medicaid-chip-funding-sex-rejecting-procedures-children-youth",
-    "https://waysandmeans.house.gov/2026/08/12/chairman-smith-on-july-cpi-report-republicans-are-working-to-lower-costs-and-grow-wages-while-democrats-are-pushing-more-government-spending-and-higher-taxes-for-working-families/"
+    "https://waysandmeans.house.gov/2026/08/12/chairman-smith-on-july-cpi-report-republicans-are-working-to-lower-costs-and-grow-wages-while-democrats-are-pushing-more-government-spending-and-higher-taxes-for-working-families/",
+    "https://energycommerce.house.gov/posts/new-hhs-report-depicts-how-the-working-family-tax-cuts-lowers-health-insurance-premiums-and-hospital-prices-for-americans"
   ]
 }

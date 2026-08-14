@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-13T08:49:48.922892",
+    "last_updated": "2026-08-14T09:33:23.089919",
     "version": "1.0",
     "last_scraped": "2026-08-14T08:43:02.761094"
   },
@@ -20533,6 +20533,28 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "hhs-oig-2026-08-10-3949531317",
+      "date": "2026-08-10",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Kansas Did Not Ensure That Its Medicaid Managed Care Organizations Complied With Mental Health and Substance Use Disorder Parity Requirements Related to Prior Authorization",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/kansas-did-not-ensure-that-its-medicaid-managed-care-organizations-complied-with-mental-health-and-substance-use-disorder-parity-requirements-related-to-prior-authorization/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Medicaid Managed Care"
+      ],
+      "entities": [],
+      "state": "KS",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
