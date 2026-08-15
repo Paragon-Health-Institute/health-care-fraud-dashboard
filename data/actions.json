@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-15T07:49:45.764376",
+    "last_updated": "2026-08-15T08:51:15.191458",
     "version": "1.0",
     "last_scraped": "2026-08-15T07:49:45.764368"
   },
@@ -20582,6 +20582,28 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "hhs-oig-2026-08-13-1344179496",
+      "date": "2026-08-13",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "New York Did Not Ensure That Selected Medicaid Managed Care Organizations Complied With Mental Health and Substance Use Disorder Parity Requirements Related to Prior Authorization",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/new-york-did-not-ensure-that-selected-medicaid-managed-care-organizations-complied-with-mental-health-and-substance-use-disorder-parity-requirements-related-to-prior-authorization/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Medicaid Managed Care"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
