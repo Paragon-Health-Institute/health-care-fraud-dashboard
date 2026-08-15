@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-08-14T09:33:23.089919",
+    "last_updated": "2026-08-15T07:49:45.764376",
     "version": "1.0",
-    "last_scraped": "2026-08-14T08:43:02.761094"
+    "last_scraped": "2026-08-15T07:49:45.764368"
   },
   "actions": [
     {
@@ -20555,6 +20555,33 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-08-14-254318772",
+      "date": "2026-08-14",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Ohio Man Pleads Guilty to Laundering Health Care Fraud Proceeds for Transnational Criminal Organization",
+      "amount": "$1.42 Billion",
+      "amount_numeric": 1420000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/ohio-man-pleads-guilty-laundering-health-care-fraud-proceeds-transnational-criminal",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME"
+      ],
+      "entities": [],
+      "state": "OH",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
     }
   ]
 }
