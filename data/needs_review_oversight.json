@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-08-17T09:07:06.159624",
+    "last_scraped": "2026-08-18T08:59:41.146818",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1314,6 +1314,7 @@
     "https://waysandmeans.house.gov/2026/08/07/smith-on-july-jobs-report-private-sector-keeps-adding-jobs-thanks-to-the-working-families-tax-cuts/",
     "https://www.cms.gov/newsroom/press-releases/cms-ends-federal-medicaid-chip-funding-sex-rejecting-procedures-children-youth",
     "https://waysandmeans.house.gov/2026/08/12/chairman-smith-on-july-cpi-report-republicans-are-working-to-lower-costs-and-grow-wages-while-democrats-are-pushing-more-government-spending-and-higher-taxes-for-working-families/",
-    "https://energycommerce.house.gov/posts/new-hhs-report-depicts-how-the-working-family-tax-cuts-lowers-health-insurance-premiums-and-hospital-prices-for-americans"
+    "https://energycommerce.house.gov/posts/new-hhs-report-depicts-how-the-working-family-tax-cuts-lowers-health-insurance-premiums-and-hospital-prices-for-americans",
+    "https://www.gao.gov/products/oig-26-1"
   ]
 }
