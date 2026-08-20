@@ -1028,6 +1028,20 @@ def get_state(text, title=None, link=None, item_type=None):
 
     See `state_tag_meaning_tbd.md` for the design discussion.
     """
+    # Strip known DOJ boilerplate (Strike Force footers, national-takedown
+    # prosecutor lists, agency names) before ANY body-based extraction.
+    # The 2026 National Takedown footer enumerates dozens of USAO
+    # districts and state-AG offices; Path 5b's multi-state operator
+    # pattern harvested "Offices in Alaska, Arizona, ..." from it as a
+    # 9-state run. Blanking is offset-preserving, and the Path 0b
+    # re-strip below is idempotent.
+    if text:
+        try:
+            from tag_allowlist import strip_boilerplate
+            text = strip_boilerplate(text)
+        except Exception:
+            pass
+
     # Path 0: national-scope short-circuit (title-based only).
     # Body-based national guard runs LATER (Path 0b, before body fallback)
     # so that a title that explicitly enumerates specific states still

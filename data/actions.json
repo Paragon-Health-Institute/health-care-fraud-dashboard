@@ -20673,7 +20673,7 @@
         "Medicare"
       ],
       "entities": [],
-      "state": "SD, TX, NC, AK, AZ, CO, CT, FL, GA, HI, ID, IL",
+      "state": "SD, TX, NC",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [

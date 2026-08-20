@@ -178,6 +178,24 @@ _BOILERPLATE_PATTERNS = [
         r"The\s+Health\s+Care\s+Fraud\s+Unit\s+leads[^.]*\.",
         _re.IGNORECASE,
     ),
+    # National Takedown prosecutors footer (2026 takedown releases). One
+    # giant sentence enumerating every participating Strike Force, USAO
+    # district, and state AG office. The AG-office list ("...State
+    # Attorneys General's Offices in Alaska, Arizona, ...") reads like a
+    # multi-state operator enumeration and used to feed spurious state
+    # runs into get_state() Path 5b. The sentence contains "U.S."
+    # abbreviation periods, so match to end of line instead of [^.]*\.
+    _re.compile(
+        r"The\s+cases\s+are\s+being\s+(?:prosecuted|litigated)\s+by\s+"
+        r"the\s+Health\s+Care\s+Fraud\s+Section.*",
+        _re.IGNORECASE,
+    ),
+    # Standalone fallback for the state-AG list in case the footer is
+    # split across lines and the lead-in pattern above doesn't reach it.
+    _re.compile(
+        r"State\s+Attorneys\s+General['’]?s?\s+Offices?\s+in\s+[^.;]+",
+        _re.IGNORECASE,
+    ),
     # "indictment is merely an allegation" standard disclaimer
     _re.compile(
         r"An?\s+(?:indictment|information|complaint)\s+is\s+merely\s+"
