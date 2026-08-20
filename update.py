@@ -786,10 +786,17 @@ def get_action_type(title, desc, agency=None, link=None):
     # press release usually describes the prosecution work the event
     # is organized around (which would otherwise trigger the body-text
     # 'prosecut' fallback below and mislabel as Criminal Enforcement).
+    # Meeting readouts ("READOUT: FinCEN Holds Engagement to Eliminate
+    # Hospice Fraud in California") summarize a coordination meeting —
+    # administrative, not structural, even when the body describes the
+    # task-force work the meeting was organized around.
+    if re.search(r'^readout\b|\breadout\s+of\b', title_l):
+        return 'Administrative Action'
     if re.search(r'\b(hosts?|convenes?|hosted|convened|holds?|held)\s+'
                  r'(a |an |the )?[\w\s\-]{0,40}?'
                  r'(workshop|summit|consortium|roundtable|symposium|forum|'
-                 r'training|meeting\s+(with|of)\s+(federal\s+)?partners)\b',
+                 r'training|engagement|'
+                 r'meeting\s+(with|of)\s+(federal\s+)?partners)\b',
                  title_l):
         return 'Administrative Action'
     if re.search(r'\b(workshop|summit|consortium|roundtable|symposium|forum)\s+'
