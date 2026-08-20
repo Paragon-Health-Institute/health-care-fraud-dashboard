@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-20T08:03:30.991365",
+    "last_updated": "2026-08-20T09:02:05.774121",
     "version": "1.0",
     "last_scraped": "2026-08-20T08:03:30.991353"
   },
@@ -20679,6 +20679,29 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "treasury-2026-08-19-2703948617",
+      "date": "2026-08-19",
+      "agency": "Treasury",
+      "type": "Structural/Organizational",
+      "title": "READOUT: FinCEN Holds Engagement to Eliminate Hospice Fraud in California",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.fincen.gov/news/news-releases/readout-fincen-holds-engagement-eliminate-hospice-fraud-california",
+      "link_label": "Treasury Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Hospice"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }

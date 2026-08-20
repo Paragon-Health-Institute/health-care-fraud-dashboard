@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-08-18T08:59:41.146818",
+    "last_scraped": "2026-08-20T09:02:05.572489",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1054,6 +1054,33 @@
       "ai_confidence": 85,
       "ai_reason": "This is a technical pricing analysis report, not an oversight action related to healthcare fraud or program integrity violations.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "hhs-oig-2026-08-13-3270660091",
+      "date": "2026-08-13",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Health Share of Oregon Did Not Always Comply With Federal and State Requirements When Denying Prior Authorization Requests",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/health-share-of-oregon-did-not-always-comply-with-federal-and-state-requirements-when-denying-prior-authorization-requests/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Medicaid Managed Care"
+      ],
+      "entities": [],
+      "state": "OR",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 75,
+      "ai_reason": "This is an HHS-OIG audit of prior authorization compliance procedures, which concerns regulatory/administrative oversight of care delivery rather than fraud detection, improper payments, or program in",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1315,6 +1342,10 @@
     "https://www.cms.gov/newsroom/press-releases/cms-ends-federal-medicaid-chip-funding-sex-rejecting-procedures-children-youth",
     "https://waysandmeans.house.gov/2026/08/12/chairman-smith-on-july-cpi-report-republicans-are-working-to-lower-costs-and-grow-wages-while-democrats-are-pushing-more-government-spending-and-higher-taxes-for-working-families/",
     "https://energycommerce.house.gov/posts/new-hhs-report-depicts-how-the-working-family-tax-cuts-lowers-health-insurance-premiums-and-hospital-prices-for-americans",
-    "https://www.gao.gov/products/oig-26-1"
+    "https://www.gao.gov/products/oig-26-1",
+    "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-90-million-modernize-improve-it-interoperability-south-dakota",
+    "https://oversight.house.gov/release/comer-confronts-former-biden-hhs-secretary-over-concealing-dr-faucis-diary-and-phone-from-congress/",
+    "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-35-million-investment-advance-screening-technology-secure-additional",
+    "https://www.gao.gov/products/gao-26-107829"
   ]
 }
