@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-08-18T08:00:03.169744",
+    "last_updated": "2026-08-20T08:03:30.991365",
     "version": "1.0",
-    "last_scraped": "2026-08-18T08:00:03.169734"
+    "last_scraped": "2026-08-20T08:03:30.991353"
   },
   "actions": [
     {
@@ -20632,6 +20632,53 @@
         "Cybercrime"
       ],
       "topic_checked_at": "2026-08-18T08:00:03.569512"
+    },
+    {
+      "id": "doj-2026-08-18-1722188061",
+      "date": "2026-08-18",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "United States and State of Illinois File Complaint in Intervention in False Claims Act Lawsuit Against Chicago-Area Medical Practice and Billing Company for Allegedly Submitting Fraudulent Medicare and Medicaid Claims",
+      "amount": "$5.2 Million",
+      "amount_numeric": 5200000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ndil/pr/united-states-and-state-illinois-file-complaint-intervention-false-claims-act-lawsuit",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "IL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-08-17-1608113112",
+      "date": "2026-08-17",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "U.S. Attorney’s Office Files Civil Complaint against Texas Corporation and North Carolina Man for Allegedly Defrauding Medicare",
+      "amount": "$4,591,003",
+      "amount_numeric": 4591003.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-sd/pr/us-attorneys-office-files-civil-complaint-against-texas-corporation-and-north-carolina",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "SD, TX, NC, AK, AZ, CO, CT, FL, GA, HI, ID, IL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
