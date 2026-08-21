@@ -645,6 +645,15 @@ def get_action_type(title, desc, agency=None, link=None):
         t = title_l
         if 'annual report' in t or 'semiannual report' in t:
             return 'Report'
+        # OIG white papers / data briefs / data snapshots are landscape
+        # analyses with recommendations, not compliance audits of a
+        # specific entity. Curators type these Report (precedent: the
+        # skin-substitutes payment-trends brief, the RPM billing brief,
+        # the 2026 DME fraud white paper OEI-02-24-00311). The signal is
+        # in the body ("This white paper presents..."), so check full_text.
+        if re.search(r'\bwhite\s+paper\b|\bdata\s+brief\b|\bdata\s+snapshot\b',
+                     full_text):
+            return 'Report'
         if 'evaluation' in t or 'inspection' in t:
             return 'Audit'  # Evaluations/inspections live under Audit type
         # Default oversight-path classification: Audit
