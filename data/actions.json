@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-08-20T09:02:05.774121",
+    "last_updated": "2026-08-21T08:04:37.781702",
     "version": "1.0",
-    "last_scraped": "2026-08-20T08:03:30.991353"
+    "last_scraped": "2026-08-21T08:04:37.781690"
   },
   "actions": [
     {
@@ -20702,6 +20702,35 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-08-20-2129654934",
+      "date": "2026-08-20",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Four Members of the “War Room” Charged in Connection with $12M Medicaid Fraud Scheme",
+      "amount": "$12 Million",
+      "amount_numeric": 12000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/four-members-war-room-charged-connection-12m-medicaid-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Medical Transportation",
+        "Addiction Treatment",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
     }
   ]
 }
