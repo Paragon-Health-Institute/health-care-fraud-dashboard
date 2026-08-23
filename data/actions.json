@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-22T07:52:42.815484",
+    "last_updated": "2026-08-23T10:31:39.123288",
     "version": "1.0",
     "last_scraped": "2026-08-23T07:54:24.788918"
   },
@@ -16325,15 +16325,15 @@
       "amount": "",
       "amount_numeric": 0,
       "officials": [],
-      "link": "https://www.kare11.com/article/syndication/associatedpress/trump-administration-defers-91m-more-in-minnesota-medicaid-funding-citing-fraud-vulnerabilities/616-4cfe5bfc-2c23-4d56-a024-c94748a1874b",
-      "link_label": "KARE 11",
+      "link": "https://www.cms.gov/newsroom/press-releases/trump-administration-delivers-critical-funding-launch-coordinating-connecting-care-initiative-north",
+      "link_label": "CMS Press Release",
       "social_posts": [],
       "tags": [
         "Medicaid"
       ],
       "entities": [],
       "state": "MN",
-      "source_type": "news",
+      "source_type": "official",
       "auto_fetched": false,
       "related_agencies": []
     },
