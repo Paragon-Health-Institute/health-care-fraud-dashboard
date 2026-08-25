@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-25T08:05:37.889560",
+    "last_updated": "2026-08-25T09:06:03.854332",
     "version": "1.0",
     "last_scraped": "2026-08-25T08:05:37.889548"
   },
@@ -20805,6 +20805,28 @@
       "doj_topics": [
         "False Claims Act"
       ]
+    },
+    {
+      "id": "hhs-oig-2026-08-20-3767151987",
+      "date": "2026-08-20",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Arizona Did Not Ensure That Selected Medicaid Managed Care Organizations Complied With Mental Health and Substance Use Disorder Parity Requirements Related to Prior Authorization",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/arizona-did-not-ensure-that-selected-medicaid-managed-care-organizations-complied-with-mental-health-and-substance-use-disorder-parity-requirements-related-to-prior-authorization/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Medicaid Managed Care"
+      ],
+      "entities": [],
+      "state": "AZ",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
