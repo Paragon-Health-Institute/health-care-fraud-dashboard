@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-08-23T10:31:39.123288",
+    "last_updated": "2026-08-25T08:05:37.889560",
     "version": "1.0",
-    "last_scraped": "2026-08-24T08:11:00.813302"
+    "last_scraped": "2026-08-25T08:05:37.889548"
   },
   "actions": [
     {
@@ -20777,6 +20777,33 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-08-24-3465278751",
+      "date": "2026-08-24",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Medicare Advantage Provider Monogram Health Agrees to Pay $2.4M to Settle False Claims Act Suit",
+      "amount": "$2.4 Million",
+      "amount_numeric": 2400000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/medicare-advantage-provider-monogram-health-agrees-pay-24m-settle-false-claims-act-suit",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
       ]
     }
   ]
