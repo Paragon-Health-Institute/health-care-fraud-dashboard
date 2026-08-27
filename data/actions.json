@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-08-25T09:06:03.854332",
+    "last_updated": "2026-08-27T18:23:29.813102",
     "version": "1.0",
-    "last_scraped": "2026-08-26T08:06:28.748900"
+    "last_scraped": "2026-08-27T18:23:29.813091"
   },
   "actions": [
     {
@@ -20827,6 +20827,106 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-08-26-678298969",
+      "date": "2026-08-26",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "The Villages Health System LLC Agrees to $541.5M Settlement to Resolve False Claims Act Allegations",
+      "amount": "$541.5 Million",
+      "amount_numeric": 541500000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/villages-health-system-llc-agrees-5415m-settlement-resolve-false-claims-act-allegations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-08-26-2624421548",
+      "date": "2026-08-26",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "DermTech Inc. to Pay Up to $5M to Resolve Allegations It Submitted False Claims to Medicare for Unreliable Skin Cancer Tests",
+      "amount": "$5 Million",
+      "amount_numeric": 5000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/dermtech-inc-pay-5m-resolve-allegations-it-submitted-false-claims-medicare-unreliable-skin",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "DE",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-08-26-2367986675",
+      "date": "2026-08-26",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Dallas medical clinic to pay $7.5 million to resolve COVID-19 testing overbilling allegations",
+      "amount": "$7.5 Million",
+      "amount_numeric": 7500000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ndtx/pr/dallas-medical-clinic-pay-75-million-resolve-covid-19-testing-overbilling-allegations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "TX",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-08-25-1447854440",
+      "date": "2026-08-25",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Unknown Man Sentenced To Five Years In Prison For Using Identity Of Deceased Child For 25 Years To Obtain Nearly $300,000 In Government Benefits",
+      "amount": "$300,000",
+      "amount_numeric": 300000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-id/pr/unknown-man-sentenced-five-years-prison-using-identity-deceased-child-25-years-obtain",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "ID",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
     }
   ]
 }
