@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-08-27T18:23:29.813102",
+    "last_updated": "2026-08-28T19:32:25.668223",
     "version": "1.0",
-    "last_scraped": "2026-08-27T18:23:29.813091"
+    "last_scraped": "2026-08-28T19:32:25.668207"
   },
   "actions": [
     {
@@ -20926,6 +20926,30 @@
       ],
       "doj_topics": [
         "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-08-27-1709778089",
+      "date": "2026-08-27",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Anaheim Woman Pleads Guilty to Submitting More Than $2.2 Million in Fraudulent Hospice Care Claims to Medicare",
+      "amount": "$2.2 Million",
+      "amount_numeric": 2200000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-cdca/pr/anaheim-woman-pleads-guilty-submitting-more-22-million-fraudulent-hospice-care-claims",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Hospice"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
       ]
     }
   ]
