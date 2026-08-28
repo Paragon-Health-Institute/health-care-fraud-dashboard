@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-08-27T19:11:46.292836",
+    "last_scraped": "2026-08-28T20:17:28.842282",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1081,6 +1081,38 @@
       "ai_confidence": 75,
       "ai_reason": "This is an HHS-OIG audit of prior authorization compliance procedures, which concerns regulatory/administrative oversight of care delivery rather than fraud detection, improper payments, or program in",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-08-28-2408789410",
+      "date": "2026-08-28",
+      "agency": "CMS",
+      "type": "Structural/Organizational",
+      "title": "CMS Prevents $1.6 Billion in Fraudulent Medicare Laboratory Payments",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-prevents-1-6-billion-fraudulent-medicare-laboratory-payments",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME",
+        "Hospice",
+        "Genetic Testing",
+        "Lab Testing",
+        "Autism/ABA",
+        "Skin Substitutes"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "healthcare_fraud_oversight",
+      "ai_confidence": 82,
+      "ai_reason": "CMS administrative anti-fraud action preventing fraudulent payments is within scope as a program-integrity enforcement measure, though the press-release format suggests this may also appear on Media t",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1350,6 +1382,7 @@
     "https://www.cms.gov/newsroom/press-releases/trump-administration-delivers-critical-funding-launch-coordinating-connecting-care-initiative-north",
     "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-4-2-million-expand-medical-transportation-improve-patient-access-care",
     "https://oversight.house.gov/release/dhs-inspector-general-finds-fema-employees-violated-the-law-by-skipping-homes-of-trump-supporters-after-oversight-committee-investigation/",
-    "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-160-million-bring-cutting-edge-technology-drones-prescription"
+    "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-160-million-bring-cutting-edge-technology-drones-prescription",
+    "https://www.gao.gov/products/oig-26-2"
   ]
 }
