@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-08-28T19:32:25.668223",
+    "last_updated": "2026-08-29T13:16:14.849513",
     "version": "1.0",
-    "last_scraped": "2026-08-28T19:32:25.668207"
+    "last_scraped": "2026-08-29T13:16:14.849505"
   },
   "actions": [
     {
@@ -20951,6 +20951,28 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "doj-2026-08-28-1481050209",
+      "date": "2026-08-28",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Walmart Agrees to Pay $50 Million for Illegally Filling Unlawful Opioid Prescriptions",
+      "amount": "$50 Million",
+      "amount_numeric": 50000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/walmart-agrees-pay-50-million-illegally-filling-unlawful-opioid-prescriptions",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Pharmacy",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "DE",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
