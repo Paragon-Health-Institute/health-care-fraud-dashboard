@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-08-29T13:16:14.849513",
+    "last_updated": "2026-08-31T15:13:42.634160",
     "version": "1.0",
-    "last_scraped": "2026-08-30T13:00:55.037164"
+    "last_scraped": "2026-08-31T15:13:42.634149"
   },
   "actions": [
     {
@@ -20973,6 +20973,30 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-08-28-875938725",
+      "date": "2026-08-28",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Man Sentenced for Role in Conspiracy with Annandale-Based Doctor to Illegally Distribute Promethazine-Codeine",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-wdva/pr/man-sentenced-role-conspiracy-annandale-based-doctor-illegally-distribute-promethazine",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Pharmacy",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "VA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
