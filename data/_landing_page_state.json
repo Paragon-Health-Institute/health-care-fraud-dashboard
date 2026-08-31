@@ -14,7 +14,7 @@
         "https://www.cms.gov/files/document/sample-beneficiary-hospice-notification.pdf"
       ],
       "count": 10,
-      "last_checked": "2026-08-24T10:20:42.303231"
+      "last_checked": "2026-08-31T17:13:01.949895"
     },
     "https://oig.hhs.gov/fraud/": {
       "links": [
@@ -28,7 +28,7 @@
         "https://oig.hhs.gov/fraud/consumer-alerts/fraud-alert-fake-grants/"
       ],
       "count": 8,
-      "last_checked": "2026-08-24T10:20:46.358832"
+      "last_checked": "2026-08-31T17:13:06.962379"
     },
     "https://oig.hhs.gov/about-oig/strategic-plan/": {
       "links": [
@@ -37,7 +37,7 @@
         "https://oig.hhs.gov/archives/oig-strategic-plans/"
       ],
       "count": 3,
-      "last_checked": "2026-08-24T10:20:50.416781"
+      "last_checked": "2026-08-31T17:13:11.002228"
     },
     "https://oig.hhs.gov/reports-and-publications/hcfac/": {
       "links": [
@@ -64,7 +64,7 @@
         "https://oig.hhs.gov/reports/all/2005/health-care-fraud-and-abuse-control-program-report-fiscal-year-2004/"
       ],
       "count": 21,
-      "last_checked": "2026-08-24T10:20:54.692771"
+      "last_checked": "2026-08-31T17:13:15.371784"
     },
     "https://www.gao.gov/high-risk-list": {
       "links": [
@@ -85,7 +85,7 @@
         "https://www.gao.gov/products/gao-01-159sp"
       ],
       "count": 15,
-      "last_checked": "2026-08-24T10:20:59.973274"
+      "last_checked": "2026-08-31T17:13:20.126921"
     },
     "https://oig.hhs.gov/compliance/": {
       "links": [
@@ -95,8 +95,8 @@
         "https://oig.hhs.gov/compliance/compliance-resource-material/"
       ],
       "count": 4,
-      "last_checked": "2026-08-24T10:21:03.897209"
+      "last_checked": "2026-08-31T17:13:24.446236"
     }
   },
-  "last_checked": "2026-08-24T10:21:03.897218"
+  "last_checked": "2026-08-31T17:13:24.446245"
 }
