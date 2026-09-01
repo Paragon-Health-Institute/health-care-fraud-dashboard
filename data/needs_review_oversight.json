@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-08-31T16:16:44.276343",
+    "last_scraped": "2026-09-01T13:36:04.414214",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1383,6 +1383,7 @@
     "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-4-2-million-expand-medical-transportation-improve-patient-access-care",
     "https://oversight.house.gov/release/dhs-inspector-general-finds-fema-employees-violated-the-law-by-skipping-homes-of-trump-supporters-after-oversight-committee-investigation/",
     "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-160-million-bring-cutting-edge-technology-drones-prescription",
-    "https://www.gao.gov/products/oig-26-2"
+    "https://www.gao.gov/products/oig-26-2",
+    "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-149-3-million-expand-telehealth-increase-access-specialty-care"
   ]
 }
