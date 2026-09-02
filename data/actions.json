@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-31T15:13:42.634160",
+    "last_updated": "2026-09-02T12:52:34.375824",
     "version": "1.0",
     "last_scraped": "2026-09-02T12:12:29.292759"
   },
@@ -20997,6 +20997,29 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "hhs-oig-2026-08-31-1097742128",
+      "date": "2026-08-31",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "CMS Oversight Did Not Prevent Medicare Part D Sponsors From Making $587.7 Million in Ineligible Payments to Pharmacies for Drugs Available Over the Counter but Labeled as Prescription-Only",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/cms-oversight-did-not-prevent-medicare-part-d-sponsors-from-making-5877-million-in-ineligible-payments-to-pharmacies-for-drugs-available-over-the-counter-but-labeled-as-prescription-only/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
