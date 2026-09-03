@@ -303,6 +303,34 @@
       "ai_confidence": 75,
       "ai_reason": "Benefits fraud is typically non-healthcare (SNAP, unemployment, housing); the title does not specify stolen identities were used for medical claims submission.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "doj-2026-09-01-3653680749",
+      "date": "2026-09-01",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Danish Autism Researcher Extradited After 14 Years on the Run Pleads Guilty to Stealing CDC Grant Money",
+      "amount": "$11 Million",
+      "amount_numeric": 11000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ndga/pr/danish-autism-researcher-extradited-after-14-years-run-pleads-guilty-stealing-cdc",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Lab Testing",
+        "Autism/ABA"
+      ],
+      "entities": [],
+      "state": "GA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "flagged_at": "2026-09-03T12:12:44.426825",
+      "flag_reason": "title lacks healthcare keyword",
+      "topic_checked_at": "2026-09-03T12:12:44.557877",
+      "doj_topics": []
     }
   ],
   "rejected_links": [
