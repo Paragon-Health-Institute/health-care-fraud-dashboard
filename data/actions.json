@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-09-03T12:12:44.260260",
+    "last_updated": "2026-09-03T12:56:49.544978",
     "version": "1.0",
     "last_scraped": "2026-09-03T12:12:44.260251"
   },
@@ -21017,6 +21017,48 @@
       ],
       "entities": [],
       "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-09-01-675844633",
+      "date": "2026-09-01",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Conflicting CMS Guidance and Federal Statutory Requirements Cost Medicare $380 Million Over a 6-Year Period for Organs Not Transplanted Into Medicare Enrollees",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/conflicting-cms-guidance-and-federal-statutory-requirements-cost-medicare-380-million-over-a-6-year-period-for-organs-not-transplanted-into-medicare-enrollees/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-08-31-751478672",
+      "date": "2026-08-31",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "North Dakota Medicaid Fraud Control Unit: 2025 Inspection",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/north-dakota-medicaid-fraud-control-unit-2025-inspection/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "ND",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
