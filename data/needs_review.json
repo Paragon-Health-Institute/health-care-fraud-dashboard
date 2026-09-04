@@ -330,7 +330,11 @@
       "flagged_at": "2026-09-03T12:12:44.426825",
       "flag_reason": "title lacks healthcare keyword",
       "topic_checked_at": "2026-09-03T12:12:44.557877",
-      "doj_topics": []
+      "doj_topics": [],
+      "ai_decision": "not_healthcare_fraud",
+      "ai_confidence": 85,
+      "ai_reason": "This is grant fraud involving CDC research funds, not healthcare fraud involving Medicare, Medicaid, insurance claims, or healthcare services.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
