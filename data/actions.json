@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-09-03T12:56:49.544978",
+    "last_updated": "2026-09-04T12:50:13.067176",
     "version": "1.0",
     "last_scraped": "2026-09-04T12:13:56.278531"
   },
@@ -21059,6 +21059,29 @@
       ],
       "entities": [],
       "state": "ND",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-09-02-3415822691",
+      "date": "2026-09-02",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "CMS Could Improve Oversight of States' Use of Contract Surveyors for Nursing Home Surveys",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/cms-could-improve-oversight-of-states-use-of-contract-surveyors-for-nursing-home-surveys/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Nursing Home"
+      ],
+      "entities": [],
+      "state": null,
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
