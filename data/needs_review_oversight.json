@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-09-04T12:50:12.877783",
+    "last_scraped": "2026-09-05T11:55:42.579021",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1388,6 +1388,7 @@
     "https://www.gao.gov/products/gao-26-109393",
     "https://oversight.house.gov/release/higgins-leads-roundtable-on-unaccompanied-alien-children-lost-by-the-biden-administration/",
     "https://oversight.house.gov/release/higgins-leads-roundtable-on-suppressors-and-their-relationship-with-the-second-amendment/",
-    "https://energycommerce.house.gov/posts/e-and-c-advances-10-bills-to-house-floor-to-unleash-american-energy-and-lower-prices"
+    "https://energycommerce.house.gov/posts/e-and-c-advances-10-bills-to-house-floor-to-unleash-american-energy-and-lower-prices",
+    "https://www.gao.gov/products/gao-26-108208"
   ]
 }
