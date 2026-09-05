@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-09-04T12:50:13.067176",
+    "last_updated": "2026-09-05T11:21:44.597631",
     "version": "1.0",
-    "last_scraped": "2026-09-04T12:13:56.278531"
+    "last_scraped": "2026-09-05T11:21:44.597618"
   },
   "actions": [
     {
@@ -21085,6 +21085,87 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-09-04-1328649940",
+      "date": "2026-09-04",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Illegal Alien from Georgia Charged for Conspiracy to Launder Proceeds of $1.3B Health Care Fraud Scheme",
+      "amount": "$1.3 Billion",
+      "amount_numeric": 1300000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/illegal-alien-georgia-charged-conspiracy-launder-proceeds-13b-health-care-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME"
+      ],
+      "entities": [],
+      "state": "GA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-09-04-1709064550",
+      "date": "2026-09-04",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Florida Men Sentenced to Prison for $34.8M Health Care Fraud Scheme Targeting Medicare Beneficiaries",
+      "amount": "$34.8 Million",
+      "amount_numeric": 34800000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/florida-men-sentenced-prison-348m-health-care-fraud-scheme-targeting-medicare-beneficiaries",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-09-04-407149405",
+      "date": "2026-09-04",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "South Florida Men Sentenced to Prison for $34.8M Health Care Fraud Scheme Targeting Medicare Beneficiaries",
+      "amount": "$34.8 Million",
+      "amount_numeric": 34800000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-sdfl/pr/south-florida-men-sentenced-prison-348m-health-care-fraud-scheme-targeting-medicare",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
     }
   ]
 }
