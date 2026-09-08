@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-09-05T11:21:44.597631",
+    "last_updated": "2026-09-08T12:59:36.850243",
     "version": "1.0",
     "last_scraped": "2026-09-08T12:14:31.077314"
   },
@@ -21166,6 +21166,87 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "cms-2026-09-07-1717924147",
+      "date": "2026-09-07",
+      "agency": "CMS",
+      "type": "Report",
+      "title": "Fraud Spotlight: DMEPOS Suppliers",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/files/document/cms-fraud-hot-spot-dmepos-suppliers.pdf",
+      "link_label": "CMS Anti-Fraud Landing Page",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "cms-2026-09-07-1508172702",
+      "date": "2026-09-07",
+      "agency": "CMS",
+      "type": "Report",
+      "title": "Fraud Spotlight: Fraudulent Genetic Testing",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/files/document/cpi-genetic-testing-fraud-scheme-factsheet.pdf",
+      "link_label": "CMS Anti-Fraud Landing Page",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-09-03-3618795555",
+      "date": "2026-09-03",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "South Carolina Did Not Ensure That Selected Medicaid Managed Care Organizations Complied With Mental Health and Substance Use Disorder Parity Requirements Related to Prior Authorization",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/south-carolina-did-not-ensure-that-selected-medicaid-managed-care-organizations-complied-with-mental-health-and-substance-use-disorder-parity-requirements-related-to-prior-authorization/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Medicaid Managed Care"
+      ],
+      "entities": [],
+      "state": "SC",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-09-03-2784502449",
+      "date": "2026-09-03",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "California Did Not Report and Return All Medicaid Overpayments for the State’s Medicaid Fraud Control Unit Cases",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/california-did-not-report-and-return-all-medicaid-overpayments-for-the-states-medicaid-fraud-control-unit-cases/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
