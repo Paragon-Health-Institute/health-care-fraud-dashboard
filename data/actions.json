@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-09-09T12:27:06.263515",
+    "last_updated": "2026-09-09T13:04:53.944585",
     "version": "1.0",
     "last_scraped": "2026-09-09T12:27:06.263501"
   },
@@ -21275,6 +21275,29 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "cms-2026-09-08-948586269",
+      "date": "2026-09-08",
+      "agency": "CMS",
+      "type": "Structural/Organizational",
+      "title": "CMS Cracks Down on Massive $3.4 Billion Medical Equipment Supplier Fraud Scheme",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-cracks-down-massive-3-4-billion-medical-equipment-supplier-fraud-scheme",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "DME"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
