@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-09-08T12:59:36.850243",
+    "last_updated": "2026-09-09T12:27:06.263515",
     "version": "1.0",
-    "last_scraped": "2026-09-08T12:14:31.077314"
+    "last_scraped": "2026-09-09T12:27:06.263501"
   },
   "actions": [
     {
@@ -21247,6 +21247,34 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-09-08-3771288457",
+      "date": "2026-09-08",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Foreign National Pleads Guilty To Health Care Fraud Scheme Targeting Medicare Advantage Programs",
+      "amount": "$137 Million",
+      "amount_numeric": 137000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ndca/pr/foreign-national-pleads-guilty-health-care-fraud-scheme-targeting-medicare-advantage",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "DME"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
     }
   ]
 }
