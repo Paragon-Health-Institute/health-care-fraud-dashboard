@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-09-09T13:04:53.771821",
+    "last_scraped": "2026-09-10T13:02:25.109041",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1393,6 +1393,7 @@
     "https://oversight.house.gov/release/comer-and-timmons-release-report-on-navys-response-to-traumatic-brain-injury-and-mental-health-risks-in-naval-aviation/",
     "http://www.finance.senate.gov/chairmans-news/crapo-announces-nominations-hearing-for-hhs-irs-chief-counsel-and-tax-court",
     "https://energycommerce.house.gov/posts/chairman-guthrie-op-ed-the-country-that-lays-the-foundation-for-the-ai-economy-will-define-the-next-century",
-    "https://oig.hhs.gov/reports/all/2026/oig-final-data-brief-snapshot-of-indian-health-service-sanitation-facilities-construction-projects-funded-under-the-infrastructure-investment-and-jobs-act/"
+    "https://oig.hhs.gov/reports/all/2026/oig-final-data-brief-snapshot-of-indian-health-service-sanitation-facilities-construction-projects-funded-under-the-infrastructure-investment-and-jobs-act/",
+    "https://www.gao.gov/products/gao-26-108092"
   ]
 }

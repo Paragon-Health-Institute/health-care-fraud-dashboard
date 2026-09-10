@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-09-10T12:20:58.979330",
+    "last_updated": "2026-09-10T13:02:25.279130",
     "version": "1.0",
     "last_scraped": "2026-09-10T12:20:58.979314"
   },
@@ -21377,6 +21377,25 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "treasury-2026-09-09-564273231",
+      "date": "2026-09-09",
+      "agency": "Treasury",
+      "type": "Administrative Action",
+      "title": "FinCEN Issues Financial Trend Analysis on Health Care Fraud",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.fincen.gov/news/news-releases/fincen-issues-financial-trend-analysis-health-care-fraud",
+      "link_label": "Treasury Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
