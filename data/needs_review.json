@@ -335,6 +335,33 @@
       "ai_confidence": 85,
       "ai_reason": "This is grant fraud involving CDC research funds, not healthcare fraud involving Medicare, Medicaid, insurance claims, or healthcare services.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "doj-2026-09-09-2285673406",
+      "date": "2026-09-09",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Florida Enforcement Leaders Hold Inaugural Meeting of the Florida Anti-fraud Task Force to Enhance Federal-State Cooperation to Detect, Investigate, and Prosecute Fraud",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-sdfl/pr/florida-enforcement-leaders-hold-inaugural-meeting-florida-anti-fraud-task-force",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flagged_at": "2026-09-11T12:19:34.761694",
+      "flag_reason": "title lacks healthcare keyword",
+      "topic_checked_at": "2026-09-11T12:19:34.910356",
+      "doj_topics": [],
+      "ai_decision": "not_healthcare_fraud",
+      "ai_confidence": 75,
+      "ai_reason": "This is an organizational announcement about a task force meeting rather than a specific enforcement action against healthcare fraud.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [

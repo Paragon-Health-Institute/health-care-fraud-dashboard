@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-09-10T13:02:25.279130",
+    "last_updated": "2026-09-11T12:19:34.593647",
     "version": "1.0",
-    "last_scraped": "2026-09-10T12:20:58.979314"
+    "last_scraped": "2026-09-11T12:19:34.593637"
   },
   "actions": [
     {
@@ -21396,6 +21396,79 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-09-10-1440257118",
+      "date": "2026-09-10",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Dompé U.S. Agrees to Pay $32M to Resolve False Claims Act Liability Relating to Self-Disclosure of Patient Kickbacks",
+      "amount": "$32 Million",
+      "amount_numeric": 32000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/dompe-us-agrees-pay-32m-resolve-false-claims-act-liability-relating-self-disclosure-patient",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-09-09-1850248761",
+      "date": "2026-09-09",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Brooklyn Adult Daycare Owner Sentenced to 76 Months in Prison for Leadership Role in $68 Million Medicaid Fraud Scheme",
+      "amount": "$68 Million",
+      "amount_numeric": 68000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edny/pr/brooklyn-adult-daycare-owner-sentenced-76-months-prison-leadership-role-68-million",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Home Health",
+        "Adult Day Care"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-09-09-2178559550",
+      "date": "2026-09-09",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Owner Of Physical Rehabilitation Company Sentenced To 38 Months In Prison For $20 Million Fraud On Health Benefit Programs",
+      "amount": "$20 Million",
+      "amount_numeric": 20000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-sdny/pr/owner-physical-rehabilitation-company-sentenced-38-months-prison-20-million-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
