@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-09-11T12:19:34.593647",
+    "last_updated": "2026-09-12T11:42:35.680340",
     "version": "1.0",
-    "last_scraped": "2026-09-11T12:19:34.593637"
+    "last_scraped": "2026-09-12T11:42:35.680330"
   },
   "actions": [
     {
@@ -21464,6 +21464,54 @@
       "tags": [],
       "entities": [],
       "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-09-11-4261008194",
+      "date": "2026-09-11",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Brooklyn Adult Daycare Owner Sentenced to Prison for Leadership Role in $64M Medicaid Fraud Scheme",
+      "amount": "$64 Million",
+      "amount_numeric": 64000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/brooklyn-adult-daycare-owner-sentenced-prison-leadership-role-64m-medicaid-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Home Health",
+        "Adult Day Care"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-09-10-1455126590",
+      "date": "2026-09-10",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Brandon Pulmonary Practice Agrees to Pay Over $400,000 to Resolve False Claims Act Violations",
+      "amount": "$400,000",
+      "amount_numeric": 400000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-mdfl/pr/brandon-pulmonary-practice-agrees-pay-over-400000-resolve-false-claims-act-violations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
