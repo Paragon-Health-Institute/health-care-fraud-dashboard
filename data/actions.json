@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-09-12T11:42:35.680340",
+    "last_updated": "2026-09-14T14:14:48.404546",
     "version": "1.0",
-    "last_scraped": "2026-09-13T12:49:14.006641"
+    "last_scraped": "2026-09-14T14:14:48.404537"
   },
   "actions": [
     {
@@ -21512,6 +21512,29 @@
       ],
       "entities": [],
       "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-09-11-3686553461",
+      "date": "2026-09-11",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Eye Practice and Physician Owner Agree to Pay $350,000 to Resolve Allegations of False Claims to Medicare",
+      "amount": "$350,000",
+      "amount_numeric": 350000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/eye-practice-and-physician-owner-agree-pay-350000-resolve-allegations-false-claims",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "MA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
