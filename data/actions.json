@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-09-14T14:14:48.404546",
+    "last_updated": "2026-09-14T15:08:00.712217",
     "version": "1.0",
     "last_scraped": "2026-09-14T14:14:48.404537"
   },
@@ -21540,6 +21540,50 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "hhs-oig-2026-09-09-11579471",
+      "date": "2026-09-09",
+      "agency": "HHS-OIG",
+      "type": "Report",
+      "title": "Medicare Advantage Organizations and CMS Can Do More To Prevent Durable Medical Equipment Fraud in Medicare Advantage",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/medicare-advantage-organizations-and-cms-can-do-more-to-prevent-durable-medical-equipment-fraud-in-medicare-advantage/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "DME"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-09-09-461385965",
+      "date": "2026-09-09",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Alabama Medicaid Fraud Control Unit: 2025 Inspection",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/alabama-medicaid-fraud-control-unit-2025-inspection/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "AL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
