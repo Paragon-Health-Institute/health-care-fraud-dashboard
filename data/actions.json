@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-09-14T15:08:00.712217",
+    "last_updated": "2026-09-14T15:52:31.683408",
     "version": "1.0",
     "last_scraped": "2026-09-14T14:14:48.404537"
   },
@@ -21584,6 +21584,28 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "congress-house-119539",
+      "date": "2026-09-14",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "“Examining Healthcare Markets: Fraud and Competition”",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://judiciary.house.gov/committee-activity/hearings/examining-healthcare-markets-fraud-and-competition",
+      "link_label": "House Judiciary Subcommittee on Administrative State, Regulatory Reform, and Antitrust Hearing",
+      "tags": [],
+      "state": "",
+      "source_type": "official",
+      "auto_fetched": true,
+      "entities": [],
+      "_source": "congress.gov committee-meeting 119539",
+      "_committees": [
+        "House Judiciary Subcommittee on Administrative State, Regulatory Reform, and Antitrust"
+      ],
+      "_filter_reason": "fraud keyword + HC committee (House Judiciary Subcommittee on Administrative State, Regulatory Reform, and Antitrust)"
     }
   ]
 }
