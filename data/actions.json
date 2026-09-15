@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-09-14T15:52:31.683408",
+    "last_updated": "2026-09-15T13:42:29.277211",
     "version": "1.0",
     "last_scraped": "2026-09-15T12:48:00.810263"
   },
@@ -21606,6 +21606,50 @@
         "House Judiciary Subcommittee on Administrative State, Regulatory Reform, and Antitrust"
       ],
       "_filter_reason": "fraud keyword + HC committee (House Judiciary Subcommittee on Administrative State, Regulatory Reform, and Antitrust)"
+    },
+    {
+      "id": "hhs-oig-2026-09-10-3682601262",
+      "date": "2026-09-10",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Medicare Advantage Compliance Audit of Specific Diagnosis Codes That HumanaChoice (Contract H5216) Submitted to CMS",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/medicare-advantage-compliance-audit-of-specific-diagnosis-codes-that-humanachoice-contract-h5216-submitted-to-cms/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-09-10-1621296140",
+      "date": "2026-09-10",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Medicare Advantage Compliance Audit of Specific Diagnosis Codes That UnitedHealthcare of Wisconsin, Inc. (Contract H5253) Submitted to CMS",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/medicare-advantage-compliance-audit-of-specific-diagnosis-codes-that-unitedhealthcare-of-wisconsin-inc-contract-h5253-submitted-to-cms/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "WI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
