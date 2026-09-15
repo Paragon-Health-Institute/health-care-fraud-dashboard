@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-09-15T13:42:29.277211",
+    "last_updated": "2026-09-15T14:18:29.639550",
     "version": "1.0",
     "last_scraped": "2026-09-15T12:48:00.810263"
   },
@@ -21650,6 +21650,50 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "congress-house-119553",
+      "date": "2026-09-15",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "“Fixing Fraud and Failure in Federally Funded Homelessness Services”",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oversight.house.gov/hearing/fixing-fraud-and-failure-in-federally-funded-homelessness-services/",
+      "link_label": "House Oversight and Government Reform Subcommittee on Delivering on Government Efficiency Hearing",
+      "tags": [],
+      "state": "",
+      "source_type": "official",
+      "auto_fetched": true,
+      "entities": [],
+      "_source": "congress.gov committee-meeting 119553",
+      "_committees": [
+        "House Oversight and Government Reform Subcommittee on Delivering on Government Efficiency"
+      ],
+      "_filter_reason": "fraud keyword + HC committee (House Oversight and Government Reform Subcommittee on Delivering on Government Efficiency)"
+    },
+    {
+      "id": "congress-house-119572",
+      "date": "2026-09-15",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "“Restoring Election Integrity: Oversight of Voter Fraud in New Jersey”",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.congress.gov/event/119-congress/house-event/119572",
+      "link_label": "Congress.gov Hearing",
+      "tags": [],
+      "state": "",
+      "source_type": "official",
+      "auto_fetched": true,
+      "entities": [],
+      "_source": "congress.gov committee-meeting 119572",
+      "_committees": [
+        "House Judiciary Subcommittee on Oversight"
+      ],
+      "_filter_reason": "fraud keyword + HC committee (House Judiciary Subcommittee on Oversight)"
     }
   ]
 }
