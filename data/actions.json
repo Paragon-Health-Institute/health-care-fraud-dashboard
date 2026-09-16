@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-09-16T12:42:23.574974",
+    "last_updated": "2026-09-16T13:37:34.779676",
     "version": "1.0",
     "last_scraped": "2026-09-16T12:42:23.574967"
   },
@@ -21768,6 +21768,48 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "cms-2026-09-16-3282444096",
+      "date": "2026-09-16",
+      "agency": "CMS",
+      "type": "Administrative Action",
+      "title": "Fraud Spotlight: Medicare Enrollment Moratoria",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/files/document/medicare-enrollment-moratoria.pdf",
+      "link_label": "CMS Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-09-11-1008329694",
+      "date": "2026-09-11",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Medicare Hospital Provider Compliance Audit: McLeod Regional Medical Center",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/medicare-hospital-provider-compliance-audit-mcleod-regional-medical-center/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }

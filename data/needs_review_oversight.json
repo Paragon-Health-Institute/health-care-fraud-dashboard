@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-09-15T13:42:29.091891",
+    "last_scraped": "2026-09-16T13:37:34.631757",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1113,6 +1113,33 @@
       "ai_confidence": 82,
       "ai_reason": "CMS administrative anti-fraud action preventing fraudulent payments is within scope as a program-integrity enforcement measure, though the press-release format suggests this may also appear on Media t",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "congress-2026-09-15-1763228674",
+      "date": "2026-09-15",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "Health Subcommittee Holds Hearing Examining Policies to Address Medicare Provider Payment Challenges and Strengthen Cybersecurity Efforts in Our Nation’s Health Care System",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://energycommerce.house.gov/posts/health-subcommittee-holds-hearing-examining-policies-to-address-medicare-provider-payment-challenges-and-strengthen-cybersecurity-efforts-in-our-nation-s-health-care-system",
+      "link_label": "House E&C Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 72,
+      "ai_reason": "While this is a congressional health subcommittee hearing, the stated focus on 'provider payment challenges' and 'cybersecurity' does not explicitly address healthcare fraud, improper payments, or pro",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1396,6 +1423,7 @@
     "https://oig.hhs.gov/reports/all/2026/oig-final-data-brief-snapshot-of-indian-health-service-sanitation-facilities-construction-projects-funded-under-the-infrastructure-investment-and-jobs-act/",
     "https://www.gao.gov/products/gao-26-108092",
     "https://www.gao.gov/products/gao-26-108995",
-    "https://oig.hhs.gov/reports/all/2026/the-ihs-navajo-area-offices-internal-controls-for-awarding-monitoring-and-reporting-sanitation-facilities-construction-projects-could-be-improved/"
+    "https://oig.hhs.gov/reports/all/2026/the-ihs-navajo-area-offices-internal-controls-for-awarding-monitoring-and-reporting-sanitation-facilities-construction-projects-could-be-improved/",
+    "http://www.finance.senate.gov/chairmans-news/crapo-statement-at-hearing-on-nominees-for-hhs-irs-and-the-us-tax-court"
   ]
 }
