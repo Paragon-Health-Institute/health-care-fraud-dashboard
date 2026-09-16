@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-09-15T14:18:29.639550",
+    "last_updated": "2026-09-16T12:42:23.574974",
     "version": "1.0",
-    "last_scraped": "2026-09-15T12:48:00.810263"
+    "last_scraped": "2026-09-16T12:42:23.574967"
   },
   "actions": [
     {
@@ -21694,6 +21694,80 @@
         "House Judiciary Subcommittee on Oversight"
       ],
       "_filter_reason": "fraud keyword + HC committee (House Judiciary Subcommittee on Oversight)"
+    },
+    {
+      "id": "doj-2026-09-15-831404378",
+      "date": "2026-09-15",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Repeat Felon Arrested and Charged in $4.75M Medicare Fraud Scheme",
+      "amount": "$4.75 Million",
+      "amount_numeric": 4750000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/repeat-felon-arrested-and-charged-475m-medicare-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Adult Day Care",
+        "Mental Health"
+      ],
+      "entities": [],
+      "state": "MI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-09-14-2478581447",
+      "date": "2026-09-14",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Brentwood Woman Sentenced to Federal Prison for $6.9 Million Health Care Fraud Scheme",
+      "amount": "$6.9 Million",
+      "amount_numeric": 6900000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-mdtn/pr/brentwood-woman-sentenced-federal-prison-69-million-health-care-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Wound Care"
+      ],
+      "entities": [],
+      "state": "TN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-09-08-1411379179",
+      "date": "2026-09-08",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Peoria Man Charged with Defrauding AHCCCS",
+      "amount": "$33 Million",
+      "amount_numeric": 33000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-az/pr/peoria-man-charged-defrauding-ahcccs",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "AZ",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
     }
   ]
 }
