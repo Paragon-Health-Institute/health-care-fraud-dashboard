@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-09-16T13:37:34.779676",
+    "last_updated": "2026-09-17T13:36:59.485366",
     "version": "1.0",
     "last_scraped": "2026-09-17T12:41:30.582614"
   },
@@ -21800,6 +21800,88 @@
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/medicare-hospital-provider-compliance-audit-mcleod-regional-medical-center/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "gao-2026-09-17-2183405170",
+      "date": "2026-09-17",
+      "agency": "GAO",
+      "type": "Audit",
+      "title": "Whistleblower Protection: DHS Should Ensure Timely Resolution of Retaliation Complaints",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.gao.gov/products/gao-26-108106",
+      "link_label": "GAO Report",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "gao-2026-09-17-1402600256",
+      "date": "2026-09-17",
+      "agency": "GAO",
+      "type": "Audit",
+      "title": "Medicaid: Improved Oversight Needed of State Eligibility Error Corrective Action Plans",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.gao.gov/products/gao-26-108017",
+      "link_label": "GAO Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-09-14-4193516710",
+      "date": "2026-09-14",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "North Carolina Medicaid Fraud Control Unit: 2025 Onsite Inspection",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/north-carolina-medicaid-fraud-control-unit-2025-onsite-inspection/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "NC",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-09-14-148362993",
+      "date": "2026-09-14",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Methodist Hospital Received at Least $12.4 Million in Medicare Overpayments",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/methodist-hospital-received-at-least-124-million-in-medicare-overpayments/",
       "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [

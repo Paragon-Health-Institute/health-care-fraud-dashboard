@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-09-16T13:37:34.631757",
+    "last_scraped": "2026-09-17T13:36:59.307957",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1424,6 +1424,7 @@
     "https://www.gao.gov/products/gao-26-108092",
     "https://www.gao.gov/products/gao-26-108995",
     "https://oig.hhs.gov/reports/all/2026/the-ihs-navajo-area-offices-internal-controls-for-awarding-monitoring-and-reporting-sanitation-facilities-construction-projects-could-be-improved/",
-    "http://www.finance.senate.gov/chairmans-news/crapo-statement-at-hearing-on-nominees-for-hhs-irs-and-the-us-tax-court"
+    "http://www.finance.senate.gov/chairmans-news/crapo-statement-at-hearing-on-nominees-for-hhs-irs-and-the-us-tax-court",
+    "https://www.gao.gov/products/gao-26-108836"
   ]
 }
