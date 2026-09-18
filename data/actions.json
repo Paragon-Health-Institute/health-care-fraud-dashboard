@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-09-17T13:36:59.485366",
+    "last_updated": "2026-09-18T12:20:08.560178",
     "version": "1.0",
-    "last_scraped": "2026-09-17T12:41:30.582614"
+    "last_scraped": "2026-09-18T12:20:08.560166"
   },
   "actions": [
     {
@@ -21892,6 +21892,88 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-09-17-3871522617",
+      "date": "2026-09-17",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Arizona Addiction Treatment Clinic Owner Sentenced to 14 Years in Prison for Leadership Role in $69M Medicaid Fraud Scheme",
+      "amount": "$69 Million",
+      "amount_numeric": 69000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/arizona-addiction-treatment-clinic-owner-sentenced-14-years-prison-leadership-role-69m",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Addiction Treatment"
+      ],
+      "entities": [],
+      "state": "AZ",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-09-17-640057994",
+      "date": "2026-09-17",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "DOJ Sues Georgia Lab Executives for Defrauding Medicare by Targeting Faith-Based Communities and Seniors",
+      "amount": "$14.3 Million",
+      "amount_numeric": 14300000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/doj-sues-georgia-lab-executives-defrauding-medicare-targeting-faith-based-communities-and",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Genetic Testing",
+        "Lab Testing"
+      ],
+      "entities": [],
+      "state": "GA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-09-17-941951239",
+      "date": "2026-09-17",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Maryland Long Term Care Pharmacy Pays $5.3M to Settle Allegations of Billing for Drugs Without Valid Prescriptions",
+      "amount": "$5.3 Million",
+      "amount_numeric": 5300000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/maryland-long-term-care-pharmacy-pays-53m-settle-allegations-billing-drugs-without-valid",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Pharmacy",
+        "Assisted Living"
+      ],
+      "entities": [],
+      "state": "OH, MD",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud",
+        "False Claims Act"
+      ]
     }
   ]
 }
