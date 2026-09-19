@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-09-18T13:04:46.865559",
+    "last_scraped": "2026-09-19T12:36:11.399073",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1140,6 +1140,32 @@
       "ai_confidence": 72,
       "ai_reason": "While this is a congressional health subcommittee hearing, the stated focus on 'provider payment challenges' and 'cybersecurity' does not explicitly address healthcare fraud, improper payments, or pro",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-09-18-297644295",
+      "date": "2026-09-18",
+      "agency": "CMS",
+      "type": "Administrative Action",
+      "title": "CMS Announces Participants in Landmark Medicaid Drug Payment Model to Bring Down Drug Costs for Most Vulnerable Americans",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-announces-participants-landmark-medicaid-drug-payment-model-bring-down-drug-costs-most",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 88,
+      "ai_reason": "This is a CMS announcement about a drug payment model initiative focused on cost reduction, not a healthcare-fraud program-integrity action, audit, or oversight finding.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1427,6 +1453,7 @@
     "http://www.finance.senate.gov/chairmans-news/crapo-statement-at-hearing-on-nominees-for-hhs-irs-and-the-us-tax-court",
     "https://www.gao.gov/products/gao-26-108836",
     "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-delivers-remarks-during-confirmation-hearing-on-nominations-for-deputy-hhs-secretary-surgeon-general-and-samhsa",
-    "https://waysandmeans.house.gov/2026/09/18/ways-means-committee-advances-policies-benefitting-american-patients-parents-taxpayers-critical-supply-chains/"
+    "https://waysandmeans.house.gov/2026/09/18/ways-means-committee-advances-policies-benefitting-american-patients-parents-taxpayers-critical-supply-chains/",
+    "https://www.gao.gov/products/gao-26-109300"
   ]
 }

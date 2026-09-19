@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-09-19T12:01:36.823444",
+    "last_updated": "2026-09-19T12:36:11.627668",
     "version": "1.0",
     "last_scraped": "2026-09-19T12:01:36.823432"
   },
@@ -22046,6 +22046,29 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "white-house-2026-09-18-3302965927",
+      "date": "2026-09-18",
+      "agency": "White House",
+      "type": "Administrative Action",
+      "title": "President Trump Extends Most Favored Nation Drug Pricing to Every Medicaid Program in America",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.whitehouse.gov/releases/2026/09/president-trump-extends-most-favored-nation-pricing-to-every-medicaid-program-in-america/",
+      "link_label": "White House Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Drug Pricing"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
