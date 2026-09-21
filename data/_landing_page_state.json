@@ -11,12 +11,12 @@
         "https://www.cms.gov/files/document/hospice-fact-sheet-1-28-26.pdf",
         "https://www.cms.gov/files/document/cms-fraud-hot-spot-dmepos-suppliers.pdf",
         "https://www.cms.gov/files/document/cpi-genetic-testing-fraud-scheme-factsheet.pdf",
-        "https://www.cms.gov/files/document/cpi-moratoria-fast-facts.pdf",
+        "https://www.cms.gov/files/document/medicare-enrollment-moratoria.pdf",
         "https://www.cms.gov/files/document/cpi-fraud-spotlight-marketplace.pdf",
         "https://www.cms.gov/files/document/sample-beneficiary-hospice-notification.pdf"
       ],
       "count": 12,
-      "last_checked": "2026-09-14T15:59:38.665603"
+      "last_checked": "2026-09-21T16:00:26.301498"
     },
     "https://oig.hhs.gov/fraud/": {
       "links": [
@@ -30,7 +30,7 @@
         "https://oig.hhs.gov/fraud/consumer-alerts/fraud-alert-fake-grants/"
       ],
       "count": 8,
-      "last_checked": "2026-09-14T15:59:42.607619"
+      "last_checked": "2026-09-21T16:00:30.460115"
     },
     "https://oig.hhs.gov/about-oig/strategic-plan/": {
       "links": [
@@ -39,7 +39,7 @@
         "https://oig.hhs.gov/archives/oig-strategic-plans/"
       ],
       "count": 3,
-      "last_checked": "2026-09-14T15:59:46.595083"
+      "last_checked": "2026-09-21T16:00:34.506360"
     },
     "https://oig.hhs.gov/reports-and-publications/hcfac/": {
       "links": [
@@ -66,7 +66,7 @@
         "https://oig.hhs.gov/reports/all/2005/health-care-fraud-and-abuse-control-program-report-fiscal-year-2004/"
       ],
       "count": 21,
-      "last_checked": "2026-09-14T15:59:50.731689"
+      "last_checked": "2026-09-21T16:00:38.579657"
     },
     "https://www.gao.gov/high-risk-list": {
       "links": [
@@ -87,7 +87,7 @@
         "https://www.gao.gov/products/gao-01-159sp"
       ],
       "count": 15,
-      "last_checked": "2026-09-14T15:59:55.866543"
+      "last_checked": "2026-09-21T16:00:43.397041"
     },
     "https://oig.hhs.gov/compliance/": {
       "links": [
@@ -97,8 +97,8 @@
         "https://oig.hhs.gov/compliance/compliance-resource-material/"
       ],
       "count": 4,
-      "last_checked": "2026-09-14T15:59:59.838368"
+      "last_checked": "2026-09-21T16:00:47.295799"
     }
   },
-  "last_checked": "2026-09-14T15:59:59.838379"
+  "last_checked": "2026-09-21T16:00:47.295816"
 }

@@ -1192,6 +1192,25 @@
       "ai_confidence": 85,
       "ai_reason": "This GAO audit concerns FDA oversight of third-party review organizations for medical device approval processes, not healthcare fraud, improper payments, or program integrity in Medicare/Medicaid/CHIP",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-09-21-3282444096",
+      "date": "2026-09-21",
+      "agency": "CMS",
+      "type": "Report",
+      "title": "Fraud Spotlight: Medicare Enrollment Moratoria",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/files/document/medicare-enrollment-moratoria.pdf",
+      "link_label": "CMS Anti-Fraud Landing Page",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ],
   "rejected_links": [
