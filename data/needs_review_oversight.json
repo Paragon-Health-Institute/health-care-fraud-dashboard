@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-09-21T15:13:15.423465",
+    "last_scraped": "2026-09-22T13:31:47.838485",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1194,23 +1194,31 @@
       "ai_model": "claude-haiku-4-5-20251001"
     },
     {
-      "id": "cms-2026-09-21-3282444096",
-      "date": "2026-09-21",
-      "agency": "CMS",
-      "type": "Report",
-      "title": "Fraud Spotlight: Medicare Enrollment Moratoria",
+      "id": "hhs-oig-2026-09-18-4038971546",
+      "date": "2026-09-18",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Connecticut Could Better Ensure That the Department of Developmental Services and Providers Fully Comply With Federal Waiver and State Health and Safety Requirements for Individualized Home Support Services",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
-      "link": "https://www.cms.gov/files/document/medicare-enrollment-moratoria.pdf",
-      "link_label": "CMS Anti-Fraud Landing Page",
+      "link": "https://oig.hhs.gov/reports/all/2026/connecticut-could-better-ensure-that-the-department-of-developmental-services-and-providers-fully-comply-with-federal-waiver-and-state-health-and-safety-requirements-for-individualized-home-support-services/",
+      "link_label": "HHS-OIG Report",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid",
+        "Adult Day Care"
+      ],
       "entities": [],
-      "state": null,
+      "state": "CT",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [],
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 82,
+      "ai_reason": "HHS-OIG audit focused on compliance with health and safety requirements for developmental services, not healthcare fraud or program-integrity findings related to fraud, improper payments, or fraud-spe",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1500,6 +1508,7 @@
     "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-delivers-remarks-during-confirmation-hearing-on-nominations-for-deputy-hhs-secretary-surgeon-general-and-samhsa",
     "https://waysandmeans.house.gov/2026/09/18/ways-means-committee-advances-policies-benefitting-american-patients-parents-taxpayers-critical-supply-chains/",
     "https://www.gao.gov/products/gao-26-109300",
-    "https://www.gao.gov/products/gao-26-108732"
+    "https://www.gao.gov/products/gao-26-108732",
+    "https://www.cms.gov/newsroom/fact-sheets/preliminary-calendar-year-cy-2027-medicare-clinical-laboratory-fee-schedule-payment-rates"
   ]
 }
