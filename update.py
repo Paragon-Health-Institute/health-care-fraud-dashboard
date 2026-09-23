@@ -1603,7 +1603,7 @@ def derive_link_label(agency, link, feed_name=None, is_media=False):
         # hearings/... where a simple prefix match misses). This runs
         # BEFORE the prefix map so that e.g. "hsgac.senate.gov/" → Release
         # doesn't win over an actual hearing URL.
-        if '/hearing' in link_l or '/event/' in link_l or '/committee-meeting/' in link_l:
+        if '/hearing' in link_l or '/event/' in link_l or '/events/' in link_l or '/committee-meeting/' in link_l:
             import re as _re_local
             m = _re_local.search(r'//([\w.]+)/', link_l)
             host = m.group(1) if m else ''

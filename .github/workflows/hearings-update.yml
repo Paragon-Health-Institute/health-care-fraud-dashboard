@@ -51,7 +51,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install --upgrade pip certifi && pip install requests beautifulsoup4 lxml
+          pip install --upgrade pip certifi && pip install requests beautifulsoup4 feedparser lxml
 
       - name: Compute date range
         id: dates
