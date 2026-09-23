@@ -21812,25 +21812,6 @@
       "related_agencies": []
     },
     {
-      "id": "gao-2026-09-17-2183405170",
-      "date": "2026-09-17",
-      "agency": "GAO",
-      "type": "Audit",
-      "title": "Whistleblower Protection: DHS Should Ensure Timely Resolution of Retaliation Complaints",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.gao.gov/products/gao-26-108106",
-      "link_label": "GAO Report",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
       "id": "gao-2026-09-17-1402600256",
       "date": "2026-09-17",
       "agency": "GAO",
@@ -22048,29 +22029,6 @@
       ]
     },
     {
-      "id": "white-house-2026-09-18-3302965927",
-      "date": "2026-09-18",
-      "agency": "White House",
-      "type": "Administrative Action",
-      "title": "President Trump Extends Most Favored Nation Drug Pricing to Every Medicaid Program in America",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.whitehouse.gov/releases/2026/09/president-trump-extends-most-favored-nation-pricing-to-every-medicaid-program-in-america/",
-      "link_label": "White House Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicaid",
-        "Drug Pricing"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
       "id": "doj-2026-09-21-3414053164",
       "date": "2026-09-21",
       "agency": "DOJ",
@@ -22092,30 +22050,6 @@
         "Prescription Drugs"
       ],
       "topic_checked_at": "2026-09-22T12:43:26.436601"
-    },
-    {
-      "id": "doj-2026-09-22-836894844",
-      "date": "2026-09-22",
-      "agency": "DOJ",
-      "type": "Civil Action",
-      "title": "Medical Equipment Sterilizer Agrees to Limits on Destruction of Toxic Ethylene Oxide Emissions to Resolve Clean Air Act Violations in Puerto Rico",
-      "amount": "$700,000",
-      "amount_numeric": 700000.0,
-      "officials": [],
-      "link": "https://www.justice.gov/opa/pr/medical-equipment-sterilizer-agrees-limits-destruction-toxic-ethylene-oxide-emissions",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medical Devices"
-      ],
-      "entities": [],
-      "state": "PR",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [],
-      "doj_topics": [
-        "Environment"
-      ]
     },
     {
       "id": "doj-2026-09-21-1871045744",

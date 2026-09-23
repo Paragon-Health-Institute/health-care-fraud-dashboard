@@ -451,6 +451,11 @@ NON_HC_CRIME_TOPICS = (
     "hate crime",
     "national security",
     "terrorism",
+    # Non-crime DOJ divisions. Trigger case: "Medical Equipment Sterilizer
+    # Agrees to Limits on ... Ethylene Oxide Emissions" (Sept 2026), a
+    # Clean Air Act settlement tagged only "Environment" that auto-approved
+    # on the "medical equipment" title match.
+    "environment",
 )
 
 
@@ -1472,6 +1477,7 @@ The Oversight tab tracks federal *oversight* actions about healthcare fraud — 
 - General congressional hearings unrelated to healthcare fraud (immigration, tax, defense, foreign aid, etc.)
 - HHS-OIG audits NOT about healthcare fraud or program integrity (e.g. SNAP, Head Start, OCR)
 - GAO reports unrelated to healthcare fraud (defense procurement, NASA, IRS service, etc.)
+- Drug pricing / affordability policy announcements (Most Favored Nation pricing, price negotiation) with no fraud, overpayment, or program-integrity finding
 - DEA drug seizures, gang takedowns, fentanyl trafficking arrests
 - General agency newsroom announcements (new staff, organizational announcements, awards)
 - News coverage of an oversight action (that goes on the Media tab)
@@ -1541,7 +1547,7 @@ def cmd_audit_oversight() -> int:
     # This makes the pipeline self-sustaining: ~80% of items get decided
     # by regex alone (auto-promote or reject), and only the genuinely
     # ambiguous ~20% go to Claude for a binary yes/no.
-    MIXED_CONTENT_AGENCIES = {'CMS', 'GAO', 'Congress', 'MedPAC', 'MACPAC'}
+    MIXED_CONTENT_AGENCIES = {'CMS', 'GAO', 'Congress', 'MedPAC', 'MACPAC', 'White House'}
     # Commentary/messaging blocklist. These are press statements, op-eds,
     # floor remarks, and "chairman's news" pieces that use the word "fraud"
     # but aren't actions — they're political messaging about existing
@@ -1652,10 +1658,18 @@ def cmd_audit_oversight() -> int:
             continue
 
         if agency in MIXED_CONTENT_AGENCIES:
-            # Tier 1: strong fraud signal → auto-promote
-            if STRONG_FRAUD_SIGNAL.search(title):
+            # Tier 1: strong fraud signal + healthcare reference → auto-promote.
+            # The HC reference is required because these agencies cover all
+            # of government ("Whistleblower Protection: DHS Should Ensure
+            # Timely Resolution of Retaliation Complaints" auto-promoted on
+            # "whistleblower" alone, Sept 2026).
+            if STRONG_FRAUD_SIGNAL.search(title) and HC_REFERENCE_RE.search(title):
                 auto_promoted.append(item)
                 item["audit_decision"] = "auto_approved"
+            # Tier 1b: fraud signal but no HC reference → AI review
+            elif STRONG_FRAUD_SIGNAL.search(title):
+                still_pending.append(item)
+                item["flag_reason"] = "fraud signal but no healthcare reference in title — needs AI review"
             # Tier 2: HC program mention but no fraud signal → AI review
             elif HC_PROGRAM_MENTION.search(title):
                 still_pending.append(item)
