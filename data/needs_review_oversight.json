@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-09-22T13:31:47.838485",
+    "last_scraped": "2026-09-23T13:45:38.828772",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1219,6 +1219,57 @@
       "ai_confidence": 82,
       "ai_reason": "HHS-OIG audit focused on compliance with health and safety requirements for developmental services, not healthcare fraud or program-integrity findings related to fraud, improper payments, or fraud-spe",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-09-22-1037338090",
+      "date": "2026-09-22",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "CMS Cracks Down on Fraud, Waste, and Abuse in the Federal Health Insurance Marketplace®",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-cracks-down-fraud-waste-abuse-federal-health-insurance-marketplacer",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "fraud signal but no healthcare reference in title — needs AI review",
+      "ai_decision": "healthcare_fraud_oversight",
+      "ai_confidence": 82,
+      "ai_reason": "CMS press release announcing a new anti-fraud initiative in the federal health insurance marketplace, which constitutes an administrative anti-fraud action within CMS's program integrity authority.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-09-22-2170800022",
+      "date": "2026-09-22",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "Federal Marketplace (FFE and SBE-FP) Anti-Fraud Actions",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/fact-sheets/federal-marketplace-ffe-sbe-fp-anti-fraud-actions",
+      "link_label": "CMS Fact Sheet",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "ACA"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "fraud signal but no healthcare reference in title — needs AI review",
+      "ai_decision": "healthcare_fraud_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "CMS announcement of anti-fraud actions and initiatives on the federal ACA marketplace is a program-integrity policy action squarely within oversight scope.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1511,6 +1562,10 @@
     "https://www.gao.gov/products/gao-26-108732",
     "https://www.cms.gov/newsroom/fact-sheets/preliminary-calendar-year-cy-2027-medicare-clinical-laboratory-fee-schedule-payment-rates",
     "https://www.whitehouse.gov/releases/2026/09/president-trump-extends-most-favored-nation-pricing-to-every-medicaid-program-in-america/",
-    "https://www.gao.gov/products/gao-26-108106"
+    "https://www.gao.gov/products/gao-26-108106",
+    "https://www.gao.gov/products/gao-26-107939",
+    "https://www.gao.gov/products/gao-26-108623",
+    "https://www.gao.gov/products/gao-26-107741",
+    "https://www.gao.gov/products/gao-26-108467"
   ]
 }
