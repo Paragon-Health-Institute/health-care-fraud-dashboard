@@ -294,6 +294,23 @@ def classify(meeting):
     if _nutrition_re.search(title) and not _hc_ref_re.search(title):
         return "skip_no_signal", "SNAP/nutrition-program only — out of scope"
 
+    # GATE: non-healthcare fraud subjects. Oversight and Judiciary count as
+    # HC committees, so TIER 2 ('fraud' + HC committee) auto-promoted
+    # 'Fixing Fraud and Failure in Federally Funded Homelessness Services'
+    # and 'Restoring Election Integrity: Oversight of Voter Fraud in New
+    # Jersey' (both Sept 2026). Same shape as the SNAP gate: skip only when
+    # the title names a clearly non-HC subject AND has no HC reference, so
+    # general-fraud hearings ('Oversight of Fraud and Misuse of Federal
+    # Funds in Minnesota') keep normal flow. 'housing' is deliberately not
+    # listed: Minnesota Housing Stabilization Services is a Medicaid program.
+    _non_hc_subject_re = re.compile(
+        r'\b(voter|voting|election|ballot|homeless\w*|'
+        r'unemployment\s+insurance|paycheck\s+protection|\bppp\b|'
+        r'student\s+(loan|aid)|tax\s+(fraud|evasion|credit)|\birs\b|'
+        r'foreign\s+(aid|assistance)|usaid)\b', re.IGNORECASE)
+    if _non_hc_subject_re.search(title) and not _hc_ref_re.search(title):
+        return "skip_no_signal", "non-healthcare fraud subject — out of scope"
+
     # GATE: legislative hearings / markup agendas. A "Legislative Hearing"
     # (Congress.gov type=Hearing) whose title is a list of pending bills is
     # about legislation, which the dashboard does not track. Trigger case:
@@ -643,13 +660,30 @@ def apply_to_actions(results):
     auto = [r for r in results if r["verdict"] == "include_auto"]
     review = [r for r in results if r["verdict"] == "include_review"]
 
+    # Manually rejected hearings (data/needs_review_oversight.json
+    # rejected_links). Match by committee URL or Congress.gov event ID so
+    # a removal sticks whichever URL form the item was stored under.
+    rejected_links = set()
+    try:
+        with open(os.path.join(os.path.dirname(ACTIONS_FILE), "needs_review_oversight.json"),
+                  encoding="utf-8") as f:
+            rejected_links = {l.rstrip("/") for l in json.load(f).get("rejected_links", []) if l}
+    except (OSError, ValueError):
+        pass
+    rejected_event_ids = {m.group(1) for l in rejected_links
+                          for m in [re.search(r"-event/(\d+)$", l)] if m}
+
     # Dedup AUTO against existing
     new_items = []
     skipped_dup = 0
+    skipped_rejected = 0
     resolved_committee = 0
     for r in auto:
         if _matches_existing_hearing(r, existing):
             skipped_dup += 1
+            continue
+        if str(r["eventId"]) in rejected_event_ids:
+            skipped_rejected += 1
             continue
         # Try to resolve to committee's own page URL — nicer than congress.gov
         # URL (committee pages have video, witness docs, etc.)
@@ -671,6 +705,9 @@ def apply_to_actions(results):
                     link_label = f"{cname} Hearing"
             except Exception:
                 link_label = f"{r['committees'][0] if r['committees'] else 'Committee'} Hearing"
+            if link.rstrip("/") in rejected_links:
+                skipped_rejected += 1
+                continue
             resolved_committee += 1
         else:
             link = r["congress_url"]
@@ -717,6 +754,7 @@ def apply_to_actions(results):
     print(f"\nAPPLY:")
     print(f"  AUTO new items added to actions.json: {len(new_items)}")
     print(f"  AUTO duplicates skipped: {skipped_dup}")
+    print(f"  AUTO previously rejected, skipped: {skipped_rejected}")
     print(f"  AUTO with resolved committee URL: {resolved_committee}")
     print(f"  REVIEW items queued to {REVIEW_QUEUE_FILE}: {len(review)}")
 
