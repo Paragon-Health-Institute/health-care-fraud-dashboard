@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-09-23T13:45:38.828772",
+    "last_scraped": "2026-09-25T13:56:54.411155",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1569,6 +1569,11 @@
     "https://www.gao.gov/products/gao-26-108467",
     "https://oversight.house.gov/hearing/fixing-fraud-and-failure-in-federally-funded-homelessness-services/",
     "https://www.congress.gov/event/119-congress/house-event/119553",
-    "https://www.congress.gov/event/119-congress/house-event/119572"
+    "https://www.congress.gov/event/119-congress/house-event/119572",
+    "https://www.gao.gov/products/gao-26-108231",
+    "https://www.gao.gov/products/gao-26-108446",
+    "https://oversight.house.gov/release/comer-calls-on-hhs-to-hold-contractors-accountable-for-unauthorized-release-of-biased-alcohol-study-data/",
+    "https://waysandmeans.house.gov/2026/09/24/icymi-chairman-smith-on-the-will-cain-show-big-insurance-cashed-in-on-taxpayer-subsidies-for-health-care-that-wasnt-actually-provided/",
+    "https://oig.hhs.gov/reports/all/2026/in-2024-orrs-national-call-center-connected-children-with-supports-and-services/"
   ]
 }

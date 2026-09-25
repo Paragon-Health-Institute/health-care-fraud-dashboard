@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-09-25T12:52:52.473876",
+    "last_updated": "2026-09-25T13:56:54.587643",
     "version": "1.0",
     "last_scraped": "2026-09-25T12:52:52.473865"
   },
@@ -22055,6 +22055,71 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "hhs-oig-2026-09-23-4028974658",
+      "date": "2026-09-23",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Tennessee Claimed Federal Medicaid Reimbursement for Millions of Dollars in Targeted Case Management Services That Did Not Comply With Federal and State Requirements",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/tennessee-claimed-federal-medicaid-reimbursement-for-millions-of-dollars-in-targeted-case-management-services-that-did-not-comply-with-federal-and-state-requirements/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "TN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-09-21-72612341",
+      "date": "2026-09-21",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "New York Made Unallowable Managed Care Capitation Payments on Behalf of Incarcerated Medicaid Enrollees",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/new-york-made-unallowable-managed-care-capitation-payments-on-behalf-of-incarcerated-medicaid-enrollees/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Medicaid Managed Care"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-09-21-1647251823",
+      "date": "2026-09-21",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Medicaid Managed Care: CMS’s Accuracy Check Process For State-Submitted Medical Loss Ratio Data Has Limitations",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/medicaid-managed-care-cmss-accuracy-check-process-for-state-submitted-medical-loss-ratio-data-has-limitations/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Medicaid Managed Care"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
