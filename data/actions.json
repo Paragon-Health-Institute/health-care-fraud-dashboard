@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-09-23T12:52:06.264659",
+    "last_updated": "2026-09-25T12:52:52.473876",
     "version": "1.0",
-    "last_scraped": "2026-09-24T12:49:22.987882"
+    "last_scraped": "2026-09-25T12:52:52.473865"
   },
   "actions": [
     {
@@ -22005,6 +22005,56 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-09-23-4250581195",
+      "date": "2026-09-23",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Gardner Man Pleads Guilty to Tampering with Oxycodone",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/gardner-man-pleads-guilty-tampering-oxycodone",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Hospice",
+        "Nursing Home",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-09-22-4269391298",
+      "date": "2026-09-22",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Skilled Nursing Company and Executives Agree to Pay $1 Million to Resolve Overbilling Allegations",
+      "amount": "$1 Million",
+      "amount_numeric": 1000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/skilled-nursing-company-and-executive-agree-pay-1-million-resolve-overbilling",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Nursing Home"
+      ],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
