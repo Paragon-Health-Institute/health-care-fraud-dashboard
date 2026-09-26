@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-09-25T13:56:54.587643",
+    "last_updated": "2026-09-26T12:19:50.255584",
     "version": "1.0",
-    "last_scraped": "2026-09-25T12:52:52.473865"
+    "last_scraped": "2026-09-26T12:19:50.255573"
   },
   "actions": [
     {
@@ -22120,6 +22120,80 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-09-25-1221528745",
+      "date": "2026-09-25",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Texas Mental Health Clinic Owner Convicted in $26M Scheme to Defraud Military Health Benefits Program",
+      "amount": "$26 Million",
+      "amount_numeric": 26000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/texas-mental-health-clinic-owner-convicted-26m-scheme-defraud-military-health-benefits",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "TRICARE",
+        "Mental Health"
+      ],
+      "entities": [],
+      "state": "TX",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "doj-2026-09-24-2488683822",
+      "date": "2026-09-24",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Florida Doctor Sentenced for Making False Statements in Connection with Multi-Million-Dollar Health Care Fraud Scheme",
+      "amount": "$3.1 Million",
+      "amount_numeric": 3100000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/florida-doctor-sentenced-making-false-statements-connection-multi-million-dollar-health",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME",
+        "Genetic Testing",
+        "Lab Testing",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "MA, FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-09-24-825275879",
+      "date": "2026-09-24",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Chief Operating Officer Pleads Guilty for Role in $500M COVID-19 Test Billing Fraud",
+      "amount": "$500 Million",
+      "amount_numeric": 500000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edmi/pr/chief-operating-officer-pleads-guilty-role-500m-covid-19-test-billing-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Lab Testing"
+      ],
+      "entities": [],
+      "state": "MI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "topic_checked_at": "2026-09-26T12:19:50.648111",
+      "doj_topics": []
     }
   ]
 }
