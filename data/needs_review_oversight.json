@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-09-25T13:56:54.411155",
+    "last_scraped": "2026-09-26T13:13:42.842662",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1574,6 +1574,7 @@
     "https://www.gao.gov/products/gao-26-108446",
     "https://oversight.house.gov/release/comer-calls-on-hhs-to-hold-contractors-accountable-for-unauthorized-release-of-biased-alcohol-study-data/",
     "https://waysandmeans.house.gov/2026/09/24/icymi-chairman-smith-on-the-will-cain-show-big-insurance-cashed-in-on-taxpayer-subsidies-for-health-care-that-wasnt-actually-provided/",
-    "https://oig.hhs.gov/reports/all/2026/in-2024-orrs-national-call-center-connected-children-with-supports-and-services/"
+    "https://oig.hhs.gov/reports/all/2026/in-2024-orrs-national-call-center-connected-children-with-supports-and-services/",
+    "https://www.gao.gov/products/oig-26-3"
   ]
 }
