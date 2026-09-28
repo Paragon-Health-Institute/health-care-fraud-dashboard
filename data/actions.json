@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-09-28T15:39:27.590887",
+    "last_updated": "2026-09-28T16:51:45.281401",
     "version": "1.0",
     "last_scraped": "2026-09-28T15:39:27.590880"
   },
@@ -22194,6 +22194,49 @@
       ],
       "topic_checked_at": "2026-09-26T12:19:50.648111",
       "doj_topics": []
+    },
+    {
+      "id": "hhs-oig-2026-09-23-1376151163",
+      "date": "2026-09-23",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Georgia Medicaid Fraud Control Unit: 2024 Onsite Inspection",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/georgia-medicaid-fraud-control-unit-2024-onsite-inspection/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "GA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-09-23-1073137185",
+      "date": "2026-09-23",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Medicare Advantage Compliance Audit of Specific Diagnosis Codes That UnitedHealthcare Benefits of Texas, Inc. (Contract H0609), Submitted to CMS",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/medicare-advantage-compliance-audit-of-specific-diagnosis-codes-that-unitedhealthcare-benefits-of-texas-inc-contract-h0609-submitted-to-cms/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "TX",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
