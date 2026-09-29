@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-09-28T16:51:45.281401",
+    "last_updated": "2026-09-29T14:57:12.049305",
     "version": "1.0",
     "last_scraped": "2026-09-29T14:11:29.097300"
   },
@@ -22234,6 +22234,28 @@
       ],
       "entities": [],
       "state": "TX",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "congress-2026-09-29-2580191388",
+      "date": "2026-09-29",
+      "agency": "Congress",
+      "type": "Investigation",
+      "title": "E&C Releases Staff Report Exposing How Fraudsters are Ripping Off Medicare and Medicaid and How More Must be Done to Protect These Programs",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://energycommerce.house.gov/posts/e-and-c-releases-staff-report-exposing-how-fraudsters-are-ripping-off-medicare-and-medicaid-and-how-more-must-be-done-to-protect-these-programs",
+      "link_label": "House E&C Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []

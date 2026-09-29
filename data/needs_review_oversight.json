@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-09-28T16:51:45.066965",
+    "last_scraped": "2026-09-29T14:57:08.559299",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1578,6 +1578,7 @@
     "https://www.gao.gov/products/oig-26-3",
     "https://www.gao.gov/products/gao-26-109197",
     "https://www.gao.gov/products/gao-26-107448",
-    "https://www.gao.gov/products/gao-26-108596"
+    "https://www.gao.gov/products/gao-26-108596",
+    "https://www.cms.gov/newsroom/press-releases/medicare-advantage-medicare-prescription-drug-programs-expected-remain-stable-2027"
   ]
 }
