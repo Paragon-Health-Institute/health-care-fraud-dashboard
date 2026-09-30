@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-09-29T14:57:12.049305",
+    "last_updated": "2026-09-30T13:54:42.555033",
     "version": "1.0",
-    "last_scraped": "2026-09-29T14:11:29.097300"
+    "last_scraped": "2026-09-30T13:54:42.555025"
   },
   "actions": [
     {
@@ -22259,6 +22259,51 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-09-29-3807746580",
+      "date": "2026-09-29",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Gulf coast physician faces False Claims Act lawsuit in alleged Medicare fraud",
+      "amount": "$500,000",
+      "amount_numeric": 500000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-sdtx/pr/gulf-coast-physician-faces-false-claims-act-lawsuit-alleged-medicare-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "TX",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-09-29-1612374636",
+      "date": "2026-09-29",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Two Indian Nationals Charged in Connection with Transnational Counterfeit Ozempic Scheme",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/two-indian-nationals-charged-connection-transnational-counterfeit-ozempic-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
     }
   ]
 }
