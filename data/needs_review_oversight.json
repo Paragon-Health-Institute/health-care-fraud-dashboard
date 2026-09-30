@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-09-29T14:57:08.559299",
+    "last_scraped": "2026-09-30T15:02:56.582324",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1270,6 +1270,30 @@
       "ai_confidence": 85,
       "ai_reason": "CMS announcement of anti-fraud actions and initiatives on the federal ACA marketplace is a program-integrity policy action squarely within oversight scope.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "gao-2026-09-30-1975033405",
+      "date": "2026-09-30",
+      "agency": "GAO",
+      "type": "Audit",
+      "title": "Fraud in Federal Programs: Limited Beneficial Ownership Information Available on Awardees",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.gao.gov/products/gao-26-108174",
+      "link_label": "GAO Report",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "fraud signal but no healthcare reference in title — needs AI review",
+      "ai_decision": "healthcare_fraud_oversight",
+      "ai_confidence": 72,
+      "ai_reason": "GAO audit on beneficial ownership transparency in federal program awardees is relevant to healthcare fraud oversight and program-integrity controls, though the title does not explicitly confirm health",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1579,6 +1603,8 @@
     "https://www.gao.gov/products/gao-26-109197",
     "https://www.gao.gov/products/gao-26-107448",
     "https://www.gao.gov/products/gao-26-108596",
-    "https://www.cms.gov/newsroom/press-releases/medicare-advantage-medicare-prescription-drug-programs-expected-remain-stable-2027"
+    "https://www.cms.gov/newsroom/press-releases/medicare-advantage-medicare-prescription-drug-programs-expected-remain-stable-2027",
+    "https://www.gao.gov/products/gao-26-108937",
+    "https://www.gao.gov/products/gao-26-108057"
   ]
 }
