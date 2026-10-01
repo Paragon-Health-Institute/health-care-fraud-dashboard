@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-10-01T14:36:57.454423",
+    "last_updated": "2026-10-01T15:34:50.390266",
     "version": "1.0",
     "last_scraped": "2026-10-01T14:36:57.454414"
   },
@@ -22379,6 +22379,29 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "doj-2026-09-28-1491387300",
+      "date": "2026-09-28",
+      "agency": "DOJ",
+      "type": "Report",
+      "title": "Medicare Advantage Organizations and Prescription Drug Plans Paid $72 Million During a 3-Year Period for Services Associated With Excluded Providers or Individuals Convicted of Certain Felonies",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/medicare-advantage-organizations-and-prescription-drug-plans-paid-72-million-during-a-3-year-period-for-services-associated-with-excluded-providers-or-individuals-convicted-of-certain-felonies/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
