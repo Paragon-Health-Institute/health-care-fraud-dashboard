@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-09-30T13:54:42.555033",
+    "last_updated": "2026-10-01T14:36:57.454423",
     "version": "1.0",
-    "last_scraped": "2026-09-30T13:54:42.555025"
+    "last_scraped": "2026-10-01T14:36:57.454414"
   },
   "actions": [
     {
@@ -22303,6 +22303,81 @@
       "related_agencies": [],
       "doj_topics": [
         "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-09-30-2292277705",
+      "date": "2026-09-30",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Independence Blue Cross to Pay $22.5M to Resolve False Claims Act Allegations",
+      "amount": "$22.5 Million",
+      "amount_numeric": 22500000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/independence-blue-cross-pay-225m-resolve-false-claims-act-allegations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "MO",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-09-30-2605721565",
+      "date": "2026-09-30",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Signal Diagnostics Agrees to Pay over $20M to Settle False Claims Act Allegations for Failing to Refund Overpayments to the HRSA Uninsured Program",
+      "amount": "$20 Million",
+      "amount_numeric": 20000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/signal-diagnostics-agrees-pay-over-20m-settle-false-claims-act-allegations-failing-refund",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-09-30-3325190939",
+      "date": "2026-09-30",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Pakistani Nationals residing in Bakersfield and Los Angeles County charged in a scheme to defraud Medicare",
+      "amount": "$3.5 Million",
+      "amount_numeric": 3500000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edca/pr/pakistani-nationals-residing-bakersfield-and-los-angeles-county-charged-scheme-defraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
       ]
     }
   ]
