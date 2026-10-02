@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-01T15:34:50.390266",
+    "last_updated": "2026-10-02T13:59:52.986824",
     "version": "1.0",
-    "last_scraped": "2026-10-01T14:36:57.454414"
+    "last_scraped": "2026-10-02T13:59:52.986813"
   },
   "actions": [
     {
@@ -22402,6 +22402,79 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-10-01-1165685443",
+      "date": "2026-10-01",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Two Minnesota Men Plead Guilty to Defrauding Medicaid Housing Services Program",
+      "amount": "$500,000",
+      "amount_numeric": 500000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/two-minnesota-men-plead-guilty-defrauding-medicaid-housing-services-program",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "MN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Tax"
+      ]
+    },
+    {
+      "id": "doj-2026-10-02-1151094937",
+      "date": "2026-10-02",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Mequon Doctor Sentenced to Federal Prison for Unlawful Prescribing",
+      "amount": "$294,850.72",
+      "amount_numeric": 294850.72,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edwi/pr/mequon-doctor-sentenced-federal-prison-unlawful-prescribing",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Telehealth",
+        "Addiction Treatment",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "WI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "doj-2026-10-01-1248428394",
+      "date": "2026-10-01",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "United States Attorney’s Office Announces Creation of Interagency Fraud Task Force in the Eastern District of Pennsylvania",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edpa/pr/united-states-attorneys-office-announces-creation-interagency-fraud-task-force-eastern",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "PA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
     }
   ]
 }
