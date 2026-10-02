@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-10-01T15:34:50.189093",
+    "last_scraped": "2026-10-02T14:50:34.557616",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1607,6 +1607,7 @@
     "https://www.gao.gov/products/gao-26-108937",
     "https://www.gao.gov/products/gao-26-108057",
     "https://www.gao.gov/products/gao-27-108631",
-    "https://www.cms.gov/newsroom/press-releases/cms-finalizes-new-mandatory-drug-payment-model-deliver-lower-drug-prices-beneficiaries-original"
+    "https://www.cms.gov/newsroom/press-releases/cms-finalizes-new-mandatory-drug-payment-model-deliver-lower-drug-prices-beneficiaries-original",
+    "https://oig.hhs.gov/reports/all/2026/arkansas-failed-to-comply-with-the-immediate-screening-risk-and-safety-assessment-and-investigation-requirements-for-responding-to-reports-of-child-abuse-and-neglect/"
   ]
 }

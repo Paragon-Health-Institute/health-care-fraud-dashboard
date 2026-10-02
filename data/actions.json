@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-10-02T13:59:52.986824",
+    "last_updated": "2026-10-02T14:50:34.752348",
     "version": "1.0",
     "last_scraped": "2026-10-02T13:59:52.986813"
   },
@@ -22475,6 +22475,48 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "hhs-oig-2026-09-30-1727935609",
+      "date": "2026-09-30",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "South Carolina Did Not Report Approximately $108.6 Million of the Federal Share of Medicaid and CHIP Collections Subject to the Increased COVID-19 Federal Medical Assistance Percentage",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/south-carolina-did-not-report-approximately-1086-million-of-the-federal-share-of-medicaid-and-chip-collections-subject-to-the-increased-covid-19-federal-medical-assistance-percentage/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "SC",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-09-30-823430713",
+      "date": "2026-09-30",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Wisconsin May Have Improperly Claimed $455 Million in Medicaid Reimbursement for Its School-Based Program",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/wisconsin-may-have-improperly-claimed-455-million-in-medicaid-reimbursement-for-its-school-based-program/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "WI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
