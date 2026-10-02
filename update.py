@@ -766,6 +766,14 @@ def get_action_type(title, desc, agency=None, link=None):
                  r'(a |an |the |new )*(task force|strike force|division|unit|'
                  r'office|task\s+team|enforcement\s+team)\b', title_l):
         return 'Structural/Organizational'
+    # Nominalized form: "Announces Creation of Interagency Fraud Task Force".
+    # Up to 5 modifier words between 'of' and the structural noun. Limited
+    # to task-force nouns: 'unit'/'division' false-positive on titles like
+    # "Launch of Investigation into Hospice Unit Billing".
+    if re.search(r'\b(creation|formation|establishment)\s+of\s+'
+                 r'(?:\w+\s+){0,5}(task\s+force|strike\s+force|'
+                 r'task\s+team|enforcement\s+team)\b', title_l):
+        return 'Structural/Organizational'
     # Revival / relaunch / reactivation of task forces and units.
     # Two forms:
     #   "Sarcone Leads Revival of NDNY HCF Task Force"
