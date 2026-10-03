@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-02T14:50:34.752348",
+    "last_updated": "2026-10-03T12:40:17.904669",
     "version": "1.0",
-    "last_scraped": "2026-10-02T13:59:52.986813"
+    "last_scraped": "2026-10-03T12:40:17.904654"
   },
   "actions": [
     {
@@ -22517,6 +22517,55 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-10-02-3997624808",
+      "date": "2026-10-02",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Doctor Convicted for Conspiring to Distribute Over 2 Million Stimulant Pills",
+      "amount": "$1 Billion",
+      "amount_numeric": 1000000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/doctor-convicted-conspiring-distribute-over-2-million-stimulant-pills",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Pharmacy",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "MI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-02-3261545696",
+      "date": "2026-10-02",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Social Adult Day Care Owner Pleads Guilty to $65M Medicaid Fraud",
+      "amount": "$65 Million",
+      "amount_numeric": 65000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/social-adult-day-care-owner-pleads-guilty-65m-medicaid-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Home Health",
+        "Adult Day Care"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
