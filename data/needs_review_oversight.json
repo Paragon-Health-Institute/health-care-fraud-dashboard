@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-10-03T13:30:00.106624",
+    "last_scraped": "2026-10-04T14:10:19.694494",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1293,6 +1293,35 @@
       "ai_decision": "healthcare_fraud_oversight",
       "ai_confidence": 72,
       "ai_reason": "GAO audit on beneficial ownership transparency in federal program awardees is relevant to healthcare fraud oversight and program-integrity controls, though the title does not explicitly confirm health",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-10-03-1808943990",
+      "date": "2026-10-03",
+      "agency": "CMS",
+      "type": "Administrative Action",
+      "title": "Medicare Improvement Fund Premium Rebate Frequently Asked Questions",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/fact-sheets/medicare-improvement-fund-premium-rebate-frequently-asked-questions",
+      "link_label": "CMS Fact Sheet",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Medicaid",
+        "ACA"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This is a CMS administrative FAQ about Medicare premium rebates under the Improvement Fund, not an oversight action focused on fraud detection, program integrity findings, or anti-fraud enforcement.",
       "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
