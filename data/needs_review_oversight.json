@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-10-04T14:10:19.694494",
+    "last_scraped": "2026-10-05T17:14:11.205257",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1322,6 +1322,30 @@
       "ai_decision": "not_oversight",
       "ai_confidence": 85,
       "ai_reason": "This is a CMS administrative FAQ about Medicare premium rebates under the Improvement Fund, not an oversight action focused on fraud detection, program integrity findings, or anti-fraud enforcement.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-10-05-3109089588",
+      "date": "2026-10-05",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "New Regulations Make It Easier to Find, Compare, and Report Healthcare Pricing and Coverage Information",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/new-regulations-make-it-easier-find-compare-report-healthcare-pricing-coverage-information",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 78,
+      "ai_reason": "This is a pricing transparency and consumer information rule with no mention of fraud detection, improper payments, or program-integrity enforcement.",
       "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
