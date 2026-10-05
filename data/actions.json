@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-03T12:40:17.904669",
+    "last_updated": "2026-10-05T16:09:44.606696",
     "version": "1.0",
-    "last_scraped": "2026-10-04T13:18:21.700146"
+    "last_scraped": "2026-10-05T16:09:44.606683"
   },
   "actions": [
     {
@@ -22561,6 +22561,30 @@
       ],
       "entities": [],
       "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-02-3858528394",
+      "date": "2026-10-02",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Four Sentenced for Conspiring with Annandale-Based Doctor to Illegally Distribute Oxycodone and other Controlled Substances",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-wdva/pr/four-sentenced-conspiring-annandale-based-doctor-illegally-distribute-oxycodone-and",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Pharmacy",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "VA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
