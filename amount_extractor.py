@@ -51,6 +51,7 @@ In order of preference (highest first):
 - **Statutory fines or maximum fines** — "faces a fine of up to $250,000," "maximum penalty of $500,000."
 - **Court-imposed criminal fines at sentencing** — these are punishment, not fraud size. Phrases like "ordered to pay a $25,000 fine," "imposed a $X fine," "(was) fined $X," "(also) ordered to pay a $X fine and perform community service." Skip them even when they appear in the actual sentence (not just statutory maximums).
 - **Unrelated dollar figures** — unrelated assets, loan values, the defendant's salary, total DOJ recoveries over a decade, national takedown aggregates, etc.
+- **Company valuations and business goals** — "to build a company with an over $1 billion valuation," market capitalization, funding rounds, or money spent on advertising. These describe the business, not the fraud size.
 - **Boilerplate aggregate figures** — "Since January 2009, DOJ has recovered over $75 billion…" is boilerplate, never the case amount.
 
 If the press release is only a charge/indictment announcement without any dollar figure naming the fraud size, return null.

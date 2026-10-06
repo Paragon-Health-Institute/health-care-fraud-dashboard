@@ -1465,6 +1465,24 @@ def extract_amount(text, title=""):
         cleaned = re.sub(
             r'\bfined\s+\$[\d,.]+(?:\s*million|\s*billion)?',
             '', cleaned, flags=re.IGNORECASE)
+        # Strip company valuations. The Oct 2026 Done Global release said
+        # the CEO's goal was "an over $1 billion valuation"; since _parse
+        # prefers any billion figure over million, that beat the actual
+        # "$100 million dollar ... health care fraud scheme".
+        cleaned = re.sub(
+            r'\$[\d,.]+(?:\s*million|\s*billion)?\s+'
+            r'(?:valuation|market\s+(?:cap|capitalization|value))',
+            '', cleaned, flags=re.IGNORECASE)
+        # Prefer a figure that names the scheme size ("a $100 million dollar
+        # drug distribution and health care fraud scheme") over the first
+        # dollar figure in the body, which is often the defendant's own pay.
+        m = re.search(r'\$[\d,.]+\s*(?:million|billion)(?:\s+dollars?)?'
+                      r'(?:[\s-]+[\w-]+){0,7}?\s+(?:scheme|conspiracy)\b',
+                      cleaned, flags=re.IGNORECASE)
+        if m:
+            result = _parse(m.group())
+            if result:
+                return result
         result = _parse(cleaned)
         if result:
             return result
