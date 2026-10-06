@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-05T16:09:44.606696",
+    "last_updated": "2026-10-06T14:17:14.312321",
     "version": "1.0",
-    "last_scraped": "2026-10-05T16:09:44.606683"
+    "last_scraped": "2026-10-06T14:17:14.312310"
   },
   "actions": [
     {
@@ -22589,6 +22589,28 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-06-2321493245",
+      "date": "2026-10-06",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Local physician indicted in $30 million COVID-19 fraud scheme",
+      "amount": "$30 Million",
+      "amount_numeric": 30000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-sdtx/pr/local-physician-indicted-30-million-covid-19-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "TX",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Tax"
       ]
     }
   ]
