@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-06T14:17:14.312321",
+    "last_updated": "2026-10-07T14:37:00.946107",
     "version": "1.0",
-    "last_scraped": "2026-10-06T14:17:14.312310"
+    "last_scraped": "2026-10-07T14:37:00.946093"
   },
   "actions": [
     {
@@ -22611,6 +22611,56 @@
       "related_agencies": [],
       "doj_topics": [
         "Tax"
+      ]
+    },
+    {
+      "id": "doj-2026-10-06-3969748166",
+      "date": "2026-10-06",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "AIDS Healthcare Foundation Agrees to Pay $1.44M to Settle False Claims Act Allegations",
+      "amount": "$1.44 Million",
+      "amount_numeric": 1440000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/aids-healthcare-foundation-agrees-pay-144m-settle-false-claims-act-allegations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-10-06-3567594849",
+      "date": "2026-10-06",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Former Connecticut Resident Pleads Guilty to Health Care Fraud Charge",
+      "amount": "$1,299,633.10",
+      "amount_numeric": 1299633.1,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ct/pr/former-connecticut-resident-pleads-guilty-health-care-fraud-charge",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "CT",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
       ]
     }
   ]
