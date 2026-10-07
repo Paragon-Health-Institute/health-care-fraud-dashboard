@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-10-06T15:18:18.354135",
+    "last_scraped": "2026-10-07T15:38:56.658216",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1664,6 +1664,7 @@
     "https://oig.hhs.gov/reports/all/2026/arkansas-failed-to-comply-with-the-immediate-screening-risk-and-safety-assessment-and-investigation-requirements-for-responding-to-reports-of-child-abuse-and-neglect/",
     "https://www.cms.gov/newsroom/news-alert/cms-convenes-certified-independent-dispute-resolution-entity-leaders-discuss-ways-improve-federal",
     "https://waysandmeans.house.gov/2026/10/02/chairman-smith-on-september-jobs-report-more-americans-finding-work-as-republican-tax-cuts-grow-the-economy/",
-    "https://www.gao.gov/products/gao-27-108853"
+    "https://www.gao.gov/products/gao-27-108853",
+    "https://oig.hhs.gov/reports/all/2026/hhs-has-not-made-additional-progress-toward-compliance-with-the-geospatial-data-act/"
   ]
 }
