@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-10-07T15:38:56.658216",
+    "last_scraped": "2026-10-08T15:43:42.740034",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1346,6 +1346,30 @@
       "ai_decision": "not_oversight",
       "ai_confidence": 78,
       "ai_reason": "This is a pricing transparency and consumer information rule with no mention of fraud detection, improper payments, or program-integrity enforcement.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "congress-2026-10-07-3644913236",
+      "date": "2026-10-07",
+      "agency": "Congress",
+      "type": "Rule/Regulation",
+      "title": "Trump Administration Strengthens Rules to Expose Hidden Health Care Prices, Hold Health Insurance Empires Accountable - Ways and Means",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://waysandmeans.house.gov/2026/10/07/trump-administration-strengthens-rules-to-expose-hidden-health-care-prices-hold-health-insurance-empires-accountable/",
+      "link_label": "House Ways & Means Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 78,
+      "ai_reason": "This announces price transparency/disclosure rules, not healthcare fraud, improper payments, or program-integrity findings.",
       "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
