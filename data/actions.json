@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-07T14:37:00.946107",
+    "last_updated": "2026-10-08T14:39:57.160454",
     "version": "1.0",
-    "last_scraped": "2026-10-07T14:37:00.946093"
+    "last_scraped": "2026-10-08T14:39:57.160446"
   },
   "actions": [
     {
@@ -22661,6 +22661,54 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-07-708867176",
+      "date": "2026-10-07",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Florida Laboratory Vice President and Marketer Convicted of Medicare Fraud for COVID-19 Testing Scheme",
+      "amount": "$15 Million",
+      "amount_numeric": 15000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/florida-laboratory-vice-president-and-marketer-convicted-medicare-fraud-covid-19-testing",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Lab Testing"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-07-3250886255",
+      "date": "2026-10-07",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Heal 360 Clinics and Owner Agree to Pay $20M to Resolve False Claims Act Allegations of Billing False Claims to the COVID-19 Uninsured Program for Services Not Rendered",
+      "amount": "$20 Million",
+      "amount_numeric": 20000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/heal-360-clinics-and-owner-agree-pay-20m-resolve-false-claims-act-allegations-billing-false",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "TX",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
       ]
     }
   ]
