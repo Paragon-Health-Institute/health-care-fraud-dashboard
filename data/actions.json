@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-08T14:39:57.160454",
+    "last_updated": "2026-10-09T14:28:25.638648",
     "version": "1.0",
-    "last_scraped": "2026-10-08T14:39:57.160446"
+    "last_scraped": "2026-10-09T14:28:25.638636"
   },
   "actions": [
     {
@@ -22709,6 +22709,29 @@
       ],
       "doj_topics": [
         "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-10-08-4229790020",
+      "date": "2026-10-08",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Minnesota Woman Convicted in $3.6M Scheme to Defraud Medicaid Housing Services Program",
+      "amount": "$3.6 Million",
+      "amount_numeric": 3600000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/minnesota-woman-convicted-36m-scheme-defraud-medicaid-housing-services-program",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "MN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
       ]
     }
   ]
