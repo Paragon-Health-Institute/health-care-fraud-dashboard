@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-09T14:28:25.638648",
+    "last_updated": "2026-10-10T13:50:04.430331",
     "version": "1.0",
-    "last_scraped": "2026-10-09T14:28:25.638636"
+    "last_scraped": "2026-10-10T13:50:04.430320"
   },
   "actions": [
     {
@@ -22728,6 +22728,32 @@
       ],
       "entities": [],
       "state": "MN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-09-1102641640",
+      "date": "2026-10-09",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Medical Supply Company Owner Sentenced to 14 Years in Prison for $30M Medicare, TRICARE, and CHAMPVA Fraud",
+      "amount": "$30 Million",
+      "amount_numeric": 30000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/medical-supply-company-owner-sentenced-14-years-prison-30m-medicare-tricare-and-champva",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "TRICARE",
+        "DME",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "OK",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
