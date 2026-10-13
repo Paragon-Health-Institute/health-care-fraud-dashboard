@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-10T13:50:04.430331",
+    "last_updated": "2026-10-13T15:12:13.342841",
     "version": "1.0",
-    "last_scraped": "2026-10-12T16:49:27.423294"
+    "last_scraped": "2026-10-13T15:12:13.342831"
   },
   "actions": [
     {
@@ -22758,6 +22758,58 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-09-3829969827",
+      "date": "2026-10-09",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Maryland Man Facing Federal Indictment for Role in COVID-19 Healthcare Fraud Scheme Totaling More Than $100M",
+      "amount": "$100 Million",
+      "amount_numeric": 100000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-md/pr/maryland-man-facing-federal-indictment-role-covid-19-healthcare-fraud-scheme-totaling",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Lab Testing"
+      ],
+      "entities": [],
+      "state": "MD",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-13-1927379085",
+      "date": "2026-10-13",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Illegal Alien Charged with Healthcare Benefit Fraud and Aggravated Identity Theft",
+      "amount": "$160,000",
+      "amount_numeric": 160000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/illegal-alien-charged-healthcare-benefit-fraud-and-aggravated-identity-theft",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud",
+        "Identity Theft"
       ]
     }
   ]
