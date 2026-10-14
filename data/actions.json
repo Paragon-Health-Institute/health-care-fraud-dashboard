@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-10-14T12:57:02.453265",
+    "last_updated": "2026-10-14T11:50:43.990394",
     "version": "1.0",
     "last_scraped": "2026-10-14T12:57:02.453257"
   },
@@ -22879,6 +22879,50 @@
       ],
       "entities": [],
       "state": "RI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "cms-2026-08-28-2408789410",
+      "date": "2026-08-28",
+      "agency": "CMS",
+      "type": "Structural/Organizational",
+      "title": "CMS Prevents $1.6 Billion in Fraudulent Medicare Laboratory Payments",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-prevents-1-6-billion-fraudulent-medicare-laboratory-payments",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Lab Testing",
+        "Genetic Testing"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "cms-2026-09-22-1037338090",
+      "date": "2026-09-22",
+      "agency": "CMS",
+      "type": "Administrative Action",
+      "title": "CMS Cracks Down on Fraud, Waste, and Abuse in the Federal Health Insurance Marketplace®",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-cracks-down-fraud-waste-abuse-federal-health-insurance-marketplacer",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "ACA"
+      ],
+      "entities": [],
+      "state": null,
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
