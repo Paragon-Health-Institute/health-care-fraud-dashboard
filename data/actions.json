@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-13T15:12:13.342841",
+    "last_updated": "2026-10-14T12:57:02.453265",
     "version": "1.0",
-    "last_scraped": "2026-10-13T15:12:13.342831"
+    "last_scraped": "2026-10-14T12:57:02.453257"
   },
   "actions": [
     {
@@ -22811,6 +22811,77 @@
         "Healthcare Fraud",
         "Identity Theft"
       ]
+    },
+    {
+      "id": "doj-2026-10-13-814540605",
+      "date": "2026-10-13",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Cape Cod Man Pleads Guilty to Conspiring to Launder Proceeds of $6M Medicare Fraud Scheme",
+      "amount": "$6 Million",
+      "amount_numeric": 6000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/cape-cod-man-pleads-guilty-conspiring-launder-proceeds-6m-medicare-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME"
+      ],
+      "entities": [],
+      "state": "NH",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-13-3771160882",
+      "date": "2026-10-13",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Former New Hampshire Doctor Sentenced to Year in Prison for Role in $1.9 Million Medicare Fraud Scheme",
+      "amount": "$1.9 Million",
+      "amount_numeric": 1900000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-nh/pr/former-new-hampshire-doctor-sentenced-year-prison-role-19-million-medicare-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME"
+      ],
+      "entities": [],
+      "state": "NH",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-13-3245346822",
+      "date": "2026-10-13",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "CVS Agrees to Pay $315M for Illegally Filling Unlawful Opioid Prescriptions and for Submitting False Claims to the Federal Government",
+      "amount": "$315 Million",
+      "amount_numeric": 315000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/cvs-agrees-pay-315m-illegally-filling-unlawful-opioid-prescriptions-and-submitting-false",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Pharmacy",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "RI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
