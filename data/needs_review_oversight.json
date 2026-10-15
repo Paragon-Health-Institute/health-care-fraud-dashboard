@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-10-14T13:49:52.316029",
+    "last_scraped": "2026-10-15T13:31:40.562466",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1633,6 +1633,7 @@
     "https://www.cms.gov/newsroom/news-alert/cms-convenes-certified-independent-dispute-resolution-entity-leaders-discuss-ways-improve-federal",
     "https://waysandmeans.house.gov/2026/10/02/chairman-smith-on-september-jobs-report-more-americans-finding-work-as-republican-tax-cuts-grow-the-economy/",
     "https://www.gao.gov/products/gao-27-108853",
-    "https://oig.hhs.gov/reports/all/2026/hhs-has-not-made-additional-progress-toward-compliance-with-the-geospatial-data-act/"
+    "https://oig.hhs.gov/reports/all/2026/hhs-has-not-made-additional-progress-toward-compliance-with-the-geospatial-data-act/",
+    "https://www.cms.gov/newsroom/press-releases/trump-administration-delivers-second-year-savings-stopping-taxpayer-payments-duplicate-deceased"
   ]
 }
