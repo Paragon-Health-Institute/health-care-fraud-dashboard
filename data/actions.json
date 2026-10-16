@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-15T12:44:23.139736",
+    "last_updated": "2026-10-16T12:31:43.913609",
     "version": "1.0",
-    "last_scraped": "2026-10-15T12:44:23.139726"
+    "last_scraped": "2026-10-16T12:31:43.913601"
   },
   "actions": [
     {
@@ -22899,6 +22899,83 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-10-15-2182909506",
+      "date": "2026-10-15",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Florida Man Pleads Guilty to Illegal Opioid Distribution Conspiracy",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/florida-man-pleads-guilty-illegal-opioid-distribution-conspiracy",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Pharmacy",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-15-2775338021",
+      "date": "2026-10-15",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "National Fraud Enforcement Division and the Department of Health and Human Services Announce Self-Disclosure Protocol for Criminal Health Care Fraud",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/national-fraud-enforcement-division-and-department-health-and-human-services-announce-self",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-10-15-3496713644",
+      "date": "2026-10-15",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Owner of Health Care Software Company Sentenced to 19 Years in Prison for $1B Medicare Fraud",
+      "amount": "$1 Billion",
+      "amount_numeric": 1000000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/owner-health-care-software-company-sentenced-19-years-prison-1b-medicare-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "TRICARE",
+        "DME",
+        "Pharmacy",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "KS",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
