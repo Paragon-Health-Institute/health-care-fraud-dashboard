@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-10-16T13:21:06.952857",
+    "last_scraped": "2026-10-17T12:16:34.620550",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1314,6 +1314,64 @@
       "ai_decision": "not_oversight",
       "ai_confidence": 78,
       "ai_reason": "This announces price transparency/disclosure rules, not healthcare fraud, improper payments, or program-integrity findings.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-10-16-858443300",
+      "date": "2026-10-16",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "CMS Proposes Reforms to Strengthen Transparency and Affordability in Medicare Advantage and Part D",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-proposes-reforms-strengthen-transparency-affordability-medicare-advantage-part-d",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Pharmacy",
+        "Drug Pricing"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This is a drug pricing and affordability policy announcement with no indication of fraud, improper payments, or program-integrity findings.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-10-16-2941885828",
+      "date": "2026-10-16",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "Medicare Program; Implementation of Sections 6219, 6220, and 6224 of the Consolidated Appropriations Act, 2026 (CMS-4214-P)",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/fact-sheets/medicare-program-implementation-sections-6219-6220-6224-consolidated-appropriations-act-2026-cms",
+      "link_label": "CMS Fact Sheet",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Pharmacy",
+        "Drug Pricing"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "healthcare_fraud_oversight",
+      "ai_confidence": 72,
+      "ai_reason": "CMS Final/Proposed Rule implementing statutory healthcare-fraud and program-integrity provisions (Sections 6219, 6220, 6224 of CAA 2026) falls within healthcare-fraud-relevant regulatory policy change",
       "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
