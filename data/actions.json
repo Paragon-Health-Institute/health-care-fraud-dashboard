@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-16T12:31:43.913609",
+    "last_updated": "2026-10-18T12:07:22.282584",
     "version": "1.0",
-    "last_scraped": "2026-10-17T11:41:41.544109"
+    "last_scraped": "2026-10-18T12:07:22.282566"
   },
   "actions": [
     {
@@ -22976,6 +22976,27 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "doj-2026-10-16-2839405550",
+      "date": "2026-10-16",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Somerset Lifesciences Inc. Agrees to Pay $4M to Resolve Allegations of Causing Medicare to Pay Claims for its Mislabeled Generic Drug",
+      "amount": "$4 Million",
+      "amount_numeric": 4000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/somerset-lifesciences-inc-agrees-pay-4m-resolve-allegations-causing-medicare-pay-claims-its",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
