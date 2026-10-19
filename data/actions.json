@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-18T12:07:22.282584",
+    "last_updated": "2026-10-19T14:48:03.714575",
     "version": "1.0",
-    "last_scraped": "2026-10-18T12:07:22.282566"
+    "last_scraped": "2026-10-19T14:48:03.714563"
   },
   "actions": [
     {
@@ -22997,6 +22997,79 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-10-16-615578614",
+      "date": "2026-10-16",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Connecticut Physician and His Practices Pay More Than $860K to Settle False Claims Act Allegations",
+      "amount": "$866,539",
+      "amount_numeric": 866539.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ct/pr/connecticut-physician-and-his-practices-pay-more-860k-settle-false-claims-act",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "CT",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-16-1360679746",
+      "date": "2026-10-16",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Two Florida defendants sentenced to prison for nearly $900,000 health care scam",
+      "amount": "$900,000",
+      "amount_numeric": 900000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ks/pr/two-florida-defendants-sentenced-prison-nearly-900000-health-care-scam",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Pharmacy",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "KS, FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-19-1003429633",
+      "date": "2026-10-19",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Negril Agrees to Settle Allegations of Improper Medicaid Billing",
+      "amount": "$1,817,910.60",
+      "amount_numeric": 1817910.6,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-wdva/pr/negril-agrees-settle-allegations-improper-medicaid-billing",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "VA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
     }
   ]
 }
