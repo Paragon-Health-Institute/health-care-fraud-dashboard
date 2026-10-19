@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-10-19T14:48:03.714575",
+    "last_updated": "2026-10-19T15:45:17.810305",
     "version": "1.0",
     "last_scraped": "2026-10-19T14:48:03.714563"
   },
@@ -23069,6 +23069,27 @@
       "related_agencies": [],
       "doj_topics": [
         "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-10-16-2074646646",
+      "date": "2026-10-16",
+      "agency": "DOJ",
+      "type": "Structural/Organizational",
+      "title": "U.S. Attorney’s Office for the District of Puerto Rico Announces Creation of the Interagency Fraud Enforcement Task Force",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-pr/pr/us-attorneys-office-district-puerto-rico-announces-creation-interagency-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "PR",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
       ]
     }
   ]
