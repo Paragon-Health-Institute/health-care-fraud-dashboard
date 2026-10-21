@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-19T15:45:17.810305",
+    "last_updated": "2026-10-21T13:01:23.717670",
     "version": "1.0",
-    "last_scraped": "2026-10-20T12:49:00.340885"
+    "last_scraped": "2026-10-21T13:01:23.717655"
   },
   "actions": [
     {
@@ -23091,6 +23091,56 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "doj-2026-10-20-4227349818",
+      "date": "2026-10-20",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Maryland Man Convicted of $18.7M Medicare Fraud for Respiratory Testing Scheme Targeting Nursing Homes",
+      "amount": "$18.7 Million",
+      "amount_numeric": 18700000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/maryland-man-convicted-187m-medicare-fraud-respiratory-testing-scheme-targeting-nursing",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Lab Testing",
+        "Nursing Home"
+      ],
+      "entities": [],
+      "state": "MD",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-20-3661952805",
+      "date": "2026-10-20",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Illinois Laboratory Owner Charged in $66M COVID-19 Testing Fraud Scheme",
+      "amount": "$66 Million",
+      "amount_numeric": 66000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/illinois-laboratory-owner-charged-66m-covid-19-testing-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Lab Testing"
+      ],
+      "entities": [],
+      "state": "IL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "topic_checked_at": "2026-10-21T13:01:24.128811",
+      "doj_topics": []
     }
   ]
 }
