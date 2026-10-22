@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-21T13:01:23.717670",
+    "last_updated": "2026-10-22T13:03:18.070958",
     "version": "1.0",
-    "last_scraped": "2026-10-21T13:01:23.717655"
+    "last_scraped": "2026-10-22T13:03:18.070943"
   },
   "actions": [
     {
@@ -23141,6 +23141,56 @@
       ],
       "topic_checked_at": "2026-10-21T13:01:24.128811",
       "doj_topics": []
+    },
+    {
+      "id": "doj-2026-10-21-3915981311",
+      "date": "2026-10-21",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "DOJ’s Fraud Division, Department of Agriculture, and USDA OIG Uncover Nearly $42M in SNAP Benefit Fraud in Nationwide Enforcement Surge Involving Suspected Illegal Aliens",
+      "amount": "$42 Million",
+      "amount_numeric": 42000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/dojs-fraud-division-department-agriculture-and-usda-oig-uncover-nearly-42m-snap-benefit",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "doj-2026-10-13-2819915866",
+      "date": "2026-10-13",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "New Orleans Man Sentenced To $7 Million In Restitution For Health Care Fraud Conspiracy",
+      "amount": "$7 Million",
+      "amount_numeric": 7000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edla/pr/new-orleans-man-sentenced-7-million-restitution-health-care-fraud-conspiracy",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Genetic Testing",
+        "Lab Testing",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "LA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
     }
   ]
 }
