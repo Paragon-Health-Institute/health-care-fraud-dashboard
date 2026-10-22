@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-10-21T13:54:52.068508",
+    "last_scraped": "2026-10-22T13:53:46.835569",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1373,6 +1373,30 @@
       "ai_confidence": 72,
       "ai_reason": "CMS Final/Proposed Rule implementing statutory healthcare-fraud and program-integrity provisions (Sections 6219, 6220, 6224 of CAA 2026) falls within healthcare-fraud-relevant regulatory policy change",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "hhs-oig-2026-10-19-1537183623",
+      "date": "2026-10-19",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Kentucky Could Better Protect Children Residing in Qualified Residential Treatment Programs",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/kentucky-could-better-protect-children-residing-in-qualified-residential-treatment-programs/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "KY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This HHS-OIG audit concerns child safety and welfare in residential treatment programs, not healthcare fraud, improper payments, or program-integrity findings related to fraud or overpayment.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1692,6 +1716,8 @@
     "https://waysandmeans.house.gov/2026/10/02/chairman-smith-on-september-jobs-report-more-americans-finding-work-as-republican-tax-cuts-grow-the-economy/",
     "https://www.gao.gov/products/gao-27-108853",
     "https://oig.hhs.gov/reports/all/2026/hhs-has-not-made-additional-progress-toward-compliance-with-the-geospatial-data-act/",
-    "https://www.cms.gov/newsroom/press-releases/trump-administration-delivers-second-year-savings-stopping-taxpayer-payments-duplicate-deceased"
+    "https://www.cms.gov/newsroom/press-releases/trump-administration-delivers-second-year-savings-stopping-taxpayer-payments-duplicate-deceased",
+    "https://www.cms.gov/newsroom/press-releases/leading-employers-back-expansion-electronic-prior-authorization-self-funded-health-plans",
+    "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-nearly-249-million-bring-healthcare-closer-home-rural-alaskans"
   ]
 }
