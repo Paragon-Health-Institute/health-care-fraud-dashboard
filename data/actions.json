@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-22T13:03:18.070958",
+    "last_updated": "2026-10-23T12:42:08.652100",
     "version": "1.0",
-    "last_scraped": "2026-10-22T13:03:18.070943"
+    "last_scraped": "2026-10-23T12:42:08.652086"
   },
   "actions": [
     {
@@ -23183,6 +23183,89 @@
       ],
       "entities": [],
       "state": "LA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-10-22-3160790232",
+      "date": "2026-10-22",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Justice Department’s Civil Division and the Department of Health & Human Services Announce Anti-Fraud Healthcare Self-Disclosure Pilot Program",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/justice-departments-civil-division-and-department-health-human-services-announce-anti-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-10-22-224077085",
+      "date": "2026-10-22",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Los Angeles Health Care Fraud Takedown Results in Charges Against 15 Defendants, Including 6 Medical Professionals, Nearly $2 Billion in Loss",
+      "amount": "$2 Billion",
+      "amount_numeric": 2000000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/los-angeles-health-care-fraud-takedown-results-charges-against-15-defendants-including-6",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Hospice",
+        "Pharmacy",
+        "Genetic Testing",
+        "Lab Testing",
+        "Addiction Treatment"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-22-2145809417",
+      "date": "2026-10-22",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "L.A. Health Care Fraud Takedown Results in 15 Defendants Charged, Including Six Medical Professionals, with $2 Billion in Losses Alleged",
+      "amount": "$2 Billion",
+      "amount_numeric": 2000000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-cdca/pr/la-health-care-fraud-takedown-results-15-defendants-charged-including-six-medical",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Hospice",
+        "Pharmacy",
+        "Genetic Testing",
+        "Lab Testing",
+        "Addiction Treatment"
+      ],
+      "entities": [],
+      "state": "CA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
