@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-23T12:42:08.652100",
+    "last_updated": "2026-10-24T12:04:56.516477",
     "version": "1.0",
-    "last_scraped": "2026-10-23T12:42:08.652086"
+    "last_scraped": "2026-10-24T12:04:56.516462"
   },
   "actions": [
     {
@@ -23273,6 +23273,56 @@
       ],
       "doj_topics": [
         "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-10-23-90587117",
+      "date": "2026-10-23",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Telemedicine Company Owner Sentenced to 20 Years in Prison for $46M Medicare Fraud Scheme",
+      "amount": "$46 Million",
+      "amount_numeric": 46000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/telemedicine-company-owner-sentenced-20-years-prison-46m-medicare-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME",
+        "Genetic Testing",
+        "Lab Testing",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-22-2835008361",
+      "date": "2026-10-22",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Missouri Surgeon and Kansas Medical Device Distributor Sentenced for Conspiring to Pay and Receive Kickbacks to Induce Use of Spinal Implants and Obstructing a Federal Investigation",
+      "amount": "$1.2 Million",
+      "amount_numeric": 1200000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/missouri-surgeon-and-kansas-medical-device-distributor-sentenced-conspiring-pay-and",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medical Devices"
+      ],
+      "entities": [],
+      "state": "MA, MO, KS",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
       ]
     }
   ]
