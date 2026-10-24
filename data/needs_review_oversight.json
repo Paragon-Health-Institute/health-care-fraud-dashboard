@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-10-23T13:33:08.458194",
+    "last_scraped": "2026-10-24T12:46:30.761710",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1397,6 +1397,32 @@
       "ai_confidence": 85,
       "ai_reason": "This HHS-OIG audit concerns child safety and welfare in residential treatment programs, not healthcare fraud, improper payments, or program-integrity findings related to fraud or overpayment.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-10-23-494798356",
+      "date": "2026-10-23",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "CMS Proposes New Verification Requirements to Implement Law that Combats Exchange Fraud and Protects Taxpayer Dollars",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-proposes-new-verification-requirements-implement-law-combats-exchange-fraud-protects-taxpayer",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "ACA"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "fraud signal but no healthcare reference in title — needs AI review",
+      "ai_decision": "healthcare_fraud_oversight",
+      "ai_confidence": 82,
+      "ai_reason": "CMS rule proposal implementing fraud-combating verification requirements for ACA exchanges is a healthcare-fraud-relevant policy change within oversight scope.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1718,6 +1744,10 @@
     "https://oig.hhs.gov/reports/all/2026/hhs-has-not-made-additional-progress-toward-compliance-with-the-geospatial-data-act/",
     "https://www.cms.gov/newsroom/press-releases/trump-administration-delivers-second-year-savings-stopping-taxpayer-payments-duplicate-deceased",
     "https://www.cms.gov/newsroom/press-releases/leading-employers-back-expansion-electronic-prior-authorization-self-funded-health-plans",
-    "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-nearly-249-million-bring-healthcare-closer-home-rural-alaskans"
+    "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-nearly-249-million-bring-healthcare-closer-home-rural-alaskans",
+    "https://www.cms.gov/newsroom/fact-sheets/exchange-pre-eligibility-verification-proposed-rule-cms-9873-p",
+    "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-more-193-million-expand-preventive-care-bring-specialty-care-closer",
+    "https://oversight.house.gov/release/comer-investigates-pbms-for-retaliatory-audits-of-independent-pharmacies/",
+    "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-205-million-strengthen-emergency-care-expand-rural-health-workforce"
   ]
 }
