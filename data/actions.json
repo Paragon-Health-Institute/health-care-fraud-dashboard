@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-10-24T12:04:56.516477",
+    "last_updated": "2026-10-25T14:15:27.414973",
     "version": "1.0",
     "last_scraped": "2026-10-25T12:38:33.840136"
   },
@@ -643,15 +643,15 @@
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
-      "link": "https://www.clickorlando.com/news/politics/2026/03/17/trump-administration-widens-medicaid-fraud-crackdown-to-florida-calling-it-a-hotspot/",
-      "link_label": "AP/Click Orlando",
+      "link": "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-more-193-million-expand-preventive-care-bring-specialty-care-closer",
+      "link_label": "CMS Press Release",
       "social_posts": [],
       "tags": [
         "Medicaid"
       ],
       "entities": [],
       "state": "FL",
-      "source_type": "news",
+      "source_type": "official",
       "auto_fetched": false,
       "related_agencies": [],
       "narrative_title": "Dr. Oz Sends Fraud Inquiry to Florida Governor DeSantis, Calling State a Hotspot for Health Care Fraud"
