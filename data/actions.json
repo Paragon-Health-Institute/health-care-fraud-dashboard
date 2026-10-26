@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-25T14:15:27.414973",
+    "last_updated": "2026-10-26T14:23:26.199678",
     "version": "1.0",
-    "last_scraped": "2026-10-25T12:38:33.840136"
+    "last_scraped": "2026-10-26T14:23:26.199664"
   },
   "actions": [
     {
@@ -23319,6 +23319,30 @@
       ],
       "entities": [],
       "state": "MA, MO, KS",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-23-4292084370",
+      "date": "2026-10-23",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Harlingen couple sentenced in multimillion-dollar Medicare fraud scheme",
+      "amount": "$14 Million",
+      "amount_numeric": 14000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-sdtx/pr/harlingen-couple-sentenced-multimillion-dollar-medicare-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME"
+      ],
+      "entities": [],
+      "state": "TX",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
