@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-27T13:20:23.481821",
+    "last_updated": "2026-10-28T14:07:39.986929",
     "version": "1.0",
-    "last_scraped": "2026-10-27T13:20:23.481810"
+    "last_scraped": "2026-10-28T14:07:39.986917"
   },
   "actions": [
     {
@@ -23373,6 +23373,75 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "doj-2026-10-27-4273422660",
+      "date": "2026-10-27",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Gainesville Woman Convicted in $8.6M Medicare Fraud Scheme",
+      "amount": "$8.6 Million",
+      "amount_numeric": 8600000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/gainesville-woman-convicted-86m-medicare-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-27-820050873",
+      "date": "2026-10-27",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Multiple Individuals Arrested for Health Care Fraud Conspiracy following Homeland Security Task Force Investigation",
+      "amount": "$600,000",
+      "amount_numeric": 600000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-me/pr/multiple-individuals-arrested-health-care-fraud-conspiracy-following-homeland-security",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Home Health"
+      ],
+      "entities": [],
+      "state": "ME",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-28-1418598561",
+      "date": "2026-10-28",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Owner of Now-Closed Adult Family Home Sentenced to Federal Prison for Healthcare Fraud",
+      "amount": "$1,253,920.47",
+      "amount_numeric": 1253920.47,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edwi/pr/owner-now-closed-adult-family-home-sentenced-federal-prison-healthcare-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "WI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
