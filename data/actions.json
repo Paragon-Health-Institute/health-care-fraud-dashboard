@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-10-28T14:07:39.986929",
+    "last_updated": "2026-10-28T15:13:40.668975",
     "version": "1.0",
     "last_scraped": "2026-10-28T14:07:39.986917"
   },
@@ -23439,6 +23439,69 @@
       ],
       "entities": [],
       "state": "WI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-10-28-3632442642",
+      "date": "2026-10-28",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Health Care Fraud and Abuse Control Program Report Fact Sheet (Fiscal Year 2025)",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/health-care-fraud-and-abuse-control-program-report-fact-sheet-fiscal-year-2025/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-10-23-3492515635",
+      "date": "2026-10-23",
+      "agency": "HHS-OIG",
+      "type": "Report",
+      "title": "Potential Vulnerabilities in CMS’s Oversight of Medicare Providers’ Billing of Selected Outpatient Drugs",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/potential-vulnerabilities-in-cmss-oversight-of-medicare-providers-billing-of-selected-outpatient-drugs/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-10-21-902699195",
+      "date": "2026-10-21",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Four States Implemented Different Nursing Home Minimum Spending Requirements Related to Resident Care, and Three of These States and Some Nursing Homes Experienced Challenges",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/four-states-implemented-different-nursing-home-minimum-spending-requirements-related-to-resident-care-and-three-of-these-states-and-some-nursing-homes-experienced-challenges/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Nursing Home",
+        "Assisted Living"
+      ],
+      "entities": [],
+      "state": null,
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
