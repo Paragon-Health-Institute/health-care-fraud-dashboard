@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-28T15:13:40.668975",
+    "last_updated": "2026-10-29T14:29:22.475490",
     "version": "1.0",
-    "last_scraped": "2026-10-28T14:07:39.986917"
+    "last_scraped": "2026-10-29T14:29:22.475481"
   },
   "actions": [
     {
@@ -23502,6 +23502,29 @@
       ],
       "entities": [],
       "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "doj-2026-10-28-1588956638",
+      "date": "2026-10-28",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Virginia Mental Health Professional Charged in $49M Medicaid Fraud Scheme",
+      "amount": "$49 Million",
+      "amount_numeric": 49000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/virginia-mental-health-professional-charged-49m-medicaid-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Medicaid Managed Care",
+        "Mental Health"
+      ],
+      "entities": [],
+      "state": "VA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
