@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-10-28T15:13:40.499720",
+    "last_scraped": "2026-10-29T15:19:25.876026",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1748,6 +1748,9 @@
     "https://www.cms.gov/newsroom/fact-sheets/exchange-pre-eligibility-verification-proposed-rule-cms-9873-p",
     "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-more-193-million-expand-preventive-care-bring-specialty-care-closer",
     "https://oversight.house.gov/release/comer-investigates-pbms-for-retaliatory-audits-of-independent-pharmacies/",
-    "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-205-million-strengthen-emergency-care-expand-rural-health-workforce"
+    "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-205-million-strengthen-emergency-care-expand-rural-health-workforce",
+    "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2027-end-stage-renal-disease-esrd-prospective-payment-system-final-rule-cms-1846-f",
+    "https://waysandmeans.house.gov/2026/10/29/chairman-smith-on-pce-gdp-reports-republicans-fight-to-lower-prices-deliver-bigger-paychecks-more-jobs-targeted-tax-relief/",
+    "https://waysandmeans.house.gov/2026/10/28/big-beautiful-success-story-no-tax-on-overtime-pays-off-for-americans-who-put-in-the-extra-hours/"
   ]
 }

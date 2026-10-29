@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-10-29T14:29:22.475490",
+    "last_updated": "2026-10-29T15:19:26.093538",
     "version": "1.0",
     "last_scraped": "2026-10-29T14:29:22.475481"
   },
@@ -23525,6 +23525,28 @@
       ],
       "entities": [],
       "state": "VA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-10-27-586541284",
+      "date": "2026-10-27",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Louisiana Made Unallowable Managed Care Capitation Payments on Behalf of Incarcerated Medicaid Enrollees",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/louisiana-made-unallowable-managed-care-capitation-payments-on-behalf-of-incarcerated-medicaid-enrollees/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Medicaid Managed Care"
+      ],
+      "entities": [],
+      "state": "LA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
