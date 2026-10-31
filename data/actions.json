@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-29T15:19:26.093538",
+    "last_updated": "2026-10-31T13:44:20.251194",
     "version": "1.0",
-    "last_scraped": "2026-10-30T14:18:59.443638"
+    "last_scraped": "2026-10-31T13:44:20.251184"
   },
   "actions": [
     {
@@ -23550,6 +23550,30 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-10-30-1938320904",
+      "date": "2026-10-30",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Indian National Pleads Guilty to $227M Medicare Fraud",
+      "amount": "$227 Million",
+      "amount_numeric": 227000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/indian-national-pleads-guilty-227m-medicare-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Lab Testing"
+      ],
+      "entities": [],
+      "state": "IL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
