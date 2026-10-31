@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-10-30T15:07:47.823735",
+    "last_scraped": "2026-10-31T14:36:33.930990",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1423,6 +1423,33 @@
       "ai_confidence": 82,
       "ai_reason": "CMS rule proposal implementing fraud-combating verification requirements for ACA exchanges is a healthcare-fraud-relevant policy change within oversight scope.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-10-30-1108387098",
+      "date": "2026-10-30",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "Medicare and Medicaid Programs; Organ Procurement Organizations Conditions for Coverage: Revisions to the Conditions for Coverage, Final Rule (CMS 3409-F)",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/fact-sheets/medicare-medicaid-programs-organ-procurement-organizations-conditions-coverage-revisions-conditions",
+      "link_label": "CMS Fact Sheet",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This is a CMS Final Rule on organ procurement organization conditions for coverage, which is a clinical/operational regulatory matter unrelated to healthcare fraud, improper payments, or program integ",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1751,6 +1778,7 @@
     "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-205-million-strengthen-emergency-care-expand-rural-health-workforce",
     "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2027-end-stage-renal-disease-esrd-prospective-payment-system-final-rule-cms-1846-f",
     "https://waysandmeans.house.gov/2026/10/29/chairman-smith-on-pce-gdp-reports-republicans-fight-to-lower-prices-deliver-bigger-paychecks-more-jobs-targeted-tax-relief/",
-    "https://waysandmeans.house.gov/2026/10/28/big-beautiful-success-story-no-tax-on-overtime-pays-off-for-americans-who-put-in-the-extra-hours/"
+    "https://waysandmeans.house.gov/2026/10/28/big-beautiful-success-story-no-tax-on-overtime-pays-off-for-americans-who-put-in-the-extra-hours/",
+    "https://www.cms.gov/newsroom/press-releases/cms-finalizes-rule-help-more-organs-reach-patients-strengthen-accountability-organ-procurement"
   ]
 }
