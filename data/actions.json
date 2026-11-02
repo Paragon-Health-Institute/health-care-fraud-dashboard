@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-10-31T13:44:20.251194",
+    "last_updated": "2026-11-02T17:11:30.193097",
     "version": "1.0",
-    "last_scraped": "2026-11-01T14:21:29.026144"
+    "last_scraped": "2026-11-02T17:11:30.193089"
   },
   "actions": [
     {
@@ -23569,6 +23569,53 @@
       ],
       "entities": [],
       "state": "IL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-30-598434961",
+      "date": "2026-10-30",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Botox Fraud Doctor Sentenced to 15 Years in Prison for $45M Medicare Scheme",
+      "amount": "$45 Million",
+      "amount_numeric": 45000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/botox-fraud-doctor-sentenced-15-years-prison-45m-medicare-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-10-30-3272561432",
+      "date": "2026-10-30",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Florida Pharmacist Sentenced to Over 7 Years in Prison for Massive Illegal Oxycodone Distribution Conspiracy",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/florida-pharmacist-sentenced-over-7-years-prison-massive-illegal-oxycodone-distribution",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Pharmacy",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
