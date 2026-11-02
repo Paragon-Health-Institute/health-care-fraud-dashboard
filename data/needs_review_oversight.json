@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-11-01T15:18:09.865141",
+    "last_scraped": "2026-11-02T18:30:22.652851",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1449,6 +1449,30 @@
       "ai_decision": "not_oversight",
       "ai_confidence": 85,
       "ai_reason": "This is a CMS Final Rule on organ procurement organization conditions for coverage, which is a clinical/operational regulatory matter unrelated to healthcare fraud, improper payments, or program integ",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "hhs-oig-2026-10-29-2632295495",
+      "date": "2026-10-29",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "HRSA Made $658 Million in Potential Overpayments to Selected Providers Under Phase 3 of the Provider Relief Fund Program",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/hrsa-made-658-million-in-potential-overpayments-to-selected-providers-under-phase-3-of-the-provider-relief-fund-program/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "healthcare_fraud_oversight",
+      "ai_confidence": 88,
+      "ai_reason": "HHS-OIG audit identifying potential overpayments in a federal healthcare program (Provider Relief Fund) is a program-integrity finding within scope of healthcare fraud oversight.",
       "ai_model": "claude-haiku-4-5-20251001"
     }
   ],

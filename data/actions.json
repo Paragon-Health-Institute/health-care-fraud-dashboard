@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-11-02T17:11:30.193097",
+    "last_updated": "2026-11-02T18:30:22.828287",
     "version": "1.0",
     "last_scraped": "2026-11-02T17:11:30.193089"
   },
@@ -23621,6 +23621,28 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "hhs-oig-2026-10-28-583412002",
+      "date": "2026-10-28",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Less Than 25 Percent of Medicaid Beneficiaries With Hepatitis C Received Treatment Within 6 Months",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/less-than-25-percent-of-medicaid-beneficiaries-with-hepatitis-c-received-treatment-within-6-months/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
