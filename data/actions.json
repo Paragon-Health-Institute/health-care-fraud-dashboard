@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-11-02T18:30:22.828287",
+    "last_updated": "2026-11-03T16:20:53.974524",
     "version": "1.0",
     "last_scraped": "2026-11-03T15:18:19.960773"
   },
@@ -23638,6 +23638,25 @@
         "Medicare",
         "Medicaid"
       ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-11-02-2688739862",
+      "date": "2026-11-02",
+      "agency": "HHS-OIG",
+      "type": "Report",
+      "title": "Health Care Fraud and Abuse Control Program",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/hcfac/",
+      "link_label": "HHS-OIG Fraud Hub",
+      "social_posts": [],
+      "tags": [],
       "entities": [],
       "state": null,
       "source_type": "official",
