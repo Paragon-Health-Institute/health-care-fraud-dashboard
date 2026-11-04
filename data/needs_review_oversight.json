@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-11-03T16:20:53.724412",
+    "last_scraped": "2026-11-04T16:25:59.867887",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1803,6 +1803,7 @@
     "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2027-end-stage-renal-disease-esrd-prospective-payment-system-final-rule-cms-1846-f",
     "https://waysandmeans.house.gov/2026/10/29/chairman-smith-on-pce-gdp-reports-republicans-fight-to-lower-prices-deliver-bigger-paychecks-more-jobs-targeted-tax-relief/",
     "https://waysandmeans.house.gov/2026/10/28/big-beautiful-success-story-no-tax-on-overtime-pays-off-for-americans-who-put-in-the-extra-hours/",
-    "https://www.cms.gov/newsroom/press-releases/cms-finalizes-rule-help-more-organs-reach-patients-strengthen-accountability-organ-procurement"
+    "https://www.cms.gov/newsroom/press-releases/cms-finalizes-rule-help-more-organs-reach-patients-strengthen-accountability-organ-procurement",
+    "https://oig.hhs.gov/reports/all/2026/iowas-compliance-with-requirements-for-reporting-child-abuse-and-neglect-could-be-improved/"
   ]
 }
