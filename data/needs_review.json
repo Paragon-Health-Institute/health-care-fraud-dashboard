@@ -362,6 +362,40 @@
       "ai_confidence": 75,
       "ai_reason": "This is an organizational announcement about a task force meeting rather than a specific enforcement action against healthcare fraud.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "doj-2026-11-04-1289868014",
+      "date": "2026-11-04",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Illegal Alien from the Dominican Republic Pleads Guilty to SNAP Fraud and MassHealth Benefit Fraud",
+      "amount": "$57,000",
+      "amount_numeric": 57000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/illegal-alien-dominican-republic-pleads-guilty-snap-fraud-and-masshealth-benefit-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "flagged_at": "2026-11-05T15:36:26.632087",
+      "flag_reason": "title lacks healthcare keyword",
+      "topic_checked_at": "2026-11-05T15:36:26.766518",
+      "doj_topics": [
+        "Financial Fraud",
+        "Immigration"
+      ],
+      "ai_decision": "healthcare_fraud",
+      "ai_confidence": 85,
+      "ai_reason": "MassHealth is Massachusetts's Medicaid program, making this a healthcare insurance fraud case despite the co-charged SNAP fraud.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
