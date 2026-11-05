@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-11-04T16:25:59.867887",
+    "last_scraped": "2026-11-05T16:35:09.656190",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1474,6 +1474,88 @@
       "ai_confidence": 88,
       "ai_reason": "HHS-OIG audit identifying potential overpayments in a federal healthcare program (Provider Relief Fund) is a program-integrity finding within scope of healthcare fraud oversight.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-11-04-3329549844",
+      "date": "2026-11-04",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "CMS Finalizes CY 2027 Physician Fee Schedule to Shift from Sick Care to Healthcare and Curb Waste",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-finalizes-cy-2027-physician-fee-schedule-shift-sick-care-healthcare-curb-waste",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 72,
+      "ai_reason": "Physician Fee Schedule finalization is CMS payment policy regulation; while it mentions 'curb waste,' the title focuses on care-delivery transformation rather than fraud detection, program integrity f",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-11-04-324134160",
+      "date": "2026-11-04",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "Medicare Outpatient Final Rule Expands Surgical Options, Lowers Out-of-Pocket Costs for 340B Drugs",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/medicare-outpatient-final-rule-expands-surgical-options-lowers-out-pocket-costs-340b-drugs",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Drug Pricing"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This is a policy/coverage rule about Medicare outpatient surgical options and drug pricing, with no indication of fraud, improper payments, or program-integrity findings.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-11-04-1052365000",
+      "date": "2026-11-04",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "Calendar Year (CY) 2027 Home Health Prospective Payment System Final Rule - CMS-1844-F",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2027-home-health-prospective-payment-system-final-rule-cms-1844-f",
+      "link_label": "CMS Fact Sheet",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "DME",
+        "Home Health"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This is a prospective payment system rate-setting rule for home health services; while CMS rules can include anti-fraud provisions, the title indicates a payment methodology update without evidence of",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1804,6 +1886,10 @@
     "https://waysandmeans.house.gov/2026/10/29/chairman-smith-on-pce-gdp-reports-republicans-fight-to-lower-prices-deliver-bigger-paychecks-more-jobs-targeted-tax-relief/",
     "https://waysandmeans.house.gov/2026/10/28/big-beautiful-success-story-no-tax-on-overtime-pays-off-for-americans-who-put-in-the-extra-hours/",
     "https://www.cms.gov/newsroom/press-releases/cms-finalizes-rule-help-more-organs-reach-patients-strengthen-accountability-organ-procurement",
-    "https://oig.hhs.gov/reports/all/2026/iowas-compliance-with-requirements-for-reporting-child-abuse-and-neglect-could-be-improved/"
+    "https://oig.hhs.gov/reports/all/2026/iowas-compliance-with-requirements-for-reporting-child-abuse-and-neglect-could-be-improved/",
+    "https://www.cms.gov/newsroom/fact-sheets/calendar-year-2027-hospital-outpatient-prospective-payment-system-opps-ambulatory-surgical-center-0",
+    "https://www.gao.gov/products/gao-27-109299",
+    "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2027-medicare-physician-fee-schedule-final-rule-cms-1848-f-medicare-shared-savings",
+    "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2027-medicare-physician-fee-schedule-final-rule"
   ]
 }
