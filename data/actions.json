@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-11-05T15:36:26.453124",
+    "last_updated": "2026-11-06T15:09:25.059737",
     "version": "1.0",
-    "last_scraped": "2026-11-05T15:36:26.453114"
+    "last_scraped": "2026-11-06T15:09:25.059723"
   },
   "actions": [
     {
@@ -23659,6 +23659,25 @@
       "tags": [],
       "entities": [],
       "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "doj-2026-11-05-3983179058",
+      "date": "2026-11-05",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "CEO and VA Employee Sentenced for Paying and Receiving Illegal Health Care Kickbacks and Bribes",
+      "amount": "$14 Million",
+      "amount_numeric": 14000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/ceo-and-va-employee-sentenced-paying-and-receiving-illegal-health-care-kickbacks-and-bribes",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
