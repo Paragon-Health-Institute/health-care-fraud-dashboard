@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-11-06T15:09:25.059737",
+    "last_updated": "2026-11-07T14:09:25.792157",
     "version": "1.0",
-    "last_scraped": "2026-11-06T15:09:25.059723"
+    "last_scraped": "2026-11-07T14:09:25.792148"
   },
   "actions": [
     {
@@ -23681,6 +23681,33 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-11-06-3889638297",
+      "date": "2026-11-06",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "California Laboratory and Its Owner Pay $1.25M to Settle Allegations of Kickbacks to Marketers",
+      "amount": "$1.25 Million",
+      "amount_numeric": 1250000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/california-laboratory-and-its-owner-pay-125m-settle-allegations-kickbacks-marketers",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Lab Testing"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ],
+      "topic_checked_at": "2026-11-07T14:09:26.086309"
     }
   ]
 }
