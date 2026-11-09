@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-11-08T15:20:14.828069",
+    "last_scraped": "2026-11-09T18:54:31.903318",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1920,6 +1920,8 @@
     "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2027-medicare-physician-fee-schedule-final-rule-cms-1848-f-medicare-shared-savings",
     "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2027-medicare-physician-fee-schedule-final-rule",
     "https://www.cms.gov/newsroom/press-releases/cms-final-rule-strengthens-supports-lasting-drug-savings",
-    "https://www.cms.gov/newsroom/fact-sheets/medicare-drug-price-negotiation-program-medicare-prescription-drug-benefit-program-final-rule-cms"
+    "https://www.cms.gov/newsroom/fact-sheets/medicare-drug-price-negotiation-program-medicare-prescription-drug-benefit-program-final-rule-cms",
+    "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-10-billion-second-year-rural-health-transformation-awards-all-50",
+    "https://www.cms.gov/newsroom/fact-sheets/rural-health-transformation-program-year-2-awards"
   ]
 }
