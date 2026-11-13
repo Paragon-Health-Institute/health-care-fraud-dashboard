@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-11-12T16:53:58.344829",
+    "last_scraped": "2026-11-13T16:33:55.977678",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1584,6 +1584,34 @@
       "ai_confidence": 75,
       "ai_reason": "This is a CMS regulatory proposal focused on reducing administrative burden for patient care, not on healthcare fraud detection, program integrity, improper payments, or anti-fraud oversight.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "hhs-oig-2026-11-05-443681577",
+      "date": "2026-11-05",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Nursing Facilities Retained Only About Half of the $1.02 Billion Indiana Reported as Nursing Facility Supplemental Payments in Federal Fiscal Year 2022",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/nursing-facilities-retained-only-about-half-of-the-102-billion-indiana-reported-as-nursing-facility-supplemental-payments-in-federal-fiscal-year-2022/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Nursing Home",
+        "Assisted Living"
+      ],
+      "entities": [],
+      "state": "IN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "healthcare_fraud_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "HHS-OIG audit examining whether Medicaid supplemental payments to nursing facilities were properly retained and used, directly relevant to Medicaid program integrity and improper payment findings.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1922,6 +1950,7 @@
     "https://www.cms.gov/newsroom/press-releases/cms-final-rule-strengthens-supports-lasting-drug-savings",
     "https://www.cms.gov/newsroom/fact-sheets/medicare-drug-price-negotiation-program-medicare-prescription-drug-benefit-program-final-rule-cms",
     "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-10-billion-second-year-rural-health-transformation-awards-all-50",
-    "https://www.cms.gov/newsroom/fact-sheets/rural-health-transformation-program-year-2-awards"
+    "https://www.cms.gov/newsroom/fact-sheets/rural-health-transformation-program-year-2-awards",
+    "https://www.gao.gov/products/oig-27-1sp"
   ]
 }

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-11-13T15:30:56.033897",
+    "last_updated": "2026-11-13T16:33:56.139809",
     "version": "1.0",
     "last_scraped": "2026-11-13T15:30:56.033886"
   },
@@ -23940,6 +23940,72 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "doj-2026-11-05-2183800914",
+      "date": "2026-11-05",
+      "agency": "DOJ",
+      "type": "Structural/Organizational",
+      "title": "U.S. Attorney’s Office for the District of Delaware Announces Creation of the Program Fraud Task Force",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-de/pr/us-attorneys-office-district-delaware-announces-creation-program-fraud-task-force",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "DE",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "cms-2026-11-12-3098720275",
+      "date": "2026-11-12",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "CMS Extends and Modifies Nationwide Freeze on New Medicare Hospice and Home Health Enrollment for Six Months to Combat Fraud",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-extends-modifies-nationwide-freeze-new-medicare-hospice-home-health-enrollment-six-months-combat",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Hospice",
+        "Home Health"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "doj-2026-11-06-2221980887",
+      "date": "2026-11-06",
+      "agency": "DOJ",
+      "type": "Audit",
+      "title": "CMS’s Oversight of Medicare Administrative Contractors’ Cost Report Settlement Processes Was Not Adequate To Identify Settlements That Contained Obvious Errors and That Had Inadequate Supervisory Review",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/cmss-oversight-of-medicare-administrative-contractors-cost-report-settlement-processes-was-not-adequate-to-identify-settlements-that-contained-obvious-errors-and-that-had-inadequate-supervisory-review/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
