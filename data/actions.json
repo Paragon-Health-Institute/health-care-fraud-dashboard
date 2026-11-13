@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-11-07T14:09:25.792157",
+    "last_updated": "2026-11-13T15:30:56.033897",
     "version": "1.0",
-    "last_scraped": "2026-11-12T16:02:41.358223"
+    "last_scraped": "2026-11-13T15:30:56.033886"
   },
   "actions": [
     {
@@ -23708,6 +23708,238 @@
         "False Claims Act"
       ],
       "topic_checked_at": "2026-11-07T14:09:26.086309"
+    },
+    {
+      "id": "doj-2026-11-13-3023719277",
+      "date": "2026-11-13",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Florida Man Pleads Guilty to $42M Durable Medical Equipment and Cancer Genetic Testing Fraud on Medicare",
+      "amount": "$42 Million",
+      "amount_numeric": 42000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/florida-man-pleads-guilty-42m-durable-medical-equipment-and-cancer-genetic-testing-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "TRICARE",
+        "DME",
+        "Genetic Testing",
+        "Lab Testing",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-11-12-2782595843",
+      "date": "2026-11-12",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "New York Doctor Charged in $6.8M Medicare Fraud Scheme",
+      "amount": "$6.8 Million",
+      "amount_numeric": 6800000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/new-york-doctor-charged-68m-medicare-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-11-12-2297357134",
+      "date": "2026-11-12",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "International Law Enforcement Operation Targeting Opioid and Fentanyl Traffickers on the Dark Web Results in over 350 Arrests Worldwide and the Seizure of Drugs, Weapons, and over $234 Million",
+      "amount": "$234 Million",
+      "amount_numeric": 234000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/international-law-enforcement-operation-targeting-opioid-and-fentanyl-traffickers-dark-web",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Opioids"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Cybercrime"
+      ]
+    },
+    {
+      "id": "doj-2026-11-10-1630933536",
+      "date": "2026-11-10",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Social Adult Day Care Program Director Pleads Guilty to $127M Medicare and Medicaid Fraud Scheme",
+      "amount": "$127 Million",
+      "amount_numeric": 127000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/social-adult-day-care-program-director-pleads-guilty-127m-medicare-and-medicaid-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Pharmacy",
+        "Adult Day Care"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-11-12-3662193844",
+      "date": "2026-11-12",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Jacksonville Pharmacy Owner and Accountant Indicted in $51 Million Health Care Fraud Scheme",
+      "amount": "$51 Million",
+      "amount_numeric": 51000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-mdfl/pr/jacksonville-pharmacy-owner-and-accountant-indicted-51-million-health-care-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-11-12-1505093993",
+      "date": "2026-11-12",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Clarksville Pain Management Clinic and Managers Agree to Pay $1.5 Million to Resolve False Claims Act Allegations Involving Medically Unnecessary Testing",
+      "amount": "$1.5 Million",
+      "amount_numeric": 1500000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-mdtn/pr/clarksville-pain-management-clinic-and-managers-agree-pay-15-million-resolve-false",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Lab Testing"
+      ],
+      "entities": [],
+      "state": "TN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-11-12-1415882251",
+      "date": "2026-11-12",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Maryland Behavioral Health Worker Pleads Guilty to Billing D.C. Medicaid for Therapy Sessions That Never Happened",
+      "amount": "$250,000",
+      "amount_numeric": 250000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-dc/pr/maryland-behavioral-health-worker-pleads-guilty-billing-dc-medicaid-therapy-sessions",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Telehealth",
+        "Mental Health"
+      ],
+      "entities": [],
+      "state": "DC, MD",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-11-06-3674223869",
+      "date": "2026-11-06",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Quest Diagnostics, Inc. Pays over $13 Million to Settle Allegations of Providing Illegal Kickbacks to Doctors and Health Care Executives",
+      "amount": "$13 Million",
+      "amount_numeric": 13000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-nj/pr/quest-diagnostics-inc-pays-over-13-million-settle-allegations-providing-illegal",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Lab Testing",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "NJ",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-11-05-125574524",
+      "date": "2026-11-05",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Executives of Healthcare Provider Charged by Indictment in Fraud that Caused Millions in Losses to D.C. Medicaid",
+      "amount": "$14 Million",
+      "amount_numeric": 14000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-dc/pr/executives-healthcare-provider-charged-indictment-fraud-caused-millions-losses-dc",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Telehealth",
+        "Mental Health"
+      ],
+      "entities": [],
+      "state": "DC",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
