@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-11-13T16:33:55.977678",
+    "last_scraped": "2026-11-14T15:11:27.315519",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1611,6 +1611,32 @@
       "ai_decision": "healthcare_fraud_oversight",
       "ai_confidence": 85,
       "ai_reason": "HHS-OIG audit examining whether Medicaid supplemental payments to nursing facilities were properly retained and used, directly relevant to Medicaid program integrity and improper payment findings.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-11-13-1692650898",
+      "date": "2026-11-13",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "CMS Announces a Hold Harmless Period to Strengthen Medicaid Work Requirement Systems and Improve Beneficiary Experience",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-announces-hold-harmless-period-strengthen-medicaid-work-requirement-systems-improve-beneficiary",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 78,
+      "ai_reason": "This announcement concerns Medicaid work requirement policy implementation and beneficiary experience, not healthcare fraud, improper payments, or program integrity oversight.",
       "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
