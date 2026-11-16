@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-11-15T15:44:41.397930",
+    "last_scraped": "2026-11-16T18:41:13.656120",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1977,6 +1977,8 @@
     "https://www.cms.gov/newsroom/fact-sheets/medicare-drug-price-negotiation-program-medicare-prescription-drug-benefit-program-final-rule-cms",
     "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-10-billion-second-year-rural-health-transformation-awards-all-50",
     "https://www.cms.gov/newsroom/fact-sheets/rural-health-transformation-program-year-2-awards",
-    "https://www.gao.gov/products/oig-27-1sp"
+    "https://www.gao.gov/products/oig-27-1sp",
+    "https://www.gao.gov/products/gao-27-108090",
+    "https://www.gao.gov/products/gao-27-108744"
   ]
 }
