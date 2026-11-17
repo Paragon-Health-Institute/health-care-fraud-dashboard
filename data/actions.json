@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-11-17T16:58:54.533735",
+    "last_updated": "2026-11-17T17:43:19.244419",
     "version": "1.0",
     "last_scraped": "2026-11-17T16:58:54.533726"
   },
@@ -24076,6 +24076,59 @@
       "doj_topics": [
         "Cybercrime"
       ]
+    },
+    {
+      "id": "cms-2026-11-16-945103468",
+      "date": "2026-11-16",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "CMS CRUSH Proposed Rule Aims to Reap Nearly $90 Billion for Taxpayers in Savings by Targeting Fraud Across Medicare, Medicaid/CHIP, and the Marketplace",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-crush-proposed-rule-aims-reap-nearly-90-billion-taxpayers-savings-targeting-fraud-across",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Medicaid",
+        "Hospice"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "cms-2026-11-16-3214716456",
+      "date": "2026-11-16",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "Comprehensive Regulations to Uncover Suspicious Healthcare (CRUSH) Proposed Rule (CMS-6098-P)",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/fact-sheets/comprehensive-regulations-uncover-suspicious-healthcare-crush-proposed-rule-cms-6098-p",
+      "link_label": "CMS Fact Sheet",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Medicaid",
+        "Medicaid Managed Care",
+        "DME",
+        "Pharmacy",
+        "Home Health",
+        "Medical Devices",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }

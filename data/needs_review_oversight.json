@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-11-16T18:41:13.656120",
+    "last_scraped": "2026-11-17T17:43:15.915541",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1638,6 +1638,33 @@
       "ai_confidence": 78,
       "ai_reason": "This announcement concerns Medicaid work requirement policy implementation and beneficiary experience, not healthcare fraud, improper payments, or program integrity oversight.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "hhs-oig-2026-11-17-2062664842",
+      "date": "2026-11-17",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "2026 Top Management & Performance Challenges Facing HHS",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/2026-top-management-performance-challenges-facing-hhs/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 72,
+      "ai_reason": "This is a broad HHS management and performance report; while HHS-OIG audits on healthcare fraud/program integrity are in scope, a 'Top Management Challenges' document likely covers multiple agency pri",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -1979,6 +2006,7 @@
     "https://www.cms.gov/newsroom/fact-sheets/rural-health-transformation-program-year-2-awards",
     "https://www.gao.gov/products/oig-27-1sp",
     "https://www.gao.gov/products/gao-27-108090",
-    "https://www.gao.gov/products/gao-27-108744"
+    "https://www.gao.gov/products/gao-27-108744",
+    "https://www.cms.gov/newsroom/fact-sheets/fiscal-year-2026-improper-payments"
   ]
 }
