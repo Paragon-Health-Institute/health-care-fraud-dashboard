@@ -396,6 +396,35 @@
       "ai_confidence": 85,
       "ai_reason": "MassHealth is Massachusetts's Medicaid program, making this a healthcare insurance fraud case despite the co-charged SNAP fraud.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "doj-2026-11-16-576087560",
+      "date": "2026-11-16",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Chiropractor and Former CEO Sentenced for Using Abusive Tax Shelter",
+      "amount": "$4.1 Million",
+      "amount_numeric": 4099999.9999999995,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/chiropractor-and-former-ceo-sentenced-using-abusive-tax-shelter",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "IL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Tax"
+      ],
+      "flagged_at": "2026-11-17T16:58:54.713375",
+      "flag_reason": "title lacks healthcare keyword",
+      "topic_checked_at": "2026-11-17T16:58:54.857127",
+      "ai_decision": "not_healthcare_fraud",
+      "ai_confidence": 78,
+      "ai_reason": "While a chiropractor is involved, the core charge is tax shelter abuse, which is tax fraud rather than healthcare fraud; no allegations of false medical claims, insurance billing fraud, or healthcare ",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [

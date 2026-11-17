@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-11-16T17:10:13.061684",
+    "last_updated": "2026-11-17T16:58:54.533735",
     "version": "1.0",
-    "last_scraped": "2026-11-16T17:10:13.061673"
+    "last_scraped": "2026-11-17T16:58:54.533726"
   },
   "actions": [
     {
@@ -24026,6 +24026,55 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-11-17-334363057",
+      "date": "2026-11-17",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "PACE Organization InnovAge Agrees to Pay $36M to Resolve False Claims Act Allegations of Failing to Provide Comprehensive Medical Services and Timely Specialist Referrals to Seniors",
+      "amount": "$36 Million",
+      "amount_numeric": 36000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/pace-organization-innovage-agrees-pay-36m-resolve-false-claims-act-allegations-failing",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "CO, CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-11-16-2083274365",
+      "date": "2026-11-16",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Alleged Member of “8-Digits Team” Ransomware Group Extradited from Italy for Role in Major Data Extortion Campaign Against U.S. Hospitals, Healthcare Entities, and Schools",
+      "amount": "$500 Million",
+      "amount_numeric": 500000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/alleged-member-8-digits-team-ransomware-group-extradited-italy-role-major-data-extortion",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "TN",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Cybercrime"
       ]
     }
   ]
