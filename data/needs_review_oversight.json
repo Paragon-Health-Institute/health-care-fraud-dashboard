@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-11-17T17:43:15.915541",
+    "last_scraped": "2026-11-18T17:21:48.756963",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1665,6 +1665,34 @@
       "ai_confidence": 72,
       "ai_reason": "This is a broad HHS management and performance report; while HHS-OIG audits on healthcare fraud/program integrity are in scope, a 'Top Management Challenges' document likely covers multiple agency pri",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-11-17-2195175430",
+      "date": "2026-11-17",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "Medicare Shared Savings Program Accountable Care Organizations Performance Year 2025 Financial and Quality Results",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/fact-sheets/medicare-shared-savings-program-accountable-care-organizations-performance-year-2025-financial",
+      "link_label": "CMS Fact Sheet",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Nursing Home"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This is a performance results announcement for the Medicare Shared Savings Program ACOs, which reports on financial and quality metrics rather than fraud, improper payments, or program-integrity findi",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -2007,6 +2035,8 @@
     "https://www.gao.gov/products/oig-27-1sp",
     "https://www.gao.gov/products/gao-27-108090",
     "https://www.gao.gov/products/gao-27-108744",
-    "https://www.cms.gov/newsroom/fact-sheets/fiscal-year-2026-improper-payments"
+    "https://www.cms.gov/newsroom/fact-sheets/fiscal-year-2026-improper-payments",
+    "https://www.cms.gov/newsroom/press-releases/medicare-shared-savings-program-saves-more-2-5-billion-participating-acos-reach-record-12-6-million",
+    "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles"
   ]
 }

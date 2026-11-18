@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-11-18T16:33:01.106257",
+    "last_updated": "2026-11-18T17:21:48.918170",
     "version": "1.0",
     "last_scraped": "2026-11-18T16:33:01.106241"
   },
@@ -24179,6 +24179,27 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "gao-2026-11-18-735679626",
+      "date": "2026-11-18",
+      "agency": "GAO",
+      "type": "Audit",
+      "title": "Medicare: HHS and CMS Should Better Manage Fraud Risks",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.gao.gov/products/gao-27-109072",
+      "link_label": "GAO Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
