@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-11-17T17:43:19.244419",
+    "last_updated": "2026-11-18T16:33:01.106257",
     "version": "1.0",
-    "last_scraped": "2026-11-17T16:58:54.533726"
+    "last_scraped": "2026-11-18T16:33:01.106241"
   },
   "actions": [
     {
@@ -24129,6 +24129,56 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-11-17-4243369679",
+      "date": "2026-11-17",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Mississippi Businessman Sentenced to 10 Years in Prison for $19M Medicare Fraud",
+      "amount": "$19 Million",
+      "amount_numeric": 19000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/mississippi-businessman-sentenced-10-years-prison-19m-medicare-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "MS",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-11-17-122497925",
+      "date": "2026-11-17",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Jefferson County Doctor, Spouse Admit Healthcare Fraud and Illegal Prescription Practices",
+      "amount": "$83,634",
+      "amount_numeric": 83634.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edmo/pr/jefferson-county-doctor-spouse-admit-healthcare-fraud-and-illegal-prescription",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "MO",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
