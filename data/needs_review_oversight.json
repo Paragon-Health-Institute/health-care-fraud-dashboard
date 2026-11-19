@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-11-18T17:21:48.756963",
+    "last_scraped": "2026-11-19T17:29:14.266907",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1693,6 +1693,61 @@
       "ai_confidence": 85,
       "ai_reason": "This is a performance results announcement for the Medicare Shared Savings Program ACOs, which reports on financial and quality metrics rather than fraud, improper payments, or program-integrity findi",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "hhs-oig-2026-11-17-3455662449",
+      "date": "2026-11-17",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Office of Inspector General’s Partnership With the State of Rhode Island, Office of the Auditor General: Auditor General’s Report Provider Compliance with Opioid Treatment Program Requirements",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/office-of-inspector-generals-partnership-with-the-state-of-rhode-island-office-of-the-auditor-general-auditor-generals-report-provider-compliance-with-opioid-treatment-program-requirements/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Addiction Treatment",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "RI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 75,
+      "ai_reason": "This is an HHS-OIG audit of opioid treatment program compliance, which is a clinical/regulatory compliance matter, not a healthcare fraud or program-integrity investigation.",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "hhs-oig-2026-11-16-2912010517",
+      "date": "2026-11-16",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Comparison of Average Sales Prices and Average Manufacturer Prices: Results for the Second Quarter of 2026",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/comparison-of-average-sales-prices-and-average-manufacturer-prices-results-for-the-second-quarter-of-2026/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Drug Pricing"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This is a technical pricing comparison audit focused on pharmaceutical pricing data, not healthcare fraud, improper payments, or program-integrity findings.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -2037,6 +2092,7 @@
     "https://www.gao.gov/products/gao-27-108744",
     "https://www.cms.gov/newsroom/fact-sheets/fiscal-year-2026-improper-payments",
     "https://www.cms.gov/newsroom/press-releases/medicare-shared-savings-program-saves-more-2-5-billion-participating-acos-reach-record-12-6-million",
-    "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles"
+    "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles",
+    "https://www.gao.gov/products/gao-27-109529"
   ]
 }

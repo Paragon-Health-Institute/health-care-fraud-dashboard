@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-11-19T16:40:43.439426",
+    "last_updated": "2026-11-19T17:29:14.447126",
     "version": "1.0",
     "last_scraped": "2026-11-19T16:40:43.439415"
   },
@@ -24226,6 +24226,48 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "hhs-oig-2026-11-17-1178324800",
+      "date": "2026-11-17",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Wellstar Cobb Hospital Received At Least $1 Million in Medicare Overpayments",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/wellstar-cobb-hospital-received-at-least-1-million-in-medicare-overpayments/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-11-16-847502350",
+      "date": "2026-11-16",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Medicare Could Put Billions of Dollars To Better Use by Adjusting Hospital Payments To Be Consistent with the Updated Definition of Sepsis",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/medicare-could-put-billions-of-dollars-to-better-use-by-adjusting-hospital-payments-to-be-consistent-with-the-updated-definition-of-sepsis/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
