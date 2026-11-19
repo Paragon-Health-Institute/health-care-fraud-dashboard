@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-11-18T17:21:48.918170",
+    "last_updated": "2026-11-19T16:40:43.439426",
     "version": "1.0",
-    "last_scraped": "2026-11-18T16:33:01.106241"
+    "last_scraped": "2026-11-19T16:40:43.439415"
   },
   "actions": [
     {
@@ -24200,6 +24200,32 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-11-18-3035354372",
+      "date": "2026-11-18",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Pharmacy Owner Sentenced to 82 Months in Prison for $5.6M Health Care Fraud Scheme and Illegal Distribution of Oxycodone",
+      "amount": "$5.6 Million",
+      "amount_numeric": 5600000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/pharmacy-owner-sentenced-82-months-prison-56m-health-care-fraud-scheme-and-illegal",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Pharmacy",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
