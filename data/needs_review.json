@@ -425,6 +425,35 @@
       "ai_confidence": 78,
       "ai_reason": "While a chiropractor is involved, the core charge is tax shelter abuse, which is tax fraud rather than healthcare fraud; no allegations of false medical claims, insurance billing fraud, or healthcare ",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "doj-2026-11-19-2487066628",
+      "date": "2026-11-19",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Inaugural Meeting of Montana’s Fraud Task Force takes place in Helena",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-mt/pr/inaugural-meeting-montanas-fraud-task-force-takes-place-helena",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "MT",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "flagged_at": "2026-11-20T16:15:22.797681",
+      "flag_reason": "title lacks healthcare keyword",
+      "topic_checked_at": "2026-11-20T16:15:22.947195",
+      "doj_topics": [],
+      "ai_decision": "not_healthcare_fraud",
+      "ai_confidence": 72,
+      "ai_reason": "This is an organizational announcement about a task force inaugural meeting rather than a specific enforcement action against healthcare fraud.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [

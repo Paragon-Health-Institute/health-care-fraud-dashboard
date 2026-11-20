@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-11-19T17:29:14.447126",
+    "last_updated": "2026-11-20T16:15:22.617100",
     "version": "1.0",
-    "last_scraped": "2026-11-19T16:40:43.439415"
+    "last_scraped": "2026-11-20T16:15:22.617089"
   },
   "actions": [
     {
@@ -24268,6 +24268,54 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-11-19-580239713",
+      "date": "2026-11-19",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Michigan Home Health Care Agency Owner Sentenced to 4 Years in Prison for $1.6M Medicare Fraud Scheme Fueled by Illegal Kickbacks",
+      "amount": "$1.6 Million",
+      "amount_numeric": 1600000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/michigan-home-health-care-agency-owner-sentenced-4-years-prison-16m-medicare-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Home Health"
+      ],
+      "entities": [],
+      "state": "MI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-11-19-2615670583",
+      "date": "2026-11-19",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "St. Louis County Home Healthcare Company Owner Admits $1.46 Million Medicaid Fraud",
+      "amount": "$1.46 Million",
+      "amount_numeric": 1460000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edmo/pr/st-louis-county-home-healthcare-company-owner-admits-146-million-medicaid-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Home Health"
+      ],
+      "entities": [],
+      "state": "MO",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
