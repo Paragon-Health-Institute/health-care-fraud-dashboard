@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-11-20T17:04:09.641579",
+    "last_scraped": "2026-11-21T16:14:30.171720",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -1748,6 +1748,68 @@
       "ai_confidence": 85,
       "ai_reason": "This is a technical pricing comparison audit focused on pharmaceutical pricing data, not healthcare fraud, improper payments, or program-integrity findings.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-11-20-3351681955",
+      "date": "2026-11-20",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "CMS Proposes Reforms to Strengthen Competition, Elevate Care Quality, and Expand Beneficiary Choice in Medicare Advantage",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-proposes-reforms-strengthen-competition-elevate-care-quality-expand-beneficiary-choice-medicare",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Medicaid",
+        "Medicaid Managed Care",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This CMS press release announces policy reforms focused on competition, care quality, and beneficiary choice in Medicare Advantage, with no indication of fraud, improper payments, program-integrity fi",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "cms-2026-11-20-4098733714",
+      "date": "2026-11-20",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "Contract Year 2028 Policy and Technical Changes to the Medicare Advantage Program, Medicare Prescription Drug Benefit Program, and Medicare Cost Plan Program (CMS-4214-P2)",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/fact-sheets/contract-year-2028-policy-technical-changes-medicare-advantage-program-medicare-prescription-drug",
+      "link_label": "CMS Fact Sheet",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Medicaid",
+        "Medicaid Managed Care",
+        "Telehealth",
+        "Medical Transportation",
+        "Drug Pricing"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "HC program mentioned but no fraud signal — needs AI review",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This is a CMS policy and technical rule change for MA/PDP programs; it does not address fraud, improper payments, program-integrity findings, or oversight actions.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -2095,6 +2157,7 @@
     "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles",
     "https://www.gao.gov/products/gao-27-109529",
     "https://www.cms.gov/newsroom/fact-sheets/idr-gateway-now-available",
-    "https://www.gao.gov/products/gao-27-109184"
+    "https://www.gao.gov/products/gao-27-109184",
+    "https://www.cms.gov/newsroom/press-releases/hhs-announces-47-million-maha-elevate-awards-15-organizations-test-chronic-disease-prevention"
   ]
 }
