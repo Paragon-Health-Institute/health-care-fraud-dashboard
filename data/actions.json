@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-11-20T16:15:22.617100",
+    "last_updated": "2026-11-23T19:20:16.648761",
     "version": "1.0",
-    "last_scraped": "2026-11-22T15:28:38.002449"
+    "last_scraped": "2026-11-23T19:20:16.648751"
   },
   "actions": [
     {
@@ -24311,6 +24311,99 @@
       ],
       "entities": [],
       "state": "MO",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-11-23-1900747835",
+      "date": "2026-11-23",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Florida Doctor and Medical Research Employees Convicted of Falsifying Data in Clinical Trials of New Drug Treatments",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/florida-doctor-and-medical-research-employees-convicted-falsifying-data-clinical-trials-new",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "doj-2026-11-20-83833379",
+      "date": "2026-11-20",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Philadelphia Man Admits Multi-Million Dollar Health Care Fraud",
+      "amount": "$4.6 Million",
+      "amount_numeric": 4600000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-nj/pr/philadelphia-man-admits-multi-million-dollar-health-care-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Medical Transportation",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "NJ",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-11-20-1332334193",
+      "date": "2026-11-20",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Illegal Alien Pleads Guilty to Healthcare Benefit Fraud",
+      "amount": "$30,000",
+      "amount_numeric": 30000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/illegal-alien-pleads-guilty-healthcare-benefit-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-11-20-2155829631",
+      "date": "2026-11-20",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Federal Jury Finds Couple Guilty of Wire Fraud and Money Laundering in Scheme to Defraud Medicare, Medicaid, and Private Insurers Out of Over $15 Million",
+      "amount": "$15 Million",
+      "amount_numeric": 15000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-mn/pr/federal-jury-finds-couple-guilty-wire-fraud-and-money-laundering-scheme-defraud-medicare",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Hospice"
+      ],
+      "entities": [],
+      "state": "MN, OK, KS, FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
