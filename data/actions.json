@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-11-23T19:20:16.648761",
+    "last_updated": "2026-11-24T18:59:52.988738",
     "version": "1.0",
-    "last_scraped": "2026-11-23T19:20:16.648751"
+    "last_scraped": "2026-11-24T18:59:52.988726"
   },
   "actions": [
     {
@@ -24404,6 +24404,31 @@
       ],
       "entities": [],
       "state": "MN, OK, KS, FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-11-23-1425064675",
+      "date": "2026-11-23",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Adult Day Care Owner Sentenced to 15 Months in Prison for Medicare Fraud",
+      "amount": "$500,000",
+      "amount_numeric": 500000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/adult-day-care-owner-sentenced-15-months-prison-medicare-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Adult Day Care",
+        "Mental Health"
+      ],
+      "entities": [],
+      "state": "MI",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
