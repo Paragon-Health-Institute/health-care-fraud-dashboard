@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-11-24T18:59:52.988738",
+    "last_updated": "2026-11-25T18:03:47.262588",
     "version": "1.0",
-    "last_scraped": "2026-11-24T18:59:52.988726"
+    "last_scraped": "2026-11-25T18:03:47.262576"
   },
   "actions": [
     {
@@ -24429,6 +24429,58 @@
       ],
       "entities": [],
       "state": "MI",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-11-24-4193102016",
+      "date": "2026-11-24",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Four Family Members, Including Two Chinese Nationals, Charged in $55M Medicare and Medicaid Pharmacy Fraud Scheme",
+      "amount": "$55 Million",
+      "amount_numeric": 55000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/four-family-members-including-two-chinese-nationals-charged-55m-medicare-and-medicaid",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Medicaid",
+        "Medicaid Managed Care",
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-11-24-619763868",
+      "date": "2026-11-24",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Oklahoma Hospitals and Physician Group Pay $4.2 Million to Settle Allegations of Submitting False Claims to Medicare, Medicaid, TRICARE, and the Department of Veterans Affairs",
+      "amount": "$4.2 Million",
+      "amount_numeric": 4200000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-wdok/pr/oklahoma-hospitals-and-physician-group-pay-42-million-settle-allegations-submitting",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "TRICARE"
+      ],
+      "entities": [],
+      "state": "OK",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
