@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-11-26T18:30:22.650169",
+    "last_scraped": "2026-11-27T18:18:15.879062",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -2158,6 +2158,7 @@
     "https://www.gao.gov/products/gao-27-109529",
     "https://www.cms.gov/newsroom/fact-sheets/idr-gateway-now-available",
     "https://www.gao.gov/products/gao-27-109184",
-    "https://www.cms.gov/newsroom/press-releases/hhs-announces-47-million-maha-elevate-awards-15-organizations-test-chronic-disease-prevention"
+    "https://www.cms.gov/newsroom/press-releases/hhs-announces-47-million-maha-elevate-awards-15-organizations-test-chronic-disease-prevention",
+    "https://oig.hhs.gov/reports/all/2026/review-of-the-department-of-health-and-human-services-compliance-with-the-federal-information-security-modernization-act-of-2014-for-fiscal-year-2026/"
   ]
 }
